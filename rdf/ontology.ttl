@@ -12,13 +12,13 @@
 
 :BFFQ1 a owl:Class ;
     rdfs:label "BFF-Q1-Kultur"@de ;
-    rdfs:subClassOf :CropGroup .
+    rdfs:subClassOf :DirectPaymentCrop .
 
 :SpecialtyCrop a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
-    rdfs:subClassOf :CropGroup .
+    rdfs:subClassOf :DirectPaymentCrop .
 
 :LNF a owl:DatatypeProperty ;
-    rdfs:domain :CropGroup ;
+    rdfs:domain :DirectPaymentCrop ;
     rdfs:range xsd:integer ;
     rdfs:label "LNF-Code"@de .
