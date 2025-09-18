@@ -1,7 +1,11 @@
-@prefix : <https://lindas.admin.ch/foag/crops/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:BFFQ1 a owl:Class ;
+    rdfs:label "BFF-Q1-Kultur"@de ;
+    rdfs:subClassOf :DirectPaymentCrop .
 
 :CropGroup a owl:Class ;
     rdfs:label "Kulturgruppe"@de .
@@ -10,15 +14,12 @@
     rdfs:label "Direktzahlungskultur"@de ;
     rdfs:subClassOf :CropGroup .
 
-:BFFQ1 a owl:Class ;
-    rdfs:label "BFF-Q1-Kultur"@de ;
-    rdfs:subClassOf :DirectPaymentCrop .
-
 :SpecialtyCrop a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
 :LNF a owl:DatatypeProperty ;
+    rdfs:label "LNF-Code"@de ;
     rdfs:domain :DirectPaymentCrop ;
-    rdfs:range xsd:integer ;
-    rdfs:label "LNF-Code"@de .
+    rdfs:range xsd:integer .
+

@@ -47,3 +47,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Bash scripts for manual LINDAS upload
+upload.sh
+
+# Ignore large graph file
+rdf/graph.ttl

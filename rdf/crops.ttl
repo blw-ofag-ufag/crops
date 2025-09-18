@@ -1,0 +1,1147 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:555 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Ackerschonstreifen"@de,
+        "Bande culturale extensive"@fr,
+        "Fasce di colture estensive in campicoltura"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 555 .
+
+:556 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Buntbrache"@de,
+        "Jachère florale"@fr,
+        "Maggese fioriti"@it ;
+    :LNF 556 .
+
+:557 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Rotationsbrache"@de,
+        "Jachère tournante"@fr,
+        "Maggese da rotazione"@it ;
+    :LNF 557 .
+
+:559 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Saum auf Ackerflächen"@de,
+        "Ourlet sur terres assolées"@fr,
+        "Striscia su superficie coltiva"@it ;
+    :LNF 559 .
+
+:594 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    :LNF 594 .
+
+:595 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    :LNF 595 .
+
+:611 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
+        "Prairies extensives (sans les pâturages)"@fr,
+        "Prati estensivi (senza pascoli)"@it ;
+    :LNF 611 .
+
+:612 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
+        "Prairies peu intensives (sans les pâturages)"@fr,
+        "Prati poco intensivi (senza pascoli)"@it ;
+    :LNF 612 .
+
+:617 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Extensiv genutzte Weiden"@de,
+        "Pâturages extensifs"@fr,
+        "Pascoli estensivi"@it ;
+    :LNF 617 .
+
+:618 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
+    :LNF 618 .
+
+:622 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d’estivage, type prairie extensive"@fr,
+        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it ;
+    :LNF 622 .
+
+:623 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d’estivage, type prairie peu intensive"@fr,
+        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
+    :LNF 623 .
+
+:634 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Uferwiesen entlang von Fliessgewässern (ohne Weiden)"@de,
+        "Prairies riveraines d’un cours d’eau (sauf les pâturages)"@fr,
+        "Prati rivieraschi lungo i corsi d'acqua (senza pascoli)"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 634 .
+
+:635 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Uferwiesen (ohne Weiden)"@de,
+        "Prairies riveraines (sauf les pâturages)"@fr,
+        "Prati rivieraschi (senza pascoli)"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 635 .
+
+:693 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région (pâturages)"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione (pascoli)"@it ;
+    :LNF 693 .
+
+:694 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünflächen ohne Weiden)"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère, sauf les pâturages)"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite, senza pascoli)"@it ;
+    :LNF 694 .
+
+:717 a :BFFQ1,
+        :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Rebflächen mit natürlicher Artenvielfalt"@de,
+        "Surfaces viticoles présentant une biodiversité naturelle"@fr,
+        "Vigneti con biodiversità naturale"@it ;
+    :LNF 717 .
+
+:735 a :BFFQ1,
+        :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
+        "Vignes (surfaces de promotion de la biodiversité spécifiques à la ré-gion)"@fr,
+        "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    :LNF 735 .
+
+:851 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Streueflächen in der landwirtschaftlichen Nutzfläche"@de,
+        "Surfaces à litière dans la surface agricole utile"@fr,
+        "Terreni da strame all’interno della superficie agricola utilizzata"@it ;
+    :LNF 851 .
+
+:852 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Krautsaum)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con bordo inerbito)"@it ;
+    :LNF 852 .
+
+:858 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    :LNF 858 .
+
+:904 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Wassergräben, Tümpel, Teiche"@de,
+        "Fossés humides, mares, étangs"@fr,
+        "Fossati umidi, stagni, pozze"@it ;
+    :LNF 904 .
+
+:905 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Ruderalflächen, Steinhaufen und -wälle"@de,
+        "Surfaces rudérales, tas d'épierrage et affleurements rocheux"@fr,
+        "Superfici ruderali, cumuli di pietra, affioramenti rocciosi"@it ;
+    :LNF 905 .
+
+:906 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Trockenmauern"@de,
+        "Murs de pierres sèches"@fr,
+        "Muri a secco"@it ;
+    :LNF 906 .
+
+:908 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Regionsspezifische Biodiversitätsförderflächen"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
+    :LNF 908 .
+
+:921 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Hochstamm-Feldobstbäume (Punkte oder Flächen)"@de,
+        "Arbres fruitiers champêtres haute-tige (points ou surface)"@fr,
+        "Alberi da frutto ad alto fusto nei campi (punti o superfici)"@it ;
+    :LNF 921 .
+
+:922 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Nussbäume (Punkte oder Flächen)"@de,
+        "Noyers (points ou surfaces)"@fr,
+        "Noci (Punti o superfici)"@it ;
+    :LNF 922 .
+
+:923 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Edelkastanienbäume"@de,
+        "Châtaigniers"@fr,
+        "Alberi castagni"@it ;
+    :LNF 923 .
+
+:924 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Einheimische standortgerechte Einzelbäume und Alleen (Punkte oder Flächen)"@de,
+        "Arbres isolés indigènes adaptés au site et allées d'arbres (points ou surfaces)"@fr,
+        "Alberi indigeni isolati adatti al luogo e viali alberati (Punti o superfici)"@it ;
+    :LNF 924 .
+
+:927 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Andere Bäume (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    :LNF 927 .
+
+:928 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
+    :LNF 928 .
+
+:950 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Ackerschonstreifen"@de,
+        "Bande culturale extensive"@fr,
+        "Fasce di colture estensive in campicoltura"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 950 .
+
+:951 a :BFFQ1,
+        :CropGroup ;
+    schema:name "Getreide in weiter Reihe"@de,
+        "Céréales en lignes de semis espacées"@fr,
+        "Cereali in file distanziate"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    schema:validTo "2024"^^xsd:gYear ;
+    :LNF 951 .
+
+:501 a :CropGroup ;
+    schema:name "Sommergerste"@de,
+        "Orge de printemps"@fr,
+        "Orzo primaverile"@it ;
+    :LNF 501 .
+
+:502 a :CropGroup ;
+    schema:name "Wintergerste"@de,
+        "Orge d’automne"@fr,
+        "Orzo autunnale"@it ;
+    :LNF 502 .
+
+:504 a :CropGroup ;
+    schema:name "Hafer"@de,
+        "Avoine"@fr,
+        "Avena"@it ;
+    :LNF 504 .
+
+:505 a :CropGroup ;
+    schema:name "Triticale"@de,
+        "Triticale"@fr,
+        "Triticale"@it ;
+    :LNF 505 .
+
+:506 a :CropGroup ;
+    schema:name "Mischel Futtergetreide"@de,
+        "Méteil de céréales fourragères"@fr,
+        "Miscela di cereali da foraggio"@it ;
+    :LNF 506 .
+
+:507 a :CropGroup ;
+    schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
+        "Blé fourrager selon liste swiss granum"@fr,
+        "Frumento da foraggio giusta la lista di swiss granum"@it ;
+    :LNF 507 .
+
+:508 a :CropGroup ;
+    schema:name "Körnermais"@de,
+        "Maïs grain"@fr,
+        "Mais da granella"@it ;
+    :LNF 508 .
+
+:509 a :CropGroup ;
+    schema:name "Reis"@de,
+        "Riz"@fr,
+        "Riso"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 509 .
+
+:510 a :CropGroup ;
+    schema:name "Hartweizen"@de,
+        "Blé dur"@fr,
+        "Grano duro"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 510 .
+
+:511 a :CropGroup ;
+    schema:name "Emmer, Einkorn"@de,
+        "Amidonnier, engrain"@fr,
+        "Farro, piccola spelta"@it ;
+    :LNF 511 .
+
+:512 a :CropGroup ;
+    schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
+        "Blé de printemps (sans blé fourrager de la liste swiss granum)"@fr,
+        "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
+    :LNF 512 .
+
+:513 a :CropGroup ;
+    schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
+        "Blé d'automne (sans blé fourrager de la liste swiss granum)"@fr,
+        "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
+    :LNF 513 .
+
+:514 a :CropGroup ;
+    schema:name "Roggen"@de,
+        "Seigle"@fr,
+        "Segale"@it ;
+    :LNF 514 .
+
+:515 a :CropGroup ;
+    schema:name "Mischel Brotgetreide"@de,
+        "Méteil de céréales panifiables"@fr,
+        "Miscela di cereali panificabili"@it ;
+    :LNF 515 .
+
+:516 a :CropGroup ;
+    schema:name "Dinkel"@de,
+        "Epeautre"@fr,
+        "Spelta"@it ;
+    :LNF 516 .
+
+:519 a :CropGroup ;
+    schema:name "Saatmais (Vertragsanbau)"@de,
+        "Semences de maïs (contrat de culture)"@fr,
+        "Mais da semina (coltivazione contrattuale)"@it ;
+    :LNF 519 .
+
+:520 a :CropGroup ;
+    schema:name "Trockenreis"@de,
+        "Riz en culture sèche"@fr,
+        "Riso seminato su terreno asciutto"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 520 .
+
+:521 a :CropGroup ;
+    schema:name "Silo- und Grünmais"@de,
+        "Maïs d'ensilage et maïs vert"@fr,
+        "Mais da insilamento e verde"@it ;
+    :LNF 521 .
+
+:522 a :CropGroup ;
+    schema:name "Zuckerrüben"@de,
+        "Betteraves sucrières"@fr,
+        "Barbabietole da zucchero"@it ;
+    :LNF 522 .
+
+:523 a :CropGroup ;
+    schema:name "Futterrüben"@de,
+        "Betteraves fourragères"@fr,
+        "Barbabietole da foraggio"@it ;
+    :LNF 523 .
+
+:524 a :CropGroup ;
+    schema:name "Kartoffeln"@de,
+        "Pommes de terre"@fr,
+        "Patate"@it ;
+    :LNF 524 .
+
+:525 a :CropGroup ;
+    schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
+        "Plants de pommes de terre (contrat de culture)"@fr,
+        "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
+    :LNF 525 .
+
+:526 a :CropGroup ;
+    schema:name "Sommerraps zur Speiseölgewinnung"@de,
+        "Colza de printemps destiné à la fabrication d’huile comestible"@fr,
+        "Colza primaverile per l’estrazione di olio commestibile"@it ;
+    :LNF 526 .
+
+:527 a :CropGroup ;
+    schema:name "Winterraps zur Speiseölgewinnung"@de,
+        "Colza d’automne destiné à la fabrication d’huile comestible"@fr,
+        "Colza autunnale per l’estrazione di olio commestibile"@it ;
+    :LNF 527 .
+
+:528 a :CropGroup ;
+    schema:name "Soja"@de,
+        "Soja"@fr,
+        "Soia"@it ;
+    :LNF 528 .
+
+:529 a :CropGroup ;
+    schema:name "Nassreis"@de,
+        "Riz en culture humide"@fr,
+        "Riso seminato su terreno bagnato"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 529 .
+
+:531 a :CropGroup ;
+    schema:name "Sonnenblumen zur Speiseölgewinnung"@de,
+        "Tournesol destiné à la fabrication d’huile comestible"@fr,
+        "Girasole per l’estrazione di olio commestibile"@it ;
+    :LNF 531 .
+
+:534 a :CropGroup ;
+    schema:name "Lein"@de,
+        "Lin"@fr,
+        "Lino"@it ;
+    :LNF 534 .
+
+:535 a :CropGroup ;
+    schema:name "Hanf"@de,
+        "Chanvre"@fr,
+        "Canapa"@it ;
+    schema:validTo "2021"^^xsd:gYear ;
+    :LNF 535 .
+
+:536 a :CropGroup ;
+    schema:name "Bohnen und Wicken zur Körnergewinnung (z.B. Ackerbohnen)"@de,
+        "Haricots et vesces en grains (p.ex. féveroles)"@fr,
+        "Fagioli e vecce per l’estrazione di granelli (p.es. favette)"@it ;
+    :LNF 536 .
+
+:537 a :CropGroup ;
+    schema:name "Erbsen zur Körnergewinnung (z.B. Eiweisserbsen)"@de,
+        "Pois en grains (p.ex. pois protéagineux)"@fr,
+        "Piselli per l’estrazione di granelli (p.es. piselli proteici)"@it ;
+    :LNF 537 .
+
+:538 a :CropGroup ;
+    schema:name "Lupinen"@de,
+        "Lupins"@fr,
+        "Lupini"@it ;
+    :LNF 538 .
+
+:539 a :CropGroup ;
+    schema:name "Ölkürbisse"@de,
+        "Courges à huile"@fr,
+        "Zucche per l’estrazione di olio"@it ;
+    :LNF 539 .
+
+:540 a :CropGroup ;
+    schema:name "Kichererbsen"@de,
+        "Pois chiches"@fr,
+        "Ceci"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 540 .
+
+:541 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Tabak"@de,
+        "Tabac"@fr,
+        "Tabacco"@it ;
+    :LNF 541 .
+
+:542 a :CropGroup ;
+    schema:name "Hirse"@de,
+        "Millet"@fr,
+        "Miglio"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 542 .
+
+:543 a :CropGroup ;
+    schema:name "Getreide siliert"@de,
+        "Céréales ensilées"@fr,
+        "Cereali insilati"@it ;
+    :LNF 543 .
+
+:544 a :CropGroup ;
+    schema:name "Leindotter"@de,
+        "Cameline"@fr,
+        "Dorella"@it ;
+    :LNF 544 .
+
+:545 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Einjährige Freilandgemüse, ohne Konservengemüse"@de,
+        "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
+        "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
+    :LNF 545 .
+
+:546 a :CropGroup ;
+    schema:name "Freiland-Konservengemüse"@de,
+        "Légumes de conserve cultivés en plein champ"@fr,
+        "Ortaggi di pieno campo per la conservazione"@it ;
+    :LNF 546 .
+
+:547 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Wurzeln der Treibzichorie"@de,
+        "Racines de chicorée"@fr,
+        "Radici di cicoria di coltura forzata"@it ;
+    :LNF 547 .
+
+:548 a :CropGroup ;
+    schema:name "Buchweizen"@de,
+        "Sarrasin"@fr,
+        "Grano saraceno"@it ;
+    :LNF 548 .
+
+:549 a :CropGroup ;
+    schema:name "Sorghum"@de,
+        "Sorgho"@fr,
+        "Sorgo"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 549 .
+
+:550 a :CropGroup ;
+    schema:name "Übrige Ackerfläche"@de,
+        "Autres terres assolées"@fr,
+        "Altra superficie coltiva"@it ;
+    :LNF 550 .
+
+:551 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Einjährige Beeren (z.B. Erdbeeren)"@de,
+        "Baies annuelles (p.ex. fraises)"@fr,
+        "Bacche annuali (p.es. fragole)"@it ;
+    :LNF 551 .
+
+:552 a :CropGroup ;
+    schema:name "Einjährige nachwachsende Rohstoffe (Kenaf, usw.)"@de,
+        "Matières premières renouvelables annuelles (kénaf, etc.)"@fr,
+        "Materie prime rinnovabili annuali (kenaf, ecc.)"@it ;
+    :LNF 552 .
+
+:553 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Einjährige Gewürz- und Medizinalpflanzen"@de,
+        "Plantes aromatiques et médicinales annuelles"@fr,
+        "Piante aromatiche e medicinali annuali"@it ;
+    :LNF 553 .
+
+:554 a :CropGroup ;
+    schema:name "Einjährige gärtnerische Freilandkulturen (Blumen, Rollrasen usw.)"@de,
+        "Cultures horticoles annuelles de plein champ (fleurs, gazon en rouleaux, etc.)"@fr,
+        "Floricoltura di pieno campo annuale (fiori, manto erboso in rotoli, ecc.)"@it ;
+    :LNF 554 .
+
+:566 a :CropGroup ;
+    schema:name "Mohn"@de,
+        "Pavot"@fr,
+        "Papavero"@it ;
+    :LNF 566 .
+
+:567 a :CropGroup ;
+    schema:name "Saflor"@de,
+        "Carthame"@fr,
+        "Cartamo"@it ;
+    :LNF 567 .
+
+:568 a :CropGroup ;
+    schema:name "Linsen"@de,
+        "Lentilles"@fr,
+        "Lenticchie"@it ;
+    :LNF 568 .
+
+:569 a :CropGroup ;
+    schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
+        "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
+        "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l’estrazione di granelli)"@it ;
+    :LNF 569 .
+
+:570 a :CropGroup ;
+    schema:name "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
+        "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l’estrazione di granelli)"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 570 .
+
+:572 a :CropGroup ;
+    schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
+        "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
+    :LNF 572 .
+
+:573 a :CropGroup ;
+    schema:name "Senf"@de,
+        "Moutarde"@fr,
+        "Senape"@it ;
+    :LNF 573 .
+
+:574 a :CropGroup ;
+    schema:name "Quinoa"@de,
+        "Quinoa"@fr,
+        "Quinoa"@it ;
+    :LNF 574 .
+
+:575 a :CropGroup ;
+    schema:name "Hanf zur Nutzung der Samen"@de,
+        "Chanvre pour l’utilisation des graines"@fr,
+        "Canapa per i semi"@it ;
+    schema:validFrom "2022"^^xsd:gYear ;
+    :LNF 575 .
+
+:576 a :CropGroup ;
+    schema:name "Hanf zur Fasernutzung"@de,
+        "Chanvre pour l’utilisation des fibres"@fr,
+        "Canapa da fibra"@it ;
+    schema:validFrom "2022"^^xsd:gYear ;
+    :LNF 576 .
+
+:577 a :CropGroup ;
+    schema:name "Anderer Hanf"@de,
+        "Autre chanvre"@fr,
+        "Altra canapa"@it ;
+    schema:validFrom "2022"^^xsd:gYear ;
+    :LNF 577 .
+
+:578 a :CropGroup ;
+    schema:name "Hirse zur Körnergewinnung"@de,
+        "Millet grains"@fr,
+        "Miglio per l’estrazione di gra-nelli"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 578 .
+
+:579 a :CropGroup ;
+    schema:name "Hirse zur Nutzung ganze Pflanze"@de,
+        "Millet plante entière"@fr,
+        "Miglio per la raccolta della pianta intera"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 579 .
+
+:580 a :CropGroup ;
+    schema:name "Sorghum zur Körnergewinnung"@de,
+        "Sorgho grains"@fr,
+        "Sorgo per l’estrazione di gra-nelli"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 580 .
+
+:581 a :CropGroup ;
+    schema:name "Sorghum zur Nutzung ganze Pflanze"@de,
+        "Sorgho plante entière"@fr,
+        "Sorgo per la raccolta della pianta intera"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 581 .
+
+:590 a :CropGroup ;
+    schema:name "Sommerraps als nachwachsender Rohstoff"@de,
+        "Colza de printemps comme matière première renouvelable"@fr,
+        "Colza primaverile quale materia prima rinnovabile"@it ;
+    :LNF 590 .
+
+:591 a :CropGroup ;
+    schema:name "Winterraps als nachwachsender Rohstoff"@de,
+        "Colza d’automne comme matière première renouvelable"@fr,
+        "Colza autunnale quale materia prima rinnovabile"@it ;
+    :LNF 591 .
+
+:592 a :CropGroup ;
+    schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
+        "Tournesol comme matière première renouvelable"@fr,
+        "Girasole quale materia prima rinnovabile"@it ;
+    :LNF 592 .
+
+:597 a :CropGroup ;
+    schema:name "Übrige offene Ackerfläche, beitragsberechtigt"@de,
+        "Autres terres ouvertes avec contributions"@fr,
+        "Altra superficie coltiva aperta, con contributi"@it ;
+    :LNF 597 .
+
+:598 a :CropGroup ;
+    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
+        "Autres terres ouvertes sans contributions"@fr,
+        "Altra superficie coltiva aperta, senza contributi"@it ;
+    :LNF 598 .
+
+:601 a :CropGroup ;
+    schema:name "Kunstwiesen (ohne Weiden)"@de,
+        "Prairies artificielles (sans les pâturages)"@fr,
+        "Prati artificiali (senza pascoli)"@it ;
+    :LNF 601 .
+
+:602 a :CropGroup ;
+    schema:name "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
+        "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
+        "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
+    :LNF 602 .
+
+:613 a :CropGroup ;
+    schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
+        "Autres prairies permanentes (sans les pâturages)"@fr,
+        "Altri prati perenni (senza pascoli)"@it ;
+    :LNF 613 .
+
+:616 a :CropGroup ;
+    schema:name "Weiden (Heimweiden, übrige Weiden ohne Sömmerungsweiden)"@de,
+        "Pâturages (pâturages attenants à la ferme, autres pâturages sauf les pâturages d’estivage)"@fr,
+        "Pascoli (pascoli propri, altri pascoli senza pascoli d’estivazione)"@it ;
+    :LNF 616 .
+
+:621 a :CropGroup ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
+        "Prairies de fauche en région d’estivage, autres"@fr,
+        "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
+    :LNF 621 .
+
+:625 a :CropGroup ;
+    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
+    :LNF 625 .
+
+:631 a :CropGroup ;
+    schema:name "Futterleguminosen für die Samenproduktion (Vertragsanbau)"@de,
+        "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Leguminose da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
+    :LNF 631 .
+
+:632 a :CropGroup ;
+    schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
+        "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
+    :LNF 632 .
+
+:650 a :CropGroup ;
+    schema:name "Übrige Dauerwiesen, beitragsberechtigt aggregiert"@de,
+        "Autres prairies permanentes, avec contributions, agrégée"@fr,
+        "Altra superficie inerbita, con contributi, aggregata"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 650 .
+
+:660 a :CropGroup ;
+    schema:name "Übrige Dauerweiden, beitragsberechtigt aggregiert"@de,
+        "Autres pâturages permanentes, avec contributions, agrégée"@fr,
+        "Altri pascoli perenni, con contributi, aggregata"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 660 .
+
+:697 a :CropGroup ;
+    schema:name "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt"@de,
+        "Autres surfaces herbagères (surface herbagère permanente) avec contributions"@fr,
+        "Altre superfici (permanentemente) inerbite, con contributi"@it ;
+    :LNF 697 .
+
+:698 a :CropGroup ;
+    schema:name "Übrige Grünfläche (Dauergrünflächen), nicht beitragsberechtigt"@de,
+        "Autres surfaces herbagères (surface herbagère permanente) sans contributions"@fr,
+        "Altre superfici (permanentemente) inerbite, senza contributi"@it ;
+    :LNF 698 .
+
+:701 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Reben"@de,
+        "Vignes"@fr,
+        "Vigna"@it ;
+    :LNF 701 .
+
+:702 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Obstanlagen (Äpfel)"@de,
+        "Cultures fruitières (pommes)"@fr,
+        "Frutteto (mele)"@it ;
+    :LNF 702 .
+
+:703 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Obstanlagen (Birnen)"@de,
+        "Cultures fruitières (poires)"@fr,
+        "Frutteto (pere)"@it ;
+    :LNF 703 .
+
+:704 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Obstanlagen (Steinobst)"@de,
+        "Cultures fruitières (fruits à noyau)"@fr,
+        "Frutteto (frutta a nocciolo)"@it ;
+    :LNF 704 .
+
+:705 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Mehrjährige Beeren"@de,
+        "Baies pluriannuelles"@fr,
+        "Bacche pluriennali"@it ;
+    :LNF 705 .
+
+:706 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Mehrjährige Gewürz- und Medizinalpflanzen"@de,
+        "Plantes aromatiques et plantes médicinales pluriannuelles"@fr,
+        "Piante aromatiche e medicinali pluriennali"@it ;
+    :LNF 706 .
+
+:707 a :CropGroup ;
+    schema:name "Mehrjährige nachwachsende Rohstoffe (Chinaschilf, usw.)"@de,
+        "Matières premières renouvelables pluriannuelles (roseau de Chine, etc.)"@fr,
+        "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it ;
+    :LNF 707 .
+
+:708 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Hopfen"@de,
+        "Houblon"@fr,
+        "Luppolo"@it ;
+    :LNF 708 .
+
+:709 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Rhabarber"@de,
+        "Rhubarbe"@fr,
+        "Rabarbaro"@it ;
+    :LNF 709 .
+
+:710 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Spargel"@de,
+        "Asperges"@fr,
+        "Asparagi"@it ;
+    :LNF 710 .
+
+:711 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Pilze (Freiland)"@de,
+        "Champignons en pleine terre"@fr,
+        "Funghi (in pieno campo)"@it ;
+    :LNF 711 .
+
+:712 a :CropGroup ;
+    schema:name "Christbäume"@de,
+        "Sapins de Noël"@fr,
+        "Alberelli di Natale"@it ;
+    :LNF 712 .
+
+:713 a :CropGroup ;
+    schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
+        "Pépinières de plantes forestières hors zone forestière"@fr,
+        "Vivai forestali fuori delle zone forestali"@it ;
+    :LNF 713 .
+
+:714 a :CropGroup ;
+    schema:name "Ziersträucher, Ziergehölze und Zierstauden"@de,
+        "Buissons, arbrisseaux et arbustes ornementaux"@fr,
+        "Arbusti, arboscelli, cespugli ornamentali"@it ;
+    :LNF 714 .
+
+:715 a :CropGroup ;
+    schema:name "Übrige Baumschulen (Rosen, Früchte, usw.)"@de,
+        "Autres pépinières (roses, fruits, etc.)"@fr,
+        "Altri vivai (rose, frutta, ecc.)"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 715 .
+
+:718 a :CropGroup ;
+    schema:name "Trüffelanlagen"@de,
+        "Truffières"@fr,
+        "Tartufaie"@it ;
+    :LNF 718 .
+
+:719 a :CropGroup ;
+    schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de,
+        "Cultures de mûriers (alimentation des vers à soie)"@fr,
+        "Coltivazioni di gelsi (foraggiamento dei bachi da seta)"@it ;
+    :LNF 719 .
+
+:720 a :CropGroup ;
+    schema:name "Gepflegte Selven (Edelkastanienbäume)"@de,
+        "Châtaigneraies entretenues (surface)"@fr,
+        "Selve curate (castagni)"@it ;
+    :LNF 720 .
+
+:721 a :CropGroup ;
+    schema:name "Mehrjährige gärtnerische Freilandkulturen (nicht im Gewächshaus)"@de,
+        "Cultures horticoles pluriannuelles de plein air (pas en serres)"@fr,
+        "Floricoltura di pieno campo pluriennale (non in serra)"@it ;
+    :LNF 721 .
+
+:722 a :CropGroup ;
+    schema:name "Baumschulen von Reben"@de,
+        "Pépinières viticoles"@fr,
+        "Vivai viticoli"@it ;
+    :LNF 722 .
+
+:723 a :CropGroup ;
+    schema:name "Baumschulen von Obst und Beeren"@de,
+        "Pépinière de fruits et de baies"@fr,
+        "Vivaio di alberi da frutto e bacche"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 723 .
+
+:724 a :CropGroup ;
+    schema:name "Übrige Baumschulen (Rosen, Zierstauden, usw.)"@de,
+        "Autres pépinières (rosiers, plantes ornementales, etc.)"@fr,
+        "Altri vivai (rose, arbusti ornamentali, ecc.)"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 724 .
+
+:725 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Permakultur"@de,
+        "Permaculture"@fr,
+        "Permacultura"@it ;
+    :LNF 725 .
+
+:730 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Obstanlagen aggregiert"@de,
+        "Cultures fruitières agrégée"@fr,
+        "Frutteti aggregata"@it ;
+    :LNF 730 .
+
+:731 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Andere Obstanlagen (Kiwis, Holunder usw.)"@de,
+        "Autres cultures fruitières (kiwis, sureau, etc.)"@fr,
+        "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
+    :LNF 731 .
+
+:750 a :CropGroup ;
+    schema:name "Übrige Dauerkulturen, beitragsberechtigt, aggregiert"@de,
+        "Autres surfaces de cultures pérennes, avec contributions, agrégée"@fr,
+        "Altre colture perenni, con contributi, aggregata"@it ;
+    :LNF 750 .
+
+:760 a :CropGroup ;
+    schema:name "Dauerkulturen, nicht beitragsberechtigt, aggregiert"@de,
+        "Surfaces de cultures pérennes, sans contributions, agrégée"@fr,
+        "Colture perenni, senza contributi, aggregata"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 760 .
+
+:797 a :CropGroup ;
+    schema:name "Übrige Flächen mit Dauerkulturen, beitragsberechtigt"@de,
+        "Autres surfaces de cultures pérennes, avec contributions"@fr,
+        "Altre superfici con colture perenni, con contributi"@it ;
+    :LNF 797 .
+
+:798 a :CropGroup ;
+    schema:name "Übrige Flächen mit Dauerkulturen, nicht beitragsberechtigt"@de,
+        "Autres surfaces de cultures pérennes, sans contributions"@fr,
+        "Altre superfici con colture perenni, senza contributi"@it ;
+    :LNF 798 .
+
+:801 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures maraîchères sous abri avec fondations permanentes"@fr,
+        "Colture orticole in serre con fondamenta fisse"@it ;
+    :LNF 801 .
+
+:802 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
+        "Autres cultures spéciales sous abri avec fondations permanentes"@fr,
+        "Altre colture speciali in serre con fondamenta fisse"@it ;
+    :LNF 802 .
+
+:803 a :CropGroup ;
+    schema:name "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures horticoles sous abri avec fondations permanentes"@fr,
+        "Floricoltura in serre con fondamenta fisse"@it ;
+    :LNF 803 .
+
+:804 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures des baies sous serres avec fondations permanentes"@fr,
+        "Colture bacche in serra con fondamenta fisse"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 804 .
+
+:806 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes"@fr,
+        "Colture orticole in serre senza fondamenta fisse"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 806 .
+
+:807 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
+        "Altre colture speciali in serre senza fondamenta fisse"@it ;
+    :LNF 807 .
+
+:808 a :CropGroup ;
+    schema:name "Gärtnerische Kulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Cultures horticoles sous abri sans fondations permanentes"@fr,
+        "Floricoltura in serre senza fondamenta fisse"@it ;
+    :LNF 808 .
+
+:810 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Pilze in geschütztem Anbau mit festem Fundament"@de,
+        "Champignons sous abri avec fondations permanentes"@fr,
+        "Funghi coltivati al coperto con fondamenta fisse"@it ;
+    :LNF 810 .
+
+:811 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes; sur sol naturel"@fr,
+        "Colture orticole coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 811 .
+
+:812 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes; sur des tables de plantation ou des étagères"@fr,
+        "Colture orticole coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 812 .
+
+:813 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
+        "Cultures des baies sous abri sans fondations permanentes; sur sol naturel"@fr,
+        "Colture di bacche coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 813 .
+
+:814 a :CropGroup,
+        :SpecialtyCrop ;
+    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
+        "Cultures des baies sous abri sans fondations permanentes; sur des tables de plantation ou  des étagères"@fr,
+        "Colture di bacche coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
+    schema:validFrom "2023"^^xsd:gYear ;
+    :LNF 814 .
+
+:830 a :CropGroup ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt aggregiert"@de,
+        "Cultures sous abri sans fondations permanentes, avec contributions, agrégée"@fr,
+        "Superfici con colture protette tutto l’anno, con contributi, aggregata"@it ;
+    :LNF 830 .
+
+:840 a :CropGroup ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt aggregiert"@de,
+        "Cultures sous abri sans fondations permanentes, sans contributions, agrégée"@fr,
+        "Superfici con colture protette tutto l’anno, senza contributi, aggregata"@it ;
+    schema:validTo "2022"^^xsd:gYear ;
+    :LNF 840 .
+
+:847 a :CropGroup ;
+    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, beitragsberechtigt"@de,
+        "Autres cultures sous abri sans fondations permanentes, avec contributions"@fr,
+        "Altre colture coltivate al coperto senza fondamenta fisse, con contributi"@it ;
+    :LNF 847 .
+
+:848 a :CropGroup ;
+    schema:name "Übrige Kulturen in geschütztem Anbau mit festem Fundament"@de,
+        "Autres cultures sous abri avec fondations permanentes"@fr,
+        "Altre colture coltivate al coperto con fondamenta fisse"@it ;
+    :LNF 848 .
+
+:849 a :CropGroup ;
+    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, nicht beitragsberechtigt"@de,
+        "Autres cultures sous abri sans fondations permanentes, sans contributions"@fr,
+        "Altre colture coltivate al coperto senza fondamenta fisse, senza contributi"@it ;
+    :LNF 849 .
+
+:857 a :CropGroup ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
+    :LNF 857 .
+
+:897 a :CropGroup ;
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
+        "Autres surfaces dans la surface agricole utile, avec contributions"@fr,
+        "Altre superfici all’interno della superficie agricola utilizzata, con contributi"@it ;
+    :LNF 897 .
+
+:898 a :CropGroup ;
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, nicht beitragsberechtigt"@de,
+        "Autres surfaces dans la surface agricole utile, sans contributions"@fr,
+        "Altre superfici all’interno della superficie agricola utilizzata, senza contributi"@it ;
+    :LNF 898 .
+
+:901 a :CropGroup ;
+    schema:name "Wald"@de,
+        "Forêt"@fr,
+        "Bosco"@it ;
+    :LNF 901 .
+
+:902 a :CropGroup ;
+    schema:name "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecken ohne Pufferstreifen)"@de,
+        "Surfaces improductives (p. ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
+        "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it ;
+    :LNF 902 .
+
+:903 a :CropGroup ;
+    schema:name "Flächen ohne landwirtschaftliche Hauptzweckbestimmung (erschlossenes Bauland, Spiel-, Reit-, Camping-, Golf-, Flug- und Militärplätze oder ausgemarchte Bereiche von Eisenbahnen, öffentlichen Strassen und Gewässern)"@de,
+        "Surfaces dont l’affectation principale n’est pas l’exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d’entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d’eau)"@fr,
+        "Superfici la cui destinazione principale non è l’utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d’esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d’acqua)"@it ;
+    :LNF 903 .
+
+:907 a :CropGroup ;
+    schema:name "Unbefestigte, natürliche Wege"@de,
+        "Chemins naturels non stabilisés"@fr,
+        "Sentieri e accessi naturali non consolidati"@it ;
+    :LNF 907 .
+
+:909 a :CropGroup ;
+    schema:name "Hausgärten"@de,
+        "Jardins potager"@fr,
+        "Giardini e orti domestici"@it ;
+    :LNF 909 .
+
+:911 a :CropGroup ;
+    schema:name "Landwirtschaftliche Produktion in Gebäuden (z. B. Champignon, Brüsseler)"@de,
+        "Production agricole sous abri (par ex. champignons de Paris, chicorée witloof)"@fr,
+        "Produzione agricola in edifici (p.es. funghi, cicoria belga)"@it ;
+    :LNF 911 .
+
+:926 a :CropGroup ;
+    schema:name "Andere Bäume"@de,
+        "Autres arbres"@fr,
+        "Altri alberi"@it ;
+    schema:validFrom "2022"^^xsd:gYear ;
+    :LNF 926 .
+
+:930 a :CropGroup ;
+    schema:name "Sömmerungsweiden"@de,
+        "Pâturages d’estivage"@fr,
+        "Pascoli d’estivazione"@it ;
+    :LNF 930 .
+
+:933 a :CropGroup ;
+    schema:name "Gemeinschaftsweiden"@de,
+        "Pâturages communautaires"@fr,
+        "Pascoli comunitari"@it ;
+    :LNF 933 .
+
+:935 a :CropGroup ;
+    schema:name "Heuwiesen mit Zufütterung während der Sömmerung"@de,
+        "Prairies de fauche en région d’estivage, pour l'affouragement pendant l'estivage"@fr,
+        "Prati da sfalcio nella regione d’estivazione, per l'alimentazione durante l'estivazione"@it ;
+    :LNF 935 .
+
+:936 a :CropGroup ;
+    schema:name "Streueflächen im Sömmerungsgebiet"@de,
+        "Surfaces à litière, région d’estivage"@fr,
+        "Terreni da strame nella regione d’estivazione"@it ;
+    :LNF 936 .
+
+:998 a :CropGroup ;
+    schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche und Sömmerungsfläche"@de,
+        "Autres surfaces situées en dehors de la surface agricole utile et la surface d’estivage"@fr,
+        "Altre superfici fuori della superficie agricola utilizzata e superfici d’estivazione"@it ;
+    :LNF 998 .
+
