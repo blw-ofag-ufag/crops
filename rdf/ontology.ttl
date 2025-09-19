@@ -5,6 +5,11 @@
 
 :BFFQ1 a owl:Class ;
     rdfs:label "BFF-Q1-Kultur"@de ;
+    rdfs:comment "Biodiversitätsförderflächen, Qualitätsstufe 1, für welche Bundesbeiträge bezogen werden."@de ;
+    rdfs:subClassOf :DirectPaymentCrop .
+
+:BFFa a owl:Class ;
+    rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
 :CropGroup a owl:Class ;
