@@ -53,3 +53,6 @@ upload.sh
 
 # Ignore large graph file
 rdf/graph.ttl
+
+# Exclude any notes
+notes.md
