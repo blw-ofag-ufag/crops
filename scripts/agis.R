@@ -10,10 +10,10 @@ library(rdfhelper)
 #' DOWNLOAD DATA
 #' =============================================================================
 
-url <- "https://www.blw.admin.ch/dam/de/sd-web/bkAU6T83hyLT/LWB_Nutzungsfl%C3%A4chen_Kataloge.xlsx"
-
+base_url <- "https://www.blw.admin.ch/dam/de/sd-web/bkAU6T83hyLT"
+filename <- "LWB_Nutzungsfl%C3%A4chen_Kataloge.xlsx"
 destfile <- tempfile(fileext = ".xlsx")
-download.file(url, destfile, mode = "wb")
+download.file(file.path(base_url, filename), destfile, mode = "wb")
 data <- readxl::read_excel(destfile, sheet = 1)
 
 #' =============================================================================
@@ -30,8 +30,8 @@ schema  <- "http://schema.org/"
 sink("rdf/crops.ttl")
 
 for (i in seq_len(nrow(data))) {
-  LNF <- as.integer(data[i, "LNF_Code"])
-  subject <- rdfhelper::uri(LNF, prefix = base)
+  code <- as.integer(data[i, "LNF_Code"])
+  subject <- rdfhelper::uri(code, prefix = base)
   rdfhelper::triple(subject, "a", rdfhelper::uri("CropGroup", base))
   for (lang in c("de", "fr", "it")) {
     rdfhelper::triple(
@@ -65,7 +65,7 @@ for (i in seq_len(nrow(data))) {
   rdfhelper::triple(
     subject,
     rdfhelper::uri("LNF", base),
-    as.integer(data[i,"LNF_Code"])
+    as.integer(data[i, "LNF_Code"])
   )
 }
 
