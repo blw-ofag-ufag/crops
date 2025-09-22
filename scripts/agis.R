@@ -32,7 +32,7 @@ base <- "https://agriculture.ld.admin.ch/crops/"
 schema  <- "http://schema.org/"
 
 #' Create a new crops turtle file
-sink("rdf/crops.ttl")
+sink("rdf/agis.ttl")
 
 
 #' =============================================================================
