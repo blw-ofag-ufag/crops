@@ -19,6 +19,10 @@
     rdfs:label "Direktzahlungskultur"@de ;
     rdfs:subClassOf :CropGroup .
 
+:SRPPPCrop a owl:Class ;
+    rdfs:label "Kultur im PSM-Verzeichnis"@de ;
+    rdfs:subClassOf :CropGroup .
+
 :SpecialtyCrop a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
