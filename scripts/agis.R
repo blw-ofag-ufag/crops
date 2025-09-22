@@ -11,6 +11,9 @@
 library(rdfhelper)
 library(dplyr)
 
+#' read helper functions
+source("scripts/helper.R")
+
 #' Constants
 languages <- c("de", "fr", "it")
 
@@ -106,10 +109,7 @@ for (i in seq_len(nrow(data))) {
     }
   }
 
-  bnode <- paste0("_:", rlang::hash(code))
-  rdfhelper::triple(subject, rdfhelper::uri("identifier", schema), bnode)
-  rdfhelper::triple(bnode, rdfhelper::uri("value", schema), code)
-  rdfhelper::triple(bnode, rdfhelper::uri("name", schema), literal("LNF"))
+  construct_code(subject, code, "LNF")
 }
 
 sink()

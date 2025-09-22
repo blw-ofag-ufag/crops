@@ -19,6 +19,9 @@
     rdfs:label "Direktzahlungskultur"@de ;
     rdfs:subClassOf :CropGroup .
 
+:FertilisationStandard a owl:Class ;
+    rdfs:label "Düngungsnorm"@de .
+
 :GRUDCrop a owl:Class ;
     rdfs:label "Kultur aus den GRUD-Vorschriften"@de ;
     rdfs:subClassOf :CropGroup .

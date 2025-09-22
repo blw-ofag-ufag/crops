@@ -9,6 +9,8 @@ library(rdfhelper)
 library(dplyr)
 library(jsonlite)
 
+#' read helper functions
+source("scripts/helper.R")
 
 #' Constants
 languages <- c(
@@ -46,12 +48,8 @@ process <- function(object, subject) {
       )
     )
   }
-
-  code <- getElement(object, "code")
-  bnode <- paste0("_:", rlang::hash(code))
-  rdfhelper::triple(subject, rdfhelper::uri("identifier", schema), bnode)
-  rdfhelper::triple(bnode, rdfhelper::uri("value", schema), literal(code))
-  rdfhelper::triple(bnode, rdfhelper::uri("name", schema), literal("GRUD"))
+  construct_code(subject, getElement(object, "code"), "NAEBI") # nolint
+  construct_code(subject, getElement(object, "oldKey"), "GRUD") # nolint
 }
 
 sink("rdf/grud.ttl")

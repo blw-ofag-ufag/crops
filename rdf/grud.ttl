@@ -1,1363 +1,1908 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :201 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WWHT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WWHT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "100"^^xsd:ID ] ;
     schema:name "Winterweizen"@de .
 
 :202 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WWHTN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WWHTN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "101"^^xsd:ID ] ;
     schema:name "Winterweizen in 62a Nitrat-Projekt"@de .
 
 :203 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FWHT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FWHT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "102"^^xsd:ID ] ;
     schema:name "Futterweizen"@de .
 
 :204 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FWHTN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FWHTN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "103"^^xsd:ID ] ;
     schema:name "Futterweizen in 62a Nitrat-Projekt"@de .
 
 :205 a :GRUDCrop ;
     schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SWHT" ] ;
+            schema:value "104"^^xsd:ID ],
+        [ schema:name "NAEBI" ;
+            schema:value "CROP_SWHT"^^xsd:ID ] ;
     schema:name "Sommerweizen"@de .
 
 :206 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WGRST" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WGRST"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "105"^^xsd:ID ] ;
     schema:name "Wintergerste"@de .
 
 :207 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WGRSTN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WGRSTN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "106"^^xsd:ID ] ;
     schema:name "Wintergerste in 62a Nitrat-Projekt"@de .
 
 :208 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SGRST" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SGRST"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "107"^^xsd:ID ] ;
     schema:name "Sommergerste"@de .
 
 :209 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WOGST" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WOGST"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "108"^^xsd:ID ] ;
     schema:name "Winterhafer"@de .
 
 :210 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SOGST" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SOGST"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "109"^^xsd:ID ] ;
     schema:name "Sommerhafer"@de .
 
 :211 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WRHGH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WRHGH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "110"^^xsd:ID ] ;
     schema:name "Winterroggen (Hybridsorten)"@de .
 
 :212 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WRHGP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WRHGP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "111"^^xsd:ID ] ;
     schema:name "Winterroggen (Populationssorten)"@de .
 
 :213 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WRHGH_N" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WRHGH_N"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "112"^^xsd:ID ] ;
     schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de .
 
 :214 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WRHGP_N" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WRHGP_N"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "113"^^xsd:ID ] ;
     schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de .
 
 :215 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WTRIT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WTRIT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "114"^^xsd:ID ] ;
     schema:name "Wintertriticale"@de .
 
 :216 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STRIT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STRIT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "115"^^xsd:ID ] ;
     schema:name "Sommertriticale"@de .
 
 :217 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WKORN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WKORN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "116"^^xsd:ID ] ;
     schema:name "Winterkorn, Dinkel"@de .
 
 :218 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_EMMEK" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_EMMEK"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "117"^^xsd:ID ] ;
     schema:name "Emmer / Einkorn"@de .
 
 :219 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WTRITN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WTRITN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "119"^^xsd:ID ] ;
     schema:name "Wintertriticale in 62a Nitrat-Projekt"@de .
 
 :220 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_OAFNT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_OAFNT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "196"^^xsd:ID ] ;
     schema:name "Nützlingsstreifen (DK)"@de .
 
 :221 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KARPA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KARPA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "143"^^xsd:ID ] ;
     schema:name "Sonnenblumen"@de .
 
 :222 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LINSD" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LINSD"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "190"^^xsd:ID ] ;
     schema:name "Buntbrache"@de .
 
 :223 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GANSO" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GANSO"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "123"^^xsd:ID ] ;
     schema:name "Hirse"@de .
 
 :224 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FLAXD" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FLAXD"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "191"^^xsd:ID ] ;
     schema:name "Saum auf Ackerfläche"@de .
 
 :225 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WINRAN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WINRAN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "130"^^xsd:ID ] ;
     schema:name "Winterraps"@de .
 
 :226 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SOMRA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SOMRA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "131"^^xsd:ID ] ;
     schema:name "Winterraps in 62a Nitrat-Projekt"@de .
 
 :227 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KARPB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KARPB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "132"^^xsd:ID ] ;
     schema:name "Sommerraps"@de .
 
 :228 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FLLND" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FLLND"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "192"^^xsd:ID ] ;
     schema:name "Rotationsbrache"@de .
 
 :229 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STRBRR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STRBRR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "195"^^xsd:ID ] ;
     schema:name "Nützlingsstreifen (oAF)"@de .
 
 :230 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GMNLE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GMNLE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "254"^^xsd:ID ] ;
     schema:name "Gründüngung (Nichtleguminosen), ha"@de .
 
 :231 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GMLG" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GMLG"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "255"^^xsd:ID ] ;
     schema:name "Gründüngung (Leguminosen), ha"@de .
 
 :232 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KOCRN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KOCRN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "137"^^xsd:ID ] ;
     schema:name "Futterrüben"@de .
 
 :233 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SILCRN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SILCRN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "138"^^xsd:ID ] ;
     schema:name "Körnermais"@de .
 
 :234 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHINK" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHINK"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "407"^^xsd:ID ] ;
     schema:name "Chinakohl"@de .
 
 :235 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RAD10B" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RAD10B"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "431"^^xsd:ID ] ;
     schema:name "Radies 10 Bund/m2"@de .
 
 :236 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RAD89S" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RAD89S"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "433"^^xsd:ID ] ;
     schema:name "Rettich 8-9 Stk/m2"@de .
 
 :237 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LGVGM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LGVGM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "480"^^xsd:ID ] ;
     schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de .
 
 :238 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_NLGMV" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_NLGMV"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "481"^^xsd:ID ] ;
     schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de .
 
 :239 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PURSLA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PURSLA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "430"^^xsd:ID ] ;
     schema:name "Portulak (geschützter Anbau)"@de .
 
 :240 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ABRGS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ABRGS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "600"^^xsd:ID ] ;
     schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de .
 
 :241 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PLBNP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PLBNP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "601"^^xsd:ID ] ;
     schema:name "Bohnen Stangen- (geschützter Anbau)"@de .
 
 :242 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ENDAU" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ENDAU"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "602"^^xsd:ID ] ;
     schema:name "Endivie Herbst- (geschützter Anbau)"@de .
 
 :243 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CUC30" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CUC30"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "603"^^xsd:ID ] ;
     schema:name "Gurken 30 Stk/m2, Erdkultur (geschützter Anbau)"@de .
 
 :244 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KOHLC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KOHLC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "604"^^xsd:ID ] ;
     schema:name "Kohlrabi (geschützter Anbau)"@de .
 
 :245 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PROBE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PROBE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "161"^^xsd:ID ] ;
     schema:name "Ackerbohnen"@de .
 
 :246 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SWCHD" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SWCHD"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "605"^^xsd:ID ] ;
     schema:name "Krautstiel (geschützter Anbau)"@de .
 
 :247 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ACBOE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ACBOE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "163"^^xsd:ID ] ;
     schema:name "Süsslupinen"@de .
 
 :248 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SOYBN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SOYBN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "170"^^xsd:ID ] ;
     schema:name "Tabak Burley"@de .
 
 :249 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SWEET" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SWEET"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "171"^^xsd:ID ] ;
     schema:name "Tabak Virgine"@de .
 
 :250 a :GRUDCrop ;
     schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TABAC" ] ;
+            schema:value "172"^^xsd:ID ],
+        [ schema:name "NAEBI" ;
+            schema:value "CROP_TABAC"^^xsd:ID ] ;
     schema:name "Reis"@de .
 
 :251 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TABAV" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TABAV"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "178"^^xsd:ID ] ;
     schema:name "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de .
 
 :252 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RICE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RICE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "179"^^xsd:ID ] ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de .
 
 :253 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_NCROP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_NCROP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "180"^^xsd:ID ] ;
     schema:name "Kenaf"@de .
 
 :254 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LCROP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LCROP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "181"^^xsd:ID ] ;
     schema:name "Ölhanf"@de .
 
 :255 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KENAF" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KENAF"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "182"^^xsd:ID ] ;
     schema:name "Faserhanf"@de .
 
 :256 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HEMP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HEMP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "183"^^xsd:ID ] ;
     schema:name "Öllein"@de .
 
 :257 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FIBHE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FIBHE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "184"^^xsd:ID ] ;
     schema:name "Faserlein"@de .
 
 :258 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CRSSE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CRSSE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "606"^^xsd:ID ] ;
     schema:name "Kresse (geschützter Anbau)"@de .
 
 :259 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LEEKP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LEEKP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "607"^^xsd:ID ] ;
     schema:name "Lauch (geschützter Anbau)"@de .
 
 :260 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CSLLC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CSLLC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "608"^^xsd:ID ] ;
     schema:name "Nüsslisalat, Feldsalat (geschützter Anbau)"@de .
 
 :261 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PAPSC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PAPSC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "609"^^xsd:ID ] ;
     schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de .
 
 :262 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PRLYP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PRLYP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "610"^^xsd:ID ] ;
     schema:name "Petersilie (geschützter Anbau)"@de .
 
 :263 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_OAFNTN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_OAFNTN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "200"^^xsd:ID ] ;
     schema:name "Naturwiese extensiv"@de .
 
 :264 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_OAFNLN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_OAFNLN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "201"^^xsd:ID ] ;
     schema:name "Naturwiese wenig intensiv"@de .
 
 :265 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WGRIN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WGRIN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "202"^^xsd:ID ] ;
     schema:name "Naturwiese mittelintensiv"@de .
 
 :266 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WGRNN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WGRNN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "203"^^xsd:ID ] ;
     schema:name "Naturwiese intensiv"@de .
 
 :267 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RAD20" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RAD20"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "611"^^xsd:ID ] ;
     schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de .
 
 :268 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RAD18" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RAD18"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "612"^^xsd:ID ] ;
     schema:name "Rettich 18 Stk/m2 (geschützter Anbau)"@de .
 
 :269 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RMEAD" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RMEAD"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "207"^^xsd:ID ] ;
     schema:name "Uebr. Wiesen mit Düngeverbot"@de .
 
 :270 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_AWEX" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_AWEX"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "208"^^xsd:ID ] ;
     schema:name "Kunstwiese extensiv"@de .
 
 :271 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PEXT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PEXT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "220"^^xsd:ID ] ;
     schema:name "Weide extensiv"@de .
 
 :272 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PWINT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PWINT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "221"^^xsd:ID ] ;
     schema:name "Weide wenig intensiv"@de .
 
 :273 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PMEDI" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PMEDI"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "222"^^xsd:ID ] ;
     schema:name "Weide (Mäh-) mittelintensiv"@de .
 
 :274 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PINTE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PINTE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "223"^^xsd:ID ] ;
     schema:name "Weide (Mäh-) intensiv"@de .
 
 :275 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GSEED" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GSEED"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "231"^^xsd:ID ] ;
     schema:name "Grassamen-Produktion"@de .
 
 :276 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LTTLG" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LTTLG"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "613"^^xsd:ID ] ;
     schema:name "Salate Kopf-, Eisberg, Lollo (geschützter Anbau)"@de .
 
 :277 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHVSP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHVSP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "614"^^xsd:ID ] ;
     schema:name "Schnittlauch Kultur (geschützter Anbau)"@de .
 
 :278 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CTLSP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CTLSP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "615"^^xsd:ID ] ;
     schema:name "Schnittsalat (geschützter Anbau)"@de .
 
 :279 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CEL40" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CEL40"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "616"^^xsd:ID ] ;
     schema:name "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de .
 
 :280 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SPNCH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SPNCH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "617"^^xsd:ID ] ;
     schema:name "Spinat (geschützter Anbau)"@de .
 
 :281 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TOMTL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TOMTL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "618"^^xsd:ID ] ;
     schema:name "Tomaten, Bodenkulturen, tiefer Ertrag (geschützter Anbau)"@de .
 
 :282 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TOMTM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TOMTM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "619"^^xsd:ID ] ;
     schema:name "Tomaten, Bodenkulturen, mittlerer Ertrag (geschützter Anbau)"@de .
 
 :283 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ZUCHP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ZUCHP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "620"^^xsd:ID ] ;
     schema:name "Zucchetti, Patisson (geschützter Anbau)"@de .
 
 :284 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TOMTH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TOMTH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "621"^^xsd:ID ] ;
     schema:name "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de .
 
 :285 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TOMTV" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TOMTV"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "622"^^xsd:ID ] ;
     schema:name "Tomaten, Bodenkultur, sehr hoher Ertrag (geschützter Anbau)"@de .
 
 :286 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_MSELV" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_MSELV"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "270"^^xsd:ID ] ;
     schema:name "Selve gepflegt"@de .
 
 :287 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KIDK" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KIDK"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "300"^^xsd:ID ] ;
     schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de .
 
 :288 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_APPLT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_APPLT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "301"^^xsd:ID ] ;
     schema:name "Aprikosenanlage"@de .
 
 :289 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_APEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_APEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "302"^^xsd:ID ] ;
     schema:name "Aprikosenanlage, hoher Ertrag"@de .
 
 :290 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POPFR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POPFR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "303"^^xsd:ID ] ;
     schema:name "Kernobstanlage"@de .
 
 :291 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POPEY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POPEY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "304"^^xsd:ID ] ;
     schema:name "Kernobstanlage, hoher Ertrag"@de .
 
 :292 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHRPL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHRPL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "305"^^xsd:ID ] ;
     schema:name "Kirschenanlage"@de .
 
 :293 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "306"^^xsd:ID ] ;
     schema:name "Kirschenanlage, hoher Ertrag"@de .
 
 :294 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KIWPL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KIWPL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "307"^^xsd:ID ] ;
     schema:name "Kiwianlage"@de .
 
 :295 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KIWEY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KIWEY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "308"^^xsd:ID ] ;
     schema:name "Kiwianlage, hoher Ertrag"@de .
 
 :296 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PFRPL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PFRPL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "309"^^xsd:ID ] ;
     schema:name "Pfirsichanlage"@de .
 
 :297 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PFREY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PFREY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "310"^^xsd:ID ] ;
     schema:name "Pfirsichanlage, hoher Ertrag"@de .
 
 :298 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PLMPL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PLMPL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "311"^^xsd:ID ] ;
     schema:name "Zwetschgenanlage"@de .
 
 :299 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PLMEY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PLMEY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "312"^^xsd:ID ] ;
     schema:name "Zwetschgenanlage, hoher Ertrag"@de .
 
 :300 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WALN1" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WALN1"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "313"^^xsd:ID ] ;
     schema:name "Walnüsse < 185 Bäume/ha"@de .
 
 :301 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WALN2" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WALN2"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "314"^^xsd:ID ] ;
     schema:name "Walnüsse ≥ 185 Bäume/ha"@de .
 
 :302 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HAZLN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HAZLN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "315"^^xsd:ID ] ;
     schema:name "Haselnüsse"@de .
 
 :303 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_VINES" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_VINES"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "320"^^xsd:ID ] ;
     schema:name "Reben"@de .
 
 :304 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_VBDIV" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_VBDIV"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "321"^^xsd:ID ] ;
     schema:name "Rebflächen mit hoher Artenvielfalt"@de .
 
 :305 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TGRAPE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TGRAPE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "322"^^xsd:ID ] ;
     schema:name "Tafeltrauben"@de .
 
 :306 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TGEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TGEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "323"^^xsd:ID ] ;
     schema:name "Tafeltrauben, hoher Ertrag"@de .
 
 :307 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BLKBRY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BLKBRY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "330"^^xsd:ID ] ;
     schema:name "Brombeeren"@de .
 
 :308 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BBREY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BBREY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "331"^^xsd:ID ] ;
     schema:name "Brombeeren, hoher Ertrag"@de .
 
 :309 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CURRNT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CURRNT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "333"^^xsd:ID ] ;
     schema:name "Cassis"@de .
 
 :310 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "334"^^xsd:ID ] ;
     schema:name "Cassis, hoher Ertrag"@de .
 
 :311 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STRAW1" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STRAW1"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "335"^^xsd:ID ] ;
     schema:name "Erdbeeren 1-jährig"@de .
 
 :312 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ST1EY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ST1EY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "336"^^xsd:ID ] ;
     schema:name "Erdbeeren 1-jährig, hoher Ertrag"@de .
 
 :313 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STRAWP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STRAWP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "337"^^xsd:ID ] ;
     schema:name "Erdbeeren mehrjährig"@de .
 
 :314 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BLUBRY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BLUBRY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "338"^^xsd:ID ] ;
     schema:name "Heidelbeeren"@de .
 
 :315 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HBEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HBEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "339"^^xsd:ID ] ;
     schema:name "Heidelbeeren, hoher Ertrag"@de .
 
 :316 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RASPB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RASPB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "340"^^xsd:ID ] ;
     schema:name "Himbeeren"@de .
 
 :317 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RBEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RBEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "341"^^xsd:ID ] ;
     schema:name "Himbeeren, hoher Ertrag"@de .
 
 :318 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_REDCUR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_REDCUR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "342"^^xsd:ID ] ;
     schema:name "Rote Johannisbeeren"@de .
 
 :319 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RJEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RJEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "343"^^xsd:ID ] ;
     schema:name "Rote Johannisbeeren, hoher Ertrag"@de .
 
 :320 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GOOSEB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GOOSEB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "344"^^xsd:ID ] ;
     schema:name "Stachelbeeren"@de .
 
 :321 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GBEYH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GBEYH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "345"^^xsd:ID ] ;
     schema:name "Stachelbeeren, hoher Ertrag"@de .
 
 :322 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ALTBRY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ALTBRY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "346"^^xsd:ID ] ;
     schema:name "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de .
 
 :323 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ORNSTB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ORNSTB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "360"^^xsd:ID ] ;
     schema:name "Ziersträucher, -gehölze, -stauden"@de .
 
 :324 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_NURSRY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_NURSRY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "361"^^xsd:ID ] ;
     schema:name "Baumschulen"@de .
 
 :325 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_XMASTR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_XMASTR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "362"^^xsd:ID ] ;
     schema:name "Christbäume"@de .
 
 :326 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HOPS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HOPS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "363"^^xsd:ID ] ;
     schema:name "Hopfen"@de .
 
 :327 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHISLF" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHISLF"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "370"^^xsd:ID ] ;
     schema:name "Chinaschilf"@de .
 
 :328 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_EGGPL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_EGGPL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "400"^^xsd:ID ] ;
     schema:name "Aubergine"@de .
 
 :329 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CAULI" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CAULI"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "401"^^xsd:ID ] ;
     schema:name "Blumenkohl"@de .
 
 :330 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KOHRA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KOHRA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "402"^^xsd:ID ] ;
     schema:name "Bodenkohlrabi"@de .
 
 :331 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BUSHB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BUSHB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "403"^^xsd:ID ] ;
     schema:name "Bohnen, Busch- Handpflück-"@de .
 
 :332 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BEANP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BEANP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "404"^^xsd:ID ] ;
     schema:name "Bohnen, Verarbeitung-"@de .
 
 :333 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BROCC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BROCC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "405"^^xsd:ID ] ;
     schema:name "Broccoli"@de .
 
 :334 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHIWR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHIWR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "406"^^xsd:ID ] ;
     schema:name "Chicorée, Wurzelanbau"@de .
 
 :335 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CUC50" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CUC50"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "623"^^xsd:ID ] ;
     schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de .
 
 :336 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RADCH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RADCH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "408"^^xsd:ID ] ;
     schema:name "Cicorino rosso, Radicchio"@de .
 
 :337 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ENDEY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ENDEY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "409"^^xsd:ID ] ;
     schema:name "Endivie, hoher Ertrag"@de .
 
 :338 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ENDMY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ENDMY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "410"^^xsd:ID ] ;
     schema:name "Endivie, mittlerer Ertrag"@de .
 
 :339 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PEAKE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PEAKE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "411"^^xsd:ID ] ;
     schema:name "Erbsen, Kefen"@de .
 
 :340 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PEAP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PEAP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "412"^^xsd:ID ] ;
     schema:name "Erbsen, Verarbeitung-"@de .
 
 :341 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FENNL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FENNL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "413"^^xsd:ID ] ;
     schema:name "Fenchel"@de .
 
 :342 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PICKL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PICKL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "414"^^xsd:ID ] ;
     schema:name "Gurken, Essiggurken"@de .
 
 :343 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CUTCN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CUTCN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "415"^^xsd:ID ] ;
     schema:name "Kabis Einschneide-"@de .
 
 :344 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FOILC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FOILC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "416"^^xsd:ID ] ;
     schema:name "Kabis Früh-, Folie"@de .
 
 :345 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STORC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STORC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "417"^^xsd:ID ] ;
     schema:name "Kabis Lager"@de .
 
 :346 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CBEFE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CBEFE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "418"^^xsd:ID ] ;
     schema:name "Karotten Bund-, Früh-"@de .
 
 :347 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CARPP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CARPP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "419"^^xsd:ID ] ;
     schema:name "Karotten Pariser"@de .
 
 :348 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CARHY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CARHY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "420"^^xsd:ID ] ;
     schema:name "Karotten Verarbeitung-, Lager-, hoher Ertrag"@de .
 
 :349 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CARMY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CARMY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "421"^^xsd:ID ] ;
     schema:name "Karotten Verarbeitung-, Lager-, mittlerer Ertrag"@de .
 
 :350 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KOHLR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KOHLR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "422"^^xsd:ID ] ;
     schema:name "Kohlrabi"@de .
 
 :351 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KOHP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KOHP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "423"^^xsd:ID ] ;
     schema:name "Kohlrabi Verarbeitungs-"@de .
 
 :352 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHARD" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHARD"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "424"^^xsd:ID ] ;
     schema:name "Krautstiel"@de .
 
 :353 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PUMPK" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PUMPK"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "425"^^xsd:ID ] ;
     schema:name "Kürbis"@de .
 
 :354 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LEEKS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LEEKS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "426"^^xsd:ID ] ;
     schema:name "Lauch"@de .
 
 :355 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_MELON" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_MELON"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "427"^^xsd:ID ] ;
     schema:name "Melone"@de .
 
 :356 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LAMBSS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LAMBSS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "428"^^xsd:ID ] ;
     schema:name "Nüsslisalat, Feldsalat"@de .
 
 :357 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PARSY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PARSY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "429"^^xsd:ID ] ;
     schema:name "Petersilie"@de .
 
 :358 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RKTC1" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RKTC1"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "624"^^xsd:ID ] ;
     schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de .
 
 :359 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RKTC2" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RKTC2"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "625"^^xsd:ID ] ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de .
 
 :360 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BEETS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BEETS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "432"^^xsd:ID ] ;
     schema:name "Randen"@de .
 
 :361 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SGPVV" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SGPVV"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "690"^^xsd:ID ] ;
     schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de .
 
 :362 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RHUBB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RHUBB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "434"^^xsd:ID ] ;
     schema:name "Rhabarber"@de .
 
 :363 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BRSPR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BRSPR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "435"^^xsd:ID ] ;
     schema:name "Rosenkohl, Strünke abgeführt"@de .
 
 :364 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TRNPM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TRNPM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "436"^^xsd:ID ] ;
     schema:name "Rüben Herbst-, Mai-"@de .
 
 :365 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ARUCL1" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ARUCL1"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "437"^^xsd:ID ] ;
     schema:name "Rucola, 1 Schnitt"@de .
 
 :366 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SALHY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SALHY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "438"^^xsd:ID ] ;
     schema:name "Salate, diverse, hoher Ertrag"@de .
 
 :367 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SALMY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SALMY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "439"^^xsd:ID ] ;
     schema:name "Salate, diverse, mittlerer Ertrag"@de .
 
 :368 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CUTFLG" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CUTFLG"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "440"^^xsd:ID ] ;
     schema:name "Schnittblumen, gross"@de .
 
 :369 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CUTFLS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CUTFLS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "441"^^xsd:ID ] ;
     schema:name "Schnittblumen, klein"@de .
 
 :370 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CUTFLM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CUTFLM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "442"^^xsd:ID ] ;
     schema:name "Schnittblumen, mittel"@de .
 
 :371 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHIVES" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHIVES"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "443"^^xsd:ID ] ;
     schema:name "Schnittlauch"@de .
 
 :372 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CUSALA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CUSALA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "444"^^xsd:ID ] ;
     schema:name "Schnittsalat"@de .
 
 :373 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BLKSAL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BLKSAL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "445"^^xsd:ID ] ;
     schema:name "Schwarzwurzel"@de .
 
 :374 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CELERK" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CELERK"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "446"^^xsd:ID ] ;
     schema:name "Sellerie Knollen-"@de .
 
 :375 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CELERS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CELERS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "447"^^xsd:ID ] ;
     schema:name "Sellerie Stangen-"@de .
 
 :376 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ASPBW" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ASPBW"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "448"^^xsd:ID ] ;
     schema:name "Spargel Bleich-"@de .
 
 :377 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ASPGR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ASPGR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "449"^^xsd:ID ] ;
     schema:name "Spargel Grün-"@de .
 
 :378 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SPINP1" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SPINP1"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "450"^^xsd:ID ] ;
     schema:name "Spinat, nicht überw., 1 Schn., vor Mitte April gesät"@de .
 
 :379 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SPIN1C" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SPIN1C"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "451"^^xsd:ID ] ;
     schema:name "Spinat, nicht überwinternd, 1 Schnitt"@de .
 
 :380 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SPIN2C" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SPIN2C"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "452"^^xsd:ID ] ;
     schema:name "Spinat, nicht überwinternd, 2 Schnitte"@de .
 
 :381 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TOMAT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TOMAT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "453"^^xsd:ID ] ;
     schema:name "Tomaten"@de .
 
 :382 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WSPIN1" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WSPIN1"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "454"^^xsd:ID ] ;
     schema:name "Winterspinat 1 Schnitt"@de .
 
 :383 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SAVOYL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SAVOYL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "455"^^xsd:ID ] ;
     schema:name "Wirz leicht"@de .
 
 :384 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SAVOYS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SAVOYS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "456"^^xsd:ID ] ;
     schema:name "Wirz schwer"@de .
 
 :385 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ZUCCHP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ZUCCHP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "457"^^xsd:ID ] ;
     schema:name "Zucchetti, Patisson, Kürbis"@de .
 
 :386 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SUGRCH" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SUGRCH"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "458"^^xsd:ID ] ;
     schema:name "Zuckerhut"@de .
 
 :387 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SUCORN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SUCORN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "459"^^xsd:ID ] ;
     schema:name "Zuckermais"@de .
 
 :388 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ONION" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ONION"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "460"^^xsd:ID ] ;
     schema:name "Zwiebeln"@de .
 
 :389 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ARUCL2" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ARUCL2"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "461"^^xsd:ID ] ;
     schema:name "Rucola, 2 Schnitte"@de .
 
 :390 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SUGRCC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SUGRCC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "462"^^xsd:ID ] ;
     schema:name "Zuckerhut (Convenience)"@de .
 
 :391 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KALE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KALE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "463"^^xsd:ID ] ;
     schema:name "Federkohl"@de .
 
 :392 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PRSNP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PRSNP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "464"^^xsd:ID ] ;
     schema:name "Pastinake"@de .
 
 :393 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GRLIC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GRLIC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "465"^^xsd:ID ] ;
     schema:name "Knoblauch"@de .
 
 :394 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TRNTP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TRNTP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "466"^^xsd:ID ] ;
     schema:name "Cima di rapa"@de .
 
 :395 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STRAW" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STRAW"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "120"^^xsd:ID ] ;
     schema:name "Vom Betrieb weggeführtes Stroh, ha"@de .
 
 :396 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STRAWL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STRAWL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "121"^^xsd:ID ] ;
     schema:name "Getreide-Silage"@de .
 
 :397 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SFVGV" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SFVGV"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "490"^^xsd:ID ] ;
     schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de .
 
 :398 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_MLKTL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_MLKTL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "500"^^xsd:ID ] ;
     schema:name "Andorn"@de .
 
 :399 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ARNCA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ARNCA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "501"^^xsd:ID ] ;
     schema:name "Arnika"@de .
 
 :400 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BSLKM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BSLKM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "502"^^xsd:ID ] ;
     schema:name "Basilikum"@de .
 
 :401 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BRNTT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BRNTT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "503"^^xsd:ID ] ;
     schema:name "Bibernelle"@de .
 
 :402 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BLMLW" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BLMLW"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "504"^^xsd:ID ] ;
     schema:name "Blaue Malve"@de .
 
 :403 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BRGEG" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BRGEG"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "505"^^xsd:ID ] ;
     schema:name "Bohnenkraut"@de .
 
 :404 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BRNTL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BRNTL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "506"^^xsd:ID ] ;
     schema:name "Brennessel"@de .
 
 :405 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_DLLLD" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_DLLLD"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "507"^^xsd:ID ] ;
     schema:name "Dill"@de .
 
 :406 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RUEHR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RUEHR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "508"^^xsd:ID ] ;
     schema:name "Edelraute"@de .
 
 :407 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_EDLWS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_EDLWS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "509"^^xsd:ID ] ;
     schema:name "Edelweiss"@de .
 
 :408 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_VRVNN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_VRVNN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "510"^^xsd:ID ] ;
     schema:name "Ehrenpreis"@de .
 
 :409 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_MRSHW" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_MRSHW"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "511"^^xsd:ID ] ;
     schema:name "Eibisch"@de .
 
 :410 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_MSHML" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_MSHML"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "512"^^xsd:ID ] ;
     schema:name "Eisenkraut"@de .
 
 :411 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FNSD1" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FNSD1"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "513"^^xsd:ID ] ;
     schema:name "Fenchelsamen 1-jährig"@de .
 
 :412 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FNSDP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FNSDP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "514"^^xsd:ID ] ;
     schema:name "Fenchelsamen mehrjährig"@de .
 
 :413 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LDYSM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LDYSM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "515"^^xsd:ID ] ;
     schema:name "Frauenmantel"@de .
 
 :414 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LMNRM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LMNRM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "516"^^xsd:ID ] ;
     schema:name "Indianernessel, Rosenmelisse"@de .
 
 :415 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_STJHW" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_STJHW"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "517"^^xsd:ID ] ;
     schema:name "Johanniskraut"@de .
 
 :416 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CHMML" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CHMML"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "518"^^xsd:ID ] ;
     schema:name "Kamille"@de .
 
 :417 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRB1L" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRB1L"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "519"^^xsd:ID ] ;
     schema:name "Kräuter,1-jährig, gross"@de .
 
 :418 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRB1S" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRB1S"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "520"^^xsd:ID ] ;
     schema:name "Kräuter,1-jährig, klein"@de .
 
 :419 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRB1M" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRB1M"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "521"^^xsd:ID ] ;
     schema:name "Kräuter,1-jährig, mittel"@de .
 
 :420 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRB1MB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRB1MB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "522"^^xsd:ID ] ;
     schema:name "Kräuter,1-jährig, mittel-gross"@de .
 
 :421 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRBPRL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRBPRL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "523"^^xsd:ID ] ;
     schema:name "Kräuter,mehrjährig, gross"@de .
 
 :422 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRBPRS" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRBPRS"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "524"^^xsd:ID ] ;
     schema:name "Kräuter,mehrjährig, klein"@de .
 
 :423 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRBPRM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRBPRM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "525"^^xsd:ID ] ;
     schema:name "Kräuter,mehrjährig, mittel"@de .
 
 :424 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HRBPRB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HRBPRB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "526"^^xsd:ID ] ;
     schema:name "Kräuter,mehrjährig, mittel-gross"@de .
 
 :425 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LVGGK" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LVGGK"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "527"^^xsd:ID ] ;
     schema:name "Liebstöckel / Maggikraut"@de .
 
 :426 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_MRJRM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_MRJRM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "528"^^xsd:ID ] ;
     schema:name "Majoran"@de .
 
 :427 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ORGMN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ORGMN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "529"^^xsd:ID ] ;
     schema:name "Orangenminze"@de .
 
 :428 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_ORGNO" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_ORGNO"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "530"^^xsd:ID ] ;
     schema:name "Oregano"@de .
 
 :429 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PPMNT" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PPMNT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "531"^^xsd:ID ] ;
     schema:name "Pfefferminze"@de .
 
 :430 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_RSMRY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_RSMRY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "532"^^xsd:ID ] ;
     schema:name "Rosmarin"@de .
 
 :431 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SGESG" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SGESG"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "533"^^xsd:ID ] ;
     schema:name "Salbei"@de .
 
 :432 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_YRRW" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_YRRW"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "534"^^xsd:ID ] ;
     schema:name "Schafgarbe"@de .
 
 :433 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PMLAW" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PMLAW"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "535"^^xsd:ID ] ;
     schema:name "Schlüsselblume (ganze Pflanze)"@de .
 
 :434 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BLKEL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BLKEL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "536"^^xsd:ID ] ;
     schema:name "Schwarzer Holunder"@de .
 
 :435 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PLTNL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PLTNL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "537"^^xsd:ID ] ;
     schema:name "Spitzwegerich"@de .
 
 :436 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_THYME" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_THYME"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "538"^^xsd:ID ] ;
     schema:name "Thymian"@de .
 
 :437 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_PANSY" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_PANSY"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "539"^^xsd:ID ] ;
     schema:name "Viola (Stiefmütterchen)"@de .
 
 :438 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HYSSP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HYSSP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "540"^^xsd:ID ] ;
     schema:name "Ysop"@de .
 
 :439 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LMBLM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LMBLM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "541"^^xsd:ID ] ;
     schema:name "Zitronenmelisse"@de .
 
 :440 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_MILLE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_MILLE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "122"^^xsd:ID ] ;
     schema:name "Getreide-Silage mit Leguminosen"@de .
 
 :441 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WGRNM" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WGRNM"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "204"^^xsd:ID ] ;
     schema:name "Kunstwiese mittelintensiv"@de .
 
 :442 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_AWMI" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_AWMI"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "205"^^xsd:ID ] ;
     schema:name "Kunstwiese intensiv"@de .
 
 :443 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FOSTR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FOSTR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "240"^^xsd:ID ] ;
     schema:name "betriebseigenes verfütt. Stroh, ha"@de .
 
 :444 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_BERBL" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_BERBL"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "241"^^xsd:ID ] ;
     schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de .
 
 :445 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_GCORN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_GCORN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "250"^^xsd:ID ] ;
     schema:name "Grünmais, ha"@de .
 
 :446 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_IFEED" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_IFEED"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "251"^^xsd:ID ] ;
     schema:name "Zwischenfutter (herbstgesäte KW), ha"@de .
 
 :447 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_TPAST" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TPAST"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "252"^^xsd:ID ] ;
     schema:name "Äugstlen, ha"@de .
 
 :448 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SPRCP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SPRCP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "253"^^xsd:ID ] ;
     schema:name "Frühjahrsschnitt vor Wiesenumbruch, ha"@de .
 
 :449 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_IFWOC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_IFWOC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "256"^^xsd:ID ] ;
     schema:name "Zwischenfutter (ohne KW), ha"@de .
 
 :450 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SOR2ND" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SOR2ND"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "257"^^xsd:ID ] ;
     schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de .
 
 :451 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPP" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPP"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "133"^^xsd:ID ] ;
     schema:name "Kartoffeln (b), Speise-, Verarbeitungs-"@de .
 
 :452 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "134"^^xsd:ID ] ;
     schema:name "Kartoffeln (b), Pflanz-"@de .
 
 :453 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTEA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTEA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "135"^^xsd:ID ] ;
     schema:name "Kartoffeln (b), Früh-"@de .
 
 :454 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FRUB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FRUB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "136"^^xsd:ID ] ;
     schema:name "Zuckerrüben"@de .
 
 :455 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_FCRMN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_FCRMN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "140"^^xsd:ID ] ;
     schema:name "CCM"@de .
 
 :456 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "144"^^xsd:ID ] ;
     schema:name "Kartoffeln (a), Speise-, Verarbeitungs-"@de .
 
 :457 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPFA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPFA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "145"^^xsd:ID ] ;
     schema:name "Kartoffeln (c), Speise-, Verarbeitungs-"@de .
 
 :458 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPFC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPFC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "146"^^xsd:ID ] ;
     schema:name "Kartoffeln (a), Pflanz-"@de .
 
 :459 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPFB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPFB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "147"^^xsd:ID ] ;
     schema:name "Kartoffeln (c), Pflanz-"@de .
 
 :460 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPFD" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPFD"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "148"^^xsd:ID ] ;
     schema:name "Kartoffeln (a), Früh-"@de .
 
 :461 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_POTPFE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_POTPFE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "149"^^xsd:ID ] ;
     schema:name "Kartoffeln (c), Früh-"@de .
 
 :462 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KARPFC" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KARPFC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "150"^^xsd:ID ] ;
     schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de .
 
 :463 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_KARPFE_N" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_KARPFE_N"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "160"^^xsd:ID ] ;
     schema:name "Eiweisserbsen"@de .
 
 :464 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_EWSPE" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_EWSPE"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "162"^^xsd:ID ] ;
     schema:name "Soja"@de .
 
 :465 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_WINRA" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_WINRA"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "124"^^xsd:ID ] ;
     schema:name "Ganzpflanzen-Sorghum"@de .
 
 :466 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_CCMCRN" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_CCMCRN"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "139"^^xsd:ID ] ;
     schema:name "Silomais"@de .
 
 :467 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HFT01" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HFT01"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "801"^^xsd:ID ] ;
     schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de .
 
 :468 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HFTWB" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HFTWB"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "802"^^xsd:ID ] ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de .
 
 :469 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_HFBUFF" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_HFBUFF"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "803"^^xsd:ID ] ;
     schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de .
 
 :470 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_NTT01" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_NTT01"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "814"^^xsd:ID ] ;
     schema:name "Nussbäume, 0.01 ha/Baum"@de .
 
 :471 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_SCT01" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SCT01"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "815"^^xsd:ID ] ;
     schema:name "Edelkastanienbäume, 0.01 ha/Baum"@de .
 
 :472 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "CROP_LGMPR" ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_LGMPR"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "957"^^xsd:ID ] ;
     schema:name "Leguminosen Reinsaat"@de .
 
