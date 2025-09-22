@@ -1,0 +1,1363 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix schema: <http://schema.org/> .
+
+:201 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WWHT" ] ;
+    schema:name "Winterweizen"@de .
+
+:202 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WWHTN" ] ;
+    schema:name "Winterweizen in 62a Nitrat-Projekt"@de .
+
+:203 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FWHT" ] ;
+    schema:name "Futterweizen"@de .
+
+:204 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FWHTN" ] ;
+    schema:name "Futterweizen in 62a Nitrat-Projekt"@de .
+
+:205 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SWHT" ] ;
+    schema:name "Sommerweizen"@de .
+
+:206 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WGRST" ] ;
+    schema:name "Wintergerste"@de .
+
+:207 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WGRSTN" ] ;
+    schema:name "Wintergerste in 62a Nitrat-Projekt"@de .
+
+:208 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SGRST" ] ;
+    schema:name "Sommergerste"@de .
+
+:209 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WOGST" ] ;
+    schema:name "Winterhafer"@de .
+
+:210 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SOGST" ] ;
+    schema:name "Sommerhafer"@de .
+
+:211 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WRHGH" ] ;
+    schema:name "Winterroggen (Hybridsorten)"@de .
+
+:212 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WRHGP" ] ;
+    schema:name "Winterroggen (Populationssorten)"@de .
+
+:213 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WRHGH_N" ] ;
+    schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de .
+
+:214 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WRHGP_N" ] ;
+    schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de .
+
+:215 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WTRIT" ] ;
+    schema:name "Wintertriticale"@de .
+
+:216 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STRIT" ] ;
+    schema:name "Sommertriticale"@de .
+
+:217 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WKORN" ] ;
+    schema:name "Winterkorn, Dinkel"@de .
+
+:218 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_EMMEK" ] ;
+    schema:name "Emmer / Einkorn"@de .
+
+:219 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WTRITN" ] ;
+    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de .
+
+:220 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_OAFNT" ] ;
+    schema:name "Nützlingsstreifen (DK)"@de .
+
+:221 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KARPA" ] ;
+    schema:name "Sonnenblumen"@de .
+
+:222 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LINSD" ] ;
+    schema:name "Buntbrache"@de .
+
+:223 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GANSO" ] ;
+    schema:name "Hirse"@de .
+
+:224 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FLAXD" ] ;
+    schema:name "Saum auf Ackerfläche"@de .
+
+:225 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WINRAN" ] ;
+    schema:name "Winterraps"@de .
+
+:226 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SOMRA" ] ;
+    schema:name "Winterraps in 62a Nitrat-Projekt"@de .
+
+:227 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KARPB" ] ;
+    schema:name "Sommerraps"@de .
+
+:228 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FLLND" ] ;
+    schema:name "Rotationsbrache"@de .
+
+:229 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STRBRR" ] ;
+    schema:name "Nützlingsstreifen (oAF)"@de .
+
+:230 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GMNLE" ] ;
+    schema:name "Gründüngung (Nichtleguminosen), ha"@de .
+
+:231 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GMLG" ] ;
+    schema:name "Gründüngung (Leguminosen), ha"@de .
+
+:232 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KOCRN" ] ;
+    schema:name "Futterrüben"@de .
+
+:233 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SILCRN" ] ;
+    schema:name "Körnermais"@de .
+
+:234 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHINK" ] ;
+    schema:name "Chinakohl"@de .
+
+:235 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RAD10B" ] ;
+    schema:name "Radies 10 Bund/m2"@de .
+
+:236 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RAD89S" ] ;
+    schema:name "Rettich 8-9 Stk/m2"@de .
+
+:237 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LGVGM" ] ;
+    schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de .
+
+:238 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_NLGMV" ] ;
+    schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de .
+
+:239 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PURSLA" ] ;
+    schema:name "Portulak (geschützter Anbau)"@de .
+
+:240 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ABRGS" ] ;
+    schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de .
+
+:241 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PLBNP" ] ;
+    schema:name "Bohnen Stangen- (geschützter Anbau)"@de .
+
+:242 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ENDAU" ] ;
+    schema:name "Endivie Herbst- (geschützter Anbau)"@de .
+
+:243 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CUC30" ] ;
+    schema:name "Gurken 30 Stk/m2, Erdkultur (geschützter Anbau)"@de .
+
+:244 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KOHLC" ] ;
+    schema:name "Kohlrabi (geschützter Anbau)"@de .
+
+:245 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PROBE" ] ;
+    schema:name "Ackerbohnen"@de .
+
+:246 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SWCHD" ] ;
+    schema:name "Krautstiel (geschützter Anbau)"@de .
+
+:247 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ACBOE" ] ;
+    schema:name "Süsslupinen"@de .
+
+:248 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SOYBN" ] ;
+    schema:name "Tabak Burley"@de .
+
+:249 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SWEET" ] ;
+    schema:name "Tabak Virgine"@de .
+
+:250 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TABAC" ] ;
+    schema:name "Reis"@de .
+
+:251 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TABAV" ] ;
+    schema:name "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de .
+
+:252 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RICE" ] ;
+    schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de .
+
+:253 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_NCROP" ] ;
+    schema:name "Kenaf"@de .
+
+:254 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LCROP" ] ;
+    schema:name "Ölhanf"@de .
+
+:255 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KENAF" ] ;
+    schema:name "Faserhanf"@de .
+
+:256 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HEMP" ] ;
+    schema:name "Öllein"@de .
+
+:257 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FIBHE" ] ;
+    schema:name "Faserlein"@de .
+
+:258 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CRSSE" ] ;
+    schema:name "Kresse (geschützter Anbau)"@de .
+
+:259 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LEEKP" ] ;
+    schema:name "Lauch (geschützter Anbau)"@de .
+
+:260 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CSLLC" ] ;
+    schema:name "Nüsslisalat, Feldsalat (geschützter Anbau)"@de .
+
+:261 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PAPSC" ] ;
+    schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de .
+
+:262 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PRLYP" ] ;
+    schema:name "Petersilie (geschützter Anbau)"@de .
+
+:263 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_OAFNTN" ] ;
+    schema:name "Naturwiese extensiv"@de .
+
+:264 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_OAFNLN" ] ;
+    schema:name "Naturwiese wenig intensiv"@de .
+
+:265 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WGRIN" ] ;
+    schema:name "Naturwiese mittelintensiv"@de .
+
+:266 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WGRNN" ] ;
+    schema:name "Naturwiese intensiv"@de .
+
+:267 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RAD20" ] ;
+    schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de .
+
+:268 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RAD18" ] ;
+    schema:name "Rettich 18 Stk/m2 (geschützter Anbau)"@de .
+
+:269 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RMEAD" ] ;
+    schema:name "Uebr. Wiesen mit Düngeverbot"@de .
+
+:270 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_AWEX" ] ;
+    schema:name "Kunstwiese extensiv"@de .
+
+:271 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PEXT" ] ;
+    schema:name "Weide extensiv"@de .
+
+:272 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PWINT" ] ;
+    schema:name "Weide wenig intensiv"@de .
+
+:273 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PMEDI" ] ;
+    schema:name "Weide (Mäh-) mittelintensiv"@de .
+
+:274 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PINTE" ] ;
+    schema:name "Weide (Mäh-) intensiv"@de .
+
+:275 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GSEED" ] ;
+    schema:name "Grassamen-Produktion"@de .
+
+:276 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LTTLG" ] ;
+    schema:name "Salate Kopf-, Eisberg, Lollo (geschützter Anbau)"@de .
+
+:277 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHVSP" ] ;
+    schema:name "Schnittlauch Kultur (geschützter Anbau)"@de .
+
+:278 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CTLSP" ] ;
+    schema:name "Schnittsalat (geschützter Anbau)"@de .
+
+:279 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CEL40" ] ;
+    schema:name "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de .
+
+:280 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SPNCH" ] ;
+    schema:name "Spinat (geschützter Anbau)"@de .
+
+:281 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TOMTL" ] ;
+    schema:name "Tomaten, Bodenkulturen, tiefer Ertrag (geschützter Anbau)"@de .
+
+:282 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TOMTM" ] ;
+    schema:name "Tomaten, Bodenkulturen, mittlerer Ertrag (geschützter Anbau)"@de .
+
+:283 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ZUCHP" ] ;
+    schema:name "Zucchetti, Patisson (geschützter Anbau)"@de .
+
+:284 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TOMTH" ] ;
+    schema:name "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de .
+
+:285 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TOMTV" ] ;
+    schema:name "Tomaten, Bodenkultur, sehr hoher Ertrag (geschützter Anbau)"@de .
+
+:286 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_MSELV" ] ;
+    schema:name "Selve gepflegt"@de .
+
+:287 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KIDK" ] ;
+    schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de .
+
+:288 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_APPLT" ] ;
+    schema:name "Aprikosenanlage"@de .
+
+:289 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_APEYH" ] ;
+    schema:name "Aprikosenanlage, hoher Ertrag"@de .
+
+:290 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POPFR" ] ;
+    schema:name "Kernobstanlage"@de .
+
+:291 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POPEY" ] ;
+    schema:name "Kernobstanlage, hoher Ertrag"@de .
+
+:292 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHRPL" ] ;
+    schema:name "Kirschenanlage"@de .
+
+:293 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHEYH" ] ;
+    schema:name "Kirschenanlage, hoher Ertrag"@de .
+
+:294 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KIWPL" ] ;
+    schema:name "Kiwianlage"@de .
+
+:295 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KIWEY" ] ;
+    schema:name "Kiwianlage, hoher Ertrag"@de .
+
+:296 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PFRPL" ] ;
+    schema:name "Pfirsichanlage"@de .
+
+:297 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PFREY" ] ;
+    schema:name "Pfirsichanlage, hoher Ertrag"@de .
+
+:298 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PLMPL" ] ;
+    schema:name "Zwetschgenanlage"@de .
+
+:299 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PLMEY" ] ;
+    schema:name "Zwetschgenanlage, hoher Ertrag"@de .
+
+:300 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WALN1" ] ;
+    schema:name "Walnüsse < 185 Bäume/ha"@de .
+
+:301 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WALN2" ] ;
+    schema:name "Walnüsse ≥ 185 Bäume/ha"@de .
+
+:302 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HAZLN" ] ;
+    schema:name "Haselnüsse"@de .
+
+:303 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_VINES" ] ;
+    schema:name "Reben"@de .
+
+:304 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_VBDIV" ] ;
+    schema:name "Rebflächen mit hoher Artenvielfalt"@de .
+
+:305 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TGRAPE" ] ;
+    schema:name "Tafeltrauben"@de .
+
+:306 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TGEYH" ] ;
+    schema:name "Tafeltrauben, hoher Ertrag"@de .
+
+:307 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BLKBRY" ] ;
+    schema:name "Brombeeren"@de .
+
+:308 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BBREY" ] ;
+    schema:name "Brombeeren, hoher Ertrag"@de .
+
+:309 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CURRNT" ] ;
+    schema:name "Cassis"@de .
+
+:310 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CEYH" ] ;
+    schema:name "Cassis, hoher Ertrag"@de .
+
+:311 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STRAW1" ] ;
+    schema:name "Erdbeeren 1-jährig"@de .
+
+:312 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ST1EY" ] ;
+    schema:name "Erdbeeren 1-jährig, hoher Ertrag"@de .
+
+:313 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STRAWP" ] ;
+    schema:name "Erdbeeren mehrjährig"@de .
+
+:314 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BLUBRY" ] ;
+    schema:name "Heidelbeeren"@de .
+
+:315 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HBEYH" ] ;
+    schema:name "Heidelbeeren, hoher Ertrag"@de .
+
+:316 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RASPB" ] ;
+    schema:name "Himbeeren"@de .
+
+:317 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RBEYH" ] ;
+    schema:name "Himbeeren, hoher Ertrag"@de .
+
+:318 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_REDCUR" ] ;
+    schema:name "Rote Johannisbeeren"@de .
+
+:319 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RJEYH" ] ;
+    schema:name "Rote Johannisbeeren, hoher Ertrag"@de .
+
+:320 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GOOSEB" ] ;
+    schema:name "Stachelbeeren"@de .
+
+:321 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GBEYH" ] ;
+    schema:name "Stachelbeeren, hoher Ertrag"@de .
+
+:322 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ALTBRY" ] ;
+    schema:name "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de .
+
+:323 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ORNSTB" ] ;
+    schema:name "Ziersträucher, -gehölze, -stauden"@de .
+
+:324 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_NURSRY" ] ;
+    schema:name "Baumschulen"@de .
+
+:325 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_XMASTR" ] ;
+    schema:name "Christbäume"@de .
+
+:326 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HOPS" ] ;
+    schema:name "Hopfen"@de .
+
+:327 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHISLF" ] ;
+    schema:name "Chinaschilf"@de .
+
+:328 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_EGGPL" ] ;
+    schema:name "Aubergine"@de .
+
+:329 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CAULI" ] ;
+    schema:name "Blumenkohl"@de .
+
+:330 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KOHRA" ] ;
+    schema:name "Bodenkohlrabi"@de .
+
+:331 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BUSHB" ] ;
+    schema:name "Bohnen, Busch- Handpflück-"@de .
+
+:332 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BEANP" ] ;
+    schema:name "Bohnen, Verarbeitung-"@de .
+
+:333 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BROCC" ] ;
+    schema:name "Broccoli"@de .
+
+:334 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHIWR" ] ;
+    schema:name "Chicorée, Wurzelanbau"@de .
+
+:335 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CUC50" ] ;
+    schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de .
+
+:336 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RADCH" ] ;
+    schema:name "Cicorino rosso, Radicchio"@de .
+
+:337 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ENDEY" ] ;
+    schema:name "Endivie, hoher Ertrag"@de .
+
+:338 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ENDMY" ] ;
+    schema:name "Endivie, mittlerer Ertrag"@de .
+
+:339 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PEAKE" ] ;
+    schema:name "Erbsen, Kefen"@de .
+
+:340 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PEAP" ] ;
+    schema:name "Erbsen, Verarbeitung-"@de .
+
+:341 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FENNL" ] ;
+    schema:name "Fenchel"@de .
+
+:342 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PICKL" ] ;
+    schema:name "Gurken, Essiggurken"@de .
+
+:343 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CUTCN" ] ;
+    schema:name "Kabis Einschneide-"@de .
+
+:344 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FOILC" ] ;
+    schema:name "Kabis Früh-, Folie"@de .
+
+:345 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STORC" ] ;
+    schema:name "Kabis Lager"@de .
+
+:346 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CBEFE" ] ;
+    schema:name "Karotten Bund-, Früh-"@de .
+
+:347 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CARPP" ] ;
+    schema:name "Karotten Pariser"@de .
+
+:348 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CARHY" ] ;
+    schema:name "Karotten Verarbeitung-, Lager-, hoher Ertrag"@de .
+
+:349 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CARMY" ] ;
+    schema:name "Karotten Verarbeitung-, Lager-, mittlerer Ertrag"@de .
+
+:350 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KOHLR" ] ;
+    schema:name "Kohlrabi"@de .
+
+:351 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KOHP" ] ;
+    schema:name "Kohlrabi Verarbeitungs-"@de .
+
+:352 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHARD" ] ;
+    schema:name "Krautstiel"@de .
+
+:353 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PUMPK" ] ;
+    schema:name "Kürbis"@de .
+
+:354 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LEEKS" ] ;
+    schema:name "Lauch"@de .
+
+:355 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_MELON" ] ;
+    schema:name "Melone"@de .
+
+:356 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LAMBSS" ] ;
+    schema:name "Nüsslisalat, Feldsalat"@de .
+
+:357 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PARSY" ] ;
+    schema:name "Petersilie"@de .
+
+:358 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RKTC1" ] ;
+    schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de .
+
+:359 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RKTC2" ] ;
+    schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de .
+
+:360 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BEETS" ] ;
+    schema:name "Randen"@de .
+
+:361 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SGPVV" ] ;
+    schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de .
+
+:362 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RHUBB" ] ;
+    schema:name "Rhabarber"@de .
+
+:363 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BRSPR" ] ;
+    schema:name "Rosenkohl, Strünke abgeführt"@de .
+
+:364 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TRNPM" ] ;
+    schema:name "Rüben Herbst-, Mai-"@de .
+
+:365 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ARUCL1" ] ;
+    schema:name "Rucola, 1 Schnitt"@de .
+
+:366 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SALHY" ] ;
+    schema:name "Salate, diverse, hoher Ertrag"@de .
+
+:367 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SALMY" ] ;
+    schema:name "Salate, diverse, mittlerer Ertrag"@de .
+
+:368 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CUTFLG" ] ;
+    schema:name "Schnittblumen, gross"@de .
+
+:369 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CUTFLS" ] ;
+    schema:name "Schnittblumen, klein"@de .
+
+:370 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CUTFLM" ] ;
+    schema:name "Schnittblumen, mittel"@de .
+
+:371 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHIVES" ] ;
+    schema:name "Schnittlauch"@de .
+
+:372 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CUSALA" ] ;
+    schema:name "Schnittsalat"@de .
+
+:373 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BLKSAL" ] ;
+    schema:name "Schwarzwurzel"@de .
+
+:374 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CELERK" ] ;
+    schema:name "Sellerie Knollen-"@de .
+
+:375 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CELERS" ] ;
+    schema:name "Sellerie Stangen-"@de .
+
+:376 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ASPBW" ] ;
+    schema:name "Spargel Bleich-"@de .
+
+:377 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ASPGR" ] ;
+    schema:name "Spargel Grün-"@de .
+
+:378 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SPINP1" ] ;
+    schema:name "Spinat, nicht überw., 1 Schn., vor Mitte April gesät"@de .
+
+:379 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SPIN1C" ] ;
+    schema:name "Spinat, nicht überwinternd, 1 Schnitt"@de .
+
+:380 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SPIN2C" ] ;
+    schema:name "Spinat, nicht überwinternd, 2 Schnitte"@de .
+
+:381 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TOMAT" ] ;
+    schema:name "Tomaten"@de .
+
+:382 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WSPIN1" ] ;
+    schema:name "Winterspinat 1 Schnitt"@de .
+
+:383 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SAVOYL" ] ;
+    schema:name "Wirz leicht"@de .
+
+:384 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SAVOYS" ] ;
+    schema:name "Wirz schwer"@de .
+
+:385 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ZUCCHP" ] ;
+    schema:name "Zucchetti, Patisson, Kürbis"@de .
+
+:386 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SUGRCH" ] ;
+    schema:name "Zuckerhut"@de .
+
+:387 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SUCORN" ] ;
+    schema:name "Zuckermais"@de .
+
+:388 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ONION" ] ;
+    schema:name "Zwiebeln"@de .
+
+:389 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ARUCL2" ] ;
+    schema:name "Rucola, 2 Schnitte"@de .
+
+:390 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SUGRCC" ] ;
+    schema:name "Zuckerhut (Convenience)"@de .
+
+:391 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KALE" ] ;
+    schema:name "Federkohl"@de .
+
+:392 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PRSNP" ] ;
+    schema:name "Pastinake"@de .
+
+:393 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GRLIC" ] ;
+    schema:name "Knoblauch"@de .
+
+:394 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TRNTP" ] ;
+    schema:name "Cima di rapa"@de .
+
+:395 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STRAW" ] ;
+    schema:name "Vom Betrieb weggeführtes Stroh, ha"@de .
+
+:396 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STRAWL" ] ;
+    schema:name "Getreide-Silage"@de .
+
+:397 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SFVGV" ] ;
+    schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de .
+
+:398 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_MLKTL" ] ;
+    schema:name "Andorn"@de .
+
+:399 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ARNCA" ] ;
+    schema:name "Arnika"@de .
+
+:400 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BSLKM" ] ;
+    schema:name "Basilikum"@de .
+
+:401 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BRNTT" ] ;
+    schema:name "Bibernelle"@de .
+
+:402 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BLMLW" ] ;
+    schema:name "Blaue Malve"@de .
+
+:403 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BRGEG" ] ;
+    schema:name "Bohnenkraut"@de .
+
+:404 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BRNTL" ] ;
+    schema:name "Brennessel"@de .
+
+:405 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_DLLLD" ] ;
+    schema:name "Dill"@de .
+
+:406 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RUEHR" ] ;
+    schema:name "Edelraute"@de .
+
+:407 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_EDLWS" ] ;
+    schema:name "Edelweiss"@de .
+
+:408 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_VRVNN" ] ;
+    schema:name "Ehrenpreis"@de .
+
+:409 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_MRSHW" ] ;
+    schema:name "Eibisch"@de .
+
+:410 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_MSHML" ] ;
+    schema:name "Eisenkraut"@de .
+
+:411 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FNSD1" ] ;
+    schema:name "Fenchelsamen 1-jährig"@de .
+
+:412 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FNSDP" ] ;
+    schema:name "Fenchelsamen mehrjährig"@de .
+
+:413 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LDYSM" ] ;
+    schema:name "Frauenmantel"@de .
+
+:414 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LMNRM" ] ;
+    schema:name "Indianernessel, Rosenmelisse"@de .
+
+:415 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_STJHW" ] ;
+    schema:name "Johanniskraut"@de .
+
+:416 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CHMML" ] ;
+    schema:name "Kamille"@de .
+
+:417 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRB1L" ] ;
+    schema:name "Kräuter,1-jährig, gross"@de .
+
+:418 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRB1S" ] ;
+    schema:name "Kräuter,1-jährig, klein"@de .
+
+:419 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRB1M" ] ;
+    schema:name "Kräuter,1-jährig, mittel"@de .
+
+:420 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRB1MB" ] ;
+    schema:name "Kräuter,1-jährig, mittel-gross"@de .
+
+:421 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRBPRL" ] ;
+    schema:name "Kräuter,mehrjährig, gross"@de .
+
+:422 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRBPRS" ] ;
+    schema:name "Kräuter,mehrjährig, klein"@de .
+
+:423 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRBPRM" ] ;
+    schema:name "Kräuter,mehrjährig, mittel"@de .
+
+:424 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HRBPRB" ] ;
+    schema:name "Kräuter,mehrjährig, mittel-gross"@de .
+
+:425 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LVGGK" ] ;
+    schema:name "Liebstöckel / Maggikraut"@de .
+
+:426 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_MRJRM" ] ;
+    schema:name "Majoran"@de .
+
+:427 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ORGMN" ] ;
+    schema:name "Orangenminze"@de .
+
+:428 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_ORGNO" ] ;
+    schema:name "Oregano"@de .
+
+:429 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PPMNT" ] ;
+    schema:name "Pfefferminze"@de .
+
+:430 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_RSMRY" ] ;
+    schema:name "Rosmarin"@de .
+
+:431 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SGESG" ] ;
+    schema:name "Salbei"@de .
+
+:432 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_YRRW" ] ;
+    schema:name "Schafgarbe"@de .
+
+:433 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PMLAW" ] ;
+    schema:name "Schlüsselblume (ganze Pflanze)"@de .
+
+:434 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BLKEL" ] ;
+    schema:name "Schwarzer Holunder"@de .
+
+:435 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PLTNL" ] ;
+    schema:name "Spitzwegerich"@de .
+
+:436 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_THYME" ] ;
+    schema:name "Thymian"@de .
+
+:437 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_PANSY" ] ;
+    schema:name "Viola (Stiefmütterchen)"@de .
+
+:438 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HYSSP" ] ;
+    schema:name "Ysop"@de .
+
+:439 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LMBLM" ] ;
+    schema:name "Zitronenmelisse"@de .
+
+:440 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_MILLE" ] ;
+    schema:name "Getreide-Silage mit Leguminosen"@de .
+
+:441 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WGRNM" ] ;
+    schema:name "Kunstwiese mittelintensiv"@de .
+
+:442 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_AWMI" ] ;
+    schema:name "Kunstwiese intensiv"@de .
+
+:443 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FOSTR" ] ;
+    schema:name "betriebseigenes verfütt. Stroh, ha"@de .
+
+:444 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_BERBL" ] ;
+    schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de .
+
+:445 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_GCORN" ] ;
+    schema:name "Grünmais, ha"@de .
+
+:446 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_IFEED" ] ;
+    schema:name "Zwischenfutter (herbstgesäte KW), ha"@de .
+
+:447 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_TPAST" ] ;
+    schema:name "Äugstlen, ha"@de .
+
+:448 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SPRCP" ] ;
+    schema:name "Frühjahrsschnitt vor Wiesenumbruch, ha"@de .
+
+:449 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_IFWOC" ] ;
+    schema:name "Zwischenfutter (ohne KW), ha"@de .
+
+:450 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SOR2ND" ] ;
+    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de .
+
+:451 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPP" ] ;
+    schema:name "Kartoffeln (b), Speise-, Verarbeitungs-"@de .
+
+:452 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPE" ] ;
+    schema:name "Kartoffeln (b), Pflanz-"@de .
+
+:453 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTEA" ] ;
+    schema:name "Kartoffeln (b), Früh-"@de .
+
+:454 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FRUB" ] ;
+    schema:name "Zuckerrüben"@de .
+
+:455 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_FCRMN" ] ;
+    schema:name "CCM"@de .
+
+:456 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPC" ] ;
+    schema:name "Kartoffeln (a), Speise-, Verarbeitungs-"@de .
+
+:457 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPFA" ] ;
+    schema:name "Kartoffeln (c), Speise-, Verarbeitungs-"@de .
+
+:458 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPFC" ] ;
+    schema:name "Kartoffeln (a), Pflanz-"@de .
+
+:459 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPFB" ] ;
+    schema:name "Kartoffeln (c), Pflanz-"@de .
+
+:460 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPFD" ] ;
+    schema:name "Kartoffeln (a), Früh-"@de .
+
+:461 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_POTPFE" ] ;
+    schema:name "Kartoffeln (c), Früh-"@de .
+
+:462 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KARPFC" ] ;
+    schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de .
+
+:463 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_KARPFE_N" ] ;
+    schema:name "Eiweisserbsen"@de .
+
+:464 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_EWSPE" ] ;
+    schema:name "Soja"@de .
+
+:465 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_WINRA" ] ;
+    schema:name "Ganzpflanzen-Sorghum"@de .
+
+:466 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_CCMCRN" ] ;
+    schema:name "Silomais"@de .
+
+:467 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HFT01" ] ;
+    schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de .
+
+:468 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HFTWB" ] ;
+    schema:name "Hecken und Feldgehölz mit Krautsaum"@de .
+
+:469 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_HFBUFF" ] ;
+    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de .
+
+:470 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_NTT01" ] ;
+    schema:name "Nussbäume, 0.01 ha/Baum"@de .
+
+:471 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_SCT01" ] ;
+    schema:name "Edelkastanienbäume, 0.01 ha/Baum"@de .
+
+:472 a :GRUDCrop ;
+    schema:identifier [ schema:name "GRUD" ;
+            schema:value "CROP_LGMPR" ] ;
+    schema:name "Leguminosen Reinsaat"@de .
+
