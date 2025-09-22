@@ -65,6 +65,7 @@ for (i in seq_len(nrow(data))) {
   code <- as.integer(data[i, "LNF_Code"])
   subject <- rdfhelper::uri(code, prefix = base)
   rdfhelper::triple(subject, "a", rdfhelper::uri("CropGroup", base))
+  rdfhelper::triple(subject, "a", rdfhelper::uri("DirectPaymentCrop", base))
   for (lang in languages) {
     rdfhelper::triple(
       subject = subject,
@@ -94,11 +95,10 @@ for (i in seq_len(nrow(data))) {
     }
   }
 
-  rdfhelper::triple(
-    subject,
-    rdfhelper::uri("LNF", base),
-    as.integer(data[i, "LNF_Code"])
-  )
+  bnode <- paste0("_:", rlang::hash(code))
+  rdfhelper::triple(subject, rdfhelper::uri("identifier", schema), bnode)
+  rdfhelper::triple(bnode, rdfhelper::uri("value", schema), code)
+  rdfhelper::triple(bnode, rdfhelper::uri("name", schema), literal("LNF"))
 }
 
 sink()

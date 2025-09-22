@@ -243,8 +243,5 @@ def main(argv: list[str]) -> None:
     # Final sort of the aggregated graph
     sort_and_overwrite_turtle(inferred, OUTPUT_FILE)
 
-    print("All done ✨")
-
-
 if __name__ == "__main__":
     main(sys.argv)
