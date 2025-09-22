@@ -54,7 +54,14 @@ for (i in seq_len(nrow(categories))) {
       )
     )
   }
+  x <- subset(
+    data,
+    subset = Hauptkategorie_DE == unlist(categories[i, "Hauptkategorie_DE"]),
+    select = "LNF_Code"
+  ) %>% unlist()
+  rdfhelper::triple(subject, uri("hasPart", schema), uri(x, prefix = base))
 }
+
 
 #' =============================================================================
 #' TABLE TO RDF CONVERSION
