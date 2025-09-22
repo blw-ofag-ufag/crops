@@ -2,8 +2,12 @@
 #'       title:  AGIS CROP TABLE CONVERSION TO RDF
 #'      author:  Damian Oswald
 #'        date:  2025-09-18
+#' description:  Script to convert an Excel table of AGIS masterdata to RDF for
+#'               subsequent publication on LINDAS and integration with other
+#'               crop data.
 #' =============================================================================
 
+#' Attach libraries to search path
 library(rdfhelper)
 library(dplyr)
 
