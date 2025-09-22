@@ -703,22 +703,6 @@
         "Triticale"@fr,
         "Triticale"@it .
 
-:10120 a :SRPPPCrop ;
-    schema:identifier [ schema:name "SRPPP" ;
-            schema:value 10120 ] ;
-    schema:isPartOf :10080 ;
-    schema:name "Roggen"@de,
-        "Seigle"@fr,
-        "Segale"@it .
-
-:10121 a :SRPPPCrop ;
-    schema:identifier [ schema:name "SRPPP" ;
-            schema:value 10121 ] ;
-    schema:isPartOf :10080 ;
-    schema:name "Hafer"@de,
-        "Avoine"@fr,
-        "Avena"@it .
-
 :10122 a :SRPPPCrop ;
     schema:identifier [ schema:name "SRPPP" ;
             schema:value 10122 ] ;
@@ -821,8 +805,8 @@
 :10144 a :SRPPPCrop ;
     schema:identifier [ schema:name "SRPPP" ;
             schema:value 10144 ] ;
-    schema:isPartOf :10121,
-        :10164 ;
+    schema:isPartOf :10164,
+        :504 ;
     schema:name "Sommerhafer"@de,
         "Avoine de printemps"@fr,
         "Avena primaverile"@it .
@@ -2177,6 +2161,22 @@
         "Millet"@fr,
         "Miglio "@it .
 
+:504 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value 10121 ] ;
+    schema:isPartOf :10080 ;
+    schema:name "Hafer"@de,
+        "Avoine"@fr,
+        "Avena"@it .
+
+:514 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value 10120 ] ;
+    schema:isPartOf :10080 ;
+    schema:name "Roggen"@de,
+        "Seigle"@fr,
+        "Segale"@it .
+
 :9942 a :SRPPPCrop ;
     schema:identifier [ schema:name "SRPPP" ;
             schema:value 9942 ] ;
@@ -2204,8 +2204,8 @@
 :9945 a :SRPPPCrop ;
     schema:identifier [ schema:name "SRPPP" ;
             schema:value 9945 ] ;
-    schema:isPartOf :10120,
-        :10167 ;
+    schema:isPartOf :10167,
+        :514 ;
     schema:name "Winterroggen"@de,
         "Seigle d'automne"@fr,
         "Segale autunnale"@it .
