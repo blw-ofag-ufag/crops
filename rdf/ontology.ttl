@@ -2,6 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 
 :BFFQ1 a owl:Class ;
     rdfs:label "BFF-Q1-Kultur"@de ;
@@ -33,6 +34,20 @@
 :SpecialtyCrop a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
+
+schema:hasPart a owl:ObjectProperty ;
+    rdfs:label "hat Teil"@de,
+        "has part"@en ;
+    rdfs:domain dcterms:Collection ;
+    rdfs:range dcterms:Collection ;
+    owl:inverseOf schema:isPartOf .
+
+schema:isPartOf a owl:ObjectProperty ;
+    rdfs:label "ist Teil von"@de,
+        "is part of"@en ;
+    rdfs:domain dcterms:Collection ;
+    rdfs:range dcterms:Collection ;
+    owl:inverseOf schema:hasPart .
 
 : a owl:Ontology ;
     dcterms:title "Kulturen-Liste"@de ;
