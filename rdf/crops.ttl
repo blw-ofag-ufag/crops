@@ -241,6 +241,71 @@
     schema:validTo "2024"^^xsd:gYear ;
     :LNF 951 .
 
+:101 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:102 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:103 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:104 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:105 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:106 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:107 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:108 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:109 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:110 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:111 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:112 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
+:113 a :CropGroup ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it .
+
 :501 a :CropGroup ;
     schema:name "Sommergerste"@de,
         "Orge de printemps"@fr,

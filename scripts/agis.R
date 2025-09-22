@@ -5,6 +5,10 @@
 #' =============================================================================
 
 library(rdfhelper)
+library(dplyr)
+
+#' Constants
+languages <- c("de", "fr", "it")
 
 #' =============================================================================
 #' DOWNLOAD DATA
@@ -23,17 +27,45 @@ data <- readxl::read_excel(destfile, sheet = 1)
 base <- "https://agriculture.ld.admin.ch/crops/"
 schema  <- "http://schema.org/"
 
+#' Create a new crops turtle file
+sink("rdf/crops.ttl")
+
+
+#' =============================================================================
+#' WRITE CROP CATEGORIES
+#' =============================================================================
+
+colnames <- paste("Hauptkategorie", toupper(languages), sep = "_")
+categories <- data %>%
+  filter(if_all(all_of(colnames), ~ .x != "NULL")) %>%
+  subset(select = colnames) %>%
+  unique()
+
+for (i in seq_len(nrow(categories))) {
+  subject <- rdfhelper::uri(i + 100, prefix = base)
+  triple(subject, "a", uri("CropGroup", base))
+  for (lang in languages) {
+    rdfhelper::triple(
+      subject = subject,
+      predicate = rdfhelper::uri("name", schema),
+      object = rdfhelper::langstring(
+        x = data[i, paste("Hauptkategorie", toupper(lang), sep = "_")],
+        lang = lang
+      )
+    )
+  }
+}
+
 #' =============================================================================
 #' TABLE TO RDF CONVERSION
 #' =============================================================================
 
-sink("rdf/crops.ttl")
-
 for (i in seq_len(nrow(data))) {
+
   code <- as.integer(data[i, "LNF_Code"])
   subject <- rdfhelper::uri(code, prefix = base)
   rdfhelper::triple(subject, "a", rdfhelper::uri("CropGroup", base))
-  for (lang in c("de", "fr", "it")) {
+  for (lang in languages) {
     rdfhelper::triple(
       subject = subject,
       predicate = rdfhelper::uri("name", schema),
