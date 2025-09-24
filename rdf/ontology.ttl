@@ -1,8 +1,14 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Area a owl:Class ;
+    rdfs:label "Fläche"@de ;
+    rdfs:subClassOf :Geometry .
 
 :BFFQ1 a owl:Class ;
     rdfs:label "BFF-Q1-Kultur"@de ;
@@ -13,43 +19,112 @@
     rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
-:CropGroup a owl:Class ;
+:Crop a owl:Class ;
+    rdfs:label "Kulturpflanze"@de,
+        "Crop"@en .
+
+:Cultivation a owl:Class ;
+    rdfs:label "Nutzung"@de ;
+    rdfs:comment "Beschreibt die landwirtschaftliche Nutzung eine Fläche. Sie hat einen Start- und Endzeitpunkt."@de .
+
+:CultivationType a owl:Class ;
     rdfs:label "Kulturgruppe"@de .
 
 :DirectPaymentCrop a owl:Class ;
     rdfs:label "Direktzahlungskultur"@de ;
-    rdfs:subClassOf :CropGroup .
+    rdfs:subClassOf :CultivationType .
 
 :FertilisationStandard a owl:Class ;
     rdfs:label "Düngungsnorm"@de .
 
 :GRUDCrop a owl:Class ;
     rdfs:label "Kultur aus den GRUD-Vorschriften"@de ;
-    rdfs:subClassOf :CropGroup .
+    rdfs:subClassOf :CultivationType .
+
+:Geometry a owl:Class ;
+    rdfs:label "Geometrie"@de .
+
+:Identifier a owl:Class ;
+    rdfs:label "Identifikator"@de ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty schema:value ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty :sourceSystem ;
+            owl:someValuesFrom rdfs:Literal ] .
 
 :SRPPPCrop a owl:Class ;
     rdfs:label "Kultur im PSM-Verzeichnis"@de ;
-    rdfs:subClassOf :CropGroup .
+    rdfs:subClassOf :CultivationType .
 
 :SpecialtyCrop a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
+schema:value a owl:DatatypeProperty .
+
+:eppo a owl:DatatypeProperty ;
+    rdfs:label "EPPO-Code"@de,
+        "EPPO code"@en ;
+    rdfs:domain :Crop ;
+    rdfs:range xsd:token .
+
+:1 a owl:NamedIndividual ;
+    rdfs:label "Menschliche Ernährung"@de,
+        "Human nutrition"@en .
+
+:2 a owl:NamedIndividual ;
+    rdfs:label "Tierische Ernährung"@de,
+        "Animal nutrition"@en .
+
+:3 a owl:NamedIndividual ;
+    rdfs:label "Bioenergie"@de,
+        "Bioenergy"@en .
+
+:4 a owl:NamedIndividual ;
+    rdfs:label "Industrielle Rohstoffe"@de,
+        "Industrial materials"@en .
+
+:5 a owl:NamedIndividual ;
+    rdfs:label "Saatgutproduktion"@de,
+        "Seed production"@en .
+
+:6 a owl:NamedIndividual ;
+    rdfs:label "Bodenverbesserung"@de,
+        "Soil improvement"@en .
+
 schema:hasPart a owl:ObjectProperty ;
     rdfs:label "hat Teil"@de,
         "has part"@en ;
-    rdfs:domain dcterms:Collection ;
-    rdfs:range dcterms:Collection ;
     owl:inverseOf schema:isPartOf .
+
+schema:identifier a owl:ObjectProperty ;
+    rdfs:range :Identifier .
 
 schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "ist Teil von"@de,
         "is part of"@en ;
-    rdfs:domain dcterms:Collection ;
-    rdfs:range dcterms:Collection ;
     owl:inverseOf schema:hasPart .
+
+:area a owl:ObjectProperty ;
+    rdfs:domain :Cultivation ;
+    rdfs:range :Area .
+
+:crop a owl:ObjectProperty ;
+    rdfs:domain :Cultivation ;
+    rdfs:range [ owl:unionOf ( :CultivationType :Crop ) ] .
+
+:fertilisationStandard a owl:ObjectProperty ;
+    rdfs:domain :CultivationType ;
+    rdfs:range :FertilisationStandard .
+
+:purpose a owl:ObjectProperty ;
+    rdfs:domain :CultivationType ;
+    rdfs:range [ owl:oneOf ( :1 :2 :3 :4 :5 :6 ) ] .
+
+:sourceSystem a owl:ObjectProperty .
 
 : a owl:Ontology ;
     dcterms:title "Kulturen-Liste"@de ;
-    owl:versionInfo "0.0.1" .
+    owl:versionInfo "0.1.0" .
 

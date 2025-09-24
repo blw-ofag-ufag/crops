@@ -3,7 +3,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :555 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "555"^^xsd:ID ] ;
@@ -13,7 +13,7 @@
     schema:validTo "2022"^^xsd:gYear .
 
 :556 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "556"^^xsd:ID ] ;
@@ -22,7 +22,7 @@
         "Maggese fioriti"@it .
 
 :557 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "557"^^xsd:ID ] ;
@@ -31,7 +31,7 @@
         "Maggese da rotazione"@it .
 
 :559 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "559"^^xsd:ID ] ;
@@ -40,7 +40,7 @@
         "Striscia su superficie coltiva"@it .
 
 :594 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "594"^^xsd:ID ] ;
@@ -49,7 +49,7 @@
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it .
 
 :595 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "595"^^xsd:ID ] ;
@@ -58,7 +58,7 @@
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it .
 
 :611 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "611"^^xsd:ID ] ;
@@ -67,7 +67,7 @@
         "Prati estensivi (senza pascoli)"@it .
 
 :612 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "612"^^xsd:ID ] ;
@@ -76,7 +76,7 @@
         "Prati poco intensivi (senza pascoli)"@it .
 
 :617 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "617"^^xsd:ID ] ;
@@ -85,7 +85,7 @@
         "Pascoli estensivi"@it .
 
 :618 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "618"^^xsd:ID ] ;
@@ -94,7 +94,7 @@
         "Pascoli boschivi (senza i boschi)"@it .
 
 :622 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "622"^^xsd:ID ] ;
@@ -103,7 +103,7 @@
         "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it .
 
 :623 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "623"^^xsd:ID ] ;
@@ -112,7 +112,7 @@
         "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it .
 
 :634 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "634"^^xsd:ID ] ;
@@ -122,7 +122,7 @@
     schema:validTo "2022"^^xsd:gYear .
 
 :635 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "635"^^xsd:ID ] ;
@@ -132,7 +132,7 @@
     schema:validFrom "2023"^^xsd:gYear .
 
 :693 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "693"^^xsd:ID ] ;
@@ -141,7 +141,7 @@
         "Superfici per la promozione della biodiversità specifiche di una regione (pascoli)"@it .
 
 :694 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "694"^^xsd:ID ] ;
@@ -150,7 +150,7 @@
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite, senza pascoli)"@it .
 
 :717 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -160,7 +160,7 @@
         "Vigneti con biodiversità naturale"@it .
 
 :735 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -170,7 +170,7 @@
         "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it .
 
 :851 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "851"^^xsd:ID ] ;
@@ -179,7 +179,7 @@
         "Terreni da strame all’interno della superficie agricola utilizzata"@it .
 
 :852 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "852"^^xsd:ID ] ;
@@ -188,7 +188,7 @@
         "Siepi, boschetti campestri e rivieraschi (con bordo inerbito)"@it .
 
 :858 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "858"^^xsd:ID ] ;
@@ -197,7 +197,7 @@
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it .
 
 :904 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "904"^^xsd:ID ] ;
@@ -206,7 +206,7 @@
         "Fossati umidi, stagni, pozze"@it .
 
 :905 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "905"^^xsd:ID ] ;
@@ -215,7 +215,7 @@
         "Superfici ruderali, cumuli di pietra, affioramenti rocciosi"@it .
 
 :906 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "906"^^xsd:ID ] ;
@@ -224,7 +224,7 @@
         "Muri a secco"@it .
 
 :908 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "908"^^xsd:ID ] ;
@@ -233,7 +233,7 @@
         "Superfici per la promozione della biodiversità specifiche di una regione"@it .
 
 :921 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "921"^^xsd:ID ] ;
@@ -242,7 +242,7 @@
         "Alberi da frutto ad alto fusto nei campi (punti o superfici)"@it .
 
 :922 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "922"^^xsd:ID ] ;
@@ -251,7 +251,7 @@
         "Noci (Punti o superfici)"@it .
 
 :923 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "923"^^xsd:ID ] ;
@@ -260,7 +260,7 @@
         "Alberi castagni"@it .
 
 :924 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "924"^^xsd:ID ] ;
@@ -269,7 +269,7 @@
         "Alberi indigeni isolati adatti al luogo e viali alberati (Punti o superfici)"@it .
 
 :927 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "927"^^xsd:ID ] ;
@@ -278,7 +278,7 @@
         "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it .
 
 :928 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "928"^^xsd:ID ] ;
@@ -287,7 +287,7 @@
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it .
 
 :950 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "950"^^xsd:ID ] ;
@@ -297,7 +297,7 @@
     schema:validFrom "2023"^^xsd:gYear .
 
 :951 a :BFFQ1,
-        :CropGroup,
+        :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "951"^^xsd:ID ] ;
@@ -307,7 +307,7 @@
     schema:validFrom "2023"^^xsd:gYear ;
     schema:validTo "2024"^^xsd:gYear .
 
-:101 a :CropGroup ;
+:101 a :CultivationType ;
     schema:hasPart :501,
         :502,
         :504,
@@ -390,7 +390,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:102 a :CropGroup ;
+:102 a :CultivationType ;
     schema:hasPart :611,
         :612,
         :613,
@@ -407,7 +407,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:103 a :CropGroup ;
+:103 a :CultivationType ;
     schema:hasPart :616,
         :617,
         :618,
@@ -418,7 +418,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:104 a :CropGroup ;
+:104 a :CultivationType ;
     schema:hasPart :701,
         :717,
         :735 ;
@@ -426,7 +426,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:105 a :CropGroup ;
+:105 a :CultivationType ;
     schema:hasPart :702,
         :703,
         :704,
@@ -436,7 +436,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:106 a :CropGroup ;
+:106 a :CultivationType ;
     schema:hasPart :705,
         :706,
         :707,
@@ -464,7 +464,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:107 a :CropGroup ;
+:107 a :CultivationType ;
     schema:hasPart :801,
         :802,
         :803,
@@ -486,13 +486,13 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:108 a :CropGroup ;
+:108 a :CultivationType ;
     schema:hasPart :851 ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:109 a :CropGroup ;
+:109 a :CultivationType ;
     schema:hasPart :852,
         :857,
         :858 ;
@@ -500,20 +500,20 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:110 a :CropGroup ;
+:110 a :CultivationType ;
     schema:hasPart :897,
         :898 ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:111 a :CropGroup ;
+:111 a :CultivationType ;
     schema:hasPart :901 ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:112 a :CropGroup ;
+:112 a :CultivationType ;
     schema:hasPart :902,
         :903,
         :904,
@@ -528,7 +528,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:113 a :CropGroup ;
+:113 a :CultivationType ;
     schema:hasPart :930,
         :933,
         :935,
@@ -537,7 +537,7 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:501 a :CropGroup,
+:501 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "501"^^xsd:ID ] ;
@@ -545,7 +545,7 @@
         "Orge de printemps"@fr,
         "Orzo primaverile"@it .
 
-:502 a :CropGroup,
+:502 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "502"^^xsd:ID ] ;
@@ -553,7 +553,7 @@
         "Orge d’automne"@fr,
         "Orzo autunnale"@it .
 
-:504 a :CropGroup,
+:504 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "504"^^xsd:ID ] ;
@@ -561,7 +561,7 @@
         "Avoine"@fr,
         "Avena"@it .
 
-:505 a :CropGroup,
+:505 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "505"^^xsd:ID ] ;
@@ -569,7 +569,7 @@
         "Triticale"@fr,
         "Triticale"@it .
 
-:506 a :CropGroup,
+:506 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "506"^^xsd:ID ] ;
@@ -577,7 +577,7 @@
         "Méteil de céréales fourragères"@fr,
         "Miscela di cereali da foraggio"@it .
 
-:507 a :CropGroup,
+:507 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "507"^^xsd:ID ] ;
@@ -585,7 +585,7 @@
         "Blé fourrager selon liste swiss granum"@fr,
         "Frumento da foraggio giusta la lista di swiss granum"@it .
 
-:508 a :CropGroup,
+:508 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "508"^^xsd:ID ] ;
@@ -593,7 +593,7 @@
         "Maïs grain"@fr,
         "Mais da granella"@it .
 
-:509 a :CropGroup,
+:509 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "509"^^xsd:ID ] ;
@@ -602,7 +602,7 @@
         "Riso"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:510 a :CropGroup,
+:510 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "510"^^xsd:ID ] ;
@@ -611,7 +611,7 @@
         "Grano duro"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:511 a :CropGroup,
+:511 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "511"^^xsd:ID ] ;
@@ -619,7 +619,7 @@
         "Amidonnier, engrain"@fr,
         "Farro, piccola spelta"@it .
 
-:512 a :CropGroup,
+:512 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "512"^^xsd:ID ] ;
@@ -627,7 +627,7 @@
         "Blé de printemps (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it .
 
-:513 a :CropGroup,
+:513 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "513"^^xsd:ID ] ;
@@ -635,7 +635,7 @@
         "Blé d'automne (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it .
 
-:514 a :CropGroup,
+:514 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "514"^^xsd:ID ] ;
@@ -643,7 +643,7 @@
         "Seigle"@fr,
         "Segale"@it .
 
-:515 a :CropGroup,
+:515 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "515"^^xsd:ID ] ;
@@ -651,7 +651,7 @@
         "Méteil de céréales panifiables"@fr,
         "Miscela di cereali panificabili"@it .
 
-:516 a :CropGroup,
+:516 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "516"^^xsd:ID ] ;
@@ -659,7 +659,7 @@
         "Epeautre"@fr,
         "Spelta"@it .
 
-:519 a :CropGroup,
+:519 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "519"^^xsd:ID ] ;
@@ -667,7 +667,7 @@
         "Semences de maïs (contrat de culture)"@fr,
         "Mais da semina (coltivazione contrattuale)"@it .
 
-:520 a :CropGroup,
+:520 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "520"^^xsd:ID ] ;
@@ -676,7 +676,7 @@
         "Riso seminato su terreno asciutto"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:521 a :CropGroup,
+:521 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "521"^^xsd:ID ] ;
@@ -684,7 +684,7 @@
         "Maïs d'ensilage et maïs vert"@fr,
         "Mais da insilamento e verde"@it .
 
-:522 a :CropGroup,
+:522 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "522"^^xsd:ID ] ;
@@ -692,7 +692,7 @@
         "Betteraves sucrières"@fr,
         "Barbabietole da zucchero"@it .
 
-:523 a :CropGroup,
+:523 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "523"^^xsd:ID ] ;
@@ -700,7 +700,7 @@
         "Betteraves fourragères"@fr,
         "Barbabietole da foraggio"@it .
 
-:524 a :CropGroup,
+:524 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "524"^^xsd:ID ] ;
@@ -708,7 +708,7 @@
         "Pommes de terre"@fr,
         "Patate"@it .
 
-:525 a :CropGroup,
+:525 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "525"^^xsd:ID ] ;
@@ -716,7 +716,7 @@
         "Plants de pommes de terre (contrat de culture)"@fr,
         "Tuberi-seme di patate (coltivazione contrattuale)"@it .
 
-:526 a :CropGroup,
+:526 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "526"^^xsd:ID ] ;
@@ -724,7 +724,7 @@
         "Colza de printemps destiné à la fabrication d’huile comestible"@fr,
         "Colza primaverile per l’estrazione di olio commestibile"@it .
 
-:527 a :CropGroup,
+:527 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "527"^^xsd:ID ] ;
@@ -732,7 +732,7 @@
         "Colza d’automne destiné à la fabrication d’huile comestible"@fr,
         "Colza autunnale per l’estrazione di olio commestibile"@it .
 
-:528 a :CropGroup,
+:528 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "528"^^xsd:ID ] ;
@@ -740,7 +740,7 @@
         "Soja"@fr,
         "Soia"@it .
 
-:529 a :CropGroup,
+:529 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "529"^^xsd:ID ] ;
@@ -749,7 +749,7 @@
         "Riso seminato su terreno bagnato"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:531 a :CropGroup,
+:531 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "531"^^xsd:ID ] ;
@@ -757,7 +757,7 @@
         "Tournesol destiné à la fabrication d’huile comestible"@fr,
         "Girasole per l’estrazione di olio commestibile"@it .
 
-:534 a :CropGroup,
+:534 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "534"^^xsd:ID ] ;
@@ -765,7 +765,7 @@
         "Lin"@fr,
         "Lino"@it .
 
-:535 a :CropGroup,
+:535 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "535"^^xsd:ID ] ;
@@ -774,7 +774,7 @@
         "Canapa"@it ;
     schema:validTo "2021"^^xsd:gYear .
 
-:536 a :CropGroup,
+:536 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "536"^^xsd:ID ] ;
@@ -782,7 +782,7 @@
         "Haricots et vesces en grains (p.ex. féveroles)"@fr,
         "Fagioli e vecce per l’estrazione di granelli (p.es. favette)"@it .
 
-:537 a :CropGroup,
+:537 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "537"^^xsd:ID ] ;
@@ -790,7 +790,7 @@
         "Pois en grains (p.ex. pois protéagineux)"@fr,
         "Piselli per l’estrazione di granelli (p.es. piselli proteici)"@it .
 
-:538 a :CropGroup,
+:538 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "538"^^xsd:ID ] ;
@@ -798,7 +798,7 @@
         "Lupins"@fr,
         "Lupini"@it .
 
-:539 a :CropGroup,
+:539 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "539"^^xsd:ID ] ;
@@ -806,7 +806,7 @@
         "Courges à huile"@fr,
         "Zucche per l’estrazione di olio"@it .
 
-:540 a :CropGroup,
+:540 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "540"^^xsd:ID ] ;
@@ -815,7 +815,7 @@
         "Ceci"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:541 a :CropGroup,
+:541 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -824,7 +824,7 @@
         "Tabac"@fr,
         "Tabacco"@it .
 
-:542 a :CropGroup,
+:542 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "542"^^xsd:ID ] ;
@@ -833,7 +833,7 @@
         "Miglio"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:543 a :CropGroup,
+:543 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "543"^^xsd:ID ] ;
@@ -841,7 +841,7 @@
         "Céréales ensilées"@fr,
         "Cereali insilati"@it .
 
-:544 a :CropGroup,
+:544 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "544"^^xsd:ID ] ;
@@ -849,7 +849,7 @@
         "Cameline"@fr,
         "Dorella"@it .
 
-:545 a :CropGroup,
+:545 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -858,7 +858,7 @@
         "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it .
 
-:546 a :CropGroup,
+:546 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "546"^^xsd:ID ] ;
@@ -866,7 +866,7 @@
         "Légumes de conserve cultivés en plein champ"@fr,
         "Ortaggi di pieno campo per la conservazione"@it .
 
-:547 a :CropGroup,
+:547 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -875,7 +875,7 @@
         "Racines de chicorée"@fr,
         "Radici di cicoria di coltura forzata"@it .
 
-:548 a :CropGroup,
+:548 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "548"^^xsd:ID ] ;
@@ -883,7 +883,7 @@
         "Sarrasin"@fr,
         "Grano saraceno"@it .
 
-:549 a :CropGroup,
+:549 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "549"^^xsd:ID ] ;
@@ -892,7 +892,7 @@
         "Sorgo"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:550 a :CropGroup,
+:550 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "550"^^xsd:ID ] ;
@@ -900,7 +900,7 @@
         "Autres terres assolées"@fr,
         "Altra superficie coltiva"@it .
 
-:551 a :CropGroup,
+:551 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -909,7 +909,7 @@
         "Baies annuelles (p.ex. fraises)"@fr,
         "Bacche annuali (p.es. fragole)"@it .
 
-:552 a :CropGroup,
+:552 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "552"^^xsd:ID ] ;
@@ -917,7 +917,7 @@
         "Matières premières renouvelables annuelles (kénaf, etc.)"@fr,
         "Materie prime rinnovabili annuali (kenaf, ecc.)"@it .
 
-:553 a :CropGroup,
+:553 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -926,7 +926,7 @@
         "Plantes aromatiques et médicinales annuelles"@fr,
         "Piante aromatiche e medicinali annuali"@it .
 
-:554 a :CropGroup,
+:554 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "554"^^xsd:ID ] ;
@@ -934,7 +934,7 @@
         "Cultures horticoles annuelles de plein champ (fleurs, gazon en rouleaux, etc.)"@fr,
         "Floricoltura di pieno campo annuale (fiori, manto erboso in rotoli, ecc.)"@it .
 
-:566 a :CropGroup,
+:566 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "566"^^xsd:ID ] ;
@@ -942,7 +942,7 @@
         "Pavot"@fr,
         "Papavero"@it .
 
-:567 a :CropGroup,
+:567 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "567"^^xsd:ID ] ;
@@ -950,7 +950,7 @@
         "Carthame"@fr,
         "Cartamo"@it .
 
-:568 a :CropGroup,
+:568 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "568"^^xsd:ID ] ;
@@ -958,7 +958,7 @@
         "Lentilles"@fr,
         "Lenticchie"@it .
 
-:569 a :CropGroup,
+:569 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "569"^^xsd:ID ] ;
@@ -966,7 +966,7 @@
         "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
         "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l’estrazione di granelli)"@it .
 
-:570 a :CropGroup,
+:570 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "570"^^xsd:ID ] ;
@@ -975,7 +975,7 @@
         "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l’estrazione di granelli)"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:572 a :CropGroup,
+:572 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "572"^^xsd:ID ] ;
@@ -983,7 +983,7 @@
         "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it .
 
-:573 a :CropGroup,
+:573 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "573"^^xsd:ID ] ;
@@ -991,7 +991,7 @@
         "Moutarde"@fr,
         "Senape"@it .
 
-:574 a :CropGroup,
+:574 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "574"^^xsd:ID ] ;
@@ -999,7 +999,7 @@
         "Quinoa"@fr,
         "Quinoa"@it .
 
-:575 a :CropGroup,
+:575 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "575"^^xsd:ID ] ;
@@ -1008,7 +1008,7 @@
         "Canapa per i semi"@it ;
     schema:validFrom "2022"^^xsd:gYear .
 
-:576 a :CropGroup,
+:576 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "576"^^xsd:ID ] ;
@@ -1017,7 +1017,7 @@
         "Canapa da fibra"@it ;
     schema:validFrom "2022"^^xsd:gYear .
 
-:577 a :CropGroup,
+:577 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "577"^^xsd:ID ] ;
@@ -1026,7 +1026,7 @@
         "Altra canapa"@it ;
     schema:validFrom "2022"^^xsd:gYear .
 
-:578 a :CropGroup,
+:578 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "578"^^xsd:ID ] ;
@@ -1035,7 +1035,7 @@
         "Miglio per l’estrazione di gra-nelli"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:579 a :CropGroup,
+:579 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "579"^^xsd:ID ] ;
@@ -1044,7 +1044,7 @@
         "Miglio per la raccolta della pianta intera"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:580 a :CropGroup,
+:580 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "580"^^xsd:ID ] ;
@@ -1053,7 +1053,7 @@
         "Sorgo per l’estrazione di gra-nelli"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:581 a :CropGroup,
+:581 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "581"^^xsd:ID ] ;
@@ -1062,7 +1062,7 @@
         "Sorgo per la raccolta della pianta intera"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:590 a :CropGroup,
+:590 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "590"^^xsd:ID ] ;
@@ -1070,7 +1070,7 @@
         "Colza de printemps comme matière première renouvelable"@fr,
         "Colza primaverile quale materia prima rinnovabile"@it .
 
-:591 a :CropGroup,
+:591 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "591"^^xsd:ID ] ;
@@ -1078,7 +1078,7 @@
         "Colza d’automne comme matière première renouvelable"@fr,
         "Colza autunnale quale materia prima rinnovabile"@it .
 
-:592 a :CropGroup,
+:592 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "592"^^xsd:ID ] ;
@@ -1086,7 +1086,7 @@
         "Tournesol comme matière première renouvelable"@fr,
         "Girasole quale materia prima rinnovabile"@it .
 
-:597 a :CropGroup,
+:597 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "597"^^xsd:ID ] ;
@@ -1094,7 +1094,7 @@
         "Autres terres ouvertes avec contributions"@fr,
         "Altra superficie coltiva aperta, con contributi"@it .
 
-:598 a :CropGroup,
+:598 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "598"^^xsd:ID ] ;
@@ -1102,7 +1102,7 @@
         "Autres terres ouvertes sans contributions"@fr,
         "Altra superficie coltiva aperta, senza contributi"@it .
 
-:601 a :CropGroup,
+:601 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "601"^^xsd:ID ] ;
@@ -1110,7 +1110,7 @@
         "Prairies artificielles (sans les pâturages)"@fr,
         "Prati artificiali (senza pascoli)"@it .
 
-:602 a :CropGroup,
+:602 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "602"^^xsd:ID ] ;
@@ -1118,7 +1118,7 @@
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it .
 
-:613 a :CropGroup,
+:613 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "613"^^xsd:ID ] ;
@@ -1126,7 +1126,7 @@
         "Autres prairies permanentes (sans les pâturages)"@fr,
         "Altri prati perenni (senza pascoli)"@it .
 
-:616 a :CropGroup,
+:616 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "616"^^xsd:ID ] ;
@@ -1134,7 +1134,7 @@
         "Pâturages (pâturages attenants à la ferme, autres pâturages sauf les pâturages d’estivage)"@fr,
         "Pascoli (pascoli propri, altri pascoli senza pascoli d’estivazione)"@it .
 
-:621 a :CropGroup,
+:621 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "621"^^xsd:ID ] ;
@@ -1142,7 +1142,7 @@
         "Prairies de fauche en région d’estivage, autres"@fr,
         "Prati da sfalcio nella regione d’estivazione, altri prati"@it .
 
-:625 a :CropGroup,
+:625 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "625"^^xsd:ID ] ;
@@ -1150,7 +1150,7 @@
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it .
 
-:631 a :CropGroup,
+:631 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "631"^^xsd:ID ] ;
@@ -1158,7 +1158,7 @@
         "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Leguminose da foraggio per la produzione di sementi (coltivazione contrattuale)"@it .
 
-:632 a :CropGroup,
+:632 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "632"^^xsd:ID ] ;
@@ -1166,7 +1166,7 @@
         "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it .
 
-:650 a :CropGroup,
+:650 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "650"^^xsd:ID ] ;
@@ -1175,7 +1175,7 @@
         "Altra superficie inerbita, con contributi, aggregata"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:660 a :CropGroup,
+:660 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "660"^^xsd:ID ] ;
@@ -1184,7 +1184,7 @@
         "Altri pascoli perenni, con contributi, aggregata"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:697 a :CropGroup,
+:697 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "697"^^xsd:ID ] ;
@@ -1192,7 +1192,7 @@
         "Autres surfaces herbagères (surface herbagère permanente) avec contributions"@fr,
         "Altre superfici (permanentemente) inerbite, con contributi"@it .
 
-:698 a :CropGroup,
+:698 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "698"^^xsd:ID ] ;
@@ -1200,7 +1200,7 @@
         "Autres surfaces herbagères (surface herbagère permanente) sans contributions"@fr,
         "Altre superfici (permanentemente) inerbite, senza contributi"@it .
 
-:701 a :CropGroup,
+:701 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1209,7 +1209,7 @@
         "Vignes"@fr,
         "Vigna"@it .
 
-:702 a :CropGroup,
+:702 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1218,7 +1218,7 @@
         "Cultures fruitières (pommes)"@fr,
         "Frutteto (mele)"@it .
 
-:703 a :CropGroup,
+:703 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1227,7 +1227,7 @@
         "Cultures fruitières (poires)"@fr,
         "Frutteto (pere)"@it .
 
-:704 a :CropGroup,
+:704 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1236,7 +1236,7 @@
         "Cultures fruitières (fruits à noyau)"@fr,
         "Frutteto (frutta a nocciolo)"@it .
 
-:705 a :CropGroup,
+:705 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1245,7 +1245,7 @@
         "Baies pluriannuelles"@fr,
         "Bacche pluriennali"@it .
 
-:706 a :CropGroup,
+:706 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1254,7 +1254,7 @@
         "Plantes aromatiques et plantes médicinales pluriannuelles"@fr,
         "Piante aromatiche e medicinali pluriennali"@it .
 
-:707 a :CropGroup,
+:707 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "707"^^xsd:ID ] ;
@@ -1262,7 +1262,7 @@
         "Matières premières renouvelables pluriannuelles (roseau de Chine, etc.)"@fr,
         "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it .
 
-:708 a :CropGroup,
+:708 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1271,7 +1271,7 @@
         "Houblon"@fr,
         "Luppolo"@it .
 
-:709 a :CropGroup,
+:709 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1280,7 +1280,7 @@
         "Rhubarbe"@fr,
         "Rabarbaro"@it .
 
-:710 a :CropGroup,
+:710 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1289,7 +1289,7 @@
         "Asperges"@fr,
         "Asparagi"@it .
 
-:711 a :CropGroup,
+:711 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1298,7 +1298,7 @@
         "Champignons en pleine terre"@fr,
         "Funghi (in pieno campo)"@it .
 
-:712 a :CropGroup,
+:712 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "712"^^xsd:ID ] ;
@@ -1306,7 +1306,7 @@
         "Sapins de Noël"@fr,
         "Alberelli di Natale"@it .
 
-:713 a :CropGroup,
+:713 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "713"^^xsd:ID ] ;
@@ -1314,7 +1314,7 @@
         "Pépinières de plantes forestières hors zone forestière"@fr,
         "Vivai forestali fuori delle zone forestali"@it .
 
-:714 a :CropGroup,
+:714 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "714"^^xsd:ID ] ;
@@ -1322,7 +1322,7 @@
         "Buissons, arbrisseaux et arbustes ornementaux"@fr,
         "Arbusti, arboscelli, cespugli ornamentali"@it .
 
-:715 a :CropGroup,
+:715 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "715"^^xsd:ID ] ;
@@ -1331,7 +1331,7 @@
         "Altri vivai (rose, frutta, ecc.)"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:718 a :CropGroup,
+:718 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "718"^^xsd:ID ] ;
@@ -1339,7 +1339,7 @@
         "Truffières"@fr,
         "Tartufaie"@it .
 
-:719 a :CropGroup,
+:719 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "719"^^xsd:ID ] ;
@@ -1347,7 +1347,7 @@
         "Cultures de mûriers (alimentation des vers à soie)"@fr,
         "Coltivazioni di gelsi (foraggiamento dei bachi da seta)"@it .
 
-:720 a :CropGroup,
+:720 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "720"^^xsd:ID ] ;
@@ -1355,7 +1355,7 @@
         "Châtaigneraies entretenues (surface)"@fr,
         "Selve curate (castagni)"@it .
 
-:721 a :CropGroup,
+:721 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "721"^^xsd:ID ] ;
@@ -1363,7 +1363,7 @@
         "Cultures horticoles pluriannuelles de plein air (pas en serres)"@fr,
         "Floricoltura di pieno campo pluriennale (non in serra)"@it .
 
-:722 a :CropGroup,
+:722 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "722"^^xsd:ID ] ;
@@ -1371,7 +1371,7 @@
         "Pépinières viticoles"@fr,
         "Vivai viticoli"@it .
 
-:723 a :CropGroup,
+:723 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "723"^^xsd:ID ] ;
@@ -1380,7 +1380,7 @@
         "Vivaio di alberi da frutto e bacche"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:724 a :CropGroup,
+:724 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "724"^^xsd:ID ] ;
@@ -1389,7 +1389,7 @@
         "Altri vivai (rose, arbusti ornamentali, ecc.)"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:725 a :CropGroup,
+:725 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1398,7 +1398,7 @@
         "Permaculture"@fr,
         "Permacultura"@it .
 
-:730 a :CropGroup,
+:730 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1407,7 +1407,7 @@
         "Cultures fruitières agrégée"@fr,
         "Frutteti aggregata"@it .
 
-:731 a :CropGroup,
+:731 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1416,7 +1416,7 @@
         "Autres cultures fruitières (kiwis, sureau, etc.)"@fr,
         "Altri frutteti (kiwi, sambuco, ecc.)"@it .
 
-:750 a :CropGroup,
+:750 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "750"^^xsd:ID ] ;
@@ -1424,7 +1424,7 @@
         "Autres surfaces de cultures pérennes, avec contributions, agrégée"@fr,
         "Altre colture perenni, con contributi, aggregata"@it .
 
-:760 a :CropGroup,
+:760 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "760"^^xsd:ID ] ;
@@ -1433,7 +1433,7 @@
         "Colture perenni, senza contributi, aggregata"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:797 a :CropGroup,
+:797 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "797"^^xsd:ID ] ;
@@ -1441,7 +1441,7 @@
         "Autres surfaces de cultures pérennes, avec contributions"@fr,
         "Altre superfici con colture perenni, con contributi"@it .
 
-:798 a :CropGroup,
+:798 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "798"^^xsd:ID ] ;
@@ -1449,7 +1449,7 @@
         "Autres surfaces de cultures pérennes, sans contributions"@fr,
         "Altre superfici con colture perenni, senza contributi"@it .
 
-:801 a :CropGroup,
+:801 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1458,7 +1458,7 @@
         "Cultures maraîchères sous abri avec fondations permanentes"@fr,
         "Colture orticole in serre con fondamenta fisse"@it .
 
-:802 a :CropGroup,
+:802 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1467,7 +1467,7 @@
         "Autres cultures spéciales sous abri avec fondations permanentes"@fr,
         "Altre colture speciali in serre con fondamenta fisse"@it .
 
-:803 a :CropGroup,
+:803 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "803"^^xsd:ID ] ;
@@ -1475,7 +1475,7 @@
         "Cultures horticoles sous abri avec fondations permanentes"@fr,
         "Floricoltura in serre con fondamenta fisse"@it .
 
-:804 a :CropGroup,
+:804 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1485,7 +1485,7 @@
         "Colture bacche in serra con fondamenta fisse"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:806 a :CropGroup,
+:806 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1495,7 +1495,7 @@
         "Colture orticole in serre senza fondamenta fisse"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:807 a :CropGroup,
+:807 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1504,7 +1504,7 @@
         "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
         "Altre colture speciali in serre senza fondamenta fisse"@it .
 
-:808 a :CropGroup,
+:808 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "808"^^xsd:ID ] ;
@@ -1512,7 +1512,7 @@
         "Cultures horticoles sous abri sans fondations permanentes"@fr,
         "Floricoltura in serre senza fondamenta fisse"@it .
 
-:810 a :CropGroup,
+:810 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1521,7 +1521,7 @@
         "Champignons sous abri avec fondations permanentes"@fr,
         "Funghi coltivati al coperto con fondamenta fisse"@it .
 
-:811 a :CropGroup,
+:811 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1531,7 +1531,7 @@
         "Colture orticole coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:812 a :CropGroup,
+:812 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1541,7 +1541,7 @@
         "Colture orticole coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:813 a :CropGroup,
+:813 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1551,7 +1551,7 @@
         "Colture di bacche coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:814 a :CropGroup,
+:814 a :CultivationType,
         :DirectPaymentCrop,
         :SpecialtyCrop ;
     schema:identifier [ schema:name "LNF" ;
@@ -1561,7 +1561,7 @@
         "Colture di bacche coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
     schema:validFrom "2023"^^xsd:gYear .
 
-:830 a :CropGroup,
+:830 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "830"^^xsd:ID ] ;
@@ -1569,7 +1569,7 @@
         "Cultures sous abri sans fondations permanentes, avec contributions, agrégée"@fr,
         "Superfici con colture protette tutto l’anno, con contributi, aggregata"@it .
 
-:840 a :CropGroup,
+:840 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "840"^^xsd:ID ] ;
@@ -1578,7 +1578,7 @@
         "Superfici con colture protette tutto l’anno, senza contributi, aggregata"@it ;
     schema:validTo "2022"^^xsd:gYear .
 
-:847 a :CropGroup,
+:847 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "847"^^xsd:ID ] ;
@@ -1586,7 +1586,7 @@
         "Autres cultures sous abri sans fondations permanentes, avec contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, con contributi"@it .
 
-:848 a :CropGroup,
+:848 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "848"^^xsd:ID ] ;
@@ -1594,7 +1594,7 @@
         "Autres cultures sous abri avec fondations permanentes"@fr,
         "Altre colture coltivate al coperto con fondamenta fisse"@it .
 
-:849 a :CropGroup,
+:849 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "849"^^xsd:ID ] ;
@@ -1602,7 +1602,7 @@
         "Autres cultures sous abri sans fondations permanentes, sans contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, senza contributi"@it .
 
-:857 a :CropGroup,
+:857 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "857"^^xsd:ID ] ;
@@ -1610,7 +1610,7 @@
         "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it .
 
-:897 a :CropGroup,
+:897 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "897"^^xsd:ID ] ;
@@ -1618,7 +1618,7 @@
         "Autres surfaces dans la surface agricole utile, avec contributions"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata, con contributi"@it .
 
-:898 a :CropGroup,
+:898 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "898"^^xsd:ID ] ;
@@ -1626,7 +1626,7 @@
         "Autres surfaces dans la surface agricole utile, sans contributions"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata, senza contributi"@it .
 
-:901 a :CropGroup,
+:901 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "901"^^xsd:ID ] ;
@@ -1634,7 +1634,7 @@
         "Forêt"@fr,
         "Bosco"@it .
 
-:902 a :CropGroup,
+:902 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "902"^^xsd:ID ] ;
@@ -1642,7 +1642,7 @@
         "Surfaces improductives (p. ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
         "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it .
 
-:903 a :CropGroup,
+:903 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "903"^^xsd:ID ] ;
@@ -1650,7 +1650,7 @@
         "Surfaces dont l’affectation principale n’est pas l’exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d’entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d’eau)"@fr,
         "Superfici la cui destinazione principale non è l’utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d’esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d’acqua)"@it .
 
-:907 a :CropGroup,
+:907 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "907"^^xsd:ID ] ;
@@ -1658,7 +1658,7 @@
         "Chemins naturels non stabilisés"@fr,
         "Sentieri e accessi naturali non consolidati"@it .
 
-:909 a :CropGroup,
+:909 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "909"^^xsd:ID ] ;
@@ -1666,7 +1666,7 @@
         "Jardins potager"@fr,
         "Giardini e orti domestici"@it .
 
-:911 a :CropGroup,
+:911 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "911"^^xsd:ID ] ;
@@ -1674,7 +1674,7 @@
         "Production agricole sous abri (par ex. champignons de Paris, chicorée witloof)"@fr,
         "Produzione agricola in edifici (p.es. funghi, cicoria belga)"@it .
 
-:926 a :CropGroup,
+:926 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "926"^^xsd:ID ] ;
@@ -1683,7 +1683,7 @@
         "Altri alberi"@it ;
     schema:validFrom "2022"^^xsd:gYear .
 
-:930 a :CropGroup,
+:930 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "930"^^xsd:ID ] ;
@@ -1691,7 +1691,7 @@
         "Pâturages d’estivage"@fr,
         "Pascoli d’estivazione"@it .
 
-:933 a :CropGroup,
+:933 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "933"^^xsd:ID ] ;
@@ -1699,7 +1699,7 @@
         "Pâturages communautaires"@fr,
         "Pascoli comunitari"@it .
 
-:935 a :CropGroup,
+:935 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "935"^^xsd:ID ] ;
@@ -1707,7 +1707,7 @@
         "Prairies de fauche en région d’estivage, pour l'affouragement pendant l'estivage"@fr,
         "Prati da sfalcio nella regione d’estivazione, per l'alimentazione durante l'estivazione"@it .
 
-:936 a :CropGroup,
+:936 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "936"^^xsd:ID ] ;
@@ -1715,7 +1715,7 @@
         "Surfaces à litière, région d’estivage"@fr,
         "Terreni da strame nella regione d’estivazione"@it .
 
-:998 a :CropGroup,
+:998 a :CultivationType,
         :DirectPaymentCrop ;
     schema:identifier [ schema:name "LNF" ;
             schema:value "998"^^xsd:ID ] ;

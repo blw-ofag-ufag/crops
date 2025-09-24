@@ -50,7 +50,7 @@ categories <- data %>%
 
 for (i in seq_len(nrow(categories))) {
   subject <- rdfhelper::uri(i + 100, prefix = base)
-  triple(subject, "a", uri("CropGroup", base))
+  triple(subject, "a", uri("CultivationType", base))
   for (lang in languages) {
     rdfhelper::triple(
       subject = subject,
@@ -78,7 +78,7 @@ for (i in seq_len(nrow(data))) {
 
   code <- as.integer(data[i, "LNF_Code"])
   subject <- rdfhelper::uri(code, prefix = base)
-  rdfhelper::triple(subject, "a", rdfhelper::uri("CropGroup", base))
+  rdfhelper::triple(subject, "a", rdfhelper::uri("CultivationType", base))
   rdfhelper::triple(subject, "a", rdfhelper::uri("DirectPaymentCrop", base))
   for (lang in languages) {
     rdfhelper::triple(
