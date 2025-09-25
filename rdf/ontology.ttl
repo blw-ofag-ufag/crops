@@ -6,6 +6,10 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+schema:Event a owl:Class ;
+    rdfs:label "Ereignis"@de,
+        "Event"@en .
+
 :Area a owl:Class ;
     rdfs:label "Fläche"@de ;
     rdfs:subClassOf :Geometry .
@@ -21,18 +25,25 @@
 
 :Crop a owl:Class ;
     rdfs:label "Kulturpflanze"@de,
-        "Crop"@en .
+        "Crop"@en ;
+    rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence."@en .
 
 :Cultivation a owl:Class ;
     rdfs:label "Nutzung"@de ;
-    rdfs:comment "Beschreibt die landwirtschaftliche Nutzung eine Fläche. Sie hat einen Start- und Endzeitpunkt."@de .
+    rdfs:comment "Beschreibt die landwirtschaftliche Nutzung eine Fläche. Sie hat einen Start- und Endzeitpunkt."@de ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty schema:event ;
+            owl:someValuesFrom :Event ] .
 
 :CultivationType a owl:Class ;
-    rdfs:label "Kulturgruppe"@de .
+    rdfs:label "Nutzungsart"@de .
 
 :DirectPaymentCrop a owl:Class ;
     rdfs:label "Direktzahlungskultur"@de ;
     rdfs:subClassOf :CultivationType .
+
+:DirectPaymentPrograms a owl:Class ;
+    rdfs:label "Direktzahlungsprogram"@de .
 
 :FertilisationStandard a owl:Class ;
     rdfs:label "Düngungsnorm"@de .
@@ -53,6 +64,10 @@
             owl:onProperty :sourceSystem ;
             owl:someValuesFrom rdfs:Literal ] .
 
+:Point a owl:Class ;
+    rdfs:label "Punkt"@de ;
+    rdfs:subClassOf :Geometry .
+
 :SRPPPCrop a owl:Class ;
     rdfs:label "Kultur im PSM-Verzeichnis"@de ;
     rdfs:subClassOf :CultivationType .
@@ -60,6 +75,16 @@
 :SpecialtyCrop a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
+
+schema:endDate a owl:DatatypeProperty ;
+    rdfs:label "Enddatum"@de ;
+    rdfs:domain :Cultivation ;
+    rdfs:range xsd:date .
+
+schema:startDate a owl:DatatypeProperty ;
+    rdfs:label "Startdatum"@de ;
+    rdfs:domain :Cultivation ;
+    rdfs:range xsd:date .
 
 schema:value a owl:DatatypeProperty .
 
@@ -114,10 +139,6 @@ schema:value a owl:DatatypeProperty .
     rdfs:label "Bioenergie"@de,
         "Bioenergy"@en .
 
-:31 a owl:NamedIndividual ;
-    rdfs:label "beitragsberechtigt"@de,
-        "nicht beitragsberechtigt"@de .
-
 :4 a owl:NamedIndividual ;
     rdfs:label "Industrielle Rohstoffe"@de,
         "Industrial materials"@en .
@@ -147,6 +168,10 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :Cultivation ;
     rdfs:range :Area .
 
+:botanicalPlant a owl:ObjectProperty ;
+    rdfs:domain :CultivationType ;
+    rdfs:range :Crop .
+
 :crop a owl:ObjectProperty ;
     rdfs:domain :Cultivation ;
     rdfs:range [ owl:unionOf ( :CultivationType :Crop ) ] .
@@ -155,19 +180,28 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :11 :12 :13 :14 :15 :16 :17 ) ] .
 
-:eligibility a owl:ObjectProperty ;
-    rdfs:domain :CultivationType ;
-    rdfs:range [ owl:oneOf ( :31 :32 ) ] .
+:eligibleFor a owl:ObjectProperty ;
+    rdfs:label "ist beitragsberechtigt für"@de ;
+    rdfs:domain :DirectPaymentCrop ;
+    rdfs:range :DirectPaymentPrograms .
 
 :fertilisationStandard a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range :FertilisationStandard .
 
+:includes a owl:ObjectProperty ;
+    rdfs:label "beinhaltet"@de,
+        "includes"@en ;
+    rdfs:domain :Area ;
+    rdfs:range :Point .
+
 :intensity a owl:ObjectProperty ;
+    rdfs:label "Anbauintensität"@de ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
 
 :purpose a owl:ObjectProperty ;
+    rdfs:label "Verwendungszweck"@de ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :1 :2 :3 :4 :5 :6 ) ] .
 
