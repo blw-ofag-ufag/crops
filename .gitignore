@@ -52,7 +52,9 @@ rsconnect/
 upload.sh
 
 # Ignore large graph file
-rdf/graph.ttl
+rdf/*
+!rdf/ontology.ttl
 
 # Exclude any notes
 notes.md
+
