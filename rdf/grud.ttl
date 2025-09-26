@@ -31,10 +31,10 @@
     schema:name "Futterweizen in 62a Nitrat-Projekt"@de .
 
 :205 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "104"^^xsd:ID ],
-        [ schema:name "NAEBI" ;
-            schema:value "CROP_SWHT"^^xsd:ID ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_SWHT"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "104"^^xsd:ID ] ;
     schema:name "Sommerweizen"@de .
 
 :206 a :GRUDCrop ;
@@ -346,10 +346,10 @@
     schema:name "Tabak Virgine"@de .
 
 :250 a :GRUDCrop ;
-    schema:identifier [ schema:name "GRUD" ;
-            schema:value "172"^^xsd:ID ],
-        [ schema:name "NAEBI" ;
-            schema:value "CROP_TABAC"^^xsd:ID ] ;
+    schema:identifier [ schema:name "NAEBI" ;
+            schema:value "CROP_TABAC"^^xsd:ID ],
+        [ schema:name "GRUD" ;
+            schema:value "172"^^xsd:ID ] ;
     schema:name "Reis"@de .
 
 :251 a :GRUDCrop ;
