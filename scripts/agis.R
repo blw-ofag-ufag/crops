@@ -47,9 +47,16 @@ categories <- data %>%
   filter(if_all(all_of(colnames), ~ .x != "NULL")) %>%
   subset(select = colnames) %>%
   unique()
+categories$code <- NA
+categories$uri <- NA
 
 for (i in seq_len(nrow(categories))) {
-  subject <- rdfhelper::uri(i + 100, prefix = base)
+
+  code <- i + 100
+  categories[i, "code"] <- code
+  subject <- rdfhelper::uri(code, prefix = base)
+  categories[i, "uri"] <- subject
+
   triple(subject, "a", uri(c("CultivationType", "CropCategory"), base))
   for (lang in languages) {
     rdfhelper::triple(
@@ -110,6 +117,18 @@ for (i in seq_len(nrow(data))) {
   }
 
   construct_code(subject, code, "LNF")
+
+  #' assign crop category by looking up value in LUT
+  triple(
+    subject = subject,
+    predicate = uri("isPartOf", schema),
+    object =  subset(
+      x = categories,
+      subset = Hauptkategorie_DE == data[i, ][["Hauptkategorie_DE"]],
+      select = "uri"
+    ) %>% unlist()
+  )
+
 }
 
 sink()
