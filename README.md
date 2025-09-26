@@ -2,6 +2,16 @@
 
 In this project, we propose a unified master data system for crops and crop-related objects.
 
+# Run data integration pipeline
+
+The data integration pipeline uses all the R and python scripts in the `/scripts` folder and can be run with:
+
+```
+sh scripts/etl.sh
+```
+
+It produces a series of additional turtle/nt files.
+
 # Example queries
 
 You can query the crop master data system using SPARQL.
