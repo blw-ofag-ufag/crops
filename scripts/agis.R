@@ -57,7 +57,11 @@ for (i in seq_len(nrow(categories))) {
   subject <- rdfhelper::uri(code, prefix = base)
   categories[i, "uri"] <- subject
 
-  triple(subject, "a", uri(c("CultivationType", "CropCategory"), base))
+  rdfhelper::triple(
+    subject,
+    "a",
+    uri(c("CultivationType", "CultivationTypeCategory"), base)
+  )
   for (lang in languages) {
     rdfhelper::triple(
       subject = subject,

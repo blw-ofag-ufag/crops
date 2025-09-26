@@ -4,11 +4,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix wikidata: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 schema:Event a owl:Class ;
     rdfs:label "Ereignis"@de,
         "Event"@en .
+
+wikidata:Q16521 a owl:Class ;
+    rdfs:label "Biologisches Taxon"@de,
+        "Biological taxon"@en .
 
 :Area a owl:Class ;
     rdfs:label "Fläche"@de ;
@@ -26,7 +31,8 @@ schema:Event a owl:Class ;
 :Crop a owl:Class ;
     rdfs:label "Kulturpflanze"@de,
         "Crop"@en ;
-    rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence."@en .
+    rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence."@en ;
+    rdfs:subClassOf wikidata:Q16521 .
 
 :Cultivation a owl:Class ;
     rdfs:label "Nutzung"@de ;
@@ -37,6 +43,10 @@ schema:Event a owl:Class ;
 
 :CultivationType a owl:Class ;
     rdfs:label "Nutzungsart"@de .
+
+:CultivationTypeCategory a owl:Class ;
+    rdfs:label "Nutzungsart-Kategorie"@de ;
+    rdfs:subClassOf :CultivationType .
 
 :DirectPaymentCrop a owl:Class ;
     rdfs:label "Direktzahlungskultur"@de ;
@@ -75,6 +85,10 @@ schema:Event a owl:Class ;
 :SpecialtyCrop a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
+
+:Variety a owl:Class ;
+    rdfs:label "Sorte"@de,
+        "Variety"@en .
 
 schema:endDate a owl:DatatypeProperty ;
     rdfs:label "Enddatum"@de ;
@@ -199,6 +213,13 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "Anbauintensität"@de ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
+
+:plantSpecies a owl:ObjectProperty ;
+    rdfs:label "Pflanzenart"@de,
+        "Plant species"@en ;
+    rdfs:comment "Art der Pflanze, zu welcher eine Sorte gehört."@de ;
+    rdfs:domain :Crop ;
+    rdfs:range :Variety .
 
 :purpose a owl:ObjectProperty ;
     rdfs:label "Verwendungszweck"@de ;
