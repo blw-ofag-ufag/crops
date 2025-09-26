@@ -1,6 +1,21 @@
-# crops
-RDF master and reference data about crops
+# RDF master and reference data about crops
+
+In this project, we propose a unified master data system for crops and crop-related objects.
 
 # Example queries
 
-- [Crop types that are both specialty crops and BFF Q2](https://s.zazuko.com/z1GhFx)
+You can query the crop master data system using SPARQL.
+
+Here's an [example SPARQL query](https://s.zazuko.com/2SyHoth) that gets you all cultivation type URIs and labels in German:
+
+```sparql
+PREFIX schema: <http://schema.org/>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+SELECT *
+WHERE {
+  ?crop a :CultivationType .
+  ?crop schema:name ?name .
+  FILTER(LANG(?name)="de")
+}
+ORDER BY ?name
+```
