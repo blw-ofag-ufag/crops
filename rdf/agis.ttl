@@ -307,7 +307,8 @@
     schema:validFrom "2023"^^xsd:gYear ;
     schema:validTo "2024"^^xsd:gYear .
 
-:101 a :CultivationType ;
+:101 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :501,
         :502,
         :504,
@@ -390,7 +391,8 @@
         "Terres cultivées"@fr,
         "Superficie coltiva"@it .
 
-:102 a :CultivationType ;
+:102 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :611,
         :612,
         :613,
@@ -403,40 +405,44 @@
         :694,
         :697,
         :698 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Dauerwiesen"@de,
+        "Prairies permanentes"@fr,
+        "Prati perenni"@it .
 
-:103 a :CultivationType ;
+:103 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :616,
         :617,
         :618,
         :625,
         :660,
         :693 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Dauerweiden"@de,
+        "Pâturages permanents"@fr,
+        "Pascoli perenni"@it .
 
-:104 a :CultivationType ;
+:104 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :701,
         :717,
         :735 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Reben"@de,
+        "Vignobles"@fr,
+        "Vigna"@it .
 
-:105 a :CultivationType ;
+:105 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :702,
         :703,
         :704,
         :730,
         :731 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Obstanlagen"@de,
+        "Cultures fruitières"@fr,
+        "Frutteti"@it .
 
-:106 a :CultivationType ;
+:106 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :705,
         :706,
         :707,
@@ -460,11 +466,12 @@
         :760,
         :797,
         :798 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Übrige Dauerkulturen"@de,
+        "Autres cultures pérennes"@fr,
+        "Altre colture perenni"@it .
 
-:107 a :CultivationType ;
+:107 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :801,
         :802,
         :803,
@@ -482,38 +489,43 @@
         :847,
         :848,
         :849 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Geschützter Anbau"@de,
+        "Cultures protégées"@fr,
+        "Colture protette tutto l’anno"@it .
 
-:108 a :CultivationType ;
+:108 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :851 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Streueflächen"@de,
+        "Surfaces à litière"@fr,
+        "Terreni da strame"@it .
 
-:109 a :CultivationType ;
+:109 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :852,
         :857,
         :858 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Hecken-, Feld- und Ufergehölze"@de,
+        "Haies, bosquets et berges boisées"@fr,
+        "Siepi, boschetti campestri e rivieraschi"@it .
 
-:110 a :CultivationType ;
+:110 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :897,
         :898 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Autre surface au sein de la surface agricole utile"@fr,
+        "Altre superfici all’interno della superficie agricola utilizzata"@it .
 
-:111 a :CultivationType ;
+:111 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :901 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Wald"@de,
+        "Forêt"@fr,
+        "Bosco"@it .
 
-:112 a :CultivationType ;
+:112 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :902,
         :903,
         :904,
@@ -524,18 +536,19 @@
         :909,
         :911,
         :998 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Surfaces en dehors de la surface agricole utile"@fr,
+        "Superfici fuori della superficie agricola utilizzata"@it .
 
-:113 a :CultivationType ;
+:113 a :CropCategory,
+        :CultivationType ;
     schema:hasPart :930,
         :933,
         :935,
         :936 ;
-    schema:name "Ackerfläche"@de,
-        "Terres cultivées"@fr,
-        "Superficie coltiva"@it .
+    schema:name "Sömmerungsfläche"@de,
+        "Surface d’estivage"@fr,
+        "Superfici d’estivazione"@it .
 
 :501 a :CultivationType,
         :DirectPaymentCrop ;

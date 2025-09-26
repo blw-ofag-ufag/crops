@@ -50,13 +50,13 @@ categories <- data %>%
 
 for (i in seq_len(nrow(categories))) {
   subject <- rdfhelper::uri(i + 100, prefix = base)
-  triple(subject, "a", uri("CultivationType", base))
+  triple(subject, "a", uri(c("CultivationType", "CropCategory"), base))
   for (lang in languages) {
     rdfhelper::triple(
       subject = subject,
       predicate = rdfhelper::uri("name", schema),
       object = rdfhelper::langstring(
-        x = data[i, paste("Hauptkategorie", toupper(lang), sep = "_")],
+        x = categories[i, paste("Hauptkategorie", toupper(lang), sep = "_")],
         lang = lang
       )
     )
