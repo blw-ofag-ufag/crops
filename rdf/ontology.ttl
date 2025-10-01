@@ -203,6 +203,11 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range :FertilisationStandard .
 
+:hasPart a owl:ObjectProperty ;
+    rdfs:domain :CultivationType ;
+    rdfs:range :CultivationType ;
+    owl:inverseOf :partOf .
+
 :includes a owl:ObjectProperty ;
     rdfs:label "beinhaltet"@de,
         "includes"@en ;
@@ -213,6 +218,11 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "Anbauintensität"@de ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
+
+:partOf a owl:ObjectProperty ;
+    rdfs:domain :CultivationType ;
+    rdfs:range :CultivationType ;
+    owl:inverseOf :hasPart .
 
 :plantSpecies a owl:ObjectProperty ;
     rdfs:label "Pflanzenart"@de,
