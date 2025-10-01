@@ -1,7 +1,5 @@
-#!/bin/bash
-
 # Load environment variables from .env file
-source .env
+. ./.env
 
 # Run R processing steps
 for r in agis grud provar; do
