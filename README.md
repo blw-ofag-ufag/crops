@@ -8,13 +8,19 @@ Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=ht
 
 # Run data integration pipeline
 
-The data integration pipeline uses all the R and python scripts in the `/scripts` folder and can be run with:
+The data integration pipeline uses all the R and python scripts in the `/scripts` folder. The entire pipeline can be triggered with:
 
-```
-sh scripts/etl.sh
-```
+1. Add variables to `.env`
 
-It produces a series of additional turtle/nt files.
+    ```sh
+    USER=lindas-foag
+    PASSWORD=********
+    GRAPH=https://lindas.admin.ch/foag/crops
+    ENDPOINT=https://stardog.cluster.ldbar.ch/lindas
+    ```
+
+2. Run the ETL pipeline `sh scripts/etl.sh`
+3. Check out the results on LINDAS.
 
 # Example queries
 
