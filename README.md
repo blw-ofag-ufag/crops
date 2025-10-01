@@ -2,6 +2,10 @@
 
 In this project, we propose a unified master data system for crops and crop-related objects.
 
+# Inspect the ontology
+
+Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
+
 # Run data integration pipeline
 
 The data integration pipeline uses all the R and python scripts in the `/scripts` folder and can be run with:
