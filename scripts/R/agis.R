@@ -12,7 +12,7 @@ library(rdfhelper)
 library(dplyr)
 
 #' read helper functions
-source("scripts/helper.R")
+source("scripts/R/helper.R")
 
 #' Constants
 languages <- c("de", "fr", "it")

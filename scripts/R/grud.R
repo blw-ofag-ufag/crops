@@ -10,7 +10,7 @@ library(dplyr)
 library(jsonlite)
 
 #' read helper functions
-source("scripts/helper.R")
+source("scripts/R/helper.R")
 
 #' Constants
 languages <- c(

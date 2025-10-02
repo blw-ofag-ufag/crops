@@ -1,4 +1,4 @@
-library(rdfhelper)
+library(rdfhelper) # from https://github.com/damian-oswald/rdfhelper
 
 construct_code <- function(subject, code, name) {
   bnode <- paste0("_:", rlang::hash(code))
