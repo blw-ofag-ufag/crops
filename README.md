@@ -22,6 +22,26 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
 2. Run the ETL pipeline `sh scripts/etl.sh`
 3. Check out the results on LINDAS.
 
+# Data Mapping and Unification
+
+Data about crops is often sourced from various systems, which can lead to duplicate entries for the same real-world concept. To create a clean and unified dataset, we employ a mapping process to consolidate these duplicates.
+
+This consolidation is defined in the `rdf/mapping.ttl` file. It uses the standard OWL property `owl:sameAs` to declare that two URIs refer to the same entity.
+
+For example, consider the following statement:
+
+```ttl
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+:950 owl:sameAs :555 .
+```
+
+This statement establishes `:950` as the canonical (master) URI and `:555` as the duplicate. During the data integration pipeline, the `scripts/reason.py` script processes this mapping.
+In this example, all triples that use `:555` as a subject or object are automatically rewritten to use `:950` instead.
+Crucially, to avoid conflicting information, the canonical entity `:950` first loses all its properties for names and descriptions (specifically `schema:name` and `schema:description`).
+This ensures that the descriptive properties from the merged entity (`:555`) are cleanly transferred, creating a single, consistent record for the crop under the URI `:950`.
+
 # Example queries
 
 You can query the crop master data system using SPARQL.
