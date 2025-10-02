@@ -4,9 +4,114 @@
 :10080 :hasPart :515,
         :951 .
 
-:501 owl:sameAs :10143 .
+:104 owl:sameAs :303,
+        :701,
+        :9953 .
 
-:502 owl:sameAs :9943 .
+:111 owl:sameAs :12464,
+        :901 .
+
+:201 owl:sameAs :10094 .
+
+:205 owl:sameAs :10118 .
+
+:206 owl:sameAs :502 .
+
+:208 owl:sameAs :501 .
+
+:210 owl:sameAs :10144 .
+
+:215 owl:sameAs :10180 .
+
+:222 owl:sameAs :556 .
+
+:223 owl:sameAs :542 .
+
+:225 owl:sameAs :10155 .
+
+:228 owl:sameAs :557 .
+
+:232 owl:sameAs :523 .
+
+:233 owl:sameAs :508 .
+
+:234 owl:sameAs :9977 .
+
+:250 owl:sameAs :509 .
+
+:253 owl:sameAs :10048 .
+
+:325 owl:sameAs :712 .
+
+:326 owl:sameAs :10115,
+        :708 .
+
+:327 owl:sameAs :10042 .
+
+:328 owl:sameAs :10028 .
+
+:329 owl:sameAs :9973 .
+
+:330 owl:sameAs :10303 .
+
+:333 owl:sameAs :9974 .
+
+:350 owl:sameAs :9986 .
+
+:352 owl:sameAs :10328 .
+
+:354 owl:sameAs :10030 .
+
+:357 owl:sameAs :9991 .
+
+:362 owl:sameAs :709,
+        :9998 .
+
+:371 owl:sameAs :10002 .
+
+:372 owl:sameAs :10323 .
+
+:373 owl:sameAs :10063 .
+
+:381 owl:sameAs :10027 .
+
+:386 owl:sameAs :10065 .
+
+:387 owl:sameAs :10010 .
+
+:388 owl:sameAs :10031 .
+
+:391 owl:sameAs :10043 .
+
+:392 owl:sameAs :10253 .
+
+:393 owl:sameAs :9983 .
+
+:400 owl:sameAs :10307 .
+
+:403 owl:sameAs :10309 .
+
+:405 owl:sameAs :10242 .
+
+:415 owl:sameAs :10232 .
+
+:426 owl:sameAs :12626 .
+
+:428 owl:sameAs :12627 .
+
+:430 owl:sameAs :10274 .
+
+:431 owl:sameAs :10308 .
+
+:434 owl:sameAs :10218 .
+
+:435 owl:sameAs :12630 .
+
+:436 owl:sameAs :11817 .
+
+:438 owl:sameAs :11820 .
+
+:454 owl:sameAs :522 .
 
 :504 owl:sameAs :10121 .
 
@@ -28,9 +133,36 @@
 
 :535 owl:sameAs :14729 .
 
+:538 owl:sameAs :10187 .
+
+:539 owl:sameAs :10188 .
+
+:541 owl:sameAs :10071 .
+
+:549 owl:sameAs :11393 .
+
+:566 owl:sameAs :10238 .
+
 :618 owl:sameAs :625 .
+
+:710 owl:sameAs :10005 .
 
 :852 owl:sameAs :857 .
 
 :950 owl:sameAs :555 .
+
+:303 owl:sameAs :701,
+        :9953 .
+
+:501 owl:sameAs :10143 .
+
+:502 owl:sameAs :9943 .
+
+:708 owl:sameAs :10115 .
+
+:709 owl:sameAs :9998 .
+
+:901 owl:sameAs :12464 .
+
+:701 owl:sameAs :9953 .
 

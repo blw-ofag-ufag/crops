@@ -12,9 +12,12 @@ WHERE
   # find pairs of distinct cultivation types that share the same name.
   ?a a :CultivationType ;
      schema:name ?name .
-     
+
   ?b a :CultivationType ;
      schema:name ?name .
+  
+  # compare only German names, because Naebi misses other names still
+  FILTER(LANG(?name)="de")
 
   # enforce the ordering based on the integer slug.
   # this filter ensures that ?a's slug is numerically smaller than ?b's slug.
