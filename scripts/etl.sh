@@ -2,12 +2,12 @@
 . ./.env
 
 # Run R processing steps
-for r in agis grud provar srppp; do
+for r in agis grud srppp; do
   Rscript "scripts/${r}.R"
 done
 
 # Process RDF files using Python scrips
-python3 scripts/reason.py rdf/ontology.ttl rdf/agis.ttl rdf/srppp.ttl rdf/grud.ttl rdf/provar.ttl rdf/mapping.ttl
+python3 scripts/reason.py rdf/ontology.ttl rdf/agis.ttl rdf/srppp.ttl rdf/grud.ttl rdf/mapping.ttl
 
 # Delete existing data from LINDAS
 curl \
