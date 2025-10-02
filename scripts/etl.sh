@@ -2,7 +2,7 @@
 . ./.env
 
 # Run R processing steps
-for r in agis grud provar; do
+for r in agis grud provar srppp; do
   Rscript "scripts/${r}.R"
 done
 
