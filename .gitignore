@@ -54,7 +54,6 @@ upload.sh
 # Ignore large graph file
 rdf/*
 !rdf/ontology.ttl
-!rdf/srppp.ttl
 !rdf/mapping.ttl
 
 # Exclude any notes
