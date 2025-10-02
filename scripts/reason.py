@@ -7,6 +7,7 @@ Key features
 * Deterministic sorting of all Turtle output using OrderedTurtleSerializer.
 * Flexible namespace rebinding: define all forced prefixes in CUSTOM_NAMESPACES.
 * Simple RDFS subclass **and sub-property** closure, plus OWL inverseOf expansion.
+* Merges nodes declared with owl:sameAs.
 * Convenience CLI: `python reason.py ontology.ttl data1.ttl data2.ttl ...`
   Produces `rdf/graph.ttl` (sorted) with inferred triples added.
 
@@ -20,6 +21,7 @@ import rdflib
 from rdflib import (
     Graph,
     URIRef,
+    Literal,
     Namespace,
     RDF,
     RDFS,
@@ -108,12 +110,80 @@ def load_and_sort_ttl_list(paths) -> Graph:
 # Reasoning
 # ---------------------------------------------------------------------------
 
+def _merge_sameas_nodes(graph: Graph) -> None:
+    """
+    Merges nodes connected by owl:sameAs.
+
+    For each `s owl:sameAs o`:
+    1. `s` becomes the canonical URI (target).
+    2. `o` is the URI to be merged (source).
+    3. All triples using `o` as a subject or object are rewritten to use `s`.
+    4. Any `schema:name` or `schema:description` on `s` is removed.
+    5. The original triples involving `o` and the `owl:sameAs` statement are removed.
+    """
+    same_as_map: dict[URIRef, URIRef] = {}
+    
+    # Only find direct `owl:sameAs` relationships, not inferred ones
+    sameas_triples = list(graph.triples((None, OWL.sameAs, None)))
+
+    if not sameas_triples:
+        return # Nothing to do
+
+    print(f"Found {len(sameas_triples)} owl:sameAs statements to merge.")
+
+    for s, p, o in sameas_triples:
+        # We only handle URI to URI mappings
+        if isinstance(s, URIRef) and isinstance(o, URIRef):
+            # The subject `s` is canonical, `o` will be replaced by `s`.
+            same_as_map[o] = s
+
+    # All URIs that will be replaced.
+    source_nodes = set(same_as_map.keys())
+    # All canonical URIs that will be kept.
+    target_nodes = set(same_as_map.values())
+
+    triples_to_add = []
+    triples_to_remove = []
+
+    for s, p, o in graph:
+        # Rule 5: Mark the owl:sameAs triple for removal.
+        if p == OWL.sameAs and s in target_nodes and o in source_nodes:
+            triples_to_remove.append((s, p, o))
+            continue
+
+        # Rule 3: Mark schema:name/description on the *target* node for removal.
+        if s in target_nodes and p in (SCHEMA.name, SCHEMA.description):
+            triples_to_remove.append((s, p, o))
+            continue
+            
+        # Rule 4: Rewrite triples involving the source node `o`.
+        # Check if either subject or object needs to be remapped.
+        new_s = same_as_map.get(s, s)
+        new_o = o
+        # The object can be a Literal, which is not in the map
+        if isinstance(o, URIRef):
+            new_o = same_as_map.get(o, o)
+
+        # If a replacement happened, update the triple lists.
+        if new_s != s or new_o != o:
+            triples_to_add.append((new_s, p, new_o))
+            triples_to_remove.append((s, p, o))
+
+    # Perform the graph modifications
+    for t in set(triples_to_remove):
+        graph.remove(t)
+    for t in triples_to_add:
+        graph.add(t)
+    
+    print(f"Finished owl:sameAs merge. Removed {len(set(triples_to_remove))} triples, added {len(triples_to_add)}.")
+
 
 def reason_subclass_and_inverse(
     ontology_graph: Graph, data_graph: Graph
 ) -> Graph:
     """Very small forward-chaining reasoner implementing:
 
+    0. Merging of owl:sameAs nodes.
     1. Subclass closure for **rdf:type**.
     2. Sub-property closure for arbitrary predicates.
     3. InverseOf property expansion.
@@ -124,14 +194,11 @@ def reason_subclass_and_inverse(
     Returns a *new* graph with original + inferred triples.
     """
 
-    # -------------------------------------------------------------------
     # 0) Merge ontology and data (work on a copy to keep originals intact)
-    # -------------------------------------------------------------------
     g = ontology_graph + data_graph
-
-    # -------------------------------------------------------------------
+    _merge_sameas_nodes(g)
+    
     # 1) Collect schema-level relations from the ontology
-    # -------------------------------------------------------------------
     subclass_of: dict[URIRef, set[URIRef]] = {}
     subproperty_of: dict[URIRef, set[URIRef]] = {}
     inverse_of: dict[URIRef, URIRef] = {}
@@ -150,9 +217,7 @@ def reason_subclass_and_inverse(
             inverse_of[s] = o
             inverse_of[o] = s  # ensure symmetry
 
-    # -------------------------------------------------------------------
     # 2) Forward-chaining loop – repeat until fix-point
-    # -------------------------------------------------------------------
     changed = True
     while changed:
         changed = False
@@ -183,9 +248,7 @@ def reason_subclass_and_inverse(
         if len(g) > len(existing):
             changed = True
 
-    # -------------------------------------------------------------------
     # 3) Human-readable term duplication (labels & descriptions)
-    # -------------------------------------------------------------------
     _duplicate_human_readable_terms(g)
 
     print(f"Finished reasoning. Total triples: {len(g)}")
