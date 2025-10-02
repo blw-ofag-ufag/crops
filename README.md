@@ -59,3 +59,5 @@ WHERE {
 }
 ORDER BY ?name
 ```
+
+More queries can be found in the `~/queries/` folder.

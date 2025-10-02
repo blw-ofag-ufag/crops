@@ -4,5 +4,33 @@
 :10080 :hasPart :515,
         :951 .
 
+:501 owl:sameAs :10143 .
+
+:502 owl:sameAs :9943 .
+
+:504 owl:sameAs :10121 .
+
+:505 owl:sameAs :10119 .
+
+:510 owl:sameAs :11321 .
+
+:514 owl:sameAs :10120 .
+
+:516 owl:sameAs :10122 .
+
+:520 owl:sameAs :10248 .
+
+:524 owl:sameAs :10086 .
+
+:528 owl:sameAs :10072 .
+
+:534 owl:sameAs :10225 .
+
+:535 owl:sameAs :14729 .
+
+:618 owl:sameAs :625 .
+
+:852 owl:sameAs :857 .
+
 :950 owl:sameAs :555 .
 

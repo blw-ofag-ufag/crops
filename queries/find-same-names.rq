@@ -1,0 +1,25 @@
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+
+CONSTRUCT
+{
+  ?a owl:sameAs ?b .
+}
+WHERE 
+{
+  # find pairs of distinct cultivation types that share the same name.
+  ?a a :CultivationType ;
+     schema:name ?name .
+     
+  ?b a :CultivationType ;
+     schema:name ?name .
+
+  # enforce the ordering based on the integer slug.
+  # this filter ensures that ?a's slug is numerically smaller than ?b's slug.
+  # it also (implicitly) makes sure that a != b
+  FILTER (
+    xsd:integer(STRAFTER(STR(?a), STR(:))) < xsd:integer(STRAFTER(STR(?b), STR(:)))
+  )
+}
