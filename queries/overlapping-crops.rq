@@ -1,0 +1,85 @@
+# ==============================================================================
+#       title:  AGIS NAEBI MAPPING TABLE GENERATION
+#        date:  2025-10-03
+#      author:  Damian Oswald (damian.oswald@blw.admin.ch)
+# description:  This query generates a comprehensive mapping table between two
+#               crop classification systems used in AGIS (agrarpolitisches Info-
+#               rmationssystem) and the Naebi (Nährstoffbilanzrechner). It is
+#               designed to ensure that every crop from both systems is included
+#               in the final result, even if it lacks a direct counterpart in
+#               the other system. To achieve this, it simulates a full outer
+#               join by using two main `UNION` blocks. A link between an AGIS
+#               crop and a Naebi crop is established if:
+#                 1. They are the same crop crop (same IRI),
+#                 2. One is hierarchically a sub-part of the other,
+#               The query uses the property path `:hasPart*` to check for these
+#               direct and hierarchical relationships.
+# ==============================================================================
+
+PREFIX schema: <http://schema.org/>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+
+SELECT DISTINCT
+    ?LNF_code
+    ?LNF_name
+    ?Naebi_code
+    ?Naebi_name
+WHERE
+{
+    {
+        ?lnf_crop a :CultivationType ;
+        schema:name ?LNF_name ;
+        schema:identifier [
+            schema:value ?LNF_code;
+            schema:name "LNF"
+        ] .
+
+        FILTER(LANG(?LNF_name) = "de")
+
+        OPTIONAL
+        {
+            ?Naebi_crop a :CultivationType ;
+                schema:name ?Naebi_name ;
+                schema:identifier [
+                    schema:value ?Naebi_code; 
+                    schema:name "NAEBI"
+                ] .
+
+            FILTER(LANG(?Naebi_name) = "de")
+            {
+                ?lnf_crop :hasPart* ?Naebi_crop .
+            }
+            UNION
+            {
+                ?Naebi_crop :hasPart* ?lnf_crop .
+            }
+        }
+    }
+    UNION
+    {
+        ?Naebi_crop a :CultivationType ;
+            schema:name ?Naebi_name ;
+            schema:identifier [
+                schema:value ?Naebi_code;
+                schema:name "NAEBI"
+            ] .
+        FILTER(LANG(?Naebi_name) = "de")
+        OPTIONAL
+        {
+            ?lnf_crop a :CultivationType ;
+                schema:name ?LNF_name ;
+                schema:identifier [
+                    schema:value ?LNF_code;
+                    schema:name "LNF"
+                ] .
+            FILTER(LANG(?LNF_name) = "de")
+            {
+                ?lnf_crop :hasPart* ?Naebi_crop .
+            }
+            UNION
+            { 
+                ?Naebi_crop :hasPart* ?lnf_crop .
+            }
+        }
+    }
+}
