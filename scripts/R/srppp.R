@@ -50,7 +50,7 @@ get_foreign_keys <- function(x, variable, key = "primaryKey") {
 describe <- function(x) {
   code <- attr(x, "primaryKey")
   subject <- rdfhelper::uri(code, base)
-  rdfhelper::triple(subject, "a", rdfhelper::uri("CultivationType", base))
+  rdfhelper::triple(subject, "a", rdfhelper::uri("SRPPPCrop", base))
   for (lang in languages) {
     rdfhelper::triple(
       subject = subject,
