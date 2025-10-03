@@ -2,6 +2,8 @@
 
 In this project, we propose a unified master data system for crops and crop-related objects.
 
+[Click here to search for crops in the graph.](https://blw-ofag-ufag.github.io/crops/?lang=de&query=Reben)
+
 # Inspect the ontology
 
 Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
@@ -22,7 +24,7 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
 2. Run the ETL pipeline `sh scripts/etl.sh`
 3. Check out the results on LINDAS.
 
-# Data Mapping and Unification
+# Data mapping and unification
 
 Data about crops is often sourced from various systems, which can lead to duplicate entries for the same real-world concept. To create a clean and unified dataset, we employ a mapping process to consolidate these duplicates.
 
