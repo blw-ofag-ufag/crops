@@ -48,11 +48,6 @@ rsconnect/
 # Bash scripts for manual LINDAS upload
 upload.sh
 
-# Ignore large graph file
-rdf/*
-!rdf/ontology.ttl
-!rdf/mapping.ttl
-
 # Exclude any notes
 notes.md
 
