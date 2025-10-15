@@ -28,21 +28,27 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
-:Crop a owl:Class ;
-    rdfs:label "Kulturpflanze"@de,
-        "Crop"@en ;
-    rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence."@en ;
-    rdfs:subClassOf wikidata:Q16521 .
+:CropTaxon a owl:Class ;
+    rdfs:label "Biologisches Taxon der Kulturpflanze"@de,
+        "Crop taxon"@en ;
+    rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence. The class of crop taxa hence contains all biological taxa of crops, for example *Triticum aestivum* or *Glycine max*."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :eppo ],
+        wikidata:Q16521 .
 
 :Cultivation a owl:Class ;
-    rdfs:label "Nutzung"@de ;
-    rdfs:comment "Beschreibt die landwirtschaftliche Nutzung eine Fläche. Sie hat einen Start- und Endzeitpunkt."@de ;
+    rdfs:label "Nutzung"@de,
+        "Cultivation"@en ;
+    rdfs:comment "Represents a specific, spatio-temporally bound agricultural event. It models a single cultivation cycle of a particular crop on a defined area with start and end dates. For example, 'the 2023 summer wheat cultivation on field X12B3', as distinct from the general concept of 'wheat cultivation'."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty schema:event ;
-            owl:someValuesFrom :Event ] .
+            owl:someValuesFrom schema:Event ] .
 
 :CultivationType a owl:Class ;
-    rdfs:label "Nutzungsart"@de .
+    rdfs:label "Nutzungsart"@de,
+        "Cultivation type"@en ;
+    rdfs:comment "The cultivation type helps group (agronomically) similar instances of cultivations together. It is a union of crop definitions from direct payments crops, principles of fertilisation of agricultural crops in Switzerland (GRUD), crops in the Swiss registry of plant protection and others. The cultivation type is distinct from the botanical plant, because it is used to classifiy cultivations, not individual plants."@en .
 
 :CultivationTypeCategory a owl:Class ;
     rdfs:label "Nutzungsart-Kategorie"@de ;
@@ -56,17 +62,20 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Direktzahlungsprogram"@de .
 
 :FertilisationStandard a owl:Class ;
-    rdfs:label "Düngungsnorm"@de .
+    rdfs:label "Düngungsnorm"@de,
+        "Fertilisation standard"@en .
 
 :GRUDCrop a owl:Class ;
     rdfs:label "Kultur aus den GRUD-Vorschriften"@de ;
     rdfs:subClassOf :CultivationType .
 
 :Geometry a owl:Class ;
-    rdfs:label "Geometrie"@de .
+    rdfs:label "Geometrie"@de,
+        "Geometry"@en .
 
 :Identifier a owl:Class ;
-    rdfs:label "Identifikator"@de ;
+    rdfs:label "Identifikator"@de,
+        "Identifier"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty schema:value ;
             owl:someValuesFrom rdfs:Literal ],
@@ -91,12 +100,14 @@ wikidata:Q16521 a owl:Class ;
         "Variety"@en .
 
 schema:endDate a owl:DatatypeProperty ;
-    rdfs:label "Enddatum"@de ;
+    rdfs:label "Enddatum"@de,
+        "End date"@en ;
     rdfs:domain :Cultivation ;
     rdfs:range xsd:date .
 
 schema:startDate a owl:DatatypeProperty ;
-    rdfs:label "Startdatum"@de ;
+    rdfs:label "Startdatum"@de,
+        "Start date"@en ;
     rdfs:domain :Cultivation ;
     rdfs:range xsd:date .
 
@@ -105,7 +116,7 @@ schema:value a owl:DatatypeProperty .
 :eppo a owl:DatatypeProperty ;
     rdfs:label "EPPO-Code"@de,
         "EPPO code"@en ;
-    rdfs:domain :Crop ;
+    rdfs:domain :CropTaxon ;
     rdfs:range xsd:token .
 
 :1 a owl:NamedIndividual ;
@@ -113,41 +124,52 @@ schema:value a owl:DatatypeProperty .
         "Human nutrition"@en .
 
 :11 a owl:NamedIndividual ;
-    rdfs:label "Freiland"@de .
+    rdfs:label "Freiland"@de,
+        "Outdoor cultivation"@en .
 
 :12 a owl:NamedIndividual ;
-    rdfs:label "geschützter Anbau"@de .
+    rdfs:label "geschützter Anbau"@de,
+        "Protected cultivation"@en .
 
 :13 a owl:NamedIndividual ;
-    rdfs:label "in Gewächshäusern"@de .
+    rdfs:label "in Gewächshäusern"@de,
+        "In greenhouses"@en .
 
 :14 a owl:NamedIndividual ;
-    rdfs:label "im gewachsenen Boden"@de .
+    rdfs:label "im gewachsenen Boden"@de,
+        "In native soil"@en .
 
 :15 a owl:NamedIndividual ;
-    rdfs:label "auf Pflanztischen oder -gestellen"@de .
+    rdfs:label "auf Pflanztischen oder -gestellen"@de,
+        "On plant tables or racks"@en .
 
 :16 a owl:NamedIndividual ;
-    rdfs:label "mit festem Fundament"@de .
+    rdfs:label "mit festem Fundament"@de,
+        "With permanent foundation"@en .
 
 :17 a owl:NamedIndividual ;
-    rdfs:label "ohne festes Fundament"@de .
+    rdfs:label "ohne festes Fundament"@de,
+        "Without permanent foundation"@en .
 
 :2 a owl:NamedIndividual ;
     rdfs:label "Tierische Ernährung"@de,
         "Animal nutrition"@en .
 
 :21 a owl:NamedIndividual ;
-    rdfs:label "extensiv"@de .
+    rdfs:label "extensiv"@de,
+        "Extensive"@en .
 
 :22 a owl:NamedIndividual ;
-    rdfs:label "wenig intensiv"@de .
+    rdfs:label "wenig intensiv"@de,
+        "Low intensity"@en .
 
 :23 a owl:NamedIndividual ;
-    rdfs:label "mittelintensiv"@de .
+    rdfs:label "mittelintensiv"@de,
+        "Medium intensity"@en .
 
 :24 a owl:NamedIndividual ;
-    rdfs:label "intensiv"@de .
+    rdfs:label "intensiv"@de,
+        "Intensive"@en .
 
 :3 a owl:NamedIndividual ;
     rdfs:label "Bioenergie"@de,
@@ -165,12 +187,18 @@ schema:value a owl:DatatypeProperty .
     rdfs:label "Bodenverbesserung"@de,
         "Soil improvement"@en .
 
+schema:event a owl:ObjectProperty ;
+    rdfs:label "Ereignis"@de,
+        "Event"@en .
+
 schema:hasPart a owl:ObjectProperty ;
     rdfs:label "hat Teil"@de,
         "has part"@en ;
     owl:inverseOf schema:isPartOf .
 
 schema:identifier a owl:ObjectProperty ;
+    rdfs:label "Identifikator"@de,
+        "Identifier"@en ;
     rdfs:range :Identifier .
 
 schema:isPartOf a owl:ObjectProperty ;
@@ -179,20 +207,27 @@ schema:isPartOf a owl:ObjectProperty ;
     owl:inverseOf schema:hasPart .
 
 :area a owl:ObjectProperty ;
+    rdfs:label "Bedeckt Fläche"@de,
+        "Covers area"@en ;
+    rdfs:comment "The area that is covered/used by a cultivation"@en ;
     rdfs:domain :Cultivation ;
     rdfs:range :Area .
 
 :botanicalPlant a owl:ObjectProperty ;
+    rdfs:label "Botanical plant"@en ;
+    rdfs:comment "One or more botanical plant taxa that specify a given cultivation type. For example, \"winter wheat\" has botanical plant *Triticum aestivum*. Note that while the first describes a form (class) of cultivations, the latter describes a class of plant individuals."@en ;
     rdfs:domain :CultivationType ;
-    rdfs:range :Crop .
-
-:crop a owl:ObjectProperty ;
-    rdfs:domain :Cultivation ;
-    rdfs:range [ owl:unionOf ( :CultivationType :Crop ) ] .
+    rdfs:range :CropTaxon .
 
 :cultivationMethod a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :11 :12 :13 :14 :15 :16 :17 ) ] .
+
+:cultivationType a owl:ObjectProperty ;
+    rdfs:label "Cultivation type"@en ;
+    rdfs:comment "The cultivation type that classifies a certain cultivation."@en ;
+    rdfs:domain :Cultivation ;
+    rdfs:range :CultivationType .
 
 :eligibleFor a owl:ObjectProperty ;
     rdfs:label "ist beitragsberechtigt für"@de ;
@@ -215,7 +250,8 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range :Point .
 
 :intensity a owl:ObjectProperty ;
-    rdfs:label "Anbauintensität"@de ;
+    rdfs:label "Anbauintensität"@de,
+        "Cultivation intensity"@en ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
 
@@ -228,7 +264,7 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "Pflanzenart"@de,
         "Plant species"@en ;
     rdfs:comment "Art der Pflanze, zu welcher eine Sorte gehört."@de ;
-    rdfs:domain :Crop ;
+    rdfs:domain :CropTaxon ;
     rdfs:range :Variety .
 
 :purpose a owl:ObjectProperty ;
