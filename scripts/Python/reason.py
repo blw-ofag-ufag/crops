@@ -110,20 +110,39 @@ def load_and_sort_ttl_list(paths) -> Graph:
 # Reasoning
 # ---------------------------------------------------------------------------
 
+def _resolve_sameas_chains(mapping: dict[URIRef, URIRef]) -> dict[URIRef, URIRef]:
+    """
+    Resolves chains of owl:sameAs mappings to a single canonical URI.
+    For example, {C: B, B: A} becomes {C: A, B: A}.
+    """
+    resolved_mapping = mapping.copy()
+    changed = True
+    while changed:
+        changed = False
+        for source_node, target_node in resolved_mapping.items():
+            # If the target is ALSO a source for another mapping, we have a chain.
+            # Follow the chain to the next target.
+            if target_node in resolved_mapping:
+                ultimate_target = resolved_mapping[target_node]
+                # Update the current source to point to the ultimate target.
+                if resolved_mapping[source_node] != ultimate_target:
+                    resolved_mapping[source_node] = ultimate_target
+                    changed = True # Mark that a change was made, so we loop again
+    return resolved_mapping
+
 def _merge_sameas_nodes(graph: Graph) -> None:
     """
     Merges nodes connected by owl:sameAs.
 
     For each `s owl:sameAs o`:
-    1. `s` becomes the canonical URI (target).
-    2. `o` is the URI to be merged (source).
-    3. All triples using `o` as a subject or object are rewritten to use `s`.
-    4. Any `schema:name` or `schema:description` on `s` is removed.
-    5. The original triples involving `o` and the `owl:sameAs` statement are removed.
+    1. `s` is initially considered the target (canonical) URI.
+    2. `o` is the source URI to be merged.
+    3. After resolving all chains, all triples using any source URI are rewritten to use the final canonical URI.
+    4. Any `schema:name` or `schema:description` on the canonical URI is removed to prioritize the one from the merged node.
+    5. The original triples involving source URIs and the `owl:sameAs` statements are removed.
     """
     same_as_map: dict[URIRef, URIRef] = {}
     
-    # Only find direct `owl:sameAs` relationships, not inferred ones
     sameas_triples = list(graph.triples((None, OWL.sameAs, None)))
 
     if not sameas_triples:
@@ -132,10 +151,14 @@ def _merge_sameas_nodes(graph: Graph) -> None:
     print(f"Found {len(sameas_triples)} owl:sameAs statements to merge.")
 
     for s, p, o in sameas_triples:
-        # We only handle URI to URI mappings
         if isinstance(s, URIRef) and isinstance(o, URIRef):
             # The subject `s` is canonical, `o` will be replaced by `s`.
             same_as_map[o] = s
+
+    # --- THIS IS THE FIX ---
+    # Resolve transitive chains like A -> B -> C into A -> B, A -> C
+    same_as_map = _resolve_sameas_chains(same_as_map)
+    # -----------------------
 
     # All URIs that will be replaced.
     source_nodes = set(same_as_map.keys())
@@ -146,21 +169,20 @@ def _merge_sameas_nodes(graph: Graph) -> None:
     triples_to_remove = []
 
     for s, p, o in graph:
-        # Rule 5: Mark the owl:sameAs triple for removal.
-        if p == OWL.sameAs and s in target_nodes and o in source_nodes:
+        # Check if the triple itself is one of the owl:sameAs we are processing for removal.
+        if p == OWL.sameAs and o in same_as_map and same_as_map[o] == s:
             triples_to_remove.append((s, p, o))
             continue
 
-        # Rule 3: Mark schema:name/description on the *target* node for removal.
+        # Rule 4: Mark schema:name/description on the *target* node for removal.
         if s in target_nodes and p in (SCHEMA.name, SCHEMA.description):
             triples_to_remove.append((s, p, o))
             continue
             
-        # Rule 4: Rewrite triples involving the source node `o`.
+        # Rule 3: Rewrite triples involving a source node.
         # Check if either subject or object needs to be remapped.
         new_s = same_as_map.get(s, s)
         new_o = o
-        # The object can be a Literal, which is not in the map
         if isinstance(o, URIRef):
             new_o = same_as_map.get(o, o)
 
@@ -168,8 +190,8 @@ def _merge_sameas_nodes(graph: Graph) -> None:
         if new_s != s or new_o != o:
             triples_to_add.append((new_s, p, new_o))
             triples_to_remove.append((s, p, o))
-
-    # Perform the graph modifications
+            
+    # Rule 5: Perform the graph modifications
     for t in set(triples_to_remove):
         graph.remove(t)
     for t in triples_to_add:

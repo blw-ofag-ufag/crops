@@ -77,7 +77,7 @@ for (i in seq_len(nrow(categories))) {
     subset = Hauptkategorie_DE == unlist(categories[i, "Hauptkategorie_DE"]),
     select = "LNF_Code"
   ) %>% unlist()
-  rdfhelper::triple(subject, uri("hasPart", schema), uri(x, prefix = base))
+  rdfhelper::triple(subject, uri("hasPart", base), uri(x, prefix = base))
 }
 
 
