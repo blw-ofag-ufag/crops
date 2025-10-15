@@ -125,7 +125,7 @@ for (i in seq_len(nrow(data))) {
   #' assign crop category by looking up value in LUT
   triple(
     subject = subject,
-    predicate = uri("isPartOf", schema),
+    predicate = uri("partOf", base),
     object =  subset(
       x = categories,
       subset = Hauptkategorie_DE == data[i, ][["Hauptkategorie_DE"]],
