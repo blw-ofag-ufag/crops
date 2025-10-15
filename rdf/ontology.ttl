@@ -32,7 +32,10 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Biologisches Taxon der Kulturpflanze"@de,
         "Crop taxon"@en ;
     rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence. The class of crop taxa hence contains all biological taxa of crops, for example *Triticum aestivum* or *Glycine max*."@en ;
-    rdfs:subClassOf wikidata:Q16521 .
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :eppo ],
+        wikidata:Q16521 .
 
 :Cultivation a owl:Class ;
     rdfs:label "Nutzung"@de,
