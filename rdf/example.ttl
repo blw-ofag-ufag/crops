@@ -1,0 +1,52 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:104 a :CropTaxon ;
+    rdfs:label "Reis"@de,
+        "Rice"@en ;
+    :eppo "ORYSA" ;
+    :taxonName "Oryza sativa" .
+
+:100 a :CultivationType ;
+    rdfs:label "Trockenreis"@de ;
+    :membership [ a :Membership ;
+            schema:validFrom "2023-01-01"^^xsd:date ;
+            :typeOf :DirectPaymentCrop ] ;
+    :partOf :102 .
+
+:101 a :CultivationType ;
+    rdfs:label "Nassreis"@de ;
+    :membership [ a :Membership ;
+            schema:validFrom "2023-01-01"^^xsd:date ;
+            :typeOf :DirectPaymentCrop ] ;
+    :partOf :102 .
+
+:102 a :CultivationType ;
+    rdfs:label "Reis"@de,
+        "Rice"@en,
+        "Riz"@fr,
+        "Riso"@it ;
+    :botanicalPlant :104 ;
+    :cultivationMethod :11 ;
+    :membership [ a :Membership ;
+            schema:identifier "172"^^xsd:ID ;
+            :typeOf :GRUDCrop ],
+        [ a :Membership ;
+            schema:identifier "509"^^xsd:ID ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
+            schema:validTo "2022-12-31"^^xsd:date ;
+            :typeOf :DirectPaymentCrop ] ;
+    :partOf :103 .
+
+:103 a :CultivationType ;
+    rdfs:label "Getreide"@de,
+        "Cereals"@en,
+        "Céréales"@fr,
+        "Cereale"@it .
+
+:105 a :Variety ;
+    schema:name "Basmati"@de ;
+    :plantSpecies :104 .
+

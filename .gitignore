@@ -52,6 +52,7 @@ upload.sh
 rdf/*
 !rdf/ontology.ttl
 !rdf/mapping.ttl
+!rdf/example.ttl
 
 # Exclude any notes
 notes.md

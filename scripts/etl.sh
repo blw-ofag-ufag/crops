@@ -13,7 +13,7 @@ for r in agis grud srppp; do
 done
 
 # Process RDF files using Python scrips
-python3 scripts/Python/reason.py rdf/ontology.ttl rdf/agis.ttl rdf/srppp.ttl rdf/grud.ttl rdf/mapping.ttl
+python3 scripts/Python/reason.py rdf/ontology.ttl rdf/example.ttl
 
 echo "Delete existing data from LINDAS"
 curl \

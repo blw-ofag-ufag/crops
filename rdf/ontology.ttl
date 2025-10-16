@@ -19,15 +19,6 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Fläche"@de ;
     rdfs:subClassOf :Geometry .
 
-:BFFQ1 a owl:Class ;
-    rdfs:label "BFF-Q1-Kultur"@de ;
-    rdfs:comment "Biodiversitätsförderflächen, Qualitätsstufe 1, für welche Bundesbeiträge bezogen werden."@de ;
-    rdfs:subClassOf :DirectPaymentCrop .
-
-:BFFa a owl:Class ;
-    rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
-    rdfs:subClassOf :DirectPaymentCrop .
-
 :CropTaxon a owl:Class ;
     rdfs:label "Biologisches Taxon der Kulturpflanze"@de,
         "Crop taxon"@en ;
@@ -54,20 +45,12 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Nutzungsart-Kategorie"@de ;
     rdfs:subClassOf :CultivationType .
 
-:DirectPaymentCrop a owl:Class ;
-    rdfs:label "Direktzahlungskultur"@de ;
-    rdfs:subClassOf :CultivationType .
-
 :DirectPaymentPrograms a owl:Class ;
     rdfs:label "Direktzahlungsprogram"@de .
 
 :FertilisationStandard a owl:Class ;
     rdfs:label "Düngungsnorm"@de,
         "Fertilisation standard"@en .
-
-:GRUDCrop a owl:Class ;
-    rdfs:label "Kultur aus den GRUD-Vorschriften"@de ;
-    rdfs:subClassOf :CultivationType .
 
 :Geometry a owl:Class ;
     rdfs:label "Geometrie"@de,
@@ -86,14 +69,6 @@ wikidata:Q16521 a owl:Class ;
 :Point a owl:Class ;
     rdfs:label "Punkt"@de ;
     rdfs:subClassOf :Geometry .
-
-:SRPPPCrop a owl:Class ;
-    rdfs:label "Kultur im PSM-Verzeichnis"@de ;
-    rdfs:subClassOf :CultivationType .
-
-:SpecialtyCrop a owl:Class ;
-    rdfs:label "Spezialkultur"@de ;
-    rdfs:subClassOf :DirectPaymentCrop .
 
 :Variety a owl:Class ;
     rdfs:label "Sorte"@de,
@@ -264,8 +239,8 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "Pflanzenart"@de,
         "Plant species"@en ;
     rdfs:comment "Art der Pflanze, zu welcher eine Sorte gehört."@de ;
-    rdfs:domain :CropTaxon ;
-    rdfs:range :Variety .
+    rdfs:domain :Variety ;
+    rdfs:range :CropTaxon .
 
 :purpose a owl:ObjectProperty ;
     rdfs:label "Verwendungszweck"@de ;
@@ -277,3 +252,11 @@ schema:isPartOf a owl:ObjectProperty ;
 : a owl:Ontology ;
     dcterms:title "Kulturen-Liste"@de .
 
+:GRUDCrop rdfs:label "Kultur aus den GRUD-Vorschriften"@de .
+
+:SRPPPCrop rdfs:label "Kultur im PSM-Verzeichnis"@de .
+
+:DirectPaymentCrop rdfs:label "Direktzahlungskultur"@de .
+
+:DirectPaymentPrograms a owl:Class ;
+    rdfs:label "Direktzahlungsprogramm"@de .
