@@ -1,6 +1,8 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+:0000007 owl:sameAs :9978 .
+
 :10080 :hasPart :515,
         :951 .
 

@@ -13,13 +13,11 @@ for r in agis grud srppp; do
 done
 
 # Process RDF files using Python scrips
-python3 scripts/Python/reason.py rdf/ontology.ttl rdf/example.ttl
+python3 scripts/Python/reason.py rdf/ontology.ttl rdf/agis.ttl rdf/srppp.ttl rdf/grud.ttl rdf/example.ttl rdf/mapping.ttl 
 
 # Rename the output graph.ttl to distinguish from the full graph
-mv rdf/graph.ttl rdf/graph_example.ttl
+#mv rdf/graph.ttl rdf/graph_example.ttl
 
-# Forego upload to LINDAS for now
-: '
 echo "Delete existing data from LINDAS"
 curl \
   --user $USER:$PASSWORD \
@@ -33,4 +31,3 @@ curl \
   -H "Content-Type: text/turtle" \
   --data-binary @rdf/graph.ttl \
   "$ENDPOINT?graph=$GRAPH"
-'
