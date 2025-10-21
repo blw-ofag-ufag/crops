@@ -1,6 +1,8 @@
-# RDF master and reference data about crops
+# RDF master and reference data about crops (Testing Branch)
 
 In this project, we propose a unified master data system for crops and crop-related objects.
+You are on the Testing Branch, where an example graph (graph_example.ttl) can be compared to the current main graph (graph.ttl).
+The main graph is available for queries on LINDAS (see section "Example queries") and visualized [here](https://service.tib.eu/webvowl/#file=graph.ttl).The example graph is visualized [here](https://service.tib.eu/webvowl/#file=graph_example.ttl).
 
 [Click here to search for crops in the graph.](https://blw-ofag-ufag.github.io/crops/?lang=de&query=Reben)
 

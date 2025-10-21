@@ -46,7 +46,8 @@ wikidata:Q16521 a owl:Class ;
     rdfs:subClassOf :CultivationType .
 
 :DirectPaymentPrograms a owl:Class ;
-    rdfs:label "Direktzahlungsprogram"@de .
+    rdfs:label "Direktzahlungsprogram"@de,
+        "Direktzahlungsprogramm"@de .
 
 :FertilisationStandard a owl:Class ;
     rdfs:label "Düngungsnorm"@de,
@@ -258,5 +259,3 @@ schema:isPartOf a owl:ObjectProperty ;
 
 :DirectPaymentCrop rdfs:label "Direktzahlungskultur"@de .
 
-:DirectPaymentPrograms a owl:Class ;
-    rdfs:label "Direktzahlungsprogramm"@de .
