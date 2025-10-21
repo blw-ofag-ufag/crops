@@ -53,6 +53,7 @@ rdf/*
 !rdf/ontology.ttl
 !rdf/mapping.ttl
 !rdf/example.ttl
+!rdf/graph.ttl
 
 # Exclude any notes
 notes.md
