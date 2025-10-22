@@ -2,10 +2,10 @@
 
 In this project, we propose a unified master data system for crops and crop-related objects.
 
-You are on the Testing Branch, where an example graph (graph_example.ttl) can be compared to the current main graph (graph.ttl).
+You are on the Testing Branch, where an example graph (graph.ttl) can be compared to the graph.ttl on the main branch.
 
-The main graph is available for queries on LINDAS (see section "Example queries"). 
-The main and example graph turtle files can be uploaded and visualized [here](https://service.tib.eu/webvowl).
+The graph is available for queries on LINDAS (see section "Example queries"). 
+The graph turtle files can be uploaded and visualized [here](https://service.tib.eu/webvowl).
 
 
 [Click here to search for crops in the graph.](https://blw-ofag-ufag.github.io/crops/?lang=de&query=Reben)
