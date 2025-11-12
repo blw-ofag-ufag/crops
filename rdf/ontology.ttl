@@ -264,8 +264,8 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "Pflanzenart"@de,
         "Plant species"@en ;
     rdfs:comment "Art der Pflanze, zu welcher eine Sorte gehört."@de ;
-    rdfs:domain :CropTaxon ;
-    rdfs:range :Variety .
+    rdfs:domain :Variety ;
+    rdfs:range :CropTaxon .
 
 :purpose a owl:ObjectProperty ;
     rdfs:label "Verwendungszweck"@de ;
