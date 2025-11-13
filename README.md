@@ -12,7 +12,7 @@ This graph not only allows for complex queries across formerly siloed data but a
 > [!WARNING]
 > This project is still work in progress.
 
-[^1]: For example AGIS (direct payments), GRUD (fertilization), PSM registry (plant protection), ProVar (varieties), PGREL-NIS (gene bank) and others.
+[^1]: For example [AGIS (direct payments)](https://www.i14y.admin.ch/en/catalog/concepts/08dcabe2-1734-ca16-9dfe-262056c9c124/content), [GRUD (fertilization)](https://www.agroscope.admin.ch/agroscope/de/home/themen/pflanzenbau/ackerbau/grud.html), [PSM registry (plant protection)](https://www.psm.admin.ch/de/kulturen/bs/A), [ProVar (varieties)](https://www.blw.admin.ch/de/sortenschutz#Sortenschutzregister), [PGREL-NIS (gene bank)](https://www.blw.admin.ch/de/pgrel-nis) and others.
 
 # Inspect the ontology
 
