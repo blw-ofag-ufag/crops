@@ -28,15 +28,6 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
-:CropTaxon a owl:Class ;
-    rdfs:label "Biologisches Taxon der Kulturpflanze"@de,
-        "Crop taxon"@en ;
-    rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence. The class of crop taxa hence contains all biological taxa of crops, for example *Triticum aestivum* or *Glycine max*."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty :eppo ],
-        wikidata:Q16521 .
-
 :Cultivation a owl:Class ;
     rdfs:label "Nutzung"@de,
         "Cultivation"@en ;
@@ -95,9 +86,11 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Spezialkultur"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
-:Variety a owl:Class ;
-    rdfs:label "Sorte"@de,
-        "Variety"@en .
+:Taxon a owl:Class ;
+    rdfs:label "Biologisches Taxon der Kulturpflanze"@de,
+        "Crop taxon"@en ;
+    rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence. The class of crop taxa hence contains all biological taxa of crops, for example *Triticum aestivum* or *Glycine max*."@en ;
+    rdfs:subClassOf wikidata:Q16521 .
 
 schema:endDate a owl:DatatypeProperty ;
     rdfs:label "Enddatum"@de,
@@ -116,7 +109,7 @@ schema:value a owl:DatatypeProperty .
 :eppo a owl:DatatypeProperty ;
     rdfs:label "EPPO-Code"@de,
         "EPPO code"@en ;
-    rdfs:domain :CropTaxon ;
+    rdfs:domain :Taxon ;
     rdfs:range xsd:token .
 
 :1 a owl:NamedIndividual ;
@@ -217,7 +210,7 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "Botanical plant"@en ;
     rdfs:comment "One or more botanical plant taxa that specify a given cultivation type. For example, \"winter wheat\" has botanical plant *Triticum aestivum*. Note that while the first describes a form (class) of cultivations, the latter describes a class of plant individuals."@en ;
     rdfs:domain :CultivationType ;
-    rdfs:range :CropTaxon .
+    rdfs:range :Taxon .
 
 :cultivationMethod a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
@@ -255,17 +248,15 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
 
+:parentTaxon a owl:ObjectProperty ;
+    rdfs:label "Parent taxon"@en ;
+    rdfs:domain :Taxon ;
+    rdfs:range :Taxon .
+
 :partOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range :CultivationType ;
     owl:inverseOf :hasPart .
-
-:plantSpecies a owl:ObjectProperty ;
-    rdfs:label "Pflanzenart"@de,
-        "Plant species"@en ;
-    rdfs:comment "Art der Pflanze, zu welcher eine Sorte gehört."@de ;
-    rdfs:domain :Variety ;
-    rdfs:range :CropTaxon .
 
 :purpose a owl:ObjectProperty ;
     rdfs:label "Verwendungszweck"@de ;
@@ -273,6 +264,11 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range [ owl:oneOf ( :1 :2 :3 :4 :5 :6 ) ] .
 
 :sourceSystem a owl:ObjectProperty .
+
+:taxonRank a owl:ObjectProperty ;
+    rdfs:label "Taxon rank"@en ;
+    rdfs:domain :Taxon ;
+    rdfs:range [ owl:oneOf ( :Variety :Subspecies :Species :Genus :Family :Order :Class :Phylum :Kingdom ) ] .
 
 : a owl:Ontology ;
     dcterms:title "Kulturen-Liste"@de .
