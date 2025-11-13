@@ -1,8 +1,18 @@
 # RDF master and reference data about crops
 
-In this project, we propose a unified master data system for crops and crop-related objects.
+This project addresses the challenge of fragmented agricultural crop data within the Swiss federal administration, where essential systems[^1] all use separate, non-harmonized crop terminologies.
+This lack of a "single source of truth" creates significant integration hurdles for digital tools.
 
-[Click here to search for crops in the graph.](https://blw-ofag-ufag.github.io/crops/?lang=de&query=Reben)
+In this project, we propose a unified master data system for crops and crop-related objects.
+The repository implements a sustainable solution by using a dedicated RDF ontology (crops ontology) and a graph database on LINDAS.
+This approach first connects (or "maps") the various crop terms from the different systems, creating a unified, machine-readable master data system that can be queried centrally.
+This graph not only allows for complex queries across formerly siloed data but also provides the stable, versioned foundation for the long-term, step-by-step harmonization of crop data across the Swiss agricultural sector.
+[Click here to search for crops in the graph.](https://blw-ofag-ufag.github.io/crops/?lang=de&query=Reis)
+
+> [!WARNING]
+> This project is still work in progress.
+
+[^1]: For example [AGIS (direct payments)](https://www.i14y.admin.ch/en/catalog/concepts/08dcabe2-1734-ca16-9dfe-262056c9c124/content), [GRUD (fertilization)](https://www.agroscope.admin.ch/agroscope/de/home/themen/pflanzenbau/ackerbau/grud.html), [PSM registry (plant protection)](https://www.psm.admin.ch/de/kulturen/bs/A), [ProVar (varieties)](https://www.blw.admin.ch/de/sortenschutz#Sortenschutzregister), [PGREL-NIS (gene bank)](https://www.blw.admin.ch/de/pgrel-nis) and others.
 
 # Inspect the ontology
 
