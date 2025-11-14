@@ -39,6 +39,10 @@ cultivationtype:13 a :CultivationType ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
             :memberOfClass :CultivationTypeCategory ] .
 
+cultivationtype:14 a :CultivationType ;
+    schema:name "Getreide"@de ;
+    :partOf cultivationtype:1 .
+
 cultivationtype:2 a :CultivationType ;
     schema:name "Dauerwiesen"@de,
         "Prairies permanentes"@fr,
@@ -60,12 +64,41 @@ cultivationtype:4 a :CultivationType ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
             :memberOfClass :CultivationTypeCategory ] .
 
+cultivationtype:494 a :CultivationType ;
+    schema:name "Raps"@de ;
+    :partOf cultivationtype:1 .
+
+cultivationtype:495 a :CultivationType ;
+    schema:name "Raps als nachwachsender Rohstoff"@de ;
+    :partOf cultivationtype:494 .
+
+cultivationtype:496 a :CultivationType ;
+    schema:name "Raps zur Speiseölgewinnung"@de ;
+    :partOf cultivationtype:494 .
+
+cultivationtype:497 a :CultivationType ;
+    schema:name "Mais"@de ;
+    :partOf cultivationtype:1 .
+
+cultivationtype:498 a :CultivationType ;
+    schema:name "Gerste"@de ;
+    :partOf cultivationtype:14 .
+
+cultivationtype:499 a :CultivationType ;
+    schema:name "Einkorn"@de ;
+    :botanicalPlant taxon:4 ;
+    :partOf cultivationtype:511 .
+
 cultivationtype:5 a :CultivationType ;
     schema:name "Obstanlagen"@de,
         "Cultures fruitières"@fr,
         "Frutteti"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
             :memberOfClass :CultivationTypeCategory ] .
+
+cultivationtype:500 a :CultivationType ;
+    schema:name "Emmer"@de ;
+    :partOf cultivationtype:511 .
 
 cultivationtype:501 a :CultivationType ;
     schema:name "Sommergerste"@de,
@@ -75,7 +108,7 @@ cultivationtype:501 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:498 .
 
 cultivationtype:502 a :CultivationType ;
     schema:name "Wintergerste"@de,
@@ -85,7 +118,7 @@ cultivationtype:502 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:498 .
 
 cultivationtype:504 a :CultivationType ;
     schema:name "Hafer"@de,
@@ -95,7 +128,7 @@ cultivationtype:504 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:505 a :CultivationType ;
     schema:name "Triticale"@de,
@@ -105,7 +138,7 @@ cultivationtype:505 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:506 a :CultivationType ;
     schema:name "Mischel Futtergetreide"@de,
@@ -115,7 +148,7 @@ cultivationtype:506 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:507 a :CultivationType ;
     schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
@@ -125,7 +158,7 @@ cultivationtype:507 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:508 a :CultivationType ;
     schema:name "Körnermais"@de,
@@ -135,20 +168,22 @@ cultivationtype:508 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:509 a :CultivationType ;
+    schema:description "Der Anbau von Reis (Triticum aestivum) auf offener Fläche."@de ;
     schema:name "Reis"@de,
         "Rice"@en,
         "Riz"@fr,
         "Riso"@it ;
     :botanicalPlant taxon:1 ;
+    :cultivationMethod :11 ;
     :hasMembership [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:510 a :CultivationType ;
     schema:name "Hartweizen"@de,
@@ -158,7 +193,7 @@ cultivationtype:510 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:511 a :CultivationType ;
     schema:name "Emmer, Einkorn"@de,
@@ -168,7 +203,7 @@ cultivationtype:511 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:512 a :CultivationType ;
     schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
@@ -178,7 +213,7 @@ cultivationtype:512 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:513 a :CultivationType ;
     schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
@@ -188,7 +223,7 @@ cultivationtype:513 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:514 a :CultivationType ;
     schema:name "Roggen"@de,
@@ -198,7 +233,7 @@ cultivationtype:514 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:515 a :CultivationType ;
     schema:name "Mischel Brotgetreide"@de,
@@ -208,7 +243,7 @@ cultivationtype:515 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:516 a :CultivationType ;
     schema:name "Dinkel"@de,
@@ -218,7 +253,7 @@ cultivationtype:516 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:519 a :CultivationType ;
     schema:name "Saatmais (Vertragsanbau)"@de,
@@ -228,7 +263,7 @@ cultivationtype:519 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:520 a :CultivationType ;
     schema:name "Trockenreis"@de,
@@ -248,7 +283,7 @@ cultivationtype:521 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:522 a :CultivationType ;
     schema:name "Zuckerrüben"@de,
@@ -298,7 +333,7 @@ cultivationtype:526 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:496 .
 
 cultivationtype:527 a :CultivationType ;
     schema:name "Winterraps zur Speiseölgewinnung"@de,
@@ -308,7 +343,7 @@ cultivationtype:527 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:496 .
 
 cultivationtype:528 a :CultivationType ;
     schema:name "Soja"@de,
@@ -321,6 +356,7 @@ cultivationtype:528 a :CultivationType ;
     :partOf cultivationtype:1 .
 
 cultivationtype:529 a :CultivationType ;
+    schema:description "Der Anbau von Reis (Oryza sativa) im Nassverfahren. Bei dieser Methode werden die Reisfelder (Paddys) während eines Grossteils der Wachstumsperiode zur Unkrautregulierung und Wachstumsförderung geflutet."@de ;
     schema:name "Nassreis"@de,
         "Riz en culture humide"@fr,
         "Riso seminato su terreno bagnato"@it ;
@@ -440,7 +476,7 @@ cultivationtype:543 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:544 a :CultivationType ;
     schema:name "Leindotter"@de,
@@ -682,7 +718,7 @@ cultivationtype:575 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2022-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:535 .
 
 cultivationtype:576 a :CultivationType ;
     schema:name "Hanf zur Fasernutzung"@de,
@@ -692,7 +728,7 @@ cultivationtype:576 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2022-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:535 .
 
 cultivationtype:577 a :CultivationType ;
     schema:name "Anderer Hanf"@de,
@@ -702,7 +738,7 @@ cultivationtype:577 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2022-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:535 .
 
 cultivationtype:578 a :CultivationType ;
     schema:name "Hirse zur Körnergewinnung"@de,
@@ -752,7 +788,7 @@ cultivationtype:590 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:495 .
 
 cultivationtype:591 a :CultivationType ;
     schema:name "Winterraps als nachwachsender Rohstoff"@de,
@@ -762,7 +798,7 @@ cultivationtype:591 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:495 .
 
 cultivationtype:592 a :CultivationType ;
     schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
@@ -819,30 +855,7 @@ cultivationtype:6 a :CultivationType ;
         "Autres cultures pérennes"@fr,
         "Altre colture perenni"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:705,
-        cultivationtype:706,
-        cultivationtype:707,
-        cultivationtype:708,
-        cultivationtype:709,
-        cultivationtype:710,
-        cultivationtype:711,
-        cultivationtype:712,
-        cultivationtype:713,
-        cultivationtype:714,
-        cultivationtype:715,
-        cultivationtype:718,
-        cultivationtype:719,
-        cultivationtype:720,
-        cultivationtype:721,
-        cultivationtype:722,
-        cultivationtype:723,
-        cultivationtype:724,
-        cultivationtype:725,
-        cultivationtype:750,
-        cultivationtype:760,
-        cultivationtype:797,
-        cultivationtype:798 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:601 a :CultivationType ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
@@ -1072,24 +1085,7 @@ cultivationtype:7 a :CultivationType ;
         "Cultures protégées"@fr,
         "Colture protette tutto l’anno"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:801,
-        cultivationtype:802,
-        cultivationtype:803,
-        cultivationtype:804,
-        cultivationtype:806,
-        cultivationtype:807,
-        cultivationtype:808,
-        cultivationtype:810,
-        cultivationtype:811,
-        cultivationtype:812,
-        cultivationtype:813,
-        cultivationtype:814,
-        cultivationtype:830,
-        cultivationtype:840,
-        cultivationtype:847,
-        cultivationtype:848,
-        cultivationtype:849 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:701 a :CultivationType ;
     schema:name "Reben"@de,
@@ -1408,8 +1404,7 @@ cultivationtype:8 a :CultivationType ;
         "Surfaces à litière"@fr,
         "Terreni da strame"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:851 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:801 a :CultivationType ;
     schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
@@ -1648,10 +1643,7 @@ cultivationtype:9 a :CultivationType ;
         "Haies, bosquets et berges boisées"@fr,
         "Siepi, boschetti campestri e rivieraschi"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:852,
-        cultivationtype:857,
-        cultivationtype:858 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:901 a :CultivationType ;
     schema:name "Wald"@de,

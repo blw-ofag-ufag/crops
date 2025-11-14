@@ -28,3 +28,8 @@ taxon:3 a :CropTaxon ;
     :taxonName "Triticum durum" ;
     :taxonRank :Species .
 
+taxon:4 a :CropTaxon ;
+    schema:name "Einkorn"@de ;
+    :taxonName "Triticum monococcum" ;
+    :taxonRank :Species .
+
