@@ -52,3 +52,8 @@ taxon:6 a :CropTaxon ;
     :taxonName "Cannabis sativa" ;
     :taxonRank :Species .
 
+taxon:7 a :CropTaxon ;
+    schema:name "Mais"@de ;
+    :taxonName "Zea mays" ;
+    :taxonRank :Species .
+

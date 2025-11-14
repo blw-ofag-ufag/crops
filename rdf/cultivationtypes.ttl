@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cultivationtype:1 a :CultivationType ;
+    schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it ;
@@ -40,10 +41,18 @@ cultivationtype:13 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:14 a :CultivationType ;
+    schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
     schema:name "Getreide"@de ;
     :partOf cultivationtype:1 .
 
+cultivationtype:15 a :CultivationType ;
+    schema:alternateName "Hülsenfrüchte"@de ;
+    schema:description "Der Anbau von Pflanzen aus der Familie der Hülsenfrüchtler (Leguminosae). Das Ziel ist typischerweise die Gewinnung der Körner zur menschlichen Ernährung oder als Tierfutter."@de ;
+    schema:name "Leguminosen"@de ;
+    :partOf cultivationtype:1 .
+
 cultivationtype:2 a :CultivationType ;
+    schema:description "Als Dauerwiese gilt die Fläche, die jährlich mindestens ein Mal zur Futtergewinnung gemäht wird."@de ;
     schema:name "Dauerwiesen"@de,
         "Prairies permanentes"@fr,
         "Prati perenni"@it ;
@@ -51,6 +60,7 @@ cultivationtype:2 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:3 a :CultivationType ;
+    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche."@de ;
     schema:name "Dauerweiden"@de,
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
@@ -63,6 +73,9 @@ cultivationtype:4 a :CultivationType ;
         "Vigna"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
             :memberOfClass :CultivationTypeCategory ] .
+
+cultivationtype:493 a :CultivationType ;
+    schema:name "Sonnenblumen"@de .
 
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
@@ -77,7 +90,9 @@ cultivationtype:496 a :CultivationType ;
     :partOf cultivationtype:494 .
 
 cultivationtype:497 a :CultivationType ;
+    schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
     schema:name "Mais"@de ;
+    :botanicalPlant taxon:7 ;
     :partOf cultivationtype:1 .
 
 cultivationtype:498 a :CultivationType ;
@@ -161,9 +176,11 @@ cultivationtype:507 a :CultivationType ;
     :partOf cultivationtype:14 .
 
 cultivationtype:508 a :CultivationType ;
+    schema:description "Anbau von Mais, bei dem das Hauptziel die Gewinnung der reifen, trockenen Körner ist. Im Gegensatz zum Silo- oder Grünmais wird hier nur der Kolben geerntet und gedroschen. Die Körner werden typischerweise als Futter- oder Lebensmittel sowie für industrielle Zwecke verwendet."@de ;
     schema:name "Körnermais"@de,
         "Maïs grain"@fr,
         "Mais da granella"@it ;
+    :botanicalPlant taxon:7 ;
     :hasMembership [ schema:identifier "508"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -171,7 +188,7 @@ cultivationtype:508 a :CultivationType ;
     :partOf cultivationtype:497 .
 
 cultivationtype:509 a :CultivationType ;
-    schema:description "Der Anbau von Reis (Oryza sativa) auf offener Fläche."@de ;
+    schema:description "Der Anbau von Reis auf offener Fläche."@de ;
     schema:name "Reis"@de,
         "Rice"@en,
         "Riz"@fr,
@@ -257,9 +274,11 @@ cultivationtype:516 a :CultivationType ;
     :partOf cultivationtype:14 .
 
 cultivationtype:519 a :CultivationType ;
+    schema:description "Anbau von Mais (Zea mays) mit dem spezifischen Ziel der Saatgutproduktion. Diese Art des Anbaus findet typischerweise auf Basis einer vertraglichen Vereinbarung zwischen Landwirt und Saatgutanbieter statt."@de ;
     schema:name "Saatmais (Vertragsanbau)"@de,
         "Semences de maïs (contrat de culture)"@fr,
         "Mais da semina (coltivazione contrattuale)"@it ;
+    :botanicalPlant taxon:7 ;
     :hasMembership [ schema:identifier "519"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -267,9 +286,11 @@ cultivationtype:519 a :CultivationType ;
     :partOf cultivationtype:497 .
 
 cultivationtype:520 a :CultivationType ;
+    schema:description "Der Anbau von Reis im Trockenverfahren. Im Gegensatz zum Nassreisbau werden die Felder bei dieser Methode nicht geflutet, sondern sind auf Regenfall oder künstliche Bewässerung angewiesen."@de ;
     schema:name "Trockenreis"@de,
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
+    :botanicalPlant taxon:1 ;
     :hasMembership [ schema:identifier "520"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -277,9 +298,11 @@ cultivationtype:520 a :CultivationType ;
     :partOf cultivationtype:509 .
 
 cultivationtype:521 a :CultivationType ;
+    schema:description "Anbau von Mais (Zea mays), der primär als Tierfutter dient. Bei dieser Anbauart wird die gesamte Pflanze geerntet, entweder zur direkten Verfütterung (Grünmais) oder zur Konservierung durch Silierung (Silomais)."@de ;
     schema:name "Silo- und Grünmais"@de,
         "Maïs d'ensilage et maïs vert"@fr,
         "Mais da insilamento e verde"@it ;
+    :botanicalPlant taxon:7 ;
     :hasMembership [ schema:identifier "521"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -324,7 +347,7 @@ cultivationtype:525 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:524 .
 
 cultivationtype:526 a :CultivationType ;
     schema:name "Sommerraps zur Speiseölgewinnung"@de,
@@ -354,13 +377,14 @@ cultivationtype:528 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:15 .
 
 cultivationtype:529 a :CultivationType ;
-    schema:description "Der Anbau von Reis (Oryza sativa) im Nassverfahren. Bei dieser Methode werden die Reisfelder (Paddys) während eines Grossteils der Wachstumsperiode zur Unkrautregulierung und Wachstumsförderung geflutet."@de ;
+    schema:description "Der Anbau von Reis im Nassverfahren. Bei dieser Methode werden die Reisfelder (Paddys) während eines Grossteils der Wachstumsperiode zur Unkrautregulierung und Wachstumsförderung geflutet."@de ;
     schema:name "Nassreis"@de,
         "Riz en culture humide"@fr,
         "Riso seminato su terreno bagnato"@it ;
+    :botanicalPlant taxon:1 ;
     :hasMembership [ schema:identifier "529"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -375,7 +399,7 @@ cultivationtype:531 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:493 .
 
 cultivationtype:534 a :CultivationType ;
     schema:name "Lein"@de,
@@ -388,7 +412,7 @@ cultivationtype:534 a :CultivationType ;
     :partOf cultivationtype:1 .
 
 cultivationtype:535 a :CultivationType ;
-    schema:description "Der Anbau von Hanf (Cannabis) für jegliche Zwecke."@de ;
+    schema:description "Der Anbau von Hanf für jegliche Zwecke."@de ;
     schema:name "Hanf"@de,
         "Chanvre"@fr,
         "Canapa"@it ;
@@ -408,7 +432,7 @@ cultivationtype:536 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:15 .
 
 cultivationtype:537 a :CultivationType ;
     schema:name "Erbsen zur Körnergewinnung (z.B. Eiweisserbsen)"@de,
@@ -418,7 +442,7 @@ cultivationtype:537 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:15 .
 
 cultivationtype:538 a :CultivationType ;
     schema:name "Lupinen"@de,
@@ -428,7 +452,7 @@ cultivationtype:538 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:15 .
 
 cultivationtype:539 a :CultivationType ;
     schema:name "Ölkürbisse"@de,
@@ -448,7 +472,7 @@ cultivationtype:540 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:15 .
 
 cultivationtype:541 a :CultivationType ;
     schema:name "Tabak"@de,
@@ -469,7 +493,7 @@ cultivationtype:542 a :CultivationType ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:543 a :CultivationType ;
     schema:name "Getreide siliert"@de,
@@ -661,7 +685,7 @@ cultivationtype:568 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:15 .
 
 cultivationtype:569 a :CultivationType ;
     schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
@@ -714,7 +738,7 @@ cultivationtype:574 a :CultivationType ;
     :partOf cultivationtype:1 .
 
 cultivationtype:575 a :CultivationType ;
-    schema:description "Der Anbau von Hanf (Cannabis) zur Körnergewinnung."@de ;
+    schema:description "Der Anbau von Hanf zur Körnergewinnung."@de ;
     schema:name "Hanf zur Nutzung der Samen"@de,
         "Chanvre pour l’utilisation des graines"@fr,
         "Canapa per i semi"@it ;
@@ -757,7 +781,7 @@ cultivationtype:578 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:578 .
 
 cultivationtype:579 a :CultivationType ;
     schema:name "Hirse zur Nutzung ganze Pflanze"@de,
@@ -767,7 +791,7 @@ cultivationtype:579 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:578 .
 
 cultivationtype:580 a :CultivationType ;
     schema:name "Sorghum zur Körnergewinnung"@de,
@@ -777,7 +801,7 @@ cultivationtype:580 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:549 .
 
 cultivationtype:581 a :CultivationType ;
     schema:name "Sorghum zur Nutzung ganze Pflanze"@de,
@@ -787,7 +811,7 @@ cultivationtype:581 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:549 .
 
 cultivationtype:590 a :CultivationType ;
     schema:name "Sommerraps als nachwachsender Rohstoff"@de,
@@ -817,7 +841,7 @@ cultivationtype:592 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:493 .
 
 cultivationtype:594 a :CultivationType ;
     schema:name "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
@@ -994,7 +1018,7 @@ cultivationtype:631 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:15 .
 
 cultivationtype:632 a :CultivationType ;
     schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
