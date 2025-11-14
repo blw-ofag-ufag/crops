@@ -1,6 +1,7 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix schema: <http://schema.org/> .
+@prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cultivationtype:1 a :CultivationType ;
@@ -259,8 +260,10 @@ cultivationtype:508 a :CultivationType ;
 
 cultivationtype:509 a :CultivationType ;
     schema:name "Reis"@de,
+        "Rice"@en,
         "Riz"@fr,
         "Riso"@it ;
+    :botanicalPlant taxon:1 ;
     :hasMembership [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -356,7 +359,7 @@ cultivationtype:520 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:509 .
 
 cultivationtype:521 a :CultivationType ;
     schema:name "Silo- und Grünmais"@de,
@@ -446,7 +449,7 @@ cultivationtype:529 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:509 .
 
 cultivationtype:531 a :CultivationType ;
     schema:name "Sonnenblumen zur Speiseölgewinnung"@de,

@@ -5,7 +5,7 @@
 pip install -r scripts/Python/requirements.txt
 
 # Process RDF files using Python scrips
-python3 scripts/Python/reason.py rdf/ontology.ttl rdf/cultivationtypes.ttl
+python3 scripts/Python/reason.py rdf/ontology.ttl rdf/cultivationtypes.ttl rdf/taxa.ttl
 
 echo "Delete existing data from LINDAS"
 curl \

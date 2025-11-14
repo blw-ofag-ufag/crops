@@ -40,7 +40,9 @@ from otsrdflib import OrderedTurtleSerializer
 CUSTOM_NAMESPACES = {
     "":                "https://agriculture.ld.admin.ch/crops/",
     "cultivationtype": "https://agriculture.ld.admin.ch/crops/cultivationtype/",
+    "taxon":           "https://agriculture.ld.admin.ch/crops/taxon/",
     "schema":          "http://schema.org/",
+    "skos":            "http://www.w3.org/2004/02/skos/core#",
     "dcterms":         "http://purl.org/dc/terms/",
     "wikidata":        "http://www.wikidata.org/entity/",
     "CHEBI":           "http://purl.obolibrary.org/obo/CHEBI_",
