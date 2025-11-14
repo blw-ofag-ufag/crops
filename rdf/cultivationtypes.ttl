@@ -9,184 +9,63 @@ cultivationtype:1 a :CultivationType ;
         "Terres cultivées"@fr,
         "Superficie coltiva"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:501,
-        cultivationtype:502,
-        cultivationtype:504,
-        cultivationtype:505,
-        cultivationtype:506,
-        cultivationtype:507,
-        cultivationtype:508,
-        cultivationtype:509,
-        cultivationtype:510,
-        cultivationtype:511,
-        cultivationtype:512,
-        cultivationtype:513,
-        cultivationtype:514,
-        cultivationtype:515,
-        cultivationtype:516,
-        cultivationtype:519,
-        cultivationtype:520,
-        cultivationtype:521,
-        cultivationtype:522,
-        cultivationtype:523,
-        cultivationtype:524,
-        cultivationtype:525,
-        cultivationtype:526,
-        cultivationtype:527,
-        cultivationtype:528,
-        cultivationtype:529,
-        cultivationtype:531,
-        cultivationtype:534,
-        cultivationtype:535,
-        cultivationtype:536,
-        cultivationtype:537,
-        cultivationtype:538,
-        cultivationtype:539,
-        cultivationtype:540,
-        cultivationtype:541,
-        cultivationtype:542,
-        cultivationtype:543,
-        cultivationtype:544,
-        cultivationtype:545,
-        cultivationtype:546,
-        cultivationtype:547,
-        cultivationtype:548,
-        cultivationtype:549,
-        cultivationtype:550,
-        cultivationtype:551,
-        cultivationtype:552,
-        cultivationtype:553,
-        cultivationtype:554,
-        cultivationtype:555,
-        cultivationtype:556,
-        cultivationtype:557,
-        cultivationtype:559,
-        cultivationtype:566,
-        cultivationtype:567,
-        cultivationtype:568,
-        cultivationtype:569,
-        cultivationtype:570,
-        cultivationtype:572,
-        cultivationtype:573,
-        cultivationtype:574,
-        cultivationtype:575,
-        cultivationtype:576,
-        cultivationtype:577,
-        cultivationtype:578,
-        cultivationtype:579,
-        cultivationtype:580,
-        cultivationtype:581,
-        cultivationtype:590,
-        cultivationtype:591,
-        cultivationtype:592,
-        cultivationtype:594,
-        cultivationtype:595,
-        cultivationtype:597,
-        cultivationtype:598,
-        cultivationtype:601,
-        cultivationtype:602,
-        cultivationtype:631,
-        cultivationtype:632 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:10 a :CultivationType ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autre surface au sein de la surface agricole utile"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:897,
-        cultivationtype:898 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:11 a :CultivationType ;
     schema:name "Wald"@de,
         "Forêt"@fr,
         "Bosco"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:901 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:12 a :CultivationType ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
         "Superfici fuori della superficie agricola utilizzata"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:902,
-        cultivationtype:903,
-        cultivationtype:904,
-        cultivationtype:905,
-        cultivationtype:906,
-        cultivationtype:907,
-        cultivationtype:908,
-        cultivationtype:909,
-        cultivationtype:911,
-        cultivationtype:998 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:13 a :CultivationType ;
     schema:name "Sömmerungsfläche"@de,
         "Surface d’estivage"@fr,
         "Superfici d’estivazione"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:930,
-        cultivationtype:933,
-        cultivationtype:935,
-        cultivationtype:936 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:2 a :CultivationType ;
     schema:name "Dauerwiesen"@de,
         "Prairies permanentes"@fr,
         "Prati perenni"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:611,
-        cultivationtype:612,
-        cultivationtype:613,
-        cultivationtype:621,
-        cultivationtype:622,
-        cultivationtype:623,
-        cultivationtype:634,
-        cultivationtype:635,
-        cultivationtype:650,
-        cultivationtype:694,
-        cultivationtype:697,
-        cultivationtype:698 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:3 a :CultivationType ;
     schema:name "Dauerweiden"@de,
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:616,
-        cultivationtype:617,
-        cultivationtype:618,
-        cultivationtype:625,
-        cultivationtype:660,
-        cultivationtype:693 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:4 a :CultivationType ;
     schema:name "Reben"@de,
         "Vignobles"@fr,
         "Vigna"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:701,
-        cultivationtype:717,
-        cultivationtype:735 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:5 a :CultivationType ;
     schema:name "Obstanlagen"@de,
         "Cultures fruitières"@fr,
         "Frutteti"@it ;
     :hasMembership [ schema:name "AGIS"^^xsd:string ;
-            :memberOfClass :CultivationTypeCategory ] ;
-    :hasPart cultivationtype:702,
-        cultivationtype:703,
-        cultivationtype:704,
-        cultivationtype:730,
-        cultivationtype:731 .
+            :memberOfClass :CultivationTypeCategory ] .
 
 cultivationtype:501 a :CultivationType ;
     schema:name "Sommergerste"@de,
