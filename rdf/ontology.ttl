@@ -28,6 +28,9 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
+:ClassMembership a owl:Class ;
+    rdfs:label "Class membership"@en .
+
 :Cultivation a owl:Class ;
     rdfs:label "Nutzung"@de,
         "Cultivation"@en ;
@@ -231,6 +234,9 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range :FertilisationStandard .
 
+:hasMembership a owl:ObjectProperty ;
+    rdfs:range :ClassMembership .
+
 :hasPart a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range :CultivationType ;
@@ -247,6 +253,10 @@ schema:isPartOf a owl:ObjectProperty ;
         "Cultivation intensity"@en ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
+
+:memberOfClass a owl:ObjectProperty ;
+    rdfs:domain :ClassMembership ;
+    rdfs:range owl:Class .
 
 :parentTaxon a owl:ObjectProperty ;
     rdfs:label "Parent taxon"@en ;
