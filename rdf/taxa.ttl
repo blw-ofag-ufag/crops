@@ -38,3 +38,17 @@ taxon:4 a :CropTaxon ;
     :taxonName "Triticum monococcum" ;
     :taxonRank :Species .
 
+taxon:5 a :CropTaxon ;
+    schema:name "Hanf"@de ;
+    :eppo <https://gd.eppo.int/taxon/1CNIG> ;
+    :taxonName "Cannabis" ;
+    :taxonRank :Genus .
+
+taxon:6 a :CropTaxon ;
+    schema:alternateName "Gebauter Hanf"@de,
+        "Gewöhnlicher Hanf"@de ;
+    schema:name "Hanf"@de ;
+    :eppo <https://gd.eppo.int/taxon/CNISA> ;
+    :taxonName "Cannabis sativa" ;
+    :taxonRank :Species .
+

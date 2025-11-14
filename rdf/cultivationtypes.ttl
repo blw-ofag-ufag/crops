@@ -171,7 +171,7 @@ cultivationtype:508 a :CultivationType ;
     :partOf cultivationtype:497 .
 
 cultivationtype:509 a :CultivationType ;
-    schema:description "Der Anbau von Reis (Triticum aestivum) auf offener Fläche."@de ;
+    schema:description "Der Anbau von Reis (Oryza sativa) auf offener Fläche."@de ;
     schema:name "Reis"@de,
         "Rice"@en,
         "Riz"@fr,
@@ -388,9 +388,11 @@ cultivationtype:534 a :CultivationType ;
     :partOf cultivationtype:1 .
 
 cultivationtype:535 a :CultivationType ;
+    schema:description "Der Anbau von Hanf (Cannabis) für jegliche Zwecke."@de ;
     schema:name "Hanf"@de,
         "Chanvre"@fr,
         "Canapa"@it ;
+    :botanicalPlant taxon:5 ;
     :hasMembership [ schema:identifier "535"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -712,9 +714,11 @@ cultivationtype:574 a :CultivationType ;
     :partOf cultivationtype:1 .
 
 cultivationtype:575 a :CultivationType ;
+    schema:description "Der Anbau von Hanf (Cannabis) zur Körnergewinnung."@de ;
     schema:name "Hanf zur Nutzung der Samen"@de,
         "Chanvre pour l’utilisation des graines"@fr,
         "Canapa per i semi"@it ;
+    :botanicalPlant taxon:6 ;
     :hasMembership [ schema:identifier "575"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2022-01-01"^^xsd:date ;
@@ -722,9 +726,11 @@ cultivationtype:575 a :CultivationType ;
     :partOf cultivationtype:535 .
 
 cultivationtype:576 a :CultivationType ;
+    schema:description "Der Anbau von Hanf für die Produktion von Seil, Textilien, Dämmstoff, Papier etc."@de ;
     schema:name "Hanf zur Fasernutzung"@de,
         "Chanvre pour l’utilisation des fibres"@fr,
         "Canapa da fibra"@it ;
+    :botanicalPlant taxon:6 ;
     :hasMembership [ schema:identifier "576"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2022-01-01"^^xsd:date ;
@@ -732,9 +738,11 @@ cultivationtype:576 a :CultivationType ;
     :partOf cultivationtype:535 .
 
 cultivationtype:577 a :CultivationType ;
+    schema:description "Hanf, der weder zur Körnergewinnung noch für die Nutzung der Fasern angebaut wird."@de ;
     schema:name "Anderer Hanf"@de,
         "Autre chanvre"@fr,
         "Altra canapa"@it ;
+    :botanicalPlant taxon:5 ;
     :hasMembership [ schema:identifier "577"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2022-01-01"^^xsd:date ;
