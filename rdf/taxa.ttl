@@ -1,28 +1,33 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix schema: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 
 taxon:1 a :CropTaxon ;
     schema:name "Reis"@de,
-        "Rice"@en ;
+        "rice"@en ;
     :eppo <https://gd.eppo.int/taxon/ORYSA> ;
     :taxonName "Oryza sativa" ;
     :taxonRank :Species .
 
 taxon:2 a :CropTaxon ;
-    skos:prefLabel "Brotweizen"@de,
-        "Bread wheat"@en ;
+    schema:alternateName "Gewöhnlicher Weizen"@de,
+        "Weichweizen"@de,
+        "Weizen"@de,
+        "soft wheat"@en ;
+    schema:name "Brotweizen"@de,
+        "bread wheat"@en ;
     :eppo <https://gd.eppo.int/taxon/TRZAX> ;
     :taxonName "Triticum aestivum" ;
     :taxonRank :Species .
 
 taxon:3 a :CropTaxon ;
-    skos:altLabel "flint wheat"@en,
+    schema:alternateName "Durumweizen"@de,
+        "Glasweizen"@de,
+        "flint wheat"@en,
         "hard wheat"@en,
         "macaroni wheat"@en,
         "pasta wheat"@en ;
-    skos:prefLabel "Hartweizen"@de,
+    schema:name "Hartweizen"@de,
         "durum wheat"@en ;
     :eppo <https://gd.eppo.int/taxon/TRZDU> ;
     :taxonName "Triticum durum" ;

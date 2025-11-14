@@ -189,6 +189,7 @@ cultivationtype:510 a :CultivationType ;
     schema:name "Hartweizen"@de,
         "Blé dur"@fr,
         "Grano duro"@it ;
+    :botanicalPlant taxon:3 ;
     :hasMembership [ schema:identifier "510"^^xsd:ID ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -1865,7 +1866,8 @@ cultivationtype:951 a :CultivationType ;
             schema:name "AGIS"^^xsd:string ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             schema:validTo "2024-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:14 .
 
 cultivationtype:998 a :CultivationType ;
     schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche und Sömmerungsfläche"@de,
