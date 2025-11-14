@@ -1,0 +1,2565 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:10000 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10000"^^xsd:ID ] ;
+    schema:name "Mais"@de,
+        "Maïs"@fr,
+        "Mais"@it ;
+    :partOf :10197 .
+
+:10001 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10001"^^xsd:ID ] ;
+    schema:name "Schalotten"@de,
+        "échalote"@fr,
+        "Scalogni"@it ;
+    :partOf :9963 .
+
+:10002 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10002"^^xsd:ID ] ;
+    schema:name "Schnittlauch"@de,
+        "ciboulette"@fr,
+        "Erba cipollina"@it ;
+    :partOf :10186 .
+
+:10003 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10003"^^xsd:ID ] ;
+    schema:name "Schwarze Johannisbeere"@de,
+        "cassis"@fr,
+        "Ribes nero"@it ;
+    :partOf :10127 .
+
+:10004 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10004"^^xsd:ID ] ;
+    schema:name "Iris"@de,
+        "iris"@fr,
+        "Iris"@it ;
+    :partOf :12097 .
+
+:10005 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10005"^^xsd:ID ] ;
+    schema:name "Spargel"@de,
+        "asperge"@fr,
+        "Asparagi"@it ;
+    :partOf :10338 .
+
+:10006 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10006"^^xsd:ID ] ;
+    schema:name "Spinat"@de,
+        "épinard"@fr,
+        "Spinaci"@it ;
+    :partOf :10068 .
+
+:10007 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10007"^^xsd:ID ] ;
+    schema:name "Stachelbeere"@de,
+        "groseilles à maquereau"@fr,
+        "Uva spina"@it ;
+    :partOf :10127 .
+
+:10008 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10008"^^xsd:ID ] ;
+    schema:name "Raps"@de,
+        "Colza"@fr,
+        "Colza"@it ;
+    :partOf :10197 .
+
+:10010 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10010"^^xsd:ID ] ;
+    schema:name "Zuckermais"@de,
+        "maïs sucré"@fr,
+        "Mais dolce"@it ;
+    :partOf :10339 .
+
+:10011 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10011"^^xsd:ID ] ;
+    schema:name "Zwetschge / Pflaume"@de,
+        "prunier (pruneau/prune)"@fr,
+        "Prugno/Susino  "@it ;
+    :partOf :9965 .
+
+:10016 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10016"^^xsd:ID ] ;
+    schema:name "Gurken"@de,
+        "concombre"@fr,
+        "Cetrioli"@it ;
+    :partOf :10017 .
+
+:10017 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10017"^^xsd:ID ] ;
+    schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
+        "cucurbitacées"@fr,
+        "Cucurbitacee"@it ;
+    :partOf :10195 .
+
+:10018 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10018"^^xsd:ID ] ;
+    schema:name "Zucchetti"@de,
+        "courgette"@fr,
+        "Zucchine"@it ;
+    :partOf :10310 .
+
+:10019 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10019"^^xsd:ID ] ;
+    schema:name "Melonen"@de,
+        "melons"@fr,
+        "Meloni"@it ;
+    :partOf :10017 .
+
+:10020 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10020"^^xsd:ID ] ;
+    schema:name "Kohlarten"@de,
+        "choux"@fr,
+        "Specie di cavoli"@it ;
+    :partOf :9962 .
+
+:10021 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10021"^^xsd:ID ] ;
+    schema:name "Topf- und Kontainerpflanzen"@de,
+        "plantes en pot et en container"@fr,
+        "Pianta in vaso e in container"@it ;
+    :partOf :10190 .
+
+:10022 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10022"^^xsd:ID ] ;
+    schema:name "Wassermelonen"@de,
+        "pastèque"@fr,
+        "Angurie"@it ;
+    :partOf :10017 .
+
+:10025 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10025"^^xsd:ID ] ;
+    schema:name "Portulakgewächse (Portulacaceae)"@de,
+        "portulacacées (Portulacaceae)"@fr,
+        "Portulacee (Portulacaceae)"@it ;
+    :partOf :10195 .
+
+:10026 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10026"^^xsd:ID ] ;
+    schema:name "Nachtschattengewächse (Solanaceae)"@de,
+        "solanacées"@fr,
+        "Solanacee"@it ;
+    :partOf :10195 .
+
+:10027 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10027"^^xsd:ID ] ;
+    schema:name "Tomaten"@de,
+        "tomate"@fr,
+        "Pomodori"@it ;
+    :partOf :10026 .
+
+:10028 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10028"^^xsd:ID ] ;
+    schema:name "Aubergine"@de,
+        "aubergine"@fr,
+        "Melanzana"@it ;
+    :partOf :10026 .
+
+:10029 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10029"^^xsd:ID ] ;
+    schema:name "Paprika"@de,
+        "poivron"@fr,
+        "Peperone"@it ;
+    :partOf :10026 .
+
+:10030 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10030"^^xsd:ID ] ;
+    schema:name "Lauch"@de,
+        "poireau"@fr,
+        "Porro"@it ;
+    :partOf :9963 .
+
+:10031 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10031"^^xsd:ID ] ;
+    schema:name "Zwiebeln"@de,
+        "oignon"@fr,
+        "Cipolle"@it ;
+    :partOf :9963 .
+
+:10033 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10033"^^xsd:ID ] ;
+    schema:name "Gemüseportulak"@de,
+        "pourpier commun"@fr,
+        "Portulaca estiva"@it ;
+    :partOf :10342 .
+
+:10034 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10034"^^xsd:ID ] ;
+    schema:name "Erbsen"@de,
+        "pois"@fr,
+        "Piselli"@it ;
+    :partOf :9957 .
+
+:10035 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10035"^^xsd:ID ] ;
+    schema:name "Jostabeere"@de,
+        "josta"@fr,
+        "Josta"@it ;
+    :partOf :10127 .
+
+:10037 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10037"^^xsd:ID ] ;
+    schema:name "Jungreben"@de,
+        "jeune vigne"@fr,
+        "Ceppi giovani"@it ;
+    :partOf :9953 .
+
+:10038 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10038"^^xsd:ID ] ;
+    schema:name "Lagerhallen, Mühlen, Silogebäude"@de,
+        "entrepôts, moulins, silos"@fr,
+        "Depositi, mulini, sili"@it ;
+    :partOf :10203 .
+
+:10039 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10039"^^xsd:ID ] ;
+    schema:name "Blumenknollen"@de,
+        "tubercules de fleurs"@fr,
+        "Radici tuberose floreali"@it ;
+    :partOf :10190 .
+
+:10040 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10040"^^xsd:ID ] ;
+    schema:name "Begonia"@de,
+        "bégonia"@fr,
+        "Begonia"@it ;
+    :partOf :10021,
+        :12097 .
+
+:10042 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10042"^^xsd:ID ] ;
+    schema:name "Chinaschilf"@de,
+        "Roseau de Chine"@fr,
+        "Miscanto "@it ;
+    :partOf :10197 .
+
+:10043 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10043"^^xsd:ID ] ;
+    schema:name "Federkohl"@de,
+        "chou frisé non pommé"@fr,
+        "Cavolo piuma"@it ;
+    :partOf :10210 .
+
+:10044 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10044"^^xsd:ID ] ;
+    schema:name "Kresse"@de,
+        "cresson de jardin"@fr,
+        "Crescione"@it ;
+    :partOf :9962 .
+
+:10046 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10046"^^xsd:ID ] ;
+    schema:name "Futter- und Zuckerrüben"@de,
+        "betteraves à sucre et fourragère"@fr,
+        "Barbabietole da foraggio e da zucchero"@it ;
+    :partOf :10197 .
+
+:10047 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10047"^^xsd:ID ] ;
+    schema:name "Rosenkohl"@de,
+        "chou de Bruxelles"@fr,
+        "Cavoli di Bruxelles"@it ;
+    :partOf :10020 .
+
+:10048 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10048"^^xsd:ID ] ;
+    schema:name "Kenaf"@de,
+        "Kenaf"@fr,
+        "Kenaf"@it ;
+    :partOf :10197 .
+
+:10050 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10050"^^xsd:ID ] ;
+    schema:name "Cyclame"@de,
+        "cyclamen"@fr,
+        "Ciclamino"@it ;
+    :partOf :10021,
+        :12097 .
+
+:10051 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10051"^^xsd:ID ] ;
+    schema:name "Speisepilze"@de,
+        "champignons comestibles"@fr,
+        "Funghi commestibili"@it ;
+    :partOf :10195 .
+
+:10052 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10052"^^xsd:ID ] ;
+    schema:name "Weizen"@de,
+        "Blé"@fr,
+        "Frumento"@it ;
+    :partOf :10080 .
+
+:10053 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10053"^^xsd:ID ] ;
+    schema:name "Artischocken"@de,
+        "artichaut"@fr,
+        "Carciofi"@it ;
+    :partOf :9961 .
+
+:10056 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10056"^^xsd:ID ] ;
+    schema:name "Chicorée"@de,
+        "chicorée witloof (chicorée-endive)"@fr,
+        "Cicoria belga"@it ;
+    :partOf :9961 .
+
+:10059 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10059"^^xsd:ID ] ;
+    schema:name "Endivien"@de,
+        "chicorée scarole, chicorée frisée"@fr,
+        "Indivia"@it ;
+    :partOf :10325 .
+
+:10060 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10060"^^xsd:ID ] ;
+    schema:name "Kopfsalat"@de,
+        "laitue pommée"@fr,
+        "Lattuga cappuccio"@it ;
+    :partOf :10320 .
+
+:10063 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10063"^^xsd:ID ] ;
+    schema:name "Schwarzwurzel"@de,
+        "scorsonère"@fr,
+        "Scorzonera"@it ;
+    :partOf :9961 .
+
+:10064 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10064"^^xsd:ID ] ;
+    schema:name "Topinambur"@de,
+        "topinambour"@fr,
+        "Topinambur"@it ;
+    :partOf :9961 .
+
+:10065 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10065"^^xsd:ID ] ;
+    schema:name "Zuckerhut"@de,
+        "chicorée pain de sucre"@fr,
+        "Cicoria pan di zucchero"@it ;
+    :partOf :10325 .
+
+:10067 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10067"^^xsd:ID ] ;
+    schema:name "Stangensellerie"@de,
+        "céleri-branche"@fr,
+        "Sedano da coste"@it ;
+    :partOf :9946 .
+
+:10068 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10068"^^xsd:ID ] ;
+    schema:name "Gänsefussgewächse (Chenopodiaceae)"@de,
+        "chénopodiacées"@fr,
+        "Chenopodiacee"@it ;
+    :partOf :10195 .
+
+:10070 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10070"^^xsd:ID ] ;
+    schema:name "Hyazinthe"@de,
+        "jacinthe"@fr,
+        "Giacinto"@it ;
+    :partOf :10134,
+        :12097 .
+
+:10071 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10071"^^xsd:ID ] ;
+    schema:name "Tabak"@de,
+        "Tabac"@fr,
+        "Tabacco"@it ;
+    :partOf :10197 .
+
+:10072 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10072"^^xsd:ID ] ;
+    schema:name "Sojabohne"@de,
+        "Soja"@fr,
+        "Soia "@it ;
+    :partOf :10197 .
+
+:10074 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10074"^^xsd:ID ] ;
+    schema:name "Buschbohne"@de,
+        "haricot nain"@fr,
+        "Fagiolo nano"@it ;
+    :partOf :10292 .
+
+:10075 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10075"^^xsd:ID ] ;
+    schema:name "Gemüsezwiebel"@de,
+        "oignon potager"@fr,
+        "Cipolle dolci"@it ;
+    :partOf :10031 .
+
+:10078 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10078"^^xsd:ID ] ;
+    schema:name "Speisezwiebel"@de,
+        "oignon (condiment)"@fr,
+        "Cipolle da tavola"@it ;
+    :partOf :10031 .
+
+:10080 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10080"^^xsd:ID ] ;
+    schema:name "Getreide"@de,
+        "Céréales"@fr,
+        "Cereali"@it ;
+    :partOf :10197 .
+
+:10081 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10081"^^xsd:ID ] ;
+    schema:name "Stangenbohne"@de,
+        "haricot à rames"@fr,
+        "Fagiolo rampicante"@it ;
+    :partOf :10292 .
+
+:10082 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10082"^^xsd:ID ] ;
+    schema:name "Patisson"@de,
+        "pâtisson"@fr,
+        "Patisson"@it ;
+    :partOf :10310 .
+
+:10083 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10083"^^xsd:ID ] ;
+    schema:name "Gerste"@de,
+        "Orge"@fr,
+        "Orzo"@it ;
+    :partOf :10080 .
+
+:10084 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10084"^^xsd:ID ] ;
+    schema:name "Peperoni "@de,
+        "poivron"@fr,
+        "Peperone"@it ;
+    :partOf :10029 .
+
+:10086 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10086"^^xsd:ID ] ;
+    schema:name "Kartoffeln"@de,
+        "pommes de terre"@fr,
+        "Patate"@it ;
+    :partOf :10197 .
+
+:10088 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10088"^^xsd:ID ] ;
+    schema:name "Futterrübe"@de,
+        "Betterave fourragère"@fr,
+        "Barbabietola da foraggio"@it ;
+    :partOf :10046 .
+
+:10089 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10089"^^xsd:ID ] ;
+    schema:name "Zuckerrübe"@de,
+        "Betterave à sucre"@fr,
+        "Barbabietola da zucchero"@it ;
+    :partOf :10046 .
+
+:10090 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10090"^^xsd:ID ] ;
+    schema:name "Gladiole"@de,
+        "glaïeul"@fr,
+        "Gladiolo"@it ;
+    :partOf :10015,
+        :12097 .
+
+:10091 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10091"^^xsd:ID ] ;
+    schema:name "Walnuss"@de,
+        "noyer"@fr,
+        "Noce comune"@it ;
+    :partOf :10117 .
+
+:10093 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10093"^^xsd:ID ] ;
+    schema:name "Salate (Asteraceae)"@de,
+        "salades (Asteraceae)"@fr,
+        "Insalate (Asteracee)"@it ;
+    :partOf :9961 .
+
+:10094 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10094"^^xsd:ID ] ;
+    schema:name "Winterweizen"@de,
+        "Blé d'automne"@fr,
+        "Frumento autunnale"@it ;
+    :partOf :10167,
+        :13784 .
+
+:10095 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10095"^^xsd:ID ] ;
+    schema:name "Baumschule"@de,
+        "pépinière"@fr,
+        "Vivaio"@it ;
+    :partOf :10190 .
+
+:10096 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10096"^^xsd:ID ] ;
+    schema:name "Chrysantheme"@de,
+        "chrysanthème"@fr,
+        "Crisantemo"@it ;
+    :partOf :10015,
+        :12097 .
+
+:10097 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10097"^^xsd:ID ] ;
+    schema:name "Pelargonien"@de,
+        "géranium"@fr,
+        "Geranio"@it ;
+    :partOf :10021,
+        :12097 .
+
+:10098 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10098"^^xsd:ID ] ;
+    schema:name "Primeln"@de,
+        "primevères"@fr,
+        "Primule"@it ;
+    :partOf :10021,
+        :12097 .
+
+:10099 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10099"^^xsd:ID ] ;
+    schema:name "Azaleen"@de,
+        "azalée"@fr,
+        "Azalee"@it ;
+    :partOf :10100 .
+
+:10100 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10100"^^xsd:ID ] ;
+    schema:name "Rhododendron"@de,
+        "rhododendron"@fr,
+        "Rododendro"@it ;
+    :partOf :10108,
+        :12096 .
+
+:10101 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10101"^^xsd:ID ] ;
+    schema:name "Ziergehölze (ausserhalb Forst)"@de,
+        "arbustes d'ornement (hors forêt)"@fr,
+        "Arbusti ornamentali (al di fuori della foresta)"@it ;
+    :partOf :10190 .
+
+:10103 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10103"^^xsd:ID ] ;
+    schema:name "Kirschlorbeer"@de,
+        "laurier-cerise"@fr,
+        "Lauro ceraso"@it ;
+    :partOf :10108,
+        :12096 .
+
+:10104 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10104"^^xsd:ID ] ;
+    schema:name "Rosen"@de,
+        "rosier"@fr,
+        "Rose"@it ;
+    :partOf :10190 .
+
+:10109 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10109"^^xsd:ID ] ;
+    schema:name "Rosskastanie"@de,
+        "marronnier d'Inde"@fr,
+        "Ippocastano"@it ;
+    :partOf :10108,
+        :12096 .
+
+:10110 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10110"^^xsd:ID ] ;
+    schema:name "Blautanne"@de,
+        "sapin bleu"@fr,
+        "Abete del Colorado"@it ;
+    :partOf :10111,
+        :12096 .
+
+:10111 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10111"^^xsd:ID ] ;
+    schema:name "Nadelgehölze (Koniferen)"@de,
+        "conifères"@fr,
+        "Conifere"@it ;
+    :partOf :9952 .
+
+:10114 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10114"^^xsd:ID ] ;
+    schema:name "Ertragsreben"@de,
+        "vigne en production"@fr,
+        "Vite in produzione"@it ;
+    :partOf :9953 .
+
+:10115 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10115"^^xsd:ID ] ;
+    schema:name "Hopfen"@de,
+        "Houblon"@fr,
+        "Luppolo"@it ;
+    :partOf :10197 .
+
+:10116 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10116"^^xsd:ID ] ;
+    schema:name "Ackerbohne"@de,
+        "féverole"@fr,
+        "Fava"@it ;
+    :partOf :10197 .
+
+:10117 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10117"^^xsd:ID ] ;
+    schema:name "Nüsse"@de,
+        "noix"@fr,
+        "Noci"@it ;
+    :partOf :10260 .
+
+:10118 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10118"^^xsd:ID ] ;
+    schema:name "Sommerweizen"@de,
+        "Blé de printemps"@fr,
+        "Frumento primaverile"@it ;
+    :partOf :10164,
+        :13784 .
+
+:10119 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10119"^^xsd:ID ] ;
+    schema:name "Triticale"@de,
+        "Triticale"@fr,
+        "Triticale"@it ;
+    :partOf :10080 .
+
+:10120 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10120"^^xsd:ID ] ;
+    schema:name "Roggen"@de,
+        "Seigle"@fr,
+        "Segale"@it ;
+    :partOf :10080 .
+
+:10121 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10121"^^xsd:ID ] ;
+    schema:name "Hafer"@de,
+        "Avoine"@fr,
+        "Avena"@it ;
+    :partOf :10080 .
+
+:10122 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10122"^^xsd:ID ] ;
+    schema:name "Korn (Dinkel)"@de,
+        "Épeautre"@fr,
+        "Spelta"@it ;
+    :partOf :10052,
+        :10167 .
+
+:10124 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10124"^^xsd:ID ] ;
+    schema:name "Eiweisserbse"@de,
+        "pois protéagineux"@fr,
+        "Pisello proteico"@it ;
+    :partOf :10197 .
+
+:10126 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10126"^^xsd:ID ] ;
+    schema:name "Zwetschge"@de,
+        "prunier (pruneau)"@fr,
+        "Prugno"@it ;
+    :partOf :10011 .
+
+:10127 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10127"^^xsd:ID ] ;
+    schema:name "Ribes Arten"@de,
+        "espèces de Ribes"@fr,
+        "Specie di ribes"@it ;
+    :partOf :10193 .
+
+:10128 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10128"^^xsd:ID ] ;
+    schema:name "Bohnen"@de,
+        "haricots"@fr,
+        "Fagioli"@it ;
+    :partOf :9957 .
+
+:10132 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10132"^^xsd:ID ] ;
+    schema:name "Einrichtungen und Geräte"@de,
+        "installations et outils"@fr,
+        "Installazioni e apparecchi"@it ;
+    :partOf :10203 .
+
+:10133 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10133"^^xsd:ID ] ;
+    schema:name "Frässaaten"@de,
+        "semis après travail superficiel"@fr,
+        "Semine dopo la fresatura"@it ;
+    :partOf :10198 .
+
+:10135 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10135"^^xsd:ID ] ;
+    schema:name "Wiesen und Weiden"@de,
+        "Prairies et pâturages"@fr,
+        "Prati e pascoli"@it ;
+    :partOf :10197 .
+
+:10136 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10136"^^xsd:ID ] ;
+    schema:name "Blaudistel"@de,
+        "chardon bleu"@fr,
+        "Cardo azzurro"@it ;
+    :partOf :10015,
+        :12097 .
+
+:10137 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10137"^^xsd:ID ] ;
+    schema:name "Sonnenblume"@de,
+        "Tournesol"@fr,
+        "Girasole"@it ;
+    :partOf :10197 .
+
+:10142 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10142"^^xsd:ID ] ;
+    schema:name "Mulchsaaten"@de,
+        "semis sous litière"@fr,
+        "Semine a lattiera"@it ;
+    :partOf :10198 .
+
+:10143 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10143"^^xsd:ID ] ;
+    schema:name "Sommergerste"@de,
+        "orge de printemps"@fr,
+        "Orzo primaverile"@it ;
+    :partOf :10083,
+        :10164 .
+
+:10144 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10144"^^xsd:ID ] ;
+    schema:name "Sommerhafer"@de,
+        "Avoine de printemps"@fr,
+        "Avena primaverile"@it ;
+    :partOf :10121,
+        :10164 .
+
+:10147 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10147"^^xsd:ID ] ;
+    schema:name "Gerbera"@de,
+        "Gerbera"@en,
+        "gerbera"@fr,
+        "Gerbera"@it ;
+    :partOf :10015,
+        :12097 .
+
+:10150 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10150"^^xsd:ID ] ;
+    schema:name "Luzerne"@de,
+        "Luzerne"@fr,
+        "Erba medica"@it ;
+    :partOf :10197 .
+
+:10151 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10151"^^xsd:ID ] ;
+    schema:name "Kleegrasmischung (Kunstwiese)"@de,
+        "mélange trèfles-graminées (prairie arificielle)"@fr,
+        "Miscela trifoglio-graminacee (prati artificiali)"@it ;
+    :partOf :10135 .
+
+:10152 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10152"^^xsd:ID ] ;
+    schema:name "Buchsbäume (Buxus)"@de,
+        "buis (Buxus)"@fr,
+        "Bosso (Buxus)"@it ;
+    :partOf :10108,
+        :12096 .
+
+:10155 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10155"^^xsd:ID ] ;
+    schema:name "Winterraps"@de,
+        "Colza d'automne"@fr,
+        "Colza autunnale"@it ;
+    :partOf :10008 .
+
+:10157 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10157"^^xsd:ID ] ;
+    schema:name "Fichte"@de,
+        "épicéa"@fr,
+        "Abete rosso"@it ;
+    :partOf :10111 .
+
+:10158 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10158"^^xsd:ID ] ;
+    schema:name "Tulpe"@de,
+        "tulipe"@fr,
+        "Tulipano"@it ;
+    :partOf :12097 .
+
+:10159 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10159"^^xsd:ID ] ;
+    schema:name "Gewürz- und Medizinalkräuter"@de,
+        "herbes aromatiques et médicinales"@fr,
+        "Erbe aromatiche e medicinali"@it ;
+    :partOf :10195 .
+
+:10162 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10162"^^xsd:ID ] ;
+    schema:name "Dahlien"@de,
+        "dahlia"@fr,
+        "Dalie"@it ;
+    :partOf :10039 .
+
+:10164 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10164"^^xsd:ID ] ;
+    schema:name "Sommergetreide"@de,
+        "Céréales de printemps"@fr,
+        "Cereali primaverili"@it ;
+    :partOf :10080 .
+
+:10167 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10167"^^xsd:ID ] ;
+    schema:name "Wintergetreide"@de,
+        "Céréales d'automne"@fr,
+        "Cereali autunnali"@it ;
+    :partOf :10080 .
+
+:10171 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10171"^^xsd:ID ] ;
+    schema:name "Suppensellerie"@de,
+        "céleri-pomme pour bouillon"@fr,
+        "Sedano da condimento"@it ;
+    :partOf :9946 .
+
+:10172 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10172"^^xsd:ID ] ;
+    schema:name "allg. Ökologische Ausgleichsflächen (gemäss DZV)"@de,
+        "domaine surfaces de compensation écologique (selon OPD)"@fr,
+        "Superfici di compensazione ecologica in generale (conformemente OPD)"@it .
+
+:10176 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10176"^^xsd:ID ] ;
+    schema:name "Ein- und zweijährige Zierpflanzen"@de,
+        "plantes ornementales annuelles et bisannuelles"@fr,
+        "Piante ornamentali annuali e biennali"@it ;
+    :partOf :10190 .
+
+:10178 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10178"^^xsd:ID ] ;
+    schema:name "Böschungen und Grünstreifen entlang von Verkehrswegen (gem. ChemRRV)"@de,
+        "talus et bandes vertes le long des voies de communication (selon ORRChim)"@fr,
+        "Scarpate e strisce verdi lungo le vie di comunicazione (conformemente ORRPChim)"@it ;
+    :partOf :12147 .
+
+:10179 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10179"^^xsd:ID ] ;
+    schema:name "Auf und an National- und Kantonsstrassen (gem. ChemRRV) "@de,
+        "le long des routes nationales et cantonales  (selon ORRChim) "@fr,
+        "Lungo le strade nazionali e cantonali (conformemente ORRPChim) "@it ;
+    :partOf :12147 .
+
+:10180 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10180"^^xsd:ID ] ;
+    schema:name "Wintertriticale"@de,
+        "Triticale d'automne"@fr,
+        "Triticale autunnale"@it ;
+    :partOf :10119,
+        :10167 .
+
+:10186 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10186"^^xsd:ID ] ;
+    schema:name "Küchenkräuter"@de,
+        "fines herbes"@fr,
+        "Erbette da cucina"@it ;
+    :partOf :10195 .
+
+:10187 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10187"^^xsd:ID ] ;
+    schema:name "Lupinen"@de,
+        "Lupin"@fr,
+        "Lupini"@it ;
+    :partOf :10197 .
+
+:10188 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10188"^^xsd:ID ] ;
+    schema:name "Ölkürbisse"@de,
+        "courges oléagineuses"@fr,
+        "Zucca da olio"@it ;
+    :partOf :10017 .
+
+:10190 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10190"^^xsd:ID ] ;
+    schema:name "Zierpflanzen allg."@de,
+        "culture ornementale en général"@fr,
+        "Coltivazione piante ornam. in generale "@it .
+
+:10192 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10192"^^xsd:ID ] ;
+    schema:name "allg. Obstbau"@de,
+        "domaine app. arboriculture"@fr .
+
+:10193 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10193"^^xsd:ID ] ;
+    schema:name "allg. Beerenbau"@de,
+        "domaine app. baies"@fr .
+
+:10194 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10194"^^xsd:ID ] ;
+    schema:name "allg. Weinbau"@de,
+        "domaine app. vignes"@fr .
+
+:10195 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10195"^^xsd:ID ] ;
+    schema:name "allg. Gemüsebau"@de,
+        "domaine app. maraîchère"@fr .
+
+:10197 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10197"^^xsd:ID ] ;
+    schema:name "allg. Feldbau"@de,
+        "domaine app. grande culture"@fr .
+
+:10198 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10198"^^xsd:ID ] ;
+    schema:name "Anbautechnik"@de,
+        "techniques culturales"@fr,
+        "Tecnica di coltivazione"@it ;
+    :partOf :10197 .
+
+:10202 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10202"^^xsd:ID ] ;
+    schema:name "allg. Forstwirtschaft"@de,
+        "domaine app. sylviculture"@fr .
+
+:10203 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10203"^^xsd:ID ] ;
+    schema:name "Allgemein Vorratsschutz"@de,
+        "protection des récoltes"@fr,
+        "Protezione delle scorte (in generale)"@it ;
+    :partOf :10201 .
+
+:10210 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10210"^^xsd:ID ] ;
+    schema:name "Blattkohle"@de,
+        "choux à feuilles"@fr,
+        "Cavoli fogliacei"@it ;
+    :partOf :10020 .
+
+:10218 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10218"^^xsd:ID ] ;
+    schema:name "Schwarzer Holunder"@de,
+        "Elder berry"@en,
+        "grand sureau"@fr,
+        "Sambuco nero"@it ;
+    :partOf :10193 .
+
+:10225 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10225"^^xsd:ID ] ;
+    schema:name "Lein"@de,
+        "Lin"@fr,
+        "Lino"@it ;
+    :partOf :10197 .
+
+:10227 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10227"^^xsd:ID ] ;
+    schema:name "Offene Ackerfläche"@de,
+        "terres ouvertes"@fr,
+        "Superficie coltiva aperta"@it ;
+    :partOf :10172 .
+
+:10230 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10230"^^xsd:ID ] ;
+    schema:name "Grünfläche"@de,
+        "surfaces herbagères"@fr,
+        "Superficie inerbita"@it .
+
+:10232 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10232"^^xsd:ID ] ;
+    schema:name "Johanniskraut"@de,
+        "Saint-John's-wort"@en,
+        "millepertuis"@fr,
+        "Iperico"@it ;
+    :partOf :10159 .
+
+:10236 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10236"^^xsd:ID ] ;
+    schema:name "Grasbestände zur Saatgutproduktion"@de,
+        "Graminées pour la production de semences"@fr,
+        "Graminacee per la produzione di sementi"@it ;
+    :partOf :10197 .
+
+:10237 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10237"^^xsd:ID ] ;
+    schema:name "Meerrettich"@de,
+        "raifort"@fr,
+        "Rafano rusticana / Ramolaccio"@it ;
+    :partOf :9962 .
+
+:10238 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10238"^^xsd:ID ] ;
+    schema:name "Mohn"@de,
+        "pavot"@fr,
+        "Papavero"@it .
+
+:10242 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10242"^^xsd:ID ] ;
+    schema:name "Dill"@de,
+        "dill"@en,
+        "aneth"@fr,
+        "Aneto"@it ;
+    :partOf :10186 .
+
+:10243 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10243"^^xsd:ID ] ;
+    schema:name "Baldrian"@de,
+        "Valerian"@en,
+        "valériane"@fr,
+        "Valeriana"@it ;
+    :partOf :10195 .
+
+:10244 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10244"^^xsd:ID ] ;
+    schema:name "Kümmel"@de,
+        "caraway"@en,
+        "carvi"@fr,
+        "Carvi"@it ;
+    :partOf :10186 .
+
+:10245 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10245"^^xsd:ID ] ;
+    schema:name "Rucola"@de,
+        "rocket"@en,
+        "roquette"@fr,
+        "Rucola"@it ;
+    :partOf :9962 .
+
+:10251 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10251"^^xsd:ID ] ;
+    schema:name "Baby-Leaf"@de,
+        "Baby-Leaf"@fr,
+        "Baby-Leaf"@it .
+
+:10252 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10252"^^xsd:ID ] ;
+    schema:name "Färberdistel (Saflor)"@de,
+        "Safflower"@en,
+        "Carthame"@fr,
+        "Cartamo"@it ;
+    :partOf :10197 .
+
+:10253 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10253"^^xsd:ID ] ;
+    schema:name "Pastinake"@de,
+        "Panais"@fr,
+        "Pastinaca"@it ;
+    :partOf :9951 .
+
+:10254 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10254"^^xsd:ID ] ;
+    schema:name "Medizinalkräuter"@de,
+        "plantes médicinales"@fr,
+        "erbe medicinali"@it .
+
+:10256 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10256"^^xsd:ID ] ;
+    schema:name "Zierkürbis"@de,
+        "courge d'ornement"@fr,
+        "Zucca ornamentale"@it ;
+    :partOf :12097 .
+
+:10258 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10258"^^xsd:ID ] ;
+    schema:name "Einlegegurken"@de,
+        "cornichons"@fr,
+        "cetrioli per conserva"@it ;
+    :partOf :10016 .
+
+:10260 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10260"^^xsd:ID ] ;
+    schema:name "Hartschalenobst"@de,
+        "noix en général"@fr,
+        "Frutta con guscio"@it ;
+    :partOf :10192 .
+
+:10261 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10261"^^xsd:ID ] ;
+    schema:name "Holzpaletten, Packholz, Stammholz"@de,
+        "Palette en bois, bois d'emballage, bois en général"@fr,
+        "Palette in legno, legno da imballaggio, legno non lavorato"@it .
+
+:10264 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10264"^^xsd:ID ] ;
+    schema:name "Speisekürbisse (ungeniessbare Schale)"@de,
+        "courges (écorce non comestible)"@fr,
+        "Zucche (buccia non commestibile)"@it ;
+    :partOf :10017 .
+
+:10266 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10266"^^xsd:ID ] ;
+    schema:name "Rondini"@de,
+        "rondini"@fr,
+        "Rondini"@it ;
+    :partOf :10310 .
+
+:10267 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10267"^^xsd:ID ] ;
+    schema:name "Wolliger Fingerhut"@de,
+        "Grecian foxglove"@en,
+        "digitale lanifère"@fr,
+        "Digitale lanata"@it ;
+    :partOf :10254 .
+
+:10268 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10268"^^xsd:ID ] ;
+    schema:name "Melisse"@de,
+        "mélisse"@fr,
+        "Melissa"@it .
+
+:10270 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10270"^^xsd:ID ] ;
+    schema:name "Minze"@de,
+        "Mint"@en,
+        "menthe"@fr,
+        "Menta"@it ;
+    :partOf :10186 .
+
+:10271 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10271"^^xsd:ID ] ;
+    schema:name "Emmer"@de,
+        "Amidonnier"@fr,
+        "Farro"@it ;
+    :partOf :10052,
+        :10167 .
+
+:10272 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10272"^^xsd:ID ] ;
+    schema:name "Kardy"@de,
+        "Cardy"@en,
+        "cardon"@fr,
+        "Cardo"@it ;
+    :partOf :9961 .
+
+:10274 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10274"^^xsd:ID ] ;
+    schema:name "Rosmarin"@de,
+        "Rosemary"@en,
+        "romarin"@fr,
+        "Rosmarino"@it ;
+    :partOf :10186 .
+
+:10277 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10277"^^xsd:ID ] ;
+    schema:name "Olive"@de,
+        "Olive"@en,
+        "olivier"@fr,
+        "Olivo"@it ;
+    :partOf :10192 .
+
+:10279 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10279"^^xsd:ID ] ;
+    schema:name "Verarbeitungsräume"@de,
+        "locaux de transformation"@fr,
+        "Locali per la lavorazione"@it ;
+    :partOf :10203 .
+
+:10280 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10280"^^xsd:ID ] ;
+    schema:name "Lagerräume"@de,
+        "entrepôts"@fr,
+        "Depositi"@it ;
+    :partOf :10203 .
+
+:10281 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10281"^^xsd:ID ] ;
+    schema:name "Wurzelpetersilie"@de,
+        "Turnip-rooted parsley"@en,
+        "persil à grosse racine"@fr,
+        "Prezzemolo tuberoso"@it ;
+    :partOf :9951 .
+
+:10283 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10283"^^xsd:ID ] ;
+    schema:name "Barbarakraut"@de,
+        "Barbarée du printemps"@fr,
+        "Erba di Santa Barbara vernale"@it ;
+    :partOf :9962 .
+
+:10284 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10284"^^xsd:ID ] ;
+    schema:name "Blumenkohle"@de,
+        "Flowering brassica"@en,
+        "choux (développement de l'inflorescence)"@fr,
+        "Cavoli a infiorescenza"@it ;
+    :partOf :10020 .
+
+:10285 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10285"^^xsd:ID ] ;
+    schema:name "Andenbeere"@de,
+        "cape gooseberry"@en,
+        "coqueret du Pérou"@fr,
+        "Alchechengio"@it ;
+    :partOf :10026 .
+
+:10286 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10286"^^xsd:ID ] ;
+    schema:name "Pepino"@de,
+        "pear melon"@en,
+        "poire melon"@fr,
+        "Pepino"@it ;
+    :partOf :10026 .
+
+:10288 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10288"^^xsd:ID ] ;
+    schema:name "Mini-Kiwi"@de,
+        "mini-Kiwi (Kiwaï)"@fr,
+        "Mini-Kiwi"@it ;
+    :partOf :10193 .
+
+:10290 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10290"^^xsd:ID ] ;
+    schema:name "Weihnachtsbäume"@de,
+        "arbres de Noël"@fr,
+        "Alberi di Natale"@it ;
+    :partOf :10111,
+        :12096 .
+
+:10292 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10292"^^xsd:ID ] ;
+    schema:name "Bohnen mit Hülsen"@de,
+        "haricots non écossés"@fr,
+        "Fagioli con baccello"@it ;
+    :partOf :10128 .
+
+:10293 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10293"^^xsd:ID ] ;
+    schema:name "Bohnen ohne Hülsen"@de,
+        "haricots écossés"@fr,
+        "Fagioli senza baccello"@it ;
+    :partOf :10128 .
+
+:10294 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10294"^^xsd:ID ] ;
+    schema:name "Erbsen ohne Hülsen"@de,
+        "pois écossés"@fr,
+        "Piselli senza baccello"@it ;
+    :partOf :10034 .
+
+:10295 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10295"^^xsd:ID ] ;
+    schema:name "Erbsen mit Hülsen"@de,
+        "pois non écossés"@fr,
+        "Piselli con baccello"@it ;
+    :partOf :10034 .
+
+:10296 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10296"^^xsd:ID ] ;
+    schema:name "Birne / Nashi"@de,
+        "poirier / nashi"@fr,
+        "Pero / Nashi"@it ;
+    :partOf :9959 .
+
+:10297 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10297"^^xsd:ID ] ;
+    schema:name "Rubus Arten"@de,
+        "espèces de Rubus"@fr,
+        "Specie di rubus"@it ;
+    :partOf :10193 .
+
+:10298 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10298"^^xsd:ID ] ;
+    schema:name "Speisekohlrüben"@de,
+        "rave de Brassica rapa et B. napus"@fr,
+        "Rapa di Brassica rapa e B. napus"@it ;
+    :partOf :9962 .
+
+:10299 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10299"^^xsd:ID ] ;
+    schema:name "Brassica rapa-Rüben"@de,
+        "rave de Brassica rapa "@fr,
+        "Rapa di Brassica rapa "@it ;
+    :partOf :10298 .
+
+:10300 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10300"^^xsd:ID ] ;
+    schema:name "Brassica napus-Rüben"@de,
+        "rave de Brassica napus"@fr,
+        "Rapa di Brassica napus"@it ;
+    :partOf :10298 .
+
+:10303 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10303"^^xsd:ID ] ;
+    schema:name "Bodenkohlrabi"@de,
+        "rutabaga"@fr,
+        "Cavolo navone"@it ;
+    :partOf :10300 .
+
+:10304 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10304"^^xsd:ID ] ;
+    schema:name "Lactuca-Salate"@de,
+        "salades lactuca"@fr,
+        "Insalate del genere Lactuca"@it ;
+    :partOf :10093 .
+
+:10305 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10305"^^xsd:ID ] ;
+    schema:name "Asia-Salate (Brassicaceae)"@de,
+        "salades Asia (Brassicaceae)"@fr,
+        "Insalate asiatiche (Brassicacee)"@it ;
+    :partOf :9962 .
+
+:10306 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10306"^^xsd:ID ] ;
+    schema:name "Mangold"@de,
+        "bette"@fr,
+        "Bietola"@it ;
+    :partOf :10068 .
+
+:10307 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10307"^^xsd:ID ] ;
+    schema:name "Basilikum"@de,
+        "basilic"@fr,
+        "Basilico"@it ;
+    :partOf :10186 .
+
+:10308 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10308"^^xsd:ID ] ;
+    schema:name "Salbei"@de,
+        "sauge"@fr,
+        "Salvia"@it ;
+    :partOf :10186 .
+
+:10309 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10309"^^xsd:ID ] ;
+    schema:name "Bohnenkraut"@de,
+        "sarriette"@fr,
+        "Santoreggia"@it ;
+    :partOf :10186 .
+
+:10310 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10310"^^xsd:ID ] ;
+    schema:name "Kürbisse mit geniessbarer Schale"@de,
+        "courges à peau comestible"@fr,
+        "Zucche con buccia commestibile"@it ;
+    :partOf :10017 .
+
+:10311 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10311"^^xsd:ID ] ;
+    schema:name "Liebstöckel"@de,
+        "livèche"@fr,
+        "Levistico"@it ;
+    :partOf :10186 .
+
+:10312 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10312"^^xsd:ID ] ;
+    schema:name "Estragon"@de,
+        "estragon"@fr,
+        "Dragoncello"@it ;
+    :partOf :10186 .
+
+:10314 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10314"^^xsd:ID ] ;
+    schema:name "Romanesco"@de,
+        "romanesco"@fr,
+        "Romanesco"@it ;
+    :partOf :10284 .
+
+:10315 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10315"^^xsd:ID ] ;
+    schema:name "Pak-Choi"@de,
+        "pakchoi"@fr,
+        "Pak-Choi"@it ;
+    :partOf :10210 .
+
+:10316 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10316"^^xsd:ID ] ;
+    schema:name "Kopfkohle"@de,
+        "choux pommés"@fr,
+        "Cavoli a testa"@it ;
+    :partOf :10020 .
+
+:10317 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10317"^^xsd:ID ] ;
+    schema:name "Stielmus"@de,
+        "navet à tondre"@fr,
+        "Cavoli / rape da taglio"@it ;
+    :partOf :10210 .
+
+:10318 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10318"^^xsd:ID ] ;
+    schema:name "Cima di Rapa"@de,
+        "cima di rapa"@fr,
+        "Cima di rapa"@it ;
+    :partOf :9962 .
+
+:10319 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10319"^^xsd:ID ] ;
+    schema:name "Brunnenkresse"@de,
+        "cresson de fontaine"@fr,
+        "Crescione acquatico"@it ;
+    :partOf :9962 .
+
+:10320 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10320"^^xsd:ID ] ;
+    schema:name "Kopfsalate"@de,
+        "laitues pommées"@fr,
+        "Insalate cappuccio"@it ;
+    :partOf :10304 .
+
+:10323 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10323"^^xsd:ID ] ;
+    schema:name "Schnittsalat"@de,
+        "laitue à tondre"@fr,
+        "Lattuga da taglio"@it ;
+    :partOf :9944 .
+
+:10325 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10325"^^xsd:ID ] ;
+    schema:name "Endivien und Blattzichorien"@de,
+        "chicorée pommée et chicorée à feuilles"@fr,
+        "Indivia e cicoria da foglia"@it ;
+    :partOf :10093 .
+
+:10326 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10326"^^xsd:ID ] ;
+    schema:name "Radicchio- und Cicorino-Typen"@de,
+        "types de radicchio/trévises et cicorino"@fr,
+        "Tipi di radicchio e cicorino"@it ;
+    :partOf :10325 .
+
+:10327 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10327"^^xsd:ID ] ;
+    schema:name "Löwenzahn"@de,
+        "dent-de-lion"@fr,
+        "Dente di leone"@it ;
+    :partOf :10093 .
+
+:10328 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10328"^^xsd:ID ] ;
+    schema:name "Krautstiel"@de,
+        "Swiss chard "@en,
+        "bette à côte"@fr,
+        "Costa"@it ;
+    :partOf :10306 .
+
+:10329 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10329"^^xsd:ID ] ;
+    schema:name "Schnittmangold"@de,
+        "bette à tondre"@fr,
+        "Bietola da taglio"@it ;
+    :partOf :10306 .
+
+:10330 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10330"^^xsd:ID ] ;
+    schema:name "Puffbohne"@de,
+        "fève"@fr,
+        "Fave"@it ;
+    :partOf :9957 .
+
+:10332 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10332"^^xsd:ID ] ;
+    schema:name "Cherrytomaten"@de,
+        "tomate-cerise"@fr,
+        "Pomodoro ciliegia"@it ;
+    :partOf :10027 .
+
+:10333 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10333"^^xsd:ID ] ;
+    schema:name "Rispentomaten"@de,
+        "tomate à grappe"@fr,
+        "Pomodoro ramato"@it ;
+    :partOf :10027 .
+
+:10335 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10335"^^xsd:ID ] ;
+    schema:name "Tomaten Spezialitäten"@de,
+        "tomates, spécialités"@fr,
+        "Varietà particolari di pomodoro"@it ;
+    :partOf :10027 .
+
+:10336 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10336"^^xsd:ID ] ;
+    schema:name "Gemüsepaprika"@de,
+        "poivron doux"@fr,
+        "Peperone dolce"@it ;
+    :partOf :10029 .
+
+:10337 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10337"^^xsd:ID ] ;
+    schema:name "Bundzwiebeln"@de,
+        "oignons en botte"@fr,
+        "Cipollotti a mazzi"@it ;
+    :partOf :10031 .
+
+:10338 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10338"^^xsd:ID ] ;
+    schema:name "Spargelgewächse (Asparagaceae)"@de,
+        "asparagacées (Asparagaceae)"@fr,
+        "Asparagacee (Asparagaceae)"@it ;
+    :partOf :10195 .
+
+:10339 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10339"^^xsd:ID ] ;
+    schema:name "Süssgräser (Poaceae)"@de,
+        "poacées (Gramineae)"@fr,
+        "Poacee (Graminaceae)"@it ;
+    :partOf :10195 .
+
+:10340 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10340"^^xsd:ID ] ;
+    schema:name "Lippenblütler (Labiatae)"@de,
+        "lamiacées (Labiatae)"@fr,
+        "Lamiacee (Labiatae)"@it ;
+    :partOf :10195 .
+
+:10341 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10341"^^xsd:ID ] ;
+    schema:name "Stachys"@de,
+        "crosnes du japon"@fr,
+        "Tuberina"@it ;
+    :partOf :10340 .
+
+:10342 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10342"^^xsd:ID ] ;
+    schema:name "Portulak"@de,
+        "pourpier"@fr,
+        "Portulaca"@it ;
+    :partOf :10025 .
+
+:10346 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "10346"^^xsd:ID ] ;
+    schema:name "Speise- und Futterkartoffeln"@de,
+        "pommes de terre de consommation et fourragère"@fr,
+        "Patate da tavola e da foraggio"@it ;
+    :partOf :10086 .
+
+:11321 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11321"^^xsd:ID ] ;
+    schema:name "Hartweizen"@de,
+        "Blé dur"@fr,
+        "Grano duro"@it ;
+    :partOf :10052 .
+
+:11325 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11325"^^xsd:ID ] ;
+    schema:name "Klee zur Saatgutproduktion"@de,
+        "Trèfles pour la production de semences"@fr,
+        "Trifoglio per la produzione di sementi"@it ;
+    :partOf :10197 .
+
+:11326 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11326"^^xsd:ID ] ;
+    schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
+        "pommes de terre pour la production de plants"@fr,
+        "Patate per la produzione di tuberi-seme"@it ;
+    :partOf :10086 .
+
+:11335 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11335"^^xsd:ID ] ;
+    schema:name "Liliengewächse (Zierpflanzen)"@de,
+        "liliacées (plantes ornementales)"@fr,
+        "Liliacee (pianti ornamentali)"@it ;
+    :partOf :12097 .
+
+:11393 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11393"^^xsd:ID ] ;
+    schema:name "Sorghum"@de,
+        "Sorgho commun"@fr,
+        "Sorgo"@it ;
+    :partOf :10197 .
+
+:11816 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11816"^^xsd:ID ] ;
+    schema:name "Kerbel"@de,
+        "cerfeuil"@fr,
+        "Cerfoglio"@it ;
+    :partOf :10186 .
+
+:11817 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11817"^^xsd:ID ] ;
+    schema:name "Thymian"@de,
+        "thym"@fr,
+        "Timo"@it ;
+    :partOf :10186 .
+
+:11819 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11819"^^xsd:ID ] ;
+    schema:name "Koriander"@de,
+        "coriandre"@fr,
+        "Coriandolo"@it ;
+    :partOf :10186 .
+
+:11820 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11820"^^xsd:ID ] ;
+    schema:name "Ysop"@de,
+        "Hysope"@fr,
+        "Issopo"@it ;
+    :partOf :10186 .
+
+:11877 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11877"^^xsd:ID ] ;
+    schema:name "Brachland"@de,
+        "friche"@fr,
+        "Terreno incolto"@it .
+
+:11878 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11878"^^xsd:ID ] ;
+    schema:name "Humusdeponie"@de,
+        "dépôt de terre végétale"@fr,
+        "Deposito di terreno vegetale"@it .
+
+:11984 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11984"^^xsd:ID ] ;
+    schema:name "Anemone"@de,
+        "anémone"@fr,
+        "Anemone"@it .
+
+:11985 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "11985"^^xsd:ID ] ;
+    schema:name "Ranunkel"@de,
+        "ranunculus"@fr,
+        "ranuncolo"@it .
+
+:12066 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12066"^^xsd:ID ] ;
+    schema:name "Obstbau allg. "@de,
+        "arboriculture en général"@fr,
+        "Frutticoltura in generale"@it .
+
+:12067 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12067"^^xsd:ID ] ;
+    schema:name "Beerenbau allg. "@de,
+        "culture des baies en général"@fr,
+        "Coltivazione di bacche in generale"@it .
+
+:12068 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12068"^^xsd:ID ] ;
+    schema:name "Gemüsebau allg. "@de,
+        "culture maraîchère en général"@fr,
+        "Orticoltura in generale"@it .
+
+:12069 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12069"^^xsd:ID ] ;
+    schema:name "Feldbau allg. "@de,
+        "grande culture en général"@fr,
+        "Campicoltura in generale"@it .
+
+:12096 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12096"^^xsd:ID ] ;
+    schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
+        "arbres et arbustes (hors fôret)"@fr,
+        "Alberi e arbusti (al di fuori della foresta)"@it ;
+    :partOf :10190 .
+
+:12097 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12097"^^xsd:ID ] ;
+    schema:name "Blumenkulturen und Grünpflanzen"@de,
+        "cultures florales et plantes vertes"@fr,
+        "Colture da fiore e piante verdi"@it ;
+    :partOf :10190 .
+
+:12098 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12098"^^xsd:ID ] ;
+    schema:name "Blumenzwiebeln und Blumenknollen"@de,
+        "bulbes ornementaux"@fr,
+        "Bulbi ornamentali"@it .
+
+:12147 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12147"^^xsd:ID ] ;
+    schema:name "Nichtkulturland allg."@de,
+        "domaine non agricole en général"@fr,
+        "Superfici non coltive in generale"@it .
+
+:12464 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12464"^^xsd:ID ] ;
+    schema:name "Wald"@de,
+        "forêt"@fr,
+        "Bosco"@it ;
+    :partOf :12465 .
+
+:12465 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12465"^^xsd:ID ] ;
+    schema:name "Forstwirtschaft allg."@de,
+        "sylviculture en général"@fr,
+        "Selvicoltura in generale"@it .
+
+:12507 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12507"^^xsd:ID ] ;
+    schema:name "Römische Kamille"@de,
+        "lat. Chamaemelum nobile"@en,
+        "Camomille romaine"@fr,
+        "Camomilla romana"@it ;
+    :partOf :10186 .
+
+:12626 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12626"^^xsd:ID ] ;
+    schema:name "Majoran"@de,
+        "Marjoram"@en,
+        "marjolaine"@fr,
+        "maggiorana "@it .
+
+:12627 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12627"^^xsd:ID ] ;
+    schema:name "Oregano"@de,
+        "Oregano"@en,
+        "origan"@fr,
+        "origano"@it .
+
+:12628 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12628"^^xsd:ID ] ;
+    schema:name "Rosenwurz"@de,
+        "Rhodiola rosea"@en,
+        "Orpin rose"@fr,
+        "Rhodiola rosea"@it .
+
+:12629 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12629"^^xsd:ID ] ;
+    schema:name "Traubensilberkerze"@de,
+        "actaea racemosa"@en,
+        "actée à grappe"@fr,
+        "actaea racemosa"@it .
+
+:12630 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12630"^^xsd:ID ] ;
+    schema:name "Spitzwegerich"@de,
+        "plantago lanceolata"@en,
+        "plantain lancéolé"@fr,
+        "piantaggine lanciuola"@it .
+
+:12689 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12689"^^xsd:ID ] ;
+    schema:name "Linse"@de,
+        "lentille"@fr,
+        "Lenticchia"@it ;
+    :partOf :9957 .
+
+:12829 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12829"^^xsd:ID ] ;
+    schema:name "Schwarze Apfelbeere"@de,
+        "aronie noire"@fr,
+        "Aronia nera"@it ;
+    :partOf :10193 .
+
+:12891 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12891"^^xsd:ID ] ;
+    schema:name "Erntegut"@de,
+        "denrée stockée"@fr,
+        "Raccolto stoccato"@it .
+
+:12970 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12970"^^xsd:ID ] ;
+    schema:name "Gewürzfenchel"@de,
+        "fenouil aromatique"@fr,
+        "Finocchio aromatico"@it .
+
+:12999 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "12999"^^xsd:ID ] ;
+    schema:name "leere Lagerräume"@de,
+        "Êntrepôts vides"@fr,
+        "Locali di stoccaggio vuoti"@it .
+
+:13000 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13000"^^xsd:ID ] ;
+    schema:name "leere Produktionsräume"@de,
+        "Locaux de production vides"@fr,
+        "Locali di produzione vuoti"@it .
+
+:13001 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13001"^^xsd:ID ] ;
+    schema:name "Tabak produzierende Betriebe"@de,
+        "Les exploitations tabacoles"@fr,
+        "Aziende produttrici di tabacco"@it .
+
+:13002 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13002"^^xsd:ID ] ;
+    schema:name "leere Verarbeitungsräume"@de,
+        "Locaux de transformation vides"@fr,
+        "Locali per la lavorazione vuoti"@it .
+
+:13238 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13238"^^xsd:ID ] ;
+    schema:name "Lager- und Produktionsräume allg."@de,
+        "Lager- und Produktionsräume allg."@en,
+        "Lager- und Produktionsräume allg."@fr,
+        "Lager- und Produktionsräume allg."@it .
+
+:13362 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13362"^^xsd:ID ] ;
+    schema:name "Gojibeere"@de,
+        "Goji berry, wolfberry"@en,
+        "Baies de Goji"@fr,
+        "Bacche di Goji"@it .
+
+:13784 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13784"^^xsd:ID ] ;
+    schema:name "Weichweizen"@de,
+        "Blé tendre"@fr,
+        "Grano tenero"@it ;
+    :partOf :10052 .
+
+:13785 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13785"^^xsd:ID ] ;
+    schema:name "Blaue Heckenkirsche"@de,
+        "camérisier bleu"@fr,
+        "Caprifoglio turchino"@it .
+
+:13832 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13832"^^xsd:ID ] ;
+    schema:name "Lorbeer"@de,
+        "LURNO "@en,
+        "Laurier"@fr,
+        "Alloro "@it .
+
+:13905 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "13905"^^xsd:ID ] ;
+    schema:name "Süsskartoffel"@de,
+        "Sweet potato"@en,
+        "Patate douce"@fr,
+        "Patata dolce"@it ;
+    :partOf :15866 .
+
+:14001 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14001"^^xsd:ID ] ;
+    schema:name "Hagebutten"@de,
+        "rose hip"@en,
+        "cynorhodon"@fr,
+        "rosa canina"@it .
+
+:14273 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14273"^^xsd:ID ] ;
+    schema:name "Kichererbse"@de,
+        "chickpea"@en,
+        "pois chiche"@fr,
+        "cece"@it .
+
+:14382 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14382"^^xsd:ID ] ;
+    schema:name "Baby-Leaf (Brassicaceae)"@de,
+        "Baby-Leaf (Brassicaceae)"@fr,
+        "Baby-Leaf (Brassicaceae)"@it ;
+    :partOf :10251 .
+
+:14383 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14383"^^xsd:ID ] ;
+    schema:name "Baby-Leaf (Asteraceae)"@de,
+        "Baby-Leaf (Asteraceae)"@fr,
+        "Baby-Leaf (Asteraceae)"@it ;
+    :partOf :10251 .
+
+:14384 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14384"^^xsd:ID ] ;
+    schema:name "Baby-Leaf (Chenopodiaceae)"@de,
+        "Baby-Leaf (Chenopodiaceae)"@fr,
+        "Baby-Leaf (Chenopodiaceae)"@it ;
+    :partOf :10251 .
+
+:14729 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14729"^^xsd:ID ] ;
+    schema:name "Hanf"@de,
+        "Hemp"@en,
+        "Chanvre"@fr,
+        "Canapa"@it ;
+    :partOf :12069 .
+
+:14786 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14786"^^xsd:ID ] ;
+    schema:name "Sanddorn"@de,
+        "argousier"@fr,
+        "Olivello spinoso"@it .
+
+:14787 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14787"^^xsd:ID ] ;
+    schema:name "Schwarze Maulbeere"@de,
+        "mûrier noir"@fr,
+        "Moro nero"@it .
+
+:14799 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14799"^^xsd:ID ] ;
+    schema:name "Eberesche"@de,
+        "sorbier des oiseleurs"@fr,
+        "Sorbo degli ucellatori"@it .
+
+:14801 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14801"^^xsd:ID ] ;
+    schema:name "Gemeine Felsenbirne"@de,
+        "amélavier commun"@fr,
+        "Pero corvino"@it .
+
+:14904 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14904"^^xsd:ID ] ;
+    schema:name "Süssdolde"@de,
+        "cicely"@en,
+        "Cerfeuil musqué"@fr,
+        "finocchiella"@it .
+
+:14985 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "14985"^^xsd:ID ] ;
+    schema:name "Markstammkohl"@de,
+        "chou moellier"@fr,
+        "Cavolo fustoso"@it ;
+    :partOf :10210 .
+
+:15269 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "15269"^^xsd:ID ] ;
+    schema:name "Kerbelrübe"@de,
+        "Cerfeuil tubéreux"@fr,
+        "Cerfoglio bulboso"@it .
+
+:15866 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "15866"^^xsd:ID ] ;
+    schema:name "Windengewächse (Convolvulaceae)"@de,
+        "Convolvulaceae"@en,
+        "convolvulacées (Convolvulaceae)"@fr,
+        "Convolvulaceae"@it .
+
+:15872 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "15872"^^xsd:ID ] ;
+    schema:name "Rispenhirse "@de,
+        "Millet"@fr,
+        "Miglio "@it .
+
+:9942 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9942"^^xsd:ID ] ;
+    schema:name "Pflanzen"@de,
+        "plantes"@fr,
+        "Piante"@it .
+
+:9943 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9943"^^xsd:ID ] ;
+    schema:name "Wintergerste"@de,
+        "Orge d'automne"@fr,
+        "Orzo autunnale"@it ;
+    :partOf :10083,
+        :10167 .
+
+:9944 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9944"^^xsd:ID ] ;
+    schema:name "Blattsalate (Asteraceae)"@de,
+        "laitues à tondre (Asteraceae)"@fr,
+        "Insalate a foglie (Asteracee)"@it ;
+    :partOf :10304 .
+
+:9945 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9945"^^xsd:ID ] ;
+    schema:name "Winterroggen"@de,
+        "Seigle d'automne"@fr,
+        "Segale autunnale"@it ;
+    :partOf :10120,
+        :10167 .
+
+:9946 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9946"^^xsd:ID ] ;
+    schema:name "Sellerie"@de,
+        "céleri"@fr,
+        "Sedano "@it ;
+    :partOf :9951 .
+
+:9948 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9948"^^xsd:ID ] ;
+    schema:name "Baldriangewächse (Valerianaceae)"@de,
+        "valérianacées"@fr,
+        "Valerianacee"@it ;
+    :partOf :10195 .
+
+:9950 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9950"^^xsd:ID ] ;
+    schema:name "Brache"@de,
+        "jachère"@fr,
+        "Maggese"@it .
+
+:9951 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9951"^^xsd:ID ] ;
+    schema:name "Doldenblütler (Apiaceae)"@de,
+        "ombellifères (Apiaceae)"@fr,
+        "Ombrellifere (Apiacee)"@it ;
+    :partOf :10195 .
+
+:9952 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9952"^^xsd:ID ] ;
+    schema:name "Gehölze (ausserhalb Forst)"@de,
+        "plantes ligneuses (hors forêt)"@fr,
+        "Boschetti (al di fuori del bosco)"@it ;
+    :partOf :10190 .
+
+:9953 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9953"^^xsd:ID ] ;
+    schema:name "Reben"@de,
+        "vigne"@fr,
+        "Vite"@it ;
+    :partOf :10194 .
+
+:9954 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9954"^^xsd:ID ] ;
+    schema:name "Forstliche Pflanzgärten"@de,
+        "pépinières forestières"@fr,
+        "Vivai forestali"@it ;
+    :partOf :12464,
+        :12465 .
+
+:9955 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9955"^^xsd:ID ] ;
+    schema:name "Nelken"@de,
+        "oeillet"@fr,
+        "Garofani"@it ;
+    :partOf :10015,
+        :12097 .
+
+:9956 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9956"^^xsd:ID ] ;
+    schema:name "Liegendes Rundholz im Wald und auf Lagerplätzen"@de,
+        "grumes en forêt et sur les places de stockage"@fr,
+        "Tronchi abbattuti nella foresta e presso piazzali di deposito"@it ;
+    :partOf :10202 .
+
+:9957 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9957"^^xsd:ID ] ;
+    schema:name "Hülsenfrüchtler (Fabaceae)"@de,
+        "fabacées (légumineuses)"@fr,
+        "Fabacee (Leguminose)"@it ;
+    :partOf :10195 .
+
+:9959 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9959"^^xsd:ID ] ;
+    schema:name "Kernobst"@de,
+        "fruits à pépins"@fr,
+        "Frutta a granelli"@it ;
+    :partOf :10192 .
+
+:9960 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9960"^^xsd:ID ] ;
+    schema:name "Knöterichgewächse (Polygonaceae)"@de,
+        "polygonacées"@fr,
+        "Poligonacee"@it ;
+    :partOf :10195 .
+
+:9961 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9961"^^xsd:ID ] ;
+    schema:name "Korbblütler (Asteraceae)"@de,
+        "composées (Asteracea)"@fr,
+        "Composite (Asteracee)"@it ;
+    :partOf :10195 .
+
+:9962 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9962"^^xsd:ID ] ;
+    schema:name "Kreuzblütler (Brassicaceae)"@de,
+        "crucifères (Brassicaceae)"@fr,
+        "Crocifere (Brassicacee)"@it ;
+    :partOf :10195 .
+
+:9963 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9963"^^xsd:ID ] ;
+    schema:name "Liliengewächse (Liliaceae)"@de,
+        "liliacées"@fr,
+        "Liliacee"@it ;
+    :partOf :10195 .
+
+:9965 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9965"^^xsd:ID ] ;
+    schema:name "Steinobst"@de,
+        "fruits à noyaux"@fr,
+        "Frutta a nocciolo"@it ;
+    :partOf :10192 .
+
+:9967 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9967"^^xsd:ID ] ;
+    schema:name "Zier- und Sportrasen"@de,
+        "gazon d'ornement et terrains de sport"@fr,
+        "Tappeti erbosi e terreni sportivi"@it ;
+    :partOf :10190 .
+
+:9968 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9968"^^xsd:ID ] ;
+    schema:name "Stauden"@de,
+        "plantes vivaces"@fr,
+        "Arbusti"@it ;
+    :partOf :10190 .
+
+:9969 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9969"^^xsd:ID ] ;
+    schema:name "Sommerflor"@de,
+        "fleurs estivales"@fr,
+        "Fiori estivi"@it ;
+    :partOf :10176 .
+
+:9970 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9970"^^xsd:ID ] ;
+    schema:name "Apfel"@de,
+        "pommier"@fr,
+        "Melo"@it ;
+    :partOf :9959 .
+
+:9971 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9971"^^xsd:ID ] ;
+    schema:name "Aprikose"@de,
+        "abricotier"@fr,
+        "Albicocco"@it ;
+    :partOf :9965 .
+
+:9972 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9972"^^xsd:ID ] ;
+    schema:name "Birne"@de,
+        "poirier"@fr,
+        "Pero"@it ;
+    :partOf :10296 .
+
+:9973 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9973"^^xsd:ID ] ;
+    schema:name "Blumenkohl"@de,
+        "chou-fleur"@fr,
+        "Cavolfiore"@it ;
+    :partOf :10284 .
+
+:9974 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9974"^^xsd:ID ] ;
+    schema:name "Broccoli"@de,
+        "brocoli"@fr,
+        "Broccoli"@it ;
+    :partOf :10284 .
+
+:9975 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9975"^^xsd:ID ] ;
+    schema:name "Brombeere"@de,
+        "mûre"@fr,
+        "Mora"@it ;
+    :partOf :10297 .
+
+:9977 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9977"^^xsd:ID ] ;
+    schema:name "Chinakohl"@de,
+        "chou de Chine"@fr,
+        "Cavolo cinese"@it ;
+    :partOf :10210 .
+
+:9978 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9978"^^xsd:ID ] ;
+    schema:name "Erdbeere"@de,
+        "fraise"@fr,
+        "Fragola"@it ;
+    :partOf :10193 .
+
+:9979 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9979"^^xsd:ID ] ;
+    schema:name "Heidelbeere"@de,
+        "myrtille"@fr,
+        "Mirtillo"@it ;
+    :partOf :10193 .
+
+:9980 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9980"^^xsd:ID ] ;
+    schema:name "Himbeere"@de,
+        "framboise"@fr,
+        "Lampone"@it ;
+    :partOf :10297 .
+
+:9981 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9981"^^xsd:ID ] ;
+    schema:name "Karotten"@de,
+        "carotte"@fr,
+        "Carote"@it ;
+    :partOf :9951 .
+
+:9982 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9982"^^xsd:ID ] ;
+    schema:name "Kirsche"@de,
+        "cerisier"@fr,
+        "Ciliegio"@it ;
+    :partOf :9965 .
+
+:9983 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9983"^^xsd:ID ] ;
+    schema:name "Knoblauch"@de,
+        "ail"@fr,
+        "Aglio"@it ;
+    :partOf :9963 .
+
+:9984 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9984"^^xsd:ID ] ;
+    schema:name "Knollenfenchel"@de,
+        "fenouil bulbeux"@fr,
+        "Finocchio dolce"@it ;
+    :partOf :9951 .
+
+:9985 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9985"^^xsd:ID ] ;
+    schema:name "Knollensellerie"@de,
+        "céleri-pomme"@fr,
+        "Sedano rapa"@it ;
+    :partOf :9946 .
+
+:9986 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9986"^^xsd:ID ] ;
+    schema:name "Kohlrabi"@de,
+        "colrave"@fr,
+        "Cavolo rapa"@it ;
+    :partOf :10020 .
+
+:9990 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9990"^^xsd:ID ] ;
+    schema:name "Nüsslisalat"@de,
+        "mâche, rampon"@fr,
+        "Valerianella"@it ;
+    :partOf :9948 .
+
+:9991 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9991"^^xsd:ID ] ;
+    schema:name "Petersilie"@de,
+        "persil"@fr,
+        "Prezzemolo"@it ;
+    :partOf :10186 .
+
+:9992 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9992"^^xsd:ID ] ;
+    schema:name "Pfirsich / Nektarine"@de,
+        "pêcher / nectarine"@fr,
+        "Pesco/pesco noce"@it ;
+    :partOf :9965 .
+
+:9993 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9993"^^xsd:ID ] ;
+    schema:name "Pflaume"@de,
+        "prunier (prune)"@fr,
+        "Prugnolo"@it ;
+    :partOf :10011 .
+
+:9994 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9994"^^xsd:ID ] ;
+    schema:name "Quitte"@de,
+        "cognassier"@fr,
+        "Cotogno"@it ;
+    :partOf :9959 .
+
+:9995 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9995"^^xsd:ID ] ;
+    schema:name "Radies"@de,
+        "radis de tous les mois"@fr,
+        "Ravanello"@it ;
+    :partOf :9962 .
+
+:9996 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9996"^^xsd:ID ] ;
+    schema:name "Rande"@de,
+        "betterave à salade"@fr,
+        "Barbabietola"@it ;
+    :partOf :10068 .
+
+:9997 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9997"^^xsd:ID ] ;
+    schema:name "Rettich"@de,
+        "radis long"@fr,
+        "Ramolaccio"@it ;
+    :partOf :9962 .
+
+:9998 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9998"^^xsd:ID ] ;
+    schema:name "Rhabarber"@de,
+        "rhubarbe"@fr,
+        "Rabarbaro"@it ;
+    :partOf :9960 .
+
+:9999 a :SRPPPCrop ;
+    schema:identifier [ schema:name "SRPPP" ;
+            schema:value "9999"^^xsd:ID ] ;
+    schema:name "Rote Johannisbeere"@de,
+        "groseilles à grappes"@fr,
+        "Ribes rosso"@it ;
+    :partOf :10127 .
+

@@ -199,7 +199,11 @@ cultivationtype:509 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "172" ;
+            schema:name "GRUD" ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:510 a :CultivationType ;
@@ -294,7 +298,11 @@ cultivationtype:520 a :CultivationType ;
     :hasMembership [ schema:identifier "520"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "10248"^^xsd:ID ;
+            schema:name "SRPPP" ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:509 .
 
 cultivationtype:521 a :CultivationType ;
