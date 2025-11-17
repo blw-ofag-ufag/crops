@@ -4,41 +4,42 @@
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+cultivationtype:0 a :CultivationType ;
+    schema:description "Eine Überkategorie, zu welchen alle anderen Kategorien von Nutzungstypisierungen gehören sollen."@de ;
+    schema:name "Alle landwirtschaftliche genutzten Flächen"@de .
+
 cultivationtype:1 a :CultivationType ;
     schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:10 a :CultivationType ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autre surface au sein de la surface agricole utile"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
-
-cultivationtype:11 a :CultivationType ;
-    schema:name "Wald"@de,
-        "Forêt"@fr,
-        "Bosco"@it ;
-    :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:12 a :CultivationType ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
         "Superfici fuori della superficie agricola utilizzata"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:13 a :CultivationType ;
     schema:name "Sömmerungsfläche"@de,
         "Surface d’estivage"@fr,
         "Superfici d’estivazione"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:14 a :CultivationType ;
     schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
@@ -49,9 +50,11 @@ cultivationtype:15 a :CultivationType ;
     schema:alternateName "Hülsenfrüchte"@de ;
     schema:description "Der Anbau von Pflanzen aus der Familie der Hülsenfrüchtler (Leguminosae). Das Ziel ist typischerweise die Gewinnung der Körner zur menschlichen Ernährung oder als Tierfutter."@de ;
     schema:name "Leguminosen"@de ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:0,
+        cultivationtype:1 .
 
 cultivationtype:16 a :CultivationType ;
+    schema:description "Der Anbau von von Getreide oder Pseudogetreide."@de ;
     schema:name "Getreide und Pseudogetreide"@de,
         "Grains and pseudo-cereals"@en ;
     :partOf cultivationtype:1 .
@@ -71,7 +74,8 @@ cultivationtype:2 a :CultivationType ;
         "Prairies permanentes"@fr,
         "Prati perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:3 a :CultivationType ;
     schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche."@de ;
@@ -79,14 +83,16 @@ cultivationtype:3 a :CultivationType ;
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:4 a :CultivationType ;
     schema:name "Reben"@de,
         "Vignobles"@fr,
         "Vigna"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:493 a :CultivationType ;
     schema:name "Sonnenblumen"@de .
@@ -123,7 +129,8 @@ cultivationtype:5 a :CultivationType ;
         "Cultures fruitières"@fr,
         "Frutteti"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:500 a :CultivationType ;
     schema:name "Emmer"@de ;
@@ -272,9 +279,11 @@ cultivationtype:514 a :CultivationType ;
     :partOf cultivationtype:14 .
 
 cultivationtype:515 a :CultivationType ;
+    schema:description "Gemeinsame Ansaat von mehreren Getreidearten bzw. von Getreide mit Hülsenfrüchten, welche mindestens auch Brotgetreide beinhaltet."@de ;
     schema:name "Mischel Brotgetreide"@de,
         "Méteil de céréales panifiables"@fr,
         "Miscela di cereali panificabili"@it ;
+    :botanicalPlant taxon:2 ;
     :hasMembership [ schema:identifier "515"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -910,7 +919,8 @@ cultivationtype:6 a :CultivationType ;
         "Autres cultures pérennes"@fr,
         "Altre colture perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:601 a :CultivationType ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
@@ -1140,7 +1150,8 @@ cultivationtype:7 a :CultivationType ;
         "Cultures protégées"@fr,
         "Colture protette tutto l’anno"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:701 a :CultivationType ;
     schema:name "Reben"@de,
@@ -1459,7 +1470,8 @@ cultivationtype:8 a :CultivationType ;
         "Surfaces à litière"@fr,
         "Terreni da strame"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:801 a :CultivationType ;
     schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
@@ -1698,7 +1710,8 @@ cultivationtype:9 a :CultivationType ;
         "Haies, bosquets et berges boisées"@fr,
         "Siepi, boschetti campestri e rivieraschi"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] .
+            :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:901 a :CultivationType ;
     schema:name "Wald"@de,
@@ -1708,7 +1721,7 @@ cultivationtype:901 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:11 .
+    :partOf cultivationtype:0 .
 
 cultivationtype:902 a :CultivationType ;
     schema:name "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecken ohne Pufferstreifen)"@de,
@@ -1913,6 +1926,7 @@ cultivationtype:950 a :CultivationType ;
             :memberOfClass :DirectPaymentCrop ] .
 
 cultivationtype:951 a :CultivationType ;
+    schema:description "Anbau von Sommer- oder Wintergetreide, bei denen mindestens 40% der Anzahl Reihen über die Breite der Sämaschine ungesät sind. Mindestfläche 20 Aren, Mindestbreite 20 m. Der Reihenabstand in ungesäten Bereichen muss mindestens 30 cm betragen."@de ;
     schema:name "Getreide in weiter Reihe"@de,
         "Céréales en lignes de semis espacées"@fr,
         "Cereali in file distanziate"@it ;
