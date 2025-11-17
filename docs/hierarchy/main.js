@@ -3,11 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configuration
     const SPARQL_ENDPOINT = 'https://agriculture.ld.admin.ch/query';
     
-    const SPARQL_QUERY = `
+    // CONSTRUCT query to get all relevant triples for the hierarchy
+    const CONSTRUCT_QUERY = `
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-        SELECT DISTINCT ?node ?nodeName ?parent ?parentName ?description ?taxonName ?eppoCode
+        CONSTRUCT {
+            ?node a :CultivationType ;
+                schema:name ?nodeName ;
+                schema:description ?description ;
+                :partOf ?parent ;
+                :botanicalPlant ?botanicalPlant .
+            
+            ?parent a :CultivationType ;
+                schema:name ?parentName .
+
+            ?botanicalPlant :taxonName ?taxonName ;
+                :eppo ?eppoCode .
+        }
         WHERE {
             <https://agriculture.ld.admin.ch/crops/cultivationtype/1> :hasPart* ?node .
             
@@ -25,11 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 FILTER(LANG(?description) = "de")
             }
             
-            OPTIONAL { ?node :botanicalPlant/:taxonName ?taxonName . }
-            
-            OPTIONAL { ?node :botanicalPlant/:eppo ?eppoCode . }
+            OPTIONAL {
+                ?node :botanicalPlant ?botanicalPlant .
+                OPTIONAL { ?botanicalPlant :taxonName ?taxonName . }
+                OPTIONAL { ?botanicalPlant :eppo ?eppoCode . }
+            }
         }
     `;
+
+    // JSON-LD Frame to structure the CONSTRUCT query results into a hierarchy
+    const JSON_FRAME = {
+        "@context": {
+            "schema": "http://schema.org/",
+            "crops": "https://agriculture.ld.admin.ch/crops/",
+            "name": { "@id": "schema:name", "@language": "de" },
+            "description": { "@id": "schema:description", "@language": "de" },
+            "partOf": { "@id": "crops:partOf", "@type": "@id" },
+            "botanicalPlant": { "@id": "crops:botanicalPlant", "@type": "@id" },
+            "taxonName": { "@id": "crops:taxonName" },
+            "eppoCode": { "@id": "crops:eppo", "@type": "@id" } // Be explicit that eppoCode is an IRI
+        },
+        "@type": "crops:CultivationType"
+    };
 
     // DOM Elements
     const networkContainer = document.getElementById('network');
@@ -41,14 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoDetails = document.getElementById('info-details');
     const botanicalInfo = document.getElementById('botanical-info');
 
-
     // Vis.js Data
     let nodes = new vis.DataSet();
     let edges = new vis.DataSet();
     let network = null;
 
     // Styling Constants
-    const FONT_DEFAULTS = { size: 14, face: 'Inter', multi: true, mod: 'normal' };
+    const FONT_DEFAULTS = { size: 14, face: 'Inter', multi: true };
     const STYLE_NORMAL = { NODE: { background: '#FFFFFF', border: '#000000' }, FONT: { ...FONT_DEFAULTS, color: '#000000' }, EDGE: { color: '#888888', hover: '#888888', highlight: '#888888' } };
     const STYLE_FOCUS = { NODE: { background: '#D3E5FA', border: '#4A90E2' }, FONT: { ...FONT_DEFAULTS, color: '#000000' } };
     const STYLE_HIGHLIGHT = { NODE: { background: '#000000', border: '#000000' }, FONT: { ...FONT_DEFAULTS, color: '#FFFFFF' }, EDGE: { color: '#000000', hover: '#000000', highlight: '#000000' } };
@@ -63,17 +93,30 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchData() {
         showLoader(true);
         try {
+            const params = new URLSearchParams();
+            params.append('query', CONSTRUCT_QUERY);
             const response = await fetch(SPARQL_ENDPOINT, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'Accept': 'application/sparql-results+json' },
-                body: `query=${encodeURIComponent(SPARQL_QUERY)}`
+                headers: { 'Accept': 'application/ld+json', 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params
             });
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            return (await response.json()).results.bindings;
+            return await response.json();
         } catch (error) {
             console.error("Error fetching SPARQL data:", error);
             loaderContainer.innerHTML = `<p>Error loading data. Please try refreshing.</p>`;
-            return [];
+            return null;
+        }
+    }
+
+    async function frameDataClientSide(rawJsonLd) {
+        if (!rawJsonLd) return null;
+        try {
+            return await jsonld.frame(rawJsonLd, JSON_FRAME);
+        } catch (error) {
+            console.error("Error framing JSON-LD data:", error);
+            loaderContainer.innerHTML = `<p>Error processing data.</p>`;
+            return null;
         }
     }
 
@@ -88,59 +131,64 @@ document.addEventListener('DOMContentLoaded', () => {
         return label;
     }
 
-    // Data processing function to fix the race condition
-    function processData(bindings) {
+    function processFramedData(framedResult) {
+        if (!framedResult || !framedResult['@graph']) return;
+
         const nodesMap = new Map();
-        const edgesSet = new Set(); // Use a Set to prevent adding duplicate edges
+        const edgesSet = new Set();
 
-        bindings.forEach(binding => {
-            const nodeId = binding.node.value;
+        const processNodeObject = (nodeObj) => {
+            const nodeId = nodeObj['@id'];
+            if (!nodeId) return;
 
-            // Process the main node (?node) from the row
-            // Get existing data or create a new object with defaults
-            let nodeData = nodesMap.get(nodeId) || {
-                id: nodeId,
-                description: "Keine Beschreibung für diesen Eintrag verfügbar.",
-                taxonName: null,
-                eppoCode: null
-            };
+            // **** START OF BUG FIX ****
+            // Extract botanical info and ensure eppoCode is a string, not an object.
+            const botanicalPlant = nodeObj.botanicalPlant;
+            let taxonName = botanicalPlant?.taxonName || null;
+            // The value from framing is the full IRI string, which is what we want.
+            let eppoCode = botanicalPlant?.eppoCode || null; 
+            // **** END OF BUG FIX ****
 
-            // Always update the name from the main node row
-            nodeData.label = formatLabel(binding.nodeName.value);
-            nodeData.title = binding.nodeName.value;
-
-            // Overwrite defaults only if the current row provides a value
-            if (binding.description) nodeData.description = binding.description.value;
-            if (binding.taxonName) nodeData.taxonName = binding.taxonName.value;
-            if (binding.eppoCode) nodeData.eppoCode = binding.eppoCode.value;
-            
-            nodesMap.set(nodeId, nodeData);
-
-            // Process the parent node (?parent) from the row, if it exists
-            if (binding.parent) {
-                const parentId = binding.parent.value;
-                
-                // Ensure the parent exists in the map, creating a placeholder if needed
-                if (!nodesMap.has(parentId)) {
-                    nodesMap.set(parentId, {
-                        id: parentId,
-                        label: formatLabel(binding.parentName.value),
-                        title: binding.parentName.value,
-                        description: "Keine Beschreibung für diesen Eintrag verfügbar.",
-                        taxonName: null,
-                        eppoCode: null
-                    });
-                }
-                
-                // Add the edge, preventing duplicates
-                const edgeId = `${nodeId}-${parentId}`;
-                if (!edgesSet.has(edgeId)) {
-                    edges.add({ id: edgeId, from: nodeId, to: parentId });
-                    edgesSet.add(edgeId);
-                }
+            if (!nodesMap.has(nodeId)) {
+                nodesMap.set(nodeId, {
+                    id: nodeId,
+                    label: formatLabel(nodeObj.name || nodeId.split('/').pop()),
+                    title: nodeObj.name || nodeId.split('/').pop(),
+                    description: nodeObj.description || "Keine Beschreibung verfügbar.",
+                    // Use the corrected variables
+                    taxonName: taxonName,
+                    eppoCode: eppoCode
+                });
             }
-        });
 
+            if (nodeObj.partOf) {
+                const parents = Array.isArray(nodeObj.partOf) ? nodeObj.partOf : [nodeObj.partOf];
+                parents.forEach(parent => {
+                    const parentId = (typeof parent === 'object' && parent['@id']) ? parent['@id'] : parent;
+                    
+                    if (typeof parent === 'object' && parent['@id']) {
+                        processNodeObject(parent);
+                    } else if (!nodesMap.has(parentId)) {
+                        nodesMap.set(parentId, {
+                            id: parentId,
+                            label: formatLabel(parentId.split('/').pop()),
+                            title: parentId.split('/').pop(),
+                            description: "Keine Beschreibung für diesen Eintrag verfügbar.",
+                            taxonName: null,
+                            eppoCode: null
+                        });
+                    }
+
+                    const edgeId = `${nodeId}-${parentId}`;
+                    if (!edgesSet.has(edgeId)) {
+                        edges.add({ id: edgeId, from: nodeId, to: parentId });
+                        edgesSet.add(edgeId);
+                    }
+                });
+            }
+        };
+
+        framedResult['@graph'].forEach(processNodeObject);
         nodes.add(Array.from(nodesMap.values()));
     }
 
@@ -154,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         network = new vis.Network(networkContainer, data, options);
         network.on("stabilizationIterationsDone", () => network.setOptions({ physics: false }));
+        
         network.on('selectNode', handleNodeSelection);
         network.on('deselectNode', handleDeselection);
         closePanelBtn.addEventListener('click', () => { network.unselectAll(); handleDeselection(); });
@@ -178,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let botanicalHtml = '';
         if (node.taxonName) {
             botanicalHtml = `<strong>Botanische Bezeichnung:</strong> <em>${node.taxonName}</em>`;
+            // This code now works because node.eppoCode is guaranteed to be a string or null.
             if (node.eppoCode) {
                 const eppoSlug = node.eppoCode.split('/').pop();
                 botanicalHtml += ` (<a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a>)`;
@@ -241,5 +291,10 @@ document.addEventListener('DOMContentLoaded', () => {
         edges.update(edgesToUpdate);
     }
 
-    fetchData().then(processData).then(initGraph).catch(console.error);
+    // Updated execution chain
+    fetchData()
+        .then(frameDataClientSide)
+        .then(processFramedData)
+        .then(initGraph)
+        .catch(console.error);
 });
