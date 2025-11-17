@@ -9,12 +9,17 @@ cultivationtype:0 a :CultivationType ;
     schema:name "Alle landwirtschaftliche genutzten Flächen"@de .
 
 cultivationtype:1 a :CultivationType ;
+    schema:alternateName "Allg. Feldbau"@de,
+        "Domaine app. grande culture"@fr ;
     schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it ;
     :hasMembership [ schema:name "AGIS" ;
-            :memberOfClass :CultivationTypeCategory ] ;
+            :memberOfClass :CultivationTypeCategory ],
+        [ schema:identifier "10197"^^xsd:ID ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:0 .
 
 cultivationtype:10 a :CultivationType ;
@@ -43,7 +48,9 @@ cultivationtype:13 a :CultivationType ;
 
 cultivationtype:14 a :CultivationType ;
     schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
-    schema:name "Getreide"@de ;
+    schema:name "Getreide"@de,
+        "Céréales"@fr,
+        "Cereali"@it ;
     :partOf cultivationtype:16 .
 
 cultivationtype:15 a :CultivationType ;
@@ -1946,4 +1953,47 @@ cultivationtype:998 a :CultivationType ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
+
+cultivationtype:19 a :SRPPPCrop ;
+    schema:name "Wintergetreide"@de,
+        "Céréales d'automne"@fr,
+        "Cereali autunnali"@it ;
+    :hasMembership [ schema:identifier "10167"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
+
+cultivationtype:490 a :SRPPPCrop ;
+    schema:name "Winterweizen"@de,
+        "Blé d'automne"@fr,
+        "Frumento autunnale"@it ;
+    :hasMembership [ schema:identifier "10094"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:491 .
+
+cultivationtype:491 a :SRPPPCrop ;
+    schema:alternateName "Brotweizen"@de ;
+    schema:name "Weichweizen"@de,
+        "Blé tendre"@fr,
+        "Grano tenero"@it ;
+    :botanicalPlant taxon:TRZAX ;
+    :hasMembership [ schema:identifier "13784"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:492 .
+
+cultivationtype:492 a :SRPPPCrop ;
+    schema:name "Weizen"@de,
+        "Blé"@fr,
+        "Frumento"@it ;
+    :hasMembership [ schema:identifier "10052"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
 
