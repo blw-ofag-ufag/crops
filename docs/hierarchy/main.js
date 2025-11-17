@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         SELECT DISTINCT ?node ?nodeName ?parent ?parentName ?description ?taxonName ?eppoCode
         WHERE {
-            <https://agriculture.ld.admin.ch/crops/cultivationtype/0> :hasPart* ?node .
+            <https://agriculture.ld.admin.ch/crops/cultivationtype/1> :hasPart* ?node .
             
             ?node schema:name ?nodeName .
             FILTER(LANG(?nodeName) = "de")
