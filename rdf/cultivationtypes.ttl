@@ -43,12 +43,26 @@ cultivationtype:13 a :CultivationType ;
 cultivationtype:14 a :CultivationType ;
     schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
     schema:name "Getreide"@de ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:16 .
 
 cultivationtype:15 a :CultivationType ;
     schema:alternateName "Hülsenfrüchte"@de ;
     schema:description "Der Anbau von Pflanzen aus der Familie der Hülsenfrüchtler (Leguminosae). Das Ziel ist typischerweise die Gewinnung der Körner zur menschlichen Ernährung oder als Tierfutter."@de ;
     schema:name "Leguminosen"@de ;
+    :partOf cultivationtype:1 .
+
+cultivationtype:16 a :CultivationType ;
+    schema:name "Getreide und Pseudogetreide"@de,
+        "Grains and pseudo-cereals"@en ;
+    :partOf cultivationtype:1 .
+
+cultivationtype:17 a :CultivationType ;
+    schema:name "Hackfrüchte"@de,
+        "Root crops"@en ;
+    :partOf cultivationtype:1 .
+
+cultivationtype:18 a :CultivationType ;
+    schema:name "Mischkultur"@de ;
     :partOf cultivationtype:1 .
 
 cultivationtype:2 a :CultivationType ;
@@ -93,7 +107,7 @@ cultivationtype:497 a :CultivationType ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
     schema:name "Mais"@de ;
     :botanicalPlant taxon:7 ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:16 .
 
 cultivationtype:498 a :CultivationType ;
     schema:name "Gerste"@de ;
@@ -325,7 +339,7 @@ cultivationtype:522 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:17 .
 
 cultivationtype:523 a :CultivationType ;
     schema:name "Futterrüben"@de,
@@ -335,7 +349,7 @@ cultivationtype:523 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:17 .
 
 cultivationtype:524 a :CultivationType ;
     schema:name "Kartoffeln"@de,
@@ -345,7 +359,7 @@ cultivationtype:524 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:17 .
 
 cultivationtype:525 a :CultivationType ;
     schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
@@ -551,7 +565,7 @@ cultivationtype:547 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:17 .
 
 cultivationtype:548 a :CultivationType ;
     schema:name "Buchweizen"@de,
@@ -561,7 +575,7 @@ cultivationtype:548 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:16 .
 
 cultivationtype:549 a :CultivationType ;
     schema:name "Sorghum"@de,
@@ -572,7 +586,7 @@ cultivationtype:549 a :CultivationType ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:16 .
 
 cultivationtype:550 a :CultivationType ;
     schema:name "Übrige Ackerfläche"@de,
@@ -703,7 +717,7 @@ cultivationtype:569 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:18 .
 
 cultivationtype:570 a :CultivationType ;
     schema:name "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
@@ -713,7 +727,7 @@ cultivationtype:570 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:18 .
 
 cultivationtype:572 a :CultivationType ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
@@ -743,7 +757,7 @@ cultivationtype:574 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1 .
+    :partOf cultivationtype:16 .
 
 cultivationtype:575 a :CultivationType ;
     schema:description "Der Anbau von Hanf zur Körnergewinnung."@de ;
