@@ -18,7 +18,7 @@ This graph not only allows for complex queries across formerly siloed data but a
 
 Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
 
-# Run data integration pipeline
+# Run the data processing and LINDAS integration pipeline
 
 The data integration pipeline uses all the R and python scripts in the `/scripts` folder. The entire pipeline can be triggered with:
 
@@ -31,7 +31,7 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     ENDPOINT=https://stardog.cluster.ldbar.ch/lindas
     ```
 
-2. Run the ETL pipeline `sh scripts/etl.sh`
+2. Run the ETL pipeline `sh scripts/graph-processing.sh`
 3. Check out the results on LINDAS.
 
 # Data mapping and unification

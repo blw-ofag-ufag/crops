@@ -28,6 +28,9 @@ wikidata:Q16521 a owl:Class ;
     rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
     rdfs:subClassOf :DirectPaymentCrop .
 
+:ClassMembership a owl:Class ;
+    rdfs:label "Class membership"@en .
+
 :Cultivation a owl:Class ;
     rdfs:label "Nutzung"@de,
         "Cultivation"@en ;
@@ -92,6 +95,10 @@ wikidata:Q16521 a owl:Class ;
     rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence. The class of crop taxa hence contains all biological taxa of crops, for example *Triticum aestivum* or *Glycine max*."@en ;
     rdfs:subClassOf wikidata:Q16521 .
 
+schema:alternateName a owl:DatatypeProperty ;
+    rdfs:label "Alternativer Name"@de,
+        "Alternate name"@en .
+
 schema:endDate a owl:DatatypeProperty ;
     rdfs:label "Enddatum"@de,
         "End date"@en ;
@@ -111,6 +118,10 @@ schema:value a owl:DatatypeProperty .
         "EPPO code"@en ;
     rdfs:domain :Taxon ;
     rdfs:range xsd:token .
+
+:taxonName a owl:DatatypeProperty ;
+    rdfs:label "Taxonomischer Name"@de,
+        "Taxon name"@en .
 
 :1 a owl:NamedIndividual ;
     rdfs:label "Menschliche Ernährung"@de,
@@ -231,7 +242,14 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range :FertilisationStandard .
 
+:hasMembership a owl:ObjectProperty ;
+    rdfs:label "Klassenzugehörigkeit"@de,
+        "Class membership"@en ;
+    rdfs:range :ClassMembership .
+
 :hasPart a owl:ObjectProperty ;
+    rdfs:label "Unterkategorie"@de,
+        "Sub-category"@en ;
     rdfs:domain :CultivationType ;
     rdfs:range :CultivationType ;
     owl:inverseOf :partOf .
@@ -248,12 +266,20 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
 
+:memberOfClass a owl:ObjectProperty ;
+    rdfs:label "Klasse"@de,
+        "Class"@en ;
+    rdfs:domain :ClassMembership ;
+    rdfs:range owl:Class .
+
 :parentTaxon a owl:ObjectProperty ;
     rdfs:label "Parent taxon"@en ;
     rdfs:domain :Taxon ;
     rdfs:range :Taxon .
 
 :partOf a owl:ObjectProperty ;
+    rdfs:label "Überkategorie"@de,
+        "Super-category"@en ;
     rdfs:domain :CultivationType ;
     rdfs:range :CultivationType ;
     owl:inverseOf :hasPart .

@@ -32,11 +32,11 @@ data <- readxl::read_excel(destfile, sheet = 1)
 #' =============================================================================
 
 base <- "https://agriculture.ld.admin.ch/crops/"
+cultivationtype <- paste0(base, "cultivationtype/")
 schema  <- "http://schema.org/"
 
 #' Create a new crops turtle file
 sink("rdf/agis.ttl")
-
 
 #' =============================================================================
 #' WRITE CROP CATEGORIES
@@ -52,16 +52,27 @@ categories$uri <- NA
 
 for (i in seq_len(nrow(categories))) {
 
-  code <- i + 100
+  # save a made up ID/IRI for this object
+  code <- i
   categories[i, "code"] <- code
-  subject <- rdfhelper::uri(code, prefix = base)
+  subject <- rdfhelper::uri(code, prefix = cultivationtype)
   categories[i, "uri"] <- subject
 
+  # Static class assignment
   rdfhelper::triple(
     subject,
     "a",
-    uri(c("CultivationType", "CultivationTypeCategory"), base)
+    uri(c("CultivationType"), base)
   )
+
+  # Dynamic class assignment
+  construct_class_membership(
+    subject,
+    uri("CultivationTypeCategory", base),
+    name = "AGIS"
+  )
+
+  # Labelling
   for (lang in languages) {
     rdfhelper::triple(
       subject = subject,
@@ -72,14 +83,7 @@ for (i in seq_len(nrow(categories))) {
       )
     )
   }
-  x <- subset(
-    data,
-    subset = Hauptkategorie_DE == unlist(categories[i, "Hauptkategorie_DE"]),
-    select = "LNF_Code"
-  ) %>% unlist()
-  rdfhelper::triple(subject, uri("hasPart", base), uri(x, prefix = base))
 }
-
 
 #' =============================================================================
 #' TABLE TO RDF CONVERSION
@@ -87,10 +91,35 @@ for (i in seq_len(nrow(categories))) {
 
 for (i in seq_len(nrow(data))) {
 
+  # Save ID/IRI for this object
   code <- as.integer(data[i, "LNF_Code"])
-  subject <- rdfhelper::uri(code, prefix = base)
+  subject <- rdfhelper::uri(code, prefix = cultivationtype)
+
+  # Static class assignment
   rdfhelper::triple(subject, "a", rdfhelper::uri("CultivationType", base))
-  rdfhelper::triple(subject, "a", rdfhelper::uri("DirectPaymentCrop", base))
+
+  # Dynamic class assignment
+  from <- data[i, "Gueltig_Von"]
+  to <- data[i, "Gueltig_Bis"]
+  construct_class_membership(
+    subject,
+    uri("DirectPaymentCrop", base),
+    identifier = code,
+    validFrom = if (as.logical(is.na(from))) {
+      "2000-01-01"
+    } else {
+      paste0(as.character(from), "-01-01")
+    },
+    validTo = if (as.logical(is.na(to))) {
+      NULL
+    } else {
+      paste0(as.character(to), "-12-31")
+    },
+    name = "AGIS"
+  )
+
+
+  # Assign labels
   for (lang in languages) {
     rdfhelper::triple(
       subject = subject,
@@ -101,26 +130,6 @@ for (i in seq_len(nrow(data))) {
       )
     )
   }
-
-  keys <- c(Spezialkultur = "SpecialtyCrop", BFF_QI = "BFFQ1")
-  for (j in seq_along(keys)) {
-    if (as.integer(data[i, names(keys[j])]) == 1) {
-      rdfhelper::triple(subject, "a", rdfhelper::uri(keys[j], base))
-    }
-  }
-
-  keys <- c(
-    Gueltig_Von = rdfhelper::uri("validFrom", schema),
-    Gueltig_Bis = rdfhelper::uri("validTo", schema)
-  )
-  for (j in seq_along(keys)) {
-    x <- as.integer(data[i, names(keys[j])])
-    if (!is.na(x)) {
-      rdfhelper::triple(subject, keys[j], rdfhelper::typed(x, "gYear"))
-    }
-  }
-
-  construct_code(subject, code, "LNF")
 
   #' assign crop category by looking up value in LUT
   triple(

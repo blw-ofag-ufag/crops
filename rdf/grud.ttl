@@ -1,0 +1,1936 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:201 a :CultivationType ;
+    schema:name "Winterweizen"@de ;
+    :hasMembership [ schema:identifier "CROP_WWHT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:202 a :CultivationType ;
+    schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WWHTN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:203 a :CultivationType ;
+    schema:name "Futterweizen"@de ;
+    :hasMembership [ schema:identifier "CROP_FWHT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:204 a :CultivationType ;
+    schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_FWHTN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:205 a :CultivationType ;
+    schema:name "Sommerweizen"@de ;
+    :hasMembership [ schema:identifier "CROP_SWHT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:206 a :CultivationType ;
+    schema:name "Wintergerste"@de ;
+    :hasMembership [ schema:identifier "CROP_WGRST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:207 a :CultivationType ;
+    schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WGRSTN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:208 a :CultivationType ;
+    schema:name "Sommergerste"@de ;
+    :hasMembership [ schema:identifier "CROP_SGRST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:209 a :CultivationType ;
+    schema:name "Winterhafer"@de ;
+    :hasMembership [ schema:identifier "CROP_WOGST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:210 a :CultivationType ;
+    schema:name "Sommerhafer"@de ;
+    :hasMembership [ schema:identifier "CROP_SOGST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:211 a :CultivationType ;
+    schema:name "Winterroggen (Hybridsorten)"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:212 a :CultivationType ;
+    schema:name "Winterroggen (Populationssorten)"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:213 a :CultivationType ;
+    schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGH_N"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:214 a :CultivationType ;
+    schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGP_N"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:215 a :CultivationType ;
+    schema:name "Wintertriticale"@de ;
+    :hasMembership [ schema:identifier "CROP_WTRIT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:216 a :CultivationType ;
+    schema:name "Sommertriticale"@de ;
+    :hasMembership [ schema:identifier "CROP_STRIT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:217 a :CultivationType ;
+    schema:name "Winterkorn, Dinkel"@de ;
+    :hasMembership [ schema:identifier "CROP_WKORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:218 a :CultivationType ;
+    schema:name "Emmer / Einkorn"@de ;
+    :hasMembership [ schema:identifier "CROP_EMMEK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:219 a :CultivationType ;
+    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WTRITN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:220 a :CultivationType ;
+    schema:name "Nützlingsstreifen (DK)"@de ;
+    :hasMembership [ schema:identifier "CROP_OAFNT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:221 a :CultivationType ;
+    schema:name "Sonnenblumen"@de ;
+    :hasMembership [ schema:identifier "CROP_KARPA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:222 a :CultivationType ;
+    schema:name "Buntbrache"@de ;
+    :hasMembership [ schema:identifier "CROP_LINSD"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:223 a :CultivationType ;
+    schema:name "Hirse"@de ;
+    :hasMembership [ schema:identifier "CROP_GANSO"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:224 a :CultivationType ;
+    schema:name "Saum auf Ackerfläche"@de ;
+    :hasMembership [ schema:identifier "CROP_FLAXD"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:225 a :CultivationType ;
+    schema:name "Winterraps"@de ;
+    :hasMembership [ schema:identifier "CROP_WINRAN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:226 a :CultivationType ;
+    schema:name "Winterraps in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_SOMRA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:227 a :CultivationType ;
+    schema:name "Sommerraps"@de ;
+    :hasMembership [ schema:identifier "CROP_KARPB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:228 a :CultivationType ;
+    schema:name "Rotationsbrache"@de ;
+    :hasMembership [ schema:identifier "CROP_FLLND"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:229 a :CultivationType ;
+    schema:name "Nützlingsstreifen (oAF)"@de ;
+    :hasMembership [ schema:identifier "CROP_STRBRR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:230 a :CultivationType ;
+    schema:name "Gründüngung (Nichtleguminosen), ha"@de ;
+    :hasMembership [ schema:identifier "CROP_GMNLE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:231 a :CultivationType ;
+    schema:name "Gründüngung (Leguminosen), ha"@de ;
+    :hasMembership [ schema:identifier "CROP_GMLG"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:232 a :CultivationType ;
+    schema:name "Äugstlen, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_TPAST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:233 a :CultivationType ;
+    schema:name "Körnermais"@de ;
+    :hasMembership [ schema:identifier "CROP_SILCRN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:234 a :CultivationType ;
+    schema:name "Chinakohl"@de ;
+    :hasMembership [ schema:identifier "CROP_CHINK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:235 a :CultivationType ;
+    schema:name "Radies 10 Bund/m2"@de ;
+    :hasMembership [ schema:identifier "CROP_RAD10B"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:236 a :CultivationType ;
+    schema:name "Rettich 8-9 Stk/m2"@de ;
+    :hasMembership [ schema:identifier "CROP_RAD89S"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:237 a :CultivationType ;
+    schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de ;
+    :hasMembership [ schema:identifier "CROP_LGVGM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:238 a :CultivationType ;
+    schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de ;
+    :hasMembership [ schema:identifier "CROP_NLGMV"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:239 a :CultivationType ;
+    schema:name "Portulak (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_PURSLA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:240 a :CultivationType ;
+    schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_ABRGS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:241 a :CultivationType ;
+    schema:name "Bohnen Stangen- (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_PLBNP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:242 a :CultivationType ;
+    schema:name "Endivie Herbst- (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_ENDAU"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:243 a :CultivationType ;
+    schema:name "Gurken 30 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_CUC30"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:244 a :CultivationType ;
+    schema:name "Kohlrabi (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_KOHLC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:245 a :CultivationType ;
+    schema:name "Ackerbohnen"@de ;
+    :hasMembership [ schema:identifier "CROP_PROBE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:246 a :CultivationType ;
+    schema:name "Krautstiel (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_SWCHD"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:247 a :CultivationType ;
+    schema:name "Süsslupinen"@de ;
+    :hasMembership [ schema:identifier "CROP_ACBOE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:248 a :CultivationType ;
+    schema:name "Tabak Burley"@de ;
+    :hasMembership [ schema:identifier "CROP_SOYBN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:249 a :CultivationType ;
+    schema:name "Tabak Virgine"@de ;
+    :hasMembership [ schema:identifier "CROP_SWEET"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:250 a :CultivationType ;
+    schema:name "Reis"@de ;
+    :hasMembership [ schema:identifier "CROP_TABAC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:251 a :CultivationType ;
+    schema:name "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de ;
+    :hasMembership [ schema:identifier "CROP_TABAV"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:252 a :CultivationType ;
+    schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de ;
+    :hasMembership [ schema:identifier "CROP_RICE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:253 a :CultivationType ;
+    schema:name "Kenaf"@de ;
+    :hasMembership [ schema:identifier "CROP_NCROP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:254 a :CultivationType ;
+    schema:name "Ölhanf"@de ;
+    :hasMembership [ schema:identifier "CROP_LCROP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:255 a :CultivationType ;
+    schema:name "Faserhanf"@de ;
+    :hasMembership [ schema:identifier "CROP_KENAF"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:256 a :CultivationType ;
+    schema:name "Öllein"@de ;
+    :hasMembership [ schema:identifier "CROP_HEMP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:257 a :CultivationType ;
+    schema:name "Faserlein"@de ;
+    :hasMembership [ schema:identifier "CROP_FIBHE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:258 a :CultivationType ;
+    schema:name "Kresse (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_CRSSE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:259 a :CultivationType ;
+    schema:name "Lauch (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_LEEKP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:260 a :CultivationType ;
+    schema:name "Nüsslisalat, Feldsalat (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_CSLLC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:261 a :CultivationType ;
+    schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_PAPSC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:262 a :CultivationType ;
+    schema:name "Petersilie (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_PRLYP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:263 a :CultivationType ;
+    schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_BERBL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:264 a :CultivationType ;
+    schema:name "betriebseigenes verfütt. Stroh, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_FOSTR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:265 a :CultivationType ;
+    schema:name "Frühjahrsschnitt vor Wiesenumbruch, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_SPRCP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:266 a :CultivationType ;
+    schema:name "Futterrüben"@de ;
+    :hasMembership [ schema:identifier "CROP_KOCRN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:267 a :CultivationType ;
+    schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_RAD20"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:268 a :CultivationType ;
+    schema:name "Rettich 18 Stk/m2 (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_RAD18"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:269 a :CultivationType ;
+    schema:name "Ganzpflanzen-Sorghum"@de ;
+    :hasMembership [ schema:identifier "CROP_WINRA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:270 a :CultivationType ;
+    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
+    :hasMembership [ schema:identifier "CROP_SOR2ND"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:271 a :CultivationType ;
+    schema:name "Getreide-Silage"@de ;
+    :hasMembership [ schema:identifier "CROP_STRAWL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:272 a :CultivationType ;
+    schema:name "Getreide-Silage mit Leguminosen"@de ;
+    :hasMembership [ schema:identifier "CROP_MILLE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:273 a :CultivationType ;
+    schema:name "Grassamen-Produktion"@de ;
+    :hasMembership [ schema:identifier "CROP_GSEED"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:274 a :CultivationType ;
+    schema:name "Grünmais, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_GCORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:275 a :CultivationType ;
+    schema:name "Salate Kopf-, Eisberg, Lollo (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_LTTLG"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:276 a :CultivationType ;
+    schema:name "Schnittlauch Kultur (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_CHVSP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:277 a :CultivationType ;
+    schema:name "Schnittsalat (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_CTLSP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:278 a :CultivationType ;
+    schema:name "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_CEL40"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:279 a :CultivationType ;
+    schema:name "Spinat (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_SPNCH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:280 a :CultivationType ;
+    schema:name "Tomaten, Bodenkulturen, tiefer Ertrag (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_TOMTL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:281 a :CultivationType ;
+    schema:name "Tomaten, Bodenkulturen, mittlerer Ertrag (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_TOMTM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:282 a :CultivationType ;
+    schema:name "Zucchetti, Patisson (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_ZUCHP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:283 a :CultivationType ;
+    schema:name "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_TOMTH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:284 a :CultivationType ;
+    schema:name "Tomaten, Bodenkultur, sehr hoher Ertrag (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_TOMTV"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:285 a :CultivationType ;
+    schema:name "Selve gepflegt"@de ;
+    :hasMembership [ schema:identifier "CROP_MSELV"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:286 a :CultivationType ;
+    schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de ;
+    :hasMembership [ schema:identifier "CROP_KIDK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:287 a :CultivationType ;
+    schema:name "Aprikosenanlage"@de ;
+    :hasMembership [ schema:identifier "CROP_APPLT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:288 a :CultivationType ;
+    schema:name "Aprikosenanlage, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_APEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:289 a :CultivationType ;
+    schema:name "Kernobstanlage"@de ;
+    :hasMembership [ schema:identifier "CROP_POPFR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:290 a :CultivationType ;
+    schema:name "Kernobstanlage, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_POPEY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:291 a :CultivationType ;
+    schema:name "Kirschenanlage"@de ;
+    :hasMembership [ schema:identifier "CROP_CHRPL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:292 a :CultivationType ;
+    schema:name "Kirschenanlage, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_CHEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:293 a :CultivationType ;
+    schema:name "Kiwianlage"@de ;
+    :hasMembership [ schema:identifier "CROP_KIWPL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:294 a :CultivationType ;
+    schema:name "Kiwianlage, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_KIWEY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:295 a :CultivationType ;
+    schema:name "Pfirsichanlage"@de ;
+    :hasMembership [ schema:identifier "CROP_PFRPL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:296 a :CultivationType ;
+    schema:name "Pfirsichanlage, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_PFREY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:297 a :CultivationType ;
+    schema:name "Zwetschgenanlage"@de ;
+    :hasMembership [ schema:identifier "CROP_PLMPL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:298 a :CultivationType ;
+    schema:name "Zwetschgenanlage, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_PLMEY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:299 a :CultivationType ;
+    schema:name "Walnüsse < 185 Bäume/ha"@de ;
+    :hasMembership [ schema:identifier "CROP_WALN1"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:300 a :CultivationType ;
+    schema:name "Walnüsse ≥ 185 Bäume/ha"@de ;
+    :hasMembership [ schema:identifier "CROP_WALN2"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:301 a :CultivationType ;
+    schema:name "Haselnüsse"@de ;
+    :hasMembership [ schema:identifier "CROP_HAZLN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:302 a :CultivationType ;
+    schema:name "Reben"@de ;
+    :hasMembership [ schema:identifier "CROP_VINES"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:303 a :CultivationType ;
+    schema:name "Rebflächen mit hoher Artenvielfalt"@de ;
+    :hasMembership [ schema:identifier "CROP_VBDIV"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:304 a :CultivationType ;
+    schema:name "Tafeltrauben"@de ;
+    :hasMembership [ schema:identifier "CROP_TGRAPE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:305 a :CultivationType ;
+    schema:name "Tafeltrauben, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_TGEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:306 a :CultivationType ;
+    schema:name "Brombeeren"@de ;
+    :hasMembership [ schema:identifier "CROP_BLKBRY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:307 a :CultivationType ;
+    schema:name "Brombeeren, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_BBREY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:308 a :CultivationType ;
+    schema:name "Cassis"@de ;
+    :hasMembership [ schema:identifier "CROP_CURRNT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:309 a :CultivationType ;
+    schema:name "Cassis, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_CEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:310 a :CultivationType ;
+    schema:name "Erdbeeren 1-jährig"@de ;
+    :hasMembership [ schema:identifier "CROP_STRAW1"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:311 a :CultivationType ;
+    schema:name "Erdbeeren 1-jährig, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_ST1EY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:312 a :CultivationType ;
+    schema:name "Erdbeeren mehrjährig"@de ;
+    :hasMembership [ schema:identifier "CROP_STRAWP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:313 a :CultivationType ;
+    schema:name "Heidelbeeren"@de ;
+    :hasMembership [ schema:identifier "CROP_BLUBRY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:314 a :CultivationType ;
+    schema:name "Heidelbeeren, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_HBEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:315 a :CultivationType ;
+    schema:name "Himbeeren"@de ;
+    :hasMembership [ schema:identifier "CROP_RASPB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:316 a :CultivationType ;
+    schema:name "Himbeeren, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_RBEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:317 a :CultivationType ;
+    schema:name "Rote Johannisbeeren"@de ;
+    :hasMembership [ schema:identifier "CROP_REDCUR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:318 a :CultivationType ;
+    schema:name "Rote Johannisbeeren, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_RJEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:319 a :CultivationType ;
+    schema:name "Stachelbeeren"@de ;
+    :hasMembership [ schema:identifier "CROP_GOOSEB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:320 a :CultivationType ;
+    schema:name "Stachelbeeren, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_GBEYH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:321 a :CultivationType ;
+    schema:name "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de ;
+    :hasMembership [ schema:identifier "CROP_ALTBRY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:322 a :CultivationType ;
+    schema:name "Ziersträucher, -gehölze, -stauden"@de ;
+    :hasMembership [ schema:identifier "CROP_ORNSTB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:323 a :CultivationType ;
+    schema:name "Baumschulen"@de ;
+    :hasMembership [ schema:identifier "CROP_NURSRY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:324 a :CultivationType ;
+    schema:name "Christbäume"@de ;
+    :hasMembership [ schema:identifier "CROP_XMASTR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:325 a :CultivationType ;
+    schema:name "Hopfen"@de ;
+    :hasMembership [ schema:identifier "CROP_HOPS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:326 a :CultivationType ;
+    schema:name "Chinaschilf"@de ;
+    :hasMembership [ schema:identifier "CROP_CHISLF"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:327 a :CultivationType ;
+    schema:name "Aubergine"@de ;
+    :hasMembership [ schema:identifier "CROP_EGGPL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:328 a :CultivationType ;
+    schema:name "Blumenkohl"@de ;
+    :hasMembership [ schema:identifier "CROP_CAULI"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:329 a :CultivationType ;
+    schema:name "Bodenkohlrabi"@de ;
+    :hasMembership [ schema:identifier "CROP_KOHRA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:330 a :CultivationType ;
+    schema:name "Bohnen, Busch- Handpflück-"@de ;
+    :hasMembership [ schema:identifier "CROP_BUSHB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:331 a :CultivationType ;
+    schema:name "Bohnen, Verarbeitung-"@de ;
+    :hasMembership [ schema:identifier "CROP_BEANP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:332 a :CultivationType ;
+    schema:name "Broccoli"@de ;
+    :hasMembership [ schema:identifier "CROP_BROCC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:333 a :CultivationType ;
+    schema:name "Chicorée, Wurzelanbau"@de ;
+    :hasMembership [ schema:identifier "CROP_CHIWR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:334 a :CultivationType ;
+    schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_CUC50"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:335 a :CultivationType ;
+    schema:name "Cicorino rosso, Radicchio"@de ;
+    :hasMembership [ schema:identifier "CROP_RADCH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:336 a :CultivationType ;
+    schema:name "Endivie, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_ENDEY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:337 a :CultivationType ;
+    schema:name "Endivie, mittlerer Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_ENDMY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:338 a :CultivationType ;
+    schema:name "Erbsen, Kefen"@de ;
+    :hasMembership [ schema:identifier "CROP_PEAKE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:339 a :CultivationType ;
+    schema:name "Erbsen, Verarbeitung-"@de ;
+    :hasMembership [ schema:identifier "CROP_PEAP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:340 a :CultivationType ;
+    schema:name "Fenchel"@de ;
+    :hasMembership [ schema:identifier "CROP_FENNL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:341 a :CultivationType ;
+    schema:name "Gurken, Essiggurken"@de ;
+    :hasMembership [ schema:identifier "CROP_PICKL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:342 a :CultivationType ;
+    schema:name "Kabis Einschneide-"@de ;
+    :hasMembership [ schema:identifier "CROP_CUTCN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:343 a :CultivationType ;
+    schema:name "Kabis Früh-, Folie"@de ;
+    :hasMembership [ schema:identifier "CROP_FOILC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:344 a :CultivationType ;
+    schema:name "Kabis Lager"@de ;
+    :hasMembership [ schema:identifier "CROP_STORC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:345 a :CultivationType ;
+    schema:name "Karotten Bund-, Früh-"@de ;
+    :hasMembership [ schema:identifier "CROP_CBEFE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:346 a :CultivationType ;
+    schema:name "Karotten Pariser"@de ;
+    :hasMembership [ schema:identifier "CROP_CARPP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:347 a :CultivationType ;
+    schema:name "Karotten Verarbeitung-, Lager-, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_CARHY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:348 a :CultivationType ;
+    schema:name "Karotten Verarbeitung-, Lager-, mittlerer Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_CARMY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:349 a :CultivationType ;
+    schema:name "Kohlrabi"@de ;
+    :hasMembership [ schema:identifier "CROP_KOHLR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:350 a :CultivationType ;
+    schema:name "Kohlrabi Verarbeitungs-"@de ;
+    :hasMembership [ schema:identifier "CROP_KOHP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:351 a :CultivationType ;
+    schema:name "Krautstiel"@de ;
+    :hasMembership [ schema:identifier "CROP_CHARD"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:352 a :CultivationType ;
+    schema:name "Kürbis"@de ;
+    :hasMembership [ schema:identifier "CROP_PUMPK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:353 a :CultivationType ;
+    schema:name "Lauch"@de ;
+    :hasMembership [ schema:identifier "CROP_LEEKS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:354 a :CultivationType ;
+    schema:name "Melone"@de ;
+    :hasMembership [ schema:identifier "CROP_MELON"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:355 a :CultivationType ;
+    schema:name "Nüsslisalat, Feldsalat"@de ;
+    :hasMembership [ schema:identifier "CROP_LAMBSS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:356 a :CultivationType ;
+    schema:name "Petersilie"@de ;
+    :hasMembership [ schema:identifier "CROP_PARSY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:357 a :CultivationType ;
+    schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_RKTC1"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:358 a :CultivationType ;
+    schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de ;
+    :hasMembership [ schema:identifier "CROP_RKTC2"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:359 a :CultivationType ;
+    schema:name "Randen"@de ;
+    :hasMembership [ schema:identifier "CROP_BEETS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:360 a :CultivationType ;
+    schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de ;
+    :hasMembership [ schema:identifier "CROP_SGPVV"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:361 a :CultivationType ;
+    schema:name "Rhabarber"@de ;
+    :hasMembership [ schema:identifier "CROP_RHUBB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:362 a :CultivationType ;
+    schema:name "Rosenkohl, Strünke abgeführt"@de ;
+    :hasMembership [ schema:identifier "CROP_BRSPR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:363 a :CultivationType ;
+    schema:name "Rüben Herbst-, Mai-"@de ;
+    :hasMembership [ schema:identifier "CROP_TRNPM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:364 a :CultivationType ;
+    schema:name "Rucola, 1 Schnitt"@de ;
+    :hasMembership [ schema:identifier "CROP_ARUCL1"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:365 a :CultivationType ;
+    schema:name "Salate, diverse, hoher Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_SALHY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:366 a :CultivationType ;
+    schema:name "Salate, diverse, mittlerer Ertrag"@de ;
+    :hasMembership [ schema:identifier "CROP_SALMY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:367 a :CultivationType ;
+    schema:name "Schnittblumen, gross"@de ;
+    :hasMembership [ schema:identifier "CROP_CUTFLG"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:368 a :CultivationType ;
+    schema:name "Schnittblumen, klein"@de ;
+    :hasMembership [ schema:identifier "CROP_CUTFLS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:369 a :CultivationType ;
+    schema:name "Schnittblumen, mittel"@de ;
+    :hasMembership [ schema:identifier "CROP_CUTFLM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:370 a :CultivationType ;
+    schema:name "Schnittlauch"@de ;
+    :hasMembership [ schema:identifier "CROP_CHIVES"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:371 a :CultivationType ;
+    schema:name "Schnittsalat"@de ;
+    :hasMembership [ schema:identifier "CROP_CUSALA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:372 a :CultivationType ;
+    schema:name "Schwarzwurzel"@de ;
+    :hasMembership [ schema:identifier "CROP_BLKSAL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:373 a :CultivationType ;
+    schema:name "Sellerie Knollen-"@de ;
+    :hasMembership [ schema:identifier "CROP_CELERK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:374 a :CultivationType ;
+    schema:name "Sellerie Stangen-"@de ;
+    :hasMembership [ schema:identifier "CROP_CELERS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:375 a :CultivationType ;
+    schema:name "Spargel Bleich-"@de ;
+    :hasMembership [ schema:identifier "CROP_ASPBW"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:376 a :CultivationType ;
+    schema:name "Spargel Grün-"@de ;
+    :hasMembership [ schema:identifier "CROP_ASPGR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:377 a :CultivationType ;
+    schema:name "Spinat, nicht überw., 1 Schn., vor Mitte April gesät"@de ;
+    :hasMembership [ schema:identifier "CROP_SPINP1"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:378 a :CultivationType ;
+    schema:name "Spinat, nicht überwinternd, 1 Schnitt"@de ;
+    :hasMembership [ schema:identifier "CROP_SPIN1C"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:379 a :CultivationType ;
+    schema:name "Spinat, nicht überwinternd, 2 Schnitte"@de ;
+    :hasMembership [ schema:identifier "CROP_SPIN2C"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:380 a :CultivationType ;
+    schema:name "Tomaten"@de ;
+    :hasMembership [ schema:identifier "CROP_TOMAT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:381 a :CultivationType ;
+    schema:name "Winterspinat 1 Schnitt"@de ;
+    :hasMembership [ schema:identifier "CROP_WSPIN1"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:382 a :CultivationType ;
+    schema:name "Wirz leicht"@de ;
+    :hasMembership [ schema:identifier "CROP_SAVOYL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:383 a :CultivationType ;
+    schema:name "Wirz schwer"@de ;
+    :hasMembership [ schema:identifier "CROP_SAVOYS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:384 a :CultivationType ;
+    schema:name "Zucchetti, Patisson, Kürbis"@de ;
+    :hasMembership [ schema:identifier "CROP_ZUCCHP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:385 a :CultivationType ;
+    schema:name "Zuckerhut"@de ;
+    :hasMembership [ schema:identifier "CROP_SUGRCH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:386 a :CultivationType ;
+    schema:name "Zuckermais"@de ;
+    :hasMembership [ schema:identifier "CROP_SUCORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:387 a :CultivationType ;
+    schema:name "Zwiebeln"@de ;
+    :hasMembership [ schema:identifier "CROP_ONION"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:388 a :CultivationType ;
+    schema:name "Rucola, 2 Schnitte"@de ;
+    :hasMembership [ schema:identifier "CROP_ARUCL2"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:389 a :CultivationType ;
+    schema:name "Zuckerhut (Convenience)"@de ;
+    :hasMembership [ schema:identifier "CROP_SUGRCC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:390 a :CultivationType ;
+    schema:name "Federkohl"@de ;
+    :hasMembership [ schema:identifier "CROP_KALE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:391 a :CultivationType ;
+    schema:name "Pastinake"@de ;
+    :hasMembership [ schema:identifier "CROP_PRSNP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:392 a :CultivationType ;
+    schema:name "Knoblauch"@de ;
+    :hasMembership [ schema:identifier "CROP_GRLIC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:393 a :CultivationType ;
+    schema:name "Cima di rapa"@de ;
+    :hasMembership [ schema:identifier "CROP_TRNTP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:394 a :CultivationType ;
+    schema:name "Vom Betrieb weggeführtes Stroh, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_STRAW"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:395 a :CultivationType ;
+    schema:name "Kunstwiese intensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_AWMI"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:396 a :CultivationType ;
+    schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de ;
+    :hasMembership [ schema:identifier "CROP_SFVGV"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:397 a :CultivationType ;
+    schema:name "Andorn"@de ;
+    :hasMembership [ schema:identifier "CROP_MLKTL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:398 a :CultivationType ;
+    schema:name "Arnika"@de ;
+    :hasMembership [ schema:identifier "CROP_ARNCA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:399 a :CultivationType ;
+    schema:name "Basilikum"@de ;
+    :hasMembership [ schema:identifier "CROP_BSLKM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:400 a :CultivationType ;
+    schema:name "Bibernelle"@de ;
+    :hasMembership [ schema:identifier "CROP_BRNTT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:401 a :CultivationType ;
+    schema:name "Blaue Malve"@de ;
+    :hasMembership [ schema:identifier "CROP_BLMLW"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:402 a :CultivationType ;
+    schema:name "Bohnenkraut"@de ;
+    :hasMembership [ schema:identifier "CROP_BRGEG"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:403 a :CultivationType ;
+    schema:name "Brennessel"@de ;
+    :hasMembership [ schema:identifier "CROP_BRNTL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:404 a :CultivationType ;
+    schema:name "Dill"@de ;
+    :hasMembership [ schema:identifier "CROP_DLLLD"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:405 a :CultivationType ;
+    schema:name "Edelraute"@de ;
+    :hasMembership [ schema:identifier "CROP_RUEHR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:406 a :CultivationType ;
+    schema:name "Edelweiss"@de ;
+    :hasMembership [ schema:identifier "CROP_EDLWS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:407 a :CultivationType ;
+    schema:name "Ehrenpreis"@de ;
+    :hasMembership [ schema:identifier "CROP_VRVNN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:408 a :CultivationType ;
+    schema:name "Eibisch"@de ;
+    :hasMembership [ schema:identifier "CROP_MRSHW"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:409 a :CultivationType ;
+    schema:name "Eisenkraut"@de ;
+    :hasMembership [ schema:identifier "CROP_MSHML"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:410 a :CultivationType ;
+    schema:name "Fenchelsamen 1-jährig"@de ;
+    :hasMembership [ schema:identifier "CROP_FNSD1"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:411 a :CultivationType ;
+    schema:name "Fenchelsamen mehrjährig"@de ;
+    :hasMembership [ schema:identifier "CROP_FNSDP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:412 a :CultivationType ;
+    schema:name "Frauenmantel"@de ;
+    :hasMembership [ schema:identifier "CROP_LDYSM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:413 a :CultivationType ;
+    schema:name "Indianernessel, Rosenmelisse"@de ;
+    :hasMembership [ schema:identifier "CROP_LMNRM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:414 a :CultivationType ;
+    schema:name "Johanniskraut"@de ;
+    :hasMembership [ schema:identifier "CROP_STJHW"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:415 a :CultivationType ;
+    schema:name "Kamille"@de ;
+    :hasMembership [ schema:identifier "CROP_CHMML"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:416 a :CultivationType ;
+    schema:name "Kräuter,1-jährig, gross"@de ;
+    :hasMembership [ schema:identifier "CROP_HRB1L"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:417 a :CultivationType ;
+    schema:name "Kräuter,1-jährig, klein"@de ;
+    :hasMembership [ schema:identifier "CROP_HRB1S"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:418 a :CultivationType ;
+    schema:name "Kräuter,1-jährig, mittel"@de ;
+    :hasMembership [ schema:identifier "CROP_HRB1M"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:419 a :CultivationType ;
+    schema:name "Kräuter,1-jährig, mittel-gross"@de ;
+    :hasMembership [ schema:identifier "CROP_HRB1MB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:420 a :CultivationType ;
+    schema:name "Kräuter,mehrjährig, gross"@de ;
+    :hasMembership [ schema:identifier "CROP_HRBPRL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:421 a :CultivationType ;
+    schema:name "Kräuter,mehrjährig, klein"@de ;
+    :hasMembership [ schema:identifier "CROP_HRBPRS"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:422 a :CultivationType ;
+    schema:name "Kräuter,mehrjährig, mittel"@de ;
+    :hasMembership [ schema:identifier "CROP_HRBPRM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:423 a :CultivationType ;
+    schema:name "Kräuter,mehrjährig, mittel-gross"@de ;
+    :hasMembership [ schema:identifier "CROP_HRBPRB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:424 a :CultivationType ;
+    schema:name "Liebstöckel / Maggikraut"@de ;
+    :hasMembership [ schema:identifier "CROP_LVGGK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:425 a :CultivationType ;
+    schema:name "Majoran"@de ;
+    :hasMembership [ schema:identifier "CROP_MRJRM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:426 a :CultivationType ;
+    schema:name "Orangenminze"@de ;
+    :hasMembership [ schema:identifier "CROP_ORGMN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:427 a :CultivationType ;
+    schema:name "Oregano"@de ;
+    :hasMembership [ schema:identifier "CROP_ORGNO"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:428 a :CultivationType ;
+    schema:name "Pfefferminze"@de ;
+    :hasMembership [ schema:identifier "CROP_PPMNT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:429 a :CultivationType ;
+    schema:name "Rosmarin"@de ;
+    :hasMembership [ schema:identifier "CROP_RSMRY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:430 a :CultivationType ;
+    schema:name "Salbei"@de ;
+    :hasMembership [ schema:identifier "CROP_SGESG"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:431 a :CultivationType ;
+    schema:name "Schafgarbe"@de ;
+    :hasMembership [ schema:identifier "CROP_YRRW"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:432 a :CultivationType ;
+    schema:name "Schlüsselblume (ganze Pflanze)"@de ;
+    :hasMembership [ schema:identifier "CROP_PMLAW"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:433 a :CultivationType ;
+    schema:name "Schwarzer Holunder"@de ;
+    :hasMembership [ schema:identifier "CROP_BLKEL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:434 a :CultivationType ;
+    schema:name "Spitzwegerich"@de ;
+    :hasMembership [ schema:identifier "CROP_PLTNL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:435 a :CultivationType ;
+    schema:name "Thymian"@de ;
+    :hasMembership [ schema:identifier "CROP_THYME"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:436 a :CultivationType ;
+    schema:name "Viola (Stiefmütterchen)"@de ;
+    :hasMembership [ schema:identifier "CROP_PANSY"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:437 a :CultivationType ;
+    schema:name "Ysop"@de ;
+    :hasMembership [ schema:identifier "CROP_HYSSP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:438 a :CultivationType ;
+    schema:name "Zitronenmelisse"@de ;
+    :hasMembership [ schema:identifier "CROP_LMBLM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:439 a :CultivationType ;
+    schema:name "Kunstwiese mittelintensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_WGRNM"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:440 a :CultivationType ;
+    schema:name "Kleesamenproduktion"@de ;
+    :hasMembership [ schema:identifier "CROP_LGMPR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:441 a :CultivationType ;
+    schema:name "Naturwiese extensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_OAFNTN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:442 a :CultivationType ;
+    schema:name "Naturwiese intensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_WGRNN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:443 a :CultivationType ;
+    schema:name "Naturwiese mittelintensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_WGRIN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:444 a :CultivationType ;
+    schema:name "Naturwiese wenig intensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_OAFNLN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:445 a :CultivationType ;
+    schema:name "Silomais"@de ;
+    :hasMembership [ schema:identifier "CROP_CCMCRN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:446 a :CultivationType ;
+    schema:name "Uebr. Wiesen mit Düngeverbot"@de ;
+    :hasMembership [ schema:identifier "CROP_RMEAD"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:447 a :CultivationType ;
+    schema:name "Weide (Mäh-) intensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_PINTE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:448 a :CultivationType ;
+    schema:name "Weide (Mäh-) mittelintensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_PMEDI"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:449 a :CultivationType ;
+    schema:name "Weide extensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_PEXT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:450 a :CultivationType ;
+    schema:name "Kartoffeln (b), Speise-, Verarbeitungs-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:451 a :CultivationType ;
+    schema:name "Kartoffeln (b), Pflanz-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:452 a :CultivationType ;
+    schema:name "Kartoffeln (b), Früh-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTEA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:453 a :CultivationType ;
+    schema:name "Zuckerrüben"@de ;
+    :hasMembership [ schema:identifier "CROP_FRUB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:454 a :CultivationType ;
+    schema:name "CCM"@de ;
+    :hasMembership [ schema:identifier "CROP_FCRMN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:455 a :CultivationType ;
+    schema:name "Kartoffeln (a), Speise-, Verarbeitungs-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:456 a :CultivationType ;
+    schema:name "Kartoffeln (c), Speise-, Verarbeitungs-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPFA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:457 a :CultivationType ;
+    schema:name "Kartoffeln (a), Pflanz-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPFC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:458 a :CultivationType ;
+    schema:name "Kartoffeln (c), Pflanz-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPFB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:459 a :CultivationType ;
+    schema:name "Kartoffeln (a), Früh-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPFD"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:460 a :CultivationType ;
+    schema:name "Kartoffeln (c), Früh-"@de ;
+    :hasMembership [ schema:identifier "CROP_POTPFE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:461 a :CultivationType ;
+    schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_KARPFC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:462 a :CultivationType ;
+    schema:name "Eiweisserbsen"@de ;
+    :hasMembership [ schema:identifier "CROP_KARPFE_N"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:463 a :CultivationType ;
+    schema:name "Soja"@de ;
+    :hasMembership [ schema:identifier "CROP_EWSPE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:464 a :CultivationType ;
+    schema:name "Weide wenig intensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_PWINT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:465 a :CultivationType ;
+    schema:name "Zwischenfutter (herbstgesäte KW), ha"@de ;
+    :hasMembership [ schema:identifier "CROP_IFEED"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:466 a :CultivationType ;
+    schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de ;
+    :hasMembership [ schema:identifier "CROP_HFT01"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:467 a :CultivationType ;
+    schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
+    :hasMembership [ schema:identifier "CROP_HFTWB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:468 a :CultivationType ;
+    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
+    :hasMembership [ schema:identifier "CROP_HFBUFF"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:469 a :CultivationType ;
+    schema:name "Nussbäume, 0.01 ha/Baum"@de ;
+    :hasMembership [ schema:identifier "CROP_NTT01"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:470 a :CultivationType ;
+    schema:name "Edelkastanienbäume, 0.01 ha/Baum"@de ;
+    :hasMembership [ schema:identifier "CROP_SCT01"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:471 a :CultivationType ;
+    schema:name "Zwischenfutter (ohne KW), ha"@de ;
+    :hasMembership [ schema:identifier "CROP_IFWOC"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:472 a :CultivationType ;
+    schema:name "Streue-, Torfland"@de ;
+    :hasMembership [ schema:identifier "CROP_SCRUB"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:473 a :CultivationType ;
+    schema:name "Uferwiese entlang von Fliessgewässer"@de ;
+    :hasMembership [ schema:identifier "CROP_RIVER"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:474 a :CultivationType ;
+    schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
+    :hasMembership [ schema:identifier "CROP_SUMOTH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:475 a :CultivationType ;
+    schema:name "Heuwiesen Sömmerungsg., extensive"@de ;
+    :hasMembership [ schema:identifier "CROP_SUMEXT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+
+:476 a :CultivationType ;
+    schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de ;
+    :hasMembership [ schema:identifier "CROP_SUMLNT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] .
+

@@ -63,7 +63,13 @@ describe <- function(x) {
     predicate = rdfhelper::uri("partOf", base),
     object = rdfhelper::uri(get_foreign_keys(x, "Parent"), base)
   )
-  construct_code(subject, code, "SRPPP") # nolint
+  construct_class_membership(
+    subject,
+    rdfhelper::uri("SRPPPCrop", base),
+    validFrom = "2000-01-01",
+    identifier = code,
+    name = "SRPPP"
+  )
 }
 
 # Write Turtle file

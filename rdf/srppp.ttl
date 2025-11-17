@@ -1,0 +1,3176 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:10000 a :SRPPPCrop ;
+    schema:name "Mais"@de,
+        "Maïs"@fr,
+        "Mais"@it ;
+    :hasMembership [ schema:identifier "10000"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10001 a :SRPPPCrop ;
+    schema:name "Schalotten"@de,
+        "échalote"@fr,
+        "Scalogni"@it ;
+    :hasMembership [ schema:identifier "10001"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9963 .
+
+:10002 a :SRPPPCrop ;
+    schema:name "Schnittlauch"@de,
+        "ciboulette"@fr,
+        "Erba cipollina"@it ;
+    :hasMembership [ schema:identifier "10002"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10003 a :SRPPPCrop ;
+    schema:name "Schwarze Johannisbeere"@de,
+        "cassis"@fr,
+        "Ribes nero"@it ;
+    :hasMembership [ schema:identifier "10003"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10127 .
+
+:10004 a :SRPPPCrop ;
+    schema:name "Iris"@de,
+        "iris"@fr,
+        "Iris"@it ;
+    :hasMembership [ schema:identifier "10004"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12097 .
+
+:10005 a :SRPPPCrop ;
+    schema:name "Spargel"@de,
+        "asperge"@fr,
+        "Asparagi"@it ;
+    :hasMembership [ schema:identifier "10005"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10338 .
+
+:10006 a :SRPPPCrop ;
+    schema:name "Spinat"@de,
+        "épinard"@fr,
+        "Spinaci"@it ;
+    :hasMembership [ schema:identifier "10006"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10068 .
+
+:10007 a :SRPPPCrop ;
+    schema:name "Stachelbeere"@de,
+        "groseilles à maquereau"@fr,
+        "Uva spina"@it ;
+    :hasMembership [ schema:identifier "10007"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10127 .
+
+:10008 a :SRPPPCrop ;
+    schema:name "Raps"@de,
+        "Colza"@fr,
+        "Colza"@it ;
+    :hasMembership [ schema:identifier "10008"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10010 a :SRPPPCrop ;
+    schema:name "Zuckermais"@de,
+        "maïs sucré"@fr,
+        "Mais dolce"@it ;
+    :hasMembership [ schema:identifier "10010"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10339 .
+
+:10011 a :SRPPPCrop ;
+    schema:name "Zwetschge / Pflaume"@de,
+        "prunier (pruneau/prune)"@fr,
+        "Prugno/Susino  "@it ;
+    :hasMembership [ schema:identifier "10011"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9965 .
+
+:10016 a :SRPPPCrop ;
+    schema:name "Gurken"@de,
+        "concombre"@fr,
+        "Cetrioli"@it ;
+    :hasMembership [ schema:identifier "10016"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10017 .
+
+:10017 a :SRPPPCrop ;
+    schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
+        "cucurbitacées"@fr,
+        "Cucurbitacee"@it ;
+    :hasMembership [ schema:identifier "10017"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10018 a :SRPPPCrop ;
+    schema:name "Zucchetti"@de,
+        "courgette"@fr,
+        "Zucchine"@it ;
+    :hasMembership [ schema:identifier "10018"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10310 .
+
+:10019 a :SRPPPCrop ;
+    schema:name "Melonen"@de,
+        "melons"@fr,
+        "Meloni"@it ;
+    :hasMembership [ schema:identifier "10019"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10017 .
+
+:10020 a :SRPPPCrop ;
+    schema:name "Kohlarten"@de,
+        "choux"@fr,
+        "Specie di cavoli"@it ;
+    :hasMembership [ schema:identifier "10020"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10021 a :SRPPPCrop ;
+    schema:name "Topf- und Kontainerpflanzen"@de,
+        "plantes en pot et en container"@fr,
+        "Pianta in vaso e in container"@it ;
+    :hasMembership [ schema:identifier "10021"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:10022 a :SRPPPCrop ;
+    schema:name "Wassermelonen"@de,
+        "pastèque"@fr,
+        "Angurie"@it ;
+    :hasMembership [ schema:identifier "10022"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10017 .
+
+:10025 a :SRPPPCrop ;
+    schema:name "Portulakgewächse (Portulacaceae)"@de,
+        "portulacacées (Portulacaceae)"@fr,
+        "Portulacee (Portulacaceae)"@it ;
+    :hasMembership [ schema:identifier "10025"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10026 a :SRPPPCrop ;
+    schema:name "Nachtschattengewächse (Solanaceae)"@de,
+        "solanacées"@fr,
+        "Solanacee"@it ;
+    :hasMembership [ schema:identifier "10026"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10027 a :SRPPPCrop ;
+    schema:name "Tomaten"@de,
+        "tomate"@fr,
+        "Pomodori"@it ;
+    :hasMembership [ schema:identifier "10027"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10026 .
+
+:10028 a :SRPPPCrop ;
+    schema:name "Aubergine"@de,
+        "aubergine"@fr,
+        "Melanzana"@it ;
+    :hasMembership [ schema:identifier "10028"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10026 .
+
+:10029 a :SRPPPCrop ;
+    schema:name "Paprika"@de,
+        "poivron"@fr,
+        "Peperone"@it ;
+    :hasMembership [ schema:identifier "10029"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10026 .
+
+:10030 a :SRPPPCrop ;
+    schema:name "Lauch"@de,
+        "poireau"@fr,
+        "Porro"@it ;
+    :hasMembership [ schema:identifier "10030"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9963 .
+
+:10031 a :SRPPPCrop ;
+    schema:name "Zwiebeln"@de,
+        "oignon"@fr,
+        "Cipolle"@it ;
+    :hasMembership [ schema:identifier "10031"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9963 .
+
+:10033 a :SRPPPCrop ;
+    schema:name "Gemüseportulak"@de,
+        "pourpier commun"@fr,
+        "Portulaca estiva"@it ;
+    :hasMembership [ schema:identifier "10033"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10342 .
+
+:10034 a :SRPPPCrop ;
+    schema:name "Erbsen"@de,
+        "pois"@fr,
+        "Piselli"@it ;
+    :hasMembership [ schema:identifier "10034"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9957 .
+
+:10035 a :SRPPPCrop ;
+    schema:name "Jostabeere"@de,
+        "josta"@fr,
+        "Josta"@it ;
+    :hasMembership [ schema:identifier "10035"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10127 .
+
+:10037 a :SRPPPCrop ;
+    schema:name "Jungreben"@de,
+        "jeune vigne"@fr,
+        "Ceppi giovani"@it ;
+    :hasMembership [ schema:identifier "10037"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9953 .
+
+:10038 a :SRPPPCrop ;
+    schema:name "Lagerhallen, Mühlen, Silogebäude"@de,
+        "entrepôts, moulins, silos"@fr,
+        "Depositi, mulini, sili"@it ;
+    :hasMembership [ schema:identifier "10038"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10203 .
+
+:10039 a :SRPPPCrop ;
+    schema:name "Blumenknollen"@de,
+        "tubercules de fleurs"@fr,
+        "Radici tuberose floreali"@it ;
+    :hasMembership [ schema:identifier "10039"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:10040 a :SRPPPCrop ;
+    schema:name "Begonia"@de,
+        "bégonia"@fr,
+        "Begonia"@it ;
+    :hasMembership [ schema:identifier "10040"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10021,
+        :12097 .
+
+:10042 a :SRPPPCrop ;
+    schema:name "Chinaschilf"@de,
+        "Roseau de Chine"@fr,
+        "Miscanto "@it ;
+    :hasMembership [ schema:identifier "10042"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10043 a :SRPPPCrop ;
+    schema:name "Federkohl"@de,
+        "chou frisé non pommé"@fr,
+        "Cavolo piuma"@it ;
+    :hasMembership [ schema:identifier "10043"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10210 .
+
+:10044 a :SRPPPCrop ;
+    schema:name "Kresse"@de,
+        "cresson de jardin"@fr,
+        "Crescione"@it ;
+    :hasMembership [ schema:identifier "10044"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10046 a :SRPPPCrop ;
+    schema:name "Futter- und Zuckerrüben"@de,
+        "betteraves à sucre et fourragère"@fr,
+        "Barbabietole da foraggio e da zucchero"@it ;
+    :hasMembership [ schema:identifier "10046"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10047 a :SRPPPCrop ;
+    schema:name "Rosenkohl"@de,
+        "chou de Bruxelles"@fr,
+        "Cavoli di Bruxelles"@it ;
+    :hasMembership [ schema:identifier "10047"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10020 .
+
+:10048 a :SRPPPCrop ;
+    schema:name "Kenaf"@de,
+        "Kenaf"@fr,
+        "Kenaf"@it ;
+    :hasMembership [ schema:identifier "10048"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10050 a :SRPPPCrop ;
+    schema:name "Cyclame"@de,
+        "cyclamen"@fr,
+        "Ciclamino"@it ;
+    :hasMembership [ schema:identifier "10050"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10021,
+        :12097 .
+
+:10051 a :SRPPPCrop ;
+    schema:name "Speisepilze"@de,
+        "champignons comestibles"@fr,
+        "Funghi commestibili"@it ;
+    :hasMembership [ schema:identifier "10051"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10053 a :SRPPPCrop ;
+    schema:name "Artischocken"@de,
+        "artichaut"@fr,
+        "Carciofi"@it ;
+    :hasMembership [ schema:identifier "10053"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9961 .
+
+:10056 a :SRPPPCrop ;
+    schema:name "Chicorée"@de,
+        "chicorée witloof (chicorée-endive)"@fr,
+        "Cicoria belga"@it ;
+    :hasMembership [ schema:identifier "10056"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9961 .
+
+:10059 a :SRPPPCrop ;
+    schema:name "Endivien"@de,
+        "chicorée scarole, chicorée frisée"@fr,
+        "Indivia"@it ;
+    :hasMembership [ schema:identifier "10059"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10325 .
+
+:10060 a :SRPPPCrop ;
+    schema:name "Kopfsalat"@de,
+        "laitue pommée"@fr,
+        "Lattuga cappuccio"@it ;
+    :hasMembership [ schema:identifier "10060"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10320 .
+
+:10063 a :SRPPPCrop ;
+    schema:name "Schwarzwurzel"@de,
+        "scorsonère"@fr,
+        "Scorzonera"@it ;
+    :hasMembership [ schema:identifier "10063"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9961 .
+
+:10064 a :SRPPPCrop ;
+    schema:name "Topinambur"@de,
+        "topinambour"@fr,
+        "Topinambur"@it ;
+    :hasMembership [ schema:identifier "10064"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9961 .
+
+:10065 a :SRPPPCrop ;
+    schema:name "Zuckerhut"@de,
+        "chicorée pain de sucre"@fr,
+        "Cicoria pan di zucchero"@it ;
+    :hasMembership [ schema:identifier "10065"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10325 .
+
+:10067 a :SRPPPCrop ;
+    schema:name "Stangensellerie"@de,
+        "céleri-branche"@fr,
+        "Sedano da coste"@it ;
+    :hasMembership [ schema:identifier "10067"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9946 .
+
+:10068 a :SRPPPCrop ;
+    schema:name "Gänsefussgewächse (Chenopodiaceae)"@de,
+        "chénopodiacées"@fr,
+        "Chenopodiacee"@it ;
+    :hasMembership [ schema:identifier "10068"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10070 a :SRPPPCrop ;
+    schema:name "Hyazinthe"@de,
+        "jacinthe"@fr,
+        "Giacinto"@it ;
+    :hasMembership [ schema:identifier "10070"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10134,
+        :12097 .
+
+:10071 a :SRPPPCrop ;
+    schema:name "Tabak"@de,
+        "Tabac"@fr,
+        "Tabacco"@it ;
+    :hasMembership [ schema:identifier "10071"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10072 a :SRPPPCrop ;
+    schema:name "Sojabohne"@de,
+        "Soja"@fr,
+        "Soia "@it ;
+    :hasMembership [ schema:identifier "10072"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10074 a :SRPPPCrop ;
+    schema:name "Buschbohne"@de,
+        "haricot nain"@fr,
+        "Fagiolo nano"@it ;
+    :hasMembership [ schema:identifier "10074"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10292 .
+
+:10075 a :SRPPPCrop ;
+    schema:name "Gemüsezwiebel"@de,
+        "oignon potager"@fr,
+        "Cipolle dolci"@it ;
+    :hasMembership [ schema:identifier "10075"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10031 .
+
+:10078 a :SRPPPCrop ;
+    schema:name "Speisezwiebel"@de,
+        "oignon (condiment)"@fr,
+        "Cipolle da tavola"@it ;
+    :hasMembership [ schema:identifier "10078"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10031 .
+
+cultivationtype:14 a :SRPPPCrop ;
+    schema:name "Getreide"@de,
+        "Céréales"@fr,
+        "Cereali"@it ;
+    :hasMembership [ schema:identifier "10080"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10081 a :SRPPPCrop ;
+    schema:name "Stangenbohne"@de,
+        "haricot à rames"@fr,
+        "Fagiolo rampicante"@it ;
+    :hasMembership [ schema:identifier "10081"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10292 .
+
+:10082 a :SRPPPCrop ;
+    schema:name "Patisson"@de,
+        "pâtisson"@fr,
+        "Patisson"@it ;
+    :hasMembership [ schema:identifier "10082"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10310 .
+
+:10083 a :SRPPPCrop ;
+    schema:name "Gerste"@de,
+        "Orge"@fr,
+        "Orzo"@it ;
+    :hasMembership [ schema:identifier "10083"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
+
+:10084 a :SRPPPCrop ;
+    schema:name "Peperoni "@de,
+        "poivron"@fr,
+        "Peperone"@it ;
+    :hasMembership [ schema:identifier "10084"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10029 .
+
+:10086 a :SRPPPCrop ;
+    schema:name "Kartoffeln"@de,
+        "pommes de terre"@fr,
+        "Patate"@it ;
+    :hasMembership [ schema:identifier "10086"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10088 a :SRPPPCrop ;
+    schema:name "Futterrübe"@de,
+        "Betterave fourragère"@fr,
+        "Barbabietola da foraggio"@it ;
+    :hasMembership [ schema:identifier "10088"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10046 .
+
+:10089 a :SRPPPCrop ;
+    schema:name "Zuckerrübe"@de,
+        "Betterave à sucre"@fr,
+        "Barbabietola da zucchero"@it ;
+    :hasMembership [ schema:identifier "10089"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10046 .
+
+:10090 a :SRPPPCrop ;
+    schema:name "Gladiole"@de,
+        "glaïeul"@fr,
+        "Gladiolo"@it ;
+    :hasMembership [ schema:identifier "10090"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10015,
+        :12097 .
+
+:10091 a :SRPPPCrop ;
+    schema:name "Walnuss"@de,
+        "noyer"@fr,
+        "Noce comune"@it ;
+    :hasMembership [ schema:identifier "10091"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10117 .
+
+:10093 a :SRPPPCrop ;
+    schema:name "Salate (Asteraceae)"@de,
+        "salades (Asteraceae)"@fr,
+        "Insalate (Asteracee)"@it ;
+    :hasMembership [ schema:identifier "10093"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9961 .
+
+:10095 a :SRPPPCrop ;
+    schema:name "Baumschule"@de,
+        "pépinière"@fr,
+        "Vivaio"@it ;
+    :hasMembership [ schema:identifier "10095"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:10096 a :SRPPPCrop ;
+    schema:name "Chrysantheme"@de,
+        "chrysanthème"@fr,
+        "Crisantemo"@it ;
+    :hasMembership [ schema:identifier "10096"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10015,
+        :12097 .
+
+:10097 a :SRPPPCrop ;
+    schema:name "Pelargonien"@de,
+        "géranium"@fr,
+        "Geranio"@it ;
+    :hasMembership [ schema:identifier "10097"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10021,
+        :12097 .
+
+:10098 a :SRPPPCrop ;
+    schema:name "Primeln"@de,
+        "primevères"@fr,
+        "Primule"@it ;
+    :hasMembership [ schema:identifier "10098"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10021,
+        :12097 .
+
+:10099 a :SRPPPCrop ;
+    schema:name "Azaleen"@de,
+        "azalée"@fr,
+        "Azalee"@it ;
+    :hasMembership [ schema:identifier "10099"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10100 .
+
+:10100 a :SRPPPCrop ;
+    schema:name "Rhododendron"@de,
+        "rhododendron"@fr,
+        "Rododendro"@it ;
+    :hasMembership [ schema:identifier "10100"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10108,
+        :12096 .
+
+:10101 a :SRPPPCrop ;
+    schema:name "Ziergehölze (ausserhalb Forst)"@de,
+        "arbustes d'ornement (hors forêt)"@fr,
+        "Arbusti ornamentali (al di fuori della foresta)"@it ;
+    :hasMembership [ schema:identifier "10101"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:10103 a :SRPPPCrop ;
+    schema:name "Kirschlorbeer"@de,
+        "laurier-cerise"@fr,
+        "Lauro ceraso"@it ;
+    :hasMembership [ schema:identifier "10103"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10108,
+        :12096 .
+
+:10104 a :SRPPPCrop ;
+    schema:name "Rosen"@de,
+        "rosier"@fr,
+        "Rose"@it ;
+    :hasMembership [ schema:identifier "10104"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:10109 a :SRPPPCrop ;
+    schema:name "Rosskastanie"@de,
+        "marronnier d'Inde"@fr,
+        "Ippocastano"@it ;
+    :hasMembership [ schema:identifier "10109"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10108,
+        :12096 .
+
+:10110 a :SRPPPCrop ;
+    schema:name "Blautanne"@de,
+        "sapin bleu"@fr,
+        "Abete del Colorado"@it ;
+    :hasMembership [ schema:identifier "10110"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10111,
+        :12096 .
+
+:10111 a :SRPPPCrop ;
+    schema:name "Nadelgehölze (Koniferen)"@de,
+        "conifères"@fr,
+        "Conifere"@it ;
+    :hasMembership [ schema:identifier "10111"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9952 .
+
+:10114 a :SRPPPCrop ;
+    schema:name "Ertragsreben"@de,
+        "vigne en production"@fr,
+        "Vite in produzione"@it ;
+    :hasMembership [ schema:identifier "10114"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9953 .
+
+:10115 a :SRPPPCrop ;
+    schema:name "Hopfen"@de,
+        "Houblon"@fr,
+        "Luppolo"@it ;
+    :hasMembership [ schema:identifier "10115"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10116 a :SRPPPCrop ;
+    schema:name "Ackerbohne"@de,
+        "féverole"@fr,
+        "Fava"@it ;
+    :hasMembership [ schema:identifier "10116"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10117 a :SRPPPCrop ;
+    schema:name "Nüsse"@de,
+        "noix"@fr,
+        "Noci"@it ;
+    :hasMembership [ schema:identifier "10117"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10260 .
+
+:10118 a :SRPPPCrop ;
+    schema:name "Sommerweizen"@de,
+        "Blé de printemps"@fr,
+        "Frumento primaverile"@it ;
+    :hasMembership [ schema:identifier "10118"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10164,
+        cultivationtype:491 .
+
+:10119 a :SRPPPCrop ;
+    schema:name "Triticale"@de,
+        "Triticale"@fr,
+        "Triticale"@it ;
+    :hasMembership [ schema:identifier "10119"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
+
+:10120 a :SRPPPCrop ;
+    schema:name "Roggen"@de,
+        "Seigle"@fr,
+        "Segale"@it ;
+    :hasMembership [ schema:identifier "10120"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
+
+:10121 a :SRPPPCrop ;
+    schema:name "Hafer"@de,
+        "Avoine"@fr,
+        "Avena"@it ;
+    :hasMembership [ schema:identifier "10121"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
+
+:10122 a :SRPPPCrop ;
+    schema:name "Korn (Dinkel)"@de,
+        "Épeautre"@fr,
+        "Spelta"@it ;
+    :hasMembership [ schema:identifier "10122"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10052,
+        cultivationtype:19 .
+
+:10124 a :SRPPPCrop ;
+    schema:name "Eiweisserbse"@de,
+        "pois protéagineux"@fr,
+        "Pisello proteico"@it ;
+    :hasMembership [ schema:identifier "10124"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10126 a :SRPPPCrop ;
+    schema:name "Zwetschge"@de,
+        "prunier (pruneau)"@fr,
+        "Prugno"@it ;
+    :hasMembership [ schema:identifier "10126"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10011 .
+
+:10127 a :SRPPPCrop ;
+    schema:name "Ribes Arten"@de,
+        "espèces de Ribes"@fr,
+        "Specie di ribes"@it ;
+    :hasMembership [ schema:identifier "10127"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10193 .
+
+:10128 a :SRPPPCrop ;
+    schema:name "Bohnen"@de,
+        "haricots"@fr,
+        "Fagioli"@it ;
+    :hasMembership [ schema:identifier "10128"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9957 .
+
+:10132 a :SRPPPCrop ;
+    schema:name "Einrichtungen und Geräte"@de,
+        "installations et outils"@fr,
+        "Installazioni e apparecchi"@it ;
+    :hasMembership [ schema:identifier "10132"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10203 .
+
+:10133 a :SRPPPCrop ;
+    schema:name "Frässaaten"@de,
+        "semis après travail superficiel"@fr,
+        "Semine dopo la fresatura"@it ;
+    :hasMembership [ schema:identifier "10133"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10198 .
+
+:10135 a :SRPPPCrop ;
+    schema:name "Wiesen und Weiden"@de,
+        "Prairies et pâturages"@fr,
+        "Prati e pascoli"@it ;
+    :hasMembership [ schema:identifier "10135"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10136 a :SRPPPCrop ;
+    schema:name "Blaudistel"@de,
+        "chardon bleu"@fr,
+        "Cardo azzurro"@it ;
+    :hasMembership [ schema:identifier "10136"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10015,
+        :12097 .
+
+:10137 a :SRPPPCrop ;
+    schema:name "Sonnenblume"@de,
+        "Tournesol"@fr,
+        "Girasole"@it ;
+    :hasMembership [ schema:identifier "10137"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10142 a :SRPPPCrop ;
+    schema:name "Mulchsaaten"@de,
+        "semis sous litière"@fr,
+        "Semine a lattiera"@it ;
+    :hasMembership [ schema:identifier "10142"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10198 .
+
+:10143 a :SRPPPCrop ;
+    schema:name "Sommergerste"@de,
+        "orge de printemps"@fr,
+        "Orzo primaverile"@it ;
+    :hasMembership [ schema:identifier "10143"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10083,
+        :10164 .
+
+:10144 a :SRPPPCrop ;
+    schema:name "Sommerhafer"@de,
+        "Avoine de printemps"@fr,
+        "Avena primaverile"@it ;
+    :hasMembership [ schema:identifier "10144"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10121,
+        :10164 .
+
+:10147 a :SRPPPCrop ;
+    schema:name "Gerbera"@de,
+        "Gerbera"@en,
+        "gerbera"@fr,
+        "Gerbera"@it ;
+    :hasMembership [ schema:identifier "10147"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10015,
+        :12097 .
+
+:10150 a :SRPPPCrop ;
+    schema:name "Luzerne"@de,
+        "Luzerne"@fr,
+        "Erba medica"@it ;
+    :hasMembership [ schema:identifier "10150"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10151 a :SRPPPCrop ;
+    schema:name "Kleegrasmischung (Kunstwiese)"@de,
+        "mélange trèfles-graminées (prairie arificielle)"@fr,
+        "Miscela trifoglio-graminacee (prati artificiali)"@it ;
+    :hasMembership [ schema:identifier "10151"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10135 .
+
+:10152 a :SRPPPCrop ;
+    schema:name "Buchsbäume (Buxus)"@de,
+        "buis (Buxus)"@fr,
+        "Bosso (Buxus)"@it ;
+    :hasMembership [ schema:identifier "10152"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10108,
+        :12096 .
+
+:10155 a :SRPPPCrop ;
+    schema:name "Winterraps"@de,
+        "Colza d'automne"@fr,
+        "Colza autunnale"@it ;
+    :hasMembership [ schema:identifier "10155"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10008 .
+
+:10157 a :SRPPPCrop ;
+    schema:name "Fichte"@de,
+        "épicéa"@fr,
+        "Abete rosso"@it ;
+    :hasMembership [ schema:identifier "10157"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10111 .
+
+:10158 a :SRPPPCrop ;
+    schema:name "Tulpe"@de,
+        "tulipe"@fr,
+        "Tulipano"@it ;
+    :hasMembership [ schema:identifier "10158"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12097 .
+
+:10159 a :SRPPPCrop ;
+    schema:name "Gewürz- und Medizinalkräuter"@de,
+        "herbes aromatiques et médicinales"@fr,
+        "Erbe aromatiche e medicinali"@it ;
+    :hasMembership [ schema:identifier "10159"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10162 a :SRPPPCrop ;
+    schema:name "Dahlien"@de,
+        "dahlia"@fr,
+        "Dalie"@it ;
+    :hasMembership [ schema:identifier "10162"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10039 .
+
+:10164 a :SRPPPCrop ;
+    schema:name "Sommergetreide"@de,
+        "Céréales de printemps"@fr,
+        "Cereali primaverili"@it ;
+    :hasMembership [ schema:identifier "10164"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
+
+:10171 a :SRPPPCrop ;
+    schema:name "Suppensellerie"@de,
+        "céleri-pomme pour bouillon"@fr,
+        "Sedano da condimento"@it ;
+    :hasMembership [ schema:identifier "10171"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9946 .
+
+:10172 a :SRPPPCrop ;
+    schema:name "allg. Ökologische Ausgleichsflächen (gemäss DZV)"@de,
+        "domaine surfaces de compensation écologique (selon OPD)"@fr,
+        "Superfici di compensazione ecologica in generale (conformemente OPD)"@it ;
+    :hasMembership [ schema:identifier "10172"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10176 a :SRPPPCrop ;
+    schema:name "Ein- und zweijährige Zierpflanzen"@de,
+        "plantes ornementales annuelles et bisannuelles"@fr,
+        "Piante ornamentali annuali e biennali"@it ;
+    :hasMembership [ schema:identifier "10176"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:10178 a :SRPPPCrop ;
+    schema:name "Böschungen und Grünstreifen entlang von Verkehrswegen (gem. ChemRRV)"@de,
+        "talus et bandes vertes le long des voies de communication (selon ORRChim)"@fr,
+        "Scarpate e strisce verdi lungo le vie di comunicazione (conformemente ORRPChim)"@it ;
+    :hasMembership [ schema:identifier "10178"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12147 .
+
+:10179 a :SRPPPCrop ;
+    schema:name "Auf und an National- und Kantonsstrassen (gem. ChemRRV) "@de,
+        "le long des routes nationales et cantonales  (selon ORRChim) "@fr,
+        "Lungo le strade nazionali e cantonali (conformemente ORRPChim) "@it ;
+    :hasMembership [ schema:identifier "10179"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12147 .
+
+:10180 a :SRPPPCrop ;
+    schema:name "Wintertriticale"@de,
+        "Triticale d'automne"@fr,
+        "Triticale autunnale"@it ;
+    :hasMembership [ schema:identifier "10180"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10119,
+        cultivationtype:19 .
+
+:10186 a :SRPPPCrop ;
+    schema:name "Küchenkräuter"@de,
+        "fines herbes"@fr,
+        "Erbette da cucina"@it ;
+    :hasMembership [ schema:identifier "10186"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10187 a :SRPPPCrop ;
+    schema:name "Lupinen"@de,
+        "Lupin"@fr,
+        "Lupini"@it ;
+    :hasMembership [ schema:identifier "10187"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10188 a :SRPPPCrop ;
+    schema:name "Ölkürbisse"@de,
+        "courges oléagineuses"@fr,
+        "Zucca da olio"@it ;
+    :hasMembership [ schema:identifier "10188"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10017 .
+
+:10190 a :SRPPPCrop ;
+    schema:name "Zierpflanzen allg."@de,
+        "culture ornementale en général"@fr,
+        "Coltivazione piante ornam. in generale "@it ;
+    :hasMembership [ schema:identifier "10190"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10192 a :SRPPPCrop ;
+    schema:name "allg. Obstbau"@de,
+        "domaine app. arboriculture"@fr ;
+    :hasMembership [ schema:identifier "10192"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10193 a :SRPPPCrop ;
+    schema:name "allg. Beerenbau"@de,
+        "domaine app. baies"@fr ;
+    :hasMembership [ schema:identifier "10193"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10194 a :SRPPPCrop ;
+    schema:name "allg. Weinbau"@de,
+        "domaine app. vignes"@fr ;
+    :hasMembership [ schema:identifier "10194"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10195 a :SRPPPCrop ;
+    schema:name "allg. Gemüsebau"@de,
+        "domaine app. maraîchère"@fr ;
+    :hasMembership [ schema:identifier "10195"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10198 a :SRPPPCrop ;
+    schema:name "Anbautechnik"@de,
+        "techniques culturales"@fr,
+        "Tecnica di coltivazione"@it ;
+    :hasMembership [ schema:identifier "10198"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10202 a :SRPPPCrop ;
+    schema:name "allg. Forstwirtschaft"@de,
+        "domaine app. sylviculture"@fr ;
+    :hasMembership [ schema:identifier "10202"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10203 a :SRPPPCrop ;
+    schema:name "Allgemein Vorratsschutz"@de,
+        "protection des récoltes"@fr,
+        "Protezione delle scorte (in generale)"@it ;
+    :hasMembership [ schema:identifier "10203"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10201 .
+
+:10210 a :SRPPPCrop ;
+    schema:name "Blattkohle"@de,
+        "choux à feuilles"@fr,
+        "Cavoli fogliacei"@it ;
+    :hasMembership [ schema:identifier "10210"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10020 .
+
+:10218 a :SRPPPCrop ;
+    schema:name "Schwarzer Holunder"@de,
+        "Elder berry"@en,
+        "grand sureau"@fr,
+        "Sambuco nero"@it ;
+    :hasMembership [ schema:identifier "10218"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10193 .
+
+:10225 a :SRPPPCrop ;
+    schema:name "Lein"@de,
+        "Lin"@fr,
+        "Lino"@it ;
+    :hasMembership [ schema:identifier "10225"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10227 a :SRPPPCrop ;
+    schema:name "Offene Ackerfläche"@de,
+        "terres ouvertes"@fr,
+        "Superficie coltiva aperta"@it ;
+    :hasMembership [ schema:identifier "10227"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10172 .
+
+:10230 a :SRPPPCrop ;
+    schema:name "Grünfläche"@de,
+        "surfaces herbagères"@fr,
+        "Superficie inerbita"@it ;
+    :hasMembership [ schema:identifier "10230"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10232 a :SRPPPCrop ;
+    schema:name "Johanniskraut"@de,
+        "Saint-John's-wort"@en,
+        "millepertuis"@fr,
+        "Iperico"@it ;
+    :hasMembership [ schema:identifier "10232"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10159 .
+
+:10236 a :SRPPPCrop ;
+    schema:name "Grasbestände zur Saatgutproduktion"@de,
+        "Graminées pour la production de semences"@fr,
+        "Graminacee per la produzione di sementi"@it ;
+    :hasMembership [ schema:identifier "10236"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10237 a :SRPPPCrop ;
+    schema:name "Meerrettich"@de,
+        "raifort"@fr,
+        "Rafano rusticana / Ramolaccio"@it ;
+    :hasMembership [ schema:identifier "10237"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10238 a :SRPPPCrop ;
+    schema:name "Mohn"@de,
+        "pavot"@fr,
+        "Papavero"@it ;
+    :hasMembership [ schema:identifier "10238"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10242 a :SRPPPCrop ;
+    schema:name "Dill"@de,
+        "dill"@en,
+        "aneth"@fr,
+        "Aneto"@it ;
+    :hasMembership [ schema:identifier "10242"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10243 a :SRPPPCrop ;
+    schema:name "Baldrian"@de,
+        "Valerian"@en,
+        "valériane"@fr,
+        "Valeriana"@it ;
+    :hasMembership [ schema:identifier "10243"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10244 a :SRPPPCrop ;
+    schema:name "Kümmel"@de,
+        "caraway"@en,
+        "carvi"@fr,
+        "Carvi"@it ;
+    :hasMembership [ schema:identifier "10244"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10245 a :SRPPPCrop ;
+    schema:name "Rucola"@de,
+        "rocket"@en,
+        "roquette"@fr,
+        "Rucola"@it ;
+    :hasMembership [ schema:identifier "10245"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10248 a :SRPPPCrop ;
+    schema:name "Trockenreis"@de,
+        "Riz semis sur terrain sec"@fr,
+        "Riso seminato su terreno asciutto"@it ;
+    :hasMembership [ schema:identifier "10248"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10251 a :SRPPPCrop ;
+    schema:name "Baby-Leaf"@de,
+        "Baby-Leaf"@fr,
+        "Baby-Leaf"@it ;
+    :hasMembership [ schema:identifier "10251"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10252 a :SRPPPCrop ;
+    schema:name "Färberdistel (Saflor)"@de,
+        "Safflower"@en,
+        "Carthame"@fr,
+        "Cartamo"@it ;
+    :hasMembership [ schema:identifier "10252"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:10253 a :SRPPPCrop ;
+    schema:name "Pastinake"@de,
+        "Panais"@fr,
+        "Pastinaca"@it ;
+    :hasMembership [ schema:identifier "10253"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9951 .
+
+:10254 a :SRPPPCrop ;
+    schema:name "Medizinalkräuter"@de,
+        "plantes médicinales"@fr,
+        "erbe medicinali"@it ;
+    :hasMembership [ schema:identifier "10254"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10256 a :SRPPPCrop ;
+    schema:name "Zierkürbis"@de,
+        "courge d'ornement"@fr,
+        "Zucca ornamentale"@it ;
+    :hasMembership [ schema:identifier "10256"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12097 .
+
+:10258 a :SRPPPCrop ;
+    schema:name "Einlegegurken"@de,
+        "cornichons"@fr,
+        "cetrioli per conserva"@it ;
+    :hasMembership [ schema:identifier "10258"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10016 .
+
+:10260 a :SRPPPCrop ;
+    schema:name "Hartschalenobst"@de,
+        "noix en général"@fr,
+        "Frutta con guscio"@it ;
+    :hasMembership [ schema:identifier "10260"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10192 .
+
+:10261 a :SRPPPCrop ;
+    schema:name "Holzpaletten, Packholz, Stammholz"@de,
+        "Palette en bois, bois d'emballage, bois en général"@fr,
+        "Palette in legno, legno da imballaggio, legno non lavorato"@it ;
+    :hasMembership [ schema:identifier "10261"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10264 a :SRPPPCrop ;
+    schema:name "Speisekürbisse (ungeniessbare Schale)"@de,
+        "courges (écorce non comestible)"@fr,
+        "Zucche (buccia non commestibile)"@it ;
+    :hasMembership [ schema:identifier "10264"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10017 .
+
+:10266 a :SRPPPCrop ;
+    schema:name "Rondini"@de,
+        "rondini"@fr,
+        "Rondini"@it ;
+    :hasMembership [ schema:identifier "10266"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10310 .
+
+:10267 a :SRPPPCrop ;
+    schema:name "Wolliger Fingerhut"@de,
+        "Grecian foxglove"@en,
+        "digitale lanifère"@fr,
+        "Digitale lanata"@it ;
+    :hasMembership [ schema:identifier "10267"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10254 .
+
+:10268 a :SRPPPCrop ;
+    schema:name "Melisse"@de,
+        "mélisse"@fr,
+        "Melissa"@it ;
+    :hasMembership [ schema:identifier "10268"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:10270 a :SRPPPCrop ;
+    schema:name "Minze"@de,
+        "Mint"@en,
+        "menthe"@fr,
+        "Menta"@it ;
+    :hasMembership [ schema:identifier "10270"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10271 a :SRPPPCrop ;
+    schema:name "Emmer"@de,
+        "Amidonnier"@fr,
+        "Farro"@it ;
+    :hasMembership [ schema:identifier "10271"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10052,
+        cultivationtype:19 .
+
+:10272 a :SRPPPCrop ;
+    schema:name "Kardy"@de,
+        "Cardy"@en,
+        "cardon"@fr,
+        "Cardo"@it ;
+    :hasMembership [ schema:identifier "10272"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9961 .
+
+:10274 a :SRPPPCrop ;
+    schema:name "Rosmarin"@de,
+        "Rosemary"@en,
+        "romarin"@fr,
+        "Rosmarino"@it ;
+    :hasMembership [ schema:identifier "10274"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10277 a :SRPPPCrop ;
+    schema:name "Olive"@de,
+        "Olive"@en,
+        "olivier"@fr,
+        "Olivo"@it ;
+    :hasMembership [ schema:identifier "10277"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10192 .
+
+:10279 a :SRPPPCrop ;
+    schema:name "Verarbeitungsräume"@de,
+        "locaux de transformation"@fr,
+        "Locali per la lavorazione"@it ;
+    :hasMembership [ schema:identifier "10279"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10203 .
+
+:10280 a :SRPPPCrop ;
+    schema:name "Lagerräume"@de,
+        "entrepôts"@fr,
+        "Depositi"@it ;
+    :hasMembership [ schema:identifier "10280"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10203 .
+
+:10281 a :SRPPPCrop ;
+    schema:name "Wurzelpetersilie"@de,
+        "Turnip-rooted parsley"@en,
+        "persil à grosse racine"@fr,
+        "Prezzemolo tuberoso"@it ;
+    :hasMembership [ schema:identifier "10281"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9951 .
+
+:10283 a :SRPPPCrop ;
+    schema:name "Barbarakraut"@de,
+        "Barbarée du printemps"@fr,
+        "Erba di Santa Barbara vernale"@it ;
+    :hasMembership [ schema:identifier "10283"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10284 a :SRPPPCrop ;
+    schema:name "Blumenkohle"@de,
+        "Flowering brassica"@en,
+        "choux (développement de l'inflorescence)"@fr,
+        "Cavoli a infiorescenza"@it ;
+    :hasMembership [ schema:identifier "10284"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10020 .
+
+:10285 a :SRPPPCrop ;
+    schema:name "Andenbeere"@de,
+        "cape gooseberry"@en,
+        "coqueret du Pérou"@fr,
+        "Alchechengio"@it ;
+    :hasMembership [ schema:identifier "10285"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10026 .
+
+:10286 a :SRPPPCrop ;
+    schema:name "Pepino"@de,
+        "pear melon"@en,
+        "poire melon"@fr,
+        "Pepino"@it ;
+    :hasMembership [ schema:identifier "10286"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10026 .
+
+:10288 a :SRPPPCrop ;
+    schema:name "Mini-Kiwi"@de,
+        "mini-Kiwi (Kiwaï)"@fr,
+        "Mini-Kiwi"@it ;
+    :hasMembership [ schema:identifier "10288"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10193 .
+
+:10290 a :SRPPPCrop ;
+    schema:name "Weihnachtsbäume"@de,
+        "arbres de Noël"@fr,
+        "Alberi di Natale"@it ;
+    :hasMembership [ schema:identifier "10290"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10111,
+        :12096 .
+
+:10292 a :SRPPPCrop ;
+    schema:name "Bohnen mit Hülsen"@de,
+        "haricots non écossés"@fr,
+        "Fagioli con baccello"@it ;
+    :hasMembership [ schema:identifier "10292"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10128 .
+
+:10293 a :SRPPPCrop ;
+    schema:name "Bohnen ohne Hülsen"@de,
+        "haricots écossés"@fr,
+        "Fagioli senza baccello"@it ;
+    :hasMembership [ schema:identifier "10293"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10128 .
+
+:10294 a :SRPPPCrop ;
+    schema:name "Erbsen ohne Hülsen"@de,
+        "pois écossés"@fr,
+        "Piselli senza baccello"@it ;
+    :hasMembership [ schema:identifier "10294"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10034 .
+
+:10295 a :SRPPPCrop ;
+    schema:name "Erbsen mit Hülsen"@de,
+        "pois non écossés"@fr,
+        "Piselli con baccello"@it ;
+    :hasMembership [ schema:identifier "10295"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10034 .
+
+:10296 a :SRPPPCrop ;
+    schema:name "Birne / Nashi"@de,
+        "poirier / nashi"@fr,
+        "Pero / Nashi"@it ;
+    :hasMembership [ schema:identifier "10296"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9959 .
+
+:10297 a :SRPPPCrop ;
+    schema:name "Rubus Arten"@de,
+        "espèces de Rubus"@fr,
+        "Specie di rubus"@it ;
+    :hasMembership [ schema:identifier "10297"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10193 .
+
+:10298 a :SRPPPCrop ;
+    schema:name "Speisekohlrüben"@de,
+        "rave de Brassica rapa et B. napus"@fr,
+        "Rapa di Brassica rapa e B. napus"@it ;
+    :hasMembership [ schema:identifier "10298"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10299 a :SRPPPCrop ;
+    schema:name "Brassica rapa-Rüben"@de,
+        "rave de Brassica rapa "@fr,
+        "Rapa di Brassica rapa "@it ;
+    :hasMembership [ schema:identifier "10299"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10298 .
+
+:10300 a :SRPPPCrop ;
+    schema:name "Brassica napus-Rüben"@de,
+        "rave de Brassica napus"@fr,
+        "Rapa di Brassica napus"@it ;
+    :hasMembership [ schema:identifier "10300"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10298 .
+
+:10303 a :SRPPPCrop ;
+    schema:name "Bodenkohlrabi"@de,
+        "rutabaga"@fr,
+        "Cavolo navone"@it ;
+    :hasMembership [ schema:identifier "10303"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10300 .
+
+:10304 a :SRPPPCrop ;
+    schema:name "Lactuca-Salate"@de,
+        "salades lactuca"@fr,
+        "Insalate del genere Lactuca"@it ;
+    :hasMembership [ schema:identifier "10304"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10093 .
+
+:10305 a :SRPPPCrop ;
+    schema:name "Asia-Salate (Brassicaceae)"@de,
+        "salades Asia (Brassicaceae)"@fr,
+        "Insalate asiatiche (Brassicacee)"@it ;
+    :hasMembership [ schema:identifier "10305"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10306 a :SRPPPCrop ;
+    schema:name "Mangold"@de,
+        "bette"@fr,
+        "Bietola"@it ;
+    :hasMembership [ schema:identifier "10306"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10068 .
+
+:10307 a :SRPPPCrop ;
+    schema:name "Basilikum"@de,
+        "basilic"@fr,
+        "Basilico"@it ;
+    :hasMembership [ schema:identifier "10307"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10308 a :SRPPPCrop ;
+    schema:name "Salbei"@de,
+        "sauge"@fr,
+        "Salvia"@it ;
+    :hasMembership [ schema:identifier "10308"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10309 a :SRPPPCrop ;
+    schema:name "Bohnenkraut"@de,
+        "sarriette"@fr,
+        "Santoreggia"@it ;
+    :hasMembership [ schema:identifier "10309"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10310 a :SRPPPCrop ;
+    schema:name "Kürbisse mit geniessbarer Schale"@de,
+        "courges à peau comestible"@fr,
+        "Zucche con buccia commestibile"@it ;
+    :hasMembership [ schema:identifier "10310"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10017 .
+
+:10311 a :SRPPPCrop ;
+    schema:name "Liebstöckel"@de,
+        "livèche"@fr,
+        "Levistico"@it ;
+    :hasMembership [ schema:identifier "10311"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10312 a :SRPPPCrop ;
+    schema:name "Estragon"@de,
+        "estragon"@fr,
+        "Dragoncello"@it ;
+    :hasMembership [ schema:identifier "10312"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:10314 a :SRPPPCrop ;
+    schema:name "Romanesco"@de,
+        "romanesco"@fr,
+        "Romanesco"@it ;
+    :hasMembership [ schema:identifier "10314"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10284 .
+
+:10315 a :SRPPPCrop ;
+    schema:name "Pak-Choi"@de,
+        "pakchoi"@fr,
+        "Pak-Choi"@it ;
+    :hasMembership [ schema:identifier "10315"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10210 .
+
+:10316 a :SRPPPCrop ;
+    schema:name "Kopfkohle"@de,
+        "choux pommés"@fr,
+        "Cavoli a testa"@it ;
+    :hasMembership [ schema:identifier "10316"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10020 .
+
+:10317 a :SRPPPCrop ;
+    schema:name "Stielmus"@de,
+        "navet à tondre"@fr,
+        "Cavoli / rape da taglio"@it ;
+    :hasMembership [ schema:identifier "10317"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10210 .
+
+:10318 a :SRPPPCrop ;
+    schema:name "Cima di Rapa"@de,
+        "cima di rapa"@fr,
+        "Cima di rapa"@it ;
+    :hasMembership [ schema:identifier "10318"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10319 a :SRPPPCrop ;
+    schema:name "Brunnenkresse"@de,
+        "cresson de fontaine"@fr,
+        "Crescione acquatico"@it ;
+    :hasMembership [ schema:identifier "10319"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:10320 a :SRPPPCrop ;
+    schema:name "Kopfsalate"@de,
+        "laitues pommées"@fr,
+        "Insalate cappuccio"@it ;
+    :hasMembership [ schema:identifier "10320"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10304 .
+
+:10323 a :SRPPPCrop ;
+    schema:name "Schnittsalat"@de,
+        "laitue à tondre"@fr,
+        "Lattuga da taglio"@it ;
+    :hasMembership [ schema:identifier "10323"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9944 .
+
+:10325 a :SRPPPCrop ;
+    schema:name "Endivien und Blattzichorien"@de,
+        "chicorée pommée et chicorée à feuilles"@fr,
+        "Indivia e cicoria da foglia"@it ;
+    :hasMembership [ schema:identifier "10325"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10093 .
+
+:10326 a :SRPPPCrop ;
+    schema:name "Radicchio- und Cicorino-Typen"@de,
+        "types de radicchio/trévises et cicorino"@fr,
+        "Tipi di radicchio e cicorino"@it ;
+    :hasMembership [ schema:identifier "10326"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10325 .
+
+:10327 a :SRPPPCrop ;
+    schema:name "Löwenzahn"@de,
+        "dent-de-lion"@fr,
+        "Dente di leone"@it ;
+    :hasMembership [ schema:identifier "10327"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10093 .
+
+:10328 a :SRPPPCrop ;
+    schema:name "Krautstiel"@de,
+        "Swiss chard "@en,
+        "bette à côte"@fr,
+        "Costa"@it ;
+    :hasMembership [ schema:identifier "10328"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10306 .
+
+:10329 a :SRPPPCrop ;
+    schema:name "Schnittmangold"@de,
+        "bette à tondre"@fr,
+        "Bietola da taglio"@it ;
+    :hasMembership [ schema:identifier "10329"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10306 .
+
+:10330 a :SRPPPCrop ;
+    schema:name "Puffbohne"@de,
+        "fève"@fr,
+        "Fave"@it ;
+    :hasMembership [ schema:identifier "10330"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9957 .
+
+:10332 a :SRPPPCrop ;
+    schema:name "Cherrytomaten"@de,
+        "tomate-cerise"@fr,
+        "Pomodoro ciliegia"@it ;
+    :hasMembership [ schema:identifier "10332"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10027 .
+
+:10333 a :SRPPPCrop ;
+    schema:name "Rispentomaten"@de,
+        "tomate à grappe"@fr,
+        "Pomodoro ramato"@it ;
+    :hasMembership [ schema:identifier "10333"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10027 .
+
+:10335 a :SRPPPCrop ;
+    schema:name "Tomaten Spezialitäten"@de,
+        "tomates, spécialités"@fr,
+        "Varietà particolari di pomodoro"@it ;
+    :hasMembership [ schema:identifier "10335"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10027 .
+
+:10336 a :SRPPPCrop ;
+    schema:name "Gemüsepaprika"@de,
+        "poivron doux"@fr,
+        "Peperone dolce"@it ;
+    :hasMembership [ schema:identifier "10336"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10029 .
+
+:10337 a :SRPPPCrop ;
+    schema:name "Bundzwiebeln"@de,
+        "oignons en botte"@fr,
+        "Cipollotti a mazzi"@it ;
+    :hasMembership [ schema:identifier "10337"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10031 .
+
+:10338 a :SRPPPCrop ;
+    schema:name "Spargelgewächse (Asparagaceae)"@de,
+        "asparagacées (Asparagaceae)"@fr,
+        "Asparagacee (Asparagaceae)"@it ;
+    :hasMembership [ schema:identifier "10338"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10339 a :SRPPPCrop ;
+    schema:name "Süssgräser (Poaceae)"@de,
+        "poacées (Gramineae)"@fr,
+        "Poacee (Graminaceae)"@it ;
+    :hasMembership [ schema:identifier "10339"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10340 a :SRPPPCrop ;
+    schema:name "Lippenblütler (Labiatae)"@de,
+        "lamiacées (Labiatae)"@fr,
+        "Lamiacee (Labiatae)"@it ;
+    :hasMembership [ schema:identifier "10340"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:10341 a :SRPPPCrop ;
+    schema:name "Stachys"@de,
+        "crosnes du japon"@fr,
+        "Tuberina"@it ;
+    :hasMembership [ schema:identifier "10341"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10340 .
+
+:10342 a :SRPPPCrop ;
+    schema:name "Portulak"@de,
+        "pourpier"@fr,
+        "Portulaca"@it ;
+    :hasMembership [ schema:identifier "10342"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10025 .
+
+:10346 a :SRPPPCrop ;
+    schema:name "Speise- und Futterkartoffeln"@de,
+        "pommes de terre de consommation et fourragère"@fr,
+        "Patate da tavola e da foraggio"@it ;
+    :hasMembership [ schema:identifier "10346"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10086 .
+
+:11321 a :SRPPPCrop ;
+    schema:name "Hartweizen"@de,
+        "Blé dur"@fr,
+        "Grano duro"@it ;
+    :hasMembership [ schema:identifier "11321"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:492 .
+
+:11325 a :SRPPPCrop ;
+    schema:name "Klee zur Saatgutproduktion"@de,
+        "Trèfles pour la production de semences"@fr,
+        "Trifoglio per la produzione di sementi"@it ;
+    :hasMembership [ schema:identifier "11325"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:11326 a :SRPPPCrop ;
+    schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
+        "pommes de terre pour la production de plants"@fr,
+        "Patate per la produzione di tuberi-seme"@it ;
+    :hasMembership [ schema:identifier "11326"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10086 .
+
+:11335 a :SRPPPCrop ;
+    schema:name "Liliengewächse (Zierpflanzen)"@de,
+        "liliacées (plantes ornementales)"@fr,
+        "Liliacee (pianti ornamentali)"@it ;
+    :hasMembership [ schema:identifier "11335"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12097 .
+
+:11393 a :SRPPPCrop ;
+    schema:name "Sorghum"@de,
+        "Sorgho commun"@fr,
+        "Sorgo"@it ;
+    :hasMembership [ schema:identifier "11393"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
+:11816 a :SRPPPCrop ;
+    schema:name "Kerbel"@de,
+        "cerfeuil"@fr,
+        "Cerfoglio"@it ;
+    :hasMembership [ schema:identifier "11816"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:11817 a :SRPPPCrop ;
+    schema:name "Thymian"@de,
+        "thym"@fr,
+        "Timo"@it ;
+    :hasMembership [ schema:identifier "11817"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:11819 a :SRPPPCrop ;
+    schema:name "Koriander"@de,
+        "coriandre"@fr,
+        "Coriandolo"@it ;
+    :hasMembership [ schema:identifier "11819"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:11820 a :SRPPPCrop ;
+    schema:name "Ysop"@de,
+        "Hysope"@fr,
+        "Issopo"@it ;
+    :hasMembership [ schema:identifier "11820"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:11877 a :SRPPPCrop ;
+    schema:name "Brachland"@de,
+        "friche"@fr,
+        "Terreno incolto"@it ;
+    :hasMembership [ schema:identifier "11877"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:11878 a :SRPPPCrop ;
+    schema:name "Humusdeponie"@de,
+        "dépôt de terre végétale"@fr,
+        "Deposito di terreno vegetale"@it ;
+    :hasMembership [ schema:identifier "11878"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:11984 a :SRPPPCrop ;
+    schema:name "Anemone"@de,
+        "anémone"@fr,
+        "Anemone"@it ;
+    :hasMembership [ schema:identifier "11984"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:11985 a :SRPPPCrop ;
+    schema:name "Ranunkel"@de,
+        "ranunculus"@fr,
+        "ranuncolo"@it ;
+    :hasMembership [ schema:identifier "11985"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12066 a :SRPPPCrop ;
+    schema:name "Obstbau allg. "@de,
+        "arboriculture en général"@fr,
+        "Frutticoltura in generale"@it ;
+    :hasMembership [ schema:identifier "12066"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12067 a :SRPPPCrop ;
+    schema:name "Beerenbau allg. "@de,
+        "culture des baies en général"@fr,
+        "Coltivazione di bacche in generale"@it ;
+    :hasMembership [ schema:identifier "12067"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12068 a :SRPPPCrop ;
+    schema:name "Gemüsebau allg. "@de,
+        "culture maraîchère en général"@fr,
+        "Orticoltura in generale"@it ;
+    :hasMembership [ schema:identifier "12068"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12069 a :SRPPPCrop ;
+    schema:name "Feldbau allg. "@de,
+        "grande culture en général"@fr,
+        "Campicoltura in generale"@it ;
+    :hasMembership [ schema:identifier "12069"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12096 a :SRPPPCrop ;
+    schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
+        "arbres et arbustes (hors fôret)"@fr,
+        "Alberi e arbusti (al di fuori della foresta)"@it ;
+    :hasMembership [ schema:identifier "12096"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:12097 a :SRPPPCrop ;
+    schema:name "Blumenkulturen und Grünpflanzen"@de,
+        "cultures florales et plantes vertes"@fr,
+        "Colture da fiore e piante verdi"@it ;
+    :hasMembership [ schema:identifier "12097"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:12098 a :SRPPPCrop ;
+    schema:name "Blumenzwiebeln und Blumenknollen"@de,
+        "bulbes ornementaux"@fr,
+        "Bulbi ornamentali"@it ;
+    :hasMembership [ schema:identifier "12098"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12147 a :SRPPPCrop ;
+    schema:name "Nichtkulturland allg."@de,
+        "domaine non agricole en général"@fr,
+        "Superfici non coltive in generale"@it ;
+    :hasMembership [ schema:identifier "12147"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12464 a :SRPPPCrop ;
+    schema:name "Wald"@de,
+        "forêt"@fr,
+        "Bosco"@it ;
+    :hasMembership [ schema:identifier "12464"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12465 .
+
+:12465 a :SRPPPCrop ;
+    schema:name "Forstwirtschaft allg."@de,
+        "sylviculture en général"@fr,
+        "Selvicoltura in generale"@it ;
+    :hasMembership [ schema:identifier "12465"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12507 a :SRPPPCrop ;
+    schema:name "Römische Kamille"@de,
+        "lat. Chamaemelum nobile"@en,
+        "Camomille romaine"@fr,
+        "Camomilla romana"@it ;
+    :hasMembership [ schema:identifier "12507"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:12626 a :SRPPPCrop ;
+    schema:name "Majoran"@de,
+        "Marjoram"@en,
+        "marjolaine"@fr,
+        "maggiorana "@it ;
+    :hasMembership [ schema:identifier "12626"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12627 a :SRPPPCrop ;
+    schema:name "Oregano"@de,
+        "Oregano"@en,
+        "origan"@fr,
+        "origano"@it ;
+    :hasMembership [ schema:identifier "12627"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12628 a :SRPPPCrop ;
+    schema:name "Rosenwurz"@de,
+        "Rhodiola rosea"@en,
+        "Orpin rose"@fr,
+        "Rhodiola rosea"@it ;
+    :hasMembership [ schema:identifier "12628"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12629 a :SRPPPCrop ;
+    schema:name "Traubensilberkerze"@de,
+        "actaea racemosa"@en,
+        "actée à grappe"@fr,
+        "actaea racemosa"@it ;
+    :hasMembership [ schema:identifier "12629"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12630 a :SRPPPCrop ;
+    schema:name "Spitzwegerich"@de,
+        "plantago lanceolata"@en,
+        "plantain lancéolé"@fr,
+        "piantaggine lanciuola"@it ;
+    :hasMembership [ schema:identifier "12630"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12689 a :SRPPPCrop ;
+    schema:name "Linse"@de,
+        "lentille"@fr,
+        "Lenticchia"@it ;
+    :hasMembership [ schema:identifier "12689"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9957 .
+
+:12829 a :SRPPPCrop ;
+    schema:name "Schwarze Apfelbeere"@de,
+        "aronie noire"@fr,
+        "Aronia nera"@it ;
+    :hasMembership [ schema:identifier "12829"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10193 .
+
+:12891 a :SRPPPCrop ;
+    schema:name "Erntegut"@de,
+        "denrée stockée"@fr,
+        "Raccolto stoccato"@it ;
+    :hasMembership [ schema:identifier "12891"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12970 a :SRPPPCrop ;
+    schema:name "Gewürzfenchel"@de,
+        "fenouil aromatique"@fr,
+        "Finocchio aromatico"@it ;
+    :hasMembership [ schema:identifier "12970"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:12999 a :SRPPPCrop ;
+    schema:name "leere Lagerräume"@de,
+        "Êntrepôts vides"@fr,
+        "Locali di stoccaggio vuoti"@it ;
+    :hasMembership [ schema:identifier "12999"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:13000 a :SRPPPCrop ;
+    schema:name "leere Produktionsräume"@de,
+        "Locaux de production vides"@fr,
+        "Locali di produzione vuoti"@it ;
+    :hasMembership [ schema:identifier "13000"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:13001 a :SRPPPCrop ;
+    schema:name "Tabak produzierende Betriebe"@de,
+        "Les exploitations tabacoles"@fr,
+        "Aziende produttrici di tabacco"@it ;
+    :hasMembership [ schema:identifier "13001"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:13002 a :SRPPPCrop ;
+    schema:name "leere Verarbeitungsräume"@de,
+        "Locaux de transformation vides"@fr,
+        "Locali per la lavorazione vuoti"@it ;
+    :hasMembership [ schema:identifier "13002"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:13238 a :SRPPPCrop ;
+    schema:name "Lager- und Produktionsräume allg."@de,
+        "Lager- und Produktionsräume allg."@en,
+        "Lager- und Produktionsräume allg."@fr,
+        "Lager- und Produktionsräume allg."@it ;
+    :hasMembership [ schema:identifier "13238"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:13362 a :SRPPPCrop ;
+    schema:name "Gojibeere"@de,
+        "Goji berry, wolfberry"@en,
+        "Baies de Goji"@fr,
+        "Bacche di Goji"@it ;
+    :hasMembership [ schema:identifier "13362"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+cultivationtype:491 a :SRPPPCrop ;
+    schema:name "Weichweizen"@de,
+        "Blé tendre"@fr,
+        "Grano tenero"@it ;
+    :hasMembership [ schema:identifier "13784"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:492 .
+
+:13785 a :SRPPPCrop ;
+    schema:name "Blaue Heckenkirsche"@de,
+        "camérisier bleu"@fr,
+        "Caprifoglio turchino"@it ;
+    :hasMembership [ schema:identifier "13785"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:13832 a :SRPPPCrop ;
+    schema:name "Lorbeer"@de,
+        "LURNO "@en,
+        "Laurier"@fr,
+        "Alloro "@it ;
+    :hasMembership [ schema:identifier "13832"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:13905 a :SRPPPCrop ;
+    schema:name "Süsskartoffel"@de,
+        "Sweet potato"@en,
+        "Patate douce"@fr,
+        "Patata dolce"@it ;
+    :hasMembership [ schema:identifier "13905"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :15866 .
+
+:14001 a :SRPPPCrop ;
+    schema:name "Hagebutten"@de,
+        "rose hip"@en,
+        "cynorhodon"@fr,
+        "rosa canina"@it ;
+    :hasMembership [ schema:identifier "14001"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:14273 a :SRPPPCrop ;
+    schema:name "Kichererbse"@de,
+        "chickpea"@en,
+        "pois chiche"@fr,
+        "cece"@it ;
+    :hasMembership [ schema:identifier "14273"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:14382 a :SRPPPCrop ;
+    schema:name "Baby-Leaf (Brassicaceae)"@de,
+        "Baby-Leaf (Brassicaceae)"@fr,
+        "Baby-Leaf (Brassicaceae)"@it ;
+    :hasMembership [ schema:identifier "14382"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10251 .
+
+:14383 a :SRPPPCrop ;
+    schema:name "Baby-Leaf (Asteraceae)"@de,
+        "Baby-Leaf (Asteraceae)"@fr,
+        "Baby-Leaf (Asteraceae)"@it ;
+    :hasMembership [ schema:identifier "14383"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10251 .
+
+:14384 a :SRPPPCrop ;
+    schema:name "Baby-Leaf (Chenopodiaceae)"@de,
+        "Baby-Leaf (Chenopodiaceae)"@fr,
+        "Baby-Leaf (Chenopodiaceae)"@it ;
+    :hasMembership [ schema:identifier "14384"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10251 .
+
+:14729 a :SRPPPCrop ;
+    schema:name "Hanf"@de,
+        "Hemp"@en,
+        "Chanvre"@fr,
+        "Canapa"@it ;
+    :hasMembership [ schema:identifier "14729"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12069 .
+
+:14786 a :SRPPPCrop ;
+    schema:name "Sanddorn"@de,
+        "argousier"@fr,
+        "Olivello spinoso"@it ;
+    :hasMembership [ schema:identifier "14786"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:14787 a :SRPPPCrop ;
+    schema:name "Schwarze Maulbeere"@de,
+        "mûrier noir"@fr,
+        "Moro nero"@it ;
+    :hasMembership [ schema:identifier "14787"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:14799 a :SRPPPCrop ;
+    schema:name "Eberesche"@de,
+        "sorbier des oiseleurs"@fr,
+        "Sorbo degli ucellatori"@it ;
+    :hasMembership [ schema:identifier "14799"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:14801 a :SRPPPCrop ;
+    schema:name "Gemeine Felsenbirne"@de,
+        "amélavier commun"@fr,
+        "Pero corvino"@it ;
+    :hasMembership [ schema:identifier "14801"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:14904 a :SRPPPCrop ;
+    schema:name "Süssdolde"@de,
+        "cicely"@en,
+        "Cerfeuil musqué"@fr,
+        "finocchiella"@it ;
+    :hasMembership [ schema:identifier "14904"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:14985 a :SRPPPCrop ;
+    schema:name "Markstammkohl"@de,
+        "chou moellier"@fr,
+        "Cavolo fustoso"@it ;
+    :hasMembership [ schema:identifier "14985"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10210 .
+
+:15269 a :SRPPPCrop ;
+    schema:name "Kerbelrübe"@de,
+        "Cerfeuil tubéreux"@fr,
+        "Cerfoglio bulboso"@it ;
+    :hasMembership [ schema:identifier "15269"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:15866 a :SRPPPCrop ;
+    schema:name "Windengewächse (Convolvulaceae)"@de,
+        "Convolvulaceae"@en,
+        "convolvulacées (Convolvulaceae)"@fr,
+        "Convolvulaceae"@it ;
+    :hasMembership [ schema:identifier "15866"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:15872 a :SRPPPCrop ;
+    schema:name "Rispenhirse "@de,
+        "Millet"@fr,
+        "Miglio "@it ;
+    :hasMembership [ schema:identifier "15872"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:9942 a :SRPPPCrop ;
+    schema:name "Pflanzen"@de,
+        "plantes"@fr,
+        "Piante"@it ;
+    :hasMembership [ schema:identifier "9942"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:9943 a :SRPPPCrop ;
+    schema:name "Wintergerste"@de,
+        "Orge d'automne"@fr,
+        "Orzo autunnale"@it ;
+    :hasMembership [ schema:identifier "9943"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10083,
+        cultivationtype:19 .
+
+:9944 a :SRPPPCrop ;
+    schema:name "Blattsalate (Asteraceae)"@de,
+        "laitues à tondre (Asteraceae)"@fr,
+        "Insalate a foglie (Asteracee)"@it ;
+    :hasMembership [ schema:identifier "9944"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10304 .
+
+:9945 a :SRPPPCrop ;
+    schema:name "Winterroggen"@de,
+        "Seigle d'automne"@fr,
+        "Segale autunnale"@it ;
+    :hasMembership [ schema:identifier "9945"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10120,
+        cultivationtype:19 .
+
+:9946 a :SRPPPCrop ;
+    schema:name "Sellerie"@de,
+        "céleri"@fr,
+        "Sedano "@it ;
+    :hasMembership [ schema:identifier "9946"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9951 .
+
+:9948 a :SRPPPCrop ;
+    schema:name "Baldriangewächse (Valerianaceae)"@de,
+        "valérianacées"@fr,
+        "Valerianacee"@it ;
+    :hasMembership [ schema:identifier "9948"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:9950 a :SRPPPCrop ;
+    schema:name "Brache"@de,
+        "jachère"@fr,
+        "Maggese"@it ;
+    :hasMembership [ schema:identifier "9950"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] .
+
+:9951 a :SRPPPCrop ;
+    schema:name "Doldenblütler (Apiaceae)"@de,
+        "ombellifères (Apiaceae)"@fr,
+        "Ombrellifere (Apiacee)"@it ;
+    :hasMembership [ schema:identifier "9951"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:9952 a :SRPPPCrop ;
+    schema:name "Gehölze (ausserhalb Forst)"@de,
+        "plantes ligneuses (hors forêt)"@fr,
+        "Boschetti (al di fuori del bosco)"@it ;
+    :hasMembership [ schema:identifier "9952"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:9953 a :SRPPPCrop ;
+    schema:name "Reben"@de,
+        "vigne"@fr,
+        "Vite"@it ;
+    :hasMembership [ schema:identifier "9953"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10194 .
+
+:9954 a :SRPPPCrop ;
+    schema:name "Forstliche Pflanzgärten"@de,
+        "pépinières forestières"@fr,
+        "Vivai forestali"@it ;
+    :hasMembership [ schema:identifier "9954"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :12464,
+        :12465 .
+
+:9955 a :SRPPPCrop ;
+    schema:name "Nelken"@de,
+        "oeillet"@fr,
+        "Garofani"@it ;
+    :hasMembership [ schema:identifier "9955"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10015,
+        :12097 .
+
+:9956 a :SRPPPCrop ;
+    schema:name "Liegendes Rundholz im Wald und auf Lagerplätzen"@de,
+        "grumes en forêt et sur les places de stockage"@fr,
+        "Tronchi abbattuti nella foresta e presso piazzali di deposito"@it ;
+    :hasMembership [ schema:identifier "9956"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10202 .
+
+:9957 a :SRPPPCrop ;
+    schema:name "Hülsenfrüchtler (Fabaceae)"@de,
+        "fabacées (légumineuses)"@fr,
+        "Fabacee (Leguminose)"@it ;
+    :hasMembership [ schema:identifier "9957"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:9959 a :SRPPPCrop ;
+    schema:name "Kernobst"@de,
+        "fruits à pépins"@fr,
+        "Frutta a granelli"@it ;
+    :hasMembership [ schema:identifier "9959"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10192 .
+
+:9960 a :SRPPPCrop ;
+    schema:name "Knöterichgewächse (Polygonaceae)"@de,
+        "polygonacées"@fr,
+        "Poligonacee"@it ;
+    :hasMembership [ schema:identifier "9960"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:9961 a :SRPPPCrop ;
+    schema:name "Korbblütler (Asteraceae)"@de,
+        "composées (Asteracea)"@fr,
+        "Composite (Asteracee)"@it ;
+    :hasMembership [ schema:identifier "9961"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:9962 a :SRPPPCrop ;
+    schema:name "Kreuzblütler (Brassicaceae)"@de,
+        "crucifères (Brassicaceae)"@fr,
+        "Crocifere (Brassicacee)"@it ;
+    :hasMembership [ schema:identifier "9962"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:9963 a :SRPPPCrop ;
+    schema:name "Liliengewächse (Liliaceae)"@de,
+        "liliacées"@fr,
+        "Liliacee"@it ;
+    :hasMembership [ schema:identifier "9963"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10195 .
+
+:9965 a :SRPPPCrop ;
+    schema:name "Steinobst"@de,
+        "fruits à noyaux"@fr,
+        "Frutta a nocciolo"@it ;
+    :hasMembership [ schema:identifier "9965"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10192 .
+
+:9967 a :SRPPPCrop ;
+    schema:name "Zier- und Sportrasen"@de,
+        "gazon d'ornement et terrains de sport"@fr,
+        "Tappeti erbosi e terreni sportivi"@it ;
+    :hasMembership [ schema:identifier "9967"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:9968 a :SRPPPCrop ;
+    schema:name "Stauden"@de,
+        "plantes vivaces"@fr,
+        "Arbusti"@it ;
+    :hasMembership [ schema:identifier "9968"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10190 .
+
+:9969 a :SRPPPCrop ;
+    schema:name "Sommerflor"@de,
+        "fleurs estivales"@fr,
+        "Fiori estivi"@it ;
+    :hasMembership [ schema:identifier "9969"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10176 .
+
+:9970 a :SRPPPCrop ;
+    schema:name "Apfel"@de,
+        "pommier"@fr,
+        "Melo"@it ;
+    :hasMembership [ schema:identifier "9970"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9959 .
+
+:9971 a :SRPPPCrop ;
+    schema:name "Aprikose"@de,
+        "abricotier"@fr,
+        "Albicocco"@it ;
+    :hasMembership [ schema:identifier "9971"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9965 .
+
+:9972 a :SRPPPCrop ;
+    schema:name "Birne"@de,
+        "poirier"@fr,
+        "Pero"@it ;
+    :hasMembership [ schema:identifier "9972"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10296 .
+
+:9973 a :SRPPPCrop ;
+    schema:name "Blumenkohl"@de,
+        "chou-fleur"@fr,
+        "Cavolfiore"@it ;
+    :hasMembership [ schema:identifier "9973"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10284 .
+
+:9974 a :SRPPPCrop ;
+    schema:name "Broccoli"@de,
+        "brocoli"@fr,
+        "Broccoli"@it ;
+    :hasMembership [ schema:identifier "9974"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10284 .
+
+:9975 a :SRPPPCrop ;
+    schema:name "Brombeere"@de,
+        "mûre"@fr,
+        "Mora"@it ;
+    :hasMembership [ schema:identifier "9975"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10297 .
+
+:9977 a :SRPPPCrop ;
+    schema:name "Chinakohl"@de,
+        "chou de Chine"@fr,
+        "Cavolo cinese"@it ;
+    :hasMembership [ schema:identifier "9977"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10210 .
+
+:9978 a :SRPPPCrop ;
+    schema:name "Erdbeere"@de,
+        "fraise"@fr,
+        "Fragola"@it ;
+    :hasMembership [ schema:identifier "9978"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10193 .
+
+:9979 a :SRPPPCrop ;
+    schema:name "Heidelbeere"@de,
+        "myrtille"@fr,
+        "Mirtillo"@it ;
+    :hasMembership [ schema:identifier "9979"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10193 .
+
+:9980 a :SRPPPCrop ;
+    schema:name "Himbeere"@de,
+        "framboise"@fr,
+        "Lampone"@it ;
+    :hasMembership [ schema:identifier "9980"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10297 .
+
+:9981 a :SRPPPCrop ;
+    schema:name "Karotten"@de,
+        "carotte"@fr,
+        "Carote"@it ;
+    :hasMembership [ schema:identifier "9981"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9951 .
+
+:9982 a :SRPPPCrop ;
+    schema:name "Kirsche"@de,
+        "cerisier"@fr,
+        "Ciliegio"@it ;
+    :hasMembership [ schema:identifier "9982"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9965 .
+
+:9983 a :SRPPPCrop ;
+    schema:name "Knoblauch"@de,
+        "ail"@fr,
+        "Aglio"@it ;
+    :hasMembership [ schema:identifier "9983"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9963 .
+
+:9984 a :SRPPPCrop ;
+    schema:name "Knollenfenchel"@de,
+        "fenouil bulbeux"@fr,
+        "Finocchio dolce"@it ;
+    :hasMembership [ schema:identifier "9984"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9951 .
+
+:9985 a :SRPPPCrop ;
+    schema:name "Knollensellerie"@de,
+        "céleri-pomme"@fr,
+        "Sedano rapa"@it ;
+    :hasMembership [ schema:identifier "9985"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9946 .
+
+:9986 a :SRPPPCrop ;
+    schema:name "Kohlrabi"@de,
+        "colrave"@fr,
+        "Cavolo rapa"@it ;
+    :hasMembership [ schema:identifier "9986"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10020 .
+
+:9990 a :SRPPPCrop ;
+    schema:name "Nüsslisalat"@de,
+        "mâche, rampon"@fr,
+        "Valerianella"@it ;
+    :hasMembership [ schema:identifier "9990"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9948 .
+
+:9991 a :SRPPPCrop ;
+    schema:name "Petersilie"@de,
+        "persil"@fr,
+        "Prezzemolo"@it ;
+    :hasMembership [ schema:identifier "9991"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10186 .
+
+:9992 a :SRPPPCrop ;
+    schema:name "Pfirsich / Nektarine"@de,
+        "pêcher / nectarine"@fr,
+        "Pesco/pesco noce"@it ;
+    :hasMembership [ schema:identifier "9992"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9965 .
+
+:9993 a :SRPPPCrop ;
+    schema:name "Pflaume"@de,
+        "prunier (prune)"@fr,
+        "Prugnolo"@it ;
+    :hasMembership [ schema:identifier "9993"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10011 .
+
+:9994 a :SRPPPCrop ;
+    schema:name "Quitte"@de,
+        "cognassier"@fr,
+        "Cotogno"@it ;
+    :hasMembership [ schema:identifier "9994"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9959 .
+
+:9995 a :SRPPPCrop ;
+    schema:name "Radies"@de,
+        "radis de tous les mois"@fr,
+        "Ravanello"@it ;
+    :hasMembership [ schema:identifier "9995"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:9996 a :SRPPPCrop ;
+    schema:name "Rande"@de,
+        "betterave à salade"@fr,
+        "Barbabietola"@it ;
+    :hasMembership [ schema:identifier "9996"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10068 .
+
+:9997 a :SRPPPCrop ;
+    schema:name "Rettich"@de,
+        "radis long"@fr,
+        "Ramolaccio"@it ;
+    :hasMembership [ schema:identifier "9997"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9962 .
+
+:9998 a :SRPPPCrop ;
+    schema:name "Rhabarber"@de,
+        "rhubarbe"@fr,
+        "Rabarbaro"@it ;
+    :hasMembership [ schema:identifier "9998"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :9960 .
+
+:9999 a :SRPPPCrop ;
+    schema:name "Rote Johannisbeere"@de,
+        "groseilles à grappes"@fr,
+        "Ribes rosso"@it ;
+    :hasMembership [ schema:identifier "9999"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf :10127 .
+
