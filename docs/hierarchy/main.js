@@ -223,12 +223,14 @@ document.addEventListener('DOMContentLoaded', () => {
         infoDetails.textContent = node.description;
         
         let botanicalHtml = '';
-        if (node.taxonName) {
-            botanicalHtml = `<strong>Botanische Bezeichnung:</strong> <em>${node.taxonName}</em>`;
-            // This code now works because node.eppoCode is guaranteed to be a string or null.
+        if (node.taxonName || node.eppoCode) {
+            botanicalHtml += '<strong>Botanische Pflanze</strong>';
+            if (node.taxonName) {
+                botanicalHtml += `<b>Name:</b> <em>${node.taxonName}</em><br>`;
+            }
             if (node.eppoCode) {
                 const eppoSlug = node.eppoCode.split('/').pop();
-                botanicalHtml += ` (<a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a>)`;
+                botanicalHtml += `<b>EPPO-Code:</b> <a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a><br>`;
             }
         }
         botanicalInfo.innerHTML = botanicalHtml;
