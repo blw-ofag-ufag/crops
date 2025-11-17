@@ -1,24 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Configuration ---
+    // Configuration
     const SPARQL_ENDPOINT = 'https://agriculture.ld.admin.ch/query';
     
     const SPARQL_QUERY = `
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
-        
-        SELECT DISTINCT ?child ?childName ?parent ?parentName
+
+        SELECT DISTINCT ?node ?nodeName ?parent ?parentName ?description ?taxonName ?eppoCode
         WHERE {
-          <https://agriculture.ld.admin.ch/crops/cultivationtype/1> :hasPart* ?child .
-          ?child :partOf ?parent .
-          ?child schema:name ?childName .
-          FILTER(LANG(?childName) = "de")
-          ?parent schema:name ?parentName .
-          FILTER(LANG(?parentName) = "de")
+            <https://agriculture.ld.admin.ch/crops/cultivationtype/0> :hasPart* ?node .
+            
+            ?node schema:name ?nodeName .
+            FILTER(LANG(?nodeName) = "de")
+
+            OPTIONAL {
+                ?node :partOf ?parent .
+                ?parent schema:name ?parentName .
+                FILTER(LANG(?parentName) = "de")
+            }
+            
+            OPTIONAL {
+                ?node schema:description ?description .
+                FILTER(LANG(?description) = "de")
+            }
+            
+            OPTIONAL { ?node :botanicalPlant/:taxonName ?taxonName . }
+            
+            OPTIONAL { ?node :botanicalPlant/:eppo ?eppoCode . }
         }
     `;
 
-    // --- DOM Elements ---
+    // DOM Elements
     const networkContainer = document.getElementById('network');
     const loaderContainer = document.getElementById('loader-container');
     const infoPanel = document.getElementById('info-panel');
@@ -26,41 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoIri = document.getElementById('info-iri');
     const infoName = document.getElementById('info-name');
     const infoDetails = document.getElementById('info-details');
+    const botanicalInfo = document.getElementById('botanical-info');
 
-    // --- Vis.js Data ---
+
+    // Vis.js Data
     let nodes = new vis.DataSet();
     let edges = new vis.DataSet();
     let network = null;
 
-    // --- Styling Constants ---
+    // Styling Constants
     const FONT_DEFAULTS = { size: 14, face: 'Inter', multi: true, mod: 'normal' };
-
-    const STYLE_NORMAL = {
-        NODE: { background: '#FFFFFF', border: '#000000' },
-        FONT: { ...FONT_DEFAULTS, color: '#000000' },
-        // CHANGE: Define hover/highlight to be the same as the base color
-        EDGE: { color: '#888888', hover: '#888888', highlight: '#888888' }
-    };
-
-    const STYLE_FOCUS = {
-        NODE: { background: '#D3E5FA', border: '#4A90E2' },
-        FONT: { ...FONT_DEFAULTS, color: '#000000' },
-    };
-
-    const STYLE_HIGHLIGHT = {
-        NODE: { background: '#000000', border: '#000000' },
-        FONT: { ...FONT_DEFAULTS, color: '#FFFFFF' },
-        // CHANGE: Define hover/highlight to be the same as the base color
-        EDGE: { color: '#000000', hover: '#000000', highlight: '#000000' }
-    };
-
-    const STYLE_DIM = {
-        // CHANGE: Transparent border on dimmed nodes to fix z-index issue
-        NODE: { background: 'rgba(255, 255, 255, 0)', border: 'rgba(255, 255, 255, 0)' },
-        FONT: { ...FONT_DEFAULTS, color: '#D0D0D0' },
-        // CHANGE: Define hover/highlight to be the same as the base color
-        EDGE: { color: '#F0F0F0', hover: '#F0F0F0', highlight: '#F0F0F0' }
-    };
+    const STYLE_NORMAL = { NODE: { background: '#FFFFFF', border: '#000000' }, FONT: { ...FONT_DEFAULTS, color: '#000000' }, EDGE: { color: '#888888', hover: '#888888', highlight: '#888888' } };
+    const STYLE_FOCUS = { NODE: { background: '#D3E5FA', border: '#4A90E2' }, FONT: { ...FONT_DEFAULTS, color: '#000000' } };
+    const STYLE_HIGHLIGHT = { NODE: { background: '#000000', border: '#000000' }, FONT: { ...FONT_DEFAULTS, color: '#FFFFFF' }, EDGE: { color: '#000000', hover: '#000000', highlight: '#000000' } };
+    const STYLE_DIM = { NODE: { background: 'rgba(255, 255, 255, 0)', border: 'rgba(255, 255, 255, 0)' }, FONT: { ...FONT_DEFAULTS, color: '#D0D0D0' }, EDGE: { color: '#F0F0F0', hover: '#F0F0F0', highlight: '#F0F0F0' } };
 
 
     function showLoader(show) {
@@ -86,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function formatLabel(label, maxLineLength = 20, maxTotalLength = 40) {
+        if (!label) return '';
         if (label.length > maxTotalLength) label = label.substring(0, maxTotalLength - 3) + '...';
         if (label.length > maxLineLength) {
             let breakPoint = label.lastIndexOf(' ', maxLineLength);
@@ -95,13 +88,59 @@ document.addEventListener('DOMContentLoaded', () => {
         return label;
     }
 
+    // Data processing function to fix the race condition
     function processData(bindings) {
         const nodesMap = new Map();
-        bindings.forEach(({ child, childName, parent, parentName }) => {
-            if (!nodesMap.has(child.value)) nodesMap.set(child.value, { id: child.value, label: formatLabel(childName.value), title: childName.value });
-            if (!nodesMap.has(parent.value)) nodesMap.set(parent.value, { id: parent.value, label: formatLabel(parentName.value), title: parentName.value });
-            edges.add({ id: `${child.value}-${parent.value}`, from: child.value, to: parent.value });
+        const edgesSet = new Set(); // Use a Set to prevent adding duplicate edges
+
+        bindings.forEach(binding => {
+            const nodeId = binding.node.value;
+
+            // Process the main node (?node) from the row
+            // Get existing data or create a new object with defaults
+            let nodeData = nodesMap.get(nodeId) || {
+                id: nodeId,
+                description: "Keine Beschreibung für diesen Eintrag verfügbar.",
+                taxonName: null,
+                eppoCode: null
+            };
+
+            // Always update the name from the main node row
+            nodeData.label = formatLabel(binding.nodeName.value);
+            nodeData.title = binding.nodeName.value;
+
+            // Overwrite defaults only if the current row provides a value
+            if (binding.description) nodeData.description = binding.description.value;
+            if (binding.taxonName) nodeData.taxonName = binding.taxonName.value;
+            if (binding.eppoCode) nodeData.eppoCode = binding.eppoCode.value;
+            
+            nodesMap.set(nodeId, nodeData);
+
+            // Process the parent node (?parent) from the row, if it exists
+            if (binding.parent) {
+                const parentId = binding.parent.value;
+                
+                // Ensure the parent exists in the map, creating a placeholder if needed
+                if (!nodesMap.has(parentId)) {
+                    nodesMap.set(parentId, {
+                        id: parentId,
+                        label: formatLabel(binding.parentName.value),
+                        title: binding.parentName.value,
+                        description: "Keine Beschreibung für diesen Eintrag verfügbar.",
+                        taxonName: null,
+                        eppoCode: null
+                    });
+                }
+                
+                // Add the edge, preventing duplicates
+                const edgeId = `${nodeId}-${parentId}`;
+                if (!edgesSet.has(edgeId)) {
+                    edges.add({ id: edgeId, from: nodeId, to: parentId });
+                    edgesSet.add(edgeId);
+                }
+            }
         });
+
         nodes.add(Array.from(nodesMap.values()));
     }
 
@@ -109,20 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = { nodes, edges };
         const options = {
             layout: { hierarchical: { enabled: true, direction: 'RL', sortMethod: 'directed', levelSeparation: 250 } },
-            nodes: {
-                shape: 'box', margin: 10, widthConstraint: { maximum: 180 },
-                color: STYLE_NORMAL.NODE, borderWidth: 1,
-                font: STYLE_NORMAL.FONT
-            },
-            edges: {
-                width: 1.5,
-                color: STYLE_NORMAL.EDGE, // Passing the whole object disables hover effects
-                smooth: { type: 'cubicBezier', forceDirection: 'vertical', roundness: 0.4 },
-                arrows: { to: { enabled: true, scaleFactor: 0.5 } }
-            },
+            nodes: { shape: 'box', margin: 10, widthConstraint: { maximum: 180 }, color: STYLE_NORMAL.NODE, borderWidth: 1, font: STYLE_NORMAL.FONT },
+            edges: { width: 1.5, color: STYLE_NORMAL.EDGE, smooth: { type: 'cubicBezier', forceDirection: 'vertical', roundness: 0.4 }, arrows: { to: { enabled: true, scaleFactor: 0.5 } } },
             interaction: { hover: true, tooltipDelay: 200, navigationButtons: true }
         };
-
         network = new vis.Network(networkContainer, data, options);
         network.on("stabilizationIterationsDone", () => network.setOptions({ physics: false }));
         network.on('selectNode', handleNodeSelection);
@@ -134,9 +163,29 @@ document.addEventListener('DOMContentLoaded', () => {
     function showInfoPanel(nodeId) {
         const node = nodes.get(nodeId);
         if (!node) return;
-        infoIri.textContent = node.id;
+        
+        const baseIri = 'https://agriculture.ld.admin.ch/crops/cultivationtype/';
+        let curieText = node.id;
+        if (node.id.startsWith(baseIri)) {
+            curieText = `:${node.id.substring(baseIri.length)}`;
+        }
+        infoIri.href = node.id;
+        infoIri.textContent = curieText;
+        
         infoName.textContent = node.title;
-        infoDetails.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
+        infoDetails.textContent = node.description;
+        
+        let botanicalHtml = '';
+        if (node.taxonName) {
+            botanicalHtml = `<strong>Botanische Bezeichnung:</strong> <em>${node.taxonName}</em>`;
+            if (node.eppoCode) {
+                const eppoSlug = node.eppoCode.split('/').pop();
+                botanicalHtml += ` (<a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a>)`;
+            }
+        }
+        botanicalInfo.innerHTML = botanicalHtml;
+        botanicalInfo.style.display = botanicalHtml ? 'block' : 'none';
+
         infoPanel.classList.add('visible');
     }
 
@@ -172,36 +221,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function highlightSelection(selectedNodeId) {
         const highlightedNodeIds = new Set([...getAllParents(selectedNodeId), ...getAllChildren(selectedNodeId)]);
-        
         const nodesToUpdate = nodes.map(node => {
-            if (node.id === selectedNodeId) {
-                return { id: node.id, color: STYLE_FOCUS.NODE, font: STYLE_FOCUS.FONT };
-            }
-            if (highlightedNodeIds.has(node.id)) {
-                return { id: node.id, color: STYLE_HIGHLIGHT.NODE, font: STYLE_HIGHLIGHT.FONT };
-            }
+            if (node.id === selectedNodeId) return { id: node.id, color: STYLE_FOCUS.NODE, font: STYLE_FOCUS.FONT };
+            if (highlightedNodeIds.has(node.id)) return { id: node.id, color: STYLE_HIGHLIGHT.NODE, font: STYLE_HIGHLIGHT.FONT };
             return { id: node.id, color: STYLE_DIM.NODE, font: STYLE_DIM.FONT };
         });
-
         const edgesToUpdate = edges.map(edge => ({
             id: edge.id,
             color: highlightedNodeIds.has(edge.from) && highlightedNodeIds.has(edge.to) ? STYLE_HIGHLIGHT.EDGE : STYLE_DIM.EDGE
         }));
-
         nodes.update(nodesToUpdate);
         edges.update(edgesToUpdate);
     }
     
     function resetHighlight() {
-        const nodesToUpdate = nodes.map(node => ({
-            id: node.id,
-            color: STYLE_NORMAL.NODE,
-            font: STYLE_NORMAL.FONT
-        }));
-        const edgesToUpdate = edges.map(edge => ({
-            id: edge.id,
-            color: STYLE_NORMAL.EDGE
-        }));
+        const nodesToUpdate = nodes.map(node => ({ id: node.id, color: STYLE_NORMAL.NODE, font: STYLE_NORMAL.FONT }));
+        const edgesToUpdate = edges.map(edge => ({ id: edge.id, color: STYLE_NORMAL.EDGE }));
         nodes.update(nodesToUpdate);
         edges.update(edgesToUpdate);
     }
