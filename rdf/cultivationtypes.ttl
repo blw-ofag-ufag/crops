@@ -112,7 +112,7 @@ cultivationtype:496 a :CultivationType ;
 cultivationtype:497 a :CultivationType ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
     schema:name "Mais"@de ;
-    :botanicalPlant taxon:7 ;
+    :botanicalPlant taxon:ZEAMX ;
     :partOf cultivationtype:16 .
 
 cultivationtype:498 a :CultivationType ;
@@ -121,7 +121,7 @@ cultivationtype:498 a :CultivationType ;
 
 cultivationtype:499 a :CultivationType ;
     schema:name "Einkorn"@de ;
-    :botanicalPlant taxon:4 ;
+    :botanicalPlant taxon:TRZMO ;
     :partOf cultivationtype:511 .
 
 cultivationtype:5 a :CultivationType ;
@@ -201,7 +201,7 @@ cultivationtype:508 a :CultivationType ;
     schema:name "Körnermais"@de,
         "Maïs grain"@fr,
         "Mais da granella"@it ;
-    :botanicalPlant taxon:7 ;
+    :botanicalPlant taxon:ZEAMX ;
     :hasMembership [ schema:identifier "508"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -214,7 +214,7 @@ cultivationtype:509 a :CultivationType ;
         "Rice"@en,
         "Riz"@fr,
         "Riso"@it ;
-    :botanicalPlant taxon:1 ;
+    :botanicalPlant taxon:ORYSA ;
     :cultivationMethod :11 ;
     :hasMembership [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS" ;
@@ -231,7 +231,7 @@ cultivationtype:510 a :CultivationType ;
     schema:name "Hartweizen"@de,
         "Blé dur"@fr,
         "Grano duro"@it ;
-    :botanicalPlant taxon:3 ;
+    :botanicalPlant taxon:TRZDU ;
     :hasMembership [ schema:identifier "510"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -283,7 +283,7 @@ cultivationtype:515 a :CultivationType ;
     schema:name "Mischel Brotgetreide"@de,
         "Méteil de céréales panifiables"@fr,
         "Miscela di cereali panificabili"@it ;
-    :botanicalPlant taxon:2 ;
+    :botanicalPlant taxon:TRZAX ;
     :hasMembership [ schema:identifier "515"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -305,7 +305,7 @@ cultivationtype:519 a :CultivationType ;
     schema:name "Saatmais (Vertragsanbau)"@de,
         "Semences de maïs (contrat de culture)"@fr,
         "Mais da semina (coltivazione contrattuale)"@it ;
-    :botanicalPlant taxon:7 ;
+    :botanicalPlant taxon:ZEAMX ;
     :hasMembership [ schema:identifier "519"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -317,7 +317,7 @@ cultivationtype:520 a :CultivationType ;
     schema:name "Trockenreis"@de,
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
-    :botanicalPlant taxon:1 ;
+    :botanicalPlant taxon:ORYSA ;
     :hasMembership [ schema:identifier "520"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -333,7 +333,7 @@ cultivationtype:521 a :CultivationType ;
     schema:name "Silo- und Grünmais"@de,
         "Maïs d'ensilage et maïs vert"@fr,
         "Mais da insilamento e verde"@it ;
-    :botanicalPlant taxon:7 ;
+    :botanicalPlant taxon:ZEAMX ;
     :hasMembership [ schema:identifier "521"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -415,7 +415,7 @@ cultivationtype:529 a :CultivationType ;
     schema:name "Nassreis"@de,
         "Riz en culture humide"@fr,
         "Riso seminato su terreno bagnato"@it ;
-    :botanicalPlant taxon:1 ;
+    :botanicalPlant taxon:ORYSA ;
     :hasMembership [ schema:identifier "529"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -447,7 +447,7 @@ cultivationtype:535 a :CultivationType ;
     schema:name "Hanf"@de,
         "Chanvre"@fr,
         "Canapa"@it ;
-    :botanicalPlant taxon:5 ;
+    :botanicalPlant taxon:1CNIG ;
     :hasMembership [ schema:identifier "535"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -773,7 +773,7 @@ cultivationtype:575 a :CultivationType ;
     schema:name "Hanf zur Nutzung der Samen"@de,
         "Chanvre pour l’utilisation des graines"@fr,
         "Canapa per i semi"@it ;
-    :botanicalPlant taxon:6 ;
+    :botanicalPlant taxon:CNISA ;
     :hasMembership [ schema:identifier "575"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2022-01-01"^^xsd:date ;
@@ -785,7 +785,7 @@ cultivationtype:576 a :CultivationType ;
     schema:name "Hanf zur Fasernutzung"@de,
         "Chanvre pour l’utilisation des fibres"@fr,
         "Canapa da fibra"@it ;
-    :botanicalPlant taxon:6 ;
+    :botanicalPlant taxon:CNISA ;
     :hasMembership [ schema:identifier "576"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2022-01-01"^^xsd:date ;
@@ -797,7 +797,7 @@ cultivationtype:577 a :CultivationType ;
     schema:name "Anderer Hanf"@de,
         "Autre chanvre"@fr,
         "Altra canapa"@it ;
-    :botanicalPlant taxon:5 ;
+    :botanicalPlant taxon:1CNIG ;
     :hasMembership [ schema:identifier "577"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2022-01-01"^^xsd:date ;
