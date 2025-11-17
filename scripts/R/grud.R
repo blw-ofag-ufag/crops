@@ -35,7 +35,7 @@ data <- jsonlite::read_json(file.path(endpoint, "agronomiccropcategories"))
 
 process <- function(object, subject) {
 
-  rdfhelper::triple(subject, "a", rdfhelper::uri("GRUDCrop", base))
+  rdfhelper::triple(subject, "a", rdfhelper::uri("CultivationType", base))
 
   for (i in seq_along(languages)) {
 
@@ -48,8 +48,14 @@ process <- function(object, subject) {
       )
     )
   }
-  construct_code(subject, getElement(object, "code"), "NAEBI") # nolint
-  construct_code(subject, getElement(object, "oldKey"), "GRUD") # nolint
+
+  construct_class_membership(
+    subject,
+    rdfhelper::uri("GRUDCrop", base),
+    identifier = getElement(object, "code"),
+    validFrom = "2000-01-01",
+    name = "NAEBI"
+  )
 }
 
 sink("rdf/grud.ttl")
