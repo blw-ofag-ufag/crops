@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 :eppo ?eppoCode .
         }
         WHERE {
-            <https://agriculture.ld.admin.ch/crops/cultivationtype/1> :hasPart* ?node .
+            <https://agriculture.ld.admin.ch/crops/cultivationtype/14> :hasPart* ?node .
             
             ?node schema:name ?nodeName .
             FILTER(LANG(?nodeName) = "de")
@@ -141,13 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const nodeId = nodeObj['@id'];
             if (!nodeId) return;
 
-            // **** START OF BUG FIX ****
             // Extract botanical info and ensure eppoCode is a string, not an object.
             const botanicalPlant = nodeObj.botanicalPlant;
             let taxonName = botanicalPlant?.taxonName || null;
             // The value from framing is the full IRI string, which is what we want.
             let eppoCode = botanicalPlant?.eppoCode || null; 
-            // **** END OF BUG FIX ****
 
             if (!nodesMap.has(nodeId)) {
                 nodesMap.set(nodeId, {
