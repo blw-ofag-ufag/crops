@@ -2,29 +2,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuration
     const SPARQL_ENDPOINT = 'https://agriculture.ld.admin.ch/query';
-    
+
     // CONSTRUCT query to get all relevant triples for the hierarchy
     const CONSTRUCT_QUERY = `
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
         CONSTRUCT {
             ?node a :CultivationType ;
                 schema:name ?nodeName ;
                 schema:description ?description ;
                 :partOf ?parent ;
-                :botanicalPlant ?botanicalPlant .
-            
+                :botanicalPlant ?botanicalPlant ;
+                :hasMembership ?membership .
+
             ?parent a :CultivationType ;
                 schema:name ?parentName .
 
             ?botanicalPlant :taxonName ?taxonName ;
                 :eppo ?eppoCode .
+
+            ?membership schema:identifier ?identifier ;
+                schema:name ?membershipName ;
+                schema:validFrom ?validFrom ;
+                schema:validTo ?validTo .
         }
         WHERE {
             <https://agriculture.ld.admin.ch/crops/cultivationtype/14> :hasPart* ?node .
-            
+
             ?node schema:name ?nodeName .
             FILTER(LANG(?nodeName) = "de")
 
@@ -33,16 +40,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 ?parent schema:name ?parentName .
                 FILTER(LANG(?parentName) = "de")
             }
-            
+
             OPTIONAL {
                 ?node schema:description ?description .
                 FILTER(LANG(?description) = "de")
             }
-            
+
             OPTIONAL {
                 ?node :botanicalPlant ?botanicalPlant .
                 OPTIONAL { ?botanicalPlant :taxonName ?taxonName . }
                 OPTIONAL { ?botanicalPlant :eppo ?eppoCode . }
+            }
+
+            OPTIONAL {
+                ?node :hasMembership ?membership .
+                ?membership schema:name ?membershipName .
+                ?membership schema:identifier ?identifier .
+                OPTIONAL { ?membership schema:validFrom ?validFrom . }
+                OPTIONAL { ?membership schema:validTo ?validTo . }
             }
         }
     `;
@@ -57,7 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
             "partOf": { "@id": "crops:partOf", "@type": "@id" },
             "botanicalPlant": { "@id": "crops:botanicalPlant", "@type": "@id" },
             "taxonName": { "@id": "crops:taxonName" },
-            "eppoCode": { "@id": "crops:eppo", "@type": "@id" } // Be explicit that eppoCode is an IRI
+            "eppoCode": { "@id": "crops:eppo", "@type": "@id" },
+            "hasMembership": {
+                "@id": "crops:hasMembership",
+                "@container": "@set"
+            },
+            "identifier": { "@id": "schema:identifier", "@type": "xsd:string" },
+            "membershipName": "schema:name",
+            "validFrom": { "@id": "schema:validFrom", "@type": "xsd:date" },
+            "validTo": { "@id": "schema:validTo", "@type": "xsd:date" }
         },
         "@type": "crops:CultivationType"
     };
@@ -71,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoName = document.getElementById('info-name');
     const infoDetails = document.getElementById('info-details');
     const botanicalInfo = document.getElementById('botanical-info');
+    const membershipInfo = document.getElementById('membership-info');
+
 
     // Vis.js Data
     let nodes = new vis.DataSet();
@@ -112,7 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
     async function frameDataClientSide(rawJsonLd) {
         if (!rawJsonLd) return null;
         try {
-            return await jsonld.frame(rawJsonLd, JSON_FRAME);
+            const framedResult = await jsonld.frame(rawJsonLd, JSON_FRAME);
+            console.log("Framed JSON-LD Result:", framedResult); // <--- ADDED THIS LINE
+            return framedResult;
         } catch (error) {
             console.error("Error framing JSON-LD data:", error);
             loaderContainer.innerHTML = `<p>Error processing data.</p>`;
@@ -141,11 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const nodeId = nodeObj['@id'];
             if (!nodeId) return;
 
-            // Extract botanical info and ensure eppoCode is a string, not an object.
             const botanicalPlant = nodeObj.botanicalPlant;
             let taxonName = botanicalPlant?.taxonName || null;
-            // The value from framing is the full IRI string, which is what we want.
-            let eppoCode = botanicalPlant?.eppoCode || null; 
+            let eppoCode = botanicalPlant?.eppoCode || null;
+
+            const memberships = Array.isArray(nodeObj.hasMembership) ? nodeObj.hasMembership : (nodeObj.hasMembership ? [nodeObj.hasMembership] : []);
 
             if (!nodesMap.has(nodeId)) {
                 nodesMap.set(nodeId, {
@@ -153,9 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     label: formatLabel(nodeObj.name || nodeId.split('/').pop()),
                     title: nodeObj.name || nodeId.split('/').pop(),
                     description: nodeObj.description || "Keine Beschreibung verfügbar.",
-                    // Use the corrected variables
                     taxonName: taxonName,
-                    eppoCode: eppoCode
+                    eppoCode: eppoCode,
+                    memberships: memberships
                 });
             }
 
@@ -163,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const parents = Array.isArray(nodeObj.partOf) ? nodeObj.partOf : [nodeObj.partOf];
                 parents.forEach(parent => {
                     const parentId = (typeof parent === 'object' && parent['@id']) ? parent['@id'] : parent;
-                    
+
                     if (typeof parent === 'object' && parent['@id']) {
                         processNodeObject(parent);
                     } else if (!nodesMap.has(parentId)) {
@@ -173,7 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             title: parentId.split('/').pop(),
                             description: "Keine Beschreibung für diesen Eintrag verfügbar.",
                             taxonName: null,
-                            eppoCode: null
+                            eppoCode: null,
+                            memberships: []
                         });
                     }
 
@@ -200,17 +228,17 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         network = new vis.Network(networkContainer, data, options);
         network.on("stabilizationIterationsDone", () => network.setOptions({ physics: false }));
-        
+
         network.on('selectNode', handleNodeSelection);
         network.on('deselectNode', handleDeselection);
         closePanelBtn.addEventListener('click', () => { network.unselectAll(); handleDeselection(); });
         showLoader(false);
     }
-    
+
     function showInfoPanel(nodeId) {
         const node = nodes.get(nodeId);
         if (!node) return;
-        
+
         const baseIri = 'https://agriculture.ld.admin.ch/crops/cultivationtype/';
         let curieText = node.id;
         if (node.id.startsWith(baseIri)) {
@@ -218,23 +246,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         infoIri.href = node.id;
         infoIri.textContent = curieText;
-        
+
         infoName.textContent = node.title;
         infoDetails.textContent = node.description;
-        
+
         let botanicalHtml = '';
         if (node.taxonName || node.eppoCode) {
             botanicalHtml += '<strong>Botanische Pflanze</strong>';
             if (node.taxonName) {
-                botanicalHtml += `<b>Name:</b> <em>${node.taxonName}</em><br>`;
+                botanicalHtml += `<p><b>Name:</b> <em>${node.taxonName}</em></p>`;
             }
             if (node.eppoCode) {
                 const eppoSlug = node.eppoCode.split('/').pop();
-                botanicalHtml += `<b>EPPO-Code:</b> <a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a><br>`;
+                botanicalHtml += `<p><b>EPPO-Code:</b> <a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a></p>`;
             }
         }
         botanicalInfo.innerHTML = botanicalHtml;
         botanicalInfo.style.display = botanicalHtml ? 'block' : 'none';
+
+        // Populate Membership Info Panel
+        let membershipHtml = '';
+        if (node.memberships && node.memberships.length > 0) {
+            membershipHtml += '<strong>Quellsysteme</strong>';
+            node.memberships.forEach(membership => {
+                const now = new Date();
+                let validToDate = membership.validTo ? new Date(membership.validTo) : null;
+                const showValidDates = validToDate && validToDate < now;
+
+                membershipHtml += `<div class="membership-item">`;
+                membershipHtml += `<p><b>System:</b> ${membership.membershipName}</p>`;
+                if (membership.identifier) {
+                     membershipHtml += `<p><b>ID:</b> ${membership.identifier}</p>`;
+                } else {
+                     membershipHtml += `<p><b>ID:</b> N/A</p>`;
+                }
+               
+                if (showValidDates) {
+                    const validFromYear = membership.validFrom ? new Date(membership.validFrom).getFullYear() : 'N/A';
+                    const validToYear = validToDate ? validToDate.getFullYear() : 'N/A';
+                    membershipHtml += `<p><b>Gültigkeit:</b> ${validFromYear} – ${validToYear}</p>`;
+                }
+                membershipHtml += `</div>`;
+            });
+        }
+        membershipInfo.innerHTML = membershipHtml;
+        membershipInfo.style.display = membershipHtml ? 'block' : 'none';
 
         infoPanel.classList.add('visible');
     }
@@ -283,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nodes.update(nodesToUpdate);
         edges.update(edgesToUpdate);
     }
-    
+
     function resetHighlight() {
         const nodesToUpdate = nodes.map(node => ({ id: node.id, color: STYLE_NORMAL.NODE, font: STYLE_NORMAL.FONT }));
         const edgesToUpdate = edges.map(edge => ({ id: edge.id, color: STYLE_NORMAL.EDGE }));
