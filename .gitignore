@@ -55,6 +55,7 @@ rdf/*
 
 # Exclude any notes
 notes.md
+notes.qmd
 
 # Environment variables
 .env
