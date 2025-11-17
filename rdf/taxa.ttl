@@ -3,7 +3,10 @@
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 
 taxon:1CNIG a :CropTaxon ;
-    schema:name "Hanf"@de ;
+    schema:name "Hanf"@de,
+        "Chanvre"@fr,
+        "Canapa"@it,
+        "hemp"@en ;
     :eppo <https://gd.eppo.int/taxon/1CNIG> ;
     :taxonName "Cannabis" ;
     :taxonRank :Genus .
@@ -18,6 +21,8 @@ taxon:CNISA a :CropTaxon ;
 
 taxon:ORYSA a :CropTaxon ;
     schema:name "Reis"@de,
+        "Riz"@fr,
+        "Riso"@it,
         "rice"@en ;
     :eppo <https://gd.eppo.int/taxon/ORYSA> ;
     :taxonName "Oryza sativa" ;
@@ -56,7 +61,10 @@ taxon:TRZMO a :CropTaxon ;
     :taxonRank :Species .
 
 taxon:ZEAMX a :CropTaxon ;
-    schema:name "Mais"@de ;
+    schema:name "Mais"@de,
+        "Maïs"@fr,
+        "Mais"@it,
+        "sweetcorn"@en ;
     :eppo <https://gd.eppo.int/taxon/ZEAMX> ;
     :taxonName "Zea mays" ;
     :taxonRank :Species .
