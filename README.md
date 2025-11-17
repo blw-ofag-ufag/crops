@@ -14,6 +14,10 @@ This graph not only allows for complex queries across formerly siloed data but a
 
 [^1]: For example [AGIS (direct payments)](https://www.i14y.admin.ch/en/catalog/concepts/08dcabe2-1734-ca16-9dfe-262056c9c124/content), [GRUD (fertilization)](https://www.agroscope.admin.ch/agroscope/de/home/themen/pflanzenbau/ackerbau/grud.html), [PSM registry (plant protection)](https://www.psm.admin.ch/de/kulturen/bs/A), [ProVar (varieties)](https://www.blw.admin.ch/de/sortenschutz#Sortenschutzregister), [PGREL-NIS (gene bank)](https://www.blw.admin.ch/de/pgrel-nis) and others.
 
+# Inspect the hierarchy
+
+[This hierarchy viewer allows you to visually inspect the hierarchical relationships.](https://blw-ofag-ufag.github.io/crops/hierarchy/index.html)
+
 # Inspect the ontology
 
 Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
