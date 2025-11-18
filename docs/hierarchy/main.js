@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 schema:validTo ?validTo .
         }
         WHERE {
-            <https://agriculture.ld.admin.ch/crops/cultivationtype/14> :hasPart* ?node .
+            <https://agriculture.ld.admin.ch/crops/cultivationtype/509> :hasPart* ?node .
 
             ?node schema:name ?nodeName .
             FILTER(LANG(?nodeName) = "de")
@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!rawJsonLd) return null;
         try {
             const framedResult = await jsonld.frame(rawJsonLd, JSON_FRAME);
-            console.log("Framed JSON-LD Result:", framedResult); // <--- ADDED THIS LINE
             return framedResult;
         } catch (error) {
             console.error("Error framing JSON-LD data:", error);
@@ -264,25 +263,39 @@ document.addEventListener('DOMContentLoaded', () => {
         botanicalInfo.innerHTML = botanicalHtml;
         botanicalInfo.style.display = botanicalHtml ? 'block' : 'none';
 
+        // ### MODIFIED SECTION ###
         // Populate Membership Info Panel
         let membershipHtml = '';
         if (node.memberships && node.memberships.length > 0) {
             membershipHtml += '<strong>Quellsysteme</strong>';
             node.memberships.forEach(membership => {
+                // Correctly access potentially nested properties from the framed JSON
+                const identifierObj = membership['schema:identifier'];
+                const validFromObj = membership['schema:validFrom'];
+                const validToObj = membership['schema:validTo'];
+                
+                // The identifier can be a plain string or an object with a "@value" property
+                let identifier = 'N/A';
+                if (identifierObj) {
+                    identifier = typeof identifierObj === 'object' && identifierObj['@value'] !== undefined 
+                        ? identifierObj['@value'] 
+                        : identifierObj;
+                }
+
                 const now = new Date();
-                let validToDate = membership.validTo ? new Date(membership.validTo) : null;
+                // Dates are objects with a "@value" property.
+                const validToDate = validToObj && validToObj['@value'] ? new Date(validToObj['@value']) : null;
+
+                // Condition to show validity: must have a 'validTo' date and it must be in the past.
                 const showValidDates = validToDate && validToDate < now;
 
                 membershipHtml += `<div class="membership-item">`;
-                membershipHtml += `<p><b>System:</b> ${membership.membershipName}</p>`;
-                if (membership.identifier) {
-                     membershipHtml += `<p><b>ID:</b> ${membership.identifier}</p>`;
-                } else {
-                     membershipHtml += `<p><b>ID:</b> N/A</p>`;
-                }
-               
+                membershipHtml += `<p><b>System:</b> ${membership.membershipName || 'N/A'}</p>`;
+                membershipHtml += `<p><b>ID:</b> ${identifier}</p>`;
+
                 if (showValidDates) {
-                    const validFromYear = membership.validFrom ? new Date(membership.validFrom).getFullYear() : 'N/A';
+                    // Also get the 'validFrom' date from its object.
+                    const validFromYear = validFromObj && validFromObj['@value'] ? new Date(validFromObj['@value']).getFullYear() : 'N/A';
                     const validToYear = validToDate ? validToDate.getFullYear() : 'N/A';
                     membershipHtml += `<p><b>Gültigkeit:</b> ${validFromYear} – ${validToYear}</p>`;
                 }
@@ -291,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         membershipInfo.innerHTML = membershipHtml;
         membershipInfo.style.display = membershipHtml ? 'block' : 'none';
+        // ### END OF MODIFIED SECTION ###
 
         infoPanel.classList.add('visible');
     }
