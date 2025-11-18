@@ -207,3 +207,34 @@ main {
 #close-panel-btn:hover {
     color: var(--dark-gray);
 }
+
+.attribute-item {
+    margin-bottom: 0.75rem;
+}
+
+.attribute-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.attribute-item p {
+    margin: 0 0 0.25rem 0;
+}
+
+.attribute-item ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.attribute-item li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.attribute-item li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}

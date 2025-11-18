@@ -16,48 +16,61 @@ document.addEventListener('DOMContentLoaded', () => {
                 schema:description ?description ;
                 :partOf ?parent ;
                 :botanicalPlant ?botanicalPlant ;
-                :hasMembership ?membership .
+                :hasMembership ?membership ;
+                # Use a generic property to link to a blank node representing the attribute
+                :hasAttribute ?attribute .
 
+            # This blank node groups the attribute type and its value
+            ?attribute :attributeType ?attributeType ;
+                       :attributeValue ?attributeValue .
+
+            # Get names for the attribute type and value
+            ?attributeType schema:name ?attributeTypeName .
+            ?attributeValue schema:name ?attributeValueName .
             ?parent a :CultivationType ;
                 schema:name ?parentName .
-
             ?botanicalPlant :taxonName ?taxonName ;
                 :eppo ?eppoCode .
-
             ?membership schema:identifier ?identifier ;
                 schema:name ?membershipName ;
                 schema:validFrom ?validFrom ;
                 schema:validTo ?validTo .
         }
         WHERE {
-            <https://agriculture.ld.admin.ch/crops/cultivationtype/509> :hasPart* ?node .
-
+            ?node a :CultivationType .
             ?node schema:name ?nodeName .
             FILTER(LANG(?nodeName) = "de")
-
             OPTIONAL {
                 ?node :partOf ?parent .
                 ?parent schema:name ?parentName .
                 FILTER(LANG(?parentName) = "de")
             }
-
             OPTIONAL {
                 ?node schema:description ?description .
                 FILTER(LANG(?description) = "de")
             }
-
             OPTIONAL {
                 ?node :botanicalPlant ?botanicalPlant .
                 OPTIONAL { ?botanicalPlant :taxonName ?taxonName . }
                 OPTIONAL { ?botanicalPlant :eppo ?eppoCode . }
             }
-
             OPTIONAL {
                 ?node :hasMembership ?membership .
                 ?membership schema:name ?membershipName .
                 ?membership schema:identifier ?identifier .
                 OPTIONAL { ?membership schema:validFrom ?validFrom . }
                 OPTIONAL { ?membership schema:validTo ?validTo . }
+            }
+
+            OPTIONAL {
+                # Define which properties are considered attributes
+                VALUES ?attributeType { :intensity :purpose :cultivationMethod }
+                ?node ?attributeType ?attributeValue .
+                BIND(BNODE() AS ?attribute)
+                ?attributeType schema:name ?attributeTypeName .
+                FILTER(LANG(?attributeTypeName) = "de")
+                ?attributeValue schema:name ?attributeValueName .
+                FILTER(LANG(?attributeValueName) = "de")
             }
         }
     `;
@@ -80,7 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "identifier": { "@id": "schema:identifier", "@type": "xsd:string" },
             "membershipName": "schema:name",
             "validFrom": { "@id": "schema:validFrom", "@type": "xsd:date" },
-            "validTo": { "@id": "schema:validTo", "@type": "xsd:date" }
+            "validTo": { "@id": "schema:validTo", "@type": "xsd:date" },            
+            "hasAttribute": { "@id": "crops:hasAttribute", "@container": "@set" },
+            "attributeType": { "@id": "crops:attributeType", "@type": "@id" },
+            "attributeValue": { "@id": "crops:attributeValue", "@type": "@id" }
         },
         "@type": "crops:CultivationType"
     };
@@ -95,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoDetails = document.getElementById('info-details');
     const botanicalInfo = document.getElementById('botanical-info');
     const membershipInfo = document.getElementById('membership-info');
+    const attributesInfo = document.getElementById('attributes-info');
 
 
     // Vis.js Data
@@ -172,7 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let taxonName = botanicalPlant?.taxonName || null;
             let eppoCode = botanicalPlant?.eppoCode || null;
 
-            const memberships = Array.isArray(nodeObj.hasMembership) ? nodeObj.hasMembership : (nodeObj.hasMembership ? [nodeObj.hasMembership] : []);
+            const memberships = Array.isArray(nodeObj.hasMembership) ? nodeObj.hasMembership : (nodeObj.hasMembership ? [nodeObj.hasMembership] : []);            
+            const attributes = Array.isArray(nodeObj.hasAttribute) ? nodeObj.hasAttribute : (nodeObj.hasAttribute ? [nodeObj.hasAttribute] : []);
 
             if (!nodesMap.has(nodeId)) {
                 nodesMap.set(nodeId, {
@@ -182,7 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: nodeObj.description || "Keine Beschreibung verfügbar.",
                     taxonName: taxonName,
                     eppoCode: eppoCode,
-                    memberships: memberships
+                    memberships: memberships,
+                    attributes: attributes
                 });
             }
 
@@ -198,10 +217,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             id: parentId,
                             label: formatLabel(parentId.split('/').pop()),
                             title: parentId.split('/').pop(),
-                            description: "Keine Beschreibung für diesen Eintrag verfügbar.",
+                            description: "Keine Beschreibung verfügbar.",
                             taxonName: null,
                             eppoCode: null,
-                            memberships: []
+                            memberships: [],
+                            attributes: []
                         });
                     }
 
@@ -239,17 +259,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const node = nodes.get(nodeId);
         if (!node) return;
 
-        // ### MODIFIED SECTION ###
-        const compactedId = node.id; // e.g., "crops:cultivationtype/520"
-
-        // 1. Construct the full IRI for the link (href) by replacing the prefix
+        const compactedId = node.id;
         const fullIri = compactedId.replace('crops:', 'https://agriculture.ld.admin.ch/crops/');
         infoIri.href = fullIri;
-
-        // 2. Construct the desired CURIE for display (e.g., ":520")
         const idNumber = compactedId.split('/').pop();
         infoIri.textContent = `:${idNumber}`;
-        // ### END OF MODIFIED SECTION ###
 
         infoName.textContent = node.title;
         infoDetails.textContent = node.description;
@@ -268,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
         botanicalInfo.innerHTML = botanicalHtml;
         botanicalInfo.style.display = botanicalHtml ? 'block' : 'none';
 
-        // Populate Membership Info Panel
         let membershipHtml = '';
         if (node.memberships && node.memberships.length > 0) {
             membershipHtml += '<strong>Quellsysteme</strong>';
@@ -302,6 +315,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         membershipInfo.innerHTML = membershipHtml;
         membershipInfo.style.display = membershipHtml ? 'block' : 'none';
+
+        // Populate Attributes Info Panel
+        let attributesHtml = '';
+        const attributes = node.attributes;
+
+        if (attributes && attributes.length > 0) {
+            // 1. Group values by their attribute type's name
+            const groupedAttributes = attributes.reduce((acc, attr) => {
+                // Get the name of the attribute type (e.g., "Anbaumethode")
+                const typeName = attr.attributeType?.name;
+                // Get the name of the attribute value (e.g., "Freiland")
+                const valueName = attr.attributeValue?.name;
+
+                if (typeName && valueName) {
+                    if (!acc[typeName]) {
+                        acc[typeName] = new Set(); // Use a Set to handle duplicates automatically
+                    }
+                    acc[typeName].add(valueName);
+                }
+                return acc;
+            }, {});
+
+            // 2. Build the HTML string from the grouped attributes
+            let panelContent = '';
+            for (const [typeName, valueNames] of Object.entries(groupedAttributes)) {
+                // The values are in a Set, convert to array and join with a comma
+                const valuesString = Array.from(valueNames).join(', ');
+                panelContent += `<p class="attribute-item"><b>${typeName}:</b> ${valuesString}</p>`;
+            }
+
+            if (panelContent) {
+                attributesHtml = `<strong>Attribute</strong>${panelContent}`;
+            }
+        }
+        attributesInfo.innerHTML = attributesHtml;
+        attributesInfo.style.display = attributesHtml ? 'block' : 'none';
+        // ### END OF MODIFIED SECTION ###
 
         infoPanel.classList.add('visible');
     }
