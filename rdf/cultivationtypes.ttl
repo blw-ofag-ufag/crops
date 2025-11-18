@@ -84,6 +84,10 @@ cultivationtype:2 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] ;
     :partOf cultivationtype:0 .
 
+cultivationtype:20 a :CultivationType ;
+    schema:name "Einzelelemente"@de ;
+    :partOf cultivationtype:0 .
+
 cultivationtype:3 a :CultivationType ;
     schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche."@de ;
     schema:name "Dauerweiden"@de,
@@ -102,7 +106,8 @@ cultivationtype:4 a :CultivationType ;
     :partOf cultivationtype:0 .
 
 cultivationtype:493 a :CultivationType ;
-    schema:name "Sonnenblumen"@de .
+    schema:name "Sonnenblumen"@de ;
+    :partOf cultivationtype:1 .
 
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
@@ -819,7 +824,7 @@ cultivationtype:578 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:578 .
+    :partOf cultivationtype:542 .
 
 cultivationtype:579 a :CultivationType ;
     schema:name "Hirse zur Nutzung ganze Pflanze"@de,
@@ -829,7 +834,7 @@ cultivationtype:579 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:578 .
+    :partOf cultivationtype:542 .
 
 cultivationtype:580 a :CultivationType ;
     schema:name "Sorghum zur Körnergewinnung"@de,
@@ -1827,7 +1832,8 @@ cultivationtype:921 a :CultivationType ;
     :hasMembership [ schema:identifier "921"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:20 .
 
 cultivationtype:922 a :CultivationType ;
     schema:name "Nussbäume (Punkte oder Flächen)"@de,
@@ -1836,7 +1842,8 @@ cultivationtype:922 a :CultivationType ;
     :hasMembership [ schema:identifier "922"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:20 .
 
 cultivationtype:923 a :CultivationType ;
     schema:name "Edelkastanienbäume"@de,
@@ -1845,7 +1852,8 @@ cultivationtype:923 a :CultivationType ;
     :hasMembership [ schema:identifier "923"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:20 .
 
 cultivationtype:924 a :CultivationType ;
     schema:name "Einheimische standortgerechte Einzelbäume und Alleen (Punkte oder Flächen)"@de,
@@ -1854,7 +1862,8 @@ cultivationtype:924 a :CultivationType ;
     :hasMembership [ schema:identifier "924"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:20 .
 
 cultivationtype:926 a :CultivationType ;
     schema:name "Andere Bäume"@de,
@@ -1863,7 +1872,8 @@ cultivationtype:926 a :CultivationType ;
     :hasMembership [ schema:identifier "926"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2022-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:20 .
 
 cultivationtype:927 a :CultivationType ;
     schema:name "Andere Bäume (regionsspezifische Biodiversitätsförderfläche)"@de,
@@ -1872,7 +1882,8 @@ cultivationtype:927 a :CultivationType ;
     :hasMembership [ schema:identifier "927"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:20 .
 
 cultivationtype:928 a :CultivationType ;
     schema:name "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
@@ -1881,7 +1892,8 @@ cultivationtype:928 a :CultivationType ;
     :hasMembership [ schema:identifier "928"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:20 .
 
 cultivationtype:930 a :CultivationType ;
     schema:name "Sömmerungsweiden"@de,
@@ -1930,7 +1942,8 @@ cultivationtype:950 a :CultivationType ;
     :hasMembership [ schema:identifier "950"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] .
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:951 a :CultivationType ;
     schema:description "Anbau von Sommer- oder Wintergetreide, bei denen mindestens 40% der Anzahl Reihen über die Breite der Sämaschine ungesät sind. Mindestfläche 20 Aren, Mindestbreite 20 m. Der Reihenabstand in ungesäten Bereichen muss mindestens 30 cm betragen."@de ;
