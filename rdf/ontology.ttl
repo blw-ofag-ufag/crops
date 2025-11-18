@@ -224,6 +224,7 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range :Taxon .
 
 :cultivationMethod a owl:ObjectProperty ;
+    rdfs:label "Anbaumethode"@de ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :11 :12 :13 :14 :15 :16 :17 ) ] .
 

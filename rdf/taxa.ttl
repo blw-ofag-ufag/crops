@@ -4,9 +4,9 @@
 
 taxon:1CNIG a :CropTaxon ;
     schema:name "Hanf"@de,
+        "hemp"@en,
         "Chanvre"@fr,
-        "Canapa"@it,
-        "hemp"@en ;
+        "Canapa"@it ;
     :eppo <https://gd.eppo.int/taxon/1CNIG> ;
     :taxonName "Cannabis" ;
     :taxonRank :Genus .
@@ -21,9 +21,9 @@ taxon:CNISA a :CropTaxon ;
 
 taxon:ORYSA a :CropTaxon ;
     schema:name "Reis"@de,
+        "rice"@en,
         "Riz"@fr,
-        "Riso"@it,
-        "rice"@en ;
+        "Riso"@it ;
     :eppo <https://gd.eppo.int/taxon/ORYSA> ;
     :taxonName "Oryza sativa" ;
     :taxonRank :Species .
@@ -62,9 +62,9 @@ taxon:TRZMO a :CropTaxon ;
 
 taxon:ZEAMX a :CropTaxon ;
     schema:name "Mais"@de,
+        "sweetcorn"@en,
         "Maïs"@fr,
-        "Mais"@it,
-        "sweetcorn"@en ;
+        "Mais"@it ;
     :eppo <https://gd.eppo.int/taxon/ZEAMX> ;
     :taxonName "Zea mays" ;
     :taxonRank :Species .
