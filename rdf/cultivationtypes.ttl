@@ -82,6 +82,11 @@ cultivationtype:2 a :CultivationType ;
         "Prati perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
             :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:21 .
+
+cultivationtype:21 a :CultivationType ;
+    schema:alternateName "Dauergrünland"@de ;
+    schema:name "Dauergrünfläche"@de ;
     :partOf cultivationtype:0 .
 
 cultivationtype:3 a :CultivationType ;
@@ -91,7 +96,7 @@ cultivationtype:3 a :CultivationType ;
         "Pascoli perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
             :memberOfClass :CultivationTypeCategory ] ;
-    :partOf cultivationtype:0 .
+    :partOf cultivationtype:21 .
 
 cultivationtype:4 a :CultivationType ;
     schema:name "Reben"@de,
