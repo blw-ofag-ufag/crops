@@ -86,11 +86,12 @@ cultivationtype:2 a :CultivationType ;
 
 cultivationtype:21 a :CultivationType ;
     schema:alternateName "Dauergrünland"@de ;
+    schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
     schema:name "Dauergrünfläche"@de ;
     :partOf cultivationtype:0 .
 
 cultivationtype:3 a :CultivationType ;
-    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche."@de ;
+    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche (Art. 19 LBV)."@de ;
     schema:name "Dauerweiden"@de,
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
