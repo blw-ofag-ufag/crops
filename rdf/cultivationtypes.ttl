@@ -31,7 +31,7 @@ cultivationtype:10 a :CultivationType ;
     :partOf cultivationtype:0 .
 
 cultivationtype:1003 a :CultivationType ;
-    schema:description "Weizen als Futtermittel für Tiere."@de ;
+    schema:description "Futterweizen ist Weizen, der hauptsächlich zur Tierfütterung verwendet wird, weil er die Qualitätskriterien für Backweizen nicht erfüllt, oft einen niedrigeren Proteingehalt (unter ca. 12 %) hat."@de ;
     schema:name "Futterweizen"@de ;
     :partOf cultivationtype:492 .
 
@@ -206,7 +206,7 @@ cultivationtype:507 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1003 .
 
 cultivationtype:508 a :CultivationType ;
     schema:description "Anbau von Mais, bei dem das Hauptziel die Gewinnung der reifen, trockenen Körner ist. Im Gegensatz zum Silo- oder Grünmais wird hier nur der Kolben geerntet und gedroschen. Die Körner werden typischerweise als Futter- oder Lebensmittel sowie für industrielle Zwecke verwendet."@de ;
@@ -272,7 +272,8 @@ cultivationtype:512 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1000,
+        cultivationtype:492 .
 
 cultivationtype:513 a :CultivationType ;
     schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
@@ -282,7 +283,8 @@ cultivationtype:513 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1000,
+        cultivationtype:492 .
 
 cultivationtype:514 a :CultivationType ;
     schema:name "Roggen"@de,
