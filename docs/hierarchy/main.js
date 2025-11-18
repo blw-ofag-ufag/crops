@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!rawJsonLd) return null;
         try {
             const framedResult = await jsonld.frame(rawJsonLd, JSON_FRAME);
+            console.log("Framed JSON-LD Result:", framedResult); 
             return framedResult;
         } catch (error) {
             console.error("Error framing JSON-LD data:", error);
@@ -238,13 +239,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const node = nodes.get(nodeId);
         if (!node) return;
 
-        const baseIri = 'https://agriculture.ld.admin.ch/crops/cultivationtype/';
-        let curieText = node.id;
-        if (node.id.startsWith(baseIri)) {
-            curieText = `:${node.id.substring(baseIri.length)}`;
-        }
-        infoIri.href = node.id;
-        infoIri.textContent = curieText;
+        // ### MODIFIED SECTION ###
+        const compactedId = node.id; // e.g., "crops:cultivationtype/520"
+
+        // 1. Construct the full IRI for the link (href) by replacing the prefix
+        const fullIri = compactedId.replace('crops:', 'https://agriculture.ld.admin.ch/crops/');
+        infoIri.href = fullIri;
+
+        // 2. Construct the desired CURIE for display (e.g., ":520")
+        const idNumber = compactedId.split('/').pop();
+        infoIri.textContent = `:${idNumber}`;
+        // ### END OF MODIFIED SECTION ###
 
         infoName.textContent = node.title;
         infoDetails.textContent = node.description;
@@ -263,18 +268,15 @@ document.addEventListener('DOMContentLoaded', () => {
         botanicalInfo.innerHTML = botanicalHtml;
         botanicalInfo.style.display = botanicalHtml ? 'block' : 'none';
 
-        // ### MODIFIED SECTION ###
         // Populate Membership Info Panel
         let membershipHtml = '';
         if (node.memberships && node.memberships.length > 0) {
             membershipHtml += '<strong>Quellsysteme</strong>';
             node.memberships.forEach(membership => {
-                // Correctly access potentially nested properties from the framed JSON
                 const identifierObj = membership['schema:identifier'];
                 const validFromObj = membership['schema:validFrom'];
                 const validToObj = membership['schema:validTo'];
                 
-                // The identifier can be a plain string or an object with a "@value" property
                 let identifier = 'N/A';
                 if (identifierObj) {
                     identifier = typeof identifierObj === 'object' && identifierObj['@value'] !== undefined 
@@ -283,10 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 const now = new Date();
-                // Dates are objects with a "@value" property.
                 const validToDate = validToObj && validToObj['@value'] ? new Date(validToObj['@value']) : null;
-
-                // Condition to show validity: must have a 'validTo' date and it must be in the past.
                 const showValidDates = validToDate && validToDate < now;
 
                 membershipHtml += `<div class="membership-item">`;
@@ -294,7 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 membershipHtml += `<p><b>ID:</b> ${identifier}</p>`;
 
                 if (showValidDates) {
-                    // Also get the 'validFrom' date from its object.
                     const validFromYear = validFromObj && validFromObj['@value'] ? new Date(validFromObj['@value']).getFullYear() : 'N/A';
                     const validToYear = validToDate ? validToDate.getFullYear() : 'N/A';
                     membershipHtml += `<p><b>Gültigkeit:</b> ${validFromYear} – ${validToYear}</p>`;
@@ -304,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         membershipInfo.innerHTML = membershipHtml;
         membershipInfo.style.display = membershipHtml ? 'block' : 'none';
-        // ### END OF MODIFIED SECTION ###
 
         infoPanel.classList.add('visible');
     }
