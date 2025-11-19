@@ -845,7 +845,11 @@ cultivationtype:572 a :CultivationType ;
     :hasMembership [ schema:identifier "572"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_STRBRR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:1 .
 
 cultivationtype:573 a :CultivationType ;
@@ -2186,6 +2190,22 @@ cultivationtype:1021 a :GRUDCrop ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:19,
         cultivationtype:516 .
+
+cultivationtype:1023 a :GRUDCrop ;
+    schema:name "Nützlingsstreifen (DK)"@de ;
+    :hasMembership [ schema:identifier "CROP_OAFNT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:6 .
+
+cultivationtype:1024 a :GRUDCrop ;
+    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
+    :hasMembership [ schema:identifier "CROP_HFBUFF"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:0 .
 
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
