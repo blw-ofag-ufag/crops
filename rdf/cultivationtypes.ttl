@@ -2157,6 +2157,15 @@ cultivationtype:1020 a :GRUDCrop ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:1017 .
 
+cultivationtype:1021 a :GRUDCrop ;
+    schema:name "Winterkorn, Dinkel"@de ;
+    :hasMembership [ schema:identifier "CROP_WKORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:516 .
+
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
         "summer cereals"@en,
@@ -2199,6 +2208,17 @@ cultivationtype:1017 a :SRPPPCrop ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:19,
         cultivationtype:505 .
+
+cultivationtype:1022 a :SRPPPCrop ;
+    schema:name "Korn (Dinkel)"@de,
+        "Épeautre"@fr,
+        "Spelta"@it ;
+    :hasMembership [ schema:identifier "10122"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:516 .
 
 cultivationtype:19 a :SRPPPCrop ;
     schema:name "Wintergetreide"@de,
