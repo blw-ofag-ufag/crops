@@ -209,7 +209,11 @@ cultivationtype:504 a :CultivationType ;
     :hasMembership [ schema:identifier "504"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "10121"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:505 a :CultivationType ;
@@ -2065,6 +2069,28 @@ cultivationtype:1009 a :GRUDCrop ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:502 .
+
+cultivationtype:1010 a :GRUDCrop ;
+    schema:name "Winterhafer"@de ;
+    :hasMembership [ schema:identifier "CROP_WOGST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:504 .
+
+cultivationtype:1011 a :GRUDCrop ;
+    schema:name "Sommerhafer"@de ;
+    :hasMembership [ schema:identifier "CROP_SOGST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10144"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1000,
+        cultivationtype:504 .
 
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
