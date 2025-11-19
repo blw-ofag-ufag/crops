@@ -30,6 +30,13 @@ taxon:1COMD a :CropTaxon ;
     :taxonName "Commelinids" ;
     :taxonRank :Category .
 
+taxon:1CSNG a :CropTaxon ;
+    schema:name "Castanea"@la ;
+    :eppo <https://gd.eppo.int/taxon/1CSNG> ;
+    :parentTaxon taxon:1FAGF ;
+    :taxonName "Castanea" ;
+    :taxonRank :Subfamily .
+
 taxon:1EHRS a :CropTaxon ;
     schema:name "Ehrhartoideae"@la ;
     :eppo <https://gd.eppo.int/taxon/1EHRS> ;
@@ -43,6 +50,20 @@ taxon:1FABD a :CropTaxon ;
     :parentTaxon taxon:1ANGC ;
     :taxonName "Fabids" ;
     :taxonRank :Category .
+
+taxon:1FAGF a :CropTaxon ;
+    schema:name "Fagaceae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1FAGF> ;
+    :parentTaxon taxon:1FAGO ;
+    :taxonName "Fagaceae" ;
+    :taxonRank :Family .
+
+taxon:1FAGO a :CropTaxon ;
+    schema:name "Fagales"@la ;
+    :eppo <https://gd.eppo.int/taxon/1FAGO> ;
+    :parentTaxon taxon:1FABD ;
+    :taxonName "Fagales" ;
+    :taxonRank :Order .
 
 taxon:1GRAF a :CropTaxon ;
     schema:alternateName "Gräser"@de,
@@ -197,6 +218,69 @@ taxon:CNISA a :CropTaxon ;
     :eppo <https://gd.eppo.int/taxon/CNISA> ;
     :parentTaxon taxon:1CNIG ;
     :taxonName "Cannabis sativa" ;
+    :taxonRank :Genus .
+
+taxon:CSNSA a :CropTaxon ;
+    schema:alternateName "cладък кестен"@bg,
+        "кестен"@bg,
+        "castanyer"@ca,
+        "kaštanovník jedlý"@cs,
+        "kaštanovník setý"@cs,
+        "castanwydden"@cy,
+        "kastanje"@da,
+        "Edel-Kastanie"@de,
+        "Edel-Kastanienbaum"@de,
+        "Ess-Kastanienbaum"@de,
+        "Kastanie"@de,
+        "Marone"@de,
+        "echte Kastanie"@de,
+        "καστανιά ήμερη"@el,
+        "Spanish chestnut"@en,
+        "sweet chestnut"@en,
+        "castaño"@es,
+        "castaño regoldo"@es,
+        "jalokastanja"@fi,
+        "castagnié"@fr,
+        "châtaignier"@fr,
+        "châtaignier commun"@fr,
+        "châtaignier cultivé"@fr,
+        "castiñeiro"@gl,
+        "pitomi kesten"@hr,
+        "šumski kesten"@hr,
+        "szelídgesztenye"@hu,
+        "castagno"@it,
+        "castagno comune"@it,
+        "Castanea vesca"@la,
+        "Castanea vulgaris"@la,
+        "eetbare kastanje"@nl,
+        "tamme kastanje"@nl,
+        "tamme kastanjeboom"@nl,
+        "edelkastanje"@no,
+        "castagn"@oc,
+        "castagné"@oc,
+        "castày"@oc,
+        "kasztan jadalny"@pl,
+        "castanheiro"@pt,
+        "castanheiro-comum"@pt,
+        "castanheiro-europeu"@pt,
+        "castanheiro-vulgar"@pt,
+        "reboleiro"@pt,
+        "castan bun"@ro,
+        "castan comestibil"@ro,
+        "каштан посевной"@ru,
+        "gaštan jedlý"@sk,
+        "pravi kostanj"@sl,
+        "gështenjë"@sq,
+        "питоми кестен"@sr,
+        "äkta kastanj"@sv,
+        "äkte kastanjträd"@sv,
+        "anadolu kestanesi"@tr,
+        "kestane"@tr,
+        "каштан їстивний"@uk ;
+    schema:name "Castanea sativa"@la ;
+    :eppo <https://gd.eppo.int/taxon/CSNSA> ;
+    :parentTaxon taxon:1CSNG ;
+    :taxonName "Castanea sativa" ;
     :taxonRank :Genus .
 
 taxon:ORYSA a :CropTaxon ;
