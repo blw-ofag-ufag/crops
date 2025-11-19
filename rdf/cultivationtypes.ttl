@@ -963,7 +963,8 @@ cultivationtype:611 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:2 ;
+    :intensity :21 .
 
 cultivationtype:612 a :CultivationType ;
     schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
@@ -973,7 +974,8 @@ cultivationtype:612 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:2 ;
+    :intensity :22 .
 
 cultivationtype:613 a :CultivationType ;
     schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
@@ -1003,7 +1005,8 @@ cultivationtype:617 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:3 .
+    :partOf cultivationtype:3 ;
+    :intensity :21.
 
 cultivationtype:618 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
@@ -1043,7 +1046,8 @@ cultivationtype:623 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:2 ;
+    :intensity :22 .
 
 cultivationtype:625 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
