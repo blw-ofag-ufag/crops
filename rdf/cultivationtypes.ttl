@@ -1990,7 +1990,7 @@ cultivationtype:1001 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:490 .
+    :partOf cultivationtype:1007 .
 
 cultivationtype:1002 a :GRUDCrop ;
     schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
@@ -1998,7 +1998,7 @@ cultivationtype:1002 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:490 .
+    :partOf cultivationtype:1007 .
 
 cultivationtype:1004 a :GRUDCrop ;
     schema:name "Futterweizen (ohne Futterweizen in 62a Nitrat-Projekt)"@de ;
@@ -2034,8 +2034,8 @@ cultivationtype:1006 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:1000,
-        cultivationtype:491 .
+    :partOf cultivationtype:491,
+        cultivationtype:999 .
 
 cultivationtype:19 a :SRPPPCrop ;
     schema:name "Wintergetreide"@de,
@@ -2055,7 +2055,8 @@ cultivationtype:490 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:491 .
+    :partOf cultivationtype:1007,
+        cultivationtype:491 .
 
 cultivationtype:491 a :SRPPPCrop ;
     schema:alternateName "Brotweizen"@de,
