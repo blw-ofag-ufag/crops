@@ -189,7 +189,14 @@ cultivationtype:5 a :CultivationType ;
     :partOf cultivationtype:0 .
 
 cultivationtype:500 a :CultivationType ;
-    schema:name "Emmer"@de ;
+    schema:name "Emmer"@de,
+        "Amidonnier"@fr,
+        "Farro"@it ;
+    :botanicalPlant taxon:TRZDI ;
+    :hasMembership [ schema:identifier "10271"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:511 .
 
 cultivationtype:501 a :CultivationType ;
@@ -327,8 +334,12 @@ cultivationtype:511 a :CultivationType ;
     :hasMembership [ schema:identifier "511"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_EMMEK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:492 .
 
 cultivationtype:512 a :CultivationType ;
     schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
@@ -384,7 +395,7 @@ cultivationtype:516 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:492 .
 
 cultivationtype:519 a :CultivationType ;
     schema:description "Anbau von Mais (Zea mays) mit dem spezifischen Ziel der Saatgutproduktion. Diese Art des Anbaus findet typischerweise auf Basis einer vertraglichen Vereinbarung zwischen Landwirt und Saatgutanbieter statt."@de ;
