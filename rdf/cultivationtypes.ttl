@@ -64,6 +64,7 @@ cultivationtype:14 a :CultivationType ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
+    :botanicalPlant taxon:1GRAF ;
     :partOf cultivationtype:16 .
 
 cultivationtype:15 a :CultivationType ;
@@ -246,7 +247,7 @@ cultivationtype:509 a :CultivationType ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "172" ;
+        [ schema:identifier "172"^^xsd:ID ;
             schema:name "GRUD" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
@@ -301,6 +302,7 @@ cultivationtype:514 a :CultivationType ;
     schema:name "Roggen"@de,
         "Seigle"@fr,
         "Segale"@it ;
+    :botanicalPlant taxon:SECCE ;
     :hasMembership [ schema:identifier "514"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -559,6 +561,7 @@ cultivationtype:543 a :CultivationType ;
     schema:name "Getreide siliert"@de,
         "Céréales ensilées"@fr,
         "Cereali insilati"@it ;
+    :botanicalPlant taxon:1GRAF ;
     :hasMembership [ schema:identifier "543"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -1866,6 +1869,7 @@ cultivationtype:923 a :CultivationType ;
     schema:name "Edelkastanienbäume"@de,
         "Châtaigniers"@fr,
         "Alberi castagni"@it ;
+    :botanicalPlant taxon:CSNSA ;
     :hasMembership [ schema:identifier "923"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -1967,6 +1971,7 @@ cultivationtype:951 a :CultivationType ;
     schema:name "Getreide in weiter Reihe"@de,
         "Céréales en lignes de semis espacées"@fr,
         "Cereali in file distanziate"@it ;
+    :botanicalPlant taxon:1GRAF ;
     :hasMembership [ schema:identifier "951"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -1989,6 +1994,7 @@ cultivationtype:999 a :CultivationType ;
         "summer wheat"@en,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
+    :botanicalPlant taxon:1TRZG ;
     :hasMembership [ schema:identifier "CROP_SWHT"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -1999,6 +2005,7 @@ cultivationtype:999 a :CultivationType ;
 cultivationtype:1001 a :GRUDCrop ;
     schema:name "Winterweizen (ohne Winterweizen in 62a Nitrat-Projekt)"@de,
         "winter wheat (without winter wheat in 62a nitrate-project)"@en ;
+    :botanicalPlant taxon:1TRZG ;
     :hasMembership [ schema:identifier "CROP_WWHT"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2007,6 +2014,7 @@ cultivationtype:1001 a :GRUDCrop ;
 
 cultivationtype:1002 a :GRUDCrop ;
     schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
+    :botanicalPlant taxon:1TRZG ;
     :hasMembership [ schema:identifier "CROP_WWHTN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2015,6 +2023,7 @@ cultivationtype:1002 a :GRUDCrop ;
 
 cultivationtype:1004 a :GRUDCrop ;
     schema:name "Futterweizen (ohne Futterweizen in 62a Nitrat-Projekt)"@de ;
+    :botanicalPlant taxon:1TRZG ;
     :hasMembership [ schema:identifier "CROP_FWHT"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2023,6 +2032,7 @@ cultivationtype:1004 a :GRUDCrop ;
 
 cultivationtype:1005 a :GRUDCrop ;
     schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
+    :botanicalPlant taxon:1TRZG ;
     :hasMembership [ schema:identifier "CROP_FWHTN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2043,6 +2053,7 @@ cultivationtype:1000 a :SRPPPCrop ;
 cultivationtype:1006 a :SRPPPCrop ;
     schema:name "Sommerweichweizen"@de,
         "summer soft wheat"@en ;
+    :botanicalPlant taxon:TRZAX ;
     :hasMembership [ schema:identifier "10118"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2064,6 +2075,7 @@ cultivationtype:19 a :SRPPPCrop ;
 cultivationtype:490 a :SRPPPCrop ;
     schema:name "Winterweichweizen"@de,
         "winter soft wheat"@en ;
+    :botanicalPlant taxon:TRZAX ;
     :hasMembership [ schema:identifier "10094"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2089,6 +2101,7 @@ cultivationtype:492 a :SRPPPCrop ;
         "wheat"@en,
         "Blé"@fr,
         "Frumento"@it ;
+    :botanicalPlant taxon:1TRZG ;
     :hasMembership [ schema:identifier "10052"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
