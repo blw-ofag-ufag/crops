@@ -64,6 +64,7 @@ cultivationtype:14 a :CultivationType ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
+    :botanicalPlant taxon:1GRAF ;
     :partOf cultivationtype:16 .
 
 cultivationtype:15 a :CultivationType ;
@@ -560,6 +561,7 @@ cultivationtype:543 a :CultivationType ;
     schema:name "Getreide siliert"@de,
         "Céréales ensilées"@fr,
         "Cereali insilati"@it ;
+    :botanicalPlant taxon:1GRAF ;
     :hasMembership [ schema:identifier "543"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -1969,6 +1971,7 @@ cultivationtype:951 a :CultivationType ;
     schema:name "Getreide in weiter Reihe"@de,
         "Céréales en lignes de semis espacées"@fr,
         "Cereali in file distanziate"@it ;
+    :botanicalPlant taxon:1GRAF ;
     :hasMembership [ schema:identifier "951"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
