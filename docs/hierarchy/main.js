@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function formatLabel(label, maxLineLength = 20, maxTotalLength = 40) {
+    function formatLabel(label, maxLineLength = 35, maxTotalLength = 35) {
         if (!label) return '';
         if (label.length > maxTotalLength) label = label.substring(0, maxTotalLength - 3) + '...';
         if (label.length > maxLineLength) {
@@ -241,14 +241,45 @@ document.addEventListener('DOMContentLoaded', () => {
     function initGraph() {
         const data = { nodes, edges };
         const options = {
-            layout: { hierarchical: { enabled: true, direction: 'RL', sortMethod: 'directed', levelSeparation: 250 } },
-            nodes: { shape: 'box', margin: 10, widthConstraint: { maximum: 180 }, color: STYLE_NORMAL.NODE, borderWidth: 1, font: STYLE_NORMAL.FONT },
-            edges: { width: 1.5, color: STYLE_NORMAL.EDGE, smooth: { type: 'cubicBezier', forceDirection: 'vertical', roundness: 0.4 }, arrows: { to: { enabled: true, scaleFactor: 0.5 } } },
-            interaction: { hover: true, tooltipDelay: 200, navigationButtons: true }
+            layout: {
+                hierarchical: {
+                    enabled: true,
+                    direction: 'RL',
+                    sortMethod: 'directed',
+                    levelSeparation: 300
+                }
+            },
+            nodes: {
+                shape: 'box',
+                margin: 10,
+                widthConstraint: { maximum: 700 }, 
+                color: STYLE_NORMAL.NODE,
+                borderWidth: 1,
+                font: STYLE_NORMAL.FONT
+            },
+            edges: { 
+                width: 1.5,
+                color: STYLE_NORMAL.EDGE,
+                smooth: {
+                    type: 'cubicBezier',
+                    forceDirection: 'vertical',
+                    roundness: 0.4 
+                },
+                arrows: {
+                    to: { 
+                        enabled: true,
+                        scaleFactor: 0.5
+                    }
+                }
+            },
+            interaction: {
+                hover: true,
+                tooltipDelay: 200,
+                navigationButtons: true
+            }
         };
         network = new vis.Network(networkContainer, data, options);
         network.on("stabilizationIterationsDone", () => network.setOptions({ physics: false }));
-
         network.on('selectNode', handleNodeSelection);
         network.on('deselectNode', handleDeselection);
         closePanelBtn.addEventListener('click', () => { network.unselectAll(); handleDeselection(); });
@@ -351,7 +382,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         attributesInfo.innerHTML = attributesHtml;
         attributesInfo.style.display = attributesHtml ? 'block' : 'none';
-        // ### END OF MODIFIED SECTION ###
 
         infoPanel.classList.add('visible');
     }
