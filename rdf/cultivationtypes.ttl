@@ -30,6 +30,19 @@ cultivationtype:10 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] ;
     :partOf cultivationtype:0 .
 
+cultivationtype:1003 a :CultivationType ;
+    schema:description "Futterweizen ist Weizen, der hauptsächlich zur Tierfütterung verwendet wird, weil er die Qualitätskriterien für Backweizen nicht erfüllt und oft einen niedrigeren Proteingehalt (unter ca. 12 %) hat."@de ;
+    schema:name "Futterweizen"@de ;
+    :partOf cultivationtype:492 .
+
+cultivationtype:1007 a :CultivationType ;
+    schema:name "Winterweizen"@de,
+        "winter wheat"@en,
+        "Blé d'automne"@fr,
+        "Frumento autunnale"@it ;
+    :partOf cultivationtype:19,
+        cultivationtype:492 .
+
 cultivationtype:12 a :CultivationType ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
@@ -206,7 +219,7 @@ cultivationtype:507 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1003 .
 
 cultivationtype:508 a :CultivationType ;
     schema:description "Anbau von Mais, bei dem das Hauptziel die Gewinnung der reifen, trockenen Körner ist. Im Gegensatz zum Silo- oder Grünmais wird hier nur der Kolben geerntet und gedroschen. Die Körner werden typischerweise als Futter- oder Lebensmittel sowie für industrielle Zwecke verwendet."@de ;
@@ -247,8 +260,12 @@ cultivationtype:510 a :CultivationType ;
     :hasMembership [ schema:identifier "510"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "11321"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:492 .
 
 cultivationtype:511 a :CultivationType ;
     schema:name "Emmer, Einkorn"@de,
@@ -268,7 +285,7 @@ cultivationtype:512 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:999 .
 
 cultivationtype:513 a :CultivationType ;
     schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
@@ -278,7 +295,7 @@ cultivationtype:513 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1007 .
 
 cultivationtype:514 a :CultivationType ;
     schema:name "Roggen"@de,
@@ -1967,8 +1984,75 @@ cultivationtype:998 a :CultivationType ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
+cultivationtype:999 a :CultivationType ;
+    schema:name "Sommerweizen"@de,
+        "summer wheat"@en,
+        "Blé de printemps"@fr,
+        "Frumento primaverile"@it ;
+    :hasMembership [ schema:identifier "CROP_SWHT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1000,
+        cultivationtype:492 .
+
+cultivationtype:1001 a :GRUDCrop ;
+    schema:name "Winterweizen (ohne Winterweizen in 62a Nitrat-Projekt)"@de,
+        "winter wheat (without winter wheat in 62a nitrate-project)"@en ;
+    :hasMembership [ schema:identifier "CROP_WWHT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1007 .
+
+cultivationtype:1002 a :GRUDCrop ;
+    schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WWHTN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1007 .
+
+cultivationtype:1004 a :GRUDCrop ;
+    schema:name "Futterweizen (ohne Futterweizen in 62a Nitrat-Projekt)"@de ;
+    :hasMembership [ schema:identifier "CROP_FWHT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1003 .
+
+cultivationtype:1005 a :GRUDCrop ;
+    schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_FWHTN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1003 .
+
+cultivationtype:1000 a :SRPPPCrop ;
+    schema:name "Sommergetreide"@de,
+        "summer cereals"@en,
+        "Céréales de printemps"@fr,
+        "Cereali primaverili"@it ;
+    :hasMembership [ schema:identifier "10164"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
+
+cultivationtype:1006 a :SRPPPCrop ;
+    schema:name "Sommerweichweizen"@de,
+        "summer soft wheat"@en ;
+    :hasMembership [ schema:identifier "10118"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:491,
+        cultivationtype:999 .
+
 cultivationtype:19 a :SRPPPCrop ;
     schema:name "Wintergetreide"@de,
+        "winter cereals"@en,
         "Céréales d'automne"@fr,
         "Cereali autunnali"@it ;
     :hasMembership [ schema:identifier "10167"^^xsd:ID ;
@@ -1978,18 +2062,18 @@ cultivationtype:19 a :SRPPPCrop ;
     :partOf cultivationtype:14 .
 
 cultivationtype:490 a :SRPPPCrop ;
-    schema:name "Winterweizen"@de,
-        "Blé d'automne"@fr,
-        "Frumento autunnale"@it ;
+    schema:name "Winterweichweizen"@de,
+        "winter soft wheat"@en ;
     :hasMembership [ schema:identifier "10094"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:19,
+    :partOf cultivationtype:1007,
         cultivationtype:491 .
 
 cultivationtype:491 a :SRPPPCrop ;
-    schema:alternateName "Brotweizen"@de ;
+    schema:alternateName "Brotweizen"@de,
+        "bread wheat"@en ;
     schema:name "Weichweizen"@de,
         "Blé tendre"@fr,
         "Grano tenero"@it ;
@@ -2002,6 +2086,7 @@ cultivationtype:491 a :SRPPPCrop ;
 
 cultivationtype:492 a :SRPPPCrop ;
     schema:name "Weizen"@de,
+        "wheat"@en,
         "Blé"@fr,
         "Frumento"@it ;
     :hasMembership [ schema:identifier "10052"^^xsd:ID ;
