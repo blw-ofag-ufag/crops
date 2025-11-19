@@ -1,0 +1,14 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
+SELECT ?crop ?id ?validFrom ?validTo WHERE {
+  ct:14 :hasPart* ?crop .
+  ?crop :hasMembership ?membership .
+  ?membership schema:identifier ?id ;
+  	schema:name "AGIS" .
+  OPTIONAL { ?membership schema:validFrom ?validFrom } .
+  OPTIONAL { ?membership schema:validTo ?validTo } .
+  FILTER ( !bound(?validFrom) || ?validFrom <= xsd:date(NOW()) )
+  FILTER ( !bound(?validTo) || ?validTo > xsd:date(NOW()) )
+}
