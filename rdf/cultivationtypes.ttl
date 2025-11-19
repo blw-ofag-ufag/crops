@@ -247,7 +247,11 @@ cultivationtype:505 a :CultivationType ;
     :hasMembership [ schema:identifier "505"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "10119"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:506 a :CultivationType ;
@@ -2128,6 +2132,31 @@ cultivationtype:1013 a :GRUDCrop ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:1012 .
 
+cultivationtype:1018 a :GRUDCrop ;
+    schema:name "Sommertriticale"@de ;
+    :hasMembership [ schema:identifier "CROP_STRIT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1000,
+        cultivationtype:505 .
+
+cultivationtype:1019 a :GRUDCrop ;
+    schema:name "Wintertriticale (ohne Wintertriticale in 62a Nitrat-Projekt)"@de ;
+    :hasMembership [ schema:identifier "CROP_WTRIT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1017 .
+
+cultivationtype:1020 a :GRUDCrop ;
+    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WTRITN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1017 .
+
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
         "summer cereals"@en,
@@ -2159,6 +2188,17 @@ cultivationtype:1012 a :SRPPPCrop ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:19,
         cultivationtype:514 .
+
+cultivationtype:1017 a :SRPPPCrop ;
+    schema:name "Wintertriticale"@de,
+        "Triticale d'automne"@fr,
+        "Triticale autunnale"@it ;
+    :hasMembership [ schema:identifier "10180"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:505 .
 
 cultivationtype:19 a :SRPPPCrop ;
     schema:name "Wintergetreide"@de,
