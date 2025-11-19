@@ -2,70 +2,523 @@
 @prefix schema: <http://schema.org/> .
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 
+taxon:1ANGC a :CropTaxon ;
+    schema:name "Angiospermae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1ANGC> ;
+    :parentTaxon taxon:1MAGP ;
+    :taxonName "Angiospermae" ;
+    :taxonRank :Class .
+
+taxon:1CAIF a :CropTaxon ;
+    schema:name "Cannabaceae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1CAIF> ;
+    :parentTaxon taxon:1ROSO ;
+    :taxonName "Cannabaceae" ;
+    :taxonRank :Family .
+
 taxon:1CNIG a :CropTaxon ;
-    schema:name "Hanf"@de,
-        "hemp"@en,
-        "Chanvre"@fr,
-        "Canapa"@it ;
+    schema:name "Cannabis"@la ;
     :eppo <https://gd.eppo.int/taxon/1CNIG> ;
+    :parentTaxon taxon:1CAIF ;
     :taxonName "Cannabis" ;
+    :taxonRank :Subfamily .
+
+taxon:1COMD a :CropTaxon ;
+    schema:name "Commelinids"@la ;
+    :eppo <https://gd.eppo.int/taxon/1COMD> ;
+    :parentTaxon taxon:1ANGC ;
+    :taxonName "Commelinids" ;
+    :taxonRank :Category .
+
+taxon:1EHRS a :CropTaxon ;
+    schema:name "Ehrhartoideae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1EHRS> ;
+    :parentTaxon taxon:1GRAF ;
+    :taxonName "Ehrhartoideae" ;
+    :taxonRank :Subfamily .
+
+taxon:1FABD a :CropTaxon ;
+    schema:name "Fabids"@la ;
+    :eppo <https://gd.eppo.int/taxon/1FABD> ;
+    :parentTaxon taxon:1ANGC ;
+    :taxonName "Fabids" ;
+    :taxonRank :Category .
+
+taxon:1GRAF a :CropTaxon ;
+    schema:alternateName "Gräser"@de,
+        "grasses"@en,
+        "gramíneas"@es,
+        "graminées"@fr,
+        "Gramineae"@la,
+        "gramíneas"@pt ;
+    schema:name "Poaceae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1GRAF> ;
+    :parentTaxon taxon:1POAO ;
+    :taxonName "Poaceae" ;
+    :taxonRank :Family .
+
+taxon:1MAGP a :CropTaxon ;
+    schema:name "Magnoliophyta"@la ;
+    :eppo <https://gd.eppo.int/taxon/1MAGP> ;
+    :parentTaxon taxon:1PLAK ;
+    :taxonName "Magnoliophyta" ;
+    :taxonRank :Phylum .
+
+taxon:1ORYG a :CropTaxon ;
+    schema:name "Oryza"@la ;
+    :eppo <https://gd.eppo.int/taxon/1ORYG> ;
+    :parentTaxon taxon:1EHRS ;
+    :taxonName "Oryza" ;
+    :taxonRank :Genus .
+
+taxon:1PANS a :CropTaxon ;
+    schema:name "Panicoideae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1PANS> ;
+    :parentTaxon taxon:1GRAF ;
+    :taxonName "Panicoideae" ;
+    :taxonRank :Subfamily .
+
+taxon:1PLAK a :CropTaxon ;
+    schema:name "Plantae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1PLAK> ;
+    :taxonName "Plantae" ;
+    :taxonRank :Kingdom .
+
+taxon:1POAO a :CropTaxon ;
+    schema:name "Poales"@la ;
+    :eppo <https://gd.eppo.int/taxon/1POAO> ;
+    :parentTaxon taxon:1COMD ;
+    :taxonName "Poales" ;
+    :taxonRank :Order .
+
+taxon:1POOS a :CropTaxon ;
+    schema:name "Poöideae"@la ;
+    :eppo <https://gd.eppo.int/taxon/1POOS> ;
+    :parentTaxon taxon:1GRAF ;
+    :taxonName "Poöideae" ;
+    :taxonRank :Subfamily .
+
+taxon:1ROSO a :CropTaxon ;
+    schema:name "Rosales"@la ;
+    :eppo <https://gd.eppo.int/taxon/1ROSO> ;
+    :parentTaxon taxon:1FABD ;
+    :taxonName "Rosales" ;
+    :taxonRank :Order .
+
+taxon:1SECG a :CropTaxon ;
+    schema:name "Secale"@la ;
+    :eppo <https://gd.eppo.int/taxon/1SECG> ;
+    :parentTaxon taxon:1POOS ;
+    :taxonName "Secale" ;
+    :taxonRank :Genus .
+
+taxon:1TRZG a :CropTaxon ;
+    schema:name "Triticum"@la ;
+    :eppo <https://gd.eppo.int/taxon/1TRZG> ;
+    :parentTaxon taxon:1POOS ;
+    :taxonName "Triticum" ;
+    :taxonRank :Genus .
+
+taxon:1ZEAG a :CropTaxon ;
+    schema:alternateName "Euchlaena"@la ;
+    schema:name "Zea"@la ;
+    :eppo <https://gd.eppo.int/taxon/1ZEAG> ;
+    :parentTaxon taxon:1PANS ;
+    :taxonName "Zea" ;
     :taxonRank :Genus .
 
 taxon:CNISA a :CropTaxon ;
-    schema:alternateName "Gebauter Hanf"@de,
-        "Gewöhnlicher Hanf"@de ;
-    schema:name "Hanf"@de ;
+    schema:alternateName "cáñamo"@an,
+        "коноп"@bg,
+        "посевен коноп"@bg,
+        "cànem"@ca,
+        "konopí seté"@cs,
+        "hamp"@da,
+        "Hanf"@de,
+        "gebauter Hanf"@de,
+        "gewöhnlicher Hanf"@de,
+        "κάνναβη"@el,
+        "common hemp"@en,
+        "hemp"@en,
+        "cañamón"@es,
+        "cáñamo"@es,
+        "cáñamo común"@es,
+        "harilik kanep"@et,
+        "hamppu"@fi,
+        "chanvre"@fr,
+        "chanvre commun"@fr,
+        "chanvre cultivé"@fr,
+        "bhang"@hi,
+        "charas"@hi,
+        "ganja"@hi,
+        "konoplja"@hr,
+        "uzgojena konoplja"@hr,
+        "kender"@hu,
+        "vadkender"@hu,
+        "canapa"@it,
+        "canapa coltivada"@it,
+        "canapa comune"@it,
+        "asa"@ja,
+        "アサ"@ja,
+        "sam"@ko,
+        "삼"@ko,
+        "Cannabis sativa subsp. sativa"@la,
+        "sėjamoji kanapė"@lt,
+        "sējas kaņepe"@lv,
+        "gewone hennep"@nl,
+        "hamp"@no,
+        "cambe"@oc,
+        "cambet"@oc,
+        "canabeta"@oc,
+        "canep"@oc,
+        "canet"@oc,
+        "carbe"@oc,
+        "li de canet"@oc,
+        "konopie siewne"@pl,
+        "cânhamo-comum"@pt,
+        "cânhamo-europeo"@pt,
+        "cânhamo-ordinário"@pt,
+        "maconha"@pt,
+        "cînepă"@ro,
+        "конопля посевная"@ru,
+        "bahuvadini"@sa,
+        "bhanga"@sa,
+        "konopa siata"@sk,
+        "navadna konoplja"@sl,
+        "kërpi"@sq,
+        "конопља"@sr,
+        "hampa"@sv,
+        "vanlig hampa"@sv,
+        "hint keneviri"@tr,
+        "коноплі посівні"@uk,
+        "dàmáshǔ"@zh,
+        "大麻属"@zh ;
+    schema:name "Cannabis sativa"@la ;
     :eppo <https://gd.eppo.int/taxon/CNISA> ;
+    :parentTaxon taxon:1CNIG ;
     :taxonName "Cannabis sativa" ;
-    :taxonRank :Species .
+    :taxonRank :Genus .
 
 taxon:ORYSA a :CropTaxon ;
-    schema:name "Reis"@de,
+    schema:alternateName "посевен ориз"@bg,
+        "arròs"@ca,
+        "rýže setá"@cs,
+        "gemeiner Reis"@de,
+        "common rice"@en,
         "rice"@en,
-        "Riz"@fr,
-        "Riso"@it ;
+        "arroz común"@es,
+        "arroza"@eu,
+        "riz"@fr,
+        "riz commun"@fr,
+        "riz cultivé"@fr,
+        "chawal"@hi,
+        "dhaan"@hi,
+        "चावल"@hi,
+        "धान"@hi,
+        "riža "@hr,
+        "rizs"@hu,
+        "padi"@id,
+        "riso"@it,
+        "riso comune"@it,
+        "ine"@ja,
+        "イネ"@ja,
+        "gewone rijst"@nl,
+        "ris"@oc,
+        "arroz"@pt,
+        "arroz-comum"@pt,
+        "рис посевной"@ru,
+        "рис посевный"@ru,
+        "ryža siata"@sk,
+        "oriz"@sq,
+        "рижа"@sr,
+        "vanlig ris"@sv,
+        "çeltik"@tr,
+        "рис посівний"@uk,
+        "dào"@zh,
+        "稻"@zh ;
+    schema:name "Oryza sativa"@la ;
     :eppo <https://gd.eppo.int/taxon/ORYSA> ;
+    :parentTaxon taxon:1ORYG ;
     :taxonName "Oryza sativa" ;
     :taxonRank :Species .
 
+taxon:SECCE a :CropTaxon ;
+    schema:alternateName "посевна ръж"@bg,
+        "segal"@ca,
+        "sègol"@ca,
+        "séguel"@ca,
+        "žito"@cs,
+        "žito seté"@cs,
+        "almindelig rug"@da,
+        "Roggen"@de,
+        "Saatroggen"@de,
+        "rye"@en,
+        "centeno"@es,
+        "ferrana"@es,
+        "harilik rukis"@et,
+        "zekalea"@eu,
+        "ruis"@fi,
+        "segle"@fr,
+        "seigle"@fr,
+        "seigle céréale"@fr,
+        "shifon tarbuti"@he,
+        "שִׁיפוֹן תַּרְבּוּתִי"@he,
+        "raž "@hr,
+        "rozs"@hu,
+        "grano germano"@it,
+        "segale"@it,
+        "segale comune"@it,
+        "raimugi"@ja,
+        "ライムギ"@ja,
+        "rugiai"@lt,
+        "sėjamasis rugys"@lt,
+        "sējas rudzis"@lv,
+        "rogge"@nl,
+        "rug"@no,
+        "blat"@oc,
+        "séglé"@oc,
+        "żyto zwyczajne"@pl,
+        "centeio"@pt,
+        "рожь посевная"@ru,
+        "žito ozimé"@sk,
+        "rž"@sl,
+        "thekër"@sq,
+        "råg"@sv,
+        "çavdar"@tr,
+        "жито посівне"@uk ;
+    schema:name "Secale cereale"@la ;
+    :eppo <https://gd.eppo.int/taxon/SECCE> ;
+    :parentTaxon taxon:1SECG ;
+    :taxonName "Secale cereale" ;
+    :taxonRank :Species .
+
 taxon:TRZAX a :CropTaxon ;
-    schema:alternateName "Gewöhnlicher Weizen"@de,
+    schema:alternateName "мека пшеница"@bg,
+        "blat"@ca,
+        "pšenice"@cs,
+        "pšenice setá"@cs,
+        "almindelig hvede"@da,
+        "Saatweizen"@de,
         "Weichweizen"@de,
         "Weizen"@de,
-        "soft wheat"@en ;
-    schema:name "Brotweizen"@de,
-        "bread wheat"@en ;
+        "gewöhnlicher Weizen"@de,
+        "bread wheat"@en,
+        "soft wheat"@en,
+        "trigo"@es,
+        "trigo candeal"@es,
+        "trigo harinero"@es,
+        "harilik nisu"@et,
+        "gari"@eu,
+        "ogi"@eu,
+        "leipävehnä"@fi,
+        "blé"@fr,
+        "blé cultivé"@fr,
+        "blé d'été"@fr,
+        "blé ordinaire"@fr,
+        "blé tendre"@fr,
+        "froment"@fr,
+        "touzelle"@fr,
+        "obična pšenica"@hr,
+        "kenyérbúza"@hu,
+        "közönséges búza"@hu,
+        "civitella"@it,
+        "fromento tenero"@it,
+        "frumento"@it,
+        "grano tenero"@it,
+        "marzuolo"@it,
+        "Triticum aestivum"@la,
+        "Triticum sativum"@la,
+        "Triticum vulgare"@la,
+        "kviečiai"@lt,
+        "paprastasis kvierys"@lt,
+        "mīkstais kviesis"@lv,
+        "tarwe"@nl,
+        "kveite"@no,
+        "blat"@oc,
+        "broment"@oc,
+        "coja bladeta"@oc,
+        "couy"@oc,
+        "horment"@oc,
+        "hormentina"@oc,
+        "hourmen"@oc,
+        "roumen"@oc,
+        "trigo"@pt,
+        "trigo-mole"@pt,
+        "пшеница летняя"@ru,
+        "пшеница мягкая"@ru,
+        "пшеница обыкновенная"@ru,
+        "pšenica letná"@sk,
+        "navadna pšenica"@sl,
+        "grurë"@sq,
+        "мека пшеница"@sr,
+        "обична пшеница"@sr,
+        "vete"@sv,
+        "ekmeklik buğday"@tr,
+        "пшениця літня"@uk ;
+    schema:name "Triticum aestivum subsp. aestivum"@la ;
     :eppo <https://gd.eppo.int/taxon/TRZAX> ;
-    :taxonName "Triticum aestivum" ;
+    :parentTaxon taxon:1TRZG ;
+    :taxonName "Triticum aestivum subsp. aestivum" ;
     :taxonRank :Species .
 
 taxon:TRZDU a :CropTaxon ;
-    schema:alternateName "Durumweizen"@de,
+    schema:alternateName "твърда пшеница"@bg,
+        "blat dur"@ca,
+        "tvrdá pšenice"@cs,
+        "Durumweizen"@de,
         "Glasweizen"@de,
+        "Hartweizen"@de,
+        "durum wheat"@en,
         "flint wheat"@en,
         "hard wheat"@en,
         "macaroni wheat"@en,
-        "pasta wheat"@en ;
-    schema:name "Hartweizen"@de,
-        "durum wheat"@en ;
+        "pasta wheat"@en,
+        "trigo duro"@es,
+        "trigo fanfarrón"@es,
+        "trigo fideos"@es,
+        "trigo maccaronero"@es,
+        "trigo moruno"@es,
+        "trigo semolero"@es,
+        "ogi bizardun"@eu,
+        "blé dur"@fr,
+        "pšenica "@hr,
+        "keményszemű búza"@hu,
+        "frumento duro"@it,
+        "grano duro"@it,
+        "Triticum pyramidale"@la,
+        "Triticum turgidum subsp. durum"@la,
+        "kietieji kviečiai"@lt,
+        "harde tarwe"@nl,
+        "roumen balut"@oc,
+        "пшеница твёрдая"@ru,
+        "pšenica tvrdá"@sk,
+        "trda pšenica"@sl,
+        "grurë"@sq,
+        "тврда пшеница"@sr,
+        "hårdvete"@sv,
+        "makarnalık buğday"@tr,
+        "пшениця тверда"@uk ;
+    schema:name "Triticum durum"@la ;
     :eppo <https://gd.eppo.int/taxon/TRZDU> ;
+    :parentTaxon taxon:1TRZG ;
     :taxonName "Triticum durum" ;
     :taxonRank :Species .
 
 taxon:TRZMO a :CropTaxon ;
-    schema:alternateName "Eicher"@de,
-        "Einkornweizen"@de ;
-    schema:name "Einkorn"@de ;
+    schema:alternateName "едрозърнест лимец"@bg,
+        "pšenice jednozrnka"@cs,
+        "Eicher"@de,
+        "Einkorn"@de,
+        "Einkornweizen"@de,
+        "einkorn wheat"@en,
+        "one-grained wheat"@en,
+        "small spelt"@en,
+        "escaña menor"@es,
+        "blé riz"@fr,
+        "blé à un grain"@fr,
+        "engrain"@fr,
+        "ingrain"@fr,
+        "petit épeautre"@fr,
+        "jednozrni pir"@hr,
+        "alakor"@hu,
+        "farro"@it,
+        "vienagrūdis kvietys"@lt,
+        "pszenica płaskurka"@pl,
+        "escanha-menor"@pt,
+        "trigo-candial"@pt,
+        "alac"@ro,
+        "зандури"@ru,
+        "пшеница однозернянка"@ru,
+        "pšenica jednozrná"@sk,
+        "gruri tepa"@sq,
+        "једнозрнац"@sr,
+        "siyez"@tr ;
+    schema:name "Triticum monococcum"@la ;
     :eppo <https://gd.eppo.int/taxon/TRZMO> ;
+    :parentTaxon taxon:1TRZG ;
     :taxonName "Triticum monococcum" ;
     :taxonRank :Species .
 
 taxon:ZEAMX a :CropTaxon ;
-    schema:name "Mais"@de,
+    schema:alternateName "mielie"@af,
+        "ذرة"@ar,
+        "ذرة شامية"@ar,
+        "ذرة صفراء"@ar,
+        "кукуруза"@be,
+        "царевица"@bg,
+        "blat de les Índies"@ca,
+        "blat de moro"@ca,
+        "dacsa"@ca,
+        "moresc"@ca,
+        "panís"@ca,
+        "kukuřice setá"@cs,
+        "majs"@da,
+        "Kukuruz"@de,
+        "Mais"@de,
+        "Welschkorn"@de,
+        "gemeiner Mais"@de,
+        "καλαμπόκι"@el,
+        "Indian corn"@en,
+        "corn"@en,
+        "maize"@en,
         "sweetcorn"@en,
-        "Maïs"@fr,
-        "Mais"@it ;
+        "maíz"@es,
+        "maíz común"@es,
+        "mijo"@es,
+        "harilik mais"@et,
+        "mais"@et,
+        "artoa"@eu,
+        "maissi"@fi,
+        "blé d'Espagne"@fr,
+        "blé de Turquie"@fr,
+        "maïs"@fr,
+        "zéa maïs"@fr,
+        "makka"@hi,
+        "मक्का"@hi,
+        "kukuruz "@hr,
+        "kukorica"@hu,
+        "frumentone"@it,
+        "granone"@it,
+        "granoturco"@it,
+        "granturco"@it,
+        "mais"@it,
+        "mais comune"@it,
+        "melga"@it,
+        "sorgoturco"@it,
+        "tô-morokoshi"@ja,
+        "トウモロコシ"@ja,
+        "Zea mays subsp. mays"@la,
+        "kukurūzai"@lt,
+        "paprastasis kukurūzas"@lt,
+        "parastā kukurūza"@lv,
+        "gewone mais"@nl,
+        "maïs"@nl,
+        "mais"@no,
+        "blamoru"@oc,
+        "blat de moru"@oc,
+        "milgròs"@oc,
+        "milhouquéte"@oc,
+        "milhòc"@oc,
+        "kukurydza"@pl,
+        "kukurydza zwyczajna"@pl,
+        "milho"@pt,
+        "milho-comum"@pt,
+        "porumb"@ro,
+        "кукуруза"@ru,
+        "кукуруза обыкновенная"@ru,
+        "маис"@ru,
+        "kukurica siata"@sk,
+        "koruza"@sl,
+        "misër"@sq,
+        "majs"@sv,
+        "vanlig majs"@sv,
+        "mısır"@tr,
+        "кукурудза звичайна"@uk,
+        "yù shǔ shǔ zhǔ"@zh,
+        "玉蜀黍属"@zh ;
+    schema:name "Zea mays"@la ;
     :eppo <https://gd.eppo.int/taxon/ZEAMX> ;
+    :parentTaxon taxon:1ZEAG ;
     :taxonName "Zea mays" ;
     :taxonRank :Species .
 

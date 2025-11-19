@@ -301,6 +301,7 @@ cultivationtype:514 a :CultivationType ;
     schema:name "Roggen"@de,
         "Seigle"@fr,
         "Segale"@it ;
+    :botanicalPlant taxon:SECCE ;
     :hasMembership [ schema:identifier "514"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
