@@ -441,7 +441,8 @@ cultivationtype:521 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:497 .
+    :partOf cultivationtype:497,
+        cultivationtype:543 .
 
 cultivationtype:522 a :CultivationType ;
     schema:name "Zuckerrüben"@de,
@@ -2269,6 +2270,22 @@ cultivationtype:1029 a :GRUDCrop ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:581 .
+
+cultivationtype:1030 a :GRUDCrop ;
+    schema:name "Getreide-Silage ohne Leguminosen"@de ;
+    :hasMembership [ schema:identifier "CROP_STRAWL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:543 .
+
+cultivationtype:1031 a :GRUDCrop ;
+    schema:name "Getreide-Silage mit Leguminosen"@de ;
+    :hasMembership [ schema:identifier "CROP_MILLE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:543 .
 
 cultivationtype:493 a :GRUDCrop ;
     schema:name "Sonnenblumen"@de,
