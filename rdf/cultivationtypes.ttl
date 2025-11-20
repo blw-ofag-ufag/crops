@@ -612,13 +612,22 @@ cultivationtype:541 a :CultivationType ;
 
 cultivationtype:542 a :CultivationType ;
     schema:name "Hirse"@de,
+        "millet"@en,
         "Millet"@fr,
         "Miglio"@it ;
     :hasMembership [ schema:identifier "542"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_GANSO"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "15872"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:543 a :CultivationType ;
