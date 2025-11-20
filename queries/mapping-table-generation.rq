@@ -1,0 +1,44 @@
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?concept ?name ?source_id ?target_id
+FROM <https://lindas.admin.ch/foag/crops>
+WHERE {
+
+  # bind the source and target system names to variables
+  # note that currently, possible values are "AGIS", "NAEBI" and "SRPPP"
+  BIND("AGIS" AS ?source_system_name)
+  BIND("NAEBI" AS ?target_system_name)
+  
+  # bind a concept and its German name
+  ?concept a :CultivationType ;
+    schema:name ?name .
+  FILTER(LANG(?name)="de")
+  
+  # specify that we only want to look at cereals
+  # (this line can be deleted for a full mapping table.)
+  ?concept :partOf* :cultivationtype\/492 .
+  
+  # get source system identifiers
+  OPTIONAL {
+    ?concept :hasMembership [ 
+      schema:name ?source_system_name ;
+      schema:identifier ?source_id
+    ] .
+  }
+  
+  # get target system identifiers
+  OPTIONAL {
+    ?concept :partOf* ?hierarchyNode .
+    ?hierarchyNode :hasMembership [
+      schema:name ?target_system_name ;
+      schema:identifier ?target_id
+    ] .
+  }
+  
+  # We keep the row if:
+  # a) it has a source system ID
+  # b) it has a DIRECT target system ID but no source system ID
+  FILTER ( BOUND(?source_id) || (BOUND(?target_id) && ?concept = ?hierarchyNode) )
+}
