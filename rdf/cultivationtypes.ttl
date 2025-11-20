@@ -159,6 +159,10 @@ cultivationtype:497 a :CultivationType ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
     schema:name "Mais"@de ;
     :botanicalPlant taxon:ZEAMX ;
+    :hasMembership [ schema:identifier "10000"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:16 .
 
 cultivationtype:498 a :CultivationType ;
@@ -287,7 +291,11 @@ cultivationtype:508 a :CultivationType ;
     :hasMembership [ schema:identifier "508"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_SILCRN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:497 .
 
 cultivationtype:509 a :CultivationType ;
@@ -2211,6 +2219,36 @@ cultivationtype:1024 a :GRUDCrop ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:0 .
+
+cultivationtype:1025 a :GRUDCrop ;
+    schema:name "Grünmais, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_GCORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:521 .
+
+cultivationtype:1026 a :GRUDCrop ;
+    schema:name "Silomais"@de ;
+    :hasMembership [ schema:identifier "CROP_CCMCRN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:521 .
+
+cultivationtype:1027 a :GRUDCrop ;
+    schema:name "Zuckermais"@de,
+        "maïs sucré"@fr,
+        "Mais dolce"@it ;
+    :hasMembership [ schema:identifier "CROP_SUCORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10010"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:497 .
 
 cultivationtype:493 a :GRUDCrop ;
     schema:name "Sonnenblumen"@de,
