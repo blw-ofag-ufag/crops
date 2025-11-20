@@ -143,10 +143,6 @@ cultivationtype:4 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] ;
     :partOf cultivationtype:0 .
 
-cultivationtype:493 a :CultivationType ;
-    schema:name "Sonnenblumen"@de ;
-    :partOf cultivationtype:1 .
-
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
     :partOf cultivationtype:1 .
@@ -2206,6 +2202,20 @@ cultivationtype:1024 a :GRUDCrop ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:0 .
+
+cultivationtype:493 a :GRUDCrop ;
+    schema:name "Sonnenblumen"@de,
+        "Tournesol"@fr,
+        "Girasole"@it ;
+    :hasMembership [ schema:identifier "CROP_KARPA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10137"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
 
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
