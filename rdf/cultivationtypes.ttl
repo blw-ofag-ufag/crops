@@ -2228,7 +2228,11 @@ cultivationtype:1021 a :GRUDCrop ;
     :hasMembership [ schema:identifier "CROP_WKORN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10122"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:19,
         cultivationtype:516 .
 
@@ -2371,17 +2375,6 @@ cultivationtype:1017 a :SRPPPCrop ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:19,
         cultivationtype:505 .
-
-cultivationtype:1022 a :SRPPPCrop ;
-    schema:name "Korn (Dinkel)"@de,
-        "Épeautre"@fr,
-        "Spelta"@it ;
-    :hasMembership [ schema:identifier "10122"^^xsd:ID ;
-            schema:name "SRPPP"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:19,
-        cultivationtype:516 .
 
 cultivationtype:1032 a :SRPPPCrop ;
     schema:name "Süssgräser (Poaceae)"@de,
