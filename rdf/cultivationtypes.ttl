@@ -707,7 +707,11 @@ cultivationtype:549 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "11393"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:16 .
 
 cultivationtype:550 a :CultivationType ;
@@ -2249,6 +2253,22 @@ cultivationtype:1027 a :GRUDCrop ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:497 .
+
+cultivationtype:1028 a :GRUDCrop ;
+    schema:name "Ganzpflanzen-Sorghum"@de ;
+    :hasMembership [ schema:identifier "CROP_WINRA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:581 .
+
+cultivationtype:1029 a :GRUDCrop ;
+    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
+    :hasMembership [ schema:identifier "CROP_SOR2ND"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:581 .
 
 cultivationtype:493 a :GRUDCrop ;
     schema:name "Sonnenblumen"@de,
