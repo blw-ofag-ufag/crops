@@ -49,6 +49,7 @@ cultivationtype:1007 a :CultivationType ;
 
 cultivationtype:1014 a :CultivationType ;
     schema:name "Winterroggen (Populationssorten)"@de ;
+    :botanicalPlant taxon:SECCW ;
     :hasMembership [ schema:identifier "CROP_WRHGP"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -57,6 +58,7 @@ cultivationtype:1014 a :CultivationType ;
 
 cultivationtype:1015 a :CultivationType ;
     schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
+    :botanicalPlant taxon:SECCW ;
     :hasMembership [ schema:identifier "CROP_WRHGH_N"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -65,6 +67,7 @@ cultivationtype:1015 a :CultivationType ;
 
 cultivationtype:1016 a :CultivationType ;
     schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
+    :botanicalPlant taxon:SECCW ;
     :hasMembership [ schema:identifier "CROP_WRHGP_N"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -378,6 +381,7 @@ cultivationtype:513 a :CultivationType ;
 
 cultivationtype:514 a :CultivationType ;
     schema:name "Roggen"@de,
+        "rye"@en,
         "Seigle"@fr,
         "Segale"@it ;
     :botanicalPlant taxon:SECCE ;
@@ -2160,6 +2164,7 @@ cultivationtype:1009 a :GRUDCrop ;
 
 cultivationtype:1010 a :GRUDCrop ;
     schema:name "Winterhafer"@de ;
+    :botanicalPlant taxon:AVESW ;
     :hasMembership [ schema:identifier "CROP_WOGST"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2169,6 +2174,7 @@ cultivationtype:1010 a :GRUDCrop ;
 
 cultivationtype:1011 a :GRUDCrop ;
     schema:name "Sommerhafer"@de ;
+    :botanicalPlant taxon:AVESP ;
     :hasMembership [ schema:identifier "CROP_SOGST"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2181,7 +2187,9 @@ cultivationtype:1011 a :GRUDCrop ;
         cultivationtype:504 .
 
 cultivationtype:1013 a :GRUDCrop ;
-    schema:name "Winterroggen (Hybridsorten)"@de ;
+    schema:name "Winterroggen (Hybridsorten)"@de,
+        "winter rye"@en ;
+    :botanicalPlant taxon:SECCW ;
     :hasMembership [ schema:identifier "CROP_WRHGH"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2190,6 +2198,7 @@ cultivationtype:1013 a :GRUDCrop ;
 
 cultivationtype:1018 a :GRUDCrop ;
     schema:name "Sommertriticale"@de ;
+    :botanicalPlant taxon:TTLSO ;
     :hasMembership [ schema:identifier "CROP_STRIT"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2215,6 +2224,7 @@ cultivationtype:1020 a :GRUDCrop ;
 
 cultivationtype:1021 a :GRUDCrop ;
     schema:name "Winterkorn, Dinkel"@de ;
+    :botanicalPlant taxon:3SPWC ;
     :hasMembership [ schema:identifier "CROP_WKORN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2258,6 +2268,7 @@ cultivationtype:1027 a :GRUDCrop ;
     schema:name "Zuckermais"@de,
         "maïs sucré"@fr,
         "Mais dolce"@it ;
+    :botanicalPlant taxon:ZEAMS ;
     :hasMembership [ schema:identifier "CROP_SUCORN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2338,8 +2349,10 @@ cultivationtype:1006 a :SRPPPCrop ;
 
 cultivationtype:1012 a :SRPPPCrop ;
     schema:name "Winterroggen"@de,
+        "winter rye"@en,
         "Seigle d'automne"@fr,
         "Segale autunnale"@it ;
+    :botanicalPlant taxon:SECCW ;
     :hasMembership [ schema:identifier "9945"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2351,6 +2364,7 @@ cultivationtype:1017 a :SRPPPCrop ;
     schema:name "Wintertriticale"@de,
         "Triticale d'automne"@fr,
         "Triticale autunnale"@it ;
+    :botanicalPlant taxon:TTLWI ;
     :hasMembership [ schema:identifier "10180"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
