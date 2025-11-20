@@ -19,6 +19,10 @@ cultivationtype:1 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ],
         [ schema:identifier "10197"^^xsd:ID ;
             schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ],
+        [ schema:identifier "12069"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:0 .
 
@@ -88,7 +92,10 @@ cultivationtype:14 a :CultivationType ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
-    :botanicalPlant taxon:1GRAF ;
+    :hasMembership [ schema:identifier "10080"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:1032 .
 
 cultivationtype:15 a :CultivationType ;
