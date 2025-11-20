@@ -89,7 +89,7 @@ cultivationtype:14 a :CultivationType ;
         "Céréales"@fr,
         "Cereali"@it ;
     :botanicalPlant taxon:1GRAF ;
-    :partOf cultivationtype:16 .
+    :partOf cultivationtype:1032 .
 
 cultivationtype:15 a :CultivationType ;
     schema:alternateName "Hülsenfrüchte"@de ;
@@ -163,7 +163,7 @@ cultivationtype:497 a :CultivationType ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:16 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:498 a :CultivationType ;
     schema:name "Gerste"@de,
@@ -713,7 +713,7 @@ cultivationtype:549 a :CultivationType ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:16 .
+    :partOf cultivationtype:14 .
 
 cultivationtype:550 a :CultivationType ;
     schema:name "Übrige Ackerfläche"@de,
@@ -2355,6 +2355,17 @@ cultivationtype:1022 a :SRPPPCrop ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:19,
         cultivationtype:516 .
+
+cultivationtype:1032 a :SRPPPCrop ;
+    schema:name "Süssgräser (Poaceae)"@de,
+        "poacées (Gramineae)"@fr,
+        "Poacee (Graminaceae)"@it ;
+    :botanicalPlant taxon:1GRAF ;
+    :hasMembership [ schema:identifier "10339"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:16 .
 
 cultivationtype:19 a :SRPPPCrop ;
     schema:name "Wintergetreide"@de,
