@@ -177,6 +177,7 @@ cultivationtype:498 a :CultivationType ;
         "barley"@en,
         "Orge"@fr,
         "Orzo"@it ;
+    :botanicalPlant taxon:HORVX ;
     :hasMembership [ schema:identifier "10083"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -245,6 +246,7 @@ cultivationtype:504 a :CultivationType ;
     schema:name "Hafer"@de,
         "Avoine"@fr,
         "Avena"@it ;
+    :botanicalPlant taxon:AVESA ;
     :hasMembership [ schema:identifier "504"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -259,6 +261,7 @@ cultivationtype:505 a :CultivationType ;
     schema:name "Triticale"@de,
         "Triticale"@fr,
         "Triticale"@it ;
+    :botanicalPlant taxon:TTLRI ;
     :hasMembership [ schema:identifier "505"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -404,6 +407,7 @@ cultivationtype:516 a :CultivationType ;
     schema:name "Dinkel"@de,
         "Epeautre"@fr,
         "Spelta"@it ;
+    :botanicalPlant taxon:TRZSP ;
     :hasMembership [ schema:identifier "516"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -631,6 +635,7 @@ cultivationtype:542 a :CultivationType ;
         "millet"@en,
         "Millet"@fr,
         "Miglio"@it ;
+    :botanicalPlant taxon:PANMI ;
     :hasMembership [ schema:identifier "542"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -711,6 +716,7 @@ cultivationtype:549 a :CultivationType ;
     schema:name "Sorghum"@de,
         "Sorgho"@fr,
         "Sorgo"@it ;
+    :botanicalPlant taxon:1SORG ;
     :hasMembership [ schema:identifier "549"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
