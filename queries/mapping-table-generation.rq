@@ -1,44 +1,77 @@
-PREFIX : <https://agriculture.ld.admin.ch/crops/>
-PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT ?concept ?name ?source_id ?target_id
-FROM <https://lindas.admin.ch/foag/crops>
+SELECT DISTINCT
+  (CONCAT(?S_label, " [", xsd:string(?S_id), "]") AS ?Source)
+  ?relation
+  (CONCAT(?T_label, " [", xsd:string(?T_id), "]") AS ?Target)
 WHERE {
 
-  # bind the source and target system names to variables
-  # note that currently, possible values are "AGIS", "NAEBI" and "SRPPP"
-  BIND("AGIS" AS ?source_system_name)
-  BIND("NAEBI" AS ?target_system_name)
-  
-  # bind a concept and its German name
-  ?concept a :CultivationType ;
-    schema:name ?name .
-  FILTER(LANG(?name)="de")
-  
-  # specify that we only want to look at cereals
-  # (this line can be deleted for a full mapping table.)
-  ?concept :partOf* :cultivationtype\/492 .
-  
-  # get source system identifiers
-  OPTIONAL {
-    ?concept :hasMembership [ 
-      schema:name ?source_system_name ;
-      schema:identifier ?source_id
+  # 1. CONFIGURATION
+  BIND("AGIS" AS ?DB_S)
+  BIND("NAEBI" AS ?DB_T)
+
+  # 2. ANCHOR: FIND SOURCE CONCEPTS
+  # We start by finding every concept defined in the Source System
+  ?S a :CultivationType ;
+    schema:name ?S_label ;
+    :partOf+ ct:492 ;
+    :hasMembership [ 
+      schema:name ?DB_S ; 
+      schema:identifier ?S_id 
     ] .
-  }
   
-  # get target system identifiers
+  FILTER(LANG(?S_label) = "de")
+
+  # 3. FIND TARGETS & DETERMINE RELATION
   OPTIONAL {
-    ?concept :partOf* ?hierarchyNode .
-    ?hierarchyNode :hasMembership [
-      schema:name ?target_system_name ;
-      schema:identifier ?target_id
-    ] .
+    {
+      # CASE A: IDENTITY (Exact Match)
+      # The source concept node strictly equals the target concept node
+      ?S :hasMembership [ 
+          schema:name ?DB_T ; 
+          schema:identifier ?T_id 
+      ] .
+      BIND(skos:exactMatch AS ?relation)
+      BIND(?S AS ?T)
+    }
+    UNION
+    {
+      # CASE B: SUBSUMPTION (Broad Match / Roll-up)
+      # Source is a Child of Target. We traverse up the tree.
+      
+      # Optimization: Only look for broad matches if no exact match exists
+      FILTER NOT EXISTS { ?S :hasMembership/schema:name ?DB_T }
+      
+      ?S :partOf+ ?T .
+      ?T :hasMembership [ 
+          schema:name ?DB_T ; 
+          schema:identifier ?T_id 
+      ] .
+      BIND(skos:broadMatch AS ?relation)
+    }
+    UNION
+    {
+      # CASE C: SUPER-ORDINATION (Narrow Match / Split)
+      # Source is a Parent of Target. We traverse down the tree (inverse partOf).
+      
+      # Optimization: Only look for narrow if no exact match exists
+      FILTER NOT EXISTS { ?S :hasMembership/schema:name ?DB_T }
+      
+      ?T :partOf+ ?S ;
+        :hasMembership [ 
+          schema:name ?DB_T ; 
+          schema:identifier ?T_id 
+        ] .
+      BIND(skos:narrowMatch AS ?relation)
+    }
+    
+    # Get the name of the target we found (if any)
+    ?T schema:name ?T_label .
+    FILTER(LANG(?T_label) = "de")
   }
-  
-  # We keep the row if:
-  # a) it has a source system ID
-  # b) it has a DIRECT target system ID but no source system ID
-  FILTER ( BOUND(?source_id) || (BOUND(?target_id) && ?concept = ?hierarchyNode) )
 }
+ORDER BY ?S_label ?relation
