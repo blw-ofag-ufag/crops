@@ -1,7 +1,7 @@
-/* Global Styles */
 :root {
-    --primary-color: #66BB6A; /* A modern, light green */
+    --primary-color: #66BB6A; 
     --primary-color-dark: #388E3C;
+    --system-active-color: #66BB6A;
     --light-gray: #f4f4f9;
     --medium-gray: #ccc;
     --dark-gray: #333;

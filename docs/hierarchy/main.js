@@ -3,7 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configuration
     const SPARQL_ENDPOINT = 'https://agriculture.ld.admin.ch/query';
 
-    // CONSTRUCT query to get all relevant triples for the hierarchy
+    // --- NEW: Parse URL Parameters ---
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        const system = params.get('system'); // e.g., "AGIS"
+        const dateStr = params.get('date');  // e.g., "2025-11-21"
+        
+        // Default to today if system is present but date is missing, 
+        // or null if specific behavior is preferred. Here we default to Today.
+        const date = dateStr ? new Date(dateStr) : new Date();
+        
+        return { system, date };
+    }
+
+    const queryParams = getQueryParams();
+    console.log("Active Filters:", queryParams);
+
+    // --- QUERY & JSON-LD FRAME (Unchanged) ---
     const CONSTRUCT_QUERY = `
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
@@ -17,14 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 :partOf ?parent ;
                 :botanicalPlant ?botanicalPlant ;
                 :hasMembership ?membership ;
-                # Use a generic property to link to a blank node representing the attribute
                 :hasAttribute ?attribute .
 
-            # This blank node groups the attribute type and its value
             ?attribute :attributeType ?attributeType ;
                        :attributeValue ?attributeValue .
 
-            # Get names for the attribute type and value
             ?attributeType schema:name ?attributeTypeName .
             ?attributeValue schema:name ?attributeValueName .
             ?parent a :CultivationType ;
@@ -61,9 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 OPTIONAL { ?membership schema:validFrom ?validFrom . }
                 OPTIONAL { ?membership schema:validTo ?validTo . }
             }
-
             OPTIONAL {
-                # Define which properties are considered attributes
                 VALUES ?attributeType { :intensity :purpose :cultivationMethod }
                 ?node ?attributeType ?attributeValue .
                 BIND(BNODE() AS ?attribute)
@@ -75,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
 
-    // JSON-LD Frame to structure the CONSTRUCT query results into a hierarchy
     const JSON_FRAME = {
         "@context": {
             "schema": "http://schema.org/",
@@ -86,10 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "botanicalPlant": { "@id": "crops:botanicalPlant", "@type": "@id" },
             "taxonName": { "@id": "crops:taxonName" },
             "eppoCode": { "@id": "crops:eppo", "@type": "@id" },
-            "hasMembership": {
-                "@id": "crops:hasMembership",
-                "@container": "@set"
-            },
+            "hasMembership": { "@id": "crops:hasMembership", "@container": "@set" },
             "identifier": { "@id": "schema:identifier", "@type": "xsd:string" },
             "membershipName": "schema:name",
             "validFrom": { "@id": "schema:validFrom", "@type": "xsd:date" },
@@ -113,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const membershipInfo = document.getElementById('membership-info');
     const attributesInfo = document.getElementById('attributes-info');
 
-
     // Vis.js Data
     let nodes = new vis.DataSet();
     let edges = new vis.DataSet();
@@ -121,11 +127,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Styling Constants
     const FONT_DEFAULTS = { size: 14, face: 'Inter', multi: true };
-    const STYLE_NORMAL = { NODE: { background: '#FFFFFF', border: '#000000' }, FONT: { ...FONT_DEFAULTS, color: '#000000' }, EDGE: { color: '#888888', hover: '#888888', highlight: '#888888' } };
-    const STYLE_FOCUS = { NODE: { background: '#D3E5FA', border: '#4A90E2' }, FONT: { ...FONT_DEFAULTS, color: '#000000' } };
-    const STYLE_HIGHLIGHT = { NODE: { background: '#000000', border: '#000000' }, FONT: { ...FONT_DEFAULTS, color: '#FFFFFF' }, EDGE: { color: '#000000', hover: '#000000', highlight: '#000000' } };
-    const STYLE_DIM = { NODE: { background: 'rgba(255, 255, 255, 0)', border: 'rgba(255, 255, 255, 0)' }, FONT: { ...FONT_DEFAULTS, color: '#D0D0D0' }, EDGE: { color: '#F0F0F0', hover: '#F0F0F0', highlight: '#F0F0F0' } };
+    
+    const STYLE_NORMAL = { 
+        NODE: { background: '#FFFFFF', border: '#000000' }, 
+        FONT: { ...FONT_DEFAULTS, color: '#000000' }, 
+        EDGE: { color: '#888888', hover: '#888888', highlight: '#888888' } 
+    };
+    
+    const STYLE_FOCUS = { 
+        NODE: { background: '#D3E5FA', border: '#4A90E2' }, 
+        FONT: { ...FONT_DEFAULTS, color: '#000000' } 
+    };
+    
+    const STYLE_HIGHLIGHT = { 
+        NODE: { background: '#000000', border: '#000000' }, 
+        FONT: { ...FONT_DEFAULTS, color: '#FFFFFF' }, 
+        EDGE: { color: '#000000', hover: '#000000', highlight: '#000000' } 
+    };
 
+    const STYLE_DIM = { 
+        NODE: { background: 'rgba(255, 255, 255, 0)', border: 'rgba(255, 255, 255, 0)' }, 
+        FONT: { ...FONT_DEFAULTS, color: '#D0D0D0' }, 
+        EDGE: { color: '#F0F0F0', hover: '#F0F0F0', highlight: '#F0F0F0' } 
+    };
+
+    const STYLE_SYSTEM = {
+        NODE: { background: '#66BB6A', border: '#000000' },
+        FONT: { ...FONT_DEFAULTS, color: '#FFFFFF' },
+    };
 
     function showLoader(show) {
         loaderContainer.style.display = show ? 'block' : 'none';
@@ -155,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!rawJsonLd) return null;
         try {
             const framedResult = await jsonld.frame(rawJsonLd, JSON_FRAME);
-            console.log("Framed JSON-LD Result:", framedResult); 
             return framedResult;
         } catch (error) {
             console.error("Error framing JSON-LD data:", error);
@@ -209,7 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const parents = Array.isArray(nodeObj.partOf) ? nodeObj.partOf : [nodeObj.partOf];
                 parents.forEach(parent => {
                     const parentId = (typeof parent === 'object' && parent['@id']) ? parent['@id'] : parent;
-
                     if (typeof parent === 'object' && parent['@id']) {
                         processNodeObject(parent);
                     } else if (!nodesMap.has(parentId)) {
@@ -218,13 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             label: formatLabel(parentId.split('/').pop()),
                             title: parentId.split('/').pop(),
                             description: "Keine Beschreibung verfügbar.",
-                            taxonName: null,
-                            eppoCode: null,
-                            memberships: [],
-                            attributes: []
+                            taxonName: null, eppoCode: null, memberships: [], attributes: []
                         });
                     }
-
                     const edgeId = `${nodeId}-${parentId}`;
                     if (!edgesSet.has(edgeId)) {
                         edges.add({ id: edgeId, from: nodeId, to: parentId });
@@ -239,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initGraph() {
-        const data = { nodes, edges };
+        
         const options = {
             layout: {
                 hierarchical: {
@@ -253,13 +276,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 shape: 'box',
                 margin: 10,
                 widthConstraint: { maximum: 700 }, 
-                color: STYLE_NORMAL.NODE,
-                borderWidth: 1,
-                font: STYLE_NORMAL.FONT
+                borderWidth: 1
             },
             edges: { 
                 width: 1.5,
-                color: STYLE_NORMAL.EDGE,
                 smooth: {
                     type: 'cubicBezier',
                     forceDirection: 'vertical',
@@ -278,12 +298,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 navigationButtons: true
             }
         };
-        network = new vis.Network(networkContainer, data, options);
+        network = new vis.Network(networkContainer, { nodes, edges }, options);
         network.on("stabilizationIterationsDone", () => network.setOptions({ physics: false }));
         network.on('selectNode', handleNodeSelection);
         network.on('deselectNode', handleDeselection);
         closePanelBtn.addEventListener('click', () => { network.unselectAll(); handleDeselection(); });
+        resetHighlight(); 
         showLoader(false);
+    }
+
+    function isNodeSystemActive(node) {
+        if (!queryParams.system) return false;
+        
+        if (!node.memberships || node.memberships.length === 0) return false;
+
+        return node.memberships.some(m => {
+            
+            // Check Name Match
+            if (m.membershipName !== queryParams.system) return false;
+
+            // Check Date Validity
+            // Extract raw values. JSON-LD framing might return objects { @value: ... } or strings.
+            let validFromStr = (m['schema:validFrom'] && m['schema:validFrom']['@value']) 
+                                ? m['schema:validFrom']['@value'] 
+                                : m['schema:validFrom'];
+            let validToStr = (m['schema:validTo'] && m['schema:validTo']['@value']) 
+                                ? m['schema:validTo']['@value'] 
+                                : m['schema:validTo'];
+            const checkDate = queryParams.date;
+
+            // If validFrom exists, checkDate must be >= validFrom
+            if (validFromStr) {
+                const fromDate = new Date(validFromStr);
+                if (checkDate < fromDate) return false;
+            }
+
+            // If validTo exists, checkDate must be <= validTo
+            if (validToStr) {
+                const toDate = new Date(validToStr);
+                if (checkDate > toDate) return false;
+            }
+
+            // If we made it here, the date is within range (or range is open)
+            return true;
+        });
     }
 
     function showInfoPanel(nodeId) {
@@ -330,15 +388,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const now = new Date();
                 const validToDate = validToObj && validToObj['@value'] ? new Date(validToObj['@value']) : null;
-                const showValidDates = validToDate && validToDate < now;
+                // Check if this specific membership is "active" based on URL param logic for visual feedback?
+                // Optional, but sticking to prompt requirements for network visualization first.
 
                 membershipHtml += `<div class="membership-item">`;
                 membershipHtml += `<p><b>System:</b> ${membership.membershipName || 'N/A'}</p>`;
                 membershipHtml += `<p><b>ID:</b> ${identifier}</p>`;
 
-                if (showValidDates) {
-                    const validFromYear = validFromObj && validFromObj['@value'] ? new Date(validFromObj['@value']).getFullYear() : 'N/A';
-                    const validToYear = validToDate ? validToDate.getFullYear() : 'N/A';
+                const validFromYear = validFromObj && validFromObj['@value'] ? new Date(validFromObj['@value']).getFullYear() : (validFromObj ? new Date(validFromObj).getFullYear() : 'Start');
+                const validToYear = validToDate ? validToDate.getFullYear() : 'heute';
+
+                if (validFromObj || validToObj) {
                     membershipHtml += `<p><b>Gültigkeit:</b> ${validFromYear} – ${validToYear}</p>`;
                 }
                 membershipHtml += `</div>`;
@@ -347,31 +407,21 @@ document.addEventListener('DOMContentLoaded', () => {
         membershipInfo.innerHTML = membershipHtml;
         membershipInfo.style.display = membershipHtml ? 'block' : 'none';
 
-        // Populate Attributes Info Panel
         let attributesHtml = '';
         const attributes = node.attributes;
-
         if (attributes && attributes.length > 0) {
-            // 1. Group values by their attribute type's name
             const groupedAttributes = attributes.reduce((acc, attr) => {
-                // Get the name of the attribute type (e.g., "Anbaumethode")
                 const typeName = attr.attributeType?.name;
-                // Get the name of the attribute value (e.g., "Freiland")
                 const valueName = attr.attributeValue?.name;
-
                 if (typeName && valueName) {
-                    if (!acc[typeName]) {
-                        acc[typeName] = new Set(); // Use a Set to handle duplicates automatically
-                    }
+                    if (!acc[typeName]) acc[typeName] = new Set();
                     acc[typeName].add(valueName);
                 }
                 return acc;
             }, {});
 
-            // 2. Build the HTML string from the grouped attributes
             let panelContent = '';
             for (const [typeName, valueNames] of Object.entries(groupedAttributes)) {
-                // The values are in a Set, convert to array and join with a comma
                 const valuesString = Array.from(valueNames).join(', ');
                 panelContent += `<p class="attribute-item"><b>${typeName}:</b> ${valuesString}</p>`;
             }
@@ -418,27 +468,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function highlightSelection(selectedNodeId) {
         const highlightedNodeIds = new Set([...getAllParents(selectedNodeId), ...getAllChildren(selectedNodeId)]);
+        
         const nodesToUpdate = nodes.map(node => {
-            if (node.id === selectedNodeId) return { id: node.id, color: STYLE_FOCUS.NODE, font: STYLE_FOCUS.FONT };
-            if (highlightedNodeIds.has(node.id)) return { id: node.id, color: STYLE_HIGHLIGHT.NODE, font: STYLE_HIGHLIGHT.FONT };
+            const isSystem = isNodeSystemActive(node);
+
+            // Selected Node (User Focus) -> Blue
+            if (node.id === selectedNodeId) {
+                return { id: node.id, color: STYLE_FOCUS.NODE, font: STYLE_FOCUS.FONT };
+            }
+
+            // Hierarchy (Lineage)
+            if (highlightedNodeIds.has(node.id)) {
+                // If in lineage AND System Active -> colored
+                if (isSystem) {
+                    return { id: node.id, color: STYLE_SYSTEM.NODE, font: STYLE_SYSTEM.FONT };
+                }
+                // If just in lineage -> Black
+                return { id: node.id, color: STYLE_HIGHLIGHT.NODE, font: STYLE_HIGHLIGHT.FONT };
+            }
+
+            // Background (Dimmed)
+            // Note: Even if a node is System Active, if it's not in the selected lineage,
+            // we dim it to preserve the view of the hierarchy structure.
             return { id: node.id, color: STYLE_DIM.NODE, font: STYLE_DIM.FONT };
         });
+
         const edgesToUpdate = edges.map(edge => ({
             id: edge.id,
+            // Edges in the highlighted path remain highlighted
             color: highlightedNodeIds.has(edge.from) && highlightedNodeIds.has(edge.to) ? STYLE_HIGHLIGHT.EDGE : STYLE_DIM.EDGE
         }));
+
         nodes.update(nodesToUpdate);
         edges.update(edgesToUpdate);
     }
 
+    // Reset Logic to include System check
     function resetHighlight() {
-        const nodesToUpdate = nodes.map(node => ({ id: node.id, color: STYLE_NORMAL.NODE, font: STYLE_NORMAL.FONT }));
+        const nodesToUpdate = nodes.map(node => {
+            // If a system filter is active, highlight applicable nodes RED, else NORMAL
+            if (isNodeSystemActive(node)) {
+                return { id: node.id, color: STYLE_SYSTEM.NODE, font: STYLE_SYSTEM.FONT };
+            } else {
+                return { id: node.id, color: STYLE_NORMAL.NODE, font: STYLE_NORMAL.FONT };
+            }
+        });
+
         const edgesToUpdate = edges.map(edge => ({ id: edge.id, color: STYLE_NORMAL.EDGE }));
         nodes.update(nodesToUpdate);
         edges.update(edgesToUpdate);
     }
 
-    // Updated execution chain
     fetchData()
         .then(frameDataClientSide)
         .then(processFramedData)
