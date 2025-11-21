@@ -19,6 +19,10 @@ cultivationtype:1 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ],
         [ schema:identifier "10197"^^xsd:ID ;
             schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ],
+        [ schema:identifier "12069"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:0 .
 
@@ -43,6 +47,30 @@ cultivationtype:1007 a :CultivationType ;
     :partOf cultivationtype:19,
         cultivationtype:492 .
 
+cultivationtype:1014 a :CultivationType ;
+    schema:name "Winterroggen (Populationssorten)"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1012 .
+
+cultivationtype:1015 a :CultivationType ;
+    schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGH_N"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1012 .
+
+cultivationtype:1016 a :CultivationType ;
+    schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGP_N"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1012 .
+
 cultivationtype:12 a :CultivationType ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
@@ -64,8 +92,11 @@ cultivationtype:14 a :CultivationType ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
-    :botanicalPlant taxon:1GRAF ;
-    :partOf cultivationtype:16 .
+    :hasMembership [ schema:identifier "10080"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1032 .
 
 cultivationtype:15 a :CultivationType ;
     schema:alternateName "Hülsenfrüchte"@de ;
@@ -119,10 +150,6 @@ cultivationtype:4 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] ;
     :partOf cultivationtype:0 .
 
-cultivationtype:493 a :CultivationType ;
-    schema:name "Sonnenblumen"@de ;
-    :partOf cultivationtype:1 .
-
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
     :partOf cultivationtype:1 .
@@ -139,10 +166,21 @@ cultivationtype:497 a :CultivationType ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
     schema:name "Mais"@de ;
     :botanicalPlant taxon:ZEAMX ;
-    :partOf cultivationtype:16 .
+    :hasMembership [ schema:identifier "10000"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
 
 cultivationtype:498 a :CultivationType ;
-    schema:name "Gerste"@de ;
+    schema:name "Gerste"@de,
+        "barley"@en,
+        "Orge"@fr,
+        "Orzo"@it ;
+    :hasMembership [ schema:identifier "10083"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:499 a :CultivationType ;
@@ -159,7 +197,14 @@ cultivationtype:5 a :CultivationType ;
     :partOf cultivationtype:0 .
 
 cultivationtype:500 a :CultivationType ;
-    schema:name "Emmer"@de ;
+    schema:name "Emmer"@de,
+        "Amidonnier"@fr,
+        "Farro"@it ;
+    :botanicalPlant taxon:TRZDI ;
+    :hasMembership [ schema:identifier "10271"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:511 .
 
 cultivationtype:501 a :CultivationType ;
@@ -169,8 +214,17 @@ cultivationtype:501 a :CultivationType ;
     :hasMembership [ schema:identifier "501"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:498 .
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_SGRST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10143"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1000,
+        cultivationtype:498 .
 
 cultivationtype:502 a :CultivationType ;
     schema:name "Wintergerste"@de,
@@ -179,8 +233,13 @@ cultivationtype:502 a :CultivationType ;
     :hasMembership [ schema:identifier "502"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:498 .
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "9943"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:498 .
 
 cultivationtype:504 a :CultivationType ;
     schema:name "Hafer"@de,
@@ -189,7 +248,11 @@ cultivationtype:504 a :CultivationType ;
     :hasMembership [ schema:identifier "504"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "10121"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:505 a :CultivationType ;
@@ -199,7 +262,11 @@ cultivationtype:505 a :CultivationType ;
     :hasMembership [ schema:identifier "505"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "10119"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:506 a :CultivationType ;
@@ -231,7 +298,11 @@ cultivationtype:508 a :CultivationType ;
     :hasMembership [ schema:identifier "508"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_SILCRN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:497 .
 
 cultivationtype:509 a :CultivationType ;
@@ -275,8 +346,12 @@ cultivationtype:511 a :CultivationType ;
     :hasMembership [ schema:identifier "511"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_EMMEK"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:492 .
 
 cultivationtype:512 a :CultivationType ;
     schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
@@ -306,7 +381,11 @@ cultivationtype:514 a :CultivationType ;
     :hasMembership [ schema:identifier "514"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "10120"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:515 a :CultivationType ;
@@ -329,7 +408,7 @@ cultivationtype:516 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:492 .
 
 cultivationtype:519 a :CultivationType ;
     schema:description "Anbau von Mais (Zea mays) mit dem spezifischen Ziel der Saatgutproduktion. Diese Art des Anbaus findet typischerweise auf Basis einer vertraglichen Vereinbarung zwischen Landwirt und Saatgutanbieter statt."@de ;
@@ -369,7 +448,8 @@ cultivationtype:521 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:497 .
+    :partOf cultivationtype:497,
+        cultivationtype:543 .
 
 cultivationtype:522 a :CultivationType ;
     schema:name "Zuckerrüben"@de,
@@ -548,13 +628,22 @@ cultivationtype:541 a :CultivationType ;
 
 cultivationtype:542 a :CultivationType ;
     schema:name "Hirse"@de,
+        "millet"@en,
         "Millet"@fr,
         "Miglio"@it ;
     :hasMembership [ schema:identifier "542"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_GANSO"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "15872"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:14 .
 
 cultivationtype:543 a :CultivationType ;
@@ -626,8 +715,12 @@ cultivationtype:549 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:16 .
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "11393"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:14 .
 
 cultivationtype:550 a :CultivationType ;
     schema:name "Übrige Ackerfläche"@de,
@@ -777,7 +870,11 @@ cultivationtype:572 a :CultivationType ;
     :hasMembership [ schema:identifier "572"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ] ;
+            :memberOfClass :DirectPaymentCrop ],
+        [ schema:identifier "CROP_STRBRR"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:1 .
 
 cultivationtype:573 a :CultivationType ;
@@ -2039,6 +2136,178 @@ cultivationtype:1005 a :GRUDCrop ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:1003 .
 
+cultivationtype:1008 a :GRUDCrop ;
+    schema:name "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
+    :hasMembership [ schema:identifier "CROP_WGRST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:502 .
+
+cultivationtype:1009 a :GRUDCrop ;
+    schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WGRSTN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:502 .
+
+cultivationtype:1010 a :GRUDCrop ;
+    schema:name "Winterhafer"@de ;
+    :hasMembership [ schema:identifier "CROP_WOGST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:504 .
+
+cultivationtype:1011 a :GRUDCrop ;
+    schema:name "Sommerhafer"@de ;
+    :hasMembership [ schema:identifier "CROP_SOGST"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10144"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1000,
+        cultivationtype:504 .
+
+cultivationtype:1013 a :GRUDCrop ;
+    schema:name "Winterroggen (Hybridsorten)"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1012 .
+
+cultivationtype:1018 a :GRUDCrop ;
+    schema:name "Sommertriticale"@de ;
+    :hasMembership [ schema:identifier "CROP_STRIT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1000,
+        cultivationtype:505 .
+
+cultivationtype:1019 a :GRUDCrop ;
+    schema:name "Wintertriticale (ohne Wintertriticale in 62a Nitrat-Projekt)"@de ;
+    :hasMembership [ schema:identifier "CROP_WTRIT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1017 .
+
+cultivationtype:1020 a :GRUDCrop ;
+    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WTRITN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1017 .
+
+cultivationtype:1021 a :GRUDCrop ;
+    schema:name "Winterkorn, Dinkel"@de ;
+    :hasMembership [ schema:identifier "CROP_WKORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:516 .
+
+cultivationtype:1023 a :GRUDCrop ;
+    schema:name "Nützlingsstreifen (DK)"@de ;
+    :hasMembership [ schema:identifier "CROP_OAFNT"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:6 .
+
+cultivationtype:1024 a :GRUDCrop ;
+    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
+    :hasMembership [ schema:identifier "CROP_HFBUFF"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:0 .
+
+cultivationtype:1025 a :GRUDCrop ;
+    schema:name "Grünmais, ha"@de ;
+    :hasMembership [ schema:identifier "CROP_GCORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:521 .
+
+cultivationtype:1026 a :GRUDCrop ;
+    schema:name "Silomais"@de ;
+    :hasMembership [ schema:identifier "CROP_CCMCRN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:521 .
+
+cultivationtype:1027 a :GRUDCrop ;
+    schema:name "Zuckermais"@de,
+        "maïs sucré"@fr,
+        "Mais dolce"@it ;
+    :hasMembership [ schema:identifier "CROP_SUCORN"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10010"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:497 .
+
+cultivationtype:1028 a :GRUDCrop ;
+    schema:name "Ganzpflanzen-Sorghum"@de ;
+    :hasMembership [ schema:identifier "CROP_WINRA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:581 .
+
+cultivationtype:1029 a :GRUDCrop ;
+    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
+    :hasMembership [ schema:identifier "CROP_SOR2ND"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:581 .
+
+cultivationtype:1030 a :GRUDCrop ;
+    schema:name "Getreide-Silage ohne Leguminosen"@de ;
+    :hasMembership [ schema:identifier "CROP_STRAWL"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:543 .
+
+cultivationtype:1031 a :GRUDCrop ;
+    schema:name "Getreide-Silage mit Leguminosen"@de ;
+    :hasMembership [ schema:identifier "CROP_MILLE"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:543 .
+
+cultivationtype:493 a :GRUDCrop ;
+    schema:name "Sonnenblumen"@de,
+        "Tournesol"@fr,
+        "Girasole"@it ;
+    :hasMembership [ schema:identifier "CROP_KARPA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10137"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
+
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
         "summer cereals"@en,
@@ -2060,6 +2329,50 @@ cultivationtype:1006 a :SRPPPCrop ;
             :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:491,
         cultivationtype:999 .
+
+cultivationtype:1012 a :SRPPPCrop ;
+    schema:name "Winterroggen"@de,
+        "Seigle d'automne"@fr,
+        "Segale autunnale"@it ;
+    :hasMembership [ schema:identifier "9945"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:514 .
+
+cultivationtype:1017 a :SRPPPCrop ;
+    schema:name "Wintertriticale"@de,
+        "Triticale d'automne"@fr,
+        "Triticale autunnale"@it ;
+    :hasMembership [ schema:identifier "10180"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:505 .
+
+cultivationtype:1022 a :SRPPPCrop ;
+    schema:name "Korn (Dinkel)"@de,
+        "Épeautre"@fr,
+        "Spelta"@it ;
+    :hasMembership [ schema:identifier "10122"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:19,
+        cultivationtype:516 .
+
+cultivationtype:1032 a :SRPPPCrop ;
+    schema:name "Süssgräser (Poaceae)"@de,
+        "poacées (Gramineae)"@fr,
+        "Poacee (Graminaceae)"@it ;
+    :botanicalPlant taxon:1GRAF ;
+    :hasMembership [ schema:identifier "10339"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:16 .
 
 cultivationtype:19 a :SRPPPCrop ;
     schema:name "Wintergetreide"@de,
