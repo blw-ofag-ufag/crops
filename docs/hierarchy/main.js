@@ -2,24 +2,100 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuration
     const SPARQL_ENDPOINT = 'https://agriculture.ld.admin.ch/query';
-
-    // --- NEW: Parse URL Parameters ---
-    function getQueryParams() {
+    
+    // Initialize state from URL parameters
+    function getInitialFilters() {
         const params = new URLSearchParams(window.location.search);
-        const system = params.get('system'); // e.g., "AGIS"
-        const dateStr = params.get('date');  // e.g., "2025-11-21"
+        const system = params.get('system') || ""; // Empty string = no filter
+        const dateStr = params.get('date');
         
-        // Default to today if system is present but date is missing, 
-        // or null if specific behavior is preferred. Here we default to Today.
+        // Default to Today if not specified
         const date = dateStr ? new Date(dateStr) : new Date();
         
         return { system, date };
     }
 
-    const queryParams = getQueryParams();
-    console.log("Active Filters:", queryParams);
+    // Mutable State
+    let activeFilters = getInitialFilters();
+    console.log("Initial Filters:", activeFilters);
 
-    // --- QUERY & JSON-LD FRAME (Unchanged) ---
+    // Helper to format date for HTML input (YYYY-MM-DD)
+    function toISODate(dateObj) {
+        return dateObj.toISOString().split('T')[0];
+    }
+
+    const networkContainer = document.getElementById('network');
+    const loaderContainer = document.getElementById('loader-container');
+    
+    // Info Panel Elements
+    const infoPanel = document.getElementById('info-panel');
+    const closePanelBtn = document.getElementById('close-panel-btn');
+    const infoIri = document.getElementById('info-iri');
+    const infoName = document.getElementById('info-name');
+    const infoDetails = document.getElementById('info-details');
+    const botanicalInfo = document.getElementById('botanical-info');
+    const membershipInfo = document.getElementById('membership-info');
+    const attributesInfo = document.getElementById('attributes-info');
+
+    // Settings Modal Elements
+    const settingsBtn = document.getElementById('settings-btn');
+    const settingsModal = document.getElementById('settings-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const applySettingsBtn = document.getElementById('apply-settings-btn');
+    const systemSelect = document.getElementById('system-select');
+    const dateInput = document.getElementById('date-input');
+
+    function openSettings() {
+        // Populate inputs with current state
+        systemSelect.value = activeFilters.system;
+        dateInput.value = toISODate(activeFilters.date);
+        
+        settingsModal.classList.remove('hidden');
+    }
+
+    function closeSettings() {
+        settingsModal.classList.add('hidden');
+    }
+
+    function applySettings() {
+        const newSystem = systemSelect.value;
+        const newDateStr = dateInput.value;
+
+        // Update State
+        activeFilters.system = newSystem;
+        activeFilters.date = newDateStr ? new Date(newDateStr) : new Date();
+
+        // Update URL without reloading (optional, for shareability)
+        const url = new URL(window.location);
+        if(newSystem) url.searchParams.set('system', newSystem);
+        else url.searchParams.delete('system');
+        
+        if(newDateStr) url.searchParams.set('date', newDateStr);
+        
+        window.history.pushState({}, '', url);
+
+        console.log("Filters Updated:", activeFilters);
+        
+        // Re-color the graph
+        refreshGraphColors();
+        
+        closeSettings();
+    }
+
+    settingsBtn.addEventListener('click', openSettings);
+    closeModalBtn.addEventListener('click', closeSettings);
+    applySettingsBtn.addEventListener('click', applySettings);
+    
+    // Close modal on background click
+    settingsModal.addEventListener('click', (e) => {
+        if (e.target === settingsModal) closeSettings();
+    });
+
+    let nodes = new vis.DataSet();
+    let edges = new vis.DataSet();
+    let network = null;
+
+    // Query & Frame (Unchanged from prompt)
     const CONSTRUCT_QUERY = `
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
@@ -108,23 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "@type": "crops:CultivationType"
     };
 
-    // DOM Elements
-    const networkContainer = document.getElementById('network');
-    const loaderContainer = document.getElementById('loader-container');
-    const infoPanel = document.getElementById('info-panel');
-    const closePanelBtn = document.getElementById('close-panel-btn');
-    const infoIri = document.getElementById('info-iri');
-    const infoName = document.getElementById('info-name');
-    const infoDetails = document.getElementById('info-details');
-    const botanicalInfo = document.getElementById('botanical-info');
-    const membershipInfo = document.getElementById('membership-info');
-    const attributesInfo = document.getElementById('attributes-info');
-
-    // Vis.js Data
-    let nodes = new vis.DataSet();
-    let edges = new vis.DataSet();
-    let network = null;
-
     // Styling Constants
     const FONT_DEFAULTS = { size: 14, face: 'Inter', multi: true };
     
@@ -183,8 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function frameDataClientSide(rawJsonLd) {
         if (!rawJsonLd) return null;
         try {
-            const framedResult = await jsonld.frame(rawJsonLd, JSON_FRAME);
-            return framedResult;
+            return await jsonld.frame(rawJsonLd, JSON_FRAME);
         } catch (error) {
             console.error("Error framing JSON-LD data:", error);
             loaderContainer.innerHTML = `<p>Error processing data.</p>`;
@@ -240,12 +298,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (typeof parent === 'object' && parent['@id']) {
                         processNodeObject(parent);
                     } else if (!nodesMap.has(parentId)) {
+                        // Placeholder if parent details aren't fetched yet (shouldn't happen with Construct usually)
                         nodesMap.set(parentId, {
                             id: parentId,
                             label: formatLabel(parentId.split('/').pop()),
                             title: parentId.split('/').pop(),
                             description: "Keine Beschreibung verfügbar.",
-                            taxonName: null, eppoCode: null, memberships: [], attributes: []
+                            memberships: [], attributes: []
                         });
                     }
                     const edgeId = `${nodeId}-${parentId}`;
@@ -262,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initGraph() {
-        
         const options = {
             layout: {
                 hierarchical: {
@@ -299,145 +357,53 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
         network = new vis.Network(networkContainer, { nodes, edges }, options);
+
+        // Turn off physics after stabilization to allow manual updates without re-simulating
         network.on("stabilizationIterationsDone", () => network.setOptions({ physics: false }));
         network.on('selectNode', handleNodeSelection);
         network.on('deselectNode', handleDeselection);
-        closePanelBtn.addEventListener('click', () => { network.unselectAll(); handleDeselection(); });
-        resetHighlight(); 
+
+        closePanelBtn.addEventListener('click', () => { network.unselectAll(); handleDeselection(); });        
+        refreshGraphColors(); 
         showLoader(false);
     }
 
     function isNodeSystemActive(node) {
-        if (!queryParams.system) return false;
+        if (!activeFilters.system) return false; // No system selected = no highlight (normal view)
         
         if (!node.memberships || node.memberships.length === 0) return false;
 
         return node.memberships.some(m => {
-            
             // Check Name Match
-            if (m.membershipName !== queryParams.system) return false;
+            if (m.membershipName !== activeFilters.system) return false;
 
             // Check Date Validity
-            // Extract raw values. JSON-LD framing might return objects { @value: ... } or strings.
-            let validFromStr = (m['schema:validFrom'] && m['schema:validFrom']['@value']) 
-                                ? m['schema:validFrom']['@value'] 
-                                : m['schema:validFrom'];
-            let validToStr = (m['schema:validTo'] && m['schema:validTo']['@value']) 
-                                ? m['schema:validTo']['@value'] 
-                                : m['schema:validTo'];
-            const checkDate = queryParams.date;
-
-            // If validFrom exists, checkDate must be >= validFrom
+            let validFromStr = (m['schema:validFrom'] && m['schema:validFrom']['@value']) ? m['schema:validFrom']['@value'] : m['schema:validFrom'];
+            let validToStr = (m['schema:validTo'] && m['schema:validTo']['@value']) ? m['schema:validTo']['@value'] : m['schema:validTo'];
+            
+            const checkDate = activeFilters.date;
             if (validFromStr) {
                 const fromDate = new Date(validFromStr);
                 if (checkDate < fromDate) return false;
             }
-
-            // If validTo exists, checkDate must be <= validTo
             if (validToStr) {
                 const toDate = new Date(validToStr);
                 if (checkDate > toDate) return false;
             }
-
-            // If we made it here, the date is within range (or range is open)
             return true;
         });
     }
 
-    function showInfoPanel(nodeId) {
-        const node = nodes.get(nodeId);
-        if (!node) return;
-
-        const compactedId = node.id;
-        const fullIri = compactedId.replace('crops:', 'https://agriculture.ld.admin.ch/crops/');
-        infoIri.href = fullIri;
-        const idNumber = compactedId.split('/').pop();
-        infoIri.textContent = `:${idNumber}`;
-
-        infoName.textContent = node.title;
-        infoDetails.textContent = node.description;
-
-        let botanicalHtml = '';
-        if (node.taxonName || node.eppoCode) {
-            botanicalHtml += '<strong>Botanische Pflanze</strong>';
-            if (node.taxonName) {
-                botanicalHtml += `<p><b>Name:</b> <em>${node.taxonName}</em></p>`;
-            }
-            if (node.eppoCode) {
-                const eppoSlug = node.eppoCode.split('/').pop();
-                botanicalHtml += `<p><b>EPPO-Code:</b> <a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a></p>`;
-            }
+    // Centralized function to redraw the graph colors
+    function refreshGraphColors() {
+        const selectedIds = network ? network.getSelectedNodes() : [];
+        if (selectedIds.length > 0) {
+            // If user has a node clicked, maintain focus on that
+            highlightSelection(selectedIds[0]);
+        } else {
+            // Otherwise standard view (with system highlights applied)
+            resetHighlight();
         }
-        botanicalInfo.innerHTML = botanicalHtml;
-        botanicalInfo.style.display = botanicalHtml ? 'block' : 'none';
-
-        let membershipHtml = '';
-        if (node.memberships && node.memberships.length > 0) {
-            membershipHtml += '<strong>Quellsysteme</strong>';
-            node.memberships.forEach(membership => {
-                const identifierObj = membership['schema:identifier'];
-                const validFromObj = membership['schema:validFrom'];
-                const validToObj = membership['schema:validTo'];
-                
-                let identifier = 'N/A';
-                if (identifierObj) {
-                    identifier = typeof identifierObj === 'object' && identifierObj['@value'] !== undefined 
-                        ? identifierObj['@value'] 
-                        : identifierObj;
-                }
-
-                const now = new Date();
-                const validToDate = validToObj && validToObj['@value'] ? new Date(validToObj['@value']) : null;
-                // Check if this specific membership is "active" based on URL param logic for visual feedback?
-                // Optional, but sticking to prompt requirements for network visualization first.
-
-                membershipHtml += `<div class="membership-item">`;
-                membershipHtml += `<p><b>System:</b> ${membership.membershipName || 'N/A'}</p>`;
-                membershipHtml += `<p><b>ID:</b> ${identifier}</p>`;
-
-                const validFromYear = validFromObj && validFromObj['@value'] ? new Date(validFromObj['@value']).getFullYear() : (validFromObj ? new Date(validFromObj).getFullYear() : 'Start');
-                const validToYear = validToDate ? validToDate.getFullYear() : 'heute';
-
-                if (validFromObj || validToObj) {
-                    membershipHtml += `<p><b>Gültigkeit:</b> ${validFromYear} – ${validToYear}</p>`;
-                }
-                membershipHtml += `</div>`;
-            });
-        }
-        membershipInfo.innerHTML = membershipHtml;
-        membershipInfo.style.display = membershipHtml ? 'block' : 'none';
-
-        let attributesHtml = '';
-        const attributes = node.attributes;
-        if (attributes && attributes.length > 0) {
-            const groupedAttributes = attributes.reduce((acc, attr) => {
-                const typeName = attr.attributeType?.name;
-                const valueName = attr.attributeValue?.name;
-                if (typeName && valueName) {
-                    if (!acc[typeName]) acc[typeName] = new Set();
-                    acc[typeName].add(valueName);
-                }
-                return acc;
-            }, {});
-
-            let panelContent = '';
-            for (const [typeName, valueNames] of Object.entries(groupedAttributes)) {
-                const valuesString = Array.from(valueNames).join(', ');
-                panelContent += `<p class="attribute-item"><b>${typeName}:</b> ${valuesString}</p>`;
-            }
-
-            if (panelContent) {
-                attributesHtml = `<strong>Attribute</strong>${panelContent}`;
-            }
-        }
-        attributesInfo.innerHTML = attributesHtml;
-        attributesInfo.style.display = attributesHtml ? 'block' : 'none';
-
-        infoPanel.classList.add('visible');
-    }
-
-    function hideInfoPanel() {
-        infoPanel.classList.remove('visible');
     }
 
     function handleNodeSelection({ nodes: selectedNodes }) {
@@ -479,23 +445,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Hierarchy (Lineage)
             if (highlightedNodeIds.has(node.id)) {
-                // If in lineage AND System Active -> colored
+                // If in lineage AND System Active -> Green (System Style)
                 if (isSystem) {
                     return { id: node.id, color: STYLE_SYSTEM.NODE, font: STYLE_SYSTEM.FONT };
                 }
-                // If just in lineage -> Black
+                // If just in lineage -> Black (Highlight Style)
                 return { id: node.id, color: STYLE_HIGHLIGHT.NODE, font: STYLE_HIGHLIGHT.FONT };
             }
 
             // Background (Dimmed)
-            // Note: Even if a node is System Active, if it's not in the selected lineage,
-            // we dim it to preserve the view of the hierarchy structure.
+            // Even if a node is system active, if it's not in the lineage, we dim it to focus on the selection.
             return { id: node.id, color: STYLE_DIM.NODE, font: STYLE_DIM.FONT };
         });
 
         const edgesToUpdate = edges.map(edge => ({
             id: edge.id,
-            // Edges in the highlighted path remain highlighted
             color: highlightedNodeIds.has(edge.from) && highlightedNodeIds.has(edge.to) ? STYLE_HIGHLIGHT.EDGE : STYLE_DIM.EDGE
         }));
 
@@ -503,10 +467,9 @@ document.addEventListener('DOMContentLoaded', () => {
         edges.update(edgesToUpdate);
     }
 
-    // Reset Logic to include System check
     function resetHighlight() {
         const nodesToUpdate = nodes.map(node => {
-            // If a system filter is active, highlight applicable nodes RED, else NORMAL
+            // If a system filter is active, highlight applicable nodes GREEN, else NORMAL white
             if (isNodeSystemActive(node)) {
                 return { id: node.id, color: STYLE_SYSTEM.NODE, font: STYLE_SYSTEM.FONT };
             } else {
@@ -515,8 +478,99 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const edgesToUpdate = edges.map(edge => ({ id: edge.id, color: STYLE_NORMAL.EDGE }));
+        
         nodes.update(nodesToUpdate);
         edges.update(edgesToUpdate);
+    }
+
+    function showInfoPanel(nodeId) {
+        const node = nodes.get(nodeId);
+        if (!node) return;
+
+        const compactedId = node.id;
+        const fullIri = compactedId.replace('crops:', 'https://agriculture.ld.admin.ch/crops/');
+        infoIri.href = fullIri;
+        const idNumber = compactedId.split('/').pop();
+        infoIri.textContent = `:${idNumber}`;
+
+        infoName.textContent = node.title;
+        infoDetails.textContent = node.description;
+
+        // Botanical Info
+        let botanicalHtml = '';
+        if (node.taxonName || node.eppoCode) {
+            botanicalHtml += '<strong>Botanische Pflanze</strong>';
+            if (node.taxonName) botanicalHtml += `<p><b>Name:</b> <em>${node.taxonName}</em></p>`;
+            if (node.eppoCode) {
+                const eppoSlug = node.eppoCode.split('/').pop();
+                botanicalHtml += `<p><b>EPPO-Code:</b> <a href="${node.eppoCode}" target="_blank" rel="noopener noreferrer">${eppoSlug}</a></p>`;
+            }
+        }
+        botanicalInfo.innerHTML = botanicalHtml;
+        botanicalInfo.style.display = botanicalHtml ? 'block' : 'none';
+
+        // Membership Info
+        let membershipHtml = '';
+        if (node.memberships && node.memberships.length > 0) {
+            membershipHtml += '<strong>Quellsysteme</strong>';
+            node.memberships.forEach(membership => {
+                const identifierObj = membership['schema:identifier'];
+                const validFromObj = membership['schema:validFrom'];
+                const validToObj = membership['schema:validTo'];
+                
+                let identifier = 'N/A';
+                if (identifierObj) {
+                    identifier = typeof identifierObj === 'object' && identifierObj['@value'] !== undefined 
+                        ? identifierObj['@value'] 
+                        : identifierObj;
+                }
+
+                membershipHtml += `<div class="membership-item">`;
+                membershipHtml += `<p><b>System:</b> ${membership.membershipName || 'N/A'}</p>`;
+                membershipHtml += `<p><b>ID:</b> ${identifier}</p>`;
+
+                const validFromYear = validFromObj && validFromObj['@value'] ? new Date(validFromObj['@value']).getFullYear() : (validFromObj ? new Date(validFromObj).getFullYear() : 'Start');
+                const validToDate = validToObj && validToObj['@value'] ? new Date(validToObj['@value']) : null;
+                const validToYear = validToDate ? validToDate.getFullYear() : 'heute';
+
+                if (validFromObj || validToObj) {
+                    membershipHtml += `<p><b>Gültigkeit:</b> ${validFromYear} – ${validToYear}</p>`;
+                }
+                membershipHtml += `</div>`;
+            });
+        }
+        membershipInfo.innerHTML = membershipHtml;
+        membershipInfo.style.display = membershipHtml ? 'block' : 'none';
+
+        let attributesHtml = '';
+        const attributes = node.attributes;
+        if (attributes && attributes.length > 0) {
+            const groupedAttributes = attributes.reduce((acc, attr) => {
+                const typeName = attr.attributeType?.name;
+                const valueName = attr.attributeValue?.name;
+                if (typeName && valueName) {
+                    if (!acc[typeName]) acc[typeName] = new Set();
+                    acc[typeName].add(valueName);
+                }
+                return acc;
+            }, {});
+
+            let panelContent = '';
+            for (const [typeName, valueNames] of Object.entries(groupedAttributes)) {
+                const valuesString = Array.from(valueNames).join(', ');
+                panelContent += `<p class="attribute-item"><b>${typeName}:</b> ${valuesString}</p>`;
+            }
+
+            if (panelContent) attributesHtml = `<strong>Attribute</strong>${panelContent}`;
+        }
+        attributesInfo.innerHTML = attributesHtml;
+        attributesInfo.style.display = attributesHtml ? 'block' : 'none';
+
+        infoPanel.classList.add('visible');
+    }
+
+    function hideInfoPanel() {
+        infoPanel.classList.remove('visible');
     }
 
     fetchData()
