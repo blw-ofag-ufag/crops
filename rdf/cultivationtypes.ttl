@@ -2367,9 +2367,11 @@ cultivationtype:1017 a :SRPPPCrop ;
         cultivationtype:505 .
 
 cultivationtype:1032 a :SRPPPCrop ;
-    schema:name "Süssgräser (Poaceae)"@de,
+    schema:alternateName "Süssgräser (Poaceae)"@de,
         "poacées (Gramineae)"@fr,
         "Poacee (Graminaceae)"@it ;
+    schema:name "Kulturen mit Süssgräsern"@de,
+        "crops with sweet grasses"@en ;
     :botanicalPlant taxon:1GRAF ;
     :hasMembership [ schema:identifier "10339"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
