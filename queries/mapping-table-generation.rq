@@ -5,20 +5,20 @@ PREFIX schema: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT DISTINCT
-  (CONCAT(?S_label, " [", xsd:string(?S_id), "]") AS ?Source)
+  ?S ?S_label ?S_id
   ?relation
-  (CONCAT(?T_label, " [", xsd:string(?T_id), "]") AS ?Target)
+  ?T ?T_label ?T_id
 WHERE {
 
   # 1. CONFIGURATION
-  BIND("AGIS" AS ?DB_S)
-  BIND("NAEBI" AS ?DB_T)
+  BIND("__SOURCE__" AS ?DB_S)
+  BIND("__TARGET__" AS ?DB_T)
 
   # 2. ANCHOR: FIND SOURCE CONCEPTS
   # We start by finding every concept defined in the Source System
   ?S a :CultivationType ;
     schema:name ?S_label ;
-    :partOf+ ct:492 ;
+    :partOf+ ct:14 ;
     :hasMembership [ 
       schema:name ?DB_S ; 
       schema:identifier ?S_id 
@@ -56,7 +56,8 @@ WHERE {
     UNION
     {
       # CASE C: SUPER-ORDINATION (Narrow Match / Split)
-      # Source is a Parent of Target. We traverse down the tree (inverse partOf).
+      # Source is a Parent of Target.
+      # We traverse down the tree (inverse partOf).
       
       # Optimization: Only look for narrow if no exact match exists
       FILTER NOT EXISTS { ?S :hasMembership/schema:name ?DB_T }
