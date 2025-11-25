@@ -71,6 +71,12 @@ cultivationtype:1016 a :CultivationType ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:1012 .
 
+cultivationtype:1033 a :CultivationType ;
+    schema:name "Getreide ohne Mais"@de,
+        "Céréales sans Maïs"@fr,
+        "Cereali senza Mais"@it ;
+    :partOf cultivationtype:14 .
+
 cultivationtype:12 a :CultivationType ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
@@ -181,7 +187,7 @@ cultivationtype:498 a :CultivationType ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:499 a :CultivationType ;
     schema:name "Einkorn"@de ;
@@ -253,7 +259,7 @@ cultivationtype:504 a :CultivationType ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:505 a :CultivationType ;
     schema:name "Triticale"@de,
@@ -267,7 +273,7 @@ cultivationtype:505 a :CultivationType ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:506 a :CultivationType ;
     schema:name "Mischel Futtergetreide"@de,
@@ -316,13 +322,13 @@ cultivationtype:509 a :CultivationType ;
     :hasMembership [ schema:identifier "172"^^xsd:ID ;
             schema:name "GRUD" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ],
+            :memberOfClass :GRUDCrop ] ;
         [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:510 a :CultivationType ;
     schema:name "Hartweizen"@de,
@@ -386,7 +392,7 @@ cultivationtype:514 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:515 a :CultivationType ;
     schema:description "Gemeinsame Ansaat von mehreren Getreidearten bzw. von Getreide mit Hülsenfrüchten, welche mindestens auch Brotgetreide beinhaltet."@de ;
@@ -398,7 +404,7 @@ cultivationtype:515 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:516 a :CultivationType ;
     schema:name "Dinkel"@de,
@@ -448,8 +454,7 @@ cultivationtype:521 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:497,
-        cultivationtype:543 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:522 a :CultivationType ;
     schema:name "Zuckerrüben"@de,
@@ -644,7 +649,7 @@ cultivationtype:542 a :CultivationType ;
             schema:validFrom "2008-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:543 a :CultivationType ;
     schema:name "Getreide siliert"@de,
@@ -655,7 +660,7 @@ cultivationtype:543 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:544 a :CultivationType ;
     schema:name "Leindotter"@de,
@@ -720,7 +725,7 @@ cultivationtype:549 a :CultivationType ;
             schema:validFrom "2016-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:550 a :CultivationType ;
     schema:name "Übrige Ackerfläche"@de,
@@ -2238,7 +2243,7 @@ cultivationtype:1025 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:521 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:1026 a :GRUDCrop ;
     schema:name "Silomais"@de ;
@@ -2246,7 +2251,7 @@ cultivationtype:1026 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:521 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:1027 a :GRUDCrop ;
     schema:name "Zuckermais"@de,
@@ -2317,7 +2322,7 @@ cultivationtype:1000 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:1006 a :SRPPPCrop ;
     schema:name "Sommerweichweizen"@de,
@@ -2383,7 +2388,7 @@ cultivationtype:19 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:490 a :SRPPPCrop ;
     schema:name "Winterweichweizen"@de,
@@ -2419,5 +2424,5 @@ cultivationtype:492 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
