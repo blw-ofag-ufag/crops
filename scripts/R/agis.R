@@ -25,7 +25,7 @@ base_url <- "https://www.blw.admin.ch/dam/de/sd-web/bkAU6T83hyLT"
 filename <- "LWB_Nutzungsfl%C3%A4chen_Kataloge.xlsx"
 destfile <- tempfile(fileext = ".xlsx")
 download.file(file.path(base_url, filename), destfile, mode = "wb")
-data <- readxl::read_excel(destfile, sheet = 1)
+data <- readxl::read_excel("data/agis-crops.xlsx", sheet = 3, na = "NA")
 
 #' =============================================================================
 #' PREFIX DEFINITION
@@ -42,7 +42,7 @@ sink("rdf/agis.ttl")
 #' WRITE CROP CATEGORIES
 #' =============================================================================
 
-colnames <- paste("Hauptkategorie", toupper(languages), sep = "_")
+colnames <- paste("CULTIVATIONTYPECATEGORY", toupper(languages), sep = "_")
 categories <- data %>%
   filter(if_all(all_of(colnames), ~ .x != "NULL")) %>%
   subset(select = colnames) %>%
@@ -78,7 +78,10 @@ for (i in seq_len(nrow(categories))) {
       subject = subject,
       predicate = rdfhelper::uri("name", schema),
       object = rdfhelper::langstring(
-        x = categories[i, paste("Hauptkategorie", toupper(lang), sep = "_")],
+        x = categories[
+          i,
+          paste("CULTIVATIONTYPECATEGORY", toupper(lang), sep = "_")
+        ],
         lang = lang
       )
     )
@@ -92,32 +95,24 @@ for (i in seq_len(nrow(categories))) {
 for (i in seq_len(nrow(data))) {
 
   # Save ID/IRI for this object
-  code <- as.integer(data[i, "LNF_Code"])
+  code <- as.character(data[i, "DIRECTPAYMENTCROP"])
+
   subject <- rdfhelper::uri(code, prefix = cultivationtype)
 
   # Static class assignment
   rdfhelper::triple(subject, "a", rdfhelper::uri("CultivationType", base))
 
   # Dynamic class assignment
-  from <- data[i, "Gueltig_Von"]
-  to <- data[i, "Gueltig_Bis"]
+  from <- as.character(as.Date(data$VALID_FROM)[i])
+  to <- as.character(as.Date(data$VALID_TO)[i])
   construct_class_membership(
     subject,
     uri("DirectPaymentCrop", base),
     identifier = code,
-    validFrom = if (as.logical(is.na(from))) {
-      "2000-01-01"
-    } else {
-      paste0(as.character(from), "-01-01")
-    },
-    validTo = if (as.logical(is.na(to))) {
-      NULL
-    } else {
-      paste0(as.character(to), "-12-31")
-    },
+    validFrom = from,
+    validTo = to,
     name = "AGIS"
   )
-
 
   # Assign labels
   for (lang in languages) {
@@ -125,7 +120,7 @@ for (i in seq_len(nrow(data))) {
       subject = subject,
       predicate = rdfhelper::uri("name", schema),
       object = rdfhelper::langstring(
-        x = data[i, paste0("Nutzung_", toupper(lang))],
+        x = data[i, paste0("NAME_", toupper(lang))],
         lang = lang
       )
     )
@@ -137,7 +132,8 @@ for (i in seq_len(nrow(data))) {
     predicate = uri("partOf", base),
     object =  subset(
       x = categories,
-      subset = Hauptkategorie_DE == data[i, ][["Hauptkategorie_DE"]],
+      subset = CULTIVATIONTYPECATEGORY_DE ==
+        data[i, ][["CULTIVATIONTYPECATEGORY_DE"]],
       select = "uri"
     ) %>% unlist()
   )
