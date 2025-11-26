@@ -1,37 +1,44 @@
 library(rdfhelper)
 library(readr)
 library(stringr)
+library(tidyverse)
 
-# set variables
-source <- "AGIS"
-target <- "NAEBI"
-
-# construct query
-query <- str_replace_all(
-  read_file("queries/mapping-table-generation.rq"),
-  c("__SOURCE__" = "AGIS", "__TARGET__"  = "NAEBI")
-)
-
-# fetch data from LINDAS
-data <- sparql(query, "https://lindas.admin.ch/query")
-
-f <- function(x, y) {
-  df <- rdfhelper::sparql(
-    query = str_replace_all(
-      read_file("queries/all-agis-codes-under-crop.rq"),
-      c("__SYSTEM__" = x)
-    ),
-    "https://lindas.admin.ch/query"
-  )
-
-  cat(sprintf("Crops missing from the %s column:\n", x))
-  a <- df$crop
-  b <- unname(unlist(na.omit(data[, y])))
-  a[!a %in% b]
-  print(a[!a %in% b])
+# Function to compute interoperability scores based on fetched data
+compute_metrics <- function(data, x) {
+  df <- data[, c(x, "relation")] %>%
+    filter(!dplyr::if_all(tidyselect::everything(), is.na)) %>%
+    unique()
+  df[is.na(df$relation), 2] <- "disjoint"
+  r <- with(df, table(relation))
+  r <- r / sum(r)
+  names(r) <- sub(".*#", "", names(r))
+  r
 }
 
-f(source, 1)
-f(target, 3)
-y <- 5
-data[, y]
+# Function to fetch data and compute interoperability scores
+compute_all_metrics <- function(source, target, date = NULL) {
+
+  # construct query
+  query <- str_replace_all(
+    read_file("queries/mapping-table-generation.rq"),
+    c(
+      "__SOURCE__" = source,
+      "__TARGET__"  = target,
+      "__DATE__" = ifelse(
+        is.null(date),
+        as.character(Sys.Date()),
+        date
+      )
+    )
+  )
+
+  # fetch data from LINDAS
+  data <- sparql(query, "https://lindas.admin.ch/query")
+
+  # Return df with computed metrics
+  cbind(S = compute_metrics(data, "S"), T = compute_metrics(data, "T"))
+}
+
+compute_all_metrics("AGIS", "NAEBI")
+compute_all_metrics("NAEBI", "AGIS")
+compute_all_metrics("SRPPP", "AGIS")
