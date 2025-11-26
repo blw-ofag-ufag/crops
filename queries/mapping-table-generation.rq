@@ -1,3 +1,19 @@
+# ==============================================================================
+#       title:  CROP CONCEPT MAPPING TABLE GENERATION
+#        date:  2025-11-26
+#      author:  Damian Oswald (damian.oswald@blw.admin.ch)
+# description:  This query performs a comprehensive mapping between two specific
+#               crop classification systems ("Source" and "Target") by
+#               identifying whether concepts match exactly, or if one is a
+#               broader or narrower category of the other. It simultaneously
+#               retrieves any "orphan" concepts from the target system that have
+#               no corresponding link to the source system, ensuring a complete
+#               comparison of the datasets. Finally, it filters all resulting
+#               mappings to ensure that the membership definitions for both
+#               source and target concepts are historically valid for a specific
+#               reference date.
+# ==============================================================================
+
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX : <https://agriculture.ld.admin.ch/crops/>
 PREFIX ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
