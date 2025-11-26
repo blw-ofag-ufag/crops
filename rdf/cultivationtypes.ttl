@@ -325,7 +325,7 @@ cultivationtype:509 a :CultivationType ;
     :hasMembership [ schema:identifier "172"^^xsd:ID ;
             schema:name "GRUD" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+            :memberOfClass :GRUDCrop ] ,
         [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
