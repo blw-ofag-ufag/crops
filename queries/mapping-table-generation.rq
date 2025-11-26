@@ -4,59 +4,101 @@ PREFIX ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
 PREFIX schema: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT DISTINCT ?S ?S_name ?S_id ?relation ?T ?T_name ?T_id
-WHERE {
-  
-  # BLOCK 1: ORIGINAL QUERY (Source + Matches)
-  {
+SELECT DISTINCT
+   ?S ?S_name ?S_id
+   ?relation
+   ?T ?T_name ?T_id
+
+WHERE
+{
+  # 1. FINDING A MATCH FOR EVERY SOURCE CONCEPT
+  #    In this first block, we start out from the
+  #    source concepts and try to find a matching
+  #    target concept, describing the relation.
+   {
       BIND("AGIS" AS ?DB_S)
       BIND("NAEBI" AS ?DB_T)
 
-      # 2. ANCHOR: FIND SOURCE CONCEPTS
+      # 1.1 Find source concepts
       ?S a :CultivationType ;
          schema:name ?S_name ;
          :partOf+ ct:14 ;
-         :hasMembership [ schema:name ?DB_S ; schema:identifier ?S_id ] .
+         :hasMembership ?S_membership .
       FILTER(LANG(?S_name) = "de")
+      ?S_membership schema:name ?DB_S ;
+         schema:identifier ?S_id ;
+         schema:validFrom ?S_validFrom .
+      OPTIONAL {
+         ?S_membership schema:validTo ?S_validTo .
+      }
 
-      # 3. FIND TARGETS & DETERMINE RELATION
+      # 1.2 Find target concepts and determine the
+      #     source-to-target relation
       OPTIONAL
       {
-        {
-          # CASE A: IDENTITY
-          ?S :hasMembership [ schema:name ?DB_T ; schema:identifier ?T_id ] .
-          BIND(skos:exactMatch AS ?relation)
-          BIND(?S AS ?T)
-          ?T schema:name ?T_name .
-          FILTER(LANG(?T_name) = "de")
-        }
-        UNION
-        {
-          # CASE B: SUBSUMPTION
-          FILTER NOT EXISTS { ?S :hasMembership / schema:name ?DB_T }
-          ?S :partOf+ ?T .
-          ?T :hasMembership [ schema:name ?DB_T ; schema:identifier ?T_id ] ;
-            schema:name ?T_name .
-         FILTER(LANG(?T_name)="de")
-          BIND(skos:broadMatch AS ?relation)
-        }
-        UNION
-        {
-          # CASE C: SUPER-ORDINATION
-          FILTER NOT EXISTS { ?S :hasMembership/schema:name ?DB_T }
+         {
+            # 1.2.1 Identity: The two concepts match
+            ?S :hasMembership ?T_membership .
+            ?T_membership schema:name ?DB_T ;
+               schema:identifier ?T_id ;
+               schema:validFrom ?T_validFrom .
+            OPTIONAL {
+               ?T_membership schema:validTo ?T_validTo .
+            }
+            BIND(skos:exactMatch AS ?relation)
+            BIND(?S AS ?T)
+            ?T schema:name ?T_name .
+            FILTER(LANG(?T_name) = "de")
+         }
+
+         UNION
+         
+         {
+            # 1.2.2 Subsumption: The source concept is a proper subset of the target concept
+            FILTER NOT EXISTS { 
+               ?S :hasMembership / schema:name ?DB_T
+            }
+            ?S :partOf+ ?T .
+            ?T schema:name ?T_name ;
+               :hasMembership ?T_membership .
+            ?T_membership schema:name ?DB_T ;
+               schema:identifier ?T_id ;
+               schema:validFrom ?T_validFrom .
+            OPTIONAL {
+               ?T_membership schema:validTo ?T_validTo .
+            }
+            FILTER(LANG(?T_name)="de")
+            BIND(skos:broadMatch AS ?relation)
+         }
+
+         UNION
+         
+         {
+            # 1.2.3 Super-ordination: The source concept is a superset of the target concept
+            FILTER NOT EXISTS { ?S :hasMembership/schema:name ?DB_T }
             ?T :partOf+ ?S ;
                schema:name ?T_name ;
-               :hasMembership [ schema:name ?DB_T ; schema:identifier ?T_id ] .
+               :hasMembership ?T_membership .
             FILTER(LANG(?T_name) = "de")
+            ?T_membership schema:name ?DB_T ;
+               schema:identifier ?T_id ;
+               schema:validFrom ?T_validFrom .
+            OPTIONAL {
+               ?T_membership schema:validTo ?T_validTo .
+            }
             BIND(skos:narrowMatch AS ?relation)
-        }
+         }
       }
-  }
+   }
 
-  UNION
+   UNION
 
-  # BLOCK 2: THE RIGHT-SIDE ORPHANS
-  {
+   # 2. RIGHT-SIDE ORPHANS
+   #    Because there are still some concepts in the
+   #    target database to which no source concept leads,
+   #    we collect them separately and join the previously
+   #    unknown ones to our table.
+   {
       # 1. Start with ALL Potential Targets
       BIND("NAEBI" AS ?DB_T_Right)
       ?T a :CultivationType ;
@@ -67,34 +109,41 @@ WHERE {
 
       # 2. Subtract the "Used" Targets using a Sub-Query
       MINUS {
-          SELECT DISTINCT ?T 
-          WHERE {
-             BIND("AGIS" AS ?DB_S_Inner)
-             BIND("NAEBI" AS ?DB_T_Inner)
-             
-             ?S_Inner a :CultivationType ;
-                      :partOf+ ct:14 ;
-                      :hasMembership [ schema:name ?DB_S_Inner ] .
+         SELECT DISTINCT ?T 
+         WHERE {
+            BIND("AGIS" AS ?DB_S_Inner)
+            BIND("NAEBI" AS ?DB_T_Inner)
 
-             {
-                # Match Logic A: Exact
-                ?S_Inner :hasMembership [ schema:name ?DB_T_Inner ] .
-                BIND(?S_Inner AS ?T)
-             }
-             UNION
-             {
-                # Match Logic B: Broad
-                ?S_Inner :partOf+ ?T .
-                ?T :hasMembership [ schema:name ?DB_T_Inner ] .
-             }
-             UNION
-             {
-                # Match Logic C: Narrow
-                ?T :partOf+ ?S_Inner .
-                ?T :hasMembership [ schema:name ?DB_T_Inner ] .
-             }
-          }
+            ?S_Inner a :CultivationType ;
+               :partOf+ ct:14 ;
+               :hasMembership [ schema:name ?DB_S_Inner ] .
+
+            {
+               # Match Logic A: Exact
+               ?S_Inner :hasMembership [ schema:name ?DB_T_Inner ] .
+               BIND(?S_Inner AS ?T)
+
+            }
+
+            UNION
+            
+            {
+               # Match Logic B: Broad
+               ?S_Inner :partOf+ ?T .
+               ?T :hasMembership [ schema:name ?DB_T_Inner ] .
+            
+            }
+            
+            UNION
+            
+            {
+               # Match Logic C: Narrow
+               ?T :partOf+ ?S_Inner .
+               ?T :hasMembership [ schema:name ?DB_T_Inner ] .
+            }
+         }
       }
-  }
+   }
 }
+
 ORDER BY ?relation ?S ?T
