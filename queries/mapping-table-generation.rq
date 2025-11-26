@@ -4,43 +4,51 @@ PREFIX ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
 PREFIX schema: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT DISTINCT ?S ?relation ?T
+SELECT DISTINCT ?S ?S_name ?S_id ?relation ?T ?T_name ?T_id
 WHERE {
   
   # BLOCK 1: ORIGINAL QUERY (Source + Matches)
   {
-      BIND("__SOURCE__" AS ?DB_S)
-      BIND("__TARGET__" AS ?DB_T)
+      BIND("AGIS" AS ?DB_S)
+      BIND("NAEBI" AS ?DB_T)
 
       # 2. ANCHOR: FIND SOURCE CONCEPTS
       ?S a :CultivationType ;
+         schema:name ?S_name ;
          :partOf+ ct:14 ;
-         :hasMembership [ schema:name ?DB_S ] .
+         :hasMembership [ schema:name ?DB_S ; schema:identifier ?S_id ] .
+      FILTER(LANG(?S_name) = "de")
 
       # 3. FIND TARGETS & DETERMINE RELATION
       OPTIONAL
       {
         {
           # CASE A: IDENTITY
-          ?S :hasMembership [ schema:name ?DB_T ] .
+          ?S :hasMembership [ schema:name ?DB_T ; schema:identifier ?T_id ] .
           BIND(skos:exactMatch AS ?relation)
           BIND(?S AS ?T)
+          ?T schema:name ?T_name .
+          FILTER(LANG(?T_name) = "de")
         }
         UNION
         {
           # CASE B: SUBSUMPTION
           FILTER NOT EXISTS { ?S :hasMembership / schema:name ?DB_T }
           ?S :partOf+ ?T .
-          ?T :hasMembership [ schema:name ?DB_T ] .
+          ?T :hasMembership [ schema:name ?DB_T ; schema:identifier ?T_id ] ;
+            schema:name ?T_name .
+         FILTER(LANG(?T_name)="de")
           BIND(skos:broadMatch AS ?relation)
         }
         UNION
         {
           # CASE C: SUPER-ORDINATION
           FILTER NOT EXISTS { ?S :hasMembership/schema:name ?DB_T }
-          ?T :partOf+ ?S ;
-             :hasMembership [ schema:name ?DB_T ] .
-          BIND(skos:narrowMatch AS ?relation)
+            ?T :partOf+ ?S ;
+               schema:name ?T_name ;
+               :hasMembership [ schema:name ?DB_T ; schema:identifier ?T_id ] .
+            FILTER(LANG(?T_name) = "de")
+            BIND(skos:narrowMatch AS ?relation)
         }
       }
   }
@@ -52,8 +60,10 @@ WHERE {
       # 1. Start with ALL Potential Targets
       BIND("NAEBI" AS ?DB_T_Right)
       ?T a :CultivationType ;
+         schema:name ?T_name ;
          :partOf+ ct:14 ;
-         :hasMembership [ schema:name ?DB_T_Right ] .
+         :hasMembership [ schema:name ?DB_T_Right ; schema:identifier ?T_id ] .
+      FILTER(LANG(?T_name) = "de")
 
       # 2. Subtract the "Used" Targets using a Sub-Query
       MINUS {
