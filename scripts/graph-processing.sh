@@ -1,6 +1,9 @@
 # Load environment variables from .env file
 . ./.env
 
+# EPPO data integration
+Rscript scripts/R/eppo.R
+
 # Install any missing python packages
 pip install -r scripts/Python/requirements.txt
 
