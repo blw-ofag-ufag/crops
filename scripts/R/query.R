@@ -15,12 +15,12 @@ library(tidyverse)
 library(ggtext)
 library(scales)
 
-# Define the systems to compare
+#' Define the systems to compare
 systems <- c("AGIS", "NAEBI", "SRPPP")
 
-# Set the date to make the visualization
+#' TODO: Set the date to make the visualization
 
-# Function to compute interoperability scores based on fetched data
+#' Function to compute interoperability scores based on fetched data
 compute_metrics <- function(data, x) {
   df <- data[, c(x, "relation")] %>%
     filter(!dplyr::if_all(tidyselect::everything(), is.na)) %>%
@@ -182,7 +182,7 @@ p <- ggplot(pd, aes(x = dl, y = score, fill = fct_rev(relation))) +
 
 # Export
 ggsave(
-  filename = "resources/interoperability.png",
+  filename = "results/interoperability.png",
   plot = p,
   width = 12, height = 6, dpi = 300,
   bg = "white"
