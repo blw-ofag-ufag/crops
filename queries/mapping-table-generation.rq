@@ -5,149 +5,181 @@ PREFIX schema: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT DISTINCT
-   *
-   #?S ?S_name ?S_id
-   #?relation
-   #?T ?T_name ?T_id
+   ?S ?S_name ?S_id
+   ?relation
+   ?T ?T_name ?T_id
 
 WHERE
 {
-   # 1. FINDING A MATCH FOR EVERY SOURCE CONCEPT
-   #    In this first block, we start out from the
-   #    source concepts and try to find a matching
-   #    target concept, describing the relation.
+   # 1. DEFINE THE DATE FOR THE VALIDITY CHECK
+   #    We can use NOW() for the current date, or set a fixed date, 
+   #    e.g., BIND("2024-01-01"^^xsd:date AS ?reference_date)
+   BIND(xsd:date("__DATE__") AS ?reference_date)
+
+   # 2. WRAP THE ORIGINAL QUERY IN A SUBQUERY
+   #    This lets us apply the final filter to the entire result set,
+   #    avoiding repetition.
    {
-
-      # 1.1 Find source concepts
-      ?S a :CultivationType ;
-         schema:name ?S_name ;
-         :partOf+ ct:14 ;
-         :hasMembership ?S_membership .
-      FILTER(LANG(?S_name) = "de")
-      ?S_membership schema:name "AGIS" ;
-         schema:identifier ?S_id ;
-         schema:validFrom ?S_validFrom .
-      OPTIONAL {
-         ?S_membership schema:validTo ?S_validTo .
-      }
-
-      # 1.2 Find target concepts and determine the
-      #     source-to-target relation
-      OPTIONAL
+      SELECT * WHERE
       {
          {
-            # 1.2.1 Identity: The two concepts match
-            ?S :hasMembership ?T_membership .
-            ?T_membership schema:name "NAEBI" ;
-               schema:identifier ?T_id ;
-               schema:validFrom ?T_validFrom .
-            OPTIONAL {
-               ?T_membership schema:validTo ?T_validTo .
-            }
-            BIND(skos:exactMatch AS ?relation)
-            BIND(?S AS ?T)
-            ?T schema:name ?T_name .
-            FILTER(LANG(?T_name) = "de")
-         }
-
-         UNION
-         
-         {
-            # 1.2.2 Subsumption: The source concept is a proper subset of the target concept
-            FILTER NOT EXISTS { 
-               ?S :hasMembership / schema:name "NAEBI"
-            }
-            ?S :partOf+ ?T .
-            ?T schema:name ?T_name ;
-               :hasMembership ?T_membership .
-            ?T_membership schema:name "NAEBI" ;
-               schema:identifier ?T_id ;
-               schema:validFrom ?T_validFrom .
-            OPTIONAL {
-               ?T_membership schema:validTo ?T_validTo .
-            }
-            FILTER(LANG(?T_name)="de")
-            BIND(skos:broadMatch AS ?relation)
-         }
-
-         UNION
-         
-         {
-            # 1.2.3 Super-ordination: The source concept is a superset of the target concept
-            FILTER NOT EXISTS { ?S :hasMembership/schema:name "NAEBI" }
-            ?T :partOf+ ?S ;
-               schema:name ?T_name ;
-               :hasMembership ?T_membership .
-            FILTER(LANG(?T_name) = "de")
-            ?T_membership schema:name "NAEBI" ;
-               schema:identifier ?T_id ;
-               schema:validFrom ?T_validFrom .
-            OPTIONAL {
-               ?T_membership schema:validTo ?T_validTo .
-            }
-            BIND(skos:narrowMatch AS ?relation)
-         }
-      }
-   }
-
-   UNION
-
-   # 2. RIGHT-SIDE ORPHANS
-   #    Because there are still some concepts in the
-   #    target database to which no source concept leads,
-   #    we collect them separately and join the previously
-   #    unknown ones to our table.
-   {
-      # 2.1 Start with ALL Potential Targets
-      ?T a :CultivationType ;
-         schema:name ?T_name ;
-         :partOf+ ct:14 ;
-         :hasMembership ?T_membership .
-      ?T_membership schema:name "NAEBI" ;
-         schema:identifier ?T_id ;
-         schema:validFrom ?T_validFrom .
-      OPTIONAL {
-         ?T_membership schema:validTo ?T_validTo .
-      }
-      FILTER(LANG(?T_name) = "de")
-
-      # 2.2 Subtract the "Used" Targets using a Sub-Query
-      MINUS
-      {
-         SELECT DISTINCT ?T 
-         WHERE
-         {
-
-            ?S_Inner a :CultivationType ;
+            # 1. FINDING A MATCH FOR EVERY SOURCE CONCEPT
+            #    In this first block, we start out from the
+            #    source concepts and try to find a matching
+            #    target concept, describing the relation.
+            {
+               # 1.1 Find source concepts
+            ?S a :CultivationType ;
+               schema:name ?S_name ;
                :partOf+ ct:14 ;
-               :hasMembership [ schema:name "AGIS" ] .
+                  :hasMembership ?S_membership .
+               FILTER(LANG(?S_name) = "de")
+               ?S_membership schema:name "__SOURCE__" ;
+                  schema:identifier ?S_id ;
+                  schema:validFrom ?S_validFrom .
+               OPTIONAL {
+                  ?S_membership schema:validTo ?S_validTo .
+               }
 
-            {
-               # 2.2.1 Identity
-               ?S_Inner :hasMembership [ schema:name "NAEBI" ] .
-               BIND(?S_Inner AS ?T)
+               # 1.2 Find target concepts and determine the
+               #     source-to-target relation
+               OPTIONAL
+               {
+                  {
+                     # 1.2.1 Identity: The two concepts match
+                     ?S :hasMembership ?T_membership .
+                     ?T_membership schema:name "__TARGET__" ;
+                        schema:identifier ?T_id ;
+                        schema:validFrom ?T_validFrom .
+                     OPTIONAL {
+                        ?T_membership schema:validTo ?T_validTo .
+                     }
+                     BIND(skos:exactMatch AS ?relation)
+                     BIND(?S AS ?T)
+                     ?T schema:name ?T_name .
+                     FILTER(LANG(?T_name) = "de")
+                  }
 
+                  UNION
+                  
+                  {
+                     # 1.2.2 Subsumption: The source concept is a
+                     #       proper subset of the target concept
+                     FILTER NOT EXISTS { 
+                        ?S :hasMembership / schema:name "__TARGET__"
+                     }
+                     ?S :partOf+ ?T .
+                     ?T schema:name ?T_name ;
+                        :hasMembership ?T_membership .
+                     ?T_membership schema:name "__TARGET__" ;
+                        schema:identifier ?T_id ;
+                        schema:validFrom ?T_validFrom .
+                     OPTIONAL {
+                        ?T_membership schema:validTo ?T_validTo .
+                     }
+                     FILTER(LANG(?T_name)="de")
+                     BIND(skos:broadMatch AS ?relation)
+                  }
+
+                  UNION
+                  
+                  {
+                     # 1.2.3 Super-ordination: The source concept is
+                     #       a superset of the target concept
+                     FILTER NOT EXISTS {
+                        ?S :hasMembership/schema:name "__TARGET__"
+                     }
+                     ?T :partOf+ ?S ;
+                        schema:name ?T_name ;
+                        :hasMembership ?T_membership .
+                     FILTER(LANG(?T_name) = "de")
+                     ?T_membership schema:name "__TARGET__" ;
+                        schema:identifier ?T_id ;
+                        schema:validFrom ?T_validFrom .
+                     OPTIONAL {
+                        ?T_membership schema:validTo ?T_validTo .
+                     }
+                     BIND(skos:narrowMatch AS ?relation)
+                  }
+               }
             }
+         }
+         UNION
+         {
+            # 2. RIGHT-SIDE ORPHANS
+            #    Because there are still some concepts in the
+            #    target database to which no source concept leads,
+            #    we collect them separately and join the previously
+            #    unknown ones to our table.
+            {
+               # 2.1 Start with ALL Potential Targets
+               ?T a :CultivationType ;
+                  schema:name ?T_name ;
+                  :partOf+ ct:14 ;
+                  :hasMembership ?T_membership .
+               ?T_membership schema:name "__TARGET__" ;
+                  schema:identifier ?T_id ;
+                  schema:validFrom ?T_validFrom .
+               OPTIONAL {
+                  ?T_membership schema:validTo ?T_validTo .
+               }
+               FILTER(LANG(?T_name) = "de")
 
-            UNION
-            
-            {
-               # 2.2.2 Broad
-               ?S_Inner :partOf+ ?T .
-               ?T :hasMembership [ schema:name "NAEBI" ] .
-            
-            }
-            
-            UNION
-            
-            {
-               # 2.2.3 Narrow
-               ?T :partOf+ ?S_Inner .
-               ?T :hasMembership [ schema:name "NAEBI" ] .
+               # 2.2 Subtract the "Used" Targets using a Sub-Query
+               MINUS
+               {
+                  SELECT DISTINCT ?T 
+                  WHERE
+                  {
+                     ?S_Inner a :CultivationType ;
+                        :partOf+ ct:14 ;
+                        :hasMembership [ schema:name "__SOURCE__" ] .
+
+                     {
+                        # 2.2.1 Identity
+                        ?S_Inner :hasMembership [ schema:name "__TARGET__" ] .
+                        BIND(?S_Inner AS ?T)
+                     }
+                     UNION
+                     {
+                        # 2.2.2 Broad
+                        ?S_Inner :partOf+ ?T .
+                        ?T :hasMembership [ schema:name "__TARGET__" ] .
+                     }
+                     UNION
+                     {
+                        # 2.2.3 Narrow
+                        ?T :partOf+ ?S_Inner .
+                        ?T :hasMembership [ schema:name "__TARGET__" ] .
+                     }
+                  }
+               }
             }
          }
       }
    }
+
+   # 3. FILTER THE RESULTS BASED ON THE REFERENCE DATE
+   #    A concept is valid if validFrom <= date AND (validTo is not
+   #    set OR validTo >= date)
+
+   # 3.1 Filter for the validity of the source concept ?S (if it exists)
+   FILTER(
+      !BOUND(?S) || 
+      (
+         ?S_validFrom <= ?reference_date &&
+         (!BOUND(?S_validTo) || ?S_validTo >= ?reference_date)
+      )
+   )
+
+   # 3.2 Filter for the validity of the target concept ?T (if it exists)
+   FILTER(
+      !BOUND(?T) ||
+      (
+         ?T_validFrom <= ?reference_date &&
+         (!BOUND(?T_validTo) || ?T_validTo >= ?reference_date)
+      )
+   )
 }
 
 ORDER BY ?relation ?S ?T
