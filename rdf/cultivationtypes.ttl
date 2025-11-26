@@ -71,6 +71,12 @@ cultivationtype:1016 a :CultivationType ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:1012 .
 
+cultivationtype:1033 a :CultivationType ;
+    schema:name "Getreide ohne Mais"@de,
+        "Céréales sans Maïs"@fr,
+        "Cereali senza Mais"@it ;
+    :partOf cultivationtype:14 .
+
 cultivationtype:12 a :CultivationType ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
@@ -182,7 +188,7 @@ cultivationtype:498 a :CultivationType ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:499 a :CultivationType ;
     schema:name "Einkorn"@de ;
@@ -214,7 +220,7 @@ cultivationtype:501 a :CultivationType ;
         "Orzo primaverile"@it ;
     :hasMembership [ schema:identifier "501"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ],
         [ schema:identifier "CROP_SGRST"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
@@ -233,7 +239,7 @@ cultivationtype:502 a :CultivationType ;
         "Orzo autunnale"@it ;
     :hasMembership [ schema:identifier "502"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ],
         [ schema:identifier "9943"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
@@ -249,13 +255,13 @@ cultivationtype:504 a :CultivationType ;
     :botanicalPlant taxon:AVESA ;
     :hasMembership [ schema:identifier "504"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ],
         [ schema:identifier "10121"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:505 a :CultivationType ;
     schema:name "Triticale"@de,
@@ -264,13 +270,13 @@ cultivationtype:505 a :CultivationType ;
     :botanicalPlant taxon:TTLRI ;
     :hasMembership [ schema:identifier "505"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ],
         [ schema:identifier "10119"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:506 a :CultivationType ;
     schema:name "Mischel Futtergetreide"@de,
@@ -278,7 +284,7 @@ cultivationtype:506 a :CultivationType ;
         "Miscela di cereali da foraggio"@it ;
     :hasMembership [ schema:identifier "506"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:14 .
 
@@ -288,7 +294,7 @@ cultivationtype:507 a :CultivationType ;
         "Frumento da foraggio giusta la lista di swiss granum"@it ;
     :hasMembership [ schema:identifier "507"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2004-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1003 .
 
@@ -298,14 +304,14 @@ cultivationtype:508 a :CultivationType ;
         "Maïs grain"@fr,
         "Mais da granella"@it ;
     :botanicalPlant taxon:ZEAMX ;
-    :hasMembership [ schema:identifier "508"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "CROP_SILCRN"^^xsd:ID ;
+    :hasMembership [ schema:identifier "CROP_SILCRN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "508"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:497 .
 
 cultivationtype:509 a :CultivationType ;
@@ -316,44 +322,44 @@ cultivationtype:509 a :CultivationType ;
         "Riso"@it ;
     :botanicalPlant taxon:ORYSA ;
     :cultivationMethod :11 ;
-    :hasMembership [ schema:identifier "509"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "172"^^xsd:ID ;
+    :hasMembership [ schema:identifier "172"^^xsd:ID ;
             schema:name "GRUD" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:14 .
+        [ schema:identifier "509"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
+            schema:validTo "2022-12-31"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:1033 .
 
 cultivationtype:510 a :CultivationType ;
     schema:name "Hartweizen"@de,
         "Blé dur"@fr,
         "Grano duro"@it ;
     :botanicalPlant taxon:TRZDU ;
-    :hasMembership [ schema:identifier "510"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2023-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "11321"^^xsd:ID ;
+    :hasMembership [ schema:identifier "11321"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
+            :memberOfClass :SRPPPCrop ],
+        [ schema:identifier "510"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "2023-01-01"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:492 .
 
 cultivationtype:511 a :CultivationType ;
     schema:name "Emmer, Einkorn"@de,
         "Amidonnier, engrain"@fr,
         "Farro, piccola spelta"@it ;
-    :hasMembership [ schema:identifier "511"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "CROP_EMMEK"^^xsd:ID ;
+    :hasMembership [ schema:identifier "CROP_EMMEK"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "511"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:492 .
 
 cultivationtype:512 a :CultivationType ;
@@ -362,7 +368,7 @@ cultivationtype:512 a :CultivationType ;
         "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
     :hasMembership [ schema:identifier "512"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:999 .
 
@@ -372,7 +378,7 @@ cultivationtype:513 a :CultivationType ;
         "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
     :hasMembership [ schema:identifier "513"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1007 .
 
@@ -382,15 +388,15 @@ cultivationtype:514 a :CultivationType ;
         "Seigle"@fr,
         "Segale"@it ;
     :botanicalPlant taxon:SECCE ;
-    :hasMembership [ schema:identifier "514"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "10120"^^xsd:ID ;
+    :hasMembership [ schema:identifier "10120"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+            :memberOfClass :SRPPPCrop ],
+        [ schema:identifier "514"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:1033 .
 
 cultivationtype:515 a :CultivationType ;
     schema:description "Gemeinsame Ansaat von mehreren Getreidearten bzw. von Getreide mit Hülsenfrüchten, welche mindestens auch Brotgetreide beinhaltet."@de ;
@@ -400,9 +406,9 @@ cultivationtype:515 a :CultivationType ;
     :botanicalPlant taxon:TRZAX ;
     :hasMembership [ schema:identifier "515"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:516 a :CultivationType ;
     schema:name "Dinkel"@de,
@@ -411,7 +417,7 @@ cultivationtype:516 a :CultivationType ;
     :botanicalPlant taxon:TRZSP ;
     :hasMembership [ schema:identifier "516"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:492 .
 
@@ -423,7 +429,7 @@ cultivationtype:519 a :CultivationType ;
     :botanicalPlant taxon:ZEAMX ;
     :hasMembership [ schema:identifier "519"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2009-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:497 .
 
@@ -433,14 +439,14 @@ cultivationtype:520 a :CultivationType ;
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
     :botanicalPlant taxon:ORYSA ;
-    :hasMembership [ schema:identifier "520"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2023-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "10248"^^xsd:ID ;
+    :hasMembership [ schema:identifier "10248"^^xsd:ID ;
             schema:name "SRPPP" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
+            :memberOfClass :SRPPPCrop ],
+        [ schema:identifier "520"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "2023-01-01"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:509 .
 
 cultivationtype:521 a :CultivationType ;
@@ -451,10 +457,9 @@ cultivationtype:521 a :CultivationType ;
     :botanicalPlant taxon:ZEAMX ;
     :hasMembership [ schema:identifier "521"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:497,
-        cultivationtype:543 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:522 a :CultivationType ;
     schema:name "Zuckerrüben"@de,
@@ -462,7 +467,7 @@ cultivationtype:522 a :CultivationType ;
         "Barbabietole da zucchero"@it ;
     :hasMembership [ schema:identifier "522"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:17 .
 
@@ -472,7 +477,7 @@ cultivationtype:523 a :CultivationType ;
         "Barbabietole da foraggio"@it ;
     :hasMembership [ schema:identifier "523"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:17 .
 
@@ -482,7 +487,7 @@ cultivationtype:524 a :CultivationType ;
         "Patate"@it ;
     :hasMembership [ schema:identifier "524"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:17 .
 
@@ -492,7 +497,7 @@ cultivationtype:525 a :CultivationType ;
         "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
     :hasMembership [ schema:identifier "525"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2009-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:524 .
 
@@ -502,7 +507,7 @@ cultivationtype:526 a :CultivationType ;
         "Colza primaverile per l’estrazione di olio commestibile"@it ;
     :hasMembership [ schema:identifier "526"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:496 .
 
@@ -512,7 +517,7 @@ cultivationtype:527 a :CultivationType ;
         "Colza autunnale per l’estrazione di olio commestibile"@it ;
     :hasMembership [ schema:identifier "527"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:496 .
 
@@ -522,7 +527,7 @@ cultivationtype:528 a :CultivationType ;
         "Soia"@it ;
     :hasMembership [ schema:identifier "528"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:15 .
 
@@ -544,7 +549,7 @@ cultivationtype:531 a :CultivationType ;
         "Girasole per l’estrazione di olio commestibile"@it ;
     :hasMembership [ schema:identifier "531"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:493 .
 
@@ -554,7 +559,7 @@ cultivationtype:534 a :CultivationType ;
         "Lino"@it ;
     :hasMembership [ schema:identifier "534"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -566,7 +571,7 @@ cultivationtype:535 a :CultivationType ;
     :botanicalPlant taxon:1CNIG ;
     :hasMembership [ schema:identifier "535"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2008-01-01"^^xsd:date ;
             schema:validTo "2021-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
@@ -577,7 +582,7 @@ cultivationtype:536 a :CultivationType ;
         "Fagioli e vecce per l’estrazione di granelli (p.es. favette)"@it ;
     :hasMembership [ schema:identifier "536"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:15 .
 
@@ -587,7 +592,7 @@ cultivationtype:537 a :CultivationType ;
         "Piselli per l’estrazione di granelli (p.es. piselli proteici)"@it ;
     :hasMembership [ schema:identifier "537"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:15 .
 
@@ -597,7 +602,7 @@ cultivationtype:538 a :CultivationType ;
         "Lupini"@it ;
     :hasMembership [ schema:identifier "538"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:15 .
 
@@ -607,7 +612,7 @@ cultivationtype:539 a :CultivationType ;
         "Zucche per l’estrazione di olio"@it ;
     :hasMembership [ schema:identifier "539"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2001-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -627,7 +632,7 @@ cultivationtype:541 a :CultivationType ;
         "Tabacco"@it ;
     :hasMembership [ schema:identifier "541"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -636,21 +641,20 @@ cultivationtype:542 a :CultivationType ;
         "millet"@en,
         "Millet"@fr,
         "Miglio"@it ;
-    :botanicalPlant taxon:PANMI ;
-    :hasMembership [ schema:identifier "542"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "CROP_GANSO"^^xsd:ID ;
+    :hasMembership [ schema:identifier "CROP_GANSO"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ],
         [ schema:identifier "15872"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+            :memberOfClass :SRPPPCrop ],
+        [ schema:identifier "542"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "2008-01-01"^^xsd:date ;
+            schema:validTo "2022-12-31"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:1033 .
 
 cultivationtype:543 a :CultivationType ;
     schema:name "Getreide siliert"@de,
@@ -659,9 +663,9 @@ cultivationtype:543 a :CultivationType ;
     :botanicalPlant taxon:1GRAF ;
     :hasMembership [ schema:identifier "543"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:544 a :CultivationType ;
     schema:name "Leindotter"@de,
@@ -669,7 +673,7 @@ cultivationtype:544 a :CultivationType ;
         "Dorella"@it ;
     :hasMembership [ schema:identifier "544"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -679,7 +683,7 @@ cultivationtype:545 a :CultivationType ;
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
     :hasMembership [ schema:identifier "545"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -689,7 +693,7 @@ cultivationtype:546 a :CultivationType ;
         "Ortaggi di pieno campo per la conservazione"@it ;
     :hasMembership [ schema:identifier "546"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -699,7 +703,7 @@ cultivationtype:547 a :CultivationType ;
         "Radici di cicoria di coltura forzata"@it ;
     :hasMembership [ schema:identifier "547"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2001-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:17 .
 
@@ -709,7 +713,7 @@ cultivationtype:548 a :CultivationType ;
         "Grano saraceno"@it ;
     :hasMembership [ schema:identifier "548"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:16 .
 
@@ -717,17 +721,16 @@ cultivationtype:549 a :CultivationType ;
     schema:name "Sorghum"@de,
         "Sorgho"@fr,
         "Sorgo"@it ;
-    :botanicalPlant taxon:1SORG ;
-    :hasMembership [ schema:identifier "549"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            schema:validTo "2022-12-31"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "11393"^^xsd:ID ;
+    :hasMembership [ schema:identifier "11393"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+            :memberOfClass :SRPPPCrop ],
+        [ schema:identifier "549"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
+            schema:validTo "2022-12-31"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
+    :partOf cultivationtype:1033 .
 
 cultivationtype:550 a :CultivationType ;
     schema:name "Übrige Ackerfläche"@de,
@@ -745,7 +748,7 @@ cultivationtype:551 a :CultivationType ;
         "Bacche annuali (p.es. fragole)"@it ;
     :hasMembership [ schema:identifier "551"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -755,7 +758,7 @@ cultivationtype:552 a :CultivationType ;
         "Materie prime rinnovabili annuali (kenaf, ecc.)"@it ;
     :hasMembership [ schema:identifier "552"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -765,7 +768,7 @@ cultivationtype:553 a :CultivationType ;
         "Piante aromatiche e medicinali annuali"@it ;
     :hasMembership [ schema:identifier "553"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -775,7 +778,7 @@ cultivationtype:554 a :CultivationType ;
         "Floricoltura di pieno campo annuale (fiori, manto erboso in rotoli, ecc.)"@it ;
     :hasMembership [ schema:identifier "554"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -785,7 +788,7 @@ cultivationtype:555 a :CultivationType ;
         "Fasce di colture estensive in campicoltura"@it ;
     :hasMembership [ schema:identifier "555"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
@@ -796,7 +799,7 @@ cultivationtype:556 a :CultivationType ;
         "Maggese fioriti"@it ;
     :hasMembership [ schema:identifier "556"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -806,7 +809,7 @@ cultivationtype:557 a :CultivationType ;
         "Maggese da rotazione"@it ;
     :hasMembership [ schema:identifier "557"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -816,7 +819,7 @@ cultivationtype:559 a :CultivationType ;
         "Striscia su superficie coltiva"@it ;
     :hasMembership [ schema:identifier "559"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2008-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -826,7 +829,7 @@ cultivationtype:566 a :CultivationType ;
         "Papavero"@it ;
     :hasMembership [ schema:identifier "566"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -836,7 +839,7 @@ cultivationtype:567 a :CultivationType ;
         "Cartamo"@it ;
     :hasMembership [ schema:identifier "567"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -846,7 +849,7 @@ cultivationtype:568 a :CultivationType ;
         "Lenticchie"@it ;
     :hasMembership [ schema:identifier "568"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:15 .
 
@@ -856,7 +859,7 @@ cultivationtype:569 a :CultivationType ;
         "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l’estrazione di granelli)"@it ;
     :hasMembership [ schema:identifier "569"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:18 .
 
@@ -874,14 +877,14 @@ cultivationtype:572 a :CultivationType ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
         "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
-    :hasMembership [ schema:identifier "572"^^xsd:ID ;
-            schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :DirectPaymentCrop ],
-        [ schema:identifier "CROP_STRBRR"^^xsd:ID ;
+    :hasMembership [ schema:identifier "CROP_STRBRR"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "572"^^xsd:ID ;
+            schema:name "AGIS" ;
+            schema:validFrom "2015-01-01"^^xsd:date ;
+            :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
 cultivationtype:573 a :CultivationType ;
@@ -890,7 +893,7 @@ cultivationtype:573 a :CultivationType ;
         "Senape"@it ;
     :hasMembership [ schema:identifier "573"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2018-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -900,7 +903,7 @@ cultivationtype:574 a :CultivationType ;
         "Quinoa"@it ;
     :hasMembership [ schema:identifier "574"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2019-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:16 .
 
@@ -986,7 +989,7 @@ cultivationtype:590 a :CultivationType ;
         "Colza primaverile quale materia prima rinnovabile"@it ;
     :hasMembership [ schema:identifier "590"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:495 .
 
@@ -996,7 +999,7 @@ cultivationtype:591 a :CultivationType ;
         "Colza autunnale quale materia prima rinnovabile"@it ;
     :hasMembership [ schema:identifier "591"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:495 .
 
@@ -1006,7 +1009,7 @@ cultivationtype:592 a :CultivationType ;
         "Girasole quale materia prima rinnovabile"@it ;
     :hasMembership [ schema:identifier "592"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:493 .
 
@@ -1016,7 +1019,7 @@ cultivationtype:594 a :CultivationType ;
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     :hasMembership [ schema:identifier "594"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -1026,7 +1029,7 @@ cultivationtype:595 a :CultivationType ;
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     :hasMembership [ schema:identifier "595"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -1036,7 +1039,7 @@ cultivationtype:597 a :CultivationType ;
         "Altra superficie coltiva aperta, con contributi"@it ;
     :hasMembership [ schema:identifier "597"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -1046,7 +1049,7 @@ cultivationtype:598 a :CultivationType ;
         "Altra superficie coltiva aperta, senza contributi"@it ;
     :hasMembership [ schema:identifier "598"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -1064,7 +1067,7 @@ cultivationtype:601 a :CultivationType ;
         "Prati artificiali (senza pascoli)"@it ;
     :hasMembership [ schema:identifier "601"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -1074,7 +1077,7 @@ cultivationtype:602 a :CultivationType ;
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
     :hasMembership [ schema:identifier "602"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -1084,7 +1087,7 @@ cultivationtype:611 a :CultivationType ;
         "Prati estensivi (senza pascoli)"@it ;
     :hasMembership [ schema:identifier "611"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
 
@@ -1094,7 +1097,7 @@ cultivationtype:612 a :CultivationType ;
         "Prati poco intensivi (senza pascoli)"@it ;
     :hasMembership [ schema:identifier "612"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
 
@@ -1104,7 +1107,7 @@ cultivationtype:613 a :CultivationType ;
         "Altri prati perenni (senza pascoli)"@it ;
     :hasMembership [ schema:identifier "613"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
 
@@ -1114,7 +1117,7 @@ cultivationtype:616 a :CultivationType ;
         "Pascoli (pascoli propri, altri pascoli senza pascoli d’estivazione)"@it ;
     :hasMembership [ schema:identifier "616"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:3 .
 
@@ -1124,7 +1127,7 @@ cultivationtype:617 a :CultivationType ;
         "Pascoli estensivi"@it ;
     :hasMembership [ schema:identifier "617"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:3 .
 
@@ -1134,7 +1137,7 @@ cultivationtype:618 a :CultivationType ;
         "Pascoli boschivi (senza i boschi)"@it ;
     :hasMembership [ schema:identifier "618"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:3 .
 
@@ -1144,7 +1147,7 @@ cultivationtype:621 a :CultivationType ;
         "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
     :hasMembership [ schema:identifier "621"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
 
@@ -1174,7 +1177,7 @@ cultivationtype:625 a :CultivationType ;
         "Pascoli boschivi (senza i boschi)"@it ;
     :hasMembership [ schema:identifier "625"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2009-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:3 .
 
@@ -1184,7 +1187,7 @@ cultivationtype:631 a :CultivationType ;
         "Leguminose da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
     :hasMembership [ schema:identifier "631"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2009-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:15 .
 
@@ -1194,7 +1197,7 @@ cultivationtype:632 a :CultivationType ;
         "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
     :hasMembership [ schema:identifier "632"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2009-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:1 .
 
@@ -1204,7 +1207,7 @@ cultivationtype:634 a :CultivationType ;
         "Prati rivieraschi lungo i corsi d'acqua (senza pascoli)"@it ;
     :hasMembership [ schema:identifier "634"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
@@ -1247,7 +1250,7 @@ cultivationtype:693 a :CultivationType ;
         "Superfici per la promozione della biodiversità specifiche di una regione (pascoli)"@it ;
     :hasMembership [ schema:identifier "693"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2015-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:3 .
 
@@ -1257,7 +1260,7 @@ cultivationtype:694 a :CultivationType ;
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite, senza pascoli)"@it ;
     :hasMembership [ schema:identifier "694"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2015-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
 
@@ -1267,7 +1270,7 @@ cultivationtype:697 a :CultivationType ;
         "Altre superfici (permanentemente) inerbite, con contributi"@it ;
     :hasMembership [ schema:identifier "697"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
 
@@ -1277,7 +1280,7 @@ cultivationtype:698 a :CultivationType ;
         "Altre superfici (permanentemente) inerbite, senza contributi"@it ;
     :hasMembership [ schema:identifier "698"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:2 .
 
@@ -1295,7 +1298,7 @@ cultivationtype:701 a :CultivationType ;
         "Vigna"@it ;
     :hasMembership [ schema:identifier "701"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:4 .
 
@@ -1305,7 +1308,7 @@ cultivationtype:702 a :CultivationType ;
         "Frutteto (mele)"@it ;
     :hasMembership [ schema:identifier "702"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:5 .
 
@@ -1315,7 +1318,7 @@ cultivationtype:703 a :CultivationType ;
         "Frutteto (pere)"@it ;
     :hasMembership [ schema:identifier "703"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:5 .
 
@@ -1325,7 +1328,7 @@ cultivationtype:704 a :CultivationType ;
         "Frutteto (frutta a nocciolo)"@it ;
     :hasMembership [ schema:identifier "704"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:5 .
 
@@ -1335,7 +1338,7 @@ cultivationtype:705 a :CultivationType ;
         "Bacche pluriennali"@it ;
     :hasMembership [ schema:identifier "705"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1345,7 +1348,7 @@ cultivationtype:706 a :CultivationType ;
         "Piante aromatiche e medicinali pluriennali"@it ;
     :hasMembership [ schema:identifier "706"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1355,7 +1358,7 @@ cultivationtype:707 a :CultivationType ;
         "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it ;
     :hasMembership [ schema:identifier "707"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1365,7 +1368,7 @@ cultivationtype:708 a :CultivationType ;
         "Luppolo"@it ;
     :hasMembership [ schema:identifier "708"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1375,7 +1378,7 @@ cultivationtype:709 a :CultivationType ;
         "Rabarbaro"@it ;
     :hasMembership [ schema:identifier "709"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1385,7 +1388,7 @@ cultivationtype:710 a :CultivationType ;
         "Asparagi"@it ;
     :hasMembership [ schema:identifier "710"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1395,7 +1398,7 @@ cultivationtype:711 a :CultivationType ;
         "Funghi (in pieno campo)"@it ;
     :hasMembership [ schema:identifier "711"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1405,7 +1408,7 @@ cultivationtype:712 a :CultivationType ;
         "Alberelli di Natale"@it ;
     :hasMembership [ schema:identifier "712"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1415,7 +1418,7 @@ cultivationtype:713 a :CultivationType ;
         "Vivai forestali fuori delle zone forestali"@it ;
     :hasMembership [ schema:identifier "713"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1425,7 +1428,7 @@ cultivationtype:714 a :CultivationType ;
         "Arbusti, arboscelli, cespugli ornamentali"@it ;
     :hasMembership [ schema:identifier "714"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1435,7 +1438,7 @@ cultivationtype:715 a :CultivationType ;
         "Altri vivai (rose, frutta, ecc.)"@it ;
     :hasMembership [ schema:identifier "715"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
@@ -1446,7 +1449,7 @@ cultivationtype:717 a :CultivationType ;
         "Vigneti con biodiversità naturale"@it ;
     :hasMembership [ schema:identifier "717"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:4 .
 
@@ -1456,7 +1459,7 @@ cultivationtype:718 a :CultivationType ;
         "Tartufaie"@it ;
     :hasMembership [ schema:identifier "718"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1466,7 +1469,7 @@ cultivationtype:719 a :CultivationType ;
         "Coltivazioni di gelsi (foraggiamento dei bachi da seta)"@it ;
     :hasMembership [ schema:identifier "719"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1476,7 +1479,7 @@ cultivationtype:720 a :CultivationType ;
         "Selve curate (castagni)"@it ;
     :hasMembership [ schema:identifier "720"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1486,7 +1489,7 @@ cultivationtype:721 a :CultivationType ;
         "Floricoltura di pieno campo pluriennale (non in serra)"@it ;
     :hasMembership [ schema:identifier "721"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2015-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1496,7 +1499,7 @@ cultivationtype:722 a :CultivationType ;
         "Vivai viticoli"@it ;
     :hasMembership [ schema:identifier "722"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1526,7 +1529,7 @@ cultivationtype:725 a :CultivationType ;
         "Permacultura"@it ;
     :hasMembership [ schema:identifier "725"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2020-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1546,7 +1549,7 @@ cultivationtype:731 a :CultivationType ;
         "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
     :hasMembership [ schema:identifier "731"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2009-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:5 .
 
@@ -1556,7 +1559,7 @@ cultivationtype:735 a :CultivationType ;
         "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     :hasMembership [ schema:identifier "735"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:4 .
 
@@ -1587,7 +1590,7 @@ cultivationtype:797 a :CultivationType ;
         "Altre superfici con colture perenni, con contributi"@it ;
     :hasMembership [ schema:identifier "797"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1597,7 +1600,7 @@ cultivationtype:798 a :CultivationType ;
         "Altre superfici con colture perenni, senza contributi"@it ;
     :hasMembership [ schema:identifier "798"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:6 .
 
@@ -1615,7 +1618,7 @@ cultivationtype:801 a :CultivationType ;
         "Colture orticole in serre con fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "801"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1625,7 +1628,7 @@ cultivationtype:802 a :CultivationType ;
         "Altre colture speciali in serre con fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "802"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1635,7 +1638,7 @@ cultivationtype:803 a :CultivationType ;
         "Floricoltura in serre con fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "803"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1655,7 +1658,7 @@ cultivationtype:806 a :CultivationType ;
         "Colture orticole in serre senza fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "806"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
@@ -1666,7 +1669,7 @@ cultivationtype:807 a :CultivationType ;
         "Altre colture speciali in serre senza fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "807"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1676,7 +1679,7 @@ cultivationtype:808 a :CultivationType ;
         "Floricoltura in serre senza fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "808"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1686,7 +1689,7 @@ cultivationtype:810 a :CultivationType ;
         "Funghi coltivati al coperto con fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "810"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1757,7 +1760,7 @@ cultivationtype:847 a :CultivationType ;
         "Altre colture coltivate al coperto senza fondamenta fisse, con contributi"@it ;
     :hasMembership [ schema:identifier "847"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1767,7 +1770,7 @@ cultivationtype:848 a :CultivationType ;
         "Altre colture coltivate al coperto con fondamenta fisse"@it ;
     :hasMembership [ schema:identifier "848"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1777,7 +1780,7 @@ cultivationtype:849 a :CultivationType ;
         "Altre colture coltivate al coperto senza fondamenta fisse, senza contributi"@it ;
     :hasMembership [ schema:identifier "849"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:7 .
 
@@ -1787,7 +1790,7 @@ cultivationtype:851 a :CultivationType ;
         "Terreni da strame all’interno della superficie agricola utilizzata"@it ;
     :hasMembership [ schema:identifier "851"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:8 .
 
@@ -1797,7 +1800,7 @@ cultivationtype:852 a :CultivationType ;
         "Siepi, boschetti campestri e rivieraschi (con bordo inerbito)"@it ;
     :hasMembership [ schema:identifier "852"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:9 .
 
@@ -1807,7 +1810,7 @@ cultivationtype:857 a :CultivationType ;
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
     :hasMembership [ schema:identifier "857"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2008-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:9 .
 
@@ -1817,7 +1820,7 @@ cultivationtype:858 a :CultivationType ;
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     :hasMembership [ schema:identifier "858"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:9 .
 
@@ -1827,7 +1830,7 @@ cultivationtype:897 a :CultivationType ;
         "Altre superfici all’interno della superficie agricola utilizzata, con contributi"@it ;
     :hasMembership [ schema:identifier "897"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:10 .
 
@@ -1837,7 +1840,7 @@ cultivationtype:898 a :CultivationType ;
         "Altre superfici all’interno della superficie agricola utilizzata, senza contributi"@it ;
     :hasMembership [ schema:identifier "898"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:10 .
 
@@ -1855,7 +1858,7 @@ cultivationtype:901 a :CultivationType ;
         "Bosco"@it ;
     :hasMembership [ schema:identifier "901"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:0 .
 
@@ -1865,7 +1868,7 @@ cultivationtype:902 a :CultivationType ;
         "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it ;
     :hasMembership [ schema:identifier "902"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1875,7 +1878,7 @@ cultivationtype:903 a :CultivationType ;
         "Superfici la cui destinazione principale non è l’utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d’esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d’acqua)"@it ;
     :hasMembership [ schema:identifier "903"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1885,7 +1888,7 @@ cultivationtype:904 a :CultivationType ;
         "Fossati umidi, stagni, pozze"@it ;
     :hasMembership [ schema:identifier "904"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1895,7 +1898,7 @@ cultivationtype:905 a :CultivationType ;
         "Superfici ruderali, cumuli di pietra, affioramenti rocciosi"@it ;
     :hasMembership [ schema:identifier "905"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1905,7 +1908,7 @@ cultivationtype:906 a :CultivationType ;
         "Muri a secco"@it ;
     :hasMembership [ schema:identifier "906"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1915,7 +1918,7 @@ cultivationtype:907 a :CultivationType ;
         "Sentieri e accessi naturali non consolidati"@it ;
     :hasMembership [ schema:identifier "907"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1925,7 +1928,7 @@ cultivationtype:908 a :CultivationType ;
         "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
     :hasMembership [ schema:identifier "908"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1935,7 +1938,7 @@ cultivationtype:909 a :CultivationType ;
         "Giardini e orti domestici"@it ;
     :hasMembership [ schema:identifier "909"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1945,7 +1948,7 @@ cultivationtype:911 a :CultivationType ;
         "Produzione agricola in edifici (p.es. funghi, cicoria belga)"@it ;
     :hasMembership [ schema:identifier "911"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2015-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -1955,7 +1958,7 @@ cultivationtype:921 a :CultivationType ;
         "Alberi da frutto ad alto fusto nei campi (punti o superfici)"@it ;
     :hasMembership [ schema:identifier "921"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:20 .
 
@@ -1965,7 +1968,7 @@ cultivationtype:922 a :CultivationType ;
         "Noci (Punti o superfici)"@it ;
     :hasMembership [ schema:identifier "922"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:20 .
 
@@ -1976,7 +1979,7 @@ cultivationtype:923 a :CultivationType ;
     :botanicalPlant taxon:CSNSA ;
     :hasMembership [ schema:identifier "923"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:20 .
 
@@ -1986,7 +1989,7 @@ cultivationtype:924 a :CultivationType ;
         "Alberi indigeni isolati adatti al luogo e viali alberati (Punti o superfici)"@it ;
     :hasMembership [ schema:identifier "924"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:20 .
 
@@ -1996,7 +1999,7 @@ cultivationtype:926 a :CultivationType ;
         "Altri alberi"@it ;
     :hasMembership [ schema:identifier "926"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2022-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:20 .
 
@@ -2006,7 +2009,7 @@ cultivationtype:927 a :CultivationType ;
         "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     :hasMembership [ schema:identifier "927"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:20 .
 
@@ -2016,7 +2019,7 @@ cultivationtype:928 a :CultivationType ;
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
     :hasMembership [ schema:identifier "928"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:20 .
 
@@ -2026,7 +2029,7 @@ cultivationtype:930 a :CultivationType ;
         "Pascoli d’estivazione"@it ;
     :hasMembership [ schema:identifier "930"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:13 .
 
@@ -2036,7 +2039,7 @@ cultivationtype:933 a :CultivationType ;
         "Pascoli comunitari"@it ;
     :hasMembership [ schema:identifier "933"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:13 .
 
@@ -2046,7 +2049,7 @@ cultivationtype:935 a :CultivationType ;
         "Prati da sfalcio nella regione d’estivazione, per l'alimentazione durante l'estivazione"@it ;
     :hasMembership [ schema:identifier "935"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:13 .
 
@@ -2056,7 +2059,7 @@ cultivationtype:936 a :CultivationType ;
         "Terreni da strame nella regione d’estivazione"@it ;
     :hasMembership [ schema:identifier "936"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:13 .
 
@@ -2089,7 +2092,7 @@ cultivationtype:998 a :CultivationType ;
         "Altre superfici fuori della superficie agricola utilizzata e superfici d’estivazione"@it ;
     :hasMembership [ schema:identifier "998"^^xsd:ID ;
             schema:name "AGIS" ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
+            schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
     :partOf cultivationtype:12 .
 
@@ -2250,7 +2253,7 @@ cultivationtype:1025 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:521 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:1026 a :GRUDCrop ;
     schema:name "Silomais"@de ;
@@ -2258,7 +2261,7 @@ cultivationtype:1026 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:521 .
+    :partOf cultivationtype:497 .
 
 cultivationtype:1027 a :GRUDCrop ;
     schema:name "Zuckermais"@de,
@@ -2330,7 +2333,7 @@ cultivationtype:1000 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:1006 a :SRPPPCrop ;
     schema:name "Sommerweichweizen"@de,
@@ -2388,7 +2391,7 @@ cultivationtype:19 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
 cultivationtype:490 a :SRPPPCrop ;
     schema:name "Winterweichweizen"@de,
@@ -2424,5 +2427,5 @@ cultivationtype:492 a :SRPPPCrop ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:1033 .
 
