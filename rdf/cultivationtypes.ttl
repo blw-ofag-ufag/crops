@@ -183,6 +183,7 @@ cultivationtype:498 a :CultivationType ;
         "barley"@en,
         "Orge"@fr,
         "Orzo"@it ;
+    :botanicalPlant taxon:HORVX ;
     :hasMembership [ schema:identifier "10083"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -251,6 +252,7 @@ cultivationtype:504 a :CultivationType ;
     schema:name "Hafer"@de,
         "Avoine"@fr,
         "Avena"@it ;
+    :botanicalPlant taxon:AVESA ;
     :hasMembership [ schema:identifier "504"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
@@ -265,6 +267,7 @@ cultivationtype:505 a :CultivationType ;
     schema:name "Triticale"@de,
         "Triticale"@fr,
         "Triticale"@it ;
+    :botanicalPlant taxon:TTLRI ;
     :hasMembership [ schema:identifier "505"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
@@ -322,7 +325,7 @@ cultivationtype:509 a :CultivationType ;
     :hasMembership [ schema:identifier "172"^^xsd:ID ;
             schema:name "GRUD" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+            :memberOfClass :GRUDCrop ] ,
         [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
@@ -381,6 +384,7 @@ cultivationtype:513 a :CultivationType ;
 
 cultivationtype:514 a :CultivationType ;
     schema:name "Roggen"@de,
+        "rye"@en,
         "Seigle"@fr,
         "Segale"@it ;
     :botanicalPlant taxon:SECCE ;
@@ -410,6 +414,7 @@ cultivationtype:516 a :CultivationType ;
     schema:name "Dinkel"@de,
         "Epeautre"@fr,
         "Spelta"@it ;
+    :botanicalPlant taxon:TRZSP ;
     :hasMembership [ schema:identifier "516"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
@@ -2180,7 +2185,8 @@ cultivationtype:1011 a :GRUDCrop ;
         cultivationtype:504 .
 
 cultivationtype:1013 a :GRUDCrop ;
-    schema:name "Winterroggen (Hybridsorten)"@de ;
+    schema:name "Winterroggen (Hybridsorten)"@de,
+        "winter rye"@en ;
     :hasMembership [ schema:identifier "CROP_WRHGH"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2217,7 +2223,11 @@ cultivationtype:1021 a :GRUDCrop ;
     :hasMembership [ schema:identifier "CROP_WKORN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10122"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
     :partOf cultivationtype:19,
         cultivationtype:516 .
 
@@ -2257,6 +2267,7 @@ cultivationtype:1027 a :GRUDCrop ;
     schema:name "Zuckermais"@de,
         "maïs sucré"@fr,
         "Mais dolce"@it ;
+    :botanicalPlant taxon:ZEAMS ;
     :hasMembership [ schema:identifier "CROP_SUCORN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -2337,6 +2348,7 @@ cultivationtype:1006 a :SRPPPCrop ;
 
 cultivationtype:1012 a :SRPPPCrop ;
     schema:name "Winterroggen"@de,
+        "winter rye"@en,
         "Seigle d'automne"@fr,
         "Segale autunnale"@it ;
     :hasMembership [ schema:identifier "9945"^^xsd:ID ;
@@ -2357,21 +2369,12 @@ cultivationtype:1017 a :SRPPPCrop ;
     :partOf cultivationtype:19,
         cultivationtype:505 .
 
-cultivationtype:1022 a :SRPPPCrop ;
-    schema:name "Korn (Dinkel)"@de,
-        "Épeautre"@fr,
-        "Spelta"@it ;
-    :hasMembership [ schema:identifier "10122"^^xsd:ID ;
-            schema:name "SRPPP"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:19,
-        cultivationtype:516 .
-
 cultivationtype:1032 a :SRPPPCrop ;
-    schema:name "Süssgräser (Poaceae)"@de,
+    schema:alternateName "Süssgräser (Poaceae)"@de,
         "poacées (Gramineae)"@fr,
         "Poacee (Graminaceae)"@it ;
+    schema:name "Kulturen mit Süssgräsern"@de,
+        "crops with sweet grasses"@en ;
     :botanicalPlant taxon:1GRAF ;
     :hasMembership [ schema:identifier "10339"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
