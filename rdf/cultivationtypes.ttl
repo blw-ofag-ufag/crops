@@ -133,6 +133,12 @@ cultivationtype:2 a :CultivationType ;
         "Prati perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
             :memberOfClass :CultivationTypeCategory ] ;
+    :partOf cultivationtype:21 .
+
+cultivationtype:21 a :CultivationType ;
+    schema:alternateName "Dauergrünland"@de ;
+    schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
+    schema:name "Dauergrünfläche"@de ;
     :partOf cultivationtype:0 .
 
 cultivationtype:20 a :CultivationType ;
@@ -140,13 +146,13 @@ cultivationtype:20 a :CultivationType ;
     :partOf cultivationtype:0 .
 
 cultivationtype:3 a :CultivationType ;
-    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche."@de ;
+    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche (Art. 19 LBV)."@de ;
     schema:name "Dauerweiden"@de,
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
             :memberOfClass :CultivationTypeCategory ] ;
-    :partOf cultivationtype:0 .
+    :partOf cultivationtype:21 .
 
 cultivationtype:4 a :CultivationType ;
     schema:name "Reben"@de,
@@ -1089,7 +1095,8 @@ cultivationtype:611 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:2 ;
+    :intensity :21 .
 
 cultivationtype:612 a :CultivationType ;
     schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
@@ -1099,7 +1106,8 @@ cultivationtype:612 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:2 ;
+    :intensity :22 .
 
 cultivationtype:613 a :CultivationType ;
     schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
@@ -1129,7 +1137,8 @@ cultivationtype:617 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:3 .
+    :partOf cultivationtype:3 ;
+    :intensity :21.
 
 cultivationtype:618 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
@@ -1169,7 +1178,8 @@ cultivationtype:623 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:2 ;
+    :intensity :22 .
 
 cultivationtype:625 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
