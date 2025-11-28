@@ -286,7 +286,8 @@ cultivationtype:506 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:14 .
+    :partOf cultivationtype:14,
+        cultivationtype:18 .
 
 cultivationtype:507 a :CultivationType ;
     schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
@@ -408,7 +409,8 @@ cultivationtype:515 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:1033 .
+    :partOf cultivationtype:1033,
+        cultivationtype:18 .
 
 cultivationtype:516 a :CultivationType ;
     schema:name "Dinkel"@de,
