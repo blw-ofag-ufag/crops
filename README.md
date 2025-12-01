@@ -33,6 +33,7 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     PASSWORD=********
     GRAPH=https://lindas.admin.ch/foag/crops
     ENDPOINT=https://stardog.cluster.ldbar.ch/lindas
+    EPPO=********
     ```
 
 2. Run the ETL pipeline `sh scripts/graph-processing.sh`

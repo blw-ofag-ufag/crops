@@ -1,0 +1,209 @@
+# ==============================================================================
+#       title:  CROP CONCEPT MAPPING TABLE GENERATION
+#        date:  2025-11-26
+#      author:  Damian Oswald (damian.oswald@blw.admin.ch)
+# description:  This query performs a comprehensive mapping between two specific
+#               crop classification systems ("Source" and "Target") by
+#               identifying whether concepts match exactly, or if one is a
+#               broader or narrower category of the other. It simultaneously
+#               retrieves any "orphan" concepts from the target system that have
+#               no corresponding link to the source system, ensuring a complete
+#               comparison of the datasets. Finally, it filters all resulting
+#               mappings to ensure that the membership definitions for both
+#               source and target concepts are historically valid for a specific
+#               reference date.
+# ==============================================================================
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+   ?S ?S_name ?S_id
+   ?relation
+   ?T ?T_name ?T_id
+
+WHERE
+{
+   # 1. DEFINE GLOBAL PARAMETERS
+
+   # 1.1 Set date for validity checks
+   #     We can use NOW() for the current date, or set a fixed date, 
+   #     e.g., BIND("2024-01-01"^^xsd:date AS ?reference_date)
+   BIND(xsd:date("__DATE__") AS ?reference_date)
+
+   # 1.2 Set a super-parent to contrain the search
+   #     We maybe want to look at only cereals ct:14 or everything ct:0
+   BIND(ct:0 AS ?super_parent)
+
+   # 1.3 TODO: Initialize DB_T and DB_S with "__TARGET__" and "__SOURCE__"
+
+   # 2. WRAP THE ORIGINAL QUERY IN A SUBQUERY
+   #    This lets us apply the final filter to the entire result set,
+   #    avoiding repetition.
+   {
+      SELECT * WHERE
+      {
+         {
+            # 1. FINDING A MATCH FOR EVERY SOURCE CONCEPT
+            #    In this first block, we start out from the
+            #    source concepts and try to find a matching
+            #    target concept, describing the relation.
+            {
+               # 1.1 Find source concepts
+            ?S a :CultivationType ;
+               schema:name ?S_name ;
+               :partOf+ ?super_parent ;
+                  :hasMembership ?S_membership .
+               FILTER(LANG(?S_name) = "de")
+               ?S_membership schema:name "__SOURCE__" ;
+                  schema:identifier ?S_id ;
+                  schema:validFrom ?S_validFrom .
+               OPTIONAL {
+                  ?S_membership schema:validTo ?S_validTo .
+               }
+
+               # 1.2 Find target concepts and determine the
+               #     source-to-target relation
+               OPTIONAL
+               {
+                  {
+                     # 1.2.1 Identity: The two concepts match
+                     ?S :hasMembership ?T_membership .
+                     ?T_membership schema:name "__TARGET__" ;
+                        schema:identifier ?T_id ;
+                        schema:validFrom ?T_validFrom .
+                     OPTIONAL {
+                        ?T_membership schema:validTo ?T_validTo .
+                     }
+                     BIND(skos:exactMatch AS ?relation)
+                     BIND(?S AS ?T)
+                     ?T schema:name ?T_name .
+                     FILTER(LANG(?T_name) = "de")
+                  }
+
+                  UNION
+                  
+                  {
+                     # 1.2.2 Subsumption: The source concept is a
+                     #       proper subset of the target concept
+                     FILTER NOT EXISTS { 
+                        ?S :hasMembership / schema:name "__TARGET__"
+                     }
+                     ?S :partOf+ ?T .
+                     ?T schema:name ?T_name ;
+                        :hasMembership ?T_membership .
+                     ?T_membership schema:name "__TARGET__" ;
+                        schema:identifier ?T_id ;
+                        schema:validFrom ?T_validFrom .
+                     OPTIONAL {
+                        ?T_membership schema:validTo ?T_validTo .
+                     }
+                     FILTER(LANG(?T_name)="de")
+                     BIND(skos:broadMatch AS ?relation)
+                  }
+
+                  UNION
+                  
+                  {
+                     # 1.2.3 Super-ordination: The source concept is
+                     #       a superset of the target concept
+                     FILTER NOT EXISTS {
+                        ?S :hasMembership/schema:name "__TARGET__"
+                     }
+                     ?T :partOf+ ?S ;
+                        schema:name ?T_name ;
+                        :hasMembership ?T_membership .
+                     FILTER(LANG(?T_name) = "de")
+                     ?T_membership schema:name "__TARGET__" ;
+                        schema:identifier ?T_id ;
+                        schema:validFrom ?T_validFrom .
+                     OPTIONAL {
+                        ?T_membership schema:validTo ?T_validTo .
+                     }
+                     BIND(skos:narrowMatch AS ?relation)
+                  }
+               }
+            }
+         }
+         UNION
+         {
+            # 2. RIGHT-SIDE ORPHANS
+            #    Because there are still some concepts in the
+            #    target database to which no source concept leads,
+            #    we collect them separately and join the previously
+            #    unknown ones to our table.
+            {
+               # 2.1 Start with ALL Potential Targets
+               ?T a :CultivationType ;
+                  schema:name ?T_name ;
+                  :partOf+ ?super_parent ;
+                  :hasMembership ?T_membership .
+               ?T_membership schema:name "__TARGET__" ;
+                  schema:identifier ?T_id ;
+                  schema:validFrom ?T_validFrom .
+               OPTIONAL {
+                  ?T_membership schema:validTo ?T_validTo .
+               }
+               FILTER(LANG(?T_name) = "de")
+
+               # 2.2 Subtract the "Used" Targets using a Sub-Query
+               MINUS
+               {
+                  SELECT DISTINCT ?T 
+                  WHERE
+                  {
+                     ?S_Inner a :CultivationType ;
+                        :partOf+ ?super_parent ;
+                        :hasMembership [ schema:name "__SOURCE__" ] .
+
+                     {
+                        # 2.2.1 Identity
+                        ?S_Inner :hasMembership [ schema:name "__TARGET__" ] .
+                        BIND(?S_Inner AS ?T)
+                     }
+                     UNION
+                     {
+                        # 2.2.2 Broad
+                        ?S_Inner :partOf+ ?T .
+                        ?T :hasMembership [ schema:name "__TARGET__" ] .
+                     }
+                     UNION
+                     {
+                        # 2.2.3 Narrow
+                        ?T :partOf+ ?S_Inner .
+                        ?T :hasMembership [ schema:name "__TARGET__" ] .
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   # 3. FILTER THE RESULTS BASED ON THE REFERENCE DATE
+   #    A concept is valid if validFrom <= date AND (validTo is not
+   #    set OR validTo >= date)
+
+   # 3.1 Filter for the validity of the source concept ?S (if it exists)
+   FILTER(
+      !BOUND(?S) || 
+      (
+         ?S_validFrom <= ?reference_date &&
+         (!BOUND(?S_validTo) || ?S_validTo >= ?reference_date)
+      )
+   )
+
+   # 3.2 Filter for the validity of the target concept ?T (if it exists)
+   FILTER(
+      !BOUND(?T) ||
+      (
+         ?T_validFrom <= ?reference_date &&
+         (!BOUND(?T_validTo) || ?T_validTo >= ?reference_date)
+      )
+   )
+}
+
+ORDER BY ?relation ?S ?T

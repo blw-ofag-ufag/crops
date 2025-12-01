@@ -6,7 +6,7 @@
 #' =============================================================================
 
 #' Loop through the list of CRAN packages
-for (package in c("remotes", "dplyr", "jsonlite", "xml2")) {
+for (package in c("remotes", "dplyr", "jsonlite", "xml2", "dotenv")) {
   if (!requireNamespace(package, quietly = TRUE)) {
     install.packages(package, repos = "https://cloud.r-project.org")
   }
