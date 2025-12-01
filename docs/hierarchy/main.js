@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const params = new URLSearchParams(window.location.search);
         const system = params.get('system') || ""; // Empty string = no filter
         const dateStr = params.get('date');
+        const root = params.get('root') || '0' ; // by default, search entire graph starting from cultivationtype:0
         
         // Default to Today if not specified
         const date = dateStr ? new Date(dateStr) : new Date();
         
-        return { system, date };
+        return { system, date, root };
     }
 
     // Mutable State
@@ -99,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const CONSTRUCT_QUERY = `
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
+        PREFIX cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -126,8 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 schema:validTo ?validTo .
         }
         WHERE {
-            ?node a :CultivationType .
-            ?node schema:name ?nodeName .
+            ?node a :CultivationType ;
+                :partOf+ cultivationtype:${activeFilters.root} ;
+                schema:name ?nodeName .
             FILTER(LANG(?nodeName) = "de")
             OPTIONAL {
                 ?node :partOf ?parent .
