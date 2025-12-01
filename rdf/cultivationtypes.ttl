@@ -2253,7 +2253,7 @@ cultivationtype:1025 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:497 .
+    :partOf cultivationtype:521 .
 
 cultivationtype:1026 a :GRUDCrop ;
     schema:name "Silomais"@de ;
@@ -2261,7 +2261,7 @@ cultivationtype:1026 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:497 .
+    :partOf cultivationtype:521 .
 
 cultivationtype:1027 a :GRUDCrop ;
     schema:name "Zuckermais"@de,
