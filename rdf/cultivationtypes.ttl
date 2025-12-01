@@ -107,6 +107,10 @@ cultivationtype:4 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] ;
     :partOf cultivationtype:0 .
 
+cultivationtype:480 a :CultivationType ;
+    schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
+    :partOf cultivationtype:2 .
+
 cultivationtype:493 a :CultivationType ;
     schema:name "Sonnenblumen"@de .
 
@@ -963,8 +967,8 @@ cultivationtype:611 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 ;
-    :intensity :21 .
+    :intensity :21 ;
+    :partOf cultivationtype:2 .
 
 cultivationtype:612 a :CultivationType ;
     schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
@@ -974,8 +978,8 @@ cultivationtype:612 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 ;
-    :intensity :22 .
+    :intensity :22 ;
+    :partOf cultivationtype:2 .
 
 cultivationtype:613 a :CultivationType ;
     schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
@@ -1005,8 +1009,8 @@ cultivationtype:617 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:3 ;
-    :intensity :21.
+    :intensity :21 ;
+    :partOf cultivationtype:3 .
 
 cultivationtype:618 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
@@ -1026,7 +1030,7 @@ cultivationtype:621 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:480 .
 
 cultivationtype:622 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
@@ -1036,7 +1040,8 @@ cultivationtype:622 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :intensity :21 ;
+    :partOf cultivationtype:480 .
 
 cultivationtype:623 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
@@ -1046,8 +1051,8 @@ cultivationtype:623 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 ;
-    :intensity :22 .
+    :intensity :22 ;
+    :partOf cultivationtype:480 .
 
 cultivationtype:625 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
