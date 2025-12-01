@@ -135,14 +135,14 @@ cultivationtype:2 a :CultivationType ;
             :memberOfClass :CultivationTypeCategory ] ;
     :partOf cultivationtype:21 .
 
+cultivationtype:20 a :CultivationType ;
+    schema:name "Einzelelemente"@de ;
+    :partOf cultivationtype:0 .
+
 cultivationtype:21 a :CultivationType ;
     schema:alternateName "Dauergrünland"@de ;
     schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
     schema:name "Dauergrünfläche"@de ;
-    :partOf cultivationtype:0 .
-
-cultivationtype:20 a :CultivationType ;
-    schema:name "Einzelelemente"@de ;
     :partOf cultivationtype:0 .
 
 cultivationtype:3 a :CultivationType ;
@@ -166,8 +166,20 @@ cultivationtype:480 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
     :partOf cultivationtype:2 .
 
-cultivationtype:493 a :CultivationType ;
-    schema:name "Sonnenblumen"@de .
+cultivationtype:493 a :CultivationType,
+        :GRUDCrop ;
+    schema:name "Sonnenblumen"@de,
+        "Tournesol"@fr,
+        "Girasole"@it ;
+    :hasMembership [ schema:identifier "CROP_KARPA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10137"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
 
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
@@ -339,7 +351,7 @@ cultivationtype:509 a :CultivationType ;
     :hasMembership [ schema:identifier "CROP_TABAC"^^xsd:ID ;
             schema:name "NAEBI" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ,
+            :memberOfClass :GRUDCrop ],
         [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
@@ -2329,20 +2341,6 @@ cultivationtype:1031 a :GRUDCrop ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:543 .
-
-cultivationtype:493 a :GRUDCrop ;
-    schema:name "Sonnenblumen"@de,
-        "Tournesol"@fr,
-        "Girasole"@it ;
-    :hasMembership [ schema:identifier "CROP_KARPA"^^xsd:ID ;
-            schema:name "NAEBI"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ],
-        [ schema:identifier "10137"^^xsd:ID ;
-            schema:name "SRPPP"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:1 .
 
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
