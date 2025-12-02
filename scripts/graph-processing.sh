@@ -1,4 +1,4 @@
-# Load environment variables from .env file
+# Load environment variables from .env file...
 . ./.env
 
 # EPPO data integration
