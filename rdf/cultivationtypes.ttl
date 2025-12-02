@@ -326,7 +326,7 @@ cultivationtype:509 a :CultivationType ;
     :hasMembership [ schema:identifier "CROP_TABAC"^^xsd:ID ;
             schema:name "NAEBI" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ,
+            :memberOfClass :GRUDCrop ],
         [ schema:identifier "509"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
@@ -2250,12 +2250,12 @@ cultivationtype:1024 a :GRUDCrop ;
     :partOf cultivationtype:0 .
 
 cultivationtype:1025 a :GRUDCrop ;
-    schema:name "Grünmais, ha"@de ;
+    schema:name "Grünmais"@de ;
     :hasMembership [ schema:identifier "CROP_GCORN"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:497 .
+    :partOf cultivationtype:521 .
 
 cultivationtype:1026 a :GRUDCrop ;
     schema:name "Silomais"@de ;
@@ -2263,7 +2263,7 @@ cultivationtype:1026 a :GRUDCrop ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:497 .
+    :partOf cultivationtype:521 .
 
 cultivationtype:1027 a :GRUDCrop ;
     schema:name "Zuckermais"@de,
