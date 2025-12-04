@@ -133,20 +133,26 @@ cultivationtype:2 a :CultivationType ;
         "Prati perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
             :memberOfClass :CultivationTypeCategory ] ;
-    :partOf cultivationtype:0 .
+    :partOf cultivationtype:21 .
 
 cultivationtype:20 a :CultivationType ;
     schema:name "Einzelelemente"@de ;
     :partOf cultivationtype:0 .
 
+cultivationtype:21 a :CultivationType ;
+    schema:alternateName "Dauergrünland"@de ;
+    schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
+    schema:name "Dauergrünfläche"@de ;
+    :partOf cultivationtype:0 .
+
 cultivationtype:3 a :CultivationType ;
-    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche."@de ;
+    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche (Art. 19 LBV)."@de ;
     schema:name "Dauerweiden"@de,
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
     :hasMembership [ schema:name "AGIS" ;
             :memberOfClass :CultivationTypeCategory ] ;
-    :partOf cultivationtype:0 .
+    :partOf cultivationtype:21 .
 
 cultivationtype:4 a :CultivationType ;
     schema:name "Reben"@de,
@@ -155,6 +161,25 @@ cultivationtype:4 a :CultivationType ;
     :hasMembership [ schema:name "AGIS" ;
             :memberOfClass :CultivationTypeCategory ] ;
     :partOf cultivationtype:0 .
+
+cultivationtype:480 a :CultivationType ;
+    schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
+    :partOf cultivationtype:2 .
+
+cultivationtype:493 a :CultivationType,
+        :GRUDCrop ;
+    schema:name "Sonnenblumen"@de,
+        "Tournesol"@fr,
+        "Girasole"@it ;
+    :hasMembership [ schema:identifier "CROP_KARPA"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ],
+        [ schema:identifier "10137"^^xsd:ID ;
+            schema:name "SRPPP"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :SRPPPCrop ] ;
+    :partOf cultivationtype:1 .
 
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
@@ -1091,6 +1116,7 @@ cultivationtype:611 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
+    :intensity :21 ;
     :partOf cultivationtype:2 .
 
 cultivationtype:612 a :CultivationType ;
@@ -1101,6 +1127,7 @@ cultivationtype:612 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
+    :intensity :22 ;
     :partOf cultivationtype:2 .
 
 cultivationtype:613 a :CultivationType ;
@@ -1131,6 +1158,7 @@ cultivationtype:617 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
+    :intensity :21 ;
     :partOf cultivationtype:3 .
 
 cultivationtype:618 a :CultivationType ;
@@ -1151,7 +1179,7 @@ cultivationtype:621 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:480 .
 
 cultivationtype:622 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
@@ -1161,7 +1189,8 @@ cultivationtype:622 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :intensity :21 ;
+    :partOf cultivationtype:480 .
 
 cultivationtype:623 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
@@ -1171,7 +1200,8 @@ cultivationtype:623 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :intensity :22 ;
+    :partOf cultivationtype:480 .
 
 cultivationtype:625 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
@@ -1212,7 +1242,7 @@ cultivationtype:634 a :CultivationType ;
             schema:validFrom "2014-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:2 .
+    :partOf cultivationtype:635 .
 
 cultivationtype:635 a :CultivationType ;
     schema:name "Uferwiesen (ohne Weiden)"@de,
@@ -1312,7 +1342,7 @@ cultivationtype:702 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:5 .
+    :partOf cultivationtype:730 .
 
 cultivationtype:703 a :CultivationType ;
     schema:name "Obstanlagen (Birnen)"@de,
@@ -1322,7 +1352,7 @@ cultivationtype:703 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:5 .
+    :partOf cultivationtype:730 .
 
 cultivationtype:704 a :CultivationType ;
     schema:name "Obstanlagen (Steinobst)"@de,
@@ -1332,7 +1362,7 @@ cultivationtype:704 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:5 .
+    :partOf cultivationtype:730 .
 
 cultivationtype:705 a :CultivationType ;
     schema:name "Mehrjährige Beeren"@de,
@@ -1342,7 +1372,7 @@ cultivationtype:705 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:706 a :CultivationType ;
     schema:name "Mehrjährige Gewürz- und Medizinalpflanzen"@de,
@@ -1352,7 +1382,7 @@ cultivationtype:706 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:707 a :CultivationType ;
     schema:name "Mehrjährige nachwachsende Rohstoffe (Chinaschilf, usw.)"@de,
@@ -1362,7 +1392,7 @@ cultivationtype:707 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:708 a :CultivationType ;
     schema:name "Hopfen"@de,
@@ -1372,7 +1402,7 @@ cultivationtype:708 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:709 a :CultivationType ;
     schema:name "Rhabarber"@de,
@@ -1382,7 +1412,7 @@ cultivationtype:709 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:710 a :CultivationType ;
     schema:name "Spargel"@de,
@@ -1392,7 +1422,7 @@ cultivationtype:710 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:711 a :CultivationType ;
     schema:name "Pilze (Freiland)"@de,
@@ -1402,7 +1432,7 @@ cultivationtype:711 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:712 a :CultivationType ;
     schema:name "Christbäume"@de,
@@ -1412,7 +1442,7 @@ cultivationtype:712 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:713 a :CultivationType ;
     schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
@@ -1422,7 +1452,7 @@ cultivationtype:713 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:714 a :CultivationType ;
     schema:name "Ziersträucher, Ziergehölze und Zierstauden"@de,
@@ -1432,7 +1462,7 @@ cultivationtype:714 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:715 a :CultivationType ;
     schema:name "Übrige Baumschulen (Rosen, Früchte, usw.)"@de,
@@ -1463,7 +1493,7 @@ cultivationtype:718 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:719 a :CultivationType ;
     schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de,
@@ -1473,7 +1503,7 @@ cultivationtype:719 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:720 a :CultivationType ;
     schema:name "Gepflegte Selven (Edelkastanienbäume)"@de,
@@ -1483,7 +1513,7 @@ cultivationtype:720 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:721 a :CultivationType ;
     schema:name "Mehrjährige gärtnerische Freilandkulturen (nicht im Gewächshaus)"@de,
@@ -1493,7 +1523,7 @@ cultivationtype:721 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2015-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:722 a :CultivationType ;
     schema:name "Baumschulen von Reben"@de,
@@ -1503,7 +1533,7 @@ cultivationtype:722 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2016-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:723 a :CultivationType ;
     schema:name "Baumschulen von Obst und Beeren"@de,
@@ -1513,7 +1543,7 @@ cultivationtype:723 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:724 a :CultivationType ;
     schema:name "Übrige Baumschulen (Rosen, Zierstauden, usw.)"@de,
@@ -1523,9 +1553,10 @@ cultivationtype:724 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:725 a :CultivationType ;
+    schema:description "Kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen."@de ;
     schema:name "Permakultur"@de,
         "Permaculture"@fr,
         "Permacultura"@it ;
@@ -1533,7 +1564,7 @@ cultivationtype:725 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2020-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:730 a :CultivationType ;
     schema:name "Obstanlagen aggregiert"@de,
@@ -1553,7 +1584,7 @@ cultivationtype:731 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2009-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:5 .
+    :partOf cultivationtype:730 .
 
 cultivationtype:735 a :CultivationType ;
     schema:name "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
@@ -1594,7 +1625,7 @@ cultivationtype:797 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:6 .
+    :partOf cultivationtype:750 .
 
 cultivationtype:798 a :CultivationType ;
     schema:name "Übrige Flächen mit Dauerkulturen, nicht beitragsberechtigt"@de,
@@ -1622,7 +1653,7 @@ cultivationtype:801 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:802 a :CultivationType ;
     schema:name "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
@@ -1632,7 +1663,7 @@ cultivationtype:802 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:803 a :CultivationType ;
     schema:name "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,
@@ -1642,7 +1673,7 @@ cultivationtype:803 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:804 a :CultivationType ;
     schema:name "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
@@ -1652,7 +1683,7 @@ cultivationtype:804 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:806 a :CultivationType ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
@@ -1663,7 +1694,7 @@ cultivationtype:806 a :CultivationType ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             schema:validTo "2022-12-31"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:807 a :CultivationType ;
     schema:name "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament"@de,
@@ -1673,7 +1704,7 @@ cultivationtype:807 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:808 a :CultivationType ;
     schema:name "Gärtnerische Kulturen in geschütztem Anbau ohne festes Fundament"@de,
@@ -1683,7 +1714,7 @@ cultivationtype:808 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:810 a :CultivationType ;
     schema:name "Pilze in geschütztem Anbau mit festem Fundament"@de,
@@ -1693,7 +1724,7 @@ cultivationtype:810 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2014-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:811 a :CultivationType ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
@@ -1703,7 +1734,7 @@ cultivationtype:811 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:812 a :CultivationType ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
@@ -1713,7 +1744,7 @@ cultivationtype:812 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:813 a :CultivationType ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
@@ -1723,7 +1754,7 @@ cultivationtype:813 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:814 a :CultivationType ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
@@ -1733,7 +1764,7 @@ cultivationtype:814 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:830 a :CultivationType ;
     schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt aggregiert"@de,
@@ -1764,7 +1795,7 @@ cultivationtype:847 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:848 a :CultivationType ;
     schema:name "Übrige Kulturen in geschütztem Anbau mit festem Fundament"@de,
@@ -1774,7 +1805,7 @@ cultivationtype:848 a :CultivationType ;
             schema:name "AGIS" ;
             schema:validFrom "1999-01-01"^^xsd:date ;
             :memberOfClass :DirectPaymentCrop ] ;
-    :partOf cultivationtype:7 .
+    :partOf cultivationtype:830 .
 
 cultivationtype:849 a :CultivationType ;
     schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, nicht beitragsberechtigt"@de,
@@ -2311,20 +2342,6 @@ cultivationtype:1031 a :GRUDCrop ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
     :partOf cultivationtype:543 .
-
-cultivationtype:493 a :GRUDCrop ;
-    schema:name "Sonnenblumen"@de,
-        "Tournesol"@fr,
-        "Girasole"@it ;
-    :hasMembership [ schema:identifier "CROP_KARPA"^^xsd:ID ;
-            schema:name "NAEBI"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ],
-        [ schema:identifier "10137"^^xsd:ID ;
-            schema:name "SRPPP"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :SRPPPCrop ] ;
-    :partOf cultivationtype:1 .
 
 cultivationtype:1000 a :SRPPPCrop ;
     schema:name "Sommergetreide"@de,
