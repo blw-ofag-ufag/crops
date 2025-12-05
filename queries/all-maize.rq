@@ -1,0 +1,7 @@
+PREFIX schema: <http://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+SELECT *
+WHERE {
+  ?cultivation :cultivationtype / :partOf* / schema:name "Mais"@de ; geosparql:asWKT ?geometry .
+}
