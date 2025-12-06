@@ -1,0 +1,16 @@
+PREFIX schema: <http://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
+
+SELECT ?name (SUM(?area_m2)/10000 AS ?area)
+WHERE {
+  VALUES ?name { "Weizen"@de "Mais"@de "Gerste"@de "Reis"@de "Sorghum"@de }
+  ?cultivation a :Cultivation ;
+    :cultivationtype ?cultivationtype ;
+    :area_m2 ?area_m2 .
+  ?cultivationtype :partOf* / schema:name ?name .
+  FILTER(LANG(?name)="de")
+}
+GROUP BY ?name
+ORDER BY DESC(?area)

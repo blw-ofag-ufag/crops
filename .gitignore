@@ -52,6 +52,7 @@ upload.sh
 graph.ttl
 
 # Exclude any notes
+notes/
 notes.md
 notes.qmd
 
