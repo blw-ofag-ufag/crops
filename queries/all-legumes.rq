@@ -2,6 +2,7 @@ PREFIX schema: <http://schema.org/>
 PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
 PREFIX : <https://agriculture.ld.admin.ch/crops/>
 SELECT *
+FROM <https://lindas.admin.ch/foag/crops>
 WHERE {
-  ?cultivation :cultivationtype / :partOf* / schema:name "Mais"@de ; geosparql:asWKT ?geometry .
+  ?cultivation :cultivationtype / :partOf* / schema:name "Leguminosen"@de ; geosparql:asWKT ?geometry .
 }
