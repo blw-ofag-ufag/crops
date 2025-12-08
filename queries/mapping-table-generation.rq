@@ -36,7 +36,7 @@ WHERE
 
    # 1.2 Set a super-parent to contrain the search
    #     We maybe want to look at only cereals ct:14 or everything ct:0
-   BIND(ct:0 AS ?super_parent)
+   BIND(ct:__ROOT__ AS ?super_parent)
 
    # 1.3 TODO: Initialize DB_T and DB_S with "__TARGET__" and "__SOURCE__"
 
