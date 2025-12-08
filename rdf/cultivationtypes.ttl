@@ -48,11 +48,8 @@ cultivationtype:1007 a :CultivationType ;
         cultivationtype:492 .
 
 cultivationtype:1014 a :CultivationType ;
-    schema:name "Winterroggen (Populationssorten)"@de ;
-    :hasMembership [ schema:identifier "CROP_WRHGP"^^xsd:ID ;
-            schema:name "NAEBI"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+    schema:name "Winterroggen (Populationssorten)"@de,
+        "winter rye (population varieties)"@en ;
     :partOf cultivationtype:1012 .
 
 cultivationtype:1015 a :CultivationType ;
@@ -61,7 +58,7 @@ cultivationtype:1015 a :CultivationType ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:1012 .
+    :partOf cultivationtype:1014 .
 
 cultivationtype:1016 a :CultivationType ;
     schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
@@ -69,13 +66,29 @@ cultivationtype:1016 a :CultivationType ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
             :memberOfClass :GRUDCrop ] ;
-    :partOf cultivationtype:1012 .
+    :partOf cultivationtype:1013 .
 
 cultivationtype:1033 a :CultivationType ;
     schema:name "Getreide ohne Mais"@de,
         "Céréales sans Maïs"@fr,
         "Cereali senza Mais"@it ;
     :partOf cultivationtype:14 .
+
+cultivationtype:1034 a :CultivationType ;
+    schema:name "Winterroggen (Hybridsorten) ohne 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGH"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1013 .
+
+cultivationtype:1035 a :CultivationType ;
+    schema:name "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
+    :hasMembership [ schema:identifier "CROP_WRHGP"^^xsd:ID ;
+            schema:name "NAEBI"^^xsd:string ;
+            schema:validFrom "2000-01-01"^^xsd:date ;
+            :memberOfClass :GRUDCrop ] ;
+    :partOf cultivationtype:1014 .
 
 cultivationtype:12 a :CultivationType ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
@@ -2219,11 +2232,7 @@ cultivationtype:1011 a :GRUDCrop ;
 
 cultivationtype:1013 a :GRUDCrop ;
     schema:name "Winterroggen (Hybridsorten)"@de,
-        "winter rye"@en ;
-    :hasMembership [ schema:identifier "CROP_WRHGH"^^xsd:ID ;
-            schema:name "NAEBI"^^xsd:string ;
-            schema:validFrom "2000-01-01"^^xsd:date ;
-            :memberOfClass :GRUDCrop ] ;
+        "winter rye (hybrid varieties)"@en ;
     :partOf cultivationtype:1012 .
 
 cultivationtype:1018 a :GRUDCrop ;
