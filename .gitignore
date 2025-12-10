@@ -54,6 +54,9 @@ graph.ttl
 # (very large) geodata .ttl file
 rdf/geodata.ttl
 
+# Exclude geopackage files
+*.gpkg
+
 # Exclude any notes
 notes/
 notes.md
