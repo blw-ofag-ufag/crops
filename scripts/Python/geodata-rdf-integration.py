@@ -23,6 +23,7 @@ FARMS = BASE + "farm/"
 GEOSPARQL = "http://www.opengis.net/ont/geosparql#"
 WKT_LITERAL = "http://www.opengis.net/ont/geosparql#wktLiteral"
 XSD_DATE = "http://www.w3.org/2001/XMLSchema#date"
+XSD_INTEGER = "http://www.w3.org/2001/XMLSchema#integer"
 
 # Ensure output directory exists
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
@@ -108,15 +109,19 @@ def main():
     ))
 
     # 3. Geometry (Literal - WKT)
-    # GeoPandas geometries are rarely NaN, but we check anyway
     blocks.append(build_triple_batch(
         subject_uris, GEOSPARQL + "asWKT", gdf.geometry.to_wkt(), 
         is_uri=False, literal_type=WKT_LITERAL
     ))
 
-    # 4. Area (Literal)
+    # 4. Area (Literal - Integer)
+    # Cast to Int64 to handle NaNs and remove decimals, then apply XSD_INTEGER
     blocks.append(build_triple_batch(
-        subject_uris, BASE + "area", gdf['flaeche_m2']
+        subject_uris, 
+        BASE + "area", 
+        gdf['flaeche_m2'].astype('Int64'), 
+        is_uri=False, 
+        literal_type=XSD_INTEGER
     ))
 
     # 5. Trees (Literal) - This will now properly skip rows where anzahl_baeume is NaN
