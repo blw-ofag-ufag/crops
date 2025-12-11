@@ -497,6 +497,8 @@ taxon:HORVX a :CropTaxon ;
     :taxonName "Hordeum vulgare" ;
     :taxonRank :Species .
 
+taxon:NA a :CropTaxon .
+
 taxon:ORYSA a :CropTaxon ;
     schema:alternateName "посевен ориз"@bg,
         "arròs"@ca,
