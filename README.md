@@ -37,7 +37,8 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     ```
 
 2. Run the ETL pipeline `sh scripts/graph-processing.sh`
-3. Check out the results on LINDAS.
+3. Choose whether or not to generate and upload geodata.ttl, which enables queries and depiction of crop areas. 
+4. Check out the results on LINDAS.
 
 # Data mapping and unification
 
@@ -59,7 +60,7 @@ In this example, all triples that use `:555` as a subject or object are automati
 Crucially, to avoid conflicting information, the canonical entity `:950` first loses all its properties for names and descriptions (specifically `schema:name` and `schema:description`).
 This ensures that the descriptive properties from the merged entity (`:555`) are cleanly transferred, creating a single, consistent record for the crop under the URI `:950`.
 
-# Example queries
+# Explore the graph on LINDAS
 
 You can query the crop master data system using SPARQL.
 
@@ -75,6 +76,20 @@ WHERE {
   FILTER(LANG(?name)="de")
 }
 ORDER BY ?name
+```
+
+If you have chosen to include geospatial data during the running of the graph-processing.sh pipeline, you can [query the graph for multipolygons](https://s.zazuko.com/36J1nA6) of crop areas and depict them in a map using a query like this:
+
+```sparql
+PREFIX schema: <http://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX canton: <https://ld.admin.ch/canton/>
+SELECT *
+FROM <https://lindas.admin.ch/foag/crops>
+WHERE {
+  ?cultivation :cultivationtype / :partOf* / schema:name "Leguminosen"@de ; geosparql:asWKT ?geometry ; :canton canton:1 .
+}
 ```
 
 More queries can be found in the `~/queries/` folder.
