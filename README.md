@@ -88,10 +88,12 @@ PREFIX canton: <https://ld.admin.ch/canton/>
 SELECT *
 FROM <https://lindas.admin.ch/foag/crops>
 WHERE {
-  ?cultivation :cultivationtype / :partOf* / schema:name "Leguminosen"@de ; geosparql:asWKT ?geometry ; :canton canton:1 .
+  ?cultivation :cultivationtype / :partOf* / schema:name "Leguminosen"@de ;
+    geosparql:asWKT ?geometry ;
+    :canton canton:1 .
 }
 ```
 
-<img width="881" height="403" alt="image" src="https://github.com/user-attachments/assets/cc1cf3a1-b639-4915-9f59-167aad3c839f" />
+![](https://github.com/user-attachments/assets/cc1cf3a1-b639-4915-9f59-167aad3c839f)
 
 More queries can be found in the `~/queries/` folder.
