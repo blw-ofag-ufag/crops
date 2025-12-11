@@ -92,4 +92,6 @@ WHERE {
 }
 ```
 
+<img width="881" height="403" alt="image" src="https://github.com/user-attachments/assets/cc1cf3a1-b639-4915-9f59-167aad3c839f" />
+
 More queries can be found in the `~/queries/` folder.
