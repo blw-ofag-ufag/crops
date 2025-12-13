@@ -6,11 +6,6 @@
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:Cultivation a owl:Class ;
-    rdfs:label "Nutzung"@de,
-        "Cultivation"@en ;
-    rdfs:comment "Represents a specific, spatio-temporally bound agricultural event. It models a single cultivation cycle of a particular crop on a defined area with start and end dates. For example, 'the 2023 summer wheat cultivation on field X12B3', as distinct from the general concept of 'wheat cultivation'."@en .
-
 cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
         "Terres cultivées"@fr,
