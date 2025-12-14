@@ -1,73 +1,106 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix program: <https://agriculture.ld.admin.ch/crops/program/> .
 @prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:InSitu a rdfs:Class ;
+    rdfs:subClassOf :Program ;
+    schema:name "In-situ Beiträge"@de ;
+    schema:description "Klassifizierung von Grünland basierend auf botanischer Zusammensetzung und Nutzung."@de .
+
+:ProductionSystemContribution a rdfs:Class ;
+    rdfs:subClassOf :Program ;
+    schema:name "Produktionssystembeitrag (PSB)"@de ;
+    schema:description "Spezifische Beiträge zur Förderung besonders naturnaher oder umweltfreundlicher Produktionsformen gemäss DZV."@de .
 
 program:Bio a :Program ;
-    schema:name "Bioproduktion"@de .
+    schema:name "Bioproduktion"@de ;
+    schema:description "Unterstützt Betriebe, die den gesamtbetrieblichen Landbau gemäss der Bio-Verordnung betreiben. Fördert besonders naturnahe, umweltfreundliche und tiergerechte Produktionsformen."@de .
 
 program:EKB a :Program ;
-    schema:name "Einzelkulturbeiträge im Pflanzenbau"@de .
+    schema:name "Einzelkulturbeiträge im Pflanzenbau"@de ;
+    schema:description "Fördert den Anbau strategisch wichtiger Ackerkulturen wie Ölsaaten, Körnerleguminosen oder Zuckerrüben zur Sicherstellung der Versorgung. Der Beitrag wird pro Hektare der entsprechenden Kultur ausgerichtet."@de .
 
-program:Insitu_01 a :Program ;
-    schema:name "Fromentalwiese"@de .
+program:Insitu_01 a :InSitu ;
+    schema:name "Fromentalwiese"@de ;
+    schema:description "Eine ertragreiche Fettwiese der kollinen bis montanen Stufe, die typischerweise von Glatthafer dominiert wird. Sie dient der intensiven Futtergewinnung (Heu und Emd)."@de .
 
-program:Insitu_02 a :Program ;
-    schema:name "Bärenklau-Knaulgraswiese"@de .
+program:Insitu_02 a :InSitu ;
+    schema:name "Bärenklau-Knaulgraswiese"@de ;
+    schema:description "Eine nährstoffreiche, intensiv genutzte Wiese mittlerer und höherer Lagen. Kennzeichnend sind Knaulgras und Wiesenbärenklau bei hoher Wüchsigkeit."@de .
 
-program:Insitu_03 a :Program ;
-    schema:name "Italienisch Raigraswiese"@de .
+program:Insitu_03 a :InSitu ;
+    schema:name "Italienisch Raigraswiese"@de ;
+    schema:description "Eine sehr intensive, artenarme Kunst- oder Naturwiese, die auf höchste Futtererträge ausgelegt ist. Sie wird dominiert von Italienischem Raigras."@de .
 
-program:Insitu_04 a :Program ;
-    schema:name "Weissklee-Wiesenfuchsschwanz-Wiese"@de .
+program:Insitu_04 a :InSitu ;
+    schema:name "Weissklee-Wiesenfuchsschwanz-Wiese"@de ;
+    schema:description "Eine nährstoffreiche Fettwiese auf frischen bis feuchten Böden. Sie liefert hochwertiges Futter, ist jedoch aufgrund des Fuchsschwanzes eher früh zu nutzen."@de .
 
-program:Insitu_05 a :Program ;
-    schema:name "Englisch Raigras-Wiesenrispen-Mähweide"@de .
+program:Insitu_05 a :InSitu ;
+    schema:name "Englisch Raigras-Wiesenrispen-Mähweide"@de ;
+    schema:description "Eine hochwertige, trittfeste Pflanzengesellschaft, die sich sowohl zur Beweidung als auch zum Mähen eignet. Sie bildet eine dichte Grasnarbe und liefert energiereiches Futter."@de .
 
-program:Insitu_06 a :Program ;
-    schema:name "Rotschwingel-Straussgraswiesen"@de .
+program:Insitu_06 a :InSitu ;
+    schema:name "Rotschwingel-Straussgraswiesen"@de ;
+    schema:description "Eine weniger intensive Wiese auf trockeneren oder magereren Standorten. Der Futterwert ist geringer als bei Fettwiesen, aber sie ist wichtig für die Biodiversität."@de .
 
-program:Insitu_07 a :Program ;
-    schema:name "Goldhaferwiese"@de .
+program:Insitu_07 a :InSitu ;
+    schema:name "Goldhaferwiese"@de ;
+    schema:description "Eine typische Fettwiese der Bergzone, die oft bunt blüht. Sie liefert gutes Futter, darf aber nicht zu intensiv genutzt werden, um den Goldhaferbestand zu erhalten."@de .
 
-program:Insitu_08 a :Program ;
-    schema:name "Kammgrasweide"@de .
+program:Insitu_08 a :InSitu ;
+    schema:name "Kammgrasweide"@de ;
+    schema:description "Die klassische Dauerweide auf mittleren Standorten, gekennzeichnet durch das trittfeste Kammgras. Sie bietet eine gute Futterqualität für Weidetiere."@de .
 
-program:Insitu_09 a :Program ;
-    schema:name "Milchkrautweide"@de .
+program:Insitu_09 a :InSitu ;
+    schema:name "Milchkrautweide"@de ;
+    schema:description "Eine Weidegesellschaft tieferer Lagen auf eher feuchten oder schattigen Standorten. Sie ist eng verwandt mit der Kammgrasweide, enthält aber mehr Kräuter."@de .
 
-program:psArableSoilCoverage a :Program ;
-    schema:name "Angemessene Bedeckung des Bodens (Hauptkultur auf offener Ackerfläche)"@de .
+program:psArableSoilCoverage a :ProductionSystemContribution ;
+    schema:name "Angemessene Bedeckung des Bodens (Hauptkultur auf offener Ackerfläche)"@de ;
+    schema:description "Verlangt eine durchgehende Bodenbedeckung nach der Ernte der Hauptkultur (z. B. durch Zwischenfrüchte), um Erosion zu mindern. Die Bedeckung muss über die winterliche Brachezeit bestehen bleiben."@de .
 
-program:psClimateEfficientNUse a :Program ;
-    schema:name "Effizienter Stickstoffeinsatz"@de .
+program:psClimateEfficientNUse a :ProductionSystemContribution ;
+    schema:name "Effizienter Stickstoffeinsatz"@de ;
+    schema:description "Fördert die Reduktion des Stickstoffdüngereinsatzes im Verhältnis zum Ertragspotenzial («Input-Output-Bilanz»). Ziel ist die Senkung von Nährstoffüberschüssen und Lachgasemissionen."@de .
 
-program:psFbdInsectStripes a :Program ;
-    schema:name "Funktionale Biodiversität in Form eines Beitrags für Nützlingsstreifen"@de .
+program:psFbdInsectStripes a :ProductionSystemContribution ;
+    schema:name "Funktionale Biodiversität in Form eines Beitrags für Nützlingsstreifen"@de ;
+    schema:description "Fördert das Anlegen spezifischer Blühstreifen auf Ackerflächen, um Nützlinge zur natürlichen Schädlingsregulierung anzulocken. Dies soll den Bedarf an Insektiziden reduzieren."@de .
 
-program:psGmf a :Program ;
-    schema:name "Graslandbasierte Milch und Fleischproduktion"@de .
+program:psGmf a :ProductionSystemContribution ;
+    schema:name "Graslandbasierte Milch und Fleischproduktion"@de ;
+    schema:description "Unterstützt Betriebe, deren Futterration für Raufutterverzehrer zu mindestens 90 % aus Wiesen- und Weidefutter besteht. Der Einsatz von Kraftfutter ist streng limitiert."@de .
 
-program:psGrapeSoilCoverage a :Program ;
-    schema:name "Angemessene Bedeckung des Bodens (Reben)"@de .
+program:psGrapeSoilCoverage a :ProductionSystemContribution ;
+    schema:name "Angemessene Bedeckung des Bodens (Reben)"@de ;
+    schema:description "Fördert die Begrünung der Fahrgassen in Rebbergen mit natürlichem Bewuchs oder Einsaaten. Dient dem Schutz vor Erosion und der Förderung der Biodiversität."@de .
 
-program:psSoilMildTreatment a :Program ;
-    schema:name "Schonende Bodenbearbeitung von Hauptkulturen auf der Ackerfläche"@de .
+program:psSoilMildTreatment a :ProductionSystemContribution ;
+    schema:name "Schonende Bodenbearbeitung von Hauptkulturen auf der Ackerfläche"@de ;
+    schema:description "Fördert pfluglose Verfahren wie Direktsaat, Streifenfrässaat oder Mulchsaat. Diese Methoden schützen das Bodengefüge und vermindern Erosion und Abschwemmung."@de .
 
-program:psVegetableSoilCoverage a :Program ;
-    schema:name "Angemessene Bedeckung des Bodens (Gemüse auf der offenen Ackerfläche)"@de .
+program:psVegetableSoilCoverage a :ProductionSystemContribution ;
+    schema:name "Angemessene Bedeckung des Bodens (Gemüse auf der offenen Ackerfläche)"@de ;
+    schema:description "Verlangt eine Bodenbedeckung auf Gemüsebauflächen während der vegetationsfreien Zeit. Dies verhindert Nährstoffauswaschung und schützt den Boden vor Erosion."@de .
 
-program:psmArableFarming a :Program ;
-    schema:name "Verzicht auf Pflanzenschutzmittel im Ackerbau"@de .
+program:psmArableFarming a :ProductionSystemContribution ;
+    schema:name "Verzicht auf Pflanzenschutzmittel im Ackerbau"@de ;
+    schema:description "Beitrag für den Verzicht auf Insektizide, Fungizide und Halmverkürzer in Acker-Hauptkulturen. Herbizide sind in diesem spezifischen Programmteil nicht zwingend ausgeschlossen."@de .
 
-program:psmBioAids a :Program ;
-    schema:name "Bewirtschaftung von Dauerkulturen mit Hilfsmitteln nach der biologischen Landwirtschaft"@de .
+program:psmBioAids a :ProductionSystemContribution ;
+    schema:name "Bewirtschaftung von Dauerkulturen mit Hilfsmitteln nach der biologischen Landwirtschaft"@de ;
+    schema:description "Unterstützt die Bewirtschaftung von Obst-, Reb- und Beerenflächen ausschliesslich mit im Biolandbau zugelassenen Pflanzenschutzmitteln. Gilt auch für nicht-biozertifizierte Betriebe."@de .
 
-program:psmHerbicide a :Program ;
-    schema:name "Verzicht auf Herbizide im Ackerbau und in Spezialkulturen"@de .
+program:psmHerbicide a :ProductionSystemContribution ;
+    schema:name "Verzicht auf Herbizide im Ackerbau und in Spezialkulturen"@de ;
+    schema:description "Fördert die mechanische Unkrautbekämpfung (z. B. Hacken, Striegeln) als Ersatz für chemisch-synthetische Herbizide. Der Verzicht gilt für die gesamte Kultur."@de .
 
-program:psmPerennialCulture a :Program ;
-    schema:name "Verzicht auf Insektizide, Akarizide und Fungizide nach der Blüte"@de .
+program:psmPerennialCulture a :ProductionSystemContribution ;
+    schema:name "Verzicht auf Insektizide, Akarizide und Fungizide nach der Blüte"@de ;
+    schema:description "Fördert den Verzicht auf synthetische Behandlungsmittel (sowie Kupfer) in Dauerkulturen nach der Blütezeit. Dies reduziert Rückstände auf den Früchten und schont die Umwelt."@de .
 
-program:psmVegetablesBerries a :Program ;
-    schema:name "Verzicht auf Insektizide und Akarizide im Gemüse- und Beerenanbau"@de .
-
+program:psmVegetablesBerries a :ProductionSystemContribution ;
+    schema:name "Verzicht auf Insektizide und Akarizide im Gemüse- und Beerenanbau"@de ;
+    schema:description "Honoriert den vollständigen Verzicht auf den Einsatz von Insektiziden und Akariziden in Gemüse- und Beerenkulturen. Fördert nützlingsschonende Anbausysteme."@de .
