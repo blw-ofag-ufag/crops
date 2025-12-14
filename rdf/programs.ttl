@@ -1,0 +1,76 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix program: <https://agriculture.ld.admin.ch/crops/program/> .
+@prefix schema: <http://schema.org/> .
+
+program:Bio a :Program ;
+    schema:name "Bioproduktion"@de .
+
+program:EKB a :Program ;
+    schema:name "Einzelkulturbeiträge im Pflanzenbau"@de .
+
+program:Insitu_01 a :Program ;
+    schema:name "Fromentalwiese"@de .
+
+program:Insitu_02 a :Program ;
+    schema:name "Bärenklau-Knaulgraswiese"@de .
+
+program:Insitu_03 a :Program ;
+    schema:name "Italienisch Raigraswiese"@de .
+
+program:Insitu_04 a :Program ;
+    schema:name "Weissklee-Wiesenfuchsschwanz-Wiese"@de .
+
+program:Insitu_05 a :Program ;
+    schema:name "Englisch Raigras-Wiesenrispen-Mähweide"@de .
+
+program:Insitu_06 a :Program ;
+    schema:name "Rotschwingel-Straussgraswiesen"@de .
+
+program:Insitu_07 a :Program ;
+    schema:name "Goldhaferwiese"@de .
+
+program:Insitu_08 a :Program ;
+    schema:name "Kammgrasweide"@de .
+
+program:Insitu_09 a :Program ;
+    schema:name "Milchkrautweide"@de .
+
+program:Non a :Program ;
+    schema:name "Kein Programm"@de .
+
+program:psArableSoilCoverage a :Program ;
+    schema:name "Angemessene Bedeckung des Bodens (Hauptkultur auf offener Ackerfläche)"@de .
+
+program:psClimateEfficientNUse a :Program ;
+    schema:name "Effizienter Stickstoffeinsatz"@de .
+
+program:psFbdInsectStripes a :Program ;
+    schema:name "Funktionale Biodiversität in Form eines Beitrags für Nützlingsstreifen"@de .
+
+program:psGmf a :Program ;
+    schema:name "Graslandbasierte Milch und Fleischproduktion"@de .
+
+program:psGrapeSoilCoverage a :Program ;
+    schema:name "Angemessene Bedeckung des Bodens (Reben)"@de .
+
+program:psSoilMildTreatment a :Program ;
+    schema:name "Schonende Bodenbearbeitung von Hauptkulturen auf der Ackerfläche"@de .
+
+program:psVegetableSoilCoverage a :Program ;
+    schema:name "Angemessene Bedeckung des Bodens (Gemüse auf der offenen Ackerfläche)"@de .
+
+program:psmArableFarming a :Program ;
+    schema:name "Verzicht auf Pflanzenschutzmittel im Ackerbau"@de .
+
+program:psmBioAids a :Program ;
+    schema:name "Bewirtschaftung von Dauerkulturen mit Hilfsmitteln nach der biologischen Landwirtschaft"@de .
+
+program:psmHerbicide a :Program ;
+    schema:name "Verzicht auf Herbizide im Ackerbau und in Spezialkulturen"@de .
+
+program:psmPerennialCulture a :Program ;
+    schema:name "Verzicht auf Insektizide, Akarizide und Fungizide nach der Blüte"@de .
+
+program:psmVegetablesBerries a :Program ;
+    schema:name "Verzicht auf Insektizide und Akarizide im Gemüse- und Beerenanbau"@de .
+
