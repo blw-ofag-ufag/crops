@@ -35,9 +35,6 @@ program:Insitu_08 a :Program ;
 program:Insitu_09 a :Program ;
     schema:name "Milchkrautweide"@de .
 
-program:Non a :Program ;
-    schema:name "Kein Programm"@de .
-
 program:psArableSoilCoverage a :Program ;
     schema:name "Angemessene Bedeckung des Bodens (Hauptkultur auf offener Ackerfläche)"@de .
 
