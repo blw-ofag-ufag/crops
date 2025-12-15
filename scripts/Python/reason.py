@@ -45,12 +45,18 @@ CUSTOM_NAMESPACES = {
     "cultivation":     "https://agriculture.ld.admin.ch/crops/cultivation/",
     "program":         "https://agriculture.ld.admin.ch/crops/program/",
     "taxon":           "https://agriculture.ld.admin.ch/crops/taxon/",
+    "lnf":             "https://agriculture.ld.admin.ch/crops/lnf/",
+    "lnf_obs":          "https://agriculture.ld.admin.ch/crops/lnf/ObservationSet/",
     "schema":          "http://schema.org/",
+    "cube":            "https://cube.link/",
     "skos":            "http://www.w3.org/2004/02/skos/core#",
     "dcterms":         "http://purl.org/dc/terms/",
     "wikidata":        "http://www.wikidata.org/entity/",
     "CHEBI":           "http://purl.obolibrary.org/obo/CHEBI_",
-    "chebi":           "http://purl.obolibrary.org/obo/chebi/"
+    "chebi":           "http://purl.obolibrary.org/obo/chebi/",
+    "dcterms":         "http://purl.org/dc/terms/",
+    "dcatapch":        "http://dcat-ap.ch/vocabulary/themes/",
+    "sh":              "http://www.w3.org/ns/shacl#"
 }
 
 SCHEMA = Namespace(CUSTOM_NAMESPACES["schema"])
