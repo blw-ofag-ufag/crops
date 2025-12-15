@@ -43,6 +43,7 @@ CUSTOM_NAMESPACES = {
     "":                "https://agriculture.ld.admin.ch/crops/",
     "cultivationtype": "https://agriculture.ld.admin.ch/crops/cultivationtype/",
     "cultivation":     "https://agriculture.ld.admin.ch/crops/cultivation/",
+    "program":         "https://agriculture.ld.admin.ch/crops/program/",
     "taxon":           "https://agriculture.ld.admin.ch/crops/taxon/",
     "schema":          "http://schema.org/",
     "skos":            "http://www.w3.org/2004/02/skos/core#",
@@ -61,7 +62,6 @@ OUTPUT_FILE = f"{OUTPUT_DIR}/graph.ttl"
 # ---------------------------------------------------------------------------
 # Utility functions
 # ---------------------------------------------------------------------------
-
 
 def _apply_custom_namespaces(graph: Graph) -> None:
     """Remove any existing bindings for the prefixes/URIs in CUSTOM_NAMESPACES
@@ -116,86 +116,6 @@ def load_and_sort_ttl_list(paths) -> Graph:
 # ---------------------------------------------------------------------------
 # Reasoning
 # ---------------------------------------------------------------------------
-
-def _apply_temporal_memberships(graph: Graph) -> None:
-    """
-    Finds temporal membership patterns and adds direct rdf:type assertions.
-
-    Pattern:
-    <s> :hasMembership [
-            :memberOfClass <Class> ;
-            schema:validFrom <date1> ;
-            schema:validTo <date2> # (optional)
-        ]
-
-    Adds `<s> a <Class>` if today is between validFrom and validTo.
-    """
-    today = date.today()
-
-    query = """
-    SELECT ?subject ?targetClass ?validFrom ?validTo
-    WHERE {
-        ?subject <https://agriculture.ld.admin.ch/crops/hasMembership> ?membership .
-        ?membership <https://agriculture.ld.admin.ch/crops/memberOfClass> ?targetClass .
-        ?membership <http://schema.org/validFrom> ?validFrom .
-        OPTIONAL { ?membership <http://schema.org/validTo> ?validTo . }
-    }
-    """
-
-    additions = []
-
-    for row in graph.query(query):
-
-        # Ensure we only process triples where subject and class are URIs
-        if not (isinstance(row.subject, URIRef) and isinstance(row.targetClass, URIRef)):
-            continue
-
-        subject, target_class, valid_from_lit, valid_to_lit = (
-            row.subject,
-            row.targetClass,
-            row.validFrom,
-            row.validTo,
-        )
-
-        try:
-            # 1. Parse validFrom (rdflib literal .value does the conversion)
-            from_date = valid_from_lit.value
-            if not isinstance(from_date, date):
-                from_date = from_date.date()  # Handle if it's a datetime
-
-            # 2. Check if validFrom is in the past (or today)
-            if from_date > today:
-                continue  # Not yet valid
-
-            # 3. Check validTo
-            is_valid = True  # Assume valid unless proven otherwise
-            if valid_to_lit:
-                to_date = valid_to_lit.value
-                if not isinstance(to_date, date):
-                    to_date = to_date.date()  # Handle if it's a datetime
-
-                if to_date < today:
-                    is_valid = False  # It has expired
-
-            # 4. If still valid, add the triple
-            if is_valid:
-                new_triple = (subject, RDF.type, target_class)
-                if new_triple not in graph:
-                    additions.append(new_triple)
-
-        except Exception as e:
-            print(
-                f"Warning: Error processing temporal membership for {subject}: {e}",
-                file=sys.stderr,
-            )
-
-    # Add all new triples outside the loop
-    for t in additions:
-        graph.add(t)
-
-    if additions:
-        print(f"Added {len(additions)} new temporal rdf:type memberships.")
-
 
 def _resolve_sameas_chains(mapping: dict[URIRef, URIRef]) -> dict[URIRef, URIRef]:
     """
@@ -293,7 +213,6 @@ def reason_subclass_and_inverse(
     """Very small forward-chaining reasoner implementing:
 
     0. Merging of owl:sameAs nodes.
-    0b. Expansion of temporal class memberships.
     1. Subclass closure for **rdf:type**.
     2. Sub-property closure for arbitrary predicates.
     3. InverseOf property expansion.
@@ -307,9 +226,6 @@ def reason_subclass_and_inverse(
     # 0) Merge ontology and data (work on a copy to keep originals intact)
     g = ontology_graph + data_graph
     _merge_sameas_nodes(g)
-
-    # 0b) Apply temporal membership rules
-    _apply_temporal_memberships(g)
 
     # 1) Collect schema-level relations from the ontology
     subclass_of: dict[URIRef, set[URIRef]] = {}
