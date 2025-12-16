@@ -22,6 +22,18 @@ This graph not only allows for complex queries across formerly siloed data but a
 
 Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
 
+# Download geospatial data (OPTIONAL)
+
+- Integration pipeline for <https://geodienste.ch> geometries using a fast Python script [geodata-rdf-integration.py](scripts/Python/geodata-rdf-integration.py)
+- For data download and preparing integration:
+  1. Go to <https://geodienste.ch>
+  2. Select dataset *Nutzungsflächen*
+  3. Click "Daten beziehen"
+  4. Select "GeoPackage" and cantons you want.
+  5. Download data, rename it as "data.gpkg" and move it into the data folder.
+- Script automatically maps crops to ontology
+- Before LINDAS upload, the geodata is compressed to make the upload about 10x faster
+
 # Run the data processing and LINDAS integration pipeline
 
 The data integration pipeline uses all the R and python scripts in the `/scripts` folder. The entire pipeline can be triggered with:
