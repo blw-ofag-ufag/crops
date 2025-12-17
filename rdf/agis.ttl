@@ -1,0 +1,119 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix cube: <https://cube.link/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/Cube> a void:Dataset,
+        schema:Dataset,
+        dcat:Dataset,
+        cube:Cube ;
+    dcterms:accrualPeriodicity <http://publications.europe.eu/resource/authority/frequency/ANNUAL> ;
+    dcterms:creator <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> ;
+    schema:contactPoint [ a schema:ContactPoint ;
+            schema:email "info@blw.admin.ch"^^xsd:string ;
+            schema:name "Bundesamt für Landwirtschaft"^^xsd:string ] ;
+    schema:contributor <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> ;
+    schema:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
+    schema:creator <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> ;
+    schema:dateCreated "2025-12-15"^^xsd:date ;
+    schema:datePublished "2025-12-15"^^xsd:date ;
+    schema:description "Direktzahlungkulturen, ihre Codes und deren zeitliche Gültigkeit."@de,
+        "Direct payment crops, their codes and their temporal validity."@en ;
+    schema:name "Direktzahlungskulturen"@de,
+        "Direct payment crops"@en ;
+    schema:publisher <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> ;
+    schema:version "1.4.5" ;
+    schema:workExample <https://ld.admin.ch/application/visualize> ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Bundesamt für Landwirtschaft"^^xsd:string ;
+            vcard:hasEmail "info@blw.admin.ch"^^xsd:string ] ;
+    dcat:theme <https://register.ld.admin.ch/opendataswiss/category/administration>,
+        <https://register.ld.admin.ch/opendataswiss/category/agriculture> ;
+    cube:observationConstraint <https://agriculture.ld.admin.ch/crops/lnf/1.4.5/ObservationConstraint> ;
+    cube:observationSet <https://agriculture.ld.admin.ch/crops/lnf/1.4.5/ObservationSet> .
+
+cultivationtype:501 a schema:DefinedTerm .
+
+cultivationtype:502 a schema:DefinedTerm .
+
+cultivationtype:504 a schema:DefinedTerm .
+
+cultivationtype:505 a schema:DefinedTerm .
+
+cultivationtype:506 a schema:DefinedTerm .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/ObservationConstraint> a sh:NodeShape ;
+    sh:closed true ;
+    sh:property [ a cube:KeyDimension ;
+            schema:name "Kultur"@de,
+                "Cultivation type"@en ;
+            sh:in ( cultivationtype:501 cultivationtype:502 cultivationtype:504 cultivationtype:505 cultivationtype:506 cube:Undefined ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path :cultivationtype ],
+        [ ns1:scaleType ns1:IntervalScale ;
+            schema:name "Gültig von"@de,
+                "Valid from"@en ;
+            sh:minInclusive "1999-01-01"^^xsd:date ;
+            sh:nodeKind sh:Literal ;
+            sh:or ( [ sh:datatype xsd:date ;
+                        sh:minLength 1 ] [ sh:datatype cube:Undefined ] ) ;
+            sh:path schema:validFrom ],
+        [ schema:name "Gültig bis"@de,
+                "Valid to"@en ;
+            sh:datatype xsd:date ;
+            sh:nodeKind sh:Literal ;
+            sh:path schema:validTo ],
+        [ schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. Ein LNF-Code steht immer für dieselbe Kultur. Veraltete Codes werden nicht mehr gebraucht."@de ;
+            schema:name "Identifikator"@de,
+                "Identifier"@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ] .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/501> a cube:Observation ;
+    schema:identifier "501"^^xsd:ID ;
+    schema:validFrom "2021-01-01"^^xsd:date ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:501 .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/502> a cube:Observation ;
+    schema:identifier "502"^^xsd:ID ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:502 .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/504> a cube:Observation ;
+    schema:identifier "504"^^xsd:ID ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:504 .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/505> a cube:Observation ;
+    schema:identifier "505"^^xsd:ID ;
+    schema:validFrom "2004-01-01"^^xsd:date ;
+    schema:validTo "2025-12-31"^^xsd:date ;
+    :cultivationType cultivationtype:505 .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/506> a cube:Observation ;
+    schema:identifier "506"^^xsd:ID ;
+    schema:validFrom "2015-01-01"^^xsd:date ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:506 .
+
+<https://agriculture.ld.admin.ch/crops/lnf/1.4.5/ObservationSet> a cube:ObservationSet ;
+    cube:observation <https://agriculture.ld.admin.ch/crops/lnf/1.4.5/501>,
+        <https://agriculture.ld.admin.ch/crops/lnf/1.4.5/502>,
+        <https://agriculture.ld.admin.ch/crops/lnf/1.4.5/504>,
+        <https://agriculture.ld.admin.ch/crops/lnf/1.4.5/505>,
+        <https://agriculture.ld.admin.ch/crops/lnf/1.4.5/506> .
+
