@@ -70,3 +70,6 @@ results/
 
 # MacOS specific files
 .DS_Store
+
+# Virtual environment
+venv/
