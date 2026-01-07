@@ -67,3 +67,9 @@ notes.qmd
 
 # Any results written by analyses etc.
 results/
+
+# MacOS specific files
+.DS_Store
+
+# Virtual environment
+venv/
