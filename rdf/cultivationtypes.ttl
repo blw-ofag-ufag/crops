@@ -1,6 +1,7 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
@@ -115,6 +116,7 @@ cultivationtype:1008 a owl:Class ;
 cultivationtype:1009 a owl:Class ;
     rdfs:label "Wintergerste in 62a Nitrat-Projekt"@de ;
     rdfs:subClassOf cultivationtype:502 ;
+    owl:disjointWith cultivationtype:1008 ;
     :hasMembership [ rdfs:label "NAEBI"^^xsd:string ;
             schema:identifier "CROP_WGRSTN"^^xsd:ID ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -131,8 +133,8 @@ cultivationtype:1010 a owl:Class ;
 
 cultivationtype:1011 a owl:Class ;
     rdfs:label "Sommerhafer"@de ;
-    rdfs:subClassOf cultivationtype:1000,
-        cultivationtype:504 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( cultivationtype:504 cultivationtype:1000 ) ] ;
     :hasMembership [ rdfs:label "NAEBI"^^xsd:string ;
             schema:identifier "CROP_SOGST"^^xsd:ID ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -573,8 +575,8 @@ cultivationtype:502 a owl:Class ;
     rdfs:label "Wintergerste"@de,
         "Orge d’automne"@fr,
         "Orzo autunnale"@it ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:498 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( cultivationtype:19 cultivationtype:498 ) ] ;
     :hasMembership [ rdfs:label "AGIS" ;
             schema:identifier "502"^^xsd:ID ;
             schema:validFrom "1999-01-01"^^xsd:date ;
