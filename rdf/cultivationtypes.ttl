@@ -761,6 +761,7 @@ cultivationtype:549 a :CultivationType ;
     schema:name "Sorghum"@de,
         "Sorgho"@fr,
         "Sorgo"@it ;
+    :botanicalPlant taxon:1SORG ;
     :hasMembership [ schema:identifier "11393"^^xsd:ID ;
             schema:name "SRPPP"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -1007,6 +1008,7 @@ cultivationtype:580 a :CultivationType ;
     schema:name "Sorghum zur Körnergewinnung"@de,
         "Sorgho grains"@fr,
         "Sorgo per l’estrazione di gra-nelli"@it ;
+    :botanicalPlant taxon:1SORG ;
     :hasMembership [ schema:identifier "580"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -1017,6 +1019,7 @@ cultivationtype:581 a :CultivationType ;
     schema:name "Sorghum zur Nutzung ganze Pflanze"@de,
         "Sorgho plante entière"@fr,
         "Sorgo per la raccolta della pianta intera"@it ;
+    :botanicalPlant taxon:1SORG ;
     :hasMembership [ schema:identifier "581"^^xsd:ID ;
             schema:name "AGIS" ;
             schema:validFrom "2023-01-01"^^xsd:date ;
@@ -2322,6 +2325,7 @@ cultivationtype:1027 a :GRUDCrop ;
 
 cultivationtype:1028 a :GRUDCrop ;
     schema:name "Ganzpflanzen-Sorghum"@de ;
+    :botanicalPlant taxon:1SORG ;
     :hasMembership [ schema:identifier "CROP_WINRA"^^xsd:ID ;
             schema:name "NAEBI"^^xsd:string ;
             schema:validFrom "2000-01-01"^^xsd:date ;
