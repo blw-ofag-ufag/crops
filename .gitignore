@@ -64,6 +64,7 @@ notes.qmd
 
 # Environment variables
 .env
+venv/
 
 # Any results written by analyses etc.
 results/

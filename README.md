@@ -48,9 +48,17 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     EPPO=********
     ```
 
-2. Run the ETL pipeline `sh scripts/graph-processing.sh`
-3. Choose whether or not to generate and upload geodata.ttl, which enables queries and depiction of crop areas. 
-4. Check out the results on LINDAS.
+2. Start a virtual environment and install libraries:
+
+    ``` sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    pip install -r scripts/Python/requirements.txt
+    ```
+
+3. Run the ETL pipeline `sh scripts/graph-processing.sh`
+4. Choose whether or not to generate and upload geodata.ttl, which enables queries and depiction of crop areas. 
+5. Check out the results on LINDAS.
 
 # Data mapping and unification
 
