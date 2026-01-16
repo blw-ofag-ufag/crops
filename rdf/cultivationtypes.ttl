@@ -102,8 +102,8 @@ cultivationtype:1007 a owl:Class ;
         "winter wheat"@en,
         "Blé d'automne"@fr,
         "Frumento autunnale"@it ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:492 .
+    owl:equivalentClass [ a owl:Class ;
+        owl:intersectionOf ( cultivationtype:492 cultivationtype:19 ) ] .
 
 cultivationtype:1008 a owl:Class ;
     rdfs:label "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
@@ -124,8 +124,8 @@ cultivationtype:1009 a owl:Class ;
 
 cultivationtype:1010 a owl:Class ;
     rdfs:label "Winterhafer"@de ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:504 ;
+    owl:equivalentClass [ a owl:Class ;
+        owl:intersectionOf ( cultivationtype:504 cultivationtype:19 ) ] ;
     :hasMembership [ rdfs:label "NAEBI"^^xsd:string ;
             schema:identifier "CROP_WOGST"^^xsd:ID ;
             schema:validFrom "2000-01-01"^^xsd:date ;
@@ -324,6 +324,7 @@ cultivationtype:1032 a owl:Class ;
             :memberOfClass :SRPPPCrop ] .
 
 cultivationtype:1033 a owl:Class ;
+    owl:disjointWith cultivationtype:497 ;
     rdfs:label "Getreide ohne Mais"@de,
         "Céréales sans Maïs"@fr,
         "Cereali senza Mais"@it ;
@@ -556,8 +557,8 @@ cultivationtype:501 a owl:Class ;
     rdfs:label "Sommergerste"@de,
         "Orge de printemps"@fr,
         "Orzo primaverile"@it ;
-    rdfs:subClassOf cultivationtype:1000,
-        cultivationtype:498 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( cultivationtype:498 cultivationtype:1000 ) ] ;
     :hasMembership [ rdfs:label "AGIS" ;
             schema:identifier "501"^^xsd:ID ;
             schema:validFrom "1999-01-01"^^xsd:date ;
@@ -2447,8 +2448,8 @@ cultivationtype:999 a owl:Class ;
         "summer wheat"@en,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
-    rdfs:subClassOf cultivationtype:1000,
-        cultivationtype:492 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 ) ] ;
     :botanicalPlant taxon:1TRZG ;
     :hasMembership [ rdfs:label "NAEBI"^^xsd:string ;
             schema:identifier "CROP_SWHT"^^xsd:ID ;
