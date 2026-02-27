@@ -52,7 +52,10 @@ upload.sh
 graph.ttl
 
 # (very large) geodata .ttl file
-rdf/geodata.ttl
+rdf/data/geodata.ttl
+
+# Processed RDF data
+rdf/processed/
 
 # Exclude geopackage files
 *.gpkg

@@ -1,4 +1,5 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
