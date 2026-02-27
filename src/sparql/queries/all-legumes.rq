@@ -1,0 +1,9 @@
+PREFIX schema: <http://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX canton: <https://ld.admin.ch/canton/>
+SELECT *
+FROM <https://lindas.admin.ch/foag/crops>
+WHERE {
+  ?cultivation :cultivationtype / :partOf* / schema:name "Leguminosen"@de ; geosparql:asWKT ?geometry ; :canton canton:1 .
+}
