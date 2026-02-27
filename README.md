@@ -85,23 +85,3 @@ WHERE {
 }
 ORDER BY ?name
 ```
-
-If you have chosen to include geospatial data during the running of the graph-processing.sh pipeline, you can [query the graph for multipolygons](https://s.zazuko.com/36J1nA6) of crop areas and depict them in a map using a query like this:
-
-```sparql
-PREFIX schema: <http://schema.org/>
-PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
-PREFIX : <https://agriculture.ld.admin.ch/crops/>
-PREFIX canton: <https://ld.admin.ch/canton/>
-SELECT *
-FROM <https://lindas.admin.ch/foag/crops>
-WHERE {
-  ?cultivation :cultivationtype / :partOf* / schema:name "Leguminosen"@de ;
-    geosparql:asWKT ?geometry ;
-    :canton canton:1 .
-}
-```
-
-![](https://github.com/user-attachments/assets/cc1cf3a1-b639-4915-9f59-167aad3c839f)
-
-More queries can be found in the `~/queries/` folder.
