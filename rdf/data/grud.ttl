@@ -1,8 +1,9 @@
-@prefix : <https://agriculture.ld.admin.ch/crops/>
-@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
-@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/v1/>
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/v1/> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cube: <https://cube.link/> .
 
 naebi:999 schema:identifier "CROP_SWHT"^^xsd:ID ;
 	:cultivationtype cultivationtype:999 ;
