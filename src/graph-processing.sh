@@ -7,11 +7,8 @@ Rscript scripts/R/packages.R
 # EPPO data integration
 Rscript scripts/R/eppo.R
 
-# Install any missing python packages
-pip install -r scripts/Python/requirements.txt
-
 # Process RDF files using Python scrips
-python3 scripts/Python/reason.py rdf/ontology.ttl rdf/cultivationtypes.ttl rdf/taxa.ttl
+python scripts/Python/reason.py rdf/ontology.ttl rdf/cultivationtypes.ttl rdf/taxa.ttl
 
 # Ask whether or not to generate and upload geodata, which takes 10-15 minutes
 read -r -p $'Do you want to generate and upload geodata.ttl?\nThis could take a while...\n(y/n) ' answer
