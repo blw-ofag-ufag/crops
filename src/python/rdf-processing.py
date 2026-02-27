@@ -5,20 +5,26 @@ from typing import List
 from rdflib import Graph, Namespace
 from otsrdflib import OrderedTurtleSerializer
 
+RED   = "\033[91m"
+GREEN = "\033[92m"
+GRAY  = "\033[90m"
+RESET = "\033[0m"
+
 def load_inputs(paths: List[Path]) -> Graph:
     """
     Initializes a single Graph and parses multiple source files into it.
     """
     g = Graph()
+    print(f"{GREEN}[✓] Loading {len(paths)} RDF files{RESET}")
     for path in paths:
         try:
             g.parse(str(path), format="turtle")
-            print(f"[+] Loaded triples from {path}")
+            print(f"{GREEN}    - Loaded {path}{RESET}")
         except Exception as e:
             print(f"[!] Error loading {path}: {e}", file=sys.stderr)
             sys.exit(1)
 
-    print(f"[i] Total graph size: {len(g)} triples")
+    print(f"{GREEN}[✓] Total graph size: {len(g)} triples{RESET}")
     return g
 
 def apply_rules(graph: Graph, rules: List[Path]):
@@ -26,11 +32,11 @@ def apply_rules(graph: Graph, rules: List[Path]):
     Applies SPARQL Update (INSERT/DELETE) queries to the graph.
     Assumes all provided rules strictly follow the SPARQL UPDATE syntax.
     """
-    print(f"[i] Applying {len(rules)} inference rules")
+    print(f"{GREEN}[✓] Applying {len(rules)} inference rules{RESET}")
 
     for rule_path in rules:
         if not rule_path.exists():
-            print(f"[!] Rule file not found: {rule_path}", file=sys.stderr)
+            print(f"{RED}[✗] Rule file not found: {rule_path}{RESET}", file=sys.stderr)
             continue
 
         with open(rule_path, "r") as f:
@@ -48,16 +54,16 @@ def apply_rules(graph: Graph, rules: List[Path]):
             added = len(after_triples - before_triples)
             removed = len(before_triples - after_triples)
 
-            print(f"  -> {rule_path.name}: +{added}/-{removed} triples")
+            print(f"{GREEN}    - {rule_path.name}: +{added}/-{removed} triples{RESET}")
 
         except Exception as e:
-            print(f"[!] Error executing update {rule_path.name}: {e}", file=sys.stderr)
+            print(f"{RED}[✗] Error executing update {rule_path.name}: {e}{RESET}", file=sys.stderr)
 
 def save_graph(graph: Graph, output_path: Path):
     """
     Serializes the graph to the specified output path using OrderedTurtleSerializer.
     """
-    print(f"[+] Writing {len(graph)} triples to {output_path}")
+    print(f"{GREEN}[✓] Writing {len(graph)} triples to {output_path}{RESET}")
     
     output_path.parent.mkdir(parents=True, exist_ok=True)
     

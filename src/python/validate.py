@@ -27,12 +27,10 @@ def validate_ttl_files(root_path: Path, recursive: bool = True) -> bool:
         rel = ttl_file.relative_to(ROOT) if ttl_file.is_relative_to(ROOT) else ttl_file
         try:
             rdflib.Graph().parse(str(ttl_file), format="turtle")
-            print(f"{GREEN}[✓]{RESET} {rel}")
+            print(f"{GREEN}[✓] {rel} passed checks{RESET}")
         except Exception as e:
-            print(f"{RED}[✗]{RESET} {rel}\n    {GRAY}{e}{RESET}")
+            print(f"{RED}[✗] {rel} failed check{RESET}\n    {GRAY}{e}{RESET}")
             errors.append(ttl_file)
-
-    print(f"\n{len(ttl_files)} files checked, {len(errors)} error(s).")
     return len(errors) == 0
 
 def main():
