@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 schema:validFrom ?validFrom ;
                 schema:validTo ?validTo .
         }
+        FROM <https://lindas.admin.ch/foag/crops>
         WHERE {
             ?node a :CultivationType .
             ?node schema:name ?nodeName .
