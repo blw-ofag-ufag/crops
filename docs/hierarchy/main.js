@@ -97,12 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Query & Frame (Unchanged from prompt)
     const CONSTRUCT_QUERY = `
+        PREFIX cube: <https://cube.link/>
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
         CONSTRUCT {
             ?node a :CultivationType ;
                 schema:name ?nodeName ;
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 :hasAttribute ?attribute .
 
             ?attribute :attributeType ?attributeType ;
-                       :attributeValue ?attributeValue .
+                :attributeValue ?attributeValue .
 
             ?attributeType schema:name ?attributeTypeName .
             ?attributeValue schema:name ?attributeValueName .
@@ -141,7 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 OPTIONAL { ?botanicalPlant :eppo ?eppoCode . }
             }
             OPTIONAL {
-                ?node :hasMembership ?membership .
+                ?membership :cultivationType ?node .
+                ?membership a cube:Observation .
                 ?membership schema:name ?membershipName .
                 ?membership schema:identifier ?identifier .
                 OPTIONAL { ?membership schema:validFrom ?validFrom . }
@@ -149,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             OPTIONAL {
                 VALUES ?attributeType { :intensity :purpose :cultivationMethod }
-                ?node ?attributeType ?attributeValue .
+                ?node ?attributeType ?attributeeValue .
                 BIND(BNODE() AS ?attribute)
                 ?attributeType schema:name ?attributeTypeName .
                 FILTER(LANG(?attributeTypeName) = "de")
