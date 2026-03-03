@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const CONSTRUCT_QUERY = `
         PREFIX schema: <http://schema.org/>
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -116,8 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ?attributeType schema:name ?attributeTypeName .
             ?attributeValue schema:name ?attributeValueName .
-            ?parent a :CultivationType ;
-                schema:name ?parentName .
             ?botanicalPlant :taxonName ?taxonName ;
                 :eppo ?eppoCode .
             ?membership schema:identifier ?identifier ;
@@ -126,13 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 schema:validTo ?validTo .
         }
         WHERE {
-            ?node a :CultivationType .
+            ?node rdfs:subClassOf* :Cultivation .
             ?node schema:name ?nodeName .
             FILTER(LANG(?nodeName) = "de")
             OPTIONAL {
-                ?node :partOf ?parent .
-                ?parent schema:name ?parentName .
-                FILTER(LANG(?parentName) = "de")
+                ?node rdfs:subClassOf ?parent .
             }
             OPTIONAL {
                 ?node schema:description ?description .
