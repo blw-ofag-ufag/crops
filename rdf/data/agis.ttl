@@ -1,8 +1,9 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1.4/> .
+@prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1.6/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 
 @prefix cube: <https://cube.link/> .
+@prefix meta: <https://cube.link/meta/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
@@ -37,7 +38,7 @@ agis: a void:Dataset,
     schema:name "Direktzahlungskulturen"@de,
         "Direct payment crops"@en ;
     schema:publisher blw: ;
-    schema:version "1.4" ;
+    schema:version "1.6" ;
     schema:workExample <https://ld.admin.ch/application/visualize> ;
     dcat:contactPoint
         [
@@ -76,20 +77,20 @@ agis:ObservationConstraint a sh:NodeShape ;
         [
             sh:order 4 ;
             schema:name "Gültig von"@de ;
-            schema:description "Ab wann wurde dieser LNF-Code offiziell verwendet?"@de ;
+            schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
-            sh:minInclusive "1999-01-01"^^xsd:date ;
+            sh:minInclusive "1999"^^xsd:gYear ;
             sh:nodeKind sh:Literal ;
-            sh:datatype xsd:date ;
-            sh:path schema:validFrom
+            sh:datatype xsd:gYear ;
+            sh:path schema:validFrom ;
         ],
         [
             sh:order 5 ;
             schema:name "Gültig bis"@de ;
-            schema:description "Bis wann wurde dieser LNF-Code offiziell verwendet?"@de ;
+            schema:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:datatype xsd:date ;
+            sh:datatype xsd:gYear ;
             sh:path schema:validTo
         ],
         [
@@ -125,63 +126,63 @@ agis:ObservationSet a cube:ObservationSet ;
 
 agis:501 a cube:Observation ;
     schema:identifier "501"^^xsd:ID ;
-    schema:validFrom "2021-01-01"^^xsd:date ;
+    schema:validFrom "2021"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:1 ;
     :cultivationType cultivationtype:501 .
 
 agis:502 a cube:Observation ;
     schema:identifier "502"^^xsd:ID ;
-    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validFrom "1999"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:1 ;
     :cultivationType cultivationtype:502 .
 
 agis:504 a cube:Observation ;
     schema:identifier "504"^^xsd:ID ;
-    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validFrom "1999"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:1 ;
     :cultivationType cultivationtype:504 .
 
 agis:505 a cube:Observation ;
     schema:identifier "505"^^xsd:ID ;
-    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validFrom "1999"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:1 ;
     :cultivationType cultivationtype:505 .
 
 agis:506 a cube:Observation ;
     schema:identifier "506"^^xsd:ID ;
-    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validFrom "1999"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:1 ;
     :cultivationType cultivationtype:506 .
 
 agis:507 a cube:Observation ;
     schema:identifier "506"^^xsd:ID ;
-    schema:validFrom "2004-01-01"^^xsd:date ;
+    schema:validFrom "2004"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:1 ;
     :cultivationType cultivationtype:507 .
 
 agis:509 a cube:Observation ;
     schema:identifier "509"^^xsd:ID ;
-    schema:validFrom "2014-01-01"^^xsd:date ;
-    schema:validTo "2022-12-31"^^xsd:date ;
+    schema:validFrom "2014"^^xsd:gYear ;
+    schema:validTo "2022"^^xsd:gYear ;
     :cultivationGroup cultivationtype:1 ;
     :cultivationType cultivationtype:509 .
 
 agis:702 a cube:Observation ;
     schema:identifier "702"^^xsd:ID ;
-    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validFrom "1999"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:5 ;
     :cultivationType cultivationtype:702 .
 
 agis:731 a cube:Observation ;
     schema:identifier "731"^^xsd:ID ;
-    schema:validFrom "2009-01-01"^^xsd:date ;
+    schema:validFrom "2009"^^xsd:gYear ;
     schema:validTo cube:Undefined ;
     :cultivationGroup cultivationtype:5 ;
     :cultivationType cultivationtype:731 .
