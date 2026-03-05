@@ -28,6 +28,26 @@ cultivationtype:1 a owl:Class ;
     schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:2 a owl:Class ;
+    schema:name "Dauerwiesen"@de,
+        "Prairies permanentes"@fr,
+        "Prati perenni"@it ;
+    schema:description "Als Dauerwiese gilt die Fläche, die jährlich mindestens ein Mal zur Futtergewinnung gemäht wird."@de ;
+    rdfs:subClassOf cultivationtype:21 .
+
+cultivationtype:3 a owl:Class ;
+    schema:name "Dauerweiden"@de,
+        "Pâturages permanents"@fr,
+        "Pascoli perenni"@it ;
+    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche (Art. 19 LBV)."@de ;
+    rdfs:subClassOf cultivationtype:21 .
+
+cultivationtype:4 a owl:Class ;
+    schema:name "Reben"@de,
+        "Vignobles"@fr,
+        "Vigna"@it ;
+    rdfs:subClassOf :Cultivation .
+
 cultivationtype:10 a owl:Class ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autre surface au sein de la surface agricole utile"@fr,
@@ -262,13 +282,6 @@ cultivationtype:19 a owl:Class ;
         "Cereali autunnali"@it ;
     rdfs:subClassOf cultivationtype:1033 .
 
-cultivationtype:2 a owl:Class ;
-    schema:name "Dauerwiesen"@de,
-        "Prairies permanentes"@fr,
-        "Prati perenni"@it ;
-    schema:description "Als Dauerwiese gilt die Fläche, die jährlich mindestens ein Mal zur Futtergewinnung gemäht wird."@de ;
-    rdfs:subClassOf cultivationtype:21 .
-
 cultivationtype:20 a owl:Class ;
     schema:name "Einzelelemente"@de ;
     rdfs:subClassOf :Cultivation .
@@ -277,19 +290,6 @@ cultivationtype:21 a owl:Class ;
     schema:name "Dauergrünfläche"@de ;
     schema:alternateName "Dauergrünland"@de ;
     schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
-    rdfs:subClassOf :Cultivation .
-
-cultivationtype:3 a owl:Class ;
-    schema:name "Dauerweiden"@de,
-        "Pâturages permanents"@fr,
-        "Pascoli perenni"@it ;
-    schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche (Art. 19 LBV)."@de ;
-    rdfs:subClassOf cultivationtype:21 .
-
-cultivationtype:4 a owl:Class ;
-    schema:name "Reben"@de,
-        "Vignobles"@fr,
-        "Vigna"@it ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:480 a owl:Class ;
@@ -731,13 +731,19 @@ cultivationtype:568 a owl:Class ;
     rdfs:subClassOf cultivationtype:15 .
 
 cultivationtype:569 a owl:Class ;
-    schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
+schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter"@de,
+        "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline"@fr,
+        "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa"@it ;
+    schema:description "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
         "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
         "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l’estrazione di granelli)"@it ;
     rdfs:subClassOf cultivationtype:18 .
 
 cultivationtype:570 a owl:Class ;
-    schema:name "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
+    schema:name "Mischungen von Linsen mit Getreide oder Leindotter"@de,
+        "Méteil de lentilles avec des céréales ou de la caméline"@fr,
+        "Miscele di lenticchie con cereali o camelina sativa"@it ;
+    schema:description "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
         "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l’estrazione di granelli)"@it ;
     rdfs:subClassOf cultivationtype:18 .
@@ -827,13 +833,19 @@ cultivationtype:592 a owl:Class ;
     rdfs:subClassOf cultivationtype:493 .
 
 cultivationtype:594 a owl:Class ;
-    schema:name "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+    schema:name "Offene Ackerfläche, beitragsberechtigt"@de,
+        "Terres ouvertes donnant droit aux contributions"@fr,
+        "Superficie coltiva aperta, avente diritto ai contributi"@it ;
+    schema:description "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:595 a owl:Class ;
-    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
+    schema:description "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:1 .
@@ -863,7 +875,10 @@ cultivationtype:601 a owl:Class ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:602 a owl:Class ;
-    schema:name "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
+    schema:name "Übrige Kunstwiese, beitragsberechtigt"@de,
+        "Autres prairies artificielles donnant droit aux contributions"@fr,
+        "Altri prati artificiali avente diritto ai contributi"@it ;
+    schema:description "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
     rdfs:subClassOf cultivationtype:1 .
@@ -1313,7 +1328,10 @@ cultivationtype:857 a owl:Class ;
     rdfs:subClassOf cultivationtype:9 .
 
 cultivationtype:858 a owl:Class ;
-    schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
+    schema:name "Regionale Gehölze (m. Puffer)"@de,
+        "Haies et berges régionales (pt)"@fr,
+        "Siepi e boschetti regionali (ft)"@it ;
+    schema:description "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:9 .
@@ -1343,13 +1361,19 @@ cultivationtype:901 a owl:Class ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:902 a owl:Class ;
-    schema:name "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecken ohne Pufferstreifen)"@de,
+    schema:name "Übrige unproduktive Flächen"@de,
+        "Surfaces improductives"@fr,
+        "Altre superfici improduttive"@it ;
+    schema:description "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecken ohne Pufferstreifen)"@de,
         "Surfaces improductives (p. ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
         "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it ;
     rdfs:subClassOf cultivationtype:12 .
 
 cultivationtype:903 a owl:Class ;
-    schema:name "Flächen ohne landwirtschaftliche Hauptzweckbestimmung (erschlossenes Bauland, Spiel-, Reit-, Camping-, Golf-, Flug- und Militärplätze oder ausgemarchte Bereiche von Eisenbahnen, öffentlichen Strassen und Gewässern)"@de,
+    schema:name "Flächen ohne landwirtschaftliche Hauptzweckbestimmung"@de,
+        "Surfaces dont l’affectation principale n’est pas l’exploitation agricole"@fr,
+        "Superfici la cui destinazione principale non è l’utilizzazione agricola"@it ;
+    schema:description "Flächen ohne landwirtschaftliche Hauptzweckbestimmung (erschlossenes Bauland, Spiel-, Reit-, Camping-, Golf-, Flug- und Militärplätze oder ausgemarchte Bereiche von Eisenbahnen, öffentlichen Strassen und Gewässern)"@de,
         "Surfaces dont l’affectation principale n’est pas l’exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d’entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d’eau)"@fr,
         "Superfici la cui destinazione principale non è l’utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d’esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d’acqua)"@it ;
     rdfs:subClassOf cultivationtype:12 .
