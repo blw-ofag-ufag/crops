@@ -55,7 +55,8 @@ graph.ttl
 rdf/data/geodata.ttl
 
 # Processed RDF data
-rdf/processed/
+rdf/processed/*.ttl
+!rdf/processed/crop-taxonomy.ttl
 
 # Exclude geopackage files
 *.gpkg

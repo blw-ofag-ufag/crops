@@ -1,0 +1,181 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/v1/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cube: <https://cube.link/> .
+
+naebi:999 schema:identifier "CROP_SWHT"^^xsd:ID ;
+	:cultivationType cultivationtype:999 ;
+	schema:name "Frumento primaverile"@it ;
+	a cube:Observation ;
+	schema:name "Blé de printemps"@fr , "summer wheat"@en , "Sommerweizen"@de .
+
+naebi:572 schema:identifier "CROP_STRBRR"^^xsd:ID ;
+	:cultivationType cultivationtype:572 ;
+	schema:name "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
+	a cube:Observation ;
+	schema:name "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr , "Nützlingsstreifen auf offener Ackerfläche"@de .
+
+naebi:542 schema:identifier "CROP_GANSO"^^xsd:ID ;
+	:cultivationType cultivationtype:542 ;
+	schema:name "Miglio"@it ;
+	a cube:Observation ;
+	schema:name "Millet"@fr , "millet"@en , "Hirse"@de .
+
+naebi:511 schema:identifier "CROP_EMMEK"^^xsd:ID ;
+	:cultivationType cultivationtype:511 ;
+	schema:name "Farro, piccola spelta"@it ;
+	a cube:Observation ;
+	schema:name "Amidonnier, engrain"@fr , "Emmer, Einkorn"@de .
+
+naebi:509 schema:identifier "CROP_TABAC"^^xsd:ID ;
+	:cultivationType cultivationtype:509 ;
+	schema:name "Riso"@it ;
+	a cube:Observation ;
+	schema:name "Riz"@fr , "Rice"@en , "Reis"@de .
+
+naebi:508 schema:identifier "CROP_SILCRN"^^xsd:ID ;
+	:cultivationType cultivationtype:508 ;
+	schema:name "Mais da granella"@it ;
+	a cube:Observation ;
+	schema:name "Maïs grain"@fr , "Körnermais"@de .
+
+naebi:501 schema:identifier "CROP_SGRST"^^xsd:ID ;
+	:cultivationType cultivationtype:501 ;
+	schema:name "Orzo primaverile"@it ;
+	a cube:Observation ;
+	schema:name "Orge de printemps"@fr , "Sommergerste"@de .
+
+naebi:493 schema:identifier "CROP_KARPA"^^xsd:ID ;
+	:cultivationType cultivationtype:493 ;
+	schema:name "Girasole"@it ;
+	a cube:Observation ;
+	schema:name "Tournesol"@fr , "Sonnenblumen"@de .
+
+naebi:1035 schema:identifier "CROP_WRHGP"^^xsd:ID ;
+	:cultivationType cultivationtype:1035 ;
+	schema:name "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1034 schema:identifier "CROP_WRHGH"^^xsd:ID ;
+	:cultivationType cultivationtype:1034 ;
+	schema:name "Winterroggen (Hybridsorten) ohne 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1031 schema:identifier "CROP_MILLE"^^xsd:ID ;
+	:cultivationType cultivationtype:1031 ;
+	schema:name "Getreide-Silage mit Leguminosen"@de ;
+	a cube:Observation .
+
+naebi:1030 schema:identifier "CROP_STRAWL"^^xsd:ID ;
+	:cultivationType cultivationtype:1030 ;
+	schema:name "Getreide-Silage ohne Leguminosen"@de ;
+	a cube:Observation .
+
+naebi:1029 schema:identifier "CROP_SOR2ND"^^xsd:ID ;
+	:cultivationType cultivationtype:1029 ;
+	schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
+	a cube:Observation .
+
+naebi:1028 schema:identifier "CROP_WINRA"^^xsd:ID ;
+	:cultivationType cultivationtype:1028 ;
+	schema:name "Ganzpflanzen-Sorghum"@de ;
+	a cube:Observation .
+
+naebi:1027 schema:identifier "CROP_SUCORN"^^xsd:ID ;
+	:cultivationType cultivationtype:1027 ;
+	schema:name "Mais dolce"@it ;
+	a cube:Observation ;
+	schema:name "maïs sucré"@fr , "Zuckermais"@de .
+
+naebi:1026 schema:identifier "CROP_CCMCRN"^^xsd:ID ;
+	:cultivationType cultivationtype:1026 ;
+	schema:name "Silomais"@de ;
+	a cube:Observation .
+
+naebi:1025 schema:identifier "CROP_GCORN"^^xsd:ID ;
+	:cultivationType cultivationtype:1025 ;
+	schema:name "Grünmais"@de ;
+	a cube:Observation .
+
+naebi:1024 schema:identifier "CROP_HFBUFF"^^xsd:ID ;
+	:cultivationType cultivationtype:1024 ;
+	schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
+	a cube:Observation .
+
+naebi:1023 schema:identifier "CROP_OAFNT"^^xsd:ID ;
+	:cultivationType cultivationtype:1023 ;
+	schema:name "Nützlingsstreifen (DK)"@de ;
+	a cube:Observation .
+
+naebi:1021 schema:identifier "CROP_WKORN"^^xsd:ID ;
+	:cultivationType cultivationtype:1021 ;
+	schema:name "Winterkorn, Dinkel"@de ;
+	a cube:Observation .
+
+naebi:1020 schema:identifier "CROP_WTRITN"^^xsd:ID ;
+	:cultivationType cultivationtype:1020 ;
+	schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1019 schema:identifier "CROP_WTRIT"^^xsd:ID ;
+	:cultivationType cultivationtype:1019 ;
+	schema:name "Wintertriticale (ohne Wintertriticale in 62a Nitrat-Projekt)"@de ;
+	a cube:Observation .
+
+naebi:1018 schema:identifier "CROP_STRIT"^^xsd:ID ;
+	:cultivationType cultivationtype:1018 ;
+	schema:name "Sommertriticale"@de ;
+	a cube:Observation .
+
+naebi:1016 schema:identifier "CROP_WRHGP_N"^^xsd:ID ;
+	:cultivationType cultivationtype:1016 ;
+	schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1015 schema:identifier "CROP_WRHGH_N"^^xsd:ID ;
+	:cultivationType cultivationtype:1015 ;
+	schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1011 schema:identifier "CROP_SOGST"^^xsd:ID ;
+	:cultivationType cultivationtype:1011 ;
+	schema:name "Sommerhafer"@de ;
+	a cube:Observation .
+
+naebi:1010 schema:identifier "CROP_WOGST"^^xsd:ID ;
+	:cultivationType cultivationtype:1010 ;
+	schema:name "Winterhafer"@de ;
+	a cube:Observation .
+
+naebi:1009 schema:identifier "CROP_WGRSTN"^^xsd:ID ;
+	:cultivationType cultivationtype:1009 ;
+	schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1008 schema:identifier "CROP_WGRST"^^xsd:ID ;
+	:cultivationType cultivationtype:1008 ;
+	schema:name "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
+	a cube:Observation .
+
+naebi:1005 schema:identifier "CROP_FWHTN"^^xsd:ID ;
+	:cultivationType cultivationtype:1005 ;
+	schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1004 schema:identifier "CROP_FWHT"^^xsd:ID ;
+	:cultivationType cultivationtype:1004 ;
+	schema:name "Futterweizen (ohne Futterweizen in 62a Nitrat-Projekt)"@de ;
+	a cube:Observation .
+
+naebi:1002 schema:identifier "CROP_WWHTN"^^xsd:ID ;
+	:cultivationType cultivationtype:1002 ;
+	schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
+	a cube:Observation .
+
+naebi:1001 schema:identifier "CROP_WWHT"^^xsd:ID ;
+	:cultivationType cultivationtype:1001 ;
+	schema:name "winter wheat (without winter wheat in 62a nitrate-project)"@en ;
+	a cube:Observation ;
+	schema:name "Winterweizen (ohne Winterweizen in 62a Nitrat-Projekt)"@de .

@@ -7,11 +7,11 @@ echo "Validate syntax of turtle files"
 python src/python/validate.py rdf
 
 
-echo "Create a dedicated ontology file for subsequent WebVOWL visualization"
+echo "Create a dedicated OWL file for subsequent WebVOWL visualization of the crop taxonomy"
 python src/python/rdf-processing.py \
-  --input rdf/ontology/*.ttl \
-  --output rdf/processed/ontology.ttl \
-  --rules src/sparql/inference-rules/*.sparql src/sparql/processing-rules/*.sparql
+  --input rdf/ontology/cultivationtypes.ttl \
+  --output rdf/processed/crop-taxonomy.ttl \
+  --rules src/sparql/processing-rules/*.sparql
 
 
 echo "Merge all data into one graph for subsequent LINDAS upload"
@@ -19,6 +19,10 @@ python src/python/rdf-processing.py \
   --input rdf/ontology/*.ttl \
   --output rdf/processed/graph.ttl \
   --rules src/sparql/inference-rules/*.sparql
+
+
+echo "Check graph shape using SHACL"
+pyshacl rdf/ontology/cultivationtypes.ttl --shapes rdf/shape/metadata-quality.ttl --format human
 
 
 echo "Delete existing data from LINDAS"
