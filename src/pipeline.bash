@@ -21,6 +21,10 @@ python src/python/rdf-processing.py \
   --rules src/sparql/inference-rules/*.sparql
 
 
+echo "Check graph shape using SHACL"
+pyshacl rdf/ontology/cultivationtypes.ttl --shapes rdf/shape/metadata-quality.ttl --format human
+
+
 echo "Delete existing data from LINDAS"
 curl \
   --user $USER:$PASSWORD \

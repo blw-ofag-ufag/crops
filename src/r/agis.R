@@ -12,7 +12,7 @@ library(rdfhelper)
 library(dplyr)
 
 #' read helper functions
-source("scripts/R/helper.R")
+source("src/r/helper.R")
 
 #' Constants
 languages <- c("de", "fr", "it")
@@ -21,11 +21,23 @@ languages <- c("de", "fr", "it")
 #' DOWNLOAD DATA
 #' =============================================================================
 
-base_url <- "https://www.blw.admin.ch/dam/de/sd-web/bkAU6T83hyLT"
-filename <- "LWB_Nutzungsfl%C3%A4chen_Kataloge.xlsx"
-destfile <- tempfile(fileext = ".xlsx")
-download.file(file.path(base_url, filename), destfile, mode = "wb")
 data <- readxl::read_excel("data/agis-crops.xlsx", sheet = 3, na = "NA")
+
+data <- data %>%
+  mutate(
+    CULTIVATIONTYPECATEGORY = case_match(
+      CULTIVATIONTYPECATEGORY_DE,
+      "Ackerfläche" ~ "1",
+      "Dauergrünfläche" ~ "21",
+      "Flächen ausserhalb der landwirtschaftlichen Nutzfläche" ~ "12",  #nolint
+      "Weitere Flächen innerhalb der landwirtschaftlichen Nutzfläche" ~ "10", #nolint
+      "Flächen im Sömmerungsgebiet" ~ "13",
+      "Flächen mit Kulturen in ganzjährig geschütztem Anbau" ~ "7", #nolint
+      "Andere Elemente" ~ "20",
+      "Flächen mit Dauerkulturen" ~ NA_character_,
+      .default = NA_character_
+    )
+  )
 
 #' =============================================================================
 #' PREFIX DEFINITION
@@ -36,57 +48,7 @@ cultivationtype <- paste0(base, "cultivationtype/")
 schema  <- "http://schema.org/"
 
 #' Create a new crops turtle file
-sink("rdf/agis.ttl")
-
-#' =============================================================================
-#' WRITE CROP CATEGORIES
-#' =============================================================================
-
-colnames <- paste("CULTIVATIONTYPECATEGORY", toupper(languages), sep = "_")
-categories <- data %>%
-  filter(if_all(all_of(colnames), ~ .x != "NULL")) %>%
-  subset(select = colnames) %>%
-  unique()
-categories$code <- NA
-categories$uri <- NA
-
-for (i in seq_len(nrow(categories))) {
-
-  # save a made up ID/IRI for this object
-  code <- i
-  categories[i, "code"] <- code
-  subject <- rdfhelper::uri(code, prefix = cultivationtype)
-  categories[i, "uri"] <- subject
-
-  # Static class assignment
-  rdfhelper::triple(
-    subject,
-    "a",
-    uri(c("CultivationType"), base)
-  )
-
-  # Dynamic class assignment
-  construct_class_membership(
-    subject,
-    uri("CultivationTypeCategory", base),
-    name = "AGIS"
-  )
-
-  # Labelling
-  for (lang in languages) {
-    rdfhelper::triple(
-      subject = subject,
-      predicate = rdfhelper::uri("name", schema),
-      object = rdfhelper::langstring(
-        x = categories[
-          i,
-          paste("CULTIVATIONTYPECATEGORY", toupper(lang), sep = "_")
-        ],
-        lang = lang
-      )
-    )
-  }
-}
+sink("rdf/processed/agis.ttl")
 
 #' =============================================================================
 #' TABLE TO RDF CONVERSION
@@ -96,7 +58,6 @@ for (i in seq_len(nrow(data))) {
 
   # Save ID/IRI for this object
   code <- as.character(data[i, "DIRECTPAYMENTCROP"])
-
   subject <- rdfhelper::uri(code, prefix = cultivationtype)
 
   # Static class assignment
