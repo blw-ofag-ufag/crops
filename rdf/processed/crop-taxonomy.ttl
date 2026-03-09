@@ -11,7 +11,8 @@ cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it ;
-    schema:alternateName "Allg. Feldbau"@de,
+    schema:alternateName "Ackerkulturen"@de,
+        "Allg. Feldbau"@de,
         "Domaine app. grande culture"@fr ;
     rdfs:comment "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
     rdfs:subClassOf :Cultivation .
