@@ -1,0 +1,303 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix psm: <https://agriculture.ld.admin.ch/crops/psm/1/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+
+@prefix cube: <https://cube.link/> .
+@prefix meta: <https://cube.link/meta/> .
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix theme: <https://register.ld.admin.ch/opendataswiss/category/> .
+@prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
+@prefix frequency: <http://publications.europe.eu/resource/authority/frequency> .
+@prefix status: <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+
+# ==============================================================================
+# DATASET METADATA
+# ==============================================================================
+
+psm: a void:Dataset,
+        schema:Dataset,
+        dcat:Dataset,
+        cube:Cube ;
+    dcterms:accrualPeriodicity frequency:ANNUAL ;
+    dcterms:creator blw: ;
+    schema:contributor blw: ;
+    schema:creativeWorkStatus status:Draft ;
+    schema:creator blw: ;
+    schema:dateCreated "2026-03-09"^^xsd:date ;
+    schema:datePublished "2026-03-09"^^xsd:date ;
+    schema:description "Kulturen aus dem Pflanzenschutzmittelverzeichnis (PSM) und ihre Identifikatoren."@de,
+        "Crops from the Plant Protection Products (PSM) registry and their identifiers."@en ;
+    schema:name "PSM-Kulturen"@de,
+        "PSM crops"@en ;
+    schema:publisher blw: ;
+    schema:version "1.0" ;
+    schema:workExample <https://ld.admin.ch/application/visualize> ;
+    dcat:contactPoint
+        [
+            a vcard:Organization ;
+            vcard:fn "Bundesamt für Landwirtschaft"^^xsd:string ;
+            vcard:hasEmail "info@blw.admin.ch"^^xsd:string
+        ] ;
+    dcat:theme theme:administration,
+        theme:agriculture ;
+    cube:observationConstraint psm:ObservationConstraint ;
+    cube:observationSet psm:ObservationSet .
+
+# ==============================================================================
+# SHACL DATA MODEL
+# ==============================================================================
+
+psm:ObservationConstraint a sh:NodeShape ;
+    sh:closed true ;
+    sh:property
+        [
+            sh:order 2 ;
+            schema:name "Kultur"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path :cultivationType
+        ],
+        [
+            sh:order 1 ;
+            a cube:KeyDimension ;
+            schema:name "Identifikator"@de ;
+            schema:description "Der offizielle Identifikator für Kulturen im schweizerischen Pflanzenschutzmittelverzeichnis."@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ;
+        ] .
+
+# ==============================================================================
+# OBSERVATION SET
+# ==============================================================================
+
+psm:ObservationSet a cube:ObservationSet ;
+    cube:observation
+        psm:1,
+        psm:14,
+        psm:19,
+        psm:490,
+        psm:491,
+        psm:492,
+        psm:493,
+        psm:497,
+        psm:498,
+        psm:500,
+        psm:501,
+        psm:502,
+        psm:504,
+        psm:505,
+        psm:510,
+        psm:514,
+        psm:520,
+        psm:542,
+        psm:549,
+        psm:1000,
+        psm:1006,
+        psm:1011,
+        psm:1012,
+        psm:1017,
+        psm:1021,
+        psm:1027,
+        psm:1032 .
+
+# ==============================================================================
+# OBSERVATIONS
+# ==============================================================================
+
+psm:1 a cube:Observation ;
+    schema:identifier "12069"^^xsd:ID ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it ;
+    :cultivationType cultivationtype:1 .
+
+psm:14 a cube:Observation ;
+    schema:identifier "10080"^^xsd:ID ;
+    schema:name "Getreide"@de,
+        "Céréales"@fr,
+        "Cereali"@it ;
+    :cultivationType cultivationtype:14 .
+
+psm:19 a cube:Observation ;
+    schema:identifier "10167"^^xsd:ID ;
+    schema:name "Wintergetreide"@de,
+        "Céréales d'automne"@fr,
+        "Cereali autunnali"@it,
+        "winter cereals"@en ;
+    :cultivationType cultivationtype:19 .
+
+psm:490 a cube:Observation ;
+    schema:identifier "10094"^^xsd:ID ;
+    schema:name "Winterweichweizen"@de,
+        "winter soft wheat"@en ;
+    :cultivationType cultivationtype:490 .
+
+psm:491 a cube:Observation ;
+    schema:identifier "13784"^^xsd:ID ;
+    schema:name "Weichweizen"@de,
+        "Blé tendre"@fr,
+        "Grano tenero"@it ;
+    :cultivationType cultivationtype:491 .
+
+psm:492 a cube:Observation ;
+    schema:identifier "10052"^^xsd:ID ;
+    schema:name "Weizen"@de,
+        "Blé"@fr,
+        "Frumento"@it,
+        "wheat"@en ;
+    :cultivationType cultivationtype:492 .
+
+psm:493 a cube:Observation ;
+    schema:identifier "10137"^^xsd:ID ;
+    schema:name "Sonnenblumen"@de,
+        "Tournesol"@fr,
+        "Girasole"@it ;
+    :cultivationType cultivationtype:493 .
+
+psm:497 a cube:Observation ;
+    schema:identifier "10000"^^xsd:ID ;
+    schema:name "Mais"@de ;
+    :cultivationType cultivationtype:497 .
+
+psm:498 a cube:Observation ;
+    schema:identifier "10083"^^xsd:ID ;
+    schema:name "Gerste"@de,
+        "Orge"@fr,
+        "Orzo"@it,
+        "barley"@en ;
+    :cultivationType cultivationtype:498 .
+
+psm:500 a cube:Observation ;
+    schema:identifier "10271"^^xsd:ID ;
+    schema:name "Emmer"@de,
+        "Amidonnier"@fr,
+        "Farro"@it ;
+    :cultivationType cultivationtype:500 .
+
+psm:501 a cube:Observation ;
+    schema:identifier "10143"^^xsd:ID ;
+    schema:name "Sommergerste"@de,
+        "Orge de printemps"@fr,
+        "Orzo primaverile"@it ;
+    :cultivationType cultivationtype:501 .
+
+psm:502 a cube:Observation ;
+    schema:identifier "9943"^^xsd:ID ;
+    schema:name "Wintergerste"@de,
+        "Orge d’automne"@fr,
+        "Orzo autunnale"@it ;
+    :cultivationType cultivationtype:502 .
+
+psm:504 a cube:Observation ;
+    schema:identifier "10121"^^xsd:ID ;
+    schema:name "Hafer"@de,
+        "Avoine"@fr,
+        "Avena"@it ;
+    :cultivationType cultivationtype:504 .
+
+psm:505 a cube:Observation ;
+    schema:identifier "10119"^^xsd:ID ;
+    schema:name "Triticale"@de,
+        "Triticale"@fr,
+        "Triticale"@it ;
+    :cultivationType cultivationtype:505 .
+
+psm:510 a cube:Observation ;
+    schema:identifier "11321"^^xsd:ID ;
+    schema:name "Hartweizen"@de,
+        "Blé dur"@fr,
+        "Grano duro"@it ;
+    :cultivationType cultivationtype:510 .
+
+psm:514 a cube:Observation ;
+    schema:identifier "10120"^^xsd:ID ;
+    schema:name "Roggen"@de,
+        "Seigle"@fr,
+        "Segale"@it,
+        "rye"@en ;
+    :cultivationType cultivationtype:514 .
+
+psm:520 a cube:Observation ;
+    schema:identifier "10248"^^xsd:ID ;
+    schema:name "Trockenreis"@de,
+        "Riz en culture sèche"@fr,
+        "Riso seminato su terreno asciutto"@it ;
+    :cultivationType cultivationtype:520 .
+
+psm:542 a cube:Observation ;
+    schema:identifier "15872"^^xsd:ID ;
+    schema:name "Hirse"@de,
+        "Millet"@fr,
+        "Miglio"@it,
+        "millet"@en ;
+    :cultivationType cultivationtype:542 .
+
+psm:549 a cube:Observation ;
+    schema:identifier "11393"^^xsd:ID ;
+    schema:name "Sorghum"@de,
+        "Sorgho"@fr,
+        "Sorgo"@it ;
+    :cultivationType cultivationtype:549 .
+
+psm:1000 a cube:Observation ;
+    schema:identifier "10164"^^xsd:ID ;
+    schema:name "Sommergetreide"@de,
+        "Céréales de printemps"@fr,
+        "Cereali primaverili"@it,
+        "summer cereals"@en ;
+    :cultivationType cultivationtype:1000 .
+
+psm:1006 a cube:Observation ;
+    schema:identifier "10118"^^xsd:ID ;
+    schema:name "Sommerweichweizen"@de,
+        "summer soft wheat"@en ;
+    :cultivationType cultivationtype:1006 .
+
+psm:1011 a cube:Observation ;
+    schema:identifier "10144"^^xsd:ID ;
+    schema:name "Sommerhafer"@de ;
+    :cultivationType cultivationtype:1011 .
+
+psm:1012 a cube:Observation ;
+    schema:identifier "9945"^^xsd:ID ;
+    schema:name "Winterroggen"@de,
+        "Seigle d'automne"@fr,
+        "Segale autunnale"@it,
+        "winter rye"@en ;
+    :cultivationType cultivationtype:1012 .
+
+psm:1017 a cube:Observation ;
+    schema:identifier "10180"^^xsd:ID ;
+    schema:name "Wintertriticale"@de,
+        "Triticale d'automne"@fr,
+        "Triticale autunnale"@it ;
+    :cultivationType cultivationtype:1017 .
+
+psm:1021 a cube:Observation ;
+    schema:identifier "10122"^^xsd:ID ;
+    schema:name "Winterkorn, Dinkel"@de ;
+    :cultivationType cultivationtype:1021 .
+
+psm:1027 a cube:Observation ;
+    schema:identifier "10010"^^xsd:ID ;
+    schema:name "Zuckermais"@de,
+        "maïs sucré"@fr,
+        "Mais dolce"@it ;
+    :cultivationType cultivationtype:1027 .
+
+psm:1032 a cube:Observation ;
+    schema:identifier "10339"^^xsd:ID ;
+    schema:name "Kulturen mit Süssgräsern"@de,
+        "crops with sweet grasses"@en ;
+    :cultivationType cultivationtype:1032 .
