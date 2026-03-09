@@ -48,192 +48,41 @@ cultivationtype:4 a owl:Class ;
         "Vigna"@it ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:5 a owl:Class ;
+    schema:name "Obstanlagen"@de,
+        "Cultures fruitières"@fr,
+        "Frutteti"@it ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:6 a owl:Class ;
+    schema:name "Übrige Dauerkulturen"@de,
+        "Autres cultures pérennes"@fr,
+        "Altre colture perenni"@it ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:7 a owl:Class ;
+    schema:name "Geschützter Anbau"@de,
+        "Cultures protégées"@fr,
+        "Colture protette tutto l’anno"@it ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:8 a owl:Class ;
+    schema:name "Streueflächen"@de,
+        "Surfaces à litière"@fr,
+        "Terreni da strame"@it ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:9 a owl:Class ;
+    schema:name "Hecken-, Feld- und Ufergehölze"@de,
+        "Haies, bosquets et berges boisées"@fr,
+        "Siepi, boschetti campestri e rivieraschi"@it ;
+    rdfs:subClassOf :Cultivation .
+
 cultivationtype:10 a owl:Class ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autre surface au sein de la surface agricole utile"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata"@it ;
     rdfs:subClassOf :Cultivation .
-
-cultivationtype:1000 a owl:Class ;
-    schema:name "Sommergetreide"@de,
-        "summer cereals"@en,
-        "Céréales de printemps"@fr,
-        "Cereali primaverili"@it ;
-    rdfs:subClassOf cultivationtype:1033 .
-
-cultivationtype:1001 a owl:Class ;
-    schema:name "Winterweizen (ohne Winterweizen in 62a Nitrat-Projekt)"@de,
-        "winter wheat (without winter wheat in 62a nitrate-project)"@en ;
-    rdfs:subClassOf cultivationtype:1007 ;
-    :botanicalPlant taxon:1TRZG .
-
-cultivationtype:1002 a owl:Class ;
-    schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1007 ;
-    :botanicalPlant taxon:1TRZG .
-
-cultivationtype:1003 a owl:Class ;
-    schema:name "Futterweizen"@de ;
-    schema:description "Futterweizen ist Weizen, der hauptsächlich zur Tierfütterung verwendet wird, weil er die Qualitätskriterien für Backweizen nicht erfüllt und oft einen niedrigeren Proteingehalt (unter ca. 12 %) hat."@de ;
-    rdfs:subClassOf cultivationtype:492 .
-
-cultivationtype:1004 a owl:Class ;
-    schema:name "Futterweizen (ohne Futterweizen in 62a Nitrat-Projekt)"@de ;
-    rdfs:subClassOf cultivationtype:1003 ;
-    :botanicalPlant taxon:1TRZG .
-
-cultivationtype:1005 a owl:Class ;
-    schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1003 ;
-    :botanicalPlant taxon:1TRZG .
-
-cultivationtype:1006 a owl:Class ;
-    schema:name "Sommerweichweizen"@de,
-        "summer soft wheat"@en ;
-    rdfs:subClassOf cultivationtype:491,
-        cultivationtype:999 ;
-    :botanicalPlant taxon:TRZAX .
-
-cultivationtype:1007 a owl:Class ;
-    schema:name "Winterweizen"@de,
-        "winter wheat"@en,
-        "Blé d'automne"@fr,
-        "Frumento autunnale"@it ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cultivationtype:492 cultivationtype:19 ) ] .
-
-cultivationtype:1008 a owl:Class ;
-    schema:name "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
-    rdfs:subClassOf cultivationtype:502 .
-
-cultivationtype:1009 a owl:Class ;
-    schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:502 ;
-    owl:disjointWith cultivationtype:1008 .
-
-cultivationtype:1010 a owl:Class ;
-    schema:name "Winterhafer"@de ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cultivationtype:504 cultivationtype:19 ) ] .
-
-cultivationtype:1011 a owl:Class ;
-    schema:name "Sommerhafer"@de ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cultivationtype:504 cultivationtype:1000 ) ] .
-
-cultivationtype:1012 a owl:Class ;
-    schema:name "Winterroggen"@de,
-        "winter rye"@en,
-        "Seigle d'automne"@fr,
-        "Segale autunnale"@it ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:514 .
-
-cultivationtype:1013 a owl:Class ;
-    schema:name "Winterroggen (Hybridsorten)"@de,
-        "winter rye (hybrid varieties)"@en ;
-    rdfs:subClassOf cultivationtype:1012 .
-
-cultivationtype:1014 a owl:Class ;
-    schema:name "Winterroggen (Populationssorten)"@de,
-        "winter rye (population varieties)"@en ;
-    rdfs:subClassOf cultivationtype:1012 .
-
-cultivationtype:1015 a owl:Class ;
-    schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1014 .
-
-cultivationtype:1016 a owl:Class ;
-    schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1013 .
-
-cultivationtype:1017 a owl:Class ;
-    schema:name "Wintertriticale"@de,
-        "Triticale d'automne"@fr,
-        "Triticale autunnale"@it ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:505 .
-
-cultivationtype:1018 a owl:Class ;
-    schema:name "Sommertriticale"@de ;
-    rdfs:subClassOf cultivationtype:1000,
-        cultivationtype:505 .
-
-cultivationtype:1019 a owl:Class ;
-    schema:name "Wintertriticale (ohne Wintertriticale in 62a Nitrat-Projekt)"@de ;
-    rdfs:subClassOf cultivationtype:1017 .
-
-cultivationtype:1020 a owl:Class ;
-    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1017 .
-
-cultivationtype:1021 a owl:Class ;
-    schema:name "Winterkorn, Dinkel"@de ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:516 .
-
-cultivationtype:1023 a owl:Class ;
-    schema:name "Nützlingsstreifen (DK)"@de ;
-    rdfs:subClassOf cultivationtype:6 .
-
-cultivationtype:1024 a owl:Class ;
-    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
-    rdfs:subClassOf :Cultivation .
-
-cultivationtype:1025 a owl:Class ;
-    schema:name "Grünmais"@de ;
-    rdfs:subClassOf cultivationtype:521 .
-
-cultivationtype:1026 a owl:Class ;
-    schema:name "Silomais"@de ;
-    rdfs:subClassOf cultivationtype:521 .
-
-cultivationtype:1027 a owl:Class ;
-    schema:name "Zuckermais"@de,
-        "maïs sucré"@fr,
-        "Mais dolce"@it ;
-    rdfs:subClassOf cultivationtype:497 ;
-    :botanicalPlant taxon:ZEAMS .
-
-cultivationtype:1028 a owl:Class ;
-    schema:name "Ganzpflanzen-Sorghum"@de ;
-    rdfs:subClassOf cultivationtype:581 .
-
-cultivationtype:1029 a owl:Class ;
-    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
-    rdfs:subClassOf cultivationtype:581 .
-
-cultivationtype:1030 a owl:Class ;
-    schema:name "Getreide-Silage ohne Leguminosen"@de ;
-    rdfs:subClassOf cultivationtype:543 .
-
-cultivationtype:1031 a owl:Class ;
-    schema:name "Getreide-Silage mit Leguminosen"@de ;
-    rdfs:subClassOf cultivationtype:543 .
-
-cultivationtype:1032 a owl:Class ;
-    schema:name "Kulturen mit Süssgräsern"@de,
-        "crops with sweet grasses"@en ;
-    schema:alternateName "Süssgräser (Poaceae)"@de,
-        "poacées (Gramineae)"@fr,
-        "Poacee (Graminaceae)"@it ;
-    rdfs:subClassOf cultivationtype:16 ;
-    :botanicalPlant taxon:1GRAF .
-
-cultivationtype:1033 a owl:Class ;
-    schema:name "Getreide ohne Mais"@de,
-        "Céréales sans Maïs"@fr,
-        "Cereali senza Mais"@it ;
-    rdfs:subClassOf cultivationtype:14 ;
-    owl:disjointWith cultivationtype:497 .
-
-cultivationtype:1034 a owl:Class ;
-    schema:name "Winterroggen (Hybridsorten) ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1013 .
-
-cultivationtype:1035 a owl:Class ;
-    schema:name "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1014 .
 
 cultivationtype:12 a owl:Class ;
     schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
@@ -356,12 +205,6 @@ cultivationtype:499 a owl:Class ;
     schema:name "Einkorn"@de ;
     rdfs:subClassOf cultivationtype:511 ;
     :botanicalPlant taxon:TRZMO .
-
-cultivationtype:5 a owl:Class ;
-    schema:name "Obstanlagen"@de,
-        "Cultures fruitières"@fr,
-        "Frutteti"@it ;
-    rdfs:subClassOf :Cultivation .
 
 cultivationtype:500 a owl:Class ;
     schema:name "Emmer"@de,
@@ -862,12 +705,6 @@ cultivationtype:598 a owl:Class ;
         "Altra superficie coltiva aperta, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
-cultivationtype:6 a owl:Class ;
-    schema:name "Übrige Dauerkulturen"@de,
-        "Autres cultures pérennes"@fr,
-        "Altre colture perenni"@it ;
-    rdfs:subClassOf :Cultivation .
-
 cultivationtype:601 a owl:Class ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
         "Prairies artificielles (sans les pâturages)"@fr,
@@ -1007,12 +844,6 @@ cultivationtype:698 a owl:Class ;
         "Autres surfaces herbagères (surface herbagère permanente) sans contributions"@fr,
         "Altre superfici (permanentemente) inerbite, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:2 .
-
-cultivationtype:7 a owl:Class ;
-    schema:name "Geschützter Anbau"@de,
-        "Cultures protégées"@fr,
-        "Colture protette tutto l’anno"@it ;
-    rdfs:subClassOf :Cultivation .
 
 cultivationtype:701 a owl:Class ;
     schema:name "Reben"@de,
@@ -1201,12 +1032,6 @@ cultivationtype:798 a owl:Class ;
         "Altre superfici con colture perenni, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:6 .
 
-cultivationtype:8 a owl:Class ;
-    schema:name "Streueflächen"@de,
-        "Surfaces à litière"@fr,
-        "Terreni da strame"@it ;
-    rdfs:subClassOf :Cultivation .
-
 cultivationtype:801 a owl:Class ;
     schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures maraîchères sous abri avec fondations permanentes"@fr,
@@ -1347,12 +1172,6 @@ cultivationtype:898 a owl:Class ;
         "Autres surfaces dans la surface agricole utile, sans contributions"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:10 .
-
-cultivationtype:9 a owl:Class ;
-    schema:name "Hecken-, Feld- und Ufergehölze"@de,
-        "Haies, bosquets et berges boisées"@fr,
-        "Siepi, boschetti campestri e rivieraschi"@it ;
-    rdfs:subClassOf :Cultivation .
 
 cultivationtype:901 a owl:Class ;
     schema:name "Wald"@de,
@@ -1512,8 +1331,198 @@ cultivationtype:999 a owl:Class ;
         "summer wheat"@en,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 ) ] ;
+    owl:equivalentClass
+        [
+            a owl:Class ;
+            owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 )
+        ] ;
     :botanicalPlant taxon:1TRZG .
 
+cultivationtype:1000 a owl:Class ;
+    schema:name "Sommergetreide"@de,
+        "summer cereals"@en,
+        "Céréales de printemps"@fr,
+        "Cereali primaverili"@it ;
+    rdfs:subClassOf cultivationtype:1033 .
 
+cultivationtype:1001 a owl:Class ;
+    schema:name "Winterweizen (ohne Winterweizen in 62a Nitrat-Projekt)"@de,
+        "winter wheat (without winter wheat in 62a nitrate-project)"@en ;
+    rdfs:subClassOf cultivationtype:1007 ;
+    :botanicalPlant taxon:1TRZG .
+
+cultivationtype:1002 a owl:Class ;
+    schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1007 ;
+    :botanicalPlant taxon:1TRZG .
+
+cultivationtype:1003 a owl:Class ;
+    schema:name "Futterweizen"@de ;
+    schema:description "Futterweizen ist Weizen, der hauptsächlich zur Tierfütterung verwendet wird, weil er die Qualitätskriterien für Backweizen nicht erfüllt und oft einen niedrigeren Proteingehalt (unter ca. 12 %) hat."@de ;
+    rdfs:subClassOf cultivationtype:492 .
+
+cultivationtype:1004 a owl:Class ;
+    schema:name "Futterweizen (ohne Futterweizen in 62a Nitrat-Projekt)"@de ;
+    rdfs:subClassOf cultivationtype:1003 ;
+    :botanicalPlant taxon:1TRZG .
+
+cultivationtype:1005 a owl:Class ;
+    schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1003 ;
+    :botanicalPlant taxon:1TRZG .
+
+cultivationtype:1006 a owl:Class ;
+    schema:name "Sommerweichweizen"@de,
+        "summer soft wheat"@en ;
+    rdfs:subClassOf cultivationtype:491,
+        cultivationtype:999 ;
+    :botanicalPlant taxon:TRZAX .
+
+cultivationtype:1007 a owl:Class ;
+    schema:name "Winterweizen"@de,
+        "winter wheat"@en,
+        "Blé d'automne"@fr,
+        "Frumento autunnale"@it ;
+    owl:equivalentClass
+        [
+            a owl:Class ;
+            owl:intersectionOf ( cultivationtype:492 cultivationtype:19 )
+        ] .
+
+cultivationtype:1008 a owl:Class ;
+    schema:name "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
+    rdfs:subClassOf cultivationtype:502 .
+
+cultivationtype:1009 a owl:Class ;
+    schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:502 ;
+    owl:disjointWith cultivationtype:1008 .
+
+cultivationtype:1010 a owl:Class ;
+    schema:name "Winterhafer"@de ;
+    owl:equivalentClass
+        [
+            a owl:Class ;
+            owl:intersectionOf ( cultivationtype:504 cultivationtype:19 )
+        ] .
+
+cultivationtype:1011 a owl:Class ;
+    schema:name "Sommerhafer"@de ;
+    owl:equivalentClass [
+            a owl:Class ;
+            owl:intersectionOf ( cultivationtype:504 cultivationtype:1000 )
+        ] .
+
+cultivationtype:1012 a owl:Class ;
+    schema:name "Winterroggen"@de,
+        "winter rye"@en,
+        "Seigle d'automne"@fr,
+        "Segale autunnale"@it ;
+    rdfs:subClassOf cultivationtype:19,
+        cultivationtype:514 .
+
+cultivationtype:1013 a owl:Class ;
+    schema:name "Winterroggen (Hybridsorten)"@de,
+        "winter rye (hybrid varieties)"@en ;
+    rdfs:subClassOf cultivationtype:1012 .
+
+cultivationtype:1014 a owl:Class ;
+    schema:name "Winterroggen (Populationssorten)"@de,
+        "winter rye (population varieties)"@en ;
+    rdfs:subClassOf cultivationtype:1012 .
+
+cultivationtype:1015 a owl:Class ;
+    schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1014 .
+
+cultivationtype:1016 a owl:Class ;
+    schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1013 .
+
+cultivationtype:1017 a owl:Class ;
+    schema:name "Wintertriticale"@de,
+        "Triticale d'automne"@fr,
+        "Triticale autunnale"@it ;
+    rdfs:subClassOf cultivationtype:19,
+        cultivationtype:505 .
+
+cultivationtype:1018 a owl:Class ;
+    schema:name "Sommertriticale"@de ;
+    rdfs:subClassOf cultivationtype:1000,
+        cultivationtype:505 .
+
+cultivationtype:1019 a owl:Class ;
+    schema:name "Wintertriticale (ohne Wintertriticale in 62a Nitrat-Projekt)"@de ;
+    rdfs:subClassOf cultivationtype:1017 .
+
+cultivationtype:1020 a owl:Class ;
+    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1017 .
+
+cultivationtype:1021 a owl:Class ;
+    schema:name "Winterkorn, Dinkel"@de ;
+    rdfs:subClassOf cultivationtype:19,
+        cultivationtype:516 .
+
+cultivationtype:1023 a owl:Class ;
+    schema:name "Nützlingsstreifen (DK)"@de ;
+    rdfs:subClassOf cultivationtype:6 .
+
+cultivationtype:1024 a owl:Class ;
+    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:1025 a owl:Class ;
+    schema:name "Grünmais"@de ;
+    rdfs:subClassOf cultivationtype:521 .
+
+cultivationtype:1026 a owl:Class ;
+    schema:name "Silomais"@de ;
+    rdfs:subClassOf cultivationtype:521 .
+
+cultivationtype:1027 a owl:Class ;
+    schema:name "Zuckermais"@de,
+        "maïs sucré"@fr,
+        "Mais dolce"@it ;
+    rdfs:subClassOf cultivationtype:497 ;
+    :botanicalPlant taxon:ZEAMS .
+
+cultivationtype:1028 a owl:Class ;
+    schema:name "Ganzpflanzen-Sorghum"@de ;
+    rdfs:subClassOf cultivationtype:581 .
+
+cultivationtype:1029 a owl:Class ;
+    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
+    rdfs:subClassOf cultivationtype:581 .
+
+cultivationtype:1030 a owl:Class ;
+    schema:name "Getreide-Silage ohne Leguminosen"@de ;
+    rdfs:subClassOf cultivationtype:543 .
+
+cultivationtype:1031 a owl:Class ;
+    schema:name "Getreide-Silage mit Leguminosen"@de ;
+    rdfs:subClassOf cultivationtype:543 .
+
+cultivationtype:1032 a owl:Class ;
+    schema:name "Kulturen mit Süssgräsern"@de,
+        "crops with sweet grasses"@en ;
+    schema:alternateName "Süssgräser (Poaceae)"@de,
+        "poacées (Gramineae)"@fr,
+        "Poacee (Graminaceae)"@it ;
+    rdfs:subClassOf cultivationtype:16 ;
+    :botanicalPlant taxon:1GRAF .
+
+cultivationtype:1033 a owl:Class ;
+    schema:name "Getreide ohne Mais"@de,
+        "Céréales sans Maïs"@fr,
+        "Cereali senza Mais"@it ;
+    rdfs:subClassOf cultivationtype:14 ;
+    owl:disjointWith cultivationtype:497 .
+
+cultivationtype:1034 a owl:Class ;
+    schema:name "Winterroggen (Hybridsorten) ohne 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1013 .
+
+cultivationtype:1035 a owl:Class ;
+    schema:name "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1014 .
