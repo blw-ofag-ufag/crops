@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 # Derive dataset origin based on IRI structure
                 BIND(
                     IF(CONTAINS(STR(?membership), "/agis/"), "AGIS",
-                    IF(CONTAINS(STR(?membership), "/srppp/"), "SRPPP",
+                    IF(CONTAINS(STR(?membership), "/psm/"), "SRPPP",
                     IF(CONTAINS(STR(?membership), "/naebi/"), "NAEBI", "Unknown")))
                     AS ?membershipName
                 )
