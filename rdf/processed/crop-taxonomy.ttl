@@ -7,6 +7,9 @@
 @prefix schema: <http://schema.org/> .
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
+
 cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
         "Terres cultivées"@fr,

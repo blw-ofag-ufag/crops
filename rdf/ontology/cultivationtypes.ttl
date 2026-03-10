@@ -19,6 +19,23 @@ cultivationtype: a owl:Ontology ;
 # Top level groups
 # ==============================================================================
 
+# State that all top-level groups are disjoint from each other
+[] a owl:AllDisjointClasses ;
+   owl:members (
+       cultivationtype:1
+       cultivationtype:4
+       cultivationtype:5
+       cultivationtype:6
+       cultivationtype:7
+       cultivationtype:8
+       cultivationtype:9
+       cultivationtype:10
+       cultivationtype:12
+       cultivationtype:13
+       cultivationtype:20
+       cultivationtype:21
+   ) .
+
 cultivationtype:1 a owl:Class ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
