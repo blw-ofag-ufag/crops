@@ -298,5 +298,5 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range [ owl:oneOf ( :Variety :Subspecies :Species :Genus :Family :Order :Class :Phylum :Kingdom ) ] .
 
 : a owl:Ontology ;
-    dcterms:title "Kulturen-Liste"@de .
+    dcterms:title "Kulturen-Ontologie"@de .
 
