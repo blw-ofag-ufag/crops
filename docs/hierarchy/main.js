@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Configuration
-    const SPARQL_ENDPOINT = 'https://agriculture.ld.admin.ch/query';
+    const SPARQL_ENDPOINT = 'https://lindas.admin.ch/query';
     
     // Initialize state from URL parameters
     function getInitialFilters() {

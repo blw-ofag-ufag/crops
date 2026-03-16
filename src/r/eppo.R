@@ -46,7 +46,7 @@ results <- rdfhelper::sparql('
   }
   GROUP BY ?eppo
   ORDER BY ASC(?attributes)
-', endpoint = "https://agriculture.ld.admin.ch/query")
+', endpoint = "https://lindas.admin.ch/query")
 
 #' Read EPPO codes from results
 if (all) {

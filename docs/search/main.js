@@ -2,7 +2,7 @@
 // So, we don't need a DOMContentLoaded wrapper.
 
 // SPARQL Endpoint
-const sparqlEndpoint = 'https://agriculture.ld.admin.ch/query';
+const sparqlEndpoint = 'https://lindas.admin.ch/query';
 
 // 1. Updated SPARQL query to include ?classes
 const sparqlQuery = `

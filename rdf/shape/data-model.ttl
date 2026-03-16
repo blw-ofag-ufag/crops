@@ -53,5 +53,15 @@ shape:Cultivation a sh:NodeShape ;
         sh:name "Typ"@de,
             "Type"@en ;
         sh:path rdf:type ;
+        sh:node shape:CultivationType ;
         sh:minCount 1 ;
+    ] .
+
+shape:CultivationType a sh:NodeShape ;
+    rdfs:label "Cultivation type"@en ;
+    sh:targetClass :CultivationType ;
+    sh:order 2 ;
+    sh:property [
+        sh:order 1 ;
+        sh:path rdfs:subClassOf ;
     ] .
