@@ -7,10 +7,6 @@
 @prefix wikidata: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-schema:Event a owl:Class ;
-    rdfs:label "Ereignis"@de,
-        "Event"@en .
-
 wikidata:Q16521 a owl:Class ;
     rdfs:label "Biologisches Taxon"@de,
         "Biological taxon"@en .
@@ -18,18 +14,6 @@ wikidata:Q16521 a owl:Class ;
 :Area a owl:Class ;
     rdfs:label "Fläche"@de ;
     rdfs:subClassOf :Geometry .
-
-:BFFQ1 a owl:Class ;
-    rdfs:label "BFF-Q1-Kultur"@de ;
-    rdfs:comment "Biodiversitätsförderflächen, Qualitätsstufe 1, für welche Bundesbeiträge bezogen werden."@de ;
-    rdfs:subClassOf :DirectPaymentCrop .
-
-:BFFa a owl:Class ;
-    rdfs:label "Biodiversitätsförderflächen, nur anrechenbar"@de ;
-    rdfs:subClassOf :DirectPaymentCrop .
-
-:ClassMembership a owl:Class ;
-    rdfs:label "Class membership"@en .
 
 :Cultivation a owl:Class ;
     rdfs:label "Nutzung"@de,
@@ -44,25 +28,6 @@ wikidata:Q16521 a owl:Class ;
         "Cultivation type"@en ;
     rdfs:comment "The cultivation type helps group (agronomically) similar instances of cultivations together. It is a union of crop definitions from direct payments crops, principles of fertilisation of agricultural crops in Switzerland (GRUD), crops in the Swiss registry of plant protection and others. The cultivation type is distinct from the botanical plant, because it is used to classifiy cultivations, not individual plants."@en .
 
-:CultivationTypeCategory a owl:Class ;
-    rdfs:label "Nutzungsart-Kategorie"@de ;
-    rdfs:subClassOf :CultivationType .
-
-:DirectPaymentCrop a owl:Class ;
-    rdfs:label "Direktzahlungskultur"@de ;
-    rdfs:subClassOf :CultivationType .
-
-:DirectPaymentPrograms a owl:Class ;
-    rdfs:label "Direktzahlungsprogram"@de .
-
-:FertilisationStandard a owl:Class ;
-    rdfs:label "Düngungsnorm"@de,
-        "Fertilisation standard"@en .
-
-:GRUDCrop a owl:Class ;
-    rdfs:label "Kultur aus den GRUD-Vorschriften"@de ;
-    rdfs:subClassOf :CultivationType .
-
 :Geometry a owl:Class ;
     rdfs:label "Geometrie"@de,
         "Geometry"@en .
@@ -70,58 +35,27 @@ wikidata:Q16521 a owl:Class ;
 :Identifier a owl:Class ;
     rdfs:label "Identifikator"@de,
         "Identifier"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
+    rdfs:subClassOf
+        [ 
+            a owl:Restriction ;
             owl:onProperty schema:value ;
-            owl:someValuesFrom rdfs:Literal ],
-        [ a owl:Restriction ;
+            owl:someValuesFrom rdfs:Literal
+        ],
+        [
+            a owl:Restriction ;
             owl:onProperty :sourceSystem ;
-            owl:someValuesFrom rdfs:Literal ] .
+            owl:someValuesFrom rdfs:Literal
+        ] .
 
 :Point a owl:Class ;
     rdfs:label "Punkt"@de ;
     rdfs:subClassOf :Geometry .
-
-:SRPPPCrop a owl:Class ;
-    rdfs:label "Kultur im PSM-Verzeichnis"@de ;
-    rdfs:subClassOf :CultivationType .
-
-:SpecialtyCrop a owl:Class ;
-    rdfs:label "Spezialkultur"@de ;
-    rdfs:subClassOf :DirectPaymentCrop .
 
 :Taxon a owl:Class ;
     rdfs:label "Biologisches Taxon der Kulturpflanze"@de,
         "Crop taxon"@en ;
     rdfs:comment "A crop is a plant that can be grown and harvested extensively for profit or subsistence. The class of crop taxa hence contains all biological taxa of crops, for example *Triticum aestivum* or *Glycine max*."@en ;
     rdfs:subClassOf wikidata:Q16521 .
-
-schema:alternateName a owl:DatatypeProperty ;
-    rdfs:label "Alternativer Name"@de,
-        "Alternate name"@en .
-
-schema:endDate a owl:DatatypeProperty ;
-    rdfs:label "Enddatum"@de,
-        "End date"@en ;
-    rdfs:domain :Cultivation ;
-    rdfs:range xsd:date .
-
-schema:startDate a owl:DatatypeProperty ;
-    rdfs:label "Startdatum"@de,
-        "Start date"@en ;
-    rdfs:domain :Cultivation ;
-    rdfs:range xsd:date .
-
-schema:value a owl:DatatypeProperty .
-
-:eppo a owl:DatatypeProperty ;
-    rdfs:label "EPPO-Code"@de,
-        "EPPO code"@en ;
-    rdfs:domain :Taxon ;
-    rdfs:range xsd:token .
-
-:taxonName a owl:DatatypeProperty ;
-    rdfs:label "Taxonomischer Name"@de,
-        "Taxon name"@en .
 
 :1 a owl:NamedIndividual ;
     rdfs:label "Menschliche Ernährung"@de,
