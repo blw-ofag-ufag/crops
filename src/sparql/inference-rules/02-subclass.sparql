@@ -7,4 +7,6 @@ INSERT {
 WHERE {
   ?instance rdf:type ?childClass .
   ?childClass rdfs:subClassOf+ ?parentClass .
+  FILTER (!isBlank(?childClass))
+  FILTER (!isBlank(?parentClass))
 }
