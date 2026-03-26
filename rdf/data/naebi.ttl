@@ -1,5 +1,5 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/1.11/> .
+@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/1.13/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 
 @prefix cube: <https://cube.link/> .
@@ -33,8 +33,8 @@ naebi: a void:Dataset,
     schema:contributor blw: ;
     schema:creativeWorkStatus status:Draft ;
     schema:creator blw: ;
-    schema:dateCreated "2026-03-10"^^xsd:date ;
-    schema:datePublished "2026-03-10"^^xsd:date ;
+    schema:dateCreated "2026-03-26"^^xsd:date ;
+    schema:datePublished "2026-03-26"^^xsd:date ;
     schema:description "Kulturen der Suisse-Bilanz und ihre Codes gemäss Wegleitung."@de ;
     schema:name "Suisse-Bilanz Kulturentabelle"@de ;
     schema:publisher blw: ;
@@ -60,7 +60,6 @@ naebi:ObservationConstraint a sh:NodeShape ;
     sh:property
         [
             sh:order 1 ;
-            a cube:KeyDimension ;
             schema:name "Identifikator"@de,
                 "Identifier"@en ;
             sh:maxCount 1 ;
@@ -79,6 +78,7 @@ naebi:ObservationConstraint a sh:NodeShape ;
             sh:order 3 ;
             schema:name "Kultur"@de,
                 "Crop"@en ;
+            a cube:KeyDimension ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
