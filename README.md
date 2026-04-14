@@ -22,6 +22,10 @@ This graph not only allows for complex queries across formerly siloed data but a
 
 Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
 
+# Documentation of the data model
+
+The data model is doumented [here](https://shacl-play.sparna.fr/play/doc?format=html_respec&url=https%3A%2F%2Fraw.githubusercontent.com%2Fblw-ofag-ufag%2Fcrops%2Frefs%2Fheads%2Fmain%2Frdf%2Fshape%2Fdata-model.ttl&includeDiagram=true&sectionDiagram=true). Note that *SHACL Play!* reads the data from `rdf/shape/data-model.ttl` on `main`.
+
 # Run the data processing and LINDAS integration pipeline
 
 The data integration pipeline uses all the R and python scripts in the `/scripts` folder. The entire pipeline can be triggered with:
@@ -41,7 +45,7 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     ``` sh
     python -m venv venv
     source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    pip install -r scripts/Python/requirements.txt
+    pip install -r src/python/requirements.txt
     ```
 
 3. Run the ETL pipeline `sh scripts/graph-processing.sh`
