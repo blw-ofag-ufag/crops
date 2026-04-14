@@ -41,7 +41,7 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     ``` sh
     python -m venv venv
     source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    pip install -r scripts/Python/requirements.txt
+    pip install -r src/python/requirements.txt
     ```
 
 3. Run the ETL pipeline `sh scripts/graph-processing.sh`
