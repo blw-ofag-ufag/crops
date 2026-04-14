@@ -259,4 +259,12 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
+        ],
+        [
+            sh:order 3 ;
+            sh:name "Parent crop"@en ;
+            sh:path :parent ;
+            sh:minCount 0 ;
+            sh:maxCount 2 ;
+            sh:node shape:PlantProtectionCrop ;
         ] .
