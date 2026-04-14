@@ -139,7 +139,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         ] .
 
 shape:NaebiCrop a sh:NodeShape ;
-    rdfs:label "Suisse Balance Crop"@en ;
+    rdfs:label "Suisse Balance crop"@en ;
     sh:closed true ;
     sh:targetClass cube:Observation ;
     sh:property
@@ -234,4 +234,29 @@ shape:NaebiCrop a sh:NodeShape ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
             qudt:scaleType qudt:RatioScale ;
+        ] .
+
+shape:PlantProtectionCrop a sh:NodeShape ;
+    rdfs:label "Plant protection crop"@en ;
+    rdfs:comment "Crop of the Swiss registry of plant protection products"@en ;
+    sh:closed true ;
+    sh:targetClass cube:Observation ;
+    sh:property
+        [
+            sh:order 1 ;
+            schema:name "Kultur"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path :cultivationType ;
+            sh:node shape:CultivationType ;
+        ],
+        [
+            sh:order 2 ;
+            a cube:KeyDimension ;
+            schema:name "Identifikator"@de ;
+            schema:description "Der offizielle Identifikator für Kulturen im schweizerischen Pflanzenschutzmittelverzeichnis."@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ;
         ] .
