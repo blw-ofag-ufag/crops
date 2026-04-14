@@ -9,7 +9,7 @@
 
 # LINDAS prefixes --------------------------------------------------------------
 @prefix country: <https://ld.admin.ch/country/> .
-@prefix cube: <https://cube.link/>
+@prefix cube: <https://cube.link/> .
 
 # International prefixes -------------------------------------------------------
 @prefix adms: <https://www.w3.org/ns/adms#> .
