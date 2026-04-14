@@ -66,6 +66,7 @@ shape:Cultivation a sh:NodeShape ;
 
 shape:CultivationType a sh:NodeShape ;
     rdfs:label "Cultivation type"@en ;
+    rdfs:comment "This is the core class for the classification of 'cultivations', i.e. for crops. (Partial) translation of other crop types is possible via the hierarchy modelled with this class. For the general hierachy modelling, we use the [RDF schema (RDFS)](https://www.w3.org/TR/rdf-schema/) as well as the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl-guide/)."@en ;
     sh:targetClass :CultivationType ;
     sh:order 2 ;
     sh:property [
