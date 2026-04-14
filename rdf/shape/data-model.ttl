@@ -9,6 +9,7 @@
 
 # LINDAS prefixes --------------------------------------------------------------
 @prefix country: <https://ld.admin.ch/country/> .
+@prefix cube: <https://cube.link/>
 
 # International prefixes -------------------------------------------------------
 @prefix adms: <https://www.w3.org/ns/adms#> .
@@ -30,13 +31,14 @@
 # DOCUMENT METADATA
 # ------------------------------------------------------------------------------
 # The metadata of this document is described as it is rquired by SHACL PLAY!
+# Visit https://shacl-play.sparna.fr/play/doc for more on this.
 # ==============================================================================
 
 shape: a owl:Ontology ;
-    dcterms:creator "Damian Oswald" ;
+    dcterms:creator "Damian Oswald, Lea Stauber, Marc Beringer, Christian Wilda" ;
     dcterms:title "RDF master and reference data about crops"@en ;
     dcterms:created "2026-03-05"^^xsd:date ;
-    doap:repository <https://github.com/blw-ofag-ufag/crops/issues> ;
+    dcterms:modified "2026-04-14"^^xsd:date ;
     dcterms:description
 """
 This project addresses the challenge of fragmented agricultural crop data within the Swiss federal administration, where essential systems all use separate, non-harmonized crop terminologies.
@@ -44,8 +46,13 @@ This lack of a "single source of truth" creates significant integration hurdles 
 In this project, we propose a unified master data system for crops and crop-related objects.
 """@en .
 
+# ==============================================================================
+# MAIN ENTITIES
+# ==============================================================================
+
 shape:Cultivation a sh:NodeShape ;
     rdfs:label "Cultivation"@en ;
+    sh:targetClass :Cultivation ;
     rdfs:comment "Represents a specific, spatio-temporally bound agricultural event. It models a single cultivation cycle of a particular crop on a defined area with start and end dates. For example, 'the 2023 summer wheat cultivation on field X12B3', as distinct from the general concept of 'wheat cultivation'."@en ;
     sh:order 1 ;
     sh:property [
@@ -62,6 +69,169 @@ shape:CultivationType a sh:NodeShape ;
     sh:targetClass :CultivationType ;
     sh:order 2 ;
     sh:property [
+        sh:name "Parent cultivation type"@en ;
         sh:order 1 ;
         sh:path rdfs:subClassOf ;
+        sh:node shape:CultivationType ;
+    ],
+    [
+        sh:name "Name"@en, "Name"@de ;
+        sh:description "Name of this cultivation type."@en ;
+        sh:path schema:name ;
+    ],
+    [
+        sh:name "Description"@en, "Beschreibung"@de ;
+        sh:description "Textual description of this cultivation type."@en ;
+        sh:path schema:description ;
     ] .
+
+shape:DirectPaymentCrop a sh:NodeShape ;
+    rdfs:label "Direct payment crop"@en ;
+    rdfs:comment "A classification scheme built for the Swiss direct payment system"@en ;
+    sh:closed true ;
+    sh:targetClass cube:Observation ;
+    sh:property
+        [
+            sh:order 1 ;
+            a cube:KeyDimension ;
+            schema:name "Identifikator"@de ;
+            schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. Ein LNF-Code steht immer für dieselbe Kultur. Veraltete Codes werden nicht mehr gebraucht."@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ;
+        ],
+        [
+            sh:order 2 ;
+            schema:name "Kulturgruppe"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path :cultivationGroup ;
+            sh:node shape:CultivationType ;
+        ],
+        [
+            sh:order 3 ;
+            schema:name "Kultur"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path :cultivationType ;
+            sh:node shape:CultivationType ;
+        ],
+        [
+            sh:order 4 ;
+            schema:name "Gültig von"@de ;
+            schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
+            sh:maxCount 1 ;
+            sh:minInclusive "1999"^^xsd:gYear ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:gYear ;
+            sh:path schema:validFrom ;
+        ],
+        [
+            sh:order 5 ;
+            schema:name "Gültig bis"@de ;
+            schema:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:gYear ;
+            sh:path schema:validTo
+        ] .
+
+shape:NaebiCrop a sh:NodeShape ;
+    rdfs:label "Suisse Balance Crop"@en ;
+    sh:closed true ;
+    sh:targetClass cube:Observation ;
+    sh:property
+        [
+            sh:order 1 ;
+            schema:name "Identifikator"@de,
+                "Identifier"@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ;
+        ],
+        [
+            sh:order 2 ;
+            schema:name "Kulturkategorie"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path :cultivationCategory ;
+            sh:node shape:CultivationType ;
+        ],
+        [
+            sh:order 3 ;
+            schema:name "Kultur"@de,
+                "Crop"@en ;
+            a cube:KeyDimension ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path :cultivationType ;
+            sh:node shape:CultivationType ;
+        ],
+        [
+            a cube:MeasureDimension ;
+            sh:order 4 ;
+            schema:name "Ertrag Hauptprodukt"@de ;
+            schema:description "Geerntet, mit einem bei der Ernte üblichen Wassergehalt."@de ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:path :yield ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:decimal ;
+            qudt:hasUnit unit:EA ;
+        ],
+        [
+            a cube:MeasureDimension ;
+            sh:order 5 ;
+            schema:name "N"@de ;
+            schema:description "Stickstoff, kg/ha"@de ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:path :nitrogen ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:decimal ;
+            qudt:hasUnit unit:KiloGM-PER-HA ;
+            qudt:scaleType qudt:RatioScale ;
+        ],
+        [
+            a cube:MeasureDimension ;
+            sh:order 6 ;
+            schema:name "P₂O₅"@de ;
+            schema:description "Phosphor, kg/dt"@de ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:path :phosphorus ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:decimal ;
+            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
+            qudt:scaleType qudt:RatioScale ;
+        ],
+        [
+            a cube:MeasureDimension ;
+            sh:order 7 ;
+            schema:name "K₂O"@de ;
+            schema:description "Kalium, kg/dt"@de ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:path :potassium ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:decimal ;
+            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
+            qudt:scaleType qudt:RatioScale ;
+        ],
+        [
+            a cube:MeasureDimension ;
+            sh:order 8 ;
+            schema:name "Mg"@de ;
+            schema:description "Mangan, kg/dt"@de ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:path :manganese ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:decimal ;
+            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
+            qudt:scaleType qudt:RatioScale ;
+        ] .
