@@ -75,3 +75,4 @@ results/
 
 # Test cache
 **/__pycache__
+test.*
