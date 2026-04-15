@@ -1179,6 +1179,12 @@ cultivationtype:858 a owl:Class ;
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
+cultivationtype:895 a owl:Class ;
+    schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
+        "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
+        "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
+    rdfs:subClassOf cultivationtype:10 .
+
 cultivationtype:897 a owl:Class ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
         "Autres surfaces dans la surface agricole utile, avec contributions"@fr,
@@ -1282,6 +1288,12 @@ cultivationtype:924 a owl:Class ;
         "Alberi indigeni isolati adatti al luogo e viali alberati (Punti o superfici)"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:925 a owl:Class ;
+    schema:name "Markante Einzelbäume"@de,
+        "Arbres isolés remarquables"@fr,
+        "Alberi isolati importanti"@it ;
+    rdfs:subClassOf cultivationtype:20 .
+
 cultivationtype:926 a owl:Class ;
     schema:name "Andere Bäume"@de,
         "Autres arbres"@fr,
@@ -1300,10 +1312,22 @@ cultivationtype:928 a owl:Class ;
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:929 a owl:Class ;
+    schema:name "Andere Elemente (Landschaftsqualität)"@de,
+        "Autres éléments (qualité du paysage)"@fr,
+        "Altri elementi (qualità del paesaggio)"@it ;
+    rdfs:subClassOf cultivationtype:20 .
+
 cultivationtype:930 a owl:Class ;
     schema:name "Sömmerungsweiden"@de,
         "Pâturages d’estivage"@fr,
         "Pascoli d’estivazione"@it ;
+    rdfs:subClassOf cultivationtype:13 .
+
+cultivationtype:931 a owl:Class ;
+    schema:name "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet"@de,
+        "Surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage"@fr,
+        "Superfici inerbite e terreni da strame ricchi di specie nella regione d'estivazione"@it ;
     rdfs:subClassOf cultivationtype:13 .
 
 cultivationtype:933 a owl:Class ;
