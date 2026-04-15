@@ -49,8 +49,9 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     ```
 
 3. Run the ETL pipeline `sh scripts/graph-processing.sh`
-4. Choose whether or not to generate and upload geodata.ttl, which enables queries and depiction of crop areas. 
-5. Check out the results on LINDAS.
+4. Choose whether or not to generate and upload geodata.ttl, which enables queries and depiction of crop areas.
+5. Make sure you pass all tests with `pytest tests`
+6. Check out the results on LINDAS.
 
 # Data mapping and unification
 

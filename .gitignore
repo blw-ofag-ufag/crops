@@ -72,3 +72,6 @@ venv/
 
 # Any results written by analyses etc.
 results/
+
+# Test cache
+**/__pycache__
