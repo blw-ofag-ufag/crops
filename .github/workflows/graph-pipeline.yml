@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false # Prevents one failing test from cancelling the others
       matrix:
-        # Add any future test files to this array to run them in isolation
+        # Add test files to this array to run them in isolation
         test-file: 
           - tests/test_turtle_syntax.py
     
@@ -24,14 +24,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' # Adjust to your target Python version
+          python-version: '3.12'
 
       - name: Install Test Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pytest
-          # Install project requirements if they exist
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r src/python/requirements.txt
 
       - name: Execute ${{ matrix.test-file }}
         run: pytest ${{ matrix.test-file }} -v
