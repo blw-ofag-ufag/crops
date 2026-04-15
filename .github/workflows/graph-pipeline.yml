@@ -1,0 +1,36 @@
+name: Graph Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    name: Run Pytests Individually
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # Prevents one failing test from cancelling the others
+      matrix:
+        # Add test files to this array to run them in isolation
+        test-file: 
+          - tests/test_turtle_syntax.py
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Test Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          pip install -r src/python/requirements.txt
+
+      - name: Execute ${{ matrix.test-file }}
+        run: pytest ${{ matrix.test-file }} -v
