@@ -339,6 +339,12 @@ cultivationtype:516 a owl:Class ;
     rdfs:subClassOf cultivationtype:492 ;
     :botanicalPlant taxon:TRZSP .
 
+cultivationtype:517 a owl:DeprecatedClass ;
+    schema:name "Getreide für die Saatgutproduktion"@de,
+        "Semences de céréales"@fr,
+        "Mais da semina (coltivazione contrattuale)"@it ;
+    rdfs:subClassOf cultivationtype:14 .
+
 cultivationtype:519 a owl:Class ;
     schema:name "Saatmais (Vertragsanbau)"@de,
         "Semences de maïs (contrat de culture)"@fr,
@@ -418,6 +424,18 @@ cultivationtype:531 a owl:Class ;
         "Tournesol destiné à la fabrication d’huile comestible"@fr,
         "Girasole per l’estrazione di olio commestibile"@it ;
     rdfs:subClassOf cultivationtype:493 .
+
+cultivationtype:532 a owl:DeprecatedClass ;
+    schema:name "Hanf (THC-arme Sorten nach BLW-Sortenliste)"@de,
+        "Chanvre (sorte pauvre en THC selon liste OFAG)"@fr,
+        "Canapa (varietà a basso tenore in THC cfr. elenco delle varietà UFAG)"@it ;
+    rdfs:subClassOf cultivationtype:535 .
+
+cultivationtype:533 a owl:DeprecatedClass ;
+    schema:name "Hanf (andere Sorten)"@de,
+        "Chanvre (autres variétés)"@fr,
+        "Canapa (altre varietà)"@it ;
+    rdfs:subClassOf cultivationtype:535 .
 
 cultivationtype:534 a owl:Class ;
     schema:name "Lein"@de,
@@ -567,10 +585,46 @@ cultivationtype:557 a owl:Class ;
         "Maggese da rotazione"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
+cultivationtype:558 a owl:DeprecatedClass ;
+    schema:name "Grünbrache (nur 1999)"@de,
+        "Jachères vertes (uniquement en 1999)"@fr,
+        "Maggesi verdi (1999)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:559 a owl:Class ;
     schema:name "Saum auf Ackerflächen"@de,
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:561 a owl:DeprecatedClass ;
+    schema:name "Rübsen für die Samenproduktion (Vertragsanbau)"@de,
+        "Navets destinés à la production de semences (contrat de culture)"@fr,
+        "Ravizzone per la produzione di sementi"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:562 a owl:DeprecatedClass ;
+    schema:name "Phacelia für die Samenproduktion (Vertragsanbau)"@de,
+        "Phacelia destinée à la production de semences (contrat de culture)"@fr,
+        "Facelia per la produzione di sementi"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:563 a owl:DeprecatedClass ;
+    schema:name "Übrige Kulturen für die Samenproduktion (Vertragsanbau)"@de,
+        "Autres cultures destinées à la production de semences (contrat de culture)"@fr,
+        "Altre colture per la produzione di sementi"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:564 a owl:DeprecatedClass ;
+    schema:name "Ackerschonstreifen Ölsaaten (Raps, Sonnenblumen, Lein)"@de,
+        "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
+        "Fasce di colture estensive in campicoltura - semi oleosi (colza, girasole, lino)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:565 a owl:DeprecatedClass ;
+    schema:name "Ackerschonstreifen Getreide"@de,
+        "Bande culturale extensive céréales"@fr,
+        "Fasce di colture estensive in campicoltura - cereali"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:566 a owl:Class ;
@@ -608,6 +662,15 @@ cultivationtype:570 a owl:Class ;
         "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l’estrazione di granelli)"@it ;
     rdfs:subClassOf cultivationtype:18 .
+
+cultivationtype:571 a owl:DeprecatedClass ;
+    schema:name "Ackerschonstreifen Körnerleguminosen"@de,
+        "Bande culturale extensive Légumineuses"@fr,
+        "Fasce di colture estensive in campicoltura - leguminose a granelli"@it ;
+    schema:description "Ackerschonstreifen Körnerleguminosen (Ackerbohnen, Eiweisserbsen, Lupinen und Mischungen mit Code 569)"@de,
+        "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
+        "Fasce di colture estensive in campicoltura - leguminose a granelli (favette, piselli proteici, lupini e miscele con codice 569)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:572 a owl:Class ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
@@ -777,6 +840,12 @@ cultivationtype:618 a owl:Class ;
         "Pascoli boschivi (senza i boschi)"@it ;
     rdfs:subClassOf cultivationtype:3 .
 
+cultivationtype:619 a owl:DeprecatedClass ;
+    schema:name "Weiden für Schweine, nicht anrechenbar für die Berechnung der RGVE"@de,
+        "Pâturages pour porcs, non imputables pour le calcul des UGBFG"@fr,
+        "Pascoli riservati ai suini e a pollame non computabili per il calcolo delle UBGFG"@it ;
+    rdfs:subClassOf cultivationtype:21 .
+
 cultivationtype:621 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
         "Prairies de fauche en région d’estivage, autres"@fr,
@@ -815,6 +884,12 @@ cultivationtype:632 a owl:Class ;
         "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
+cultivationtype:633 a owl:DeprecatedClass ;
+    schema:name "Übrige Futterpflanzen für die Samenproduktion (Vertragsanbau)"@de,
+        "Autres plantes fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Altre piante foraggiere per la produzione di sementi (coltivazione contrattuale)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:634 a owl:Class ;
     schema:name "Uferwiesen entlang von Fliessgewässern (ohne Weiden)"@de,
         "Prairies riveraines d’un cours d’eau (sauf les pâturages)"@fr,
@@ -850,6 +925,12 @@ cultivationtype:694 a owl:Class ;
         "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère, sauf les pâturages)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite, senza pascoli)"@it ;
     rdfs:subClassOf cultivationtype:2 .
+
+cultivationtype:695 a owl:DeprecatedClass ;
+    schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünfläche)"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère)"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite)"@it ;
+    rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:697 a owl:Class ;
     schema:name "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt"@de,
@@ -952,6 +1033,12 @@ cultivationtype:715 a owl:Class ;
         "Autres pépinières (roses, fruits, etc.)"@fr,
         "Altri vivai (rose, frutta, ecc.)"@it ;
     rdfs:subClassOf cultivationtype:6 .
+
+cultivationtype:716 a owl:DeprecatedClass ;
+    schema:name "Gepflegte Selven (Kastanien-/Nussbäume)"@de,
+        "Châtaigneraies / noiseraies entretenues"@fr,
+        "Selve curate di castagni e noci"@it ;
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:717 a owl:Class ;
     schema:name "Rebflächen mit natürlicher Artenvielfalt"@de,
@@ -1179,6 +1266,12 @@ cultivationtype:858 a owl:Class ;
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
+cultivationtype:895 a owl:Class ;
+    schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
+        "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
+        "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
+    rdfs:subClassOf cultivationtype:10 .
+
 cultivationtype:897 a owl:Class ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
         "Autres surfaces dans la surface agricole utile, avec contributions"@fr,
@@ -1282,6 +1375,12 @@ cultivationtype:924 a owl:Class ;
         "Alberi indigeni isolati adatti al luogo e viali alberati (Punti o superfici)"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:925 a owl:Class ;
+    schema:name "Markante Einzelbäume"@de,
+        "Arbres isolés remarquables"@fr,
+        "Alberi isolati importanti"@it ;
+    rdfs:subClassOf cultivationtype:20 .
+
 cultivationtype:926 a owl:Class ;
     schema:name "Andere Bäume"@de,
         "Autres arbres"@fr,
@@ -1300,10 +1399,22 @@ cultivationtype:928 a owl:Class ;
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:929 a owl:Class ;
+    schema:name "Andere Elemente (Landschaftsqualität)"@de,
+        "Autres éléments (qualité du paysage)"@fr,
+        "Altri elementi (qualità del paesaggio)"@it ;
+    rdfs:subClassOf cultivationtype:20 .
+
 cultivationtype:930 a owl:Class ;
     schema:name "Sömmerungsweiden"@de,
         "Pâturages d’estivage"@fr,
         "Pascoli d’estivazione"@it ;
+    rdfs:subClassOf cultivationtype:13 .
+
+cultivationtype:931 a owl:Class ;
+    schema:name "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet"@de,
+        "Surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage"@fr,
+        "Superfici inerbite e terreni da strame ricchi di specie nella regione d'estivazione"@it ;
     rdfs:subClassOf cultivationtype:13 .
 
 cultivationtype:933 a owl:Class ;

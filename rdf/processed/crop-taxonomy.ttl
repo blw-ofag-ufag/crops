@@ -1328,6 +1328,12 @@ cultivationtype:858 a owl:Class ;
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
+cultivationtype:895 a owl:Class ;
+    rdfs:label "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
+        "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
+        "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
+    rdfs:subClassOf cultivationtype:10 .
+
 cultivationtype:897 a owl:Class ;
     rdfs:label "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
         "Autres surfaces dans la surface agricole utile, avec contributions"@fr,
@@ -1437,6 +1443,12 @@ cultivationtype:924 a owl:Class ;
         "Alberi indigeni isolati adatti al luogo e viali alberati (Punti o superfici)"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:925 a owl:Class ;
+    rdfs:label "Markante Einzelbäume"@de,
+        "Arbres isolés remarquables"@fr,
+        "Alberi isolati importanti"@it ;
+    rdfs:subClassOf cultivationtype:20 .
+
 cultivationtype:926 a owl:Class ;
     rdfs:label "Andere Bäume"@de,
         "Autres arbres"@fr,
@@ -1455,10 +1467,22 @@ cultivationtype:928 a owl:Class ;
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:929 a owl:Class ;
+    rdfs:label "Andere Elemente (Landschaftsqualität)"@de,
+        "Autres éléments (qualité du paysage)"@fr,
+        "Altri elementi (qualità del paesaggio)"@it ;
+    rdfs:subClassOf cultivationtype:20 .
+
 cultivationtype:930 a owl:Class ;
     rdfs:label "Sömmerungsweiden"@de,
         "Pâturages d’estivage"@fr,
         "Pascoli d’estivazione"@it ;
+    rdfs:subClassOf cultivationtype:13 .
+
+cultivationtype:931 a owl:Class ;
+    rdfs:label "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet"@de,
+        "Surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage"@fr,
+        "Superfici inerbite e terreni da strame ricchi di specie nella regione d'estivazione"@it ;
     rdfs:subClassOf cultivationtype:13 .
 
 cultivationtype:933 a owl:Class ;
@@ -1507,6 +1531,93 @@ cultivationtype:999 a owl:Class ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 ) ] ;
     :botanicalPlant taxon:1TRZG .
+
+cultivationtype:517 a owl:DeprecatedClass ;
+    rdfs:label "Getreide für die Saatgutproduktion"@de,
+        "Semences de céréales"@fr,
+        "Mais da semina (coltivazione contrattuale)"@it ;
+    rdfs:subClassOf cultivationtype:14 .
+
+cultivationtype:532 a owl:DeprecatedClass ;
+    rdfs:label "Hanf (THC-arme Sorten nach BLW-Sortenliste)"@de,
+        "Chanvre (sorte pauvre en THC selon liste OFAG)"@fr,
+        "Canapa (varietà a basso tenore in THC cfr. elenco delle varietà UFAG)"@it ;
+    rdfs:subClassOf cultivationtype:535 .
+
+cultivationtype:533 a owl:DeprecatedClass ;
+    rdfs:label "Hanf (andere Sorten)"@de,
+        "Chanvre (autres variétés)"@fr,
+        "Canapa (altre varietà)"@it ;
+    rdfs:subClassOf cultivationtype:535 .
+
+cultivationtype:558 a owl:DeprecatedClass ;
+    rdfs:label "Grünbrache (nur 1999)"@de,
+        "Jachères vertes (uniquement en 1999)"@fr,
+        "Maggesi verdi (1999)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:561 a owl:DeprecatedClass ;
+    rdfs:label "Rübsen für die Samenproduktion (Vertragsanbau)"@de,
+        "Navets destinés à la production de semences (contrat de culture)"@fr,
+        "Ravizzone per la produzione di sementi"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:562 a owl:DeprecatedClass ;
+    rdfs:label "Phacelia für die Samenproduktion (Vertragsanbau)"@de,
+        "Phacelia destinée à la production de semences (contrat de culture)"@fr,
+        "Facelia per la produzione di sementi"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:563 a owl:DeprecatedClass ;
+    rdfs:label "Übrige Kulturen für die Samenproduktion (Vertragsanbau)"@de,
+        "Autres cultures destinées à la production de semences (contrat de culture)"@fr,
+        "Altre colture per la produzione di sementi"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:564 a owl:DeprecatedClass ;
+    rdfs:label "Ackerschonstreifen Ölsaaten (Raps, Sonnenblumen, Lein)"@de,
+        "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
+        "Fasce di colture estensive in campicoltura - semi oleosi (colza, girasole, lino)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:565 a owl:DeprecatedClass ;
+    rdfs:label "Ackerschonstreifen Getreide"@de,
+        "Bande culturale extensive céréales"@fr,
+        "Fasce di colture estensive in campicoltura - cereali"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:571 a owl:DeprecatedClass ;
+    rdfs:label "Ackerschonstreifen Körnerleguminosen"@de,
+        "Bande culturale extensive Légumineuses"@fr,
+        "Fasce di colture estensive in campicoltura - leguminose a granelli"@it ;
+    rdfs:comment "Ackerschonstreifen Körnerleguminosen (Ackerbohnen, Eiweisserbsen, Lupinen und Mischungen mit Code 569)"@de,
+        "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
+        "Fasce di colture estensive in campicoltura - leguminose a granelli (favette, piselli proteici, lupini e miscele con codice 569)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:619 a owl:DeprecatedClass ;
+    rdfs:label "Weiden für Schweine, nicht anrechenbar für die Berechnung der RGVE"@de,
+        "Pâturages pour porcs, non imputables pour le calcul des UGBFG"@fr,
+        "Pascoli riservati ai suini e a pollame non computabili per il calcolo delle UBGFG"@it ;
+    rdfs:subClassOf cultivationtype:21 .
+
+cultivationtype:633 a owl:DeprecatedClass ;
+    rdfs:label "Übrige Futterpflanzen für die Samenproduktion (Vertragsanbau)"@de,
+        "Autres plantes fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Altre piante foraggiere per la produzione di sementi (coltivazione contrattuale)"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:695 a owl:DeprecatedClass ;
+    rdfs:label "Regionsspezifische Biodiversitätsförderfläche (Grünfläche)"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère)"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite)"@it ;
+    rdfs:subClassOf cultivationtype:21 .
+
+cultivationtype:716 a owl:DeprecatedClass ;
+    rdfs:label "Gepflegte Selven (Kastanien-/Nussbäume)"@de,
+        "Châtaigneraies / noiseraies entretenues"@fr,
+        "Selve curate di castagni e noci"@it ;
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype: a owl:Ontology ;
     dcterms:title "Kulturen-Taxonomie"@de,
