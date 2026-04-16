@@ -6,4 +6,4 @@ requests==2.32.3
 openpyxl==3.1.5
 pytest==9.0.3
 SPARQLWrapper==2.0.0
-pyshacl==1.2.1
+pyshacl==0.30.1
