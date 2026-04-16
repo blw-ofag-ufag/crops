@@ -36,7 +36,7 @@ cultivationtype:shape a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
 
     # require EITHER a parent class OR an intersection definition
-    sh:or (
+    sh:xone (
         [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
         [ sh:property [ sh:path owl:intersectionOf ; sh:minCount 1 ] ]
     ) ;
