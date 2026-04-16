@@ -25,6 +25,18 @@ Alternatively, we have built a [hierarchy viewer that allows you to visually ins
 > [!NOTE]
 > You may find more information on the [repository wiki](https://github.com/blw-ofag-ufag/crops/wiki).
 
+# Repository structure
+
+- `/data`: source data files
+- `/docs`: (static) html documents, rendered as github page
+- `/rdf`: all RDF (turtle) files
+  - `/data`: tabular data
+  - `/ontology`: core vocabulary, crop taxonomy
+  - `/processed`: any automatically written turtle files -- do not change (manually)
+  - `/shape`: dedicated files for SHACL shapes
+- `/src`: source code
+- `/tests`: pytest files
+
 # Run the data processing and LINDAS integration pipeline
 
 The data integration pipeline uses all the R and python scripts in the `/scripts` folder. The entire pipeline can be triggered with:
