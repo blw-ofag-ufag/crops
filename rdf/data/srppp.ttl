@@ -68,16 +68,16 @@ psm:ObservationConstraint a sh:NodeShape ;
         [
             sh:order 1 ;
             a cube:KeyDimension ;
-            sh:name "Identifikator"@de ;
-            sh:description "Der Identifikator aus Infofito. Neu ist das eine UUID."@de ;
+            schema:name "Identifikator"@de ;
+            schema:description "Der Identifikator aus Infofito. Neu ist das eine UUID."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
         ],
         [
             sh:order 2 ;
-            sh:name "Name"@de ;
-            sh:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
+            schema:name "Name"@de ;
+            schema:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
             sh:maxCount 4 ;
             sh:minCount 2 ;
             sh:languageIn ( "de" "fr" "it" "en" ) ;
@@ -85,7 +85,7 @@ psm:ObservationConstraint a sh:NodeShape ;
         ],
         [
             sh:order 3 ;
-            sh:name "Kultur"@de ;
+            schema:name "Kultur"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -93,7 +93,7 @@ psm:ObservationConstraint a sh:NodeShape ;
         ],
         [
             sh:order 4 ;
-            sh:name "Version"@de ;
+            schema:name "Version"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:version ;
