@@ -37,3 +37,6 @@ jobs:
       
       - name: Validate data input files
         run: pyshacl rdf/data/srppp.ttl --format human
+        run: pyshacl rdf/data/agis.ttl --format human
+        run: pyshacl rdf/data/naebi.ttl --format human
+        run: pyshacl rdf/ontology/cultivationtypes.ttl --format human
