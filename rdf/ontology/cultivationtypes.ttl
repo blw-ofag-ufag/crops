@@ -22,14 +22,6 @@ cultivationtype: a owl:Ontology ;
 # Run `pyshacl rdf/ontology/cultivationtypes.ttl --format human`
 # ==============================================================================
 
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix cultivationtype: <http://example.org/cultivationtype/> .
-@prefix : <http://example.org/ontology/> .
-
 cultivationtype:shape a sh:NodeShape ;
     sh:closed true ;
     sh:targetClass owl:Class, owl:DeprecatedClass ;
@@ -1528,11 +1520,7 @@ cultivationtype:999 a owl:Class ;
         "summer wheat"@en,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
-    owl:equivalentClass
-        [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 )
-        ] ;
+    owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 ) ;
     :botanicalPlant taxon:1TRZG .
 
 cultivationtype:1000 a owl:Class ;
@@ -1580,11 +1568,7 @@ cultivationtype:1007 a owl:Class ;
         "winter wheat"@en,
         "Blé d'automne"@fr,
         "Frumento autunnale"@it ;
-    owl:equivalentClass
-        [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:492 cultivationtype:19 )
-        ] .
+    owl:intersectionOf ( cultivationtype:492 cultivationtype:19 ) .
 
 cultivationtype:1008 a owl:Class ;
     schema:name "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
@@ -1597,18 +1581,11 @@ cultivationtype:1009 a owl:Class ;
 
 cultivationtype:1010 a owl:Class ;
     schema:name "Winterhafer"@de ;
-    owl:equivalentClass
-        [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:504 cultivationtype:19 )
-        ] .
+    owl:intersectionOf ( cultivationtype:504 cultivationtype:19 ) .
 
 cultivationtype:1011 a owl:Class ;
     schema:name "Sommerhafer"@de ;
-    owl:equivalentClass [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:504 cultivationtype:1000 )
-        ] .
+    owl:intersectionOf ( cultivationtype:504 cultivationtype:1000 ) .
 
 cultivationtype:1012 a owl:Class ;
     schema:name "Winterroggen"@de,
