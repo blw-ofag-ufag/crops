@@ -22,6 +22,9 @@ You may inspect the crop taxonomy/ontology using WebVOWL [here](https://service.
 
 Alternatively, we have built a [hierarchy viewer that allows you to visually inspect the hierarchical relationships](https://blw-ofag-ufag.github.io/crops/hierarchy/index.html) of the crops.
 
+> [!NOTE]
+> You may find more information on the [repository wiki](https://github.com/blw-ofag-ufag/crops/wiki).
+
 # Run the data processing and LINDAS integration pipeline
 
 The data integration pipeline uses all the R and python scripts in the `/scripts` folder. The entire pipeline can be triggered with:
