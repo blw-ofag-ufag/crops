@@ -18,7 +18,7 @@ This graph not only allows for complex queries across formerly siloed data but a
 
 The general data model is doumented [here](https://shacl-play.sparna.fr/play/doc?format=html_respec&url=https%3A%2F%2Fraw.githubusercontent.com%2Fblw-ofag-ufag%2Fcrops%2Frefs%2Fheads%2Fmain%2Frdf%2Fshape%2Fdata-model.ttl&includeDiagram=true&sectionDiagram=true). Note that *SHACL Play!* reads the data from `rdf/shape/data-model.ttl` on `main`.
 
-You may inspect the crop taxonomy/ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
+You may inspect the crop taxonomy/ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/processed/crop-taxonomy.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology/cultivationtypes.ttl).
 
 Alternatively, we have built a [hierarchy viewer that allows you to visually inspect the hierarchical relationships](https://blw-ofag-ufag.github.io/crops/hierarchy/index.html) of the crops.
 
