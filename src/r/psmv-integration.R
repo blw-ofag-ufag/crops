@@ -74,5 +74,12 @@ for (i in seq_len(nrow(crops))) {
     rdfhelper::uri("https://cube.link/observation"),
     uri
   )
+
+  # link to cultivation type
+  rdfhelper::triple(
+    uri,
+    rdfhelper::uri("cultivationtype", base),
+    rdfhelper::uri("https://cube.link/Undefined")
+  )
 }
 sink()
