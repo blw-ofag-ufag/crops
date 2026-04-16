@@ -14,17 +14,28 @@ This graph not only allows for complex queries across formerly siloed data but a
 
 [^1]: For example [AGIS (direct payments)](https://www.i14y.admin.ch/en/catalog/concepts/08dcabe2-1734-ca16-9dfe-262056c9c124/content), [GRUD (fertilization)](https://www.agroscope.admin.ch/agroscope/de/home/themen/pflanzenbau/ackerbau/grud.html), [PSM registry (plant protection)](https://www.psm.admin.ch/de/kulturen/bs/A), [ProVar (varieties)](https://www.blw.admin.ch/de/sortenschutz#Sortenschutzregister), [PGREL-NIS (gene bank)](https://www.blw.admin.ch/de/pgrel-nis) and others.
 
-# Inspect the hierarchy
+# Data model
 
-[This hierarchy viewer allows you to visually inspect the hierarchical relationships.](https://blw-ofag-ufag.github.io/crops/hierarchy/index.html)
+The general data model is doumented [here](https://shacl-play.sparna.fr/play/doc?format=html_respec&url=https%3A%2F%2Fraw.githubusercontent.com%2Fblw-ofag-ufag%2Fcrops%2Frefs%2Fheads%2Fmain%2Frdf%2Fshape%2Fdata-model.ttl&includeDiagram=true&sectionDiagram=true). Note that *SHACL Play!* reads the data from `rdf/shape/data-model.ttl` on `main`.
 
-# Inspect the ontology
+You may inspect the crop taxonomy/ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
 
-Inspect the ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology.ttl).
+Alternatively, we have built a [hierarchy viewer that allows you to visually inspect the hierarchical relationships](https://blw-ofag-ufag.github.io/crops/hierarchy/index.html) of the crops.
 
-# Documentation of the data model
+> [!NOTE]
+> You may find more information on the [repository wiki](https://github.com/blw-ofag-ufag/crops/wiki).
 
-The data model is doumented [here](https://shacl-play.sparna.fr/play/doc?format=html_respec&url=https%3A%2F%2Fraw.githubusercontent.com%2Fblw-ofag-ufag%2Fcrops%2Frefs%2Fheads%2Fmain%2Frdf%2Fshape%2Fdata-model.ttl&includeDiagram=true&sectionDiagram=true). Note that *SHACL Play!* reads the data from `rdf/shape/data-model.ttl` on `main`.
+# Repository structure
+
+- `/data`: source data files
+- `/docs`: (static) html documents, rendered as github page
+- `/rdf`: all RDF (turtle) files
+  - `/data`: tabular data
+  - `/ontology`: core vocabulary, crop taxonomy
+  - `/processed`: any automatically written turtle files -- do not change (manually)
+  - `/shape`: dedicated files for SHACL shapes
+- `/src`: source code
+- `/tests`: pytest files
 
 # Run the data processing and LINDAS integration pipeline
 
@@ -52,26 +63,6 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
 4. Choose whether or not to generate and upload geodata.ttl, which enables queries and depiction of crop areas.
 5. Make sure you pass all tests with `pytest tests`
 6. Check out the results on LINDAS.
-
-# Data mapping and unification
-
-Data about crops is often sourced from various systems, which can lead to duplicate entries for the same real-world concept. To create a clean and unified dataset, we employ a mapping process to consolidate these duplicates.
-
-This consolidation is defined in the `rdf/mapping.ttl` file. It uses the standard OWL property `owl:sameAs` to declare that two URIs refer to the same entity.
-
-For example, consider the following statement:
-
-```ttl
-@prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-
-:950 owl:sameAs :555 .
-```
-
-This statement establishes `:950` as the canonical (master) URI and `:555` as the duplicate. During the data integration pipeline, the `scripts/reason.py` script processes this mapping.
-In this example, all triples that use `:555` as a subject or object are automatically rewritten to use `:950` instead.
-Crucially, to avoid conflicting information, the canonical entity `:950` first loses all its properties for names and descriptions (specifically `schema:name` and `schema:description`).
-This ensures that the descriptive properties from the merged entity (`:555`) are cleanly transferred, creating a single, consistent record for the crop under the URI `:950`.
 
 # Explore the graph on LINDAS
 
