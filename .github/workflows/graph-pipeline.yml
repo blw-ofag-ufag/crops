@@ -34,3 +34,6 @@ jobs:
 
       - name: Execute ${{ matrix.test-file }}
         run: pytest ${{ matrix.test-file }} -v
+      
+      - name: Validate data input files
+        run: pyshacl rdf/data/srppp.ttl --format human
