@@ -36,7 +36,8 @@ jobs:
         run: pytest ${{ matrix.test-file }} -v
       
       - name: Validate data input files
-        run: pyshacl rdf/data/srppp.ttl --format human
-        run: pyshacl rdf/data/agis.ttl --format human
-        run: pyshacl rdf/data/naebi.ttl --format human
-        run: pyshacl rdf/ontology/cultivationtypes.ttl --format human
+        run: |
+          pyshacl rdf/data/srppp.ttl --format human
+          pyshacl rdf/data/agis.ttl --format human
+          pyshacl rdf/data/naebi.ttl --format human
+          pyshacl rdf/ontology/cultivationtypes.ttl --format human
