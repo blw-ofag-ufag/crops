@@ -32,8 +32,8 @@ psm: a void:Dataset,
     schema:contributor blw: ;
     schema:creativeWorkStatus status:Draft ;
     schema:creator blw: ;
-    schema:dateCreated "2026-03-09"^^xsd:date ;
-    schema:datePublished "2026-03-09"^^xsd:date ;
+    schema:dateCreated "2026-04-16"^^xsd:date ;
+    schema:datePublished "2026-04-16"^^xsd:date ;
     schema:description "Kulturen aus dem Pflanzenschutzmittelverzeichnis (PSM) und ihre Identifikatoren."@de,
         "Crops from the Plant Protection Products (PSM) registry and their identifiers."@en ;
     schema:name "PSM-Kulturen"@de,
