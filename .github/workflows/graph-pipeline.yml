@@ -11,9 +11,8 @@ jobs:
     name: Run Pytests Individually
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false # Prevents one failing test from cancelling the others
+      fail-fast: false
       matrix:
-        # Add test files to this array to run them in isolation
         test-file: 
           - tests/test_turtle_syntax.py
     
@@ -34,10 +33,32 @@ jobs:
 
       - name: Execute ${{ matrix.test-file }}
         run: pytest ${{ matrix.test-file }} -v
-      
-      - name: Validate data input files
+
+  validate:
+    name: Validate Data Input Files
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # Prevents one invalid file from cancelling the checks on the others
+      matrix:
+        ttl-file:
+          - rdf/data/srppp.ttl
+          - rdf/data/agis.ttl
+          - rdf/data/naebi.ttl
+          - rdf/ontology/cultivationtypes.ttl
+          
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pyshacl
         run: |
-          pyshacl rdf/data/srppp.ttl --format human
-          pyshacl rdf/data/agis.ttl --format human
-          pyshacl rdf/data/naebi.ttl --format human
-          pyshacl rdf/ontology/cultivationtypes.ttl --format human
+          python -m pip install --upgrade pip
+          pip install pyshacl 
+
+      - name: Validate ${{ matrix.ttl-file }}
+        run: pyshacl ${{ matrix.ttl-file }} --format human
