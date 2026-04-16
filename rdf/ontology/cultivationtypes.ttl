@@ -37,22 +37,24 @@ cultivationtype:shape a sh:NodeShape ;
     sh:property
     [
         sh:path schema:name ;
-        sh:minCount 3 ;
+        sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
-        sh:languageIn ( "de" "fr" "it" ) ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
     ],
     [
         sh:path schema:alternateName ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
-        sh:languageIn ( "de" "fr" "it" ) ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
     ],
     [
         sh:path schema:description ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
-        sh:languageIn ( "de" "fr" "it" ) ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
     ],
     [
         sh:path rdfs:subClassOf ;
@@ -347,8 +349,7 @@ cultivationtype:509 a owl:Class ;
         "Riso"@it ;
     schema:description "Der Anbau von Reis auf offener Fläche."@de ;
     rdfs:subClassOf cultivationtype:1033 ;
-    :botanicalPlant taxon:ORYSA ;
-    :cultivationMethod :11 .
+    :botanicalPlant taxon:ORYSA .
 
 cultivationtype:510 a owl:Class ;
     schema:name "Hartweizen"@de,
