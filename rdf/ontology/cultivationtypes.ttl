@@ -67,7 +67,7 @@ cultivationtype:shape a sh:NodeShape ;
         sh:nodeKind sh:IRI ;
     ],
     [
-        sh:path owl:intersectionOf ; 
+        sh:path owl:intersectionOf ;
     ],
     [
         sh:path :botanicalPlant ;
@@ -78,6 +78,11 @@ cultivationtype:shape a sh:NodeShape ;
         sh:path :intensity ;
         sh:nodeKind sh:IRI ;
         sh:maxCount 1 ;
+    ],
+    [
+        sh:path owl:disjointWith ;
+        sh:nodeKind sh:IRI ;
+        sh:node cultivationtype:shape ;
     ] .
 
 # ==============================================================================
