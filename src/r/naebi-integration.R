@@ -73,13 +73,25 @@ for (i in seq_len(nrow(crops))) {
     }
   }
 
+  # add observationset
+  obs_set_uri <- qname(PREFIXES, "naebi", "ObservationSet")
 
-  # link to cultivation type
+  # declare that this instance is a cube:ObservationSet
   rdfhelper::triple(
-    uri,
-    qname(PREFIXES, "base", "cultivationtype"),
-    rdfhelper::uri("https://cube.link/Undefined")
+    obs_set_uri,
+    qname(PREFIXES, "rdf", "type"),
+    qname(PREFIXES, "cube", "ObservationSet")
   )
+
+  # 3. link all URIs to set
+  for (obs_uri in crops$uri) {
+    rdfhelper::triple(
+      obs_set_uri,
+      qname(PREFIXES, "cube", "observation"),
+      obs_uri
+    )
+  }
+
 }
 
 sink()
