@@ -53,7 +53,7 @@ for (i in seq_len(nrow(crops))) {
   rdfhelper::triple(
     uri,
     qname(PREFIXES, "schema", "identifier"),
-    rdfhelper::typed(id, "ID")
+    rdfhelper::typed(id, "string")
   )
 
 
