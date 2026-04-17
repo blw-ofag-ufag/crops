@@ -358,10 +358,9 @@ cultivationtype:56 a owl:Class ;
     rdfs:subClassOf cultivationtype:247 .
 
 cultivationtype:57 a owl:Class ;
-    schema:name "Süssgräser (Poaceae)"@de,
-        "poacées (Gramineae)"@fr,
-        "Poacee (Graminaceae)"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    schema:name "Süssgräser-Gemüse"@de ;
+    schema:description "Süssgrässer im Gemüsebau."@de ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:58 a owl:Class ;
     schema:name "Chinakohl"@de,
@@ -459,7 +458,7 @@ cultivationtype:95 a owl:Class ;
     schema:name "Korbblütler (Asteraceae)"@de,
         "composées (Asteracea)"@fr,
         "Composite (Asteracee)"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:103 a owl:Class ;
     schema:name "Blattsalate (Asteraceae)"@de,
@@ -531,7 +530,7 @@ cultivationtype:120 a owl:Class ;
     schema:name "Knöterichgewächse (Polygonaceae)"@de,
         "polygonacées"@fr,
         "Poligonacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:124 a owl:Class ;
     schema:name "Bohnen mit Hülsen"@de,
@@ -665,7 +664,7 @@ cultivationtype:175 a owl:Class ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
         "solanacées"@fr,
         "Solanacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:179 a owl:Class ;
     schema:name "Endivien"@de,
@@ -683,7 +682,7 @@ cultivationtype:188 a owl:Class ;
     schema:name "Liliengewächse (Liliaceae)"@de,
         "liliacées"@fr,
         "Liliacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:189 a owl:Class ;
     schema:name "Zuckermais"@de,
@@ -740,7 +739,7 @@ cultivationtype:209 a owl:Class ;
     schema:name "Baldriangewächse (Valerianaceae)"@de,
         "valérianacées"@fr,
         "Valerianacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:211 a owl:Class ;
     schema:name "Rhabarber"@de,
@@ -821,7 +820,7 @@ cultivationtype:235 a owl:Class ;
     schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
         "cucurbitacées"@fr,
         "Cucurbitacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:237 a owl:Class ;
     schema:name "Markstammkohl"@de,
@@ -1129,7 +1128,7 @@ cultivationtype:477 a owl:Class ;
     schema:name "Speisepilze"@de,
         "champignons comestibles"@fr,
         "Funghi commestibili"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:478 a owl:Class ;
     schema:name "Salbei"@de,
@@ -1827,27 +1826,27 @@ cultivationtype:619 a owl:DeprecatedClass ;
         "Pascoli riservati ai suini e a pollame non computabili per il calcolo delle UBGFG"@it ;
     rdfs:subClassOf cultivationtype:21 .
 
-cultivationtype:621 a owl:Class ;
+cultivationtype:221 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
         "Prairies de fauche en région d’estivage, autres"@fr,
         "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
     rdfs:subClassOf cultivationtype:480 .
 
-cultivationtype:622 a owl:Class ;
+cultivationtype:222 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
         "Prairies de fauche en région d’estivage, type prairie extensive"@fr,
         "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it ;
     rdfs:subClassOf cultivationtype:480 ;
     :intensity :21 .
 
-cultivationtype:623 a owl:Class ;
+cultivationtype:223 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
         "Prairies de fauche en région d’estivage, type prairie peu intensive"@fr,
         "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
     rdfs:subClassOf cultivationtype:480 ;
     :intensity :22 .
 
-cultivationtype:625 a owl:Class ;
+cultivationtype:225 a owl:Class ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;

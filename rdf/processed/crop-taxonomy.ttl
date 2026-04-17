@@ -285,7 +285,7 @@ cultivationtype:120 a owl:Class ;
     rdfs:label "Knöterichgewächse (Polygonaceae)"@de,
         "polygonacées"@fr,
         "Poligonacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:124 a owl:Class ;
     rdfs:label "Bohnen mit Hülsen"@de,
@@ -449,7 +449,7 @@ cultivationtype:175 a owl:Class ;
     rdfs:label "Nachtschattengewächse (Solanaceae)"@de,
         "solanacées"@fr,
         "Solanacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:179 a owl:Class ;
     rdfs:label "Endivien"@de,
@@ -471,7 +471,7 @@ cultivationtype:188 a owl:Class ;
     rdfs:label "Liliengewächse (Liliaceae)"@de,
         "liliacées"@fr,
         "Liliacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:189 a owl:Class ;
     rdfs:label "Zuckermais"@de,
@@ -546,7 +546,7 @@ cultivationtype:209 a owl:Class ;
     rdfs:label "Baldriangewächse (Valerianaceae)"@de,
         "valérianacées"@fr,
         "Valerianacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:21 a owl:Class ;
     rdfs:label "Dauergrünfläche"@de ;
@@ -586,9 +586,27 @@ cultivationtype:22 a owl:Class ;
 
 cultivationtype:221 a owl:Class ;
     rdfs:label "Erbsen ohne Hülsen"@de,
+        "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
+        "Prairies de fauche en région d’estivage, autres"@fr,
         "pois écossés"@fr,
-        "Piselli senza baccello"@it ;
-    rdfs:subClassOf cultivationtype:191 .
+        "Piselli senza baccello"@it,
+        "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
+    rdfs:subClassOf cultivationtype:191,
+        cultivationtype:480 .
+
+cultivationtype:222 a owl:Class ;
+    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d’estivage, type prairie extensive"@fr,
+        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it ;
+    rdfs:subClassOf cultivationtype:480 ;
+    :intensity :21 .
+
+cultivationtype:223 a owl:Class ;
+    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d’estivage, type prairie peu intensive"@fr,
+        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
+    rdfs:subClassOf cultivationtype:480 ;
+    :intensity :22 .
 
 cultivationtype:224 a owl:Class ;
     rdfs:label "Topinambur"@de,
@@ -597,10 +615,14 @@ cultivationtype:224 a owl:Class ;
     rdfs:subClassOf cultivationtype:95 .
 
 cultivationtype:225 a owl:Class ;
-    rdfs:label "Zucchetti"@de,
+    rdfs:label "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Zucchetti"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
         "courgette"@fr,
+        "Pascoli boschivi (senza i boschi)"@it,
         "Zucchine"@it ;
-    rdfs:subClassOf cultivationtype:40 .
+    rdfs:subClassOf cultivationtype:3,
+        cultivationtype:40 .
 
 cultivationtype:228 a owl:Class ;
     rdfs:label "Ölkürbisse"@de,
@@ -612,6 +634,14 @@ cultivationtype:229 a owl:Class ;
     rdfs:label "Schnittmangold"@de,
         "bette à tondre"@fr,
         "Bietola da taglio"@it ;
+    schema:alternateName "Beisskohl"@de,
+        "Blattmangold"@de,
+        "bette à feuilles"@fr,
+        "bette-épinard"@fr,
+        "blette"@fr,
+        "poirée"@fr,
+        "bietola da foglia"@it,
+        "erbetta"@it ;
     rdfs:subClassOf cultivationtype:321 .
 
 cultivationtype:23 a owl:Class ;
@@ -635,7 +665,7 @@ cultivationtype:235 a owl:Class ;
     rdfs:label "Kürbisgewächse (Cucurbitaceae)"@de,
         "cucurbitacées"@fr,
         "Cucurbitacee"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:237 a owl:Class ;
     rdfs:label "Markstammkohl"@de,
@@ -1015,7 +1045,7 @@ cultivationtype:477 a owl:Class ;
     rdfs:label "Speisepilze"@de,
         "champignons comestibles"@fr,
         "Funghi commestibili"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:478 a owl:Class ;
     rdfs:label "Salbei"@de,
@@ -1504,10 +1534,9 @@ cultivationtype:569 a owl:Class ;
     rdfs:subClassOf cultivationtype:18 .
 
 cultivationtype:57 a owl:Class ;
-    rdfs:label "Süssgräser (Poaceae)"@de,
-        "poacées (Gramineae)"@fr,
-        "Poacee (Graminaceae)"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:label "Süssgräser-Gemüse"@de ;
+    rdfs:comment "Süssgrässer im Gemüsebau."@de ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:570 a owl:Class ;
     rdfs:label "Mischungen von Linsen mit Getreide oder Leindotter"@de,
@@ -1693,32 +1722,6 @@ cultivationtype:617 a owl:Class ;
     :intensity :21 .
 
 cultivationtype:618 a owl:Class ;
-    rdfs:label "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
-        "Pascoli boschivi (senza i boschi)"@it ;
-    rdfs:subClassOf cultivationtype:3 .
-
-cultivationtype:621 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
-        "Prairies de fauche en région d’estivage, autres"@fr,
-        "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
-    rdfs:subClassOf cultivationtype:480 .
-
-cultivationtype:622 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
-        "Prairies de fauche en région d’estivage, type prairie extensive"@fr,
-        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it ;
-    rdfs:subClassOf cultivationtype:480 ;
-    :intensity :21 .
-
-cultivationtype:623 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
-        "Prairies de fauche en région d’estivage, type prairie peu intensive"@fr,
-        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
-    rdfs:subClassOf cultivationtype:480 ;
-    :intensity :22 .
-
-cultivationtype:625 a owl:Class ;
     rdfs:label "Waldweiden (ohne bewaldete Fläche)"@de,
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
@@ -1982,6 +1985,13 @@ cultivationtype:76 a owl:Class ;
         "Swiss chard"@en,
         "bette à côte"@fr,
         "Costa"@it ;
+    schema:alternateName "Rippenmangold"@de,
+        "Stielmangold"@de,
+        "bette à carde"@fr,
+        "carde"@fr,
+        "poirée à carde"@fr,
+        "bietola a coste"@it,
+        "bietola da coste"@it ;
     rdfs:subClassOf cultivationtype:321 .
 
 cultivationtype:760 a owl:Class ;
@@ -2371,7 +2381,7 @@ cultivationtype:95 a owl:Class ;
     rdfs:label "Korbblütler (Asteraceae)"@de,
         "composées (Asteracea)"@fr,
         "Composite (Asteracee)"@it ;
-    rdfs:subClassOf cultivationtype:62 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:950 a owl:Class ;
     rdfs:label "Ackerschonstreifen"@de,
