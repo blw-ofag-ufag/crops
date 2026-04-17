@@ -27,10 +27,21 @@ cultivationtype:shape a sh:NodeShape ;
     sh:targetClass owl:Class, owl:DeprecatedClass ;
     sh:ignoredProperties ( rdf:type ) ;
 
-    # require EITHER a parent class OR an intersection definition
+    # Require EXACTLY ONE of the following relationships:
+    # - a parent class (rdfs:subClassOf),
+    # - an intersection definition (owl:intersectionOf),
+    # - or being part of a parent's unionOf list (^owl:unionOf).
     sh:xone (
         [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
         [ sh:property [ sh:path owl:intersectionOf ; sh:minCount 1 ] ]
+        [ sh:property [ 
+            sh:path (
+                [ sh:inversePath rdf:first ]
+                [ sh:zeroOrMorePath [ sh:inversePath rdf:rest ] ]
+                [ sh:inversePath owl:unionOf ]
+            ) ; 
+            sh:minCount 1 
+        ] ]
     ) ;
 
     # global property definitions
