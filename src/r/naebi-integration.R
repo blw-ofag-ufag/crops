@@ -25,7 +25,7 @@ crops <- data.frame(
 
 # generate .ttl file
 
-sink("test.ttl")
+sink("rdf/processed/naebi.ttl")
 write_global_prefixes(PREFIXES)
 
 for (i in seq_len(nrow(crops))) {
