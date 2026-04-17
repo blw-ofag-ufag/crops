@@ -6,8 +6,7 @@ INSERT {
   ?subjectClass rdfs:subClassOf ?intersectedClass .
 }
 WHERE {
-  ?subjectClass owl:equivalentClass ?equivNode .  
-  ?equivNode owl:intersectionOf ?listHead .  
+  ?subjectClass owl:intersectionOf ?listHead .  
   ?listHead rdf:rest*/rdf:first ?intersectedClass .
   FILTER(isIRI(?intersectedClass) || isBlank(?intersectedClass))
 }

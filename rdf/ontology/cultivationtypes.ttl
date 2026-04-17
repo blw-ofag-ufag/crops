@@ -77,6 +77,9 @@ cultivationtype:shape a sh:NodeShape ;
         sh:path owl:disjointWith ;
         sh:nodeKind sh:IRI ;
         sh:node cultivationtype:shape ;
+    ],
+    [
+        sh:path owl:unionOf ;
     ] .
 
 # ==============================================================================
@@ -222,6 +225,55 @@ cultivationtype:21 a owl:Class ;
     schema:alternateName "Dauergrünland"@de ;
     schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
     rdfs:subClassOf :Cultivation .
+
+cultivationtype:22 a owl:Class ;
+    schema:name "Gemüsebau"@de,
+        "Vegetable Production"@en ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf (
+        cultivationtype:812
+        cultivationtype:811
+        cultivationtype:802
+        cultivationtype:801
+        cultivationtype:546
+        cultivationtype:545
+    ) .
+
+# Declare that all specific vegetable cultivation types are mutually exclusive
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:812
+        cultivationtype:811
+        cultivationtype:802
+        cultivationtype:801
+        cultivationtype:546
+        cultivationtype:545
+    ) .
+
+cultivationtype:26 a owl:Class ;
+    schema:name "Spargelgewächse"@de,
+        "asparagacées"@fr,
+        "Asparagacee"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:51 a owl:Class ;
+    schema:name "Spargel"@de,
+        "asperge"@fr,
+        "Asparagi"@it ;
+    rdfs:subClassOf cultivationtype:26 .
+
+cultivationtype:67 a owl:Class ;
+    schema:name "Küchenkräuter"@de,
+        "fines herbes"@fr,
+        "Erbette da cucina"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:300 a owl:Class ;
+    schema:name "Gänsefussgewächse"@de,
+        "chénopodiacées"@fr,
+        "Chenopodiacee"@it ;
+    rdfs:subClassOf cultivationtype:22 ;
+    :botanicalPlant taxon:1CHES .
 
 cultivationtype:480 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;

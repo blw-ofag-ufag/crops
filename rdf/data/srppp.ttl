@@ -642,7 +642,7 @@ psm:117 a cube:Observation ;
         "crosnes du japon"@fr,
         "Tuberina"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:117 .
 
 psm:118 a cube:Observation ;
     schema:identifier "0A5F3E91-96B9-4C6D-B99C-2E6E4835F6D5"^^xsd:ID ;
@@ -2043,7 +2043,7 @@ psm:26 a cube:Observation ;
         "asparagacées (Asparagaceae)"@fr,
         "Asparagacee (Asparagaceae)"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:26 .
 
 psm:260 a cube:Observation ;
     schema:identifier "9AA59D6B-D6AA-49BE-8BF8-A7A53BE54759"^^xsd:ID ;
@@ -2451,7 +2451,7 @@ psm:300 a cube:Observation ;
         "chénopodiacées"@fr,
         "Chenopodiacee"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:300 .
 
 psm:301 a cube:Observation ;
     schema:identifier "19C5BA72-A0D5-4409-8D05-0A7C9D821E20"^^xsd:ID ;
@@ -2970,7 +2970,7 @@ psm:51 a cube:Observation ;
         "asperge"@fr,
         "Asparagi"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:51 .
 
 psm:52 a cube:Observation ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926"^^xsd:ID ;
@@ -3071,7 +3071,7 @@ psm:62 a cube:Observation ;
     schema:name "allg. Gemüsebau"@de,
         "domaine app. maraîchère"@fr ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:22 .
 
 psm:63 a cube:Observation ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6"^^xsd:ID ;
@@ -3114,7 +3114,7 @@ psm:67 a cube:Observation ;
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:67 .
 
 psm:68 a cube:Observation ;
     schema:identifier "D3CD23DC-4C49-4EE5-8BF8-6B074E74352A"^^xsd:ID ;

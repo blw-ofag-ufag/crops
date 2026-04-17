@@ -12,6 +12,9 @@
 [] a owl:AllDisjointClasses ;
     owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
 
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:812 cultivationtype:811 cultivationtype:802 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
+
 cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
         "Terres cultivées"@fr,
@@ -270,12 +273,31 @@ cultivationtype:21 a owl:Class ;
     rdfs:comment "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:22 a owl:Class ;
+    rdfs:label "Gemüsebau"@de,
+        "Vegetable Production"@en ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:812 cultivationtype:811 cultivationtype:802 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
+
+cultivationtype:26 a owl:Class ;
+    rdfs:label "Spargelgewächse"@de,
+        "asparagacées"@fr,
+        "Asparagacee"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
 cultivationtype:3 a owl:Class ;
     rdfs:label "Dauerweiden"@de,
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
     rdfs:comment "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche (Art. 19 LBV)."@de ;
     rdfs:subClassOf cultivationtype:21 .
+
+cultivationtype:300 a owl:Class ;
+    rdfs:label "Gänsefussgewächse"@de,
+        "chénopodiacées"@fr,
+        "Chenopodiacee"@it ;
+    rdfs:subClassOf cultivationtype:22 ;
+    :botanicalPlant taxon:1CHES .
 
 cultivationtype:4 a owl:Class ;
     rdfs:label "Reben"@de,
@@ -415,8 +437,13 @@ cultivationtype:509 a owl:Class ;
         "Riso"@it ;
     rdfs:comment "Der Anbau von Reis auf offener Fläche."@de ;
     rdfs:subClassOf cultivationtype:1033 ;
-    :botanicalPlant taxon:ORYSA ;
-    :cultivationMethod :11 .
+    :botanicalPlant taxon:ORYSA .
+
+cultivationtype:51 a owl:Class ;
+    rdfs:label "Spargel"@de,
+        "asperge"@fr,
+        "Asparagi"@it ;
+    rdfs:subClassOf cultivationtype:26 .
 
 cultivationtype:510 a owl:Class ;
     rdfs:label "Hartweizen"@de,
@@ -972,6 +999,12 @@ cultivationtype:660 a owl:Class ;
         "Autres pâturages permanentes, avec contributions, agrégée"@fr,
         "Altri pascoli perenni, con contributi, aggregata"@it ;
     rdfs:subClassOf cultivationtype:3 .
+
+cultivationtype:67 a owl:Class ;
+    rdfs:label "Küchenkräuter"@de,
+        "fines herbes"@fr,
+        "Erbette da cucina"@it ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:693 a owl:Class ;
     rdfs:label "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
@@ -1623,13 +1656,14 @@ cultivationtype:shape a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" ) ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:nodeKind sh:Literal ;
             sh:path schema:alternateName ],
         [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" ) ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:nodeKind sh:Literal ;
-            sh:path schema:description ],
+            sh:path schema:description ;
+            sh:uniqueLang true ],
         [ sh:nodeKind sh:IRI ;
             sh:path rdfs:subClassOf ],
         [ sh:path owl:intersectionOf ],
@@ -1643,10 +1677,11 @@ cultivationtype:shape a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:path owl:disjointWith ],
         [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" ) ;
-            sh:minCount 3 ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:path schema:name ] ;
+            sh:path schema:name ;
+            sh:uniqueLang true ] ;
     sh:targetClass owl:Class,
         owl:DeprecatedClass ;
     sh:xone ( [ sh:property [ sh:minCount 1 ;
