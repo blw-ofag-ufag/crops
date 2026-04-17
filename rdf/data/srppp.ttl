@@ -1,6 +1,6 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix psm: <https://agriculture.ld.admin.ch/crops/psm/1/> .
-@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 
 @prefix cube: <https://cube.link/> .
 @prefix meta: <https://cube.link/meta/> .
@@ -509,7 +509,7 @@ psm:103 a cube:Observation ;
         "laitues à tondre (Asteraceae)"@fr,
         "Insalate a foglie (Asteracee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:103 .
+    :cultivationType ct:103 .
 
 psm:104 a cube:Observation ;
     schema:identifier "9B8F475B-C6FA-4642-9CD8-89A98A293D50"^^xsd:ID ;
@@ -526,7 +526,7 @@ psm:105 a cube:Observation ;
         "salades lactuca"@fr,
         "Insalate del genere Lactuca"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:105 .
+    :cultivationType ct:105 .
 
 psm:106 a cube:Observation ;
     schema:identifier "3C2F424F-DFA0-4A59-A3DF-6E33A6B0B97E"^^xsd:ID ;
@@ -535,7 +535,7 @@ psm:106 a cube:Observation ;
         "basilic"@fr,
         "Basilico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:106 .
+    :cultivationType ct:106 .
 
 psm:107 a cube:Observation ;
     schema:identifier "2AB457D1-DB9D-4545-92FF-04A6BD2CEC08"^^xsd:ID ;
@@ -544,7 +544,7 @@ psm:107 a cube:Observation ;
         "carotte"@fr,
         "Carote"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:107 .
+    :cultivationType ct:107 .
 
 psm:108 a cube:Observation ;
     schema:identifier "2A05DA01-5722-46A2-BCCF-3B75C6D17BB6"^^xsd:ID ;
@@ -562,7 +562,7 @@ psm:109 a cube:Observation ;
         "cerfeuil"@fr,
         "Cerfoglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:109 .
+    :cultivationType ct:109 .
 
 psm:11 a cube:Observation ;
     schema:identifier "9BA6BDE9-AD45-4F91-A190-708D39AD5B63"^^xsd:ID ;
@@ -580,7 +580,7 @@ psm:110 a cube:Observation ;
         "artichaut"@fr,
         "Carciofi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:110 .
+    :cultivationType ct:110 .
 
 psm:111 a cube:Observation ;
     schema:identifier "1E129025-DFD8-42D1-8A86-D90485B282A1"^^xsd:ID ;
@@ -589,7 +589,7 @@ psm:111 a cube:Observation ;
         "chou-fleur"@fr,
         "Cavolfiore"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:111 .
+    :cultivationType ct:111 .
 
 psm:112 a cube:Observation ;
     schema:identifier "1D9F568C-5170-43A1-86B9-B25808DD6A43"^^xsd:ID ;
@@ -642,7 +642,7 @@ psm:117 a cube:Observation ;
         "crosnes du japon"@fr,
         "Tuberina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:117 .
+    :cultivationType ct:117 .
 
 psm:118 a cube:Observation ;
     schema:identifier "0A5F3E91-96B9-4C6D-B99C-2E6E4835F6D5"^^xsd:ID ;
@@ -732,7 +732,7 @@ psm:126 a cube:Observation ;
         "pommier"@fr,
         "Melo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype::702 .
+    :cultivationType ct::702 .
 
 psm:127 a cube:Observation ;
     schema:identifier "F730D531-B0C8-4A20-AC4B-4F86445E2491"^^xsd:ID ;
@@ -865,7 +865,7 @@ psm:14 a cube:Observation ;
         "livèche"@fr,
         "Levistico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:479 .
+    :cultivationType ct:479 .
 
 psm:140 a cube:Observation ;
     schema:identifier "B92BA12C-EA9D-4EA8-ADEE-A4547872DD58"^^xsd:ID ;
@@ -962,7 +962,7 @@ psm:15 a cube:Observation ;
         "sauge"@fr,
         "Salvia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:478 .
+    :cultivationType ct:478 .
 
 psm:150 a cube:Observation ;
     schema:identifier "77462EAB-3BD3-4EAC-B740-F95597FFAE35"^^xsd:ID ;
@@ -1032,7 +1032,7 @@ psm:157 a cube:Observation ;
         "sarriette"@fr,
         "Santoreggia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:157 .
+    :cultivationType ct:157 .
 
 psm:158 a cube:Observation ;
     schema:identifier "56884AC3-B629-440D-8E82-05075A18697F"^^xsd:ID ;
@@ -1225,7 +1225,7 @@ psm:177 a cube:Observation ;
         "vigne"@fr,
         "Vite"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:177 .
+    :cultivationType ct:177 .
 
 psm:178 a cube:Observation ;
     schema:identifier "6569FC94-60C5-4608-8926-D76D2009B284"^^xsd:ID ;
@@ -1251,7 +1251,7 @@ psm:18 a cube:Observation ;
         "chou de Bruxelles"@fr,
         "Cavoli di Bruxelles"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:473 .
+    :cultivationType ct:473 .
 
 psm:180 a cube:Observation ;
     schema:identifier "6388D9E7-CD0D-4823-80DD-E6FA472AF12C"^^xsd:ID ;
@@ -1375,7 +1375,7 @@ psm:192 a cube:Observation ;
         "carvi"@fr,
         "Carvi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:192 .
+    :cultivationType ct:192 .
 
 psm:193 a cube:Observation ;
     schema:identifier "7AB6690B-B2B9-4F12-AFAE-A9B0222C2637"^^xsd:ID ;
@@ -1452,7 +1452,7 @@ psm:20 a cube:Observation ;
         "choux à feuilles"@fr,
         "Cavoli fogliacei"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:475 .
+    :cultivationType ct:475 .
 
 psm:200 a cube:Observation ;
     schema:identifier "3E4AFACC-03CA-4CEC-8392-520B07DDC604"^^xsd:ID ;
@@ -1508,7 +1508,7 @@ psm:205 a cube:Observation ;
         "Camomille romaine"@fr,
         "Camomilla romana"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:205 .
+    :cultivationType ct:205 .
 
 psm:206 a cube:Observation ;
     schema:identifier "269900C0-F407-4AFA-B3F2-D857EDACB733"^^xsd:ID ;
@@ -1553,7 +1553,7 @@ psm:21 a cube:Observation ;
         "aubergine"@fr,
         "Melanzana"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:474 .
+    :cultivationType ct:474 .
 
 psm:210 a cube:Observation ;
     schema:identifier "287584B7-E43E-494B-84C2-D13B2C9C3736"^^xsd:ID ;
@@ -1643,7 +1643,7 @@ psm:219 a cube:Observation ;
         "ciboulette"@fr,
         "Erba cipollina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:219 .
+    :cultivationType ct:219 .
 
 psm:22 a cube:Observation ;
     schema:identifier "657E4B0A-50BD-424B-9DB4-1B84582AD3D7"^^xsd:ID ;
@@ -1765,7 +1765,7 @@ psm:231 a cube:Observation ;
         "aneth"@fr,
         "Aneto"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:231 .
+    :cultivationType ct:231 .
 
 psm:232 a cube:Observation ;
     schema:identifier "874850AA-2F48-47B6-A789-C67D6DEE97DA"^^xsd:ID ;
@@ -1979,7 +1979,7 @@ psm:253 a cube:Observation ;
         "estragon"@fr,
         "Dragoncello"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:253 .
+    :cultivationType ct:253 .
 
 psm:254 a cube:Observation ;
     schema:identifier "A8647F38-2A16-46AB-8B0E-2257EBF53C63"^^xsd:ID ;
@@ -2043,7 +2043,7 @@ psm:26 a cube:Observation ;
         "asparagacées (Asparagaceae)"@fr,
         "Asparagacee (Asparagaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:26 .
+    :cultivationType ct:26 .
 
 psm:260 a cube:Observation ;
     schema:identifier "9AA59D6B-D6AA-49BE-8BF8-A7A53BE54759"^^xsd:ID ;
@@ -2079,7 +2079,7 @@ psm:263 a cube:Observation ;
         "lamiacées (Labiatae)"@fr,
         "Lamiacee (Labiatae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:263 .
+    :cultivationType ct:263 .
 
 psm:264 a cube:Observation ;
     schema:identifier "BB923645-6E65-48EE-9C64-DA2232EEE7EF"^^xsd:ID ;
@@ -2125,7 +2125,7 @@ psm:268 a cube:Observation ;
         "thym"@fr,
         "Timo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:268 .
+    :cultivationType ct:268 .
 
 psm:269 a cube:Observation ;
     schema:identifier "68688AEC-44E2-490B-AC80-E8DEDCC82B8F"^^xsd:ID ;
@@ -2215,7 +2215,7 @@ psm:277 a cube:Observation ;
         "oignon"@fr,
         "Cipolle"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:277 .
 
 psm:278 a cube:Observation ;
     schema:identifier "CC9D982D-A99F-4143-8298-BC029BD1D1AD"^^xsd:ID ;
@@ -2225,7 +2225,7 @@ psm:278 a cube:Observation ;
         "roquette"@fr,
         "Rucola"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:278 .
 
 psm:279 a cube:Observation ;
     schema:identifier "C38D7DE4-C804-4F7C-AA2F-A536D03E0DFC"^^xsd:ID ;
@@ -2270,7 +2270,7 @@ psm:282 a cube:Observation ;
         "navet à tondre"@fr,
         "Cavoli / rape da taglio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:282 .
 
 psm:283 a cube:Observation ;
     schema:identifier "CF9B4B3C-DCDC-4E2E-A613-D784936842D2"^^xsd:ID ;
@@ -2331,7 +2331,7 @@ psm:289 a cube:Observation ;
         "rondini"@fr,
         "Rondini"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:289 .
 
 psm:29 a cube:Observation ;
     schema:identifier "36EC3084-D6AE-494D-A5B2-EC39DCC4F412"^^xsd:ID ;
@@ -2348,7 +2348,7 @@ psm:290 a cube:Observation ;
         "choux"@fr,
         "Cavoli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:290 .
+    :cultivationType ct:290 .
 
 psm:291 a cube:Observation ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7"^^xsd:ID ;
@@ -2406,7 +2406,7 @@ psm:297 a cube:Observation ;
         "melons"@fr,
         "Meloni"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:297 .
 
 psm:298 a cube:Observation ;
     schema:identifier "3A522DC8-E6D3-426D-AA99-65C148ED1A84"^^xsd:ID ;
@@ -2425,7 +2425,7 @@ psm:299 a cube:Observation ;
         "menthe"@fr,
         "Menta"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:299 .
+    :cultivationType ct:299 .
 
 psm:3 a cube:Observation ;
     schema:identifier "A8BAC5BB-239F-4EE0-8CE2-F55590DA3FC0"^^xsd:ID ;
@@ -2434,7 +2434,7 @@ psm:3 a cube:Observation ;
         "haricots"@fr,
         "Fagioli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:476 .
+    :cultivationType ct:476 .
 
 psm:30 a cube:Observation ;
     schema:identifier "2F7BD13A-BAA5-4708-83C6-17D44E57EA4D"^^xsd:ID ;
@@ -2451,7 +2451,7 @@ psm:300 a cube:Observation ;
         "chénopodiacées"@fr,
         "Chenopodiacee"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:300 .
+    :cultivationType ct:300 .
 
 psm:301 a cube:Observation ;
     schema:identifier "19C5BA72-A0D5-4409-8D05-0A7C9D821E20"^^xsd:ID ;
@@ -2460,7 +2460,7 @@ psm:301 a cube:Observation ;
         "cresson de fontaine"@fr,
         "Crescione acquatico"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:301 .
 
 psm:302 a cube:Observation ;
     schema:identifier "0DAB25B6-C3AA-430B-BF83-05FA66D889A4"^^xsd:ID ;
@@ -2469,7 +2469,7 @@ psm:302 a cube:Observation ;
         "coriandre"@fr,
         "Coriandolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:302 .
+    :cultivationType ct:302 .
 
 psm:303 a cube:Observation ;
     schema:identifier "048FDB44-710A-4801-849C-72F1A458DB82"^^xsd:ID ;
@@ -2487,7 +2487,7 @@ psm:304 a cube:Observation ;
         "tomates, spécialités"@fr,
         "Varietà particolari di pomodoro"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:304 .
 
 psm:305 a cube:Observation ;
     schema:identifier "086E34F3-82E5-4F92-9224-41C9F7529E70"^^xsd:ID ;
@@ -2506,7 +2506,7 @@ psm:306 a cube:Observation ;
         "persil à grosse racine"@fr,
         "Prezzemolo tuberoso"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:306 .
 
 psm:307 a cube:Observation ;
     schema:identifier "2260B6A9-FC51-4F50-8E8F-D39BC6D5DA3A"^^xsd:ID ;
@@ -2525,7 +2525,7 @@ psm:308 a cube:Observation ;
         "romarin"@fr,
         "Rosmarino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:308 .
+    :cultivationType ct:308 .
 
 psm:309 a cube:Observation ;
     schema:identifier "0F5F1FEE-084C-4961-A76F-82F9B17B2635"^^xsd:ID ;
@@ -2561,7 +2561,7 @@ psm:311 a cube:Observation ;
         "persil"@fr,
         "Prezzemolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:311 .
+    :cultivationType ct:311 .
 
 psm:312 a cube:Observation ;
     schema:identifier "1B9B39A9-D742-4E8D-A88E-280B65C4B913"^^xsd:ID ;
@@ -2586,7 +2586,7 @@ psm:314 a cube:Observation ;
         "pâtisson"@fr,
         "Patisson"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:314 .
 
 psm:315 a cube:Observation ;
     schema:identifier "34753E17-C34D-4D0B-88A0-91143DADABB2"^^xsd:ID ;
@@ -2610,7 +2610,7 @@ psm:317 a cube:Observation ;
         "portulacacées (Portulacaceae)"@fr,
         "Portulacee (Portulacaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:317 .
+    :cultivationType ct:317 .
 
 psm:318 a cube:Observation ;
     schema:identifier "230F7417-5500-4124-B273-95AA1FFB940B"^^xsd:ID ;
@@ -2636,7 +2636,7 @@ psm:32 a cube:Observation ;
         "concombre"@fr,
         "Cetrioli"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:32 .
 
 psm:320 a cube:Observation ;
     schema:identifier "E786D43D-444B-49D6-B0D0-294265F91403"^^xsd:ID ;
@@ -2645,7 +2645,7 @@ psm:320 a cube:Observation ;
         "salades (Asteraceae)"@fr,
         "Insalate (Asteracee)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:320 .
 
 psm:321 a cube:Observation ;
     schema:identifier "AB0798FE-64B8-49A2-8E75-14467EB7AB58"^^xsd:ID ;
@@ -2654,7 +2654,7 @@ psm:321 a cube:Observation ;
         "bette"@fr,
         "Bietola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:321 .
+    :cultivationType ct:321 .
 
 psm:322 a cube:Observation ;
     schema:identifier "AE465EA2-A950-4661-B631-D5A267B2F076"^^xsd:ID ;
@@ -2671,7 +2671,7 @@ psm:323 a cube:Observation ;
         "poireau"@fr,
         "Porro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:323 .
+    :cultivationType ct:323 .
 
 psm:324 a cube:Observation ;
     schema:identifier "4A22B9D3-747C-4323-A852-1CB1F6ADB680"^^xsd:ID ;
@@ -2681,7 +2681,7 @@ psm:324 a cube:Observation ;
         "choux (développement de l'inflorescence)"@fr,
         "Cavoli a infiorescenza"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:324 .
+    :cultivationType ct:324 .
 
 psm:325 a cube:Observation ;
     schema:identifier "394AE687-29A0-4BA6-B0B9-D7DFB0C08FCE"^^xsd:ID ;
@@ -2690,7 +2690,7 @@ psm:325 a cube:Observation ;
         "pakchoi"@fr,
         "Pak-Choi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:325 .
+    :cultivationType ct:325 .
 
 psm:326 a cube:Observation ;
     schema:identifier "43F8091A-A333-40F5-8845-FF83398B9AC3"^^xsd:ID ;
@@ -2708,7 +2708,7 @@ psm:327 a cube:Observation ;
         "ombellifères (Apiaceae)"@fr,
         "Ombrellifere (Apiacee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:327 .
+    :cultivationType ct:327 .
 
 psm:328 a cube:Observation ;
     schema:identifier "A4BC1F92-959A-4449-A039-B98E3ABCD9B1"^^xsd:ID ;
@@ -2717,7 +2717,7 @@ psm:328 a cube:Observation ;
         "laitue à tondre"@fr,
         "Lattuga da taglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:328 .
+    :cultivationType ct:328 .
 
 psm:329 a cube:Observation ;
     schema:identifier "890D8A5E-BF86-4B2D-9B98-45B779D80F7F"^^xsd:ID ;
@@ -2735,7 +2735,7 @@ psm:33 a cube:Observation ;
         "valériane"@fr,
         "Valeriana"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:33 .
+    :cultivationType ct:33 .
 
 psm:330 a cube:Observation ;
     schema:identifier "8512D352-73CC-4535-9469-965AAF1FD0B1"^^xsd:ID ;
@@ -2752,7 +2752,7 @@ psm:331 a cube:Observation ;
         "romanesco"@fr,
         "Romanesco"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:331 .
+    :cultivationType ct:331 .
 
 psm:332 a cube:Observation ;
     schema:identifier "3BEFA6F7-0D34-4E29-8207-85E9D5783ECC"^^xsd:ID ;
@@ -2788,7 +2788,7 @@ psm:335 a cube:Observation ;
         "poivron"@fr,
         "Peperone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:335 .
+    :cultivationType ct:335 .
 
 psm:336 a cube:Observation ;
     schema:identifier "17B69B05-E650-4A6F-815A-D6DA55A92CDB"^^xsd:ID ;
@@ -2813,7 +2813,7 @@ psm:35 a cube:Observation ;
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:35 .
+    :cultivationType ct:35 .
 
 psm:36 a cube:Observation ;
     schema:identifier "302E5676-26A3-41EB-980F-2B6BDE117D3A"^^xsd:ID ;
@@ -2831,7 +2831,7 @@ psm:37 a cube:Observation ;
         "Hysope"@fr,
         "Issopo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:37 .
+    :cultivationType ct:37 .
 
 psm:38 a cube:Observation ;
     schema:identifier "13BB4B9E-6CEE-4729-AE29-8A4380EB33B0"^^xsd:ID ;
@@ -2849,7 +2849,7 @@ psm:39 a cube:Observation ;
         "ail"@fr,
         "Aglio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:39 .
 
 psm:4 a cube:Observation ;
     schema:identifier "B85EF4C2-C22E-4A5A-A431-98DC8F621D92"^^xsd:ID ;
@@ -2867,7 +2867,7 @@ psm:40 a cube:Observation ;
         "courges à peau comestible"@fr,
         "Zucche con buccia commestibile"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:40 .
 
 psm:41 a cube:Observation ;
     schema:identifier "FA0F7C48-BF78-49B0-9046-FBB5ABB4BF75"^^xsd:ID ;
@@ -2926,7 +2926,7 @@ psm:47 a cube:Observation ;
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:47 .
+    :cultivationType ct:47 .
 
 psm:48 a cube:Observation ;
     schema:identifier "E55D75D3-B805-4BFD-B2B0-D02368BD32AC"^^xsd:ID ;
@@ -2935,7 +2935,7 @@ psm:48 a cube:Observation ;
         "crucifères (Brassicaceae)"@fr,
         "Crocifere (Brassicacee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:48 .
+    :cultivationType ct:48 .
 
 psm:49 a cube:Observation ;
     schema:identifier "CC08E1E6-655D-4FAA-B0E8-AD968A68A536"^^xsd:ID ;
@@ -2970,7 +2970,7 @@ psm:51 a cube:Observation ;
         "asperge"@fr,
         "Asparagi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:51 .
+    :cultivationType ct:51 .
 
 psm:52 a cube:Observation ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926"^^xsd:ID ;
@@ -2987,7 +2987,7 @@ psm:53 a cube:Observation ;
         "Barbarée du printemps"@fr,
         "Erba di Santa Barbara vernale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:53 .
 
 psm:54 a cube:Observation ;
     schema:identifier "C3E12AAE-119E-47CF-9B8A-6F1CA657CF6B"^^xsd:ID ;
@@ -3005,7 +3005,7 @@ psm:55 a cube:Observation ;
         "herbes"@fr,
         "Erbe"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:55 .
+    :cultivationType ct:55 .
 
 psm:56 a cube:Observation ;
     schema:identifier "BFD1B79E-ABD1-4A44-8E61-891FF97960A1"^^xsd:ID ;
@@ -3014,7 +3014,7 @@ psm:56 a cube:Observation ;
         "rave de Brassica rapa"@fr,
         "Rapa di Brassica rapa"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType ct:56 .
 
 psm:57 a cube:Observation ;
     schema:identifier "BF77A7F8-C4C5-43AF-9BCD-B7F904506E7A"^^xsd:ID ;
@@ -3032,7 +3032,7 @@ psm:58 a cube:Observation ;
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:58 .
+    :cultivationType ct:58 .
 
 psm:59 a cube:Observation ;
     schema:identifier "C026CB2D-39B4-4FDF-AD04-FBA22AD2B4F1"^^xsd:ID ;
@@ -3071,7 +3071,7 @@ psm:62 a cube:Observation ;
     schema:name "allg. Gemüsebau"@de,
         "domaine app. maraîchère"@fr ;
     schema:version 0 ;
-    :cultivationType cultivationtype:22 .
+    :cultivationType ct:22 .
 
 psm:63 a cube:Observation ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6"^^xsd:ID ;
@@ -3105,7 +3105,7 @@ psm:66 a cube:Observation ;
         "raifort"@fr,
         "Rafano rusticana / Ramolaccio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:66 .
+    :cultivationType ct:66 .
 
 psm:67 a cube:Observation ;
     schema:identifier "D541F2F5-8BA6-4E26-AA66-9CF469648AFF"^^xsd:ID ;
@@ -3114,7 +3114,7 @@ psm:67 a cube:Observation ;
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:67 .
+    :cultivationType ct:67 .
 
 psm:68 a cube:Observation ;
     schema:identifier "D3CD23DC-4C49-4EE5-8BF8-6B074E74352A"^^xsd:ID ;
@@ -3192,7 +3192,7 @@ psm:75 a cube:Observation ;
         "pourpier"@fr,
         "Portulaca"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:75 .
+    :cultivationType ct:75 .
 
 psm:76 a cube:Observation ;
     schema:identifier "915B2192-1651-4B8A-B2D8-C162A5D27211"^^xsd:ID ;
@@ -3202,7 +3202,7 @@ psm:76 a cube:Observation ;
         "bette à côte"@fr,
         "Costa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:76 .
+    :cultivationType ct:76 .
 
 psm:77 a cube:Observation ;
     schema:identifier "C8AB8319-939E-4CF3-B78E-549A85DEF756"^^xsd:ID ;
@@ -3253,7 +3253,7 @@ psm:81 a cube:Observation ;
         "choux pommés"@fr,
         "Cavoli a testa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:81 .
+    :cultivationType ct:81 .
 
 psm:82 a cube:Observation ;
     schema:identifier "EA82A16B-4A8C-4917-A08F-C2AD3B266640"^^xsd:ID ;
@@ -3280,7 +3280,7 @@ psm:84 a cube:Observation ;
         "rutabaga"@fr,
         "Cavolo navone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:84 .
+    :cultivationType ct:84 .
 
 psm:85 a cube:Observation ;
     schema:identifier "E9E3C127-33C1-40D9-8552-3CBE45E8E4C4"^^xsd:ID ;
@@ -3289,7 +3289,7 @@ psm:85 a cube:Observation ;
         "tomate"@fr,
         "Pomodori"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:85 .
+    :cultivationType ct:85 .
 
 psm:86 a cube:Observation ;
     schema:identifier "D8A50212-BD15-456A-9D2E-2A401C2EF21D"^^xsd:ID ;
@@ -3298,7 +3298,7 @@ psm:86 a cube:Observation ;
         "colrave"@fr,
         "Cavolo rapa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:86 .
+    :cultivationType ct:86 .
 
 psm:87 a cube:Observation ;
     schema:identifier "DF4B3775-8361-41CE-9843-AC953197403D"^^xsd:ID ;
@@ -3307,7 +3307,7 @@ psm:87 a cube:Observation ;
         "chou frisé non pommé"@fr,
         "Cavolo piuma"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:87 .
+    :cultivationType ct:87 .
 
 psm:88 a cube:Observation ;
     schema:identifier "92CAB39E-ACC3-44DC-9EF3-0D27B8600E83"^^xsd:ID ;
@@ -3325,7 +3325,7 @@ psm:89 a cube:Observation ;
         "oignon (condiment)"@fr,
         "Cipolle da tavola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:89 .
+    :cultivationType ct:89 .
 
 psm:9 a cube:Observation ;
     schema:identifier "A2D0B83F-9BB5-477C-AD44-24B31F2EF276"^^xsd:ID ;
@@ -3334,7 +3334,7 @@ psm:9 a cube:Observation ;
         "champignons comestibles"@fr,
         "Funghi commestibili"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:477 .
+    :cultivationType ct:477 .
 
 psm:90 a cube:Observation ;
     schema:identifier "D100976A-2598-4614-AB7A-61436FF2B053"^^xsd:ID ;
@@ -3343,7 +3343,7 @@ psm:90 a cube:Observation ;
         "tomate à grappe"@fr,
         "Pomodoro ramato"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:90 .
+    :cultivationType ct:90 .
 
 psm:91 a cube:Observation ;
     schema:identifier "D605CAA5-9199-4739-8C9C-343C74DABAEB"^^xsd:ID ;
@@ -3360,7 +3360,7 @@ psm:92 a cube:Observation ;
         "scorsonère"@fr,
         "Scorzonera"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:92 .
+    :cultivationType ct:92 .
 
 psm:93 a cube:Observation ;
     schema:identifier "D1E8D0D6-BD3C-4C47-9017-DBEADC9215A9"^^xsd:ID ;
@@ -3377,7 +3377,7 @@ psm:94 a cube:Observation ;
         "céleri"@fr,
         "Sedano"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:94 .
+    :cultivationType ct:94 .
 
 psm:95 a cube:Observation ;
     schema:identifier "B05127D4-FF0A-4F36-AFDD-0D487043122A"^^xsd:ID ;
@@ -3386,7 +3386,7 @@ psm:95 a cube:Observation ;
         "composées (Asteracea)"@fr,
         "Composite (Asteracee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:95 .
+    :cultivationType ct:95 .
 
 psm:96 a cube:Observation ;
     schema:identifier "B4D50F5E-6028-493D-9B95-85CAE5DADF06"^^xsd:ID ;
