@@ -56,3 +56,28 @@ construct_class_membership <- function(
     }
   }
 }
+
+# Write prefixes
+write_global_prefixes <- function(x) {
+  for (prefix in names(x)) {
+    # If the prefix is "base", print it as an empty string
+    print_prefix <- ifelse(prefix == "base", "", prefix)
+
+    cat(sprintf("@prefix %s: <%s> .\n", print_prefix, x[[prefix]]))
+  }
+  cat("\n")
+}
+
+#  URI builder
+qname <- function(prefix_list, prefix, local_name) {
+  if (!prefix %in% names(prefix_list)) {
+    stop(sprintf("ERROR: Prefix '%s' is not defined in GLOBAL_PREFIXES.", prefix))
+  }
+
+  # change "base" prefix to " :local_name"
+  if (prefix == "base") {
+    return(paste0(":", local_name))
+  }
+
+  paste0(prefix, ":", local_name)
+}
