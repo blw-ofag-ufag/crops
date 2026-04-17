@@ -148,6 +148,8 @@ cultivationtype:5 a owl:Class ;
     schema:name "Obstanlagen"@de,
         "Cultures fruitières"@fr,
         "Frutteti"@it ;
+    schema:alternateName "Obstbau"@de,
+        "Allgemeiner Obstbau"@de ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:6 a owl:Class ;
@@ -719,7 +721,7 @@ cultivationtype:186 a owl:Class ;
     schema:name "Hartschalenobst"@de,
         "noix en général"@fr,
         "Frutta con guscio"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:188 a owl:Class ;
     schema:name "Liliengewächse (Liliaceae)"@de,
@@ -929,7 +931,7 @@ cultivationtype:257 a owl:Class ;
         "Olive"@en,
         "olivier"@fr,
         "Olivo"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:259 a owl:Class ;
     schema:name "Pflaume"@de,
@@ -1103,7 +1105,7 @@ cultivationtype:309 a owl:Class ;
     schema:name "Kernobst"@de,
         "fruits à pépins"@fr,
         "Frutta a granelli"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:311 a owl:Class ;
     schema:name "Petersilie"@de,
@@ -2030,7 +2032,7 @@ cultivationtype:704 a owl:Class ;
     schema:name "Steinobst"@de,
         "Fruits à noyaux"@fr,
         "Frutta a nocciolo"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:705 a owl:Class ;
     schema:name "Mehrjährige Beeren"@de,
@@ -2159,19 +2161,11 @@ cultivationtype:725 a owl:Class ;
     schema:description "Kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen."@de ;
     rdfs:subClassOf cultivationtype:750 .
 
-cultivationtype:730 a owl:Class ;
-    schema:name "Obstanlagen"@de,
-        "Cultures fruitières"@fr,
-        "Frutteti aggregata"@it ;
-    schema:alternateName "Obstbau"@de,
-        "Allgemeiner Obstbau"@de ;
-    rdfs:subClassOf cultivationtype:5 .
-
 cultivationtype:731 a owl:Class ;
     schema:name "Andere Obstanlagen (Kiwis, Holunder usw.)"@de,
         "Autres cultures fruitières (kiwis, sureau, etc.)"@fr,
         "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:735 a owl:Class ;
     schema:name "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
