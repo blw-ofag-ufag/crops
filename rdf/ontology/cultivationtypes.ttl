@@ -392,6 +392,13 @@ cultivationtype:76 a owl:Class ;
         "Swiss chard"@en,
         "bette à côte"@fr,
         "Costa"@it ;
+    schema:alternateName "Stielmangold"@de,
+        "Rippenmangold"@de,
+        "bette à carde"@fr,
+        "carde"@fr,
+        "poirée à carde"@fr,
+        "bietola da coste"@it,
+        "bietola a coste"@it ;
     rdfs:subClassOf cultivationtype:321 .
 
 cultivationtype:81 a owl:Class ;
@@ -787,6 +794,14 @@ cultivationtype:229 a owl:Class ;
     schema:name "Schnittmangold"@de,
         "bette à tondre"@fr,
         "Bietola da taglio"@it ;
+    schema:alternateName "Blattmangold"@de,
+        "Beisskohl"@de,
+        "bette à feuilles"@fr,
+        "blette"@fr,
+        "poirée"@fr,
+        "bette-épinard"@fr,
+        "bietola da foglia"@it,
+        "erbetta"@it ;
     rdfs:subClassOf cultivationtype:321 .
 
 cultivationtype:231 a owl:Class ;
