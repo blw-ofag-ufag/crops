@@ -607,7 +607,7 @@ psm:113 a cube:Observation ;
         "prunier (pruneau/prune)"@fr,
         "Prugno/Susino"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:113 .
 
 psm:114 a cube:Observation ;
     schema:identifier "24EA0CC6-D1D5-4BB4-981C-A836E3D7125D"^^xsd:ID ;
@@ -723,7 +723,7 @@ psm:125 a cube:Observation ;
         "cognassier"@fr,
         "Cotogno"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:125 .
 
 psm:126 a cube:Observation ;
     schema:identifier "FD18F42C-C390-4701-B07B-B8108B33320B"^^xsd:ID ;
@@ -971,7 +971,7 @@ psm:150 a cube:Observation ;
         "noix"@fr,
         "Noci"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:150 .
 
 psm:151 a cube:Observation ;
     schema:identifier "7A993953-3C2F-4BC3-98EE-2EE5E83C6E77"^^xsd:ID ;
@@ -1311,7 +1311,7 @@ psm:186 a cube:Observation ;
         "noix en général"@fr,
         "Frutta con guscio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:186 .
 
 psm:187 a cube:Observation ;
     schema:identifier "6C3D663E-442F-4783-87A2-A46806E119E5"^^xsd:ID ;
@@ -1426,7 +1426,7 @@ psm:198 a cube:Observation ;
         "prunier (pruneau)"@fr,
         "Prugno"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:198 .
 
 psm:199 a cube:Observation ;
     schema:identifier "5C610428-6087-4A2E-B977-3E83EDBB19F0"^^xsd:ID ;
@@ -1970,7 +1970,7 @@ psm:252 a cube:Observation ;
         "noyer"@fr,
         "Noce comune"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:252 .
 
 psm:253 a cube:Observation ;
     schema:identifier "ABF54D5D-620B-4A08-A37D-416C1AD8D1BF"^^xsd:ID ;
@@ -2016,7 +2016,7 @@ psm:257 a cube:Observation ;
         "olivier"@fr,
         "Olivo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:257 .
 
 psm:258 a cube:Observation ;
     schema:identifier "9BD6A435-E370-4DFE-82E5-7E7813B4D193"^^xsd:ID ;
@@ -2034,7 +2034,7 @@ psm:259 a cube:Observation ;
         "prunier (prune)"@fr,
         "Prugnolo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:259 .
 
 psm:26 a cube:Observation ;
     schema:identifier "2D7D1AE2-E685-4C6B-B8EE-DC5C6391EC76"^^xsd:ID ;
@@ -2279,7 +2279,7 @@ psm:283 a cube:Observation ;
         "cerisier"@fr,
         "Ciliegio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:704 .
 
 psm:284 a cube:Observation ;
     schema:identifier "E36FADB4-A022-42A0-81CF-F041CABB93A4"^^xsd:ID ;
@@ -2534,7 +2534,7 @@ psm:309 a cube:Observation ;
         "fruits à pépins"@fr,
         "Frutta a granelli"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:309 .
 
 psm:31 a cube:Observation ;
     schema:identifier "307A62EA-67D6-4D28-9CF7-F1218C9BE2CD"^^xsd:ID ;
@@ -2543,7 +2543,7 @@ psm:31 a cube:Observation ;
         "pêcher / nectarine"@fr,
         "Pesco/pesco noce"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:31 .
 
 psm:310 a cube:Observation ;
     schema:identifier "10642620-4F7B-4E5E-8F38-D73914354014"^^xsd:ID ;
@@ -2876,7 +2876,7 @@ psm:41 a cube:Observation ;
         "poirier / nashi"@fr,
         "Pero / Nashi"@it ;
     schema:version 2 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:41 .
 
 psm:42 a cube:Observation ;
     schema:identifier "EF29B430-95C5-45D4-A812-DCCE046E1B8E"^^xsd:ID ;

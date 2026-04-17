@@ -258,10 +258,11 @@ cultivationtype:112 a owl:Class ;
     rdfs:subClassOf cultivationtype:85 .
 
 cultivationtype:113 a owl:Class ;
-    rdfs:label "Zwetschge / Pflaume"@de,
+    rdfs:label "Zwetschgen und Pflaumen"@de,
         "prunier (pruneau/prune)"@fr,
         "Prugno/Susino"@it ;
-    rdfs:subClassOf cultivationtype:704 .
+    rdfs:subClassOf cultivationtype:704 ;
+    owl:unionOf ( cultivationtype:259 cultivationtype:198 ) .
 
 cultivationtype:115 a owl:Class ;
     rdfs:label "Brassica napus-Rüben"@de,
@@ -532,8 +533,7 @@ cultivationtype:192 a owl:Class ;
 cultivationtype:198 a owl:Class ;
     rdfs:label "Zwetschge"@de,
         "prunier (pruneau)"@fr,
-        "Prugno"@it ;
-    rdfs:subClassOf cultivationtype:113 .
+        "Prugno"@it .
 
 cultivationtype:2 a owl:Class ;
     rdfs:label "Dauerwiesen"@de,
@@ -777,8 +777,7 @@ cultivationtype:257 a owl:Class ;
 cultivationtype:259 a owl:Class ;
     rdfs:label "Pflaume"@de,
         "prunier (prune)"@fr,
-        "Prugnolo"@it ;
-    rdfs:subClassOf cultivationtype:113 .
+        "Prugnolo"@it .
 
 cultivationtype:26 a owl:Class ;
     rdfs:label "Spargelgewächse"@de,
@@ -2039,6 +2038,8 @@ cultivationtype:730 a owl:Class ;
     rdfs:label "Obstanlagen"@de,
         "Cultures fruitières"@fr,
         "Frutteti aggregata"@it ;
+    schema:alternateName "Allgemeiner Obstbau"@de,
+        "Obstbau"@de ;
     rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:731 a owl:Class ;
