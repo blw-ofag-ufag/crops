@@ -1225,7 +1225,7 @@ psm:177 a cube:Observation ;
         "vigne"@fr,
         "Vite"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:701 .
 
 psm:178 a cube:Observation ;
     schema:identifier "6569FC94-60C5-4608-8926-D76D2009B284"^^xsd:ID ;
@@ -2079,7 +2079,7 @@ psm:263 a cube:Observation ;
         "lamiacées (Labiatae)"@fr,
         "Lamiacee (Labiatae)"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:263 .
 
 psm:264 a cube:Observation ;
     schema:identifier "BB923645-6E65-48EE-9C64-DA2232EEE7EF"^^xsd:ID ;
@@ -2348,7 +2348,7 @@ psm:290 a cube:Observation ;
         "choux"@fr,
         "Cavoli"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:290 .
 
 psm:291 a cube:Observation ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7"^^xsd:ID ;
@@ -2610,7 +2610,7 @@ psm:317 a cube:Observation ;
         "portulacacées (Portulacaceae)"@fr,
         "Portulacee (Portulacaceae)"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:317 .
 
 psm:318 a cube:Observation ;
     schema:identifier "230F7417-5500-4124-B273-95AA1FFB940B"^^xsd:ID ;
@@ -2708,7 +2708,7 @@ psm:327 a cube:Observation ;
         "ombellifères (Apiaceae)"@fr,
         "Ombrellifere (Apiacee)"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:327 .
 
 psm:328 a cube:Observation ;
     schema:identifier "A4BC1F92-959A-4449-A039-B98E3ABCD9B1"^^xsd:ID ;
@@ -2735,7 +2735,7 @@ psm:33 a cube:Observation ;
         "valériane"@fr,
         "Valeriana"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:33 .
 
 psm:330 a cube:Observation ;
     schema:identifier "8512D352-73CC-4535-9469-965AAF1FD0B1"^^xsd:ID ;
@@ -2813,7 +2813,7 @@ psm:35 a cube:Observation ;
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:35 .
 
 psm:36 a cube:Observation ;
     schema:identifier "302E5676-26A3-41EB-980F-2B6BDE117D3A"^^xsd:ID ;
@@ -2926,7 +2926,7 @@ psm:47 a cube:Observation ;
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:47 .
 
 psm:48 a cube:Observation ;
     schema:identifier "E55D75D3-B805-4BFD-B2B0-D02368BD32AC"^^xsd:ID ;
@@ -2935,7 +2935,7 @@ psm:48 a cube:Observation ;
         "crucifères (Brassicaceae)"@fr,
         "Crocifere (Brassicacee)"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:48 .
 
 psm:49 a cube:Observation ;
     schema:identifier "CC08E1E6-655D-4FAA-B0E8-AD968A68A536"^^xsd:ID ;
@@ -3005,7 +3005,7 @@ psm:55 a cube:Observation ;
         "herbes"@fr,
         "Erbe"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:55 .
 
 psm:56 a cube:Observation ;
     schema:identifier "BFD1B79E-ABD1-4A44-8E61-891FF97960A1"^^xsd:ID ;

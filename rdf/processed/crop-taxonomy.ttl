@@ -294,6 +294,13 @@ cultivationtype:26 a owl:Class ;
         "Asparagacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:263 a owl:Class ;
+    rdfs:label "Lippenblütler"@de,
+        "lamiacées"@fr,
+        "Lamiacee"@it ;
+    rdfs:subClassOf cultivationtype:22 ;
+    :botanicalPlant taxon:1LAMF .
+
 cultivationtype:3 a owl:Class ;
     rdfs:label "Dauerweiden"@de,
         "Pâturages permanents"@fr,

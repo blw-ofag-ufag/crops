@@ -237,7 +237,6 @@ cultivationtype:22 a owl:Class ;
 
 cultivationtype:23 a owl:Class ;
     schema:name "Gemüsekulturen in geschütztem Anbau"@de ;
-    rdfs:subClassOf cultivationtype:22 ;
     owl:unionOf (
         cultivationtype:801
         cultivationtype:806
@@ -245,7 +244,7 @@ cultivationtype:23 a owl:Class ;
 
 cultivationtype:24 a owl:Class ;
     schema:name "Freilandgemüse"@de ;
-    rdfs:subClassOf cultivationtype:22 .
+    owl:disjointWith cultivationtype:23 .
 
 # Declare that all specific vegetable cultivation types are mutually exclusive
 [] a owl:AllDisjointClasses ;
@@ -262,16 +261,66 @@ cultivationtype:26 a owl:Class ;
         "Asparagacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:33 a owl:Class ;
+    schema:name "Baldrian"@de,
+        "Valerian"@en,
+        "valériane"@fr,
+        "Valeriana"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:35 a owl:Class ;
+    schema:name "Gewürz- und Medizinalkräuter"@de,
+        "herbes aromatiques et médicinales"@fr,
+        "Erbe aromatiche e medicinali"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:47 a owl:Class ;
+    schema:name "Hülsenfrüchtler (Fabaceae)"@de,
+        "fabacées (légumineuses)"@fr,
+        "Fabacee (Leguminose)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:48 a owl:Class ;
+    schema:name "Kreuzblütler (Brassicaceae)"@de,
+        "crucifères (Brassicaceae)"@fr,
+        "Crocifere (Brassicacee)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
 cultivationtype:51 a owl:Class ;
     schema:name "Spargel"@de,
         "asperge"@fr,
         "Asparagi"@it ;
     rdfs:subClassOf cultivationtype:26 .
 
+cultivationtype:55 a owl:Class ;
+    schema:name "Kräuter"@de,
+        "herbes"@fr,
+        "Erbe"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
 cultivationtype:67 a owl:Class ;
     schema:name "Küchenkräuter"@de,
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:263 a owl:Class ;
+    schema:name "Lippenblütler"@de,
+        "lamiacées"@fr,
+        "Lamiacee"@it ;
+    rdfs:subClassOf cultivationtype:22 ;
+    :botanicalPlant taxon:1LAMF .
+
+cultivationtype:290 a owl:Class ;
+    schema:name "Kohlgemüse"@de,
+        "choux"@fr,
+        "Cavoli"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:317 a owl:Class ;
+    schema:name "Portulakgewächse (Portulacaceae)"@de,
+        "portulacacées (Portulacaceae)"@fr,
+        "Portulacee (Portulacaceae)"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:300 a owl:Class ;
@@ -280,6 +329,12 @@ cultivationtype:300 a owl:Class ;
         "Chenopodiacee"@it ;
     rdfs:subClassOf cultivationtype:22 ;
     :botanicalPlant taxon:1CHES .
+
+cultivationtype:327 a owl:Class ;
+    schema:name "Doldenblütler (Apiaceae)"@de,
+        "ombellifères (Apiaceae)"@fr,
+        "Ombrellifere (Apiacee)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:480 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
