@@ -1251,7 +1251,7 @@ psm:18 a cube:Observation ;
         "chou de Bruxelles"@fr,
         "Cavoli di Bruxelles"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:473 .
 
 psm:180 a cube:Observation ;
     schema:identifier "6388D9E7-CD0D-4823-80DD-E6FA472AF12C"^^xsd:ID ;
@@ -1452,7 +1452,7 @@ psm:20 a cube:Observation ;
         "choux à feuilles"@fr,
         "Cavoli fogliacei"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:475 .
 
 psm:200 a cube:Observation ;
     schema:identifier "3E4AFACC-03CA-4CEC-8392-520B07DDC604"^^xsd:ID ;
@@ -1553,7 +1553,7 @@ psm:21 a cube:Observation ;
         "aubergine"@fr,
         "Melanzana"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:474 .
 
 psm:210 a cube:Observation ;
     schema:identifier "287584B7-E43E-494B-84C2-D13B2C9C3736"^^xsd:ID ;
@@ -2434,7 +2434,7 @@ psm:3 a cube:Observation ;
         "haricots"@fr,
         "Fagioli"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:476 .
 
 psm:30 a cube:Observation ;
     schema:identifier "2F7BD13A-BAA5-4708-83C6-17D44E57EA4D"^^xsd:ID ;
@@ -2654,7 +2654,7 @@ psm:321 a cube:Observation ;
         "bette"@fr,
         "Bietola"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:321 .
 
 psm:322 a cube:Observation ;
     schema:identifier "AE465EA2-A950-4661-B631-D5A267B2F076"^^xsd:ID ;
@@ -2671,7 +2671,7 @@ psm:323 a cube:Observation ;
         "poireau"@fr,
         "Porro"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:323 .
 
 psm:324 a cube:Observation ;
     schema:identifier "4A22B9D3-747C-4323-A852-1CB1F6ADB680"^^xsd:ID ;
@@ -2681,7 +2681,7 @@ psm:324 a cube:Observation ;
         "choux (développement de l'inflorescence)"@fr,
         "Cavoli a infiorescenza"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:324 .
 
 psm:325 a cube:Observation ;
     schema:identifier "394AE687-29A0-4BA6-B0B9-D7DFB0C08FCE"^^xsd:ID ;
@@ -2690,7 +2690,7 @@ psm:325 a cube:Observation ;
         "pakchoi"@fr,
         "Pak-Choi"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:325 .
 
 psm:326 a cube:Observation ;
     schema:identifier "43F8091A-A333-40F5-8845-FF83398B9AC3"^^xsd:ID ;
@@ -2717,7 +2717,7 @@ psm:328 a cube:Observation ;
         "laitue à tondre"@fr,
         "Lattuga da taglio"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:328 .
 
 psm:329 a cube:Observation ;
     schema:identifier "890D8A5E-BF86-4B2D-9B98-45B779D80F7F"^^xsd:ID ;
@@ -2752,7 +2752,7 @@ psm:331 a cube:Observation ;
         "romanesco"@fr,
         "Romanesco"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:331 .
 
 psm:332 a cube:Observation ;
     schema:identifier "3BEFA6F7-0D34-4E29-8207-85E9D5783ECC"^^xsd:ID ;
@@ -2788,7 +2788,7 @@ psm:335 a cube:Observation ;
         "poivron"@fr,
         "Peperone"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:335 .
 
 psm:336 a cube:Observation ;
     schema:identifier "17B69B05-E650-4A6F-815A-D6DA55A92CDB"^^xsd:ID ;
@@ -3334,7 +3334,7 @@ psm:9 a cube:Observation ;
         "champignons comestibles"@fr,
         "Funghi commestibili"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype:477 .
 
 psm:90 a cube:Observation ;
     schema:identifier "D100976A-2598-4614-AB7A-61436FF2B053"^^xsd:ID ;
