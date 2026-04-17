@@ -16,7 +16,7 @@ source("scripts/R/helper.R")
 languages <- c(
   de = "designation_deu"
 )
-endpoint <- "https://rf-vp.agate.ch/digiflux/naebi/naebiservice-backend/"
+endpoint <- "https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/"
 
 
 #' =============================================================================
