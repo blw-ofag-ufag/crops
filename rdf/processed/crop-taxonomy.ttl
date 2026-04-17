@@ -13,7 +13,7 @@
     owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( cultivationtype:812 cultivationtype:811 cultivationtype:802 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
+    owl:members ( cultivationtype:812 cultivationtype:811 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
 
 cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
@@ -277,7 +277,7 @@ cultivationtype:22 a owl:Class ;
     rdfs:label "Gemüsebau"@de,
         "Vegetable Production"@en ;
     rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:812 cultivationtype:811 cultivationtype:802 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
+    owl:unionOf ( cultivationtype:812 cultivationtype:811 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
 
 cultivationtype:26 a owl:Class ;
     rdfs:label "Spargelgewächse"@de,
@@ -1676,6 +1676,7 @@ cultivationtype:shape a sh:NodeShape ;
         [ sh:node cultivationtype:shape ;
             sh:nodeKind sh:IRI ;
             sh:path owl:disjointWith ],
+        [ sh:path owl:unionOf ],
         [ sh:datatype rdf:langString ;
             sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:minCount 1 ;

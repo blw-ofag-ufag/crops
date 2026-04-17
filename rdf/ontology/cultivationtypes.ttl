@@ -233,7 +233,6 @@ cultivationtype:22 a owl:Class ;
     owl:unionOf (
         cultivationtype:812
         cultivationtype:811
-        cultivationtype:802
         cultivationtype:801
         cultivationtype:546
         cultivationtype:545
@@ -244,7 +243,6 @@ cultivationtype:22 a owl:Class ;
     owl:members (
         cultivationtype:812
         cultivationtype:811
-        cultivationtype:802
         cultivationtype:801
         cultivationtype:546
         cultivationtype:545
