@@ -482,7 +482,7 @@ naebi:1 a cube:Observation ;
     :P2O5 100.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1036 .
 
 naebi:10 a cube:Observation ;
     schema:identifier "CROP_ASPBW"^^xsd:string ;
@@ -493,7 +493,7 @@ naebi:10 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1037 .
 
 naebi:100 a cube:Observation ;
     schema:identifier "CROP_HOPS"^^xsd:string ;
@@ -504,7 +504,7 @@ naebi:100 a cube:Observation ;
     :P2O5 60.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:708 .
 
 naebi:101 a cube:Observation ;
     schema:identifier "CROP_HRB1L"^^xsd:string ;
@@ -603,7 +603,7 @@ naebi:109 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:67 .
 
 naebi:11 a cube:Observation ;
     schema:identifier "CROP_ASPGR"^^xsd:string ;
@@ -614,7 +614,7 @@ naebi:11 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1038 .
 
 naebi:110 a cube:Observation ;
     schema:identifier "CROP_IFEED"^^xsd:string ;
@@ -647,7 +647,7 @@ naebi:112 a cube:Observation ;
     :P2O5 50.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:87 .
 
 naebi:113 a cube:Observation ;
     schema:identifier "CROP_KARPA"^^xsd:string ;
@@ -669,7 +669,7 @@ naebi:114 a cube:Observation ;
     :P2O5 1.48 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1039 .
 
 naebi:115 a cube:Observation ;
     schema:identifier "CROP_KARPFC"^^xsd:string ;
@@ -691,7 +691,7 @@ naebi:116 a cube:Observation ;
     :P2O5 0.98 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:537 .
 
 naebi:117 a cube:Observation ;
     schema:identifier "CROP_KENAF"^^xsd:string ;
@@ -702,7 +702,7 @@ naebi:117 a cube:Observation ;
     :P2O5 0.3 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:576 .
 
 naebi:118 a cube:Observation ;
     schema:identifier "CROP_KIDK"^^xsd:string ;

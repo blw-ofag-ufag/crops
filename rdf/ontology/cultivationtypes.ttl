@@ -2621,3 +2621,19 @@ cultivationtype:1034 a owl:Class ;
 cultivationtype:1035 a owl:Class ;
     schema:name "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
     rdfs:subClassOf cultivationtype:1014 .
+
+cultivationtype:1036 a owl:Class ;
+    schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
+    owl:intersectionOf ( cultivationtype:474 cultivationtype:811 ) .
+
+cultivationtype:1037 a owl:Class ;
+    schema:name "Spargel Bleich"@de, "Asperge blanche"@fr, "Asparago bianco"@it ;
+    rdfs:subClassOf cultivationtype:710 .
+
+cultivationtype:1038 a owl:Class ;
+    schema:name "Spargel Grün"@de, "Asperge verte"@fr, "Asparago verde"@it ;
+    rdfs:subClassOf cultivationtype:710 .
+
+cultivationtype:1039 a owl:Class ;
+    schema:name "Sommerraps"@de, "Colza de printemps"@fr, "Colza primaverile"@it ;
+    rdfs:subClassOf cultivationtype:494 .
