@@ -1912,32 +1912,6 @@ cultivationtype:619 a owl:DeprecatedClass ;
         "Pascoli riservati ai suini e a pollame non computabili per il calcolo delle UBGFG"@it ;
     rdfs:subClassOf cultivationtype:21 .
 
-cultivationtype:221 a owl:Class ;
-    schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
-        "Prairies de fauche en région d’estivage, autres"@fr,
-        "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
-    rdfs:subClassOf cultivationtype:480 .
-
-cultivationtype:222 a owl:Class ;
-    schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
-        "Prairies de fauche en région d’estivage, type prairie extensive"@fr,
-        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it ;
-    rdfs:subClassOf cultivationtype:480 ;
-    :intensity :21 .
-
-cultivationtype:223 a owl:Class ;
-    schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
-        "Prairies de fauche en région d’estivage, type prairie peu intensive"@fr,
-        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
-    rdfs:subClassOf cultivationtype:480 ;
-    :intensity :22 .
-
-cultivationtype:225 a owl:Class ;
-    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
-        "Pascoli boschivi (senza i boschi)"@it ;
-    rdfs:subClassOf cultivationtype:3 .
-
 cultivationtype:631 a owl:Class ;
     schema:name "Futterleguminosen für die Samenproduktion (Vertragsanbau)"@de,
         "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,

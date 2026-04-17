@@ -496,7 +496,7 @@ cultivationtype:186 a owl:Class ;
     rdfs:label "Hartschalenobst"@de,
         "noix en général"@fr,
         "Frutta con guscio"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:188 a owl:Class ;
     rdfs:label "Liliengewächse (Liliaceae)"@de,
@@ -622,27 +622,9 @@ cultivationtype:22 a owl:Class ;
 
 cultivationtype:221 a owl:Class ;
     rdfs:label "Erbsen ohne Hülsen"@de,
-        "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
-        "Prairies de fauche en région d’estivage, autres"@fr,
         "pois écossés"@fr,
-        "Piselli senza baccello"@it,
-        "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
-    rdfs:subClassOf cultivationtype:191,
-        cultivationtype:480 .
-
-cultivationtype:222 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
-        "Prairies de fauche en région d’estivage, type prairie extensive"@fr,
-        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it ;
-    rdfs:subClassOf cultivationtype:480 ;
-    :intensity :21 .
-
-cultivationtype:223 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
-        "Prairies de fauche en région d’estivage, type prairie peu intensive"@fr,
-        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
-    rdfs:subClassOf cultivationtype:480 ;
-    :intensity :22 .
+        "Piselli senza baccello"@it ;
+    rdfs:subClassOf cultivationtype:191 .
 
 cultivationtype:224 a owl:Class ;
     rdfs:label "Topinambur"@de,
@@ -651,14 +633,10 @@ cultivationtype:224 a owl:Class ;
     rdfs:subClassOf cultivationtype:95 .
 
 cultivationtype:225 a owl:Class ;
-    rdfs:label "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Zucchetti"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
+    rdfs:label "Zucchetti"@de,
         "courgette"@fr,
-        "Pascoli boschivi (senza i boschi)"@it,
         "Zucchine"@it ;
-    rdfs:subClassOf cultivationtype:3,
-        cultivationtype:40 .
+    rdfs:subClassOf cultivationtype:40 .
 
 cultivationtype:228 a owl:Class ;
     rdfs:label "Ölkürbisse"@de,
@@ -772,7 +750,7 @@ cultivationtype:257 a owl:Class ;
         "Olive"@en,
         "olivier"@fr,
         "Olivo"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:259 a owl:Class ;
     rdfs:label "Pflaume"@de,
@@ -959,7 +937,7 @@ cultivationtype:309 a owl:Class ;
     rdfs:label "Kernobst"@de,
         "fruits à pépins"@fr,
         "Frutta a granelli"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:31 a owl:Class ;
     rdfs:label "Pfirsich / Nektarine"@de,
@@ -1218,6 +1196,8 @@ cultivationtype:5 a owl:Class ;
     rdfs:label "Obstanlagen"@de,
         "Cultures fruitières"@fr,
         "Frutteti"@it ;
+    schema:alternateName "Allgemeiner Obstbau"@de,
+        "Obstbau"@de ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:500 a owl:Class ;
@@ -1911,7 +1891,7 @@ cultivationtype:704 a owl:Class ;
     rdfs:label "Steinobst"@de,
         "Fruits à noyaux"@fr,
         "Frutta a nocciolo"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:705 a owl:Class ;
     rdfs:label "Mehrjährige Beeren"@de,
@@ -2034,19 +2014,11 @@ cultivationtype:725 a owl:Class ;
     rdfs:comment "Kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen."@de ;
     rdfs:subClassOf cultivationtype:750 .
 
-cultivationtype:730 a owl:Class ;
-    rdfs:label "Obstanlagen"@de,
-        "Cultures fruitières"@fr,
-        "Frutteti aggregata"@it ;
-    schema:alternateName "Allgemeiner Obstbau"@de,
-        "Obstbau"@de ;
-    rdfs:subClassOf cultivationtype:5 .
-
 cultivationtype:731 a owl:Class ;
     rdfs:label "Andere Obstanlagen (Kiwis, Holunder usw.)"@de,
         "Autres cultures fruitières (kiwis, sureau, etc.)"@fr,
         "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
-    rdfs:subClassOf cultivationtype:730 .
+    rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:735 a owl:Class ;
     rdfs:label "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
