@@ -39,6 +39,9 @@ for (i in seq_len(nrow(crops))) {
     qname(PREFIXES, "cube", "Observation")
   )
 
+
+
+
   # generate schema:name (only @de atm, because there are no other names in NAEBI)
   de_name <- crop_data$descriptor$designation_deu[i]
   rdfhelper::triple(
@@ -51,6 +54,24 @@ for (i in seq_len(nrow(crops))) {
     uri,
     qname(PREFIXES, "schema", "identifier"),
     rdfhelper::typed(id, "ID")
+  )
+
+
+  # add cultivationCategory
+  cult_cat <- crop_data$cultivationCategory[i]
+  cult_subcat <- crop_data$cultivationSubCategory[i]
+
+  rdfhelper::triple(
+    uri,
+    qname(PREFIXES, "base", "cultivationCategory"),
+    rdfhelper::typed(cult_cat, "string")
+  )
+
+  # add cultivationSubCategory
+  rdfhelper::triple(
+    uri,
+    qname(PREFIXES, "base", "cultivationSubCategory"),
+    rdfhelper::typed(cult_subcat, "string")
   )
 
 
@@ -72,6 +93,13 @@ for (i in seq_len(nrow(crops))) {
       }
     }
   }
+
+  # link to cultivation type
+  rdfhelper::triple(
+    uri,
+    qname(PREFIXES, "base", "cultivationtype"),
+    rdfhelper::uri("https://cube.link/Undefined")
+  )
 
   # add observationset
   obs_set_uri <- qname(PREFIXES, "naebi", "ObservationSet")
