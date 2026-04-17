@@ -209,6 +209,18 @@ cultivationtype:1035 a owl:Class ;
     rdfs:label "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
     rdfs:subClassOf cultivationtype:1014 .
 
+cultivationtype:106 a owl:Class ;
+    rdfs:label "Basilikum"@de,
+        "basilic"@fr,
+        "Basilico"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:109 a owl:Class ;
+    rdfs:label "Kerbel"@de,
+        "cerfeuil"@fr,
+        "Cerfoglio"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:12 a owl:Class ;
     rdfs:label "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
@@ -234,6 +246,12 @@ cultivationtype:15 a owl:Class ;
     rdfs:comment "Der Anbau von Pflanzen aus der Familie der Hülsenfrüchtler (Leguminosae). Das Ziel ist typischerweise die Gewinnung der Körner zur menschlichen Ernährung oder als Tierfutter."@de ;
     rdfs:subClassOf cultivationtype:1 .
 
+cultivationtype:157 a owl:Class ;
+    rdfs:label "Bohnenkraut"@de,
+        "sarriette"@fr,
+        "Santoreggia"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:16 a owl:Class ;
     rdfs:label "Getreide und Pseudogetreide"@de,
         "Grains and pseudo-cereals"@en ;
@@ -256,6 +274,13 @@ cultivationtype:19 a owl:Class ;
         "Cereali autunnali"@it ;
     rdfs:subClassOf cultivationtype:1033 .
 
+cultivationtype:192 a owl:Class ;
+    rdfs:label "Kümmel"@de,
+        "caraway"@en,
+        "carvi"@fr,
+        "Carvi"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:2 a owl:Class ;
     rdfs:label "Dauerwiesen"@de,
         "Prairies permanentes"@fr,
@@ -267,11 +292,24 @@ cultivationtype:20 a owl:Class ;
     rdfs:label "Einzelelemente"@de ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:205 a owl:Class ;
+    rdfs:label "Römische Kamille"@de,
+        "lat. Chamaemelum nobile"@en,
+        "Camomille romaine"@fr,
+        "Camomilla romana"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:21 a owl:Class ;
     rdfs:label "Dauergrünfläche"@de ;
     schema:alternateName "Dauergrünland"@de ;
     rdfs:comment "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
     rdfs:subClassOf :Cultivation .
+
+cultivationtype:219 a owl:Class ;
+    rdfs:label "Schnittlauch"@de,
+        "ciboulette"@fr,
+        "Erba cipollina"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:22 a owl:Class ;
     rdfs:label "Gemüsebau"@de,
@@ -281,12 +319,24 @@ cultivationtype:22 a owl:Class ;
 
 cultivationtype:23 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau"@de ;
-    rdfs:subClassOf cultivationtype:22 ;
     owl:unionOf ( cultivationtype:801 cultivationtype:806 ) .
+
+cultivationtype:231 a owl:Class ;
+    rdfs:label "Dill"@de,
+        "dill"@en,
+        "aneth"@fr,
+        "Aneto"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:24 a owl:Class ;
     rdfs:label "Freilandgemüse"@de ;
-    rdfs:subClassOf cultivationtype:22 .
+    owl:disjointWith cultivationtype:23 .
+
+cultivationtype:253 a owl:Class ;
+    rdfs:label "Estragon"@de,
+        "estragon"@fr,
+        "Dragoncello"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:26 a owl:Class ;
     rdfs:label "Spargelgewächse"@de,
@@ -300,6 +350,25 @@ cultivationtype:263 a owl:Class ;
         "Lamiacee"@it ;
     rdfs:subClassOf cultivationtype:22 ;
     :botanicalPlant taxon:1LAMF .
+
+cultivationtype:268 a owl:Class ;
+    rdfs:label "Thymian"@de,
+        "thym"@fr,
+        "Timo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:290 a owl:Class ;
+    rdfs:label "Kohlgemüse"@de,
+        "choux"@fr,
+        "Cavoli"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:299 a owl:Class ;
+    rdfs:label "Minze"@de,
+        "Mint"@en,
+        "menthe"@fr,
+        "Menta"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:3 a owl:Class ;
     rdfs:label "Dauerweiden"@de,
@@ -315,11 +384,85 @@ cultivationtype:300 a owl:Class ;
     rdfs:subClassOf cultivationtype:22 ;
     :botanicalPlant taxon:1CHES .
 
+cultivationtype:302 a owl:Class ;
+    rdfs:label "Koriander"@de,
+        "coriandre"@fr,
+        "Coriandolo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:308 a owl:Class ;
+    rdfs:label "Rosmarin"@de,
+        "Rosemary"@en,
+        "romarin"@fr,
+        "Rosmarino"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:311 a owl:Class ;
+    rdfs:label "Petersilie"@de,
+        "persil"@fr,
+        "Prezzemolo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:317 a owl:Class ;
+    rdfs:label "Portulakgewächse (Portulacaceae)"@de,
+        "portulacacées (Portulacaceae)"@fr,
+        "Portulacee (Portulacaceae)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:327 a owl:Class ;
+    rdfs:label "Doldenblütler (Apiaceae)"@de,
+        "ombellifères (Apiaceae)"@fr,
+        "Ombrellifere (Apiacee)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:33 a owl:Class ;
+    rdfs:label "Baldrian"@de,
+        "Valerian"@en,
+        "valériane"@fr,
+        "Valeriana"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:35 a owl:Class ;
+    rdfs:label "Gewürz- und Medizinalkräuter"@de,
+        "herbes aromatiques et médicinales"@fr,
+        "Erbe aromatiche e medicinali"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:37 a owl:Class ;
+    rdfs:label "Ysop"@de,
+        "Hysope"@fr,
+        "Issopo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:4 a owl:Class ;
     rdfs:label "Reben"@de,
         "Vignobles"@fr,
         "Vigna"@it ;
     rdfs:subClassOf :Cultivation .
+
+cultivationtype:47 a owl:Class ;
+    rdfs:label "Hülsenfrüchtler (Fabaceae)"@de,
+        "fabacées (légumineuses)"@fr,
+        "Fabacee (Leguminose)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:478 a owl:Class ;
+    rdfs:label "Salbei"@de,
+        "sauge"@fr,
+        "Salvia"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:479 a owl:Class ;
+    rdfs:label "Liebstöckel"@de,
+        "livèche"@fr,
+        "Levistico"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:48 a owl:Class ;
+    rdfs:label "Kreuzblütler (Brassicaceae)"@de,
+        "crucifères (Brassicaceae)"@fr,
+        "Crocifere (Brassicacee)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:480 a owl:Class ;
     rdfs:label "Heuwiesen im Sömmerungsgebiet"@de ;
@@ -689,6 +832,12 @@ cultivationtype:549 a owl:Class ;
         "Sorgho"@fr,
         "Sorgo"@it ;
     rdfs:subClassOf cultivationtype:1033 .
+
+cultivationtype:55 a owl:Class ;
+    rdfs:label "Kräuter"@de,
+        "herbes"@fr,
+        "Erbe"@it ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:550 a owl:Class ;
     rdfs:label "Übrige Ackerfläche"@de,
@@ -1319,15 +1468,15 @@ cultivationtype:814 a owl:Class ;
     rdfs:subClassOf cultivationtype:830 .
 
 cultivationtype:830 a owl:Class ;
-    rdfs:label "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt aggregiert"@de,
-        "Cultures sous abri sans fondations permanentes, avec contributions, agrégée"@fr,
-        "Superfici con colture protette tutto l’anno, con contributi, aggregata"@it ;
+    rdfs:label "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt"@de,
+        "Cultures sous abri sans fondations permanentes, avec contributions"@fr,
+        "Superfici con colture protette tutto l’anno, con contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:840 a owl:Class ;
-    rdfs:label "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt aggregiert"@de,
-        "Cultures sous abri sans fondations permanentes, sans contributions, agrégée"@fr,
-        "Superfici con colture protette tutto l’anno, senza contributi, aggregata"@it ;
+    rdfs:label "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt"@de,
+        "Cultures sous abri sans fondations permanentes, sans contributions"@fr,
+        "Superfici con colture protette tutto l’anno, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:847 a owl:Class ;

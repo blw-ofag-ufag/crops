@@ -261,12 +261,24 @@ cultivationtype:26 a owl:Class ;
         "Asparagacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:37 a owl:Class ;
+    schema:name "Ysop"@de,
+        "Hysope"@fr,
+        "Issopo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:33 a owl:Class ;
     schema:name "Baldrian"@de,
         "Valerian"@en,
         "valériane"@fr,
         "Valeriana"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:37 a owl:Class ;
+    schema:name "Ysop"@de,
+        "Hysope"@fr,
+        "Issopo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:35 a owl:Class ;
     schema:name "Gewürz- und Medizinalkräuter"@de,
@@ -304,6 +316,57 @@ cultivationtype:67 a owl:Class ;
         "Erbette da cucina"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:106 a owl:Class ;
+    schema:name "Basilikum"@de,
+        "basilic"@fr,
+        "Basilico"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:109 a owl:Class ;
+    schema:name "Kerbel"@de,
+        "cerfeuil"@fr,
+        "Cerfoglio"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:157 a owl:Class ;
+    schema:name "Bohnenkraut"@de,
+        "sarriette"@fr,
+        "Santoreggia"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:192 a owl:Class ;
+    schema:name "Kümmel"@de,
+        "caraway"@en,
+        "carvi"@fr,
+        "Carvi"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:205 a owl:Class ;
+    schema:name "Römische Kamille"@de,
+        "lat. Chamaemelum nobile"@en,
+        "Camomille romaine"@fr,
+        "Camomilla romana"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:219 a owl:Class ;
+    schema:name "Schnittlauch"@de,
+        "ciboulette"@fr,
+        "Erba cipollina"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:231 a owl:Class ;
+    schema:name "Dill"@de,
+        "dill"@en,
+        "aneth"@fr,
+        "Aneto"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:253 a owl:Class ;
+    schema:name "Estragon"@de,
+        "estragon"@fr,
+        "Dragoncello"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:263 a owl:Class ;
     schema:name "Lippenblütler"@de,
         "lamiacées"@fr,
@@ -311,11 +374,43 @@ cultivationtype:263 a owl:Class ;
     rdfs:subClassOf cultivationtype:22 ;
     :botanicalPlant taxon:1LAMF .
 
+cultivationtype:268 a owl:Class ;
+    schema:name "Thymian"@de,
+        "thym"@fr,
+        "Timo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:290 a owl:Class ;
     schema:name "Kohlgemüse"@de,
         "choux"@fr,
         "Cavoli"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:299 a owl:Class ;
+    schema:name "Minze"@de,
+        "Mint"@en,
+        "menthe"@fr,
+        "Menta"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:302 a owl:Class ;
+    schema:name "Koriander"@de,
+        "coriandre"@fr,
+        "Coriandolo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:308 a owl:Class ;
+    schema:name "Rosmarin"@de,
+        "Rosemary"@en,
+        "romarin"@fr,
+        "Rosmarino"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:311 a owl:Class ;
+    schema:name "Petersilie"@de,
+        "persil"@fr,
+        "Prezzemolo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:317 a owl:Class ;
     schema:name "Portulakgewächse (Portulacaceae)"@de,
@@ -335,6 +430,18 @@ cultivationtype:327 a owl:Class ;
         "ombellifères (Apiaceae)"@fr,
         "Ombrellifere (Apiacee)"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:478 a owl:Class ;
+    schema:name "Salbei"@de,
+        "sauge"@fr,
+        "Salvia"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:479 a owl:Class ;
+    schema:name "Liebstöckel"@de,
+        "livèche"@fr,
+        "Levistico"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:480 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
@@ -1385,15 +1492,15 @@ cultivationtype:814 a owl:Class ;
     rdfs:subClassOf cultivationtype:830 .
 
 cultivationtype:830 a owl:Class ;
-    schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt aggregiert"@de,
-        "Cultures sous abri sans fondations permanentes, avec contributions, agrégée"@fr,
-        "Superfici con colture protette tutto l’anno, con contributi, aggregata"@it ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt"@de,
+        "Cultures sous abri sans fondations permanentes, avec contributions"@fr,
+        "Superfici con colture protette tutto l’anno, con contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:840 a owl:Class ;
-    schema:name "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt aggregiert"@de,
-        "Cultures sous abri sans fondations permanentes, sans contributions, agrégée"@fr,
-        "Superfici con colture protette tutto l’anno, senza contributi, aggregata"@it ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt"@de,
+        "Cultures sous abri sans fondations permanentes, sans contributions"@fr,
+        "Superfici con colture protette tutto l’anno, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:847 a owl:Class ;
