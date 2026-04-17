@@ -6,6 +6,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 
 # ==============================================================================
 # ONTOLOGY METADATA
@@ -14,6 +15,69 @@
 cultivationtype: a owl:Ontology ;
     dcterms:title "Kulturen-Taxonomie"@de,
         "Crop-Taxonomy"@en .
+
+# ==============================================================================
+# SHACL DATA MODEL
+# ------------------------------------------------------------------------------
+# Run `pyshacl rdf/ontology/cultivationtypes.ttl --format human`
+# ==============================================================================
+
+cultivationtype:shape a sh:NodeShape ;
+    sh:closed true ;
+    sh:targetClass owl:Class, owl:DeprecatedClass ;
+    sh:ignoredProperties ( rdf:type ) ;
+
+    # require EITHER a parent class OR an intersection definition
+    sh:xone (
+        [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
+        [ sh:property [ sh:path owl:intersectionOf ; sh:minCount 1 ] ]
+    ) ;
+
+    # global property definitions
+    sh:property
+    [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:path schema:alternateName ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+    ],
+    [
+        sh:path schema:description ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:path rdfs:subClassOf ;
+        sh:nodeKind sh:IRI ;
+    ],
+    [
+        sh:path owl:intersectionOf ;
+    ],
+    [
+        sh:path :botanicalPlant ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ],
+    [
+        sh:path :intensity ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ],
+    [
+        sh:path owl:disjointWith ;
+        sh:nodeKind sh:IRI ;
+        sh:node cultivationtype:shape ;
+    ] .
 
 # ==============================================================================
 # Top level groups
@@ -235,15 +299,13 @@ cultivationtype:501 a owl:Class ;
     schema:name "Sommergerste"@de,
         "Orge de printemps"@fr,
         "Orzo primaverile"@it ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cultivationtype:498 cultivationtype:1000 ) ] .
+    owl:intersectionOf ( cultivationtype:498 cultivationtype:1000 ) .
 
 cultivationtype:502 a owl:Class ;
     schema:name "Wintergerste"@de,
         "Orge d’automne"@fr,
         "Orzo autunnale"@it ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cultivationtype:19 cultivationtype:498 ) ] .
+    owl:intersectionOf ( cultivationtype:19 cultivationtype:498 ) .
 
 cultivationtype:504 a owl:Class ;
     schema:name "Hafer"@de,
@@ -287,8 +349,7 @@ cultivationtype:509 a owl:Class ;
         "Riso"@it ;
     schema:description "Der Anbau von Reis auf offener Fläche."@de ;
     rdfs:subClassOf cultivationtype:1033 ;
-    :botanicalPlant taxon:ORYSA ;
-    :cultivationMethod :11 .
+    :botanicalPlant taxon:ORYSA .
 
 cultivationtype:510 a owl:Class ;
     schema:name "Hartweizen"@de,
@@ -1460,11 +1521,7 @@ cultivationtype:999 a owl:Class ;
         "summer wheat"@en,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
-    owl:equivalentClass
-        [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 )
-        ] ;
+    owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 ) ;
     :botanicalPlant taxon:1TRZG .
 
 cultivationtype:1000 a owl:Class ;
@@ -1512,11 +1569,7 @@ cultivationtype:1007 a owl:Class ;
         "winter wheat"@en,
         "Blé d'automne"@fr,
         "Frumento autunnale"@it ;
-    owl:equivalentClass
-        [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:492 cultivationtype:19 )
-        ] .
+    owl:intersectionOf ( cultivationtype:492 cultivationtype:19 ) .
 
 cultivationtype:1008 a owl:Class ;
     schema:name "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
@@ -1529,18 +1582,11 @@ cultivationtype:1009 a owl:Class ;
 
 cultivationtype:1010 a owl:Class ;
     schema:name "Winterhafer"@de ;
-    owl:equivalentClass
-        [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:504 cultivationtype:19 )
-        ] .
+    owl:intersectionOf ( cultivationtype:504 cultivationtype:19 ) .
 
 cultivationtype:1011 a owl:Class ;
     schema:name "Sommerhafer"@de ;
-    owl:equivalentClass [
-            a owl:Class ;
-            owl:intersectionOf ( cultivationtype:504 cultivationtype:1000 )
-        ] .
+    owl:intersectionOf ( cultivationtype:504 cultivationtype:1000 ) .
 
 cultivationtype:1012 a owl:Class ;
     schema:name "Winterroggen"@de,
