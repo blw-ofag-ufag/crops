@@ -669,7 +669,7 @@ psm:12 a cube:Observation ;
         "abricotier"@fr,
         "Albicocco"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:472 .
 
 psm:120 a cube:Observation ;
     schema:identifier "0A3519B1-A42F-43EE-AF82-6DCF17EA8DA6"^^xsd:ID ;
@@ -732,7 +732,7 @@ psm:126 a cube:Observation ;
         "pommier"@fr,
         "Melo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype::702 .
+    :cultivationType cultivationtype:702 .
 
 psm:127 a cube:Observation ;
     schema:identifier "F730D531-B0C8-4A20-AC4B-4F86445E2491"^^xsd:ID ;
@@ -1050,7 +1050,7 @@ psm:159 a cube:Observation ;
         "poirier"@fr,
         "Pero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:703 .
 
 psm:16 a cube:Observation ;
     schema:identifier "7971013B-801D-4595-8208-782446A6C7E0"^^xsd:ID ;
@@ -2961,7 +2961,7 @@ psm:50 a cube:Observation ;
         "fruits à noyaux"@fr,
         "Frutta a nocciolo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:704 .
 
 psm:51 a cube:Observation ;
     schema:identifier "C96EE4F4-12EA-49DE-9BEF-21EA73B52760"^^xsd:ID ;
@@ -3064,7 +3064,7 @@ psm:61 a cube:Observation ;
     schema:name "allg. Obstbau"@de,
         "domaine app. arboriculture"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:730 .
 
 psm:62 a cube:Observation ;
     schema:identifier "E59545AD-3331-4E3D-B58D-9F67833C060B"^^xsd:ID ;
