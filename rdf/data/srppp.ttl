@@ -118,7 +118,7 @@ psm:ObservationConstraint a sh:NodeShape ;
 # OBSERVATION SET
 # ==============================================================================
 
-cube:ObservationSet cube:observation psm:1,
+psm:ObservationSet cube:observation psm:1,
         psm:10,
         psm:100,
         psm:101,
