@@ -415,8 +415,7 @@ cultivationtype:509 a owl:Class ;
         "Riso"@it ;
     rdfs:comment "Der Anbau von Reis auf offener Fläche."@de ;
     rdfs:subClassOf cultivationtype:1033 ;
-    :botanicalPlant taxon:ORYSA ;
-    :cultivationMethod :11 .
+    :botanicalPlant taxon:ORYSA .
 
 cultivationtype:510 a owl:Class ;
     rdfs:label "Hartweizen"@de,
@@ -1623,13 +1622,14 @@ cultivationtype:shape a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" ) ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:nodeKind sh:Literal ;
             sh:path schema:alternateName ],
         [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" ) ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:nodeKind sh:Literal ;
-            sh:path schema:description ],
+            sh:path schema:description ;
+            sh:uniqueLang true ],
         [ sh:nodeKind sh:IRI ;
             sh:path rdfs:subClassOf ],
         [ sh:path owl:intersectionOf ],
@@ -1643,10 +1643,11 @@ cultivationtype:shape a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:path owl:disjointWith ],
         [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" ) ;
-            sh:minCount 3 ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:path schema:name ] ;
+            sh:path schema:name ;
+            sh:uniqueLang true ] ;
     sh:targetClass owl:Class,
         owl:DeprecatedClass ;
     sh:xone ( [ sh:property [ sh:minCount 1 ;
