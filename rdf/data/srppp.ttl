@@ -732,7 +732,7 @@ psm:126 a cube:Observation ;
         "pommier"@fr,
         "Melo"@it ;
     schema:version 0 ;
-    :cultivationtype cube:Undefined .
+    :cultivationtype cultivationtype::702 .
 
 psm:127 a cube:Observation ;
     schema:identifier "F730D531-B0C8-4A20-AC4B-4F86445E2491"^^xsd:ID ;

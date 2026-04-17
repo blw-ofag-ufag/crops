@@ -13,7 +13,7 @@
     owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( cultivationtype:812 cultivationtype:811 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
+    owl:members ( cultivationtype:545 cultivationtype:546 cultivationtype:801 cultivationtype:806 ) .
 
 cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
@@ -277,7 +277,16 @@ cultivationtype:22 a owl:Class ;
     rdfs:label "Gemüsebau"@de,
         "Vegetable Production"@en ;
     rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:812 cultivationtype:811 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
+    owl:unionOf ( cultivationtype:23 cultivationtype:24 ) .
+
+cultivationtype:23 a owl:Class ;
+    rdfs:label "Gemüsekulturen in geschütztem Anbau"@de ;
+    rdfs:subClassOf cultivationtype:22 ;
+    owl:unionOf ( cultivationtype:801 cultivationtype:806 ) .
+
+cultivationtype:24 a owl:Class ;
+    rdfs:label "Freilandgemüse"@de ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:26 a owl:Class ;
     rdfs:label "Spargelgewächse"@de,
@@ -648,13 +657,13 @@ cultivationtype:545 a owl:Class ;
     rdfs:label "Einjährige Freilandgemüse, ohne Konservengemüse"@de,
         "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:24 .
 
 cultivationtype:546 a owl:Class ;
     rdfs:label "Freiland-Konservengemüse"@de,
         "Légumes de conserve cultivés en plein champ"@fr,
         "Ortaggi di pieno campo per la conservazione"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:24 .
 
 cultivationtype:547 a owl:Class ;
     rdfs:label "Wurzeln der Treibzichorie"@de,
@@ -1281,13 +1290,14 @@ cultivationtype:811 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur sol naturel"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:806 .
 
 cultivationtype:812 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur des tables de plantation ou des étagères"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:806 ;
+    owl:disjointWith cultivationtype:811 .
 
 cultivationtype:813 a owl:Class ;
     rdfs:label "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
