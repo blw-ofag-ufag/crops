@@ -27,10 +27,21 @@ cultivationtype:shape a sh:NodeShape ;
     sh:targetClass owl:Class, owl:DeprecatedClass ;
     sh:ignoredProperties ( rdf:type ) ;
 
-    # require EITHER a parent class OR an intersection definition
-    sh:xone (
+    # Require AT LEAST ONE of the following relationships:
+    # - a parent class (rdfs:subClassOf),
+    # - an intersection definition (owl:intersectionOf),
+    # - or being part of a parent's unionOf list (^owl:unionOf).
+    sh:or (
         [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
         [ sh:property [ sh:path owl:intersectionOf ; sh:minCount 1 ] ]
+        [ sh:property [ 
+            sh:path (
+                [ sh:inversePath rdf:first ]
+                [ sh:zeroOrMorePath [ sh:inversePath rdf:rest ] ]
+                [ sh:inversePath owl:unionOf ]
+            ) ; 
+            sh:minCount 1 
+        ] ]
     ) ;
 
     # global property definitions
@@ -231,23 +242,28 @@ cultivationtype:22 a owl:Class ;
         "Vegetable Production"@en ;
     rdfs:subClassOf :Cultivation ;
     owl:unionOf (
-        cultivationtype:812
-        cultivationtype:811
-        cultivationtype:802
-        cultivationtype:801
-        cultivationtype:546
-        cultivationtype:545
+        cultivationtype:23
+        cultivationtype:24
     ) .
+
+cultivationtype:23 a owl:Class ;
+    schema:name "Gemüsekulturen in geschütztem Anbau"@de ;
+    owl:unionOf (
+        cultivationtype:801
+        cultivationtype:806
+    ) .
+
+cultivationtype:24 a owl:Class ;
+    schema:name "Freilandgemüse"@de ;
+    owl:disjointWith cultivationtype:23 .
 
 # Declare that all specific vegetable cultivation types are mutually exclusive
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:812
-        cultivationtype:811
-        cultivationtype:802
-        cultivationtype:801
-        cultivationtype:546
         cultivationtype:545
+        cultivationtype:546
+        cultivationtype:801
+        cultivationtype:806
     ) .
 
 cultivationtype:26 a owl:Class ;
@@ -256,16 +272,161 @@ cultivationtype:26 a owl:Class ;
         "Asparagacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:37 a owl:Class ;
+    schema:name "Ysop"@de,
+        "Hysope"@fr,
+        "Issopo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:33 a owl:Class ;
+    schema:name "Baldrian"@de,
+        "Valerian"@en,
+        "valériane"@fr,
+        "Valeriana"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:37 a owl:Class ;
+    schema:name "Ysop"@de,
+        "Hysope"@fr,
+        "Issopo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:35 a owl:Class ;
+    schema:name "Gewürz- und Medizinalkräuter"@de,
+        "herbes aromatiques et médicinales"@fr,
+        "Erbe aromatiche e medicinali"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:47 a owl:Class ;
+    schema:name "Hülsenfrüchtler (Fabaceae)"@de,
+        "fabacées (légumineuses)"@fr,
+        "Fabacee (Leguminose)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:48 a owl:Class ;
+    schema:name "Kreuzblütler (Brassicaceae)"@de,
+        "crucifères (Brassicaceae)"@fr,
+        "Crocifere (Brassicacee)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
 cultivationtype:51 a owl:Class ;
     schema:name "Spargel"@de,
         "asperge"@fr,
         "Asparagi"@it ;
     rdfs:subClassOf cultivationtype:26 .
 
+cultivationtype:55 a owl:Class ;
+    schema:name "Kräuter"@de,
+        "herbes"@fr,
+        "Erbe"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
 cultivationtype:67 a owl:Class ;
     schema:name "Küchenkräuter"@de,
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:106 a owl:Class ;
+    schema:name "Basilikum"@de,
+        "basilic"@fr,
+        "Basilico"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:109 a owl:Class ;
+    schema:name "Kerbel"@de,
+        "cerfeuil"@fr,
+        "Cerfoglio"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:157 a owl:Class ;
+    schema:name "Bohnenkraut"@de,
+        "sarriette"@fr,
+        "Santoreggia"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:192 a owl:Class ;
+    schema:name "Kümmel"@de,
+        "caraway"@en,
+        "carvi"@fr,
+        "Carvi"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:205 a owl:Class ;
+    schema:name "Römische Kamille"@de,
+        "lat. Chamaemelum nobile"@en,
+        "Camomille romaine"@fr,
+        "Camomilla romana"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:219 a owl:Class ;
+    schema:name "Schnittlauch"@de,
+        "ciboulette"@fr,
+        "Erba cipollina"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:231 a owl:Class ;
+    schema:name "Dill"@de,
+        "dill"@en,
+        "aneth"@fr,
+        "Aneto"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:253 a owl:Class ;
+    schema:name "Estragon"@de,
+        "estragon"@fr,
+        "Dragoncello"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:263 a owl:Class ;
+    schema:name "Lippenblütler"@de,
+        "lamiacées"@fr,
+        "Lamiacee"@it ;
+    rdfs:subClassOf cultivationtype:22 ;
+    :botanicalPlant taxon:1LAMF .
+
+cultivationtype:268 a owl:Class ;
+    schema:name "Thymian"@de,
+        "thym"@fr,
+        "Timo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:290 a owl:Class ;
+    schema:name "Kohlgemüse"@de,
+        "choux"@fr,
+        "Cavoli"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:299 a owl:Class ;
+    schema:name "Minze"@de,
+        "Mint"@en,
+        "menthe"@fr,
+        "Menta"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:302 a owl:Class ;
+    schema:name "Koriander"@de,
+        "coriandre"@fr,
+        "Coriandolo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:308 a owl:Class ;
+    schema:name "Rosmarin"@de,
+        "Rosemary"@en,
+        "romarin"@fr,
+        "Rosmarino"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:311 a owl:Class ;
+    schema:name "Petersilie"@de,
+        "persil"@fr,
+        "Prezzemolo"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:317 a owl:Class ;
+    schema:name "Portulakgewächse (Portulacaceae)"@de,
+        "portulacacées (Portulacaceae)"@fr,
+        "Portulacee (Portulacaceae)"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:300 a owl:Class ;
@@ -274,6 +435,24 @@ cultivationtype:300 a owl:Class ;
         "Chenopodiacee"@it ;
     rdfs:subClassOf cultivationtype:22 ;
     :botanicalPlant taxon:1CHES .
+
+cultivationtype:327 a owl:Class ;
+    schema:name "Doldenblütler (Apiaceae)"@de,
+        "ombellifères (Apiaceae)"@fr,
+        "Ombrellifere (Apiacee)"@it ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:478 a owl:Class ;
+    schema:name "Salbei"@de,
+        "sauge"@fr,
+        "Salvia"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:479 a owl:Class ;
+    schema:name "Liebstöckel"@de,
+        "livèche"@fr,
+        "Levistico"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:480 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
@@ -624,13 +803,13 @@ cultivationtype:545 a owl:Class ;
     schema:name "Einjährige Freilandgemüse, ohne Konservengemüse"@de,
         "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:24 .
 
 cultivationtype:546 a owl:Class ;
     schema:name "Freiland-Konservengemüse"@de,
         "Légumes de conserve cultivés en plein champ"@fr,
         "Ortaggi di pieno campo per la conservazione"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:24 .
 
 cultivationtype:547 a owl:Class ;
     schema:name "Wurzeln der Treibzichorie"@de,
@@ -1302,13 +1481,14 @@ cultivationtype:811 a owl:Class ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur sol naturel"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:806 .
 
 cultivationtype:812 a owl:Class ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur des tables de plantation ou des étagères"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:806 ;
+    owl:disjointWith cultivationtype:811 .
 
 cultivationtype:813 a owl:Class ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
@@ -1323,15 +1503,15 @@ cultivationtype:814 a owl:Class ;
     rdfs:subClassOf cultivationtype:830 .
 
 cultivationtype:830 a owl:Class ;
-    schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt aggregiert"@de,
-        "Cultures sous abri sans fondations permanentes, avec contributions, agrégée"@fr,
-        "Superfici con colture protette tutto l’anno, con contributi, aggregata"@it ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt"@de,
+        "Cultures sous abri sans fondations permanentes, avec contributions"@fr,
+        "Superfici con colture protette tutto l’anno, con contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:840 a owl:Class ;
-    schema:name "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt aggregiert"@de,
-        "Cultures sous abri sans fondations permanentes, sans contributions, agrégée"@fr,
-        "Superfici con colture protette tutto l’anno, senza contributi, aggregata"@it ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt"@de,
+        "Cultures sous abri sans fondations permanentes, sans contributions"@fr,
+        "Superfici con colture protette tutto l’anno, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:847 a owl:Class ;
