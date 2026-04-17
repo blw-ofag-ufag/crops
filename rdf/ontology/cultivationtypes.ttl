@@ -1103,7 +1103,7 @@ cultivationtype:309 a owl:Class ;
     schema:name "Kernobst"@de,
         "fruits à pépins"@fr,
         "Frutta a granelli"@it ;
-    rdfs:subClassOf cultivationtype:61 .
+    rdfs:subClassOf cultivationtype:730 .
 
 cultivationtype:311 a owl:Class ;
     schema:name "Petersilie"@de,
