@@ -57,6 +57,26 @@ construct_class_membership <- function(
   }
 }
 
+
+# Read prefixes
+
+read_prefixes_ttl <- function(file_path) {
+  lines <- readLines(file_path, warn = FALSE)
+  lines <- lines[grepl("^@prefix", lines)]
+
+  # Extract the prefix name (everything between '@prefix ' and the ':')
+  p_names <- trimws(sub("^@prefix\\s+([^:]*):.*", "\\1", lines))
+  # Turn the empty prefix into "base"
+  p_names[p_names == ""] <- "base"
+
+  # Extract the URI
+  p_uris <- sub(".*<([^>]+)>.*", "\\1", lines)
+
+  # Bind them together into a named vector
+  return(setNames(p_uris, p_names))
+}
+
+
 # Write prefixes
 write_global_prefixes <- function(x) {
   for (prefix in names(x)) {
