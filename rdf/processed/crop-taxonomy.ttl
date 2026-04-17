@@ -12,6 +12,9 @@
 [] a owl:AllDisjointClasses ;
     owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
 
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:812 cultivationtype:811 cultivationtype:802 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
+
 cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
         "Terres cultivées"@fr,
@@ -269,6 +272,12 @@ cultivationtype:21 a owl:Class ;
     schema:alternateName "Dauergrünland"@de ;
     rdfs:comment "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
     rdfs:subClassOf :Cultivation .
+
+cultivationtype:22 a owl:Class ;
+    rdfs:label "Gemüsebau"@de,
+        "Vegetable Production"@en ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:812 cultivationtype:811 cultivationtype:802 cultivationtype:801 cultivationtype:546 cultivationtype:545 ) .
 
 cultivationtype:3 a owl:Class ;
     rdfs:label "Dauerweiden"@de,
@@ -1199,13 +1208,15 @@ cultivationtype:801 a owl:Class ;
     rdfs:label "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures maraîchères sous abri avec fondations permanentes"@fr,
         "Colture orticole in serre con fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:22,
+        cultivationtype:830 .
 
 cultivationtype:802 a owl:Class ;
     rdfs:label "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
         "Autres cultures spéciales sous abri avec fondations permanentes"@fr,
         "Altre colture speciali in serre con fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:22,
+        cultivationtype:830 .
 
 cultivationtype:803 a owl:Class ;
     rdfs:label "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,

@@ -224,8 +224,28 @@ cultivationtype:21 a owl:Class ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:22 a owl:Class ;
-    schema:name "Gemüsebau"@de ;
-    rdfs:subClassOf :Cultivation .
+    schema:name "Gemüsebau"@de,
+        "Vegetable Production"@en ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf (
+        cultivationtype:812
+        cultivationtype:811
+        cultivationtype:802
+        cultivationtype:801
+        cultivationtype:546
+        cultivationtype:545
+    ) .
+
+# Declare that all specific vegetable cultivation types are mutually exclusive
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:812
+        cultivationtype:811
+        cultivationtype:802
+        cultivationtype:801
+        cultivationtype:546
+        cultivationtype:545
+    ) .
 
 cultivationtype:480 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
@@ -576,13 +596,13 @@ cultivationtype:545 a owl:Class ;
     schema:name "Einjährige Freilandgemüse, ohne Konservengemüse"@de,
         "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
-    rdfs:subClassOf cultivationtype:1, cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:546 a owl:Class ;
     schema:name "Freiland-Konservengemüse"@de,
         "Légumes de conserve cultivés en plein champ"@fr,
         "Ortaggi di pieno campo per la conservazione"@it ;
-    rdfs:subClassOf cultivationtype:1, cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:547 a owl:Class ;
     schema:name "Wurzeln der Treibzichorie"@de,
@@ -1254,13 +1274,13 @@ cultivationtype:811 a owl:Class ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur sol naturel"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
-    rdfs:subClassOf cultivationtype:830, cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:830 .
 
 cultivationtype:812 a owl:Class ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur des tables de plantation ou des étagères"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
-    rdfs:subClassOf cultivationtype:830, cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:830 .
 
 cultivationtype:813 a owl:Class ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
