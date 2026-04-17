@@ -31,7 +31,7 @@ naebi: a void:Dataset,
     schema:creativeWorkStatus status:Draft ;
     schema:creator blw: ;
     schema:dateCreated "2026-04-17"^^xsd:date ;
-    schema:datePublished "2026-04-14"^^xsd:date ;
+    schema:datePublished "2026-04-17"^^xsd:date ;
     schema:description "Kulturen der Suisse-Bilanz und ihre Codes gemäss Wegleitung."@de ;
     schema:name "Suisse-Bilanz Kulturentabelle"@de ;
     schema:publisher blw: ;
