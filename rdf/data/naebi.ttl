@@ -1,24 +1,21 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/1.13/> .
-@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
-
+@prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
 @prefix cube: <https://cube.link/> .
-@prefix meta: <https://cube.link/meta/> .
-
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix schema: <http://schema.org/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix frequency: <http://publications.europe.eu/resource/authority/frequency> .
+@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/1> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix status: <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix theme: <https://register.ld.admin.ch/opendataswiss/category/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix theme: <https://register.ld.admin.ch/opendataswiss/category/> .
-@prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
-@prefix frequency: <http://publications.europe.eu/resource/authority/frequency> .
-@prefix status: <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
 
 # ==============================================================================
 # DATASET METADATA
@@ -33,12 +30,12 @@ naebi: a void:Dataset,
     schema:contributor blw: ;
     schema:creativeWorkStatus status:Draft ;
     schema:creator blw: ;
-    schema:dateCreated "2026-03-26"^^xsd:date ;
-    schema:datePublished "2026-03-26"^^xsd:date ;
+    schema:dateCreated "2026-04-17"^^xsd:date ;
+    schema:datePublished "2026-04-14"^^xsd:date ;
     schema:description "Kulturen der Suisse-Bilanz und ihre Codes gemäss Wegleitung."@de ;
     schema:name "Suisse-Bilanz Kulturentabelle"@de ;
     schema:publisher blw: ;
-    schema:version "1.18" ;
+    schema:version "1.20" ;
     schema:workExample <https://ld.admin.ch/application/visualize> ;
     dcat:contactPoint
         [
@@ -56,7 +53,9 @@ naebi: a void:Dataset,
 # ==============================================================================
 
 naebi:ObservationConstraint a sh:NodeShape ;
+    sh:targetClass cube:Observation ;
     sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
     sh:property
         [
             sh:order 1 ;
@@ -65,45 +64,54 @@ naebi:ObservationConstraint a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
         ],
         [
             sh:order 2 ;
-            schema:name "Kulturkategorie"@de ;
+            schema:name "Bezeichnung"@de,
+                "Name"@en ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationCategory ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
         ],
         [
             sh:order 3 ;
+            schema:name "Kulturkategorie"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
+            sh:path :cultivationCategory ;
+        ],
+        [
+            sh:order 4 ;
+            schema:name "Kultur-Unterkategorie"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
+            sh:path :cultivationSubCategory ;
+        ],
+        [
+            sh:order 5 ;
             schema:name "Kultur"@de,
                 "Crop"@en ;
             a cube:KeyDimension ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
-            sh:path :cultivationType ;
+            sh:path :cultivationtype ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 4 ;
-            schema:name "Ertrag Hauptprodukt"@de ;
-            schema:description "Geerntet, mit einem bei der Ernte üblichen Wassergehalt."@de ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:path :yield ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:EA ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 5 ;
+            sh:order 6 ;
             schema:name "N"@de ;
             schema:description "Stickstoff, kg/ha"@de ;
-            sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :nitrogen ;
+            sh:path :N2 ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-HA ;
@@ -111,25 +119,11 @@ naebi:ObservationConstraint a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 6 ;
+            sh:order 7 ;
             schema:name "P₂O₅"@de ;
             schema:description "Phosphor, kg/dt"@de ;
-            sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :phosphorus ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
-            qudt:scaleType qudt:RatioScale ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 7 ;
-            schema:name "K₂O"@de ;
-            schema:description "Kalium, kg/dt"@de ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:path :potassium ;
+            sh:path :P2O5 ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
@@ -138,11 +132,22 @@ naebi:ObservationConstraint a sh:NodeShape ;
         [
             a cube:MeasureDimension ;
             sh:order 8 ;
-            schema:name "Mg"@de ;
-            schema:description "Mangan, kg/dt"@de ;
-            sh:minCount 1 ;
+            schema:name "K₂O"@de ;
+            schema:description "Kalium, kg/dt"@de ;
             sh:maxCount 1 ;
-            sh:path :manganese ;
+            sh:path :K2O ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:decimal ;
+            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
+            qudt:scaleType qudt:RatioScale ;
+        ],
+        [
+            a cube:MeasureDimension ;
+            sh:order 9 ;
+            schema:name "Mg"@de ;
+            schema:description "Magnesium, kg/dt"@de ;
+            sh:maxCount 1 ;
+            sh:path :Mg ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
@@ -154,425 +159,3748 @@ naebi:ObservationConstraint a sh:NodeShape ;
 # ==============================================================================
 
 naebi:ObservationSet a cube:ObservationSet ;
-    cube:observation
-        naebi:493,
-        naebi:501,
-        naebi:508,
-        naebi:509,
-        naebi:511,
-        naebi:542,
-        naebi:572,
-        naebi:999,
-        naebi:1001,
-        naebi:1002,
-        naebi:1004,
-        naebi:1005,
-        naebi:1008,
-        naebi:1009,
-        naebi:1010,
-        naebi:1011,
-        naebi:1015,
-        naebi:1016,
-        naebi:1018,
-        naebi:1019,
-        naebi:1020,
-        naebi:1021,
-        naebi:1023,
-        naebi:1024,
-        naebi:1025,
-        naebi:1026,
-        naebi:1027,
-        naebi:1028,
-        naebi:1029,
-        naebi:1030,
-        naebi:1031,
-        naebi:1034,
-        naebi:1035 .
+    cube:observation naebi:1,
+        naebi:10,
+        naebi:100,
+        naebi:101,
+        naebi:102,
+        naebi:103,
+        naebi:104,
+        naebi:105,
+        naebi:106,
+        naebi:107,
+        naebi:108,
+        naebi:109,
+        naebi:11,
+        naebi:110,
+        naebi:111,
+        naebi:112,
+        naebi:113,
+        naebi:114,
+        naebi:115,
+        naebi:116,
+        naebi:117,
+        naebi:118,
+        naebi:119,
+        naebi:12,
+        naebi:120,
+        naebi:121,
+        naebi:122,
+        naebi:123,
+        naebi:124,
+        naebi:125,
+        naebi:126,
+        naebi:127,
+        naebi:128,
+        naebi:129,
+        naebi:13,
+        naebi:130,
+        naebi:131,
+        naebi:132,
+        naebi:133,
+        naebi:134,
+        naebi:135,
+        naebi:136,
+        naebi:137,
+        naebi:138,
+        naebi:139,
+        naebi:14,
+        naebi:140,
+        naebi:141,
+        naebi:142,
+        naebi:143,
+        naebi:144,
+        naebi:145,
+        naebi:146,
+        naebi:147,
+        naebi:148,
+        naebi:149,
+        naebi:15,
+        naebi:150,
+        naebi:151,
+        naebi:152,
+        naebi:153,
+        naebi:154,
+        naebi:155,
+        naebi:156,
+        naebi:157,
+        naebi:158,
+        naebi:159,
+        naebi:16,
+        naebi:160,
+        naebi:161,
+        naebi:162,
+        naebi:163,
+        naebi:164,
+        naebi:165,
+        naebi:166,
+        naebi:167,
+        naebi:168,
+        naebi:169,
+        naebi:17,
+        naebi:170,
+        naebi:171,
+        naebi:172,
+        naebi:173,
+        naebi:174,
+        naebi:175,
+        naebi:176,
+        naebi:177,
+        naebi:178,
+        naebi:179,
+        naebi:18,
+        naebi:180,
+        naebi:181,
+        naebi:182,
+        naebi:183,
+        naebi:184,
+        naebi:185,
+        naebi:186,
+        naebi:187,
+        naebi:188,
+        naebi:189,
+        naebi:19,
+        naebi:190,
+        naebi:191,
+        naebi:192,
+        naebi:193,
+        naebi:194,
+        naebi:195,
+        naebi:196,
+        naebi:197,
+        naebi:198,
+        naebi:199,
+        naebi:2,
+        naebi:20,
+        naebi:200,
+        naebi:201,
+        naebi:202,
+        naebi:203,
+        naebi:204,
+        naebi:205,
+        naebi:206,
+        naebi:207,
+        naebi:208,
+        naebi:209,
+        naebi:21,
+        naebi:210,
+        naebi:211,
+        naebi:212,
+        naebi:213,
+        naebi:214,
+        naebi:215,
+        naebi:216,
+        naebi:217,
+        naebi:218,
+        naebi:219,
+        naebi:22,
+        naebi:220,
+        naebi:221,
+        naebi:222,
+        naebi:223,
+        naebi:224,
+        naebi:225,
+        naebi:226,
+        naebi:227,
+        naebi:228,
+        naebi:229,
+        naebi:23,
+        naebi:230,
+        naebi:231,
+        naebi:232,
+        naebi:233,
+        naebi:234,
+        naebi:235,
+        naebi:236,
+        naebi:237,
+        naebi:238,
+        naebi:239,
+        naebi:24,
+        naebi:240,
+        naebi:241,
+        naebi:242,
+        naebi:243,
+        naebi:244,
+        naebi:245,
+        naebi:246,
+        naebi:247,
+        naebi:248,
+        naebi:249,
+        naebi:25,
+        naebi:250,
+        naebi:251,
+        naebi:252,
+        naebi:253,
+        naebi:254,
+        naebi:255,
+        naebi:256,
+        naebi:257,
+        naebi:258,
+        naebi:259,
+        naebi:26,
+        naebi:260,
+        naebi:261,
+        naebi:262,
+        naebi:263,
+        naebi:264,
+        naebi:265,
+        naebi:266,
+        naebi:267,
+        naebi:268,
+        naebi:269,
+        naebi:27,
+        naebi:270,
+        naebi:271,
+        naebi:272,
+        naebi:273,
+        naebi:274,
+        naebi:275,
+        naebi:276,
+        naebi:277,
+        naebi:278,
+        naebi:279,
+        naebi:28,
+        naebi:280,
+        naebi:281,
+        naebi:282,
+        naebi:283,
+        naebi:284,
+        naebi:285,
+        naebi:286,
+        naebi:287,
+        naebi:288,
+        naebi:289,
+        naebi:29,
+        naebi:290,
+        naebi:291,
+        naebi:292,
+        naebi:293,
+        naebi:294,
+        naebi:295,
+        naebi:296,
+        naebi:297,
+        naebi:298,
+        naebi:299,
+        naebi:3,
+        naebi:30,
+        naebi:300,
+        naebi:301,
+        naebi:302,
+        naebi:303,
+        naebi:304,
+        naebi:305,
+        naebi:306,
+        naebi:307,
+        naebi:308,
+        naebi:309,
+        naebi:31,
+        naebi:310,
+        naebi:311,
+        naebi:312,
+        naebi:313,
+        naebi:32,
+        naebi:33,
+        naebi:34,
+        naebi:35,
+        naebi:36,
+        naebi:37,
+        naebi:38,
+        naebi:39,
+        naebi:4,
+        naebi:40,
+        naebi:41,
+        naebi:42,
+        naebi:43,
+        naebi:44,
+        naebi:45,
+        naebi:46,
+        naebi:47,
+        naebi:48,
+        naebi:49,
+        naebi:5,
+        naebi:50,
+        naebi:51,
+        naebi:52,
+        naebi:53,
+        naebi:54,
+        naebi:55,
+        naebi:56,
+        naebi:57,
+        naebi:58,
+        naebi:59,
+        naebi:6,
+        naebi:60,
+        naebi:61,
+        naebi:62,
+        naebi:63,
+        naebi:64,
+        naebi:65,
+        naebi:66,
+        naebi:67,
+        naebi:68,
+        naebi:69,
+        naebi:7,
+        naebi:70,
+        naebi:71,
+        naebi:72,
+        naebi:73,
+        naebi:74,
+        naebi:75,
+        naebi:76,
+        naebi:77,
+        naebi:78,
+        naebi:79,
+        naebi:8,
+        naebi:80,
+        naebi:81,
+        naebi:82,
+        naebi:83,
+        naebi:84,
+        naebi:85,
+        naebi:86,
+        naebi:87,
+        naebi:88,
+        naebi:89,
+        naebi:9,
+        naebi:90,
+        naebi:91,
+        naebi:92,
+        naebi:93,
+        naebi:94,
+        naebi:95,
+        naebi:96,
+        naebi:97,
+        naebi:98,
+        naebi:99 .
 
-# ==============================================================================
-# OBSERVATIONS
-# ==============================================================================
+naebi:1 a cube:Observation ;
+    schema:identifier "CROP_ABRGS"^^xsd:string ;
+    schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
+    :K2O 350.0 ;
+    :Mg 50.0 ;
+    :N2 200.0 ;
+    :P2O5 100.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:493 a cube:Observation ;
-    schema:identifier "CROP_KARPA"^^xsd:ID ;
-    schema:name "Sonnenblumen"@de,
-        "Tournesol"@fr,
-        "Girasole"@it ;
-    :cultivationType cultivationtype:493 ;
-    :yield 30 ;
-    :nitrogen 60 ;
-    :phosphorus 1.10 ;
-    :potassium 0.83 ;
-    :manganese 0.30 .
+naebi:10 a cube:Observation ;
+    schema:identifier "CROP_ASPBW"^^xsd:string ;
+    schema:name "Spargel Bleich-"@de ;
+    :K2O 130.0 ;
+    :Mg 20.0 ;
+    :N2 140.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:501 a cube:Observation ;
-    schema:identifier "CROP_SGRST"^^xsd:ID ;
-    schema:name "Sommergerste"@de,
-        "Orge de printemps"@fr,
-        "Orzo primaverile"@it ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:501 ;
-    :yield 55 ;
-    :nitrogen 90 ;
-    :phosphorus 0.84 ;
-    :potassium 0.55 ;
-    :manganese 0.11 .
+naebi:100 a cube:Observation ;
+    schema:identifier "CROP_HOPS"^^xsd:string ;
+    schema:name "Hopfen"@de ;
+    :K2O 200.0 ;
+    :Mg 50.0 ;
+    :N2 180.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:508 a cube:Observation ;
-    schema:identifier "CROP_SILCRN"^^xsd:ID ;
-    schema:name "Körnermais"@de,
-        "Maïs grain"@fr,
-        "Mais da granella"@it ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:508 ;
-    :yield 100 ;
-    :nitrogen 110 ;
-    :phosphorus 0.76 ;
-    :potassium 0.40 ;
-    :manganese 0.09 .
+naebi:101 a cube:Observation ;
+    schema:identifier "CROP_HRB1L"^^xsd:string ;
+    schema:name "Kräuter,1-jährig, gross"@de ;
+    :K2O 250.0 ;
+    :Mg 25.0 ;
+    :N2 160.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:509 a cube:Observation ;
-    schema:identifier "CROP_TABAC"^^xsd:ID ;
-    schema:name "Reis"@de,
-        "Riz"@fr,
-        "Riso"@it,
-        "Rice"@en ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:509 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:102 a cube:Observation ;
+    schema:identifier "CROP_HRB1M"^^xsd:string ;
+    schema:name "Kräuter,1-jährig, mittel"@de ;
+    :K2O 160.0 ;
+    :Mg 15.0 ;
+    :N2 70.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:511 a cube:Observation ;
-    schema:identifier "CROP_EMMEK"^^xsd:ID ;
-    schema:name "Emmer, Einkorn"@de,
-        "Amidonnier, engrain"@fr,
-        "Farro, piccola spelta"@it ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:511 ;
-    :yield 25 ;
-    :nitrogen 30 ;
-    :phosphorus 0.80 ;
-    :potassium 0.06 ;
-    :manganese 0.16 .
+naebi:103 a cube:Observation ;
+    schema:identifier "CROP_HRB1MB"^^xsd:string ;
+    schema:name "Kräuter,1-jährig, mittel-gross"@de ;
+    :K2O 200.0 ;
+    :Mg 20.0 ;
+    :N2 120.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:542 a cube:Observation ;
-    schema:identifier "CROP_GANSO"^^xsd:ID ;
-    schema:name "Hirse"@de,
-        "Millet"@fr,
-        "Miglio"@it,
-        "millet"@en ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:542 ;
-    :yield 35 ;
-    :nitrogen 70 ;
-    :phosphorus 0.66 ;
-    :potassium 0.29 ;
-    :manganese 0.11 .
+naebi:104 a cube:Observation ;
+    schema:identifier "CROP_HRB1S"^^xsd:string ;
+    schema:name "Kräuter,1-jährig, klein"@de ;
+    :K2O 60.0 ;
+    :Mg 10.0 ;
+    :N2 40.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:572 a cube:Observation ;
-    schema:identifier "CROP_STRBRR"^^xsd:ID ;
-    schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
-        "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
-        "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:572 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:105 a cube:Observation ;
+    schema:identifier "CROP_HRBPRB"^^xsd:string ;
+    schema:name "Kräuter,mehrjährig, mittel-gross"@de ;
+    :K2O 200.0 ;
+    :Mg 20.0 ;
+    :N2 120.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:999 a cube:Observation ;
-    schema:identifier "CROP_SWHT"^^xsd:ID ;
-    schema:name "Sommerweizen"@de,
-        "Blé de printemps"@fr,
-        "Frumento primaverile"@it,
-        "summer wheat"@en ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:999 ;
-    :yield 50 ;
-    :nitrogen 120 ;
-    :phosphorus 0.82 ;
-    :potassium 0.44 ;
-    :manganese 0.12 .
+naebi:106 a cube:Observation ;
+    schema:identifier "CROP_HRBPRL"^^xsd:string ;
+    schema:name "Kräuter,mehrjährig, gross"@de ;
+    :K2O 250.0 ;
+    :Mg 25.0 ;
+    :N2 160.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1001 a cube:Observation ;
-    schema:identifier "CROP_WWHT"^^xsd:ID ;
-    schema:name "Winterweizen (ohne Winterweizen in 62a Nitrat-Projekt)"@de,
-        "winter wheat (without winter wheat in 62a nitrate-project)"@en ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1001 ;
-    :yield 60 ;
-    :nitrogen 140 ;
-    :phosphorus 0.83 ;
-    :potassium 0.10 ;
-    :manganese 0.12 .
+naebi:107 a cube:Observation ;
+    schema:identifier "CROP_HRBPRM"^^xsd:string ;
+    schema:name "Kräuter,mehrjährig, mittel"@de ;
+    :K2O 160.0 ;
+    :Mg 15.0 ;
+    :N2 70.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1002 a cube:Observation ;
-    schema:identifier "CROP_WWHTN"^^xsd:ID ;
-    schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1002 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:108 a cube:Observation ;
+    schema:identifier "CROP_HRBPRS"^^xsd:string ;
+    schema:name "Kräuter,mehrjährig, klein"@de ;
+    :K2O 60.0 ;
+    :Mg 10.0 ;
+    :N2 40.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1004 a cube:Observation ;
-    schema:identifier "CROP_FWHT"^^xsd:ID ;
-    schema:name "Futterweizen (ohne Futterweizen in 62a Nitrat-Projekt)"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1004 ;
-    :yield 75 ;
-    :nitrogen 140 ;
-    :phosphorus 0.83 ;
-    :potassium 0.14 ;
-    :manganese 0.12 .
+naebi:109 a cube:Observation ;
+    schema:identifier "CROP_HYSSP"^^xsd:string ;
+    schema:name "Ysop"@de ;
+    :K2O 130.0 ;
+    :Mg 15.0 ;
+    :N2 80.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1005 a cube:Observation ;
-    schema:identifier "CROP_FWHTN"^^xsd:ID ;
-    schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1005 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:11 a cube:Observation ;
+    schema:identifier "CROP_ASPGR"^^xsd:string ;
+    schema:name "Spargel Grün-"@de ;
+    :K2O 110.0 ;
+    :Mg 20.0 ;
+    :N2 150.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1008 a cube:Observation ;
-    schema:identifier "CROP_WGRST"^^xsd:ID ;
-    schema:name "Wintergerste (ohne Wintergerste in 62a Nitrat-Projekt)"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1008 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:110 a cube:Observation ;
+    schema:identifier "CROP_IFEED"^^xsd:string ;
+    schema:name "Zwischenfutter (herbstgesäte KW), ha"@de ;
+    :K2O 2.7 ;
+    :Mg 0.25 ;
+    :N2 1.2 ;
+    :P2O5 0.82 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1009 a cube:Observation ;
-    schema:identifier "CROP_WGRSTN"^^xsd:ID ;
-    schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1009 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:111 a cube:Observation ;
+    schema:identifier "CROP_IFWOC"^^xsd:string ;
+    schema:name "Zwischenfutter (ohne KW), ha"@de ;
+    :K2O 2.88 ;
+    :Mg 0.29 ;
+    :N2 1.2 ;
+    :P2O5 0.96 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1010 a cube:Observation ;
-    schema:identifier "CROP_WOGST"^^xsd:ID ;
-    schema:name "Winterhafer"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1010 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:112 a cube:Observation ;
+    schema:identifier "CROP_KALE"^^xsd:string ;
+    schema:name "Federkohl"@de ;
+    :K2O 160.0 ;
+    :Mg 10.0 ;
+    :N2 250.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1011 a cube:Observation ;
-    schema:identifier "CROP_SOGST"^^xsd:ID ;
-    schema:name "Sommerhafer"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1011 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:113 a cube:Observation ;
+    schema:identifier "CROP_KARPA"^^xsd:string ;
+    schema:name "Sonnenblumen"@de ;
+    :K2O 0.83 ;
+    :Mg 0.3 ;
+    :N2 60.0 ;
+    :P2O5 1.1 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cultivationtype:493 .
 
-naebi:1015 a cube:Observation ;
-    schema:identifier "CROP_WRHGH_N"^^xsd:ID ;
-    schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1015 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:114 a cube:Observation ;
+    schema:identifier "CROP_KARPB"^^xsd:string ;
+    schema:name "Sommerraps"@de ;
+    :K2O 0.84 ;
+    :Mg 0.28 ;
+    :N2 120.0 ;
+    :P2O5 1.48 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1016 a cube:Observation ;
-    schema:identifier "CROP_WRHGP_N"^^xsd:ID ;
-    schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1016 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:115 a cube:Observation ;
+    schema:identifier "CROP_KARPFC"^^xsd:string ;
+    schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de ;
+    :K2O 0.4 ;
+    :Mg 0.09 ;
+    :N2 0.0 ;
+    :P2O5 0.08 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1018 a cube:Observation ;
-    schema:identifier "CROP_STRIT"^^xsd:ID ;
-    schema:name "Sommertriticale"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1018 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:116 a cube:Observation ;
+    schema:identifier "CROP_KARPFE_N"^^xsd:string ;
+    schema:name "Eiweisserbsen"@de ;
+    :K2O 1.84 ;
+    :Mg 0.13 ;
+    :N2 0.0 ;
+    :P2O5 0.98 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1019 a cube:Observation ;
-    schema:identifier "CROP_WTRIT"^^xsd:ID ;
-    schema:name "Wintertriticale (ohne Wintertriticale in 62a Nitrat-Projekt)"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1019 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:117 a cube:Observation ;
+    schema:identifier "CROP_KENAF"^^xsd:string ;
+    schema:name "Faserhanf"@de ;
+    :K2O 0.9 ;
+    :Mg 0.05 ;
+    :N2 100.0 ;
+    :P2O5 0.3 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1020 a cube:Observation ;
-    schema:identifier "CROP_WTRITN"^^xsd:ID ;
-    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1020 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:118 a cube:Observation ;
+    schema:identifier "CROP_KIDK"^^xsd:string ;
+    schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de ;
+    :K2O 75.0 ;
+    :Mg 20.0 ;
+    :N2 60.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1021 a cube:Observation ;
-    schema:identifier "CROP_WKORN"^^xsd:ID ;
-    schema:name "Winterkorn, Dinkel"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1021 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:119 a cube:Observation ;
+    schema:identifier "CROP_KIWEY"^^xsd:string ;
+    schema:name "Kiwianlage, hoher Ertrag"@de ;
+    :K2O 90.0 ;
+    :Mg 20.0 ;
+    :N2 65.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1023 a cube:Observation ;
-    schema:identifier "CROP_OAFNT"^^xsd:ID ;
-    schema:name "Nützlingsstreifen (DK)"@de ;
-    :cultivationCategory cultivationtype:6 ;
-    :cultivationType cultivationtype:1023 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:12 a cube:Observation ;
+    schema:identifier "CROP_AWMI"^^xsd:string ;
+    schema:name "Kunstwiese intensiv"@de ;
+    :K2O 2.7 ;
+    :Mg 0.25 ;
+    :N2 1.2 ;
+    :P2O5 0.82 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1024 a cube:Observation ;
-    schema:identifier "CROP_HFBUFF"^^xsd:ID ;
-    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
-    :cultivationCategory cube:Undefined ;
-    :cultivationType cultivationtype:1024 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:120 a cube:Observation ;
+    schema:identifier "CROP_KIWPL"^^xsd:string ;
+    schema:name "Kiwianlage"@de ;
+    :K2O 75.0 ;
+    :Mg 15.0 ;
+    :N2 50.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1025 a cube:Observation ;
-    schema:identifier "CROP_GCORN"^^xsd:ID ;
-    schema:name "Grünmais"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1025 ;
-    :yield 60 ;
-    :nitrogen 70 ;
-    :phosphorus 0.65 ;
-    :potassium 2.70 ;
-    :manganese 0.10 .
+naebi:121 a cube:Observation ;
+    schema:identifier "CROP_KOCRN"^^xsd:string ;
+    schema:name "Futterrüben"@de ;
+    :K2O 1.12 ;
+    :Mg 0.13 ;
+    :N2 100.0 ;
+    :P2O5 0.5 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1026 a cube:Observation ;
-    schema:identifier "CROP_CCMCRN"^^xsd:ID ;
-    schema:name "Silomais"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1026 ;
-    :yield 185 ;
-    :nitrogen 110 ;
-    :phosphorus 0.58 ;
-    :potassium 1.30 ;
-    :manganese 0.13 .
+naebi:122 a cube:Observation ;
+    schema:identifier "CROP_KOHLC"^^xsd:string ;
+    schema:name "Kohlrabi (geschützter Anbau)"@de ;
+    :K2O 200.0 ;
+    :Mg 30.0 ;
+    :N2 140.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1027 a cube:Observation ;
-    schema:identifier "CROP_SUCORN"^^xsd:ID ;
-    schema:name "Zuckermais"@de,
-        "maïs sucré"@fr,
-        "Mais dolce"@it ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1027 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:123 a cube:Observation ;
+    schema:identifier "CROP_KOHLR"^^xsd:string ;
+    schema:name "Kohlrabi"@de ;
+    :K2O 120.0 ;
+    :Mg 20.0 ;
+    :N2 130.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1028 a cube:Observation ;
-    schema:identifier "CROP_WINRA"^^xsd:ID ;
-    schema:name "Ganzpflanzen-Sorghum"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1028 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:124 a cube:Observation ;
+    schema:identifier "CROP_KOHP"^^xsd:string ;
+    schema:name "Kohlrabi Verarbeitungs-"@de ;
+    :K2O 150.0 ;
+    :Mg 30.0 ;
+    :N2 170.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1029 a cube:Observation ;
-    schema:identifier "CROP_SOR2ND"^^xsd:ID ;
-    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1029 ;
-    :yield 185 ;
-    :nitrogen 110 ;
-    :phosphorus 0.58 ;
-    :potassium 1.30 ;
-    :manganese 0.13 .
+naebi:125 a cube:Observation ;
+    schema:identifier "CROP_KOHRA"^^xsd:string ;
+    schema:name "Bodenkohlrabi"@de ;
+    :K2O 120.0 ;
+    :Mg 20.0 ;
+    :N2 150.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1030 a cube:Observation ;
-    schema:identifier "CROP_STRAWL"^^xsd:ID ;
-    schema:name "Getreide-Silage ohne Leguminosen"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1030 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:126 a cube:Observation ;
+    schema:identifier "CROP_LAMBSS"^^xsd:string ;
+    schema:name "Nüsslisalat, Feldsalat"@de ;
+    :K2O 60.0 ;
+    :Mg 10.0 ;
+    :N2 50.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1031 a cube:Observation ;
-    schema:identifier "CROP_MILLE"^^xsd:ID ;
+naebi:127 a cube:Observation ;
+    schema:identifier "CROP_LCROP"^^xsd:string ;
+    schema:name "Ölhanf"@de ;
+    :K2O 1.08 ;
+    :Mg 0.54 ;
+    :N2 60.0 ;
+    :P2O5 2.54 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:128 a cube:Observation ;
+    schema:identifier "CROP_LDYSM"^^xsd:string ;
+    schema:name "Frauenmantel"@de ;
+    :K2O 125.0 ;
+    :Mg 15.0 ;
+    :N2 70.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:129 a cube:Observation ;
+    schema:identifier "CROP_LEEKE"^^xsd:string ;
+    schema:name "Lauch, früh gepflanzt"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:13 a cube:Observation ;
+    schema:identifier "CROP_BBREY"^^xsd:string ;
+    schema:name "Brombeeren, 3.0 kg/m2"@de ;
+    :K2O 102.0 ;
+    :Mg 20.0 ;
+    :N2 85.0 ;
+    :P2O5 57.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:130 a cube:Observation ;
+    schema:identifier "CROP_LEEKL"^^xsd:string ;
+    schema:name "Lauch, spät gepflanzt"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:131 a cube:Observation ;
+    schema:identifier "CROP_LEEKP"^^xsd:string ;
+    schema:name "Lauch (geschützter Anbau)"@de ;
+    :K2O 220.0 ;
+    :Mg 30.0 ;
+    :N2 160.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:132 a cube:Observation ;
+    schema:identifier "CROP_LEEKS"^^xsd:string ;
+    schema:name "Lauch"@de ;
+    :K2O 180.0 ;
+    :Mg 20.0 ;
+    :N2 200.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:133 a cube:Observation ;
+    schema:identifier "CROP_LEEKSE"^^xsd:string ;
+    schema:name "Lauch, gesät"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:134 a cube:Observation ;
+    schema:identifier "CROP_LEEKW"^^xsd:string ;
+    schema:name "Lauch, gepflanzt, Überwinterung"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:135 a cube:Observation ;
+    schema:identifier "CROP_LGMPR"^^xsd:string ;
+    schema:name "Kleesamenproduktion"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:136 a cube:Observation ;
+    schema:identifier "CROP_LGVGM"^^xsd:string ;
+    schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:137 a cube:Observation ;
+    schema:identifier "CROP_LINSD"^^xsd:string ;
+    schema:name "Buntbrache"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:138 a cube:Observation ;
+    schema:identifier "CROP_LMBLM"^^xsd:string ;
+    schema:name "Zitronenmelisse"@de ;
+    :K2O 160.0 ;
+    :Mg 30.0 ;
+    :N2 110.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:139 a cube:Observation ;
+    schema:identifier "CROP_LMNRM"^^xsd:string ;
+    schema:name "Indianernessel, Rosenmelisse"@de ;
+    :K2O 120.0 ;
+    :Mg 15.0 ;
+    :N2 65.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:14 a cube:Observation ;
+    schema:identifier "CROP_BEANP"^^xsd:string ;
+    schema:name "Bohnen, Verarbeitung-"@de ;
+    :K2O 30.0 ;
+    :Mg 5.0 ;
+    :N2 0.0 ;
+    :P2O5 10.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:140 a cube:Observation ;
+    schema:identifier "CROP_LTTLG"^^xsd:string ;
+    schema:name "Salate Kopf-, Eisberg, Lollo (geschützter Anbau)"@de ;
+    :K2O 140.0 ;
+    :Mg 20.0 ;
+    :N2 80.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:141 a cube:Observation ;
+    schema:identifier "CROP_LVGGK"^^xsd:string ;
+    schema:name "Liebstöckel / Maggikraut"@de ;
+    :K2O 230.0 ;
+    :Mg 25.0 ;
+    :N2 150.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:142 a cube:Observation ;
+    schema:identifier "CROP_MELON"^^xsd:string ;
+    schema:name "Melone"@de ;
+    :K2O 170.0 ;
+    :Mg 40.0 ;
+    :N2 140.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:143 a cube:Observation ;
+    schema:identifier "CROP_MILLE"^^xsd:string ;
     schema:name "Getreide-Silage mit Leguminosen"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1031 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+    :K2O 1.1321 ;
+    :Mg 0.0943 ;
+    :N2 80.0 ;
+    :P2O5 0.566 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1031 .
 
-naebi:1034 a cube:Observation ;
-    schema:identifier "CROP_WRHGH"^^xsd:ID ;
-    schema:name "Winterroggen (Hybridsorten) ohne 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1034 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:144 a cube:Observation ;
+    schema:identifier "CROP_MLKTL"^^xsd:string ;
+    schema:name "Andorn"@de ;
+    :K2O 200.0 ;
+    :Mg 20.0 ;
+    :N2 120.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
 
-naebi:1035 a cube:Observation ;
-    schema:identifier "CROP_WRHGP"^^xsd:ID ;
-    schema:name "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
-    :cultivationCategory cultivationtype:1 ;
-    :cultivationType cultivationtype:1035 ;
-    :yield cube:Undefined ;
-    :nitrogen cube:Undefined ;
-    :phosphorus cube:Undefined ;
-    :potassium cube:Undefined ;
-    :manganese cube:Undefined .
+naebi:145 a cube:Observation ;
+    schema:identifier "CROP_MRJRM"^^xsd:string ;
+    schema:name "Majoran"@de ;
+    :K2O 110.0 ;
+    :Mg 10.0 ;
+    :N2 80.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:146 a cube:Observation ;
+    schema:identifier "CROP_MRSHW"^^xsd:string ;
+    schema:name "Eibisch"@de ;
+    :K2O 170.0 ;
+    :Mg 20.0 ;
+    :N2 100.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:147 a cube:Observation ;
+    schema:identifier "CROP_MSELV"^^xsd:string ;
+    schema:name "Selve gepflegt"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:148 a cube:Observation ;
+    schema:identifier "CROP_MSHML"^^xsd:string ;
+    schema:name "Eisenkraut"@de ;
+    :K2O 120.0 ;
+    :Mg 15.0 ;
+    :N2 90.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:149 a cube:Observation ;
+    schema:identifier "CROP_MULBER"^^xsd:string ;
+    schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 85.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:15 a cube:Observation ;
+    schema:identifier "CROP_BEETS"^^xsd:string ;
+    schema:name "Randen"@de ;
+    :K2O 160.0 ;
+    :Mg 20.0 ;
+    :N2 140.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:150 a cube:Observation ;
+    schema:identifier "CROP_NCROP"^^xsd:string ;
+    schema:name "Kenaf"@de ;
+    :K2O 1.6 ;
+    :Mg 0.2 ;
+    :N2 70.0 ;
+    :P2O5 1.2 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:151 a cube:Observation ;
+    schema:identifier "CROP_NLGMV"^^xsd:string ;
+    schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 30.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:152 a cube:Observation ;
+    schema:identifier "CROP_NTT01"^^xsd:string ;
+    schema:name "Nussbäume, 0.01 ha/Baum"@de ;
+    :K2O 56.0 ;
+    :Mg 8.0 ;
+    :N2 45.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:153 a cube:Observation ;
+    schema:identifier "CROP_NURFRU"^^xsd:string ;
+    schema:name "Baumschulen für den Erwerbsobstbau (hohe Pflanzendichte)"@de ;
+    :K2O 95.0 ;
+    :Mg 13.0 ;
+    :N2 115.0 ;
+    :P2O5 45.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:154 a cube:Observation ;
+    schema:identifier "CROP_NURSRY"^^xsd:string ;
+    schema:name "Baumschulen"@de ;
+    :K2O 37.0 ;
+    :Mg 5.0 ;
+    :N2 50.0 ;
+    :P2O5 17.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:155 a cube:Observation ;
+    schema:identifier "CROP_OAFNLN"^^xsd:string ;
+    schema:name "Naturwiese wenig intensiv"@de ;
+    :K2O 1.7 ;
+    :Mg 0.15 ;
+    :N2 0.5 ;
+    :P2O5 0.57 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:156 a cube:Observation ;
+    schema:identifier "CROP_OAFNT"^^xsd:string ;
+    schema:name "Nützlingsstreifen (DK)"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cultivationtype:1023 .
+
+naebi:157 a cube:Observation ;
+    schema:identifier "CROP_OAFNTN"^^xsd:string ;
+    schema:name "Naturwiese extensiv"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:158 a cube:Observation ;
+    schema:identifier "CROP_ONION"^^xsd:string ;
+    schema:name "Zwiebeln"@de ;
+    :K2O 160.0 ;
+    :Mg 20.0 ;
+    :N2 130.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:159 a cube:Observation ;
+    schema:identifier "CROP_ORGMN"^^xsd:string ;
+    schema:name "Orangenminze"@de ;
+    :K2O 180.0 ;
+    :Mg 15.0 ;
+    :N2 90.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:16 a cube:Observation ;
+    schema:identifier "CROP_BERBL"^^xsd:string ;
+    schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de ;
+    :K2O 2.62 ;
+    :Mg 0.6 ;
+    :N2 0.0 ;
+    :P2O5 0.52 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:160 a cube:Observation ;
+    schema:identifier "CROP_ORGNO"^^xsd:string ;
+    schema:name "Oregano"@de ;
+    :K2O 120.0 ;
+    :Mg 15.0 ;
+    :N2 80.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:161 a cube:Observation ;
+    schema:identifier "CROP_ORNSTB"^^xsd:string ;
+    schema:name "Ziersträucher, -gehölze, -stauden"@de ;
+    :K2O 37.0 ;
+    :Mg 5.0 ;
+    :N2 50.0 ;
+    :P2O5 17.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:162 a cube:Observation ;
+    schema:identifier "CROP_PAKCH"^^xsd:string ;
+    schema:name "Pak Choi"@de ;
+    :K2O 200.0 ;
+    :Mg 15.0 ;
+    :N2 180.0 ;
+    :P2O5 45.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:163 a cube:Observation ;
+    schema:identifier "CROP_PANSY"^^xsd:string ;
+    schema:name "Viola (Stiefmütterchen)"@de ;
+    :K2O 60.0 ;
+    :Mg 10.0 ;
+    :N2 50.0 ;
+    :P2O5 10.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:164 a cube:Observation ;
+    schema:identifier "CROP_PAPSC"^^xsd:string ;
+    schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de ;
+    :K2O 250.0 ;
+    :Mg 30.0 ;
+    :N2 160.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:165 a cube:Observation ;
+    schema:identifier "CROP_PARSC"^^xsd:string ;
+    schema:name "Petersilie, je weiterem Schnitt"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:166 a cube:Observation ;
+    schema:identifier "CROP_PARSR"^^xsd:string ;
+    schema:name "Petersilienwurzeln"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:167 a cube:Observation ;
+    schema:identifier "CROP_PARSY"^^xsd:string ;
+    schema:name "Petersilie, bis zum ersten Schnitt"@de ;
+    :K2O 150.0 ;
+    :Mg 15.0 ;
+    :N2 130.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:168 a cube:Observation ;
+    schema:identifier "CROP_PEAKE"^^xsd:string ;
+    schema:name "Erbsen, Kefen"@de ;
+    :K2O 110.0 ;
+    :Mg 10.0 ;
+    :N2 0.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:169 a cube:Observation ;
+    schema:identifier "CROP_PEAP"^^xsd:string ;
+    schema:name "Erbsen, Verarbeitung-"@de ;
+    :K2O 60.0 ;
+    :Mg 5.0 ;
+    :N2 0.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:17 a cube:Observation ;
+    schema:identifier "CROP_BLACK4"^^xsd:string ;
+    schema:name "Brombeeren, 4.0 kg/m2"@de ;
+    :K2O 145.0 ;
+    :Mg 25.0 ;
+    :N2 115.0 ;
+    :P2O5 80.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:170 a cube:Observation ;
+    schema:identifier "CROP_PEXT"^^xsd:string ;
+    schema:name "Weide extensiv"@de ;
+    :K2O 1.2 ;
+    :Mg 0.2 ;
+    :N2 0.5 ;
+    :P2O5 0.5 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:171 a cube:Observation ;
+    schema:identifier "CROP_PFREY"^^xsd:string ;
+    schema:name "Pfirsichanlage, hoher Ertrag"@de ;
+    :K2O 70.0 ;
+    :Mg 30.0 ;
+    :N2 75.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:172 a cube:Observation ;
+    schema:identifier "CROP_PFRPL"^^xsd:string ;
+    schema:name "Pfirsichanlage"@de ;
+    :K2O 55.0 ;
+    :Mg 20.0 ;
+    :N2 60.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:173 a cube:Observation ;
+    schema:identifier "CROP_PICKL"^^xsd:string ;
+    schema:name "Gurken, Essiggurken"@de ;
+    :K2O 170.0 ;
+    :Mg 20.0 ;
+    :N2 140.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:174 a cube:Observation ;
+    schema:identifier "CROP_PINTE"^^xsd:string ;
+    schema:name "Weide (Mäh-) intensiv"@de ;
+    :K2O 2.7 ;
+    :Mg 0.25 ;
+    :N2 1.2 ;
+    :P2O5 0.82 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:175 a cube:Observation ;
+    schema:identifier "CROP_PLBNP"^^xsd:string ;
+    schema:name "Bohnen Stangen- (geschützter Anbau)"@de ;
+    :K2O 180.0 ;
+    :Mg 30.0 ;
+    :N2 40.0 ;
+    :P2O5 80.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:176 a cube:Observation ;
+    schema:identifier "CROP_PLMEY"^^xsd:string ;
+    schema:name "Zwetschgenanlage, hoher Ertrag"@de ;
+    :K2O 65.0 ;
+    :Mg 20.0 ;
+    :N2 80.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:177 a cube:Observation ;
+    schema:identifier "CROP_PLMPL"^^xsd:string ;
+    schema:name "Zwetschgenanlage"@de ;
+    :K2O 50.0 ;
+    :Mg 15.0 ;
+    :N2 60.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:178 a cube:Observation ;
+    schema:identifier "CROP_PLTNL"^^xsd:string ;
+    schema:name "Spitzwegerich"@de ;
+    :K2O 230.0 ;
+    :Mg 20.0 ;
+    :N2 120.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:179 a cube:Observation ;
+    schema:identifier "CROP_PMEDI"^^xsd:string ;
+    schema:name "Weide (Mäh-) mittelintensiv"@de ;
+    :K2O 2.3 ;
+    :Mg 0.2 ;
+    :N2 0.95 ;
+    :P2O5 0.71 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:18 a cube:Observation ;
+    schema:identifier "CROP_BLKBRY"^^xsd:string ;
+    schema:name "Brombeeren, 2.0 kg/m2"@de ;
+    :K2O 60.0 ;
+    :Mg 15.0 ;
+    :N2 55.0 ;
+    :P2O5 34.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:180 a cube:Observation ;
+    schema:identifier "CROP_PMLAW"^^xsd:string ;
+    schema:name "Schlüsselblume (ganze Pflanze)"@de ;
+    :K2O 50.0 ;
+    :Mg 10.0 ;
+    :N2 30.0 ;
+    :P2O5 10.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:181 a cube:Observation ;
+    schema:identifier "CROP_POPEY"^^xsd:string ;
+    schema:name "Kernobstanlage, hoher Ertrag"@de ;
+    :K2O 110.0 ;
+    :Mg 40.0 ;
+    :N2 80.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:182 a cube:Observation ;
+    schema:identifier "CROP_POPFR"^^xsd:string ;
+    schema:name "Kernobstanlage"@de ;
+    :K2O 75.0 ;
+    :Mg 20.0 ;
+    :N2 60.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:183 a cube:Observation ;
+    schema:identifier "CROP_POTEA"^^xsd:string ;
+    schema:name "Kartoffeln (b), Früh-"@de ;
+    :K2O 0.69 ;
+    :Mg 0.03 ;
+    :N2 110.0 ;
+    :P2O5 0.19 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:184 a cube:Observation ;
+    schema:identifier "CROP_POTPC"^^xsd:string ;
+    schema:name "Kartoffeln (a), Speise-, Verarbeitungs-"@de ;
+    :K2O 0.71 ;
+    :Mg 0.03 ;
+    :N2 40.0 ;
+    :P2O5 0.16 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:185 a cube:Observation ;
+    schema:identifier "CROP_POTPE"^^xsd:string ;
+    schema:name "Kartoffeln (b), Pflanz-"@de ;
+    :K2O 0.71 ;
+    :Mg 0.03 ;
+    :N2 100.0 ;
+    :P2O5 0.19 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:186 a cube:Observation ;
+    schema:identifier "CROP_POTPFA"^^xsd:string ;
+    schema:name "Kartoffeln (c), Speise-, Verarbeitungs-"@de ;
+    :K2O 0.71 ;
+    :Mg 0.03 ;
+    :N2 200.0 ;
+    :P2O5 0.16 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:187 a cube:Observation ;
+    schema:identifier "CROP_POTPFB"^^xsd:string ;
+    schema:name "Kartoffeln (c), Pflanz-"@de ;
+    :K2O 0.71 ;
+    :Mg 0.03 ;
+    :N2 140.0 ;
+    :P2O5 0.19 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:188 a cube:Observation ;
+    schema:identifier "CROP_POTPFC"^^xsd:string ;
+    schema:name "Kartoffeln (a), Pflanz-"@de ;
+    :K2O 0.71 ;
+    :Mg 0.03 ;
+    :N2 60.0 ;
+    :P2O5 0.19 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:189 a cube:Observation ;
+    schema:identifier "CROP_POTPFD"^^xsd:string ;
+    schema:name "Kartoffeln (a), Früh-"@de ;
+    :K2O 0.69 ;
+    :Mg 0.03 ;
+    :N2 70.0 ;
+    :P2O5 0.19 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:19 a cube:Observation ;
+    schema:identifier "CROP_BLKEL"^^xsd:string ;
+    schema:name "Schwarzer Holunder"@de ;
+    :K2O 60.0 ;
+    :Mg 10.0 ;
+    :N2 60.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:190 a cube:Observation ;
+    schema:identifier "CROP_POTPFE"^^xsd:string ;
+    schema:name "Kartoffeln (c), Früh-"@de ;
+    :K2O 0.69 ;
+    :Mg 0.03 ;
+    :N2 150.0 ;
+    :P2O5 0.19 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:191 a cube:Observation ;
+    schema:identifier "CROP_POTPP"^^xsd:string ;
+    schema:name "Kartoffeln (b), Speise-, Verarbeitungs-"@de ;
+    :K2O 0.71 ;
+    :Mg 0.03 ;
+    :N2 120.0 ;
+    :P2O5 0.16 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:192 a cube:Observation ;
+    schema:identifier "CROP_PPMNT"^^xsd:string ;
+    schema:name "Pfefferminze"@de ;
+    :K2O 240.0 ;
+    :Mg 15.0 ;
+    :N2 110.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:193 a cube:Observation ;
+    schema:identifier "CROP_PRLYP"^^xsd:string ;
+    schema:name "Petersilie (geschützter Anbau)"@de ;
+    :K2O 180.0 ;
+    :Mg 20.0 ;
+    :N2 100.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:194 a cube:Observation ;
+    schema:identifier "CROP_PROBE"^^xsd:string ;
+    schema:name "Ackerbohnen"@de ;
+    :K2O 2.13 ;
+    :Mg 0.25 ;
+    :N2 0.0 ;
+    :P2O5 1.4 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:195 a cube:Observation ;
+    schema:identifier "CROP_PRSNP"^^xsd:string ;
+    schema:name "Pastinake"@de ;
+    :K2O 290.0 ;
+    :Mg 25.0 ;
+    :N2 180.0 ;
+    :P2O5 90.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:196 a cube:Observation ;
+    schema:identifier "CROP_PUMPK"^^xsd:string ;
+    schema:name "Kürbis"@de ;
+    :K2O 220.0 ;
+    :Mg 30.0 ;
+    :N2 150.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:197 a cube:Observation ;
+    schema:identifier "CROP_PURSLA"^^xsd:string ;
+    schema:name "Portulak (geschützter Anbau)"@de ;
+    :K2O 90.0 ;
+    :Mg 20.0 ;
+    :N2 70.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:198 a cube:Observation ;
+    schema:identifier "CROP_PWINT"^^xsd:string ;
+    schema:name "Weide wenig intensiv"@de ;
+    :K2O 1.7 ;
+    :Mg 0.15 ;
+    :N2 0.5 ;
+    :P2O5 0.57 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:199 a cube:Observation ;
+    schema:identifier "CROP_QUINO"^^xsd:string ;
+    schema:name "Quinoa"@de ;
+    :K2O 1.4 ;
+    :Mg 0.47 ;
+    :N2 120.0 ;
+    :P2O5 1.15 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:2 a cube:Observation ;
+    schema:identifier "CROP_ACBOE"^^xsd:string ;
+    schema:name "Süsslupinen"@de ;
+    :K2O 2.04 ;
+    :Mg 0.2 ;
+    :N2 0.0 ;
+    :P2O5 1.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:20 a cube:Observation ;
+    schema:identifier "CROP_BLKSAL"^^xsd:string ;
+    schema:name "Schwarzwurzel"@de ;
+    :K2O 100.0 ;
+    :Mg 10.0 ;
+    :N2 120.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:200 a cube:Observation ;
+    schema:identifier "CROP_RAD10B"^^xsd:string ;
+    schema:name "Radies 10 Bund/m2"@de ;
+    :K2O 80.0 ;
+    :Mg 10.0 ;
+    :N2 50.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:201 a cube:Observation ;
+    schema:identifier "CROP_RAD18"^^xsd:string ;
+    schema:name "Rettich 18 Stk/m2 (geschützter Anbau)"@de ;
+    :K2O 200.0 ;
+    :Mg 30.0 ;
+    :N2 90.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:202 a cube:Observation ;
+    schema:identifier "CROP_RAD20"^^xsd:string ;
+    schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de ;
+    :K2O 100.0 ;
+    :Mg 20.0 ;
+    :N2 60.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:203 a cube:Observation ;
+    schema:identifier "CROP_RAD89S"^^xsd:string ;
+    schema:name "Rettich 8-9 Stk/m2"@de ;
+    :K2O 150.0 ;
+    :Mg 10.0 ;
+    :N2 110.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:204 a cube:Observation ;
+    schema:identifier "CROP_RADCH"^^xsd:string ;
+    schema:name "Cicorino rosso, Radicchio"@de ;
+    :K2O 90.0 ;
+    :Mg 10.0 ;
+    :N2 110.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:205 a cube:Observation ;
+    schema:identifier "CROP_RADCHP"^^xsd:string ;
+    schema:name "Cicorino rosso, Radicchio, Verarbeitung"@de ;
+    :K2O 140.0 ;
+    :Mg 15.0 ;
+    :N2 130.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:206 a cube:Observation ;
+    schema:identifier "CROP_RASJLC"^^xsd:string ;
+    schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de ;
+    :K2O 169.0 ;
+    :Mg 15.0 ;
+    :N2 130.0 ;
+    :P2O5 80.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:207 a cube:Observation ;
+    schema:identifier "CROP_RASPB"^^xsd:string ;
+    schema:name "Himbeeren,  1.5 kg/m2"@de ;
+    :K2O 60.0 ;
+    :Mg 15.0 ;
+    :N2 45.0 ;
+    :P2O5 23.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:208 a cube:Observation ;
+    schema:identifier "CROP_RASPB3"^^xsd:string ;
+    schema:name "Himbeeren, 3.5 kg/m2"@de ;
+    :K2O 133.0 ;
+    :Mg 30.0 ;
+    :N2 105.0 ;
+    :P2O5 69.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:209 a cube:Observation ;
+    schema:identifier "CROP_RBEYH"^^xsd:string ;
+    schema:name "Himbeeren, 2.5 kg/m2"@de ;
+    :K2O 96.0 ;
+    :Mg 20.0 ;
+    :N2 75.0 ;
+    :P2O5 46.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:21 a cube:Observation ;
+    schema:identifier "CROP_BLMLW"^^xsd:string ;
+    schema:name "Blaue Malve"@de ;
+    :K2O 240.0 ;
+    :Mg 25.0 ;
+    :N2 150.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:210 a cube:Observation ;
+    schema:identifier "CROP_REDCUR"^^xsd:string ;
+    schema:name "Rote Johannisbeeren, 2.0 kg/m2"@de ;
+    :K2O 121.0 ;
+    :Mg 15.0 ;
+    :N2 85.0 ;
+    :P2O5 46.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:211 a cube:Observation ;
+    schema:identifier "CROP_REDCUR3"^^xsd:string ;
+    schema:name "Rote Johannisbeeren, 3.5 kg/m2"@de ;
+    :K2O 253.0 ;
+    :Mg 25.0 ;
+    :N2 160.0 ;
+    :P2O5 80.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:212 a cube:Observation ;
+    schema:identifier "CROP_RHUBB"^^xsd:string ;
+    schema:name "Rhabarber"@de ;
+    :K2O 120.0 ;
+    :Mg 10.0 ;
+    :N2 130.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:213 a cube:Observation ;
+    schema:identifier "CROP_RICE"^^xsd:string ;
+    schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de ;
+    :K2O 120.0 ;
+    :Mg 10.0 ;
+    :N2 0.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:214 a cube:Observation ;
+    schema:identifier "CROP_RIVER"^^xsd:string ;
+    schema:name "Uferwiese entlang von Fliessgewässer"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:215 a cube:Observation ;
+    schema:identifier "CROP_RJEYH"^^xsd:string ;
+    schema:name "Rote Johannisbeeren, 2.5 kg/m2"@de ;
+    :K2O 151.0 ;
+    :Mg 20.0 ;
+    :N2 110.0 ;
+    :P2O5 57.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:216 a cube:Observation ;
+    schema:identifier "CROP_RKTC1"^^xsd:string ;
+    schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de ;
+    :K2O 150.0 ;
+    :Mg 10.0 ;
+    :N2 150.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:217 a cube:Observation ;
+    schema:identifier "CROP_RKTC2"^^xsd:string ;
+    schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de ;
+    :K2O 180.0 ;
+    :Mg 20.0 ;
+    :N2 210.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:218 a cube:Observation ;
+    schema:identifier "CROP_RMEAD"^^xsd:string ;
+    schema:name "Uebr. Wiesen mit Düngeverbot"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:219 a cube:Observation ;
+    schema:identifier "CROP_RSMRY"^^xsd:string ;
+    schema:name "Rosmarin"@de ;
+    :K2O 110.0 ;
+    :Mg 15.0 ;
+    :N2 60.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:22 a cube:Observation ;
+    schema:identifier "CROP_BLUBRY"^^xsd:string ;
+    schema:name "Heidelbeeren, 1.5 kg/m2"@de ;
+    :K2O 72.0 ;
+    :Mg 20.0 ;
+    :N2 55.0 ;
+    :P2O5 23.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:220 a cube:Observation ;
+    schema:identifier "CROP_RUEHR"^^xsd:string ;
+    schema:name "Edelraute"@de ;
+    :K2O 40.0 ;
+    :Mg 5.0 ;
+    :N2 30.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:221 a cube:Observation ;
+    schema:identifier "CROP_SALHY"^^xsd:string ;
+    schema:name "Salate, diverse, hoher Ertrag"@de ;
+    :K2O 120.0 ;
+    :Mg 10.0 ;
+    :N2 110.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:222 a cube:Observation ;
+    schema:identifier "CROP_SALMY"^^xsd:string ;
+    schema:name "Salate, diverse, mittlerer Ertrag"@de ;
+    :K2O 70.0 ;
+    :Mg 10.0 ;
+    :N2 90.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:223 a cube:Observation ;
+    schema:identifier "CROP_SAVOYL"^^xsd:string ;
+    schema:name "Wirz leicht"@de ;
+    :K2O 140.0 ;
+    :Mg 10.0 ;
+    :N2 120.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:224 a cube:Observation ;
+    schema:identifier "CROP_SAVOYS"^^xsd:string ;
+    schema:name "Wirz schwer"@de ;
+    :K2O 160.0 ;
+    :Mg 10.0 ;
+    :N2 140.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:225 a cube:Observation ;
+    schema:identifier "CROP_SCRUB"^^xsd:string ;
+    schema:name "Streue-, Torfland"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:226 a cube:Observation ;
+    schema:identifier "CROP_SCT01"^^xsd:string ;
+    schema:name "Edelkastanien"@de ;
+    :K2O 56.0 ;
+    :Mg 8.0 ;
+    :N2 45.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:227 a cube:Observation ;
+    schema:identifier "CROP_SFVGV"^^xsd:string ;
+    schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de ;
+    :K2O 120.0 ;
+    :Mg 15.0 ;
+    :N2 120.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:228 a cube:Observation ;
+    schema:identifier "CROP_SGESG"^^xsd:string ;
+    schema:name "Salbei"@de ;
+    :K2O 180.0 ;
+    :Mg 15.0 ;
+    :N2 120.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:229 a cube:Observation ;
+    schema:identifier "CROP_SGPVV"^^xsd:string ;
+    schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de ;
+    :K2O 220.0 ;
+    :Mg 35.0 ;
+    :N2 130.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:23 a cube:Observation ;
+    schema:identifier "CROP_BONIONF"^^xsd:string ;
+    schema:name "Bundzwiebeln, Frühjahr"@de ;
+    :K2O 120.0 ;
+    :Mg 10.0 ;
+    :N2 155.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:230 a cube:Observation ;
+    schema:identifier "CROP_SGRST"^^xsd:string ;
+    schema:name "Sommergerste"@de ;
+    :K2O 0.55 ;
+    :Mg 0.11 ;
+    :N2 90.0 ;
+    :P2O5 0.84 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:501 .
+
+naebi:231 a cube:Observation ;
+    schema:identifier "CROP_SILCRN"^^xsd:string ;
+    schema:name "Körnermais"@de ;
+    :K2O 0.4 ;
+    :Mg 0.09 ;
+    :N2 110.0 ;
+    :P2O5 0.76 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cultivationtype:508 .
+
+naebi:232 a cube:Observation ;
+    schema:identifier "CROP_SOGST"^^xsd:string ;
+    schema:name "Sommerhafer"@de ;
+    :K2O 0.51 ;
+    :Mg 0.11 ;
+    :N2 90.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1011 .
+
+naebi:233 a cube:Observation ;
+    schema:identifier "CROP_SOMRA"^^xsd:string ;
+    schema:name "Winterraps in 62a Nitrat-Projekt"@de ;
+    :K2O 0.86 ;
+    :Mg 0.23 ;
+    :N2 150.0 ;
+    :P2O5 1.43 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:234 a cube:Observation ;
+    schema:identifier "CROP_SOR2ND"^^xsd:string ;
+    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
+    :K2O 2.7 ;
+    :Mg 0.1 ;
+    :N2 70.0 ;
+    :P2O5 0.65 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cultivationtype:1029 .
+
+naebi:235 a cube:Observation ;
+    schema:identifier "CROP_SOYBN"^^xsd:string ;
+    schema:name "Tabak Burley"@de ;
+    :K2O 5.0 ;
+    :Mg 0.28 ;
+    :N2 170.0 ;
+    :P2O5 0.72 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:236 a cube:Observation ;
+    schema:identifier "CROP_SPIN1C"^^xsd:string ;
+    schema:name "Spinat, 1 Schnitt, nach Mitte April gesät"@de ;
+    :K2O 150.0 ;
+    :Mg 20.0 ;
+    :N2 160.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:237 a cube:Observation ;
+    schema:identifier "CROP_SPIN2A"^^xsd:string ;
+    schema:name "Spinat, 2 Schnitte, nach Mitte April gesät"@de ;
+    :K2O 180.0 ;
+    :Mg 25.0 ;
+    :N2 170.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:238 a cube:Observation ;
+    schema:identifier "CROP_SPIN2C"^^xsd:string ;
+    schema:name "Spinat, 2 Schnitte, vor Mitte April gesät"@de ;
+    :K2O 180.0 ;
+    :Mg 25.0 ;
+    :N2 190.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:239 a cube:Observation ;
+    schema:identifier "CROP_SPINI1"^^xsd:string ;
+    schema:name "Spinat, Industrie, 1 Schnitt, vor Mitte April gesät"@de ;
+    :K2O 190.0 ;
+    :Mg 25.0 ;
+    :N2 190.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:24 a cube:Observation ;
+    schema:identifier "CROP_BONIONS"^^xsd:string ;
+    schema:name "Bundzwiebeln, Sommer"@de ;
+    :K2O 120.0 ;
+    :Mg 10.0 ;
+    :N2 145.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:240 a cube:Observation ;
+    schema:identifier "CROP_SPINI1A"^^xsd:string ;
+    schema:name "Spinat, Industrie, 1 Schnitt, nach Mitte April gesät"@de ;
+    :K2O 190.0 ;
+    :Mg 25.0 ;
+    :N2 180.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:241 a cube:Observation ;
+    schema:identifier "CROP_SPINI2"^^xsd:string ;
+    schema:name "Spinat, Industrie, 2 Schnitte, vor Mitte April gesät"@de ;
+    :K2O 200.0 ;
+    :Mg 25.0 ;
+    :N2 200.0 ;
+    :P2O5 35.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:242 a cube:Observation ;
+    schema:identifier "CROP_SPINI2A"^^xsd:string ;
+    schema:name "Spinat, Industrie, 2 Schnitte, nach Mitte April gesät"@de ;
+    :K2O 200.0 ;
+    :Mg 25.0 ;
+    :N2 190.0 ;
+    :P2O5 35.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:243 a cube:Observation ;
+    schema:identifier "CROP_SPINP1"^^xsd:string ;
+    schema:name "Spinat, 1 Schnitt, vor Mitte April gesät"@de ;
+    :K2O 150.0 ;
+    :Mg 20.0 ;
+    :N2 180.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:244 a cube:Observation ;
+    schema:identifier "CROP_SPNCH"^^xsd:string ;
+    schema:name "Spinat (geschützter Anbau)"@de ;
+    :K2O 140.0 ;
+    :Mg 20.0 ;
+    :N2 100.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:245 a cube:Observation ;
+    schema:identifier "CROP_SPRCP"^^xsd:string ;
+    schema:name "Frühjahrsschnitt vor Wiesenumbruch, ha"@de ;
+    :K2O 2.7 ;
+    :Mg 0.25 ;
+    :N2 1.2 ;
+    :P2O5 0.82 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:246 a cube:Observation ;
+    schema:identifier "CROP_ST1EY"^^xsd:string ;
+    schema:name "Erdbeeren 1-jährig, 3.0 kg/m2"@de ;
+    :K2O 157.0 ;
+    :Mg 25.0 ;
+    :N2 120.0 ;
+    :P2O5 46.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:247 a cube:Observation ;
+    schema:identifier "CROP_STJHW"^^xsd:string ;
+    schema:name "Johanniskraut"@de ;
+    :K2O 110.0 ;
+    :Mg 10.0 ;
+    :N2 90.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:248 a cube:Observation ;
+    schema:identifier "CROP_STORC"^^xsd:string ;
+    schema:name "Kabis Lager"@de ;
+    :K2O 200.0 ;
+    :Mg 20.0 ;
+    :N2 190.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:249 a cube:Observation ;
+    schema:identifier "CROP_STRAW"^^xsd:string ;
+    schema:name "Vom Betrieb weggeführtes Stroh, ha"@de ;
+    :K2O 0.79 ;
+    :Mg 0.11 ;
+    :N2 0.0 ;
+    :P2O5 0.19 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:25 a cube:Observation ;
+    schema:identifier "CROP_BONIONW"^^xsd:string ;
+    schema:name "Bundzwiebeln, Überwinterung"@de ;
+    :K2O 70.0 ;
+    :Mg 5.0 ;
+    :N2 145.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:250 a cube:Observation ;
+    schema:identifier "CROP_STRAW1"^^xsd:string ;
+    schema:name "Erdbeeren 1-jährig, 2.0 kg/m2"@de ;
+    :K2O 121.0 ;
+    :Mg 20.0 ;
+    :N2 100.0 ;
+    :P2O5 34.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:251 a cube:Observation ;
+    schema:identifier "CROP_STRAW4"^^xsd:string ;
+    schema:name "Erdbeeren 1-jährig, 4.0 kg/m2"@de ;
+    :K2O 247.0 ;
+    :Mg 40.0 ;
+    :N2 180.0 ;
+    :P2O5 80.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:252 a cube:Observation ;
+    schema:identifier "CROP_STRAWL"^^xsd:string ;
+    schema:name "Getreide-Silage"@de ;
+    :K2O 0.9623 ;
+    :Mg 0.1038 ;
+    :N2 110.0 ;
+    :P2O5 0.5943 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1030 .
+
+naebi:253 a cube:Observation ;
+    schema:identifier "CROP_STRAWP"^^xsd:string ;
+    schema:name "Erdbeeren mehrjährig"@de ;
+    :K2O 121.0 ;
+    :Mg 20.0 ;
+    :N2 100.0 ;
+    :P2O5 34.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:254 a cube:Observation ;
+    schema:identifier "CROP_STRBRR"^^xsd:string ;
+    schema:name "Nützlingsstreifen (oAF)"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cultivationtype:572 .
+
+naebi:255 a cube:Observation ;
+    schema:identifier "CROP_STRIT"^^xsd:string ;
+    schema:name "Sommertriticale"@de ;
+    :K2O 0.49 ;
+    :Mg 0.09 ;
+    :N2 100.0 ;
+    :P2O5 0.71 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1018 .
+
+naebi:256 a cube:Observation ;
+    schema:identifier "CROP_STRJPL"^^xsd:string ;
+    schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de ;
+    :K2O 114.0 ;
+    :Mg 20.0 ;
+    :N2 120.0 ;
+    :P2O5 34.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:257 a cube:Observation ;
+    schema:identifier "CROP_SUCORN"^^xsd:string ;
+    schema:name "Zuckermais"@de ;
+    :K2O 100.0 ;
+    :Mg 20.0 ;
+    :N2 150.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cultivationtype:1027 .
+
+naebi:258 a cube:Observation ;
+    schema:identifier "CROP_SUGRCC"^^xsd:string ;
+    schema:name "Zuckerhut (Convenience)"@de ;
+    :K2O 90.0 ;
+    :Mg 10.0 ;
+    :N2 160.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:259 a cube:Observation ;
+    schema:identifier "CROP_SUGRCH"^^xsd:string ;
+    schema:name "Zuckerhut"@de ;
+    :K2O 90.0 ;
+    :Mg 10.0 ;
+    :N2 130.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:26 a cube:Observation ;
+    schema:identifier "CROP_BRGEG"^^xsd:string ;
+    schema:name "Bohnenkraut"@de ;
+    :K2O 200.0 ;
+    :Mg 20.0 ;
+    :N2 110.0 ;
+    :P2O5 55.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:260 a cube:Observation ;
+    schema:identifier "CROP_SUMEXT"^^xsd:string ;
+    schema:name "Heuwiesen Sömmerungsg., extensive"@de ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:261 a cube:Observation ;
+    schema:identifier "CROP_SUMLNT"^^xsd:string ;
+    schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:262 a cube:Observation ;
+    schema:identifier "CROP_SUMOTH"^^xsd:string ;
+    schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:263 a cube:Observation ;
+    schema:identifier "CROP_SWCHD"^^xsd:string ;
+    schema:name "Krautstiel (geschützter Anbau)"@de ;
+    :K2O 400.0 ;
+    :Mg 50.0 ;
+    :N2 200.0 ;
+    :P2O5 100.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:264 a cube:Observation ;
+    schema:identifier "CROP_SWEET"^^xsd:string ;
+    schema:name "Tabak Virgine"@de ;
+    :K2O 4.76 ;
+    :Mg 0.2 ;
+    :N2 30.0 ;
+    :P2O5 0.56 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:265 a cube:Observation ;
+    schema:identifier "CROP_SWEPO"^^xsd:string ;
+    schema:name "Süsskartoffeln"@de ;
+    :K2O 150.0 ;
+    :Mg 15.0 ;
+    :N2 90.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:266 a cube:Observation ;
+    schema:identifier "CROP_SWHT"^^xsd:string ;
+    schema:name "Sommerweizen"@de ;
+    :K2O 0.44 ;
+    :Mg 0.12 ;
+    :N2 120.0 ;
+    :P2O5 0.82 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:999 .
+
+naebi:267 a cube:Observation ;
+    schema:identifier "CROP_TABAC"^^xsd:string ;
+    schema:name "Reis"@de ;
+    :K2O 0.53 ;
+    :Mg 0.08 ;
+    :N2 110.0 ;
+    :P2O5 0.7 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cultivationtype:509 .
+
+naebi:268 a cube:Observation ;
+    schema:identifier "CROP_TABAV"^^xsd:string ;
+    schema:name "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de ;
+    :K2O 120.0 ;
+    :Mg 10.0 ;
+    :N2 80.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:269 a cube:Observation ;
+    schema:identifier "CROP_TGEYH"^^xsd:string ;
+    schema:name "Tafeltrauben, hoher Ertrag"@de ;
+    :K2O 102.0 ;
+    :Mg 25.0 ;
+    :N2 60.0 ;
+    :P2O5 34.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:27 a cube:Observation ;
+    schema:identifier "CROP_BRNTL"^^xsd:string ;
+    schema:name "Brennessel"@de ;
+    :K2O 250.0 ;
+    :Mg 30.0 ;
+    :N2 150.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:270 a cube:Observation ;
+    schema:identifier "CROP_TGRAPE"^^xsd:string ;
+    schema:name "Tafeltrauben"@de ;
+    :K2O 78.0 ;
+    :Mg 25.0 ;
+    :N2 50.0 ;
+    :P2O5 27.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:271 a cube:Observation ;
+    schema:identifier "CROP_THYME"^^xsd:string ;
+    schema:name "Thymian"@de ;
+    :K2O 100.0 ;
+    :Mg 10.0 ;
+    :N2 60.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:272 a cube:Observation ;
+    schema:identifier "CROP_TOMAT"^^xsd:string ;
+    schema:name "Tomaten"@de ;
+    :K2O 260.0 ;
+    :Mg 30.0 ;
+    :N2 130.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:273 a cube:Observation ;
+    schema:identifier "CROP_TOMTH"^^xsd:string ;
+    schema:name "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de ;
+    :K2O 680.0 ;
+    :Mg 120.0 ;
+    :N2 330.0 ;
+    :P2O5 160.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:274 a cube:Observation ;
+    schema:identifier "CROP_TOMTL"^^xsd:string ;
+    schema:name "Tomaten, Bodenkulturen, tiefer Ertrag (geschützter Anbau)"@de ;
+    :K2O 340.0 ;
+    :Mg 60.0 ;
+    :N2 170.0 ;
+    :P2O5 80.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:275 a cube:Observation ;
+    schema:identifier "CROP_TOMTM"^^xsd:string ;
+    schema:name "Tomaten, Bodenkulturen, mittlerer Ertrag (geschützter Anbau)"@de ;
+    :K2O 500.0 ;
+    :Mg 80.0 ;
+    :N2 250.0 ;
+    :P2O5 100.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:276 a cube:Observation ;
+    schema:identifier "CROP_TOMTV"^^xsd:string ;
+    schema:name "Tomaten, Bodenkultur, sehr hoher Ertrag (geschützter Anbau)"@de ;
+    :K2O 850.0 ;
+    :Mg 150.0 ;
+    :N2 400.0 ;
+    :P2O5 200.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:277 a cube:Observation ;
+    schema:identifier "CROP_TPAST"^^xsd:string ;
+    schema:name "Äugstlen, ha"@de ;
+    :K2O 2.7 ;
+    :Mg 0.25 ;
+    :N2 1.2 ;
+    :P2O5 0.82 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:278 a cube:Observation ;
+    schema:identifier "CROP_TRNPM"^^xsd:string ;
+    schema:name "Rüben Herbst-, Mai-"@de ;
+    :K2O 150.0 ;
+    :Mg 20.0 ;
+    :N2 140.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:279 a cube:Observation ;
+    schema:identifier "CROP_TRNTP"^^xsd:string ;
+    schema:name "Cima di rapa"@de ;
+    :K2O 160.0 ;
+    :Mg 10.0 ;
+    :N2 140.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:28 a cube:Observation ;
+    schema:identifier "CROP_BRNTT"^^xsd:string ;
+    schema:name "Bibernelle"@de ;
+    :K2O 210.0 ;
+    :Mg 20.0 ;
+    :N2 110.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:280 a cube:Observation ;
+    schema:identifier "CROP_VBDIV"^^xsd:string ;
+    schema:name "Rebflächen mit hoher Artenvielfalt"@de ;
+    :K2O 78.0 ;
+    :Mg 25.0 ;
+    :N2 50.0 ;
+    :P2O5 27.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:281 a cube:Observation ;
+    schema:identifier "CROP_VINES"^^xsd:string ;
+    schema:name "Reben"@de ;
+    :K2O 78.0 ;
+    :Mg 25.0 ;
+    :N2 50.0 ;
+    :P2O5 27.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:282 a cube:Observation ;
+    schema:identifier "CROP_VRVNN"^^xsd:string ;
+    schema:name "Ehrenpreis"@de ;
+    :K2O 70.0 ;
+    :Mg 10.0 ;
+    :N2 40.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:283 a cube:Observation ;
+    schema:identifier "CROP_WALN1"^^xsd:string ;
+    schema:name "Walnüsse < 185 Bäume/ha"@de ;
+    :K2O 100.0 ;
+    :Mg 30.0 ;
+    :N2 80.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:284 a cube:Observation ;
+    schema:identifier "CROP_WALN2"^^xsd:string ;
+    schema:name "Walnüsse ≥ 185 Bäume/ha"@de ;
+    :K2O 140.0 ;
+    :Mg 50.0 ;
+    :N2 120.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:285 a cube:Observation ;
+    schema:identifier "CROP_WGRIN"^^xsd:string ;
+    schema:name "Naturwiese mittelintensiv"@de ;
+    :K2O 2.3 ;
+    :Mg 0.2 ;
+    :N2 0.95 ;
+    :P2O5 0.71 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:286 a cube:Observation ;
+    schema:identifier "CROP_WGRNM"^^xsd:string ;
+    schema:name "Kunstwiese mittelintensiv"@de ;
+    :K2O 2.3 ;
+    :Mg 0.2 ;
+    :N2 0.95 ;
+    :P2O5 0.71 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:287 a cube:Observation ;
+    schema:identifier "CROP_WGRNN"^^xsd:string ;
+    schema:name "Naturwiese intensiv"@de ;
+    :K2O 2.7 ;
+    :Mg 0.25 ;
+    :N2 1.2 ;
+    :P2O5 0.82 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:288 a cube:Observation ;
+    schema:identifier "CROP_WGRST"^^xsd:string ;
+    schema:name "Wintergerste"@de ;
+    :K2O 0.11 ;
+    :Mg 0.12 ;
+    :N2 110.0 ;
+    :P2O5 0.85 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1008 .
+
+naebi:289 a cube:Observation ;
+    schema:identifier "CROP_WGRSTN"^^xsd:string ;
+    schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
+    :K2O 0.11 ;
+    :Mg 0.12 ;
+    :N2 110.0 ;
+    :P2O5 0.85 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1009 .
+
+naebi:29 a cube:Observation ;
+    schema:identifier "CROP_BROCC"^^xsd:string ;
+    schema:name "Broccoli"@de ;
+    :K2O 90.0 ;
+    :Mg 10.0 ;
+    :N2 220.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:290 a cube:Observation ;
+    schema:identifier "CROP_WINRA"^^xsd:string ;
+    schema:name "Ganzpflanzen-Sorghum"@de ;
+    :K2O 1.3 ;
+    :Mg 0.13 ;
+    :N2 110.0 ;
+    :P2O5 0.58 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cultivationtype:1028 .
+
+naebi:291 a cube:Observation ;
+    schema:identifier "CROP_WINRAN"^^xsd:string ;
+    schema:name "Winterraps"@de ;
+    :K2O 0.86 ;
+    :Mg 0.23 ;
+    :N2 150.0 ;
+    :P2O5 1.43 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:292 a cube:Observation ;
+    schema:identifier "CROP_WKORN"^^xsd:string ;
+    schema:name "Winterkorn, Dinkel"@de ;
+    :K2O 0.04 ;
+    :Mg 0.11 ;
+    :N2 100.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1021 .
+
+naebi:293 a cube:Observation ;
+    schema:identifier "CROP_WOGST"^^xsd:string ;
+    schema:name "Winterhafer"@de ;
+    :K2O 0.0 ;
+    :Mg 0.11 ;
+    :N2 90.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1010 .
+
+naebi:294 a cube:Observation ;
+    schema:identifier "CROP_WRHGH"^^xsd:string ;
+    schema:name "Winterroggen (Hybridsorten)"@de ;
+    :K2O 0.13 ;
+    :Mg 0.11 ;
+    :N2 90.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1034 .
+
+naebi:295 a cube:Observation ;
+    schema:identifier "CROP_WRHGH_N"^^xsd:string ;
+    schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
+    :K2O 0.1 ;
+    :Mg 0.11 ;
+    :N2 90.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1015 .
+
+naebi:296 a cube:Observation ;
+    schema:identifier "CROP_WRHGP"^^xsd:string ;
+    schema:name "Winterroggen (Populationssorten)"@de ;
+    :K2O 0.1 ;
+    :Mg 0.11 ;
+    :N2 90.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1035 .
+
+naebi:297 a cube:Observation ;
+    schema:identifier "CROP_WRHGP_N"^^xsd:string ;
+    schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
+    :K2O 0.13 ;
+    :Mg 0.11 ;
+    :N2 90.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1016 .
+
+naebi:298 a cube:Observation ;
+    schema:identifier "CROP_WSPIN1"^^xsd:string ;
+    schema:name "Winterspinat, 1 Schnitt"@de ;
+    :K2O 170.0 ;
+    :Mg 15.0 ;
+    :N2 185.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:299 a cube:Observation ;
+    schema:identifier "CROP_WSPIN2"^^xsd:string ;
+    schema:name "Winterspinat, 2 Schnitte"@de ;
+    :K2O 180.0 ;
+    :Mg 20.0 ;
+    :N2 200.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:3 a cube:Observation ;
+    schema:identifier "CROP_ALTBRY"^^xsd:string ;
+    schema:name "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de ;
+    :K2O 121.0 ;
+    :Mg 15.0 ;
+    :N2 85.0 ;
+    :P2O5 46.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:30 a cube:Observation ;
+    schema:identifier "CROP_BROCCP"^^xsd:string ;
+    schema:name "Broccoli, Verarbeitung"@de ;
+    :K2O 100.0 ;
+    :Mg 10.0 ;
+    :N2 300.0 ;
+    :P2O5 35.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:300 a cube:Observation ;
+    schema:identifier "CROP_WSPINI1"^^xsd:string ;
+    schema:name "Winterspinat, Industrie, 1 Schnitt"@de ;
+    :K2O 190.0 ;
+    :Mg 25.0 ;
+    :N2 190.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:301 a cube:Observation ;
+    schema:identifier "CROP_WSPINI2"^^xsd:string ;
+    schema:name "Winterspinat, Industrie, 2 Schnitte"@de ;
+    :K2O 200.0 ;
+    :Mg 25.0 ;
+    :N2 200.0 ;
+    :P2O5 35.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:302 a cube:Observation ;
+    schema:identifier "CROP_WTRIT"^^xsd:string ;
+    schema:name "Wintertriticale"@de ;
+    :K2O 0.0 ;
+    :Mg 0.08 ;
+    :N2 110.0 ;
+    :P2O5 0.72 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1019 .
+
+naebi:303 a cube:Observation ;
+    schema:identifier "CROP_WTRITN"^^xsd:string ;
+    schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
+    :K2O 0.0 ;
+    :Mg 0.08 ;
+    :N2 110.0 ;
+    :P2O5 0.72 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1020 .
+
+naebi:304 a cube:Observation ;
+    schema:identifier "CROP_WWHT"^^xsd:string ;
+    schema:name "Winterweizen"@de ;
+    :K2O 0.1 ;
+    :Mg 0.12 ;
+    :N2 140.0 ;
+    :P2O5 0.83 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1001 .
+
+naebi:305 a cube:Observation ;
+    schema:identifier "CROP_WWHTN"^^xsd:string ;
+    schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
+    :K2O 0.1 ;
+    :Mg 0.12 ;
+    :N2 140.0 ;
+    :P2O5 0.83 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1002 .
+
+naebi:306 a cube:Observation ;
+    schema:identifier "CROP_XMASTR"^^xsd:string ;
+    schema:name "Christbäume"@de ;
+    :K2O 95.0 ;
+    :Mg 20.0 ;
+    :N2 50.0 ;
+    :P2O5 35.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:307 a cube:Observation ;
+    schema:identifier "CROP_YRRW"^^xsd:string ;
+    schema:name "Schafgarbe"@de ;
+    :K2O 220.0 ;
+    :Mg 20.0 ;
+    :N2 100.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:308 a cube:Observation ;
+    schema:identifier "CROP_ZUCCHF"^^xsd:string ;
+    schema:name "Zucchetti, gepflanzt, frühe Kurzkultur"@de ;
+    :K2O 135.0 ;
+    :Mg 20.0 ;
+    :N2 180.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:309 a cube:Observation ;
+    schema:identifier "CROP_ZUCCHP"^^xsd:string ;
+    schema:name "Pattison, Kürbis (geschützter Anbau)"@de ;
+    :K2O 220.0 ;
+    :Mg 30.0 ;
+    :N2 160.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:31 a cube:Observation ;
+    schema:identifier "CROP_BRSPR"^^xsd:string ;
+    schema:name "Rosenkohl, Strünke abgeführt"@de ;
+    :K2O 170.0 ;
+    :Mg 5.0 ;
+    :N2 260.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:310 a cube:Observation ;
+    schema:identifier "CROP_ZUCCHS"^^xsd:string ;
+    schema:name "Zucchetti, gepflanzt, Sommer und Herbst"@de ;
+    :K2O 140.0 ;
+    :Mg 20.0 ;
+    :N2 190.0 ;
+    :P2O5 35.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:311 a cube:Observation ;
+    schema:identifier "CROP_ZUCHP"^^xsd:string ;
+    schema:name "Zucchetti (geschützter Anbau)"@de ;
+    :K2O 150.0 ;
+    :Mg 15.0 ;
+    :N2 190.0 ;
+    :P2O5 35.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:312 a cube:Observation ;
+    schema:identifier "CROP_ZUCPAT"^^xsd:string ;
+    schema:name "Patisson, Kürbis"@de ;
+    :K2O 220.0 ;
+    :Mg 30.0 ;
+    :N2 150.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:313 a cube:Observation ;
+    schema:identifier "CROP_ZUCSHS"^^xsd:string ;
+    schema:name "Zucchetti, gesät, Sommer und Herbst"@de ;
+    :K2O 110.0 ;
+    :Mg 15.0 ;
+    :N2 170.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:32 a cube:Observation ;
+    schema:identifier "CROP_BSLKM"^^xsd:string ;
+    schema:name "Basilikum"@de ;
+    :K2O 120.0 ;
+    :Mg 15.0 ;
+    :N2 100.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:33 a cube:Observation ;
+    schema:identifier "CROP_BUSHB"^^xsd:string ;
+    schema:name "Bohnen, Busch- Handpflück-"@de ;
+    :K2O 70.0 ;
+    :Mg 5.0 ;
+    :N2 0.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:34 a cube:Observation ;
+    schema:identifier "CROP_CARHY"^^xsd:string ;
+    schema:name "Karotten Verarbeitung-, Lager-, hoher Ertrag"@de ;
+    :K2O 300.0 ;
+    :Mg 20.0 ;
+    :N2 130.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:35 a cube:Observation ;
+    schema:identifier "CROP_CARMY"^^xsd:string ;
+    schema:name "Karotten Verarbeitung-, Lager-, mittlerer Ertrag"@de ;
+    :K2O 250.0 ;
+    :Mg 20.0 ;
+    :N2 110.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:36 a cube:Observation ;
+    schema:identifier "CROP_CARPP"^^xsd:string ;
+    schema:name "Karotten Pariser"@de ;
+    :K2O 100.0 ;
+    :Mg 10.0 ;
+    :N2 50.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:37 a cube:Observation ;
+    schema:identifier "CROP_CAULI"^^xsd:string ;
+    schema:name "Blumenkohl, Standard"@de ;
+    :K2O 150.0 ;
+    :Mg 15.0 ;
+    :N2 290.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:38 a cube:Observation ;
+    schema:identifier "CROP_CAULIE"^^xsd:string ;
+    schema:name "Blumenkohl, früh"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:39 a cube:Observation ;
+    schema:identifier "CROP_CAULIP"^^xsd:string ;
+    schema:name "Blumenkohl, Verarbeitung"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:4 a cube:Observation ;
+    schema:identifier "CROP_APEYH"^^xsd:string ;
+    schema:name "Aprikosenanlage, hoher Ertrag"@de ;
+    :K2O 90.0 ;
+    :Mg 30.0 ;
+    :N2 75.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:40 a cube:Observation ;
+    schema:identifier "CROP_CBEFE"^^xsd:string ;
+    schema:name "Karotten Bund-, Früh-"@de ;
+    :K2O 140.0 ;
+    :Mg 20.0 ;
+    :N2 100.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:41 a cube:Observation ;
+    schema:identifier "CROP_CCMCRN"^^xsd:string ;
+    schema:name "Silomais"@de ;
+    :K2O 1.3 ;
+    :Mg 0.13 ;
+    :N2 110.0 ;
+    :P2O5 0.58 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cultivationtype:1026 .
+
+naebi:42 a cube:Observation ;
+    schema:identifier "CROP_CEL40"^^xsd:string ;
+    schema:name "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de ;
+    :K2O 220.0 ;
+    :Mg 30.0 ;
+    :N2 120.0 ;
+    :P2O5 70.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:43 a cube:Observation ;
+    schema:identifier "CROP_CELERK"^^xsd:string ;
+    schema:name "Sellerie Knollen-"@de ;
+    :K2O 300.0 ;
+    :Mg 20.0 ;
+    :N2 190.0 ;
+    :P2O5 70.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:44 a cube:Observation ;
+    schema:identifier "CROP_CELERS"^^xsd:string ;
+    schema:name "Sellerie Stangen-"@de ;
+    :K2O 300.0 ;
+    :Mg 20.0 ;
+    :N2 180.0 ;
+    :P2O5 70.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:45 a cube:Observation ;
+    schema:identifier "CROP_CEYH"^^xsd:string ;
+    schema:name "Cassis, 3.5 kg/m2"@de ;
+    :K2O 229.0 ;
+    :Mg 25.0 ;
+    :N2 130.0 ;
+    :P2O5 69.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:46 a cube:Observation ;
+    schema:identifier "CROP_CHARD"^^xsd:string ;
+    schema:name "Krautstiel"@de ;
+    :K2O 220.0 ;
+    :Mg 30.0 ;
+    :N2 150.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:47 a cube:Observation ;
+    schema:identifier "CROP_CHEYH"^^xsd:string ;
+    schema:name "Kirschenanlage, hoher Ertrag"@de ;
+    :K2O 85.0 ;
+    :Mg 40.0 ;
+    :N2 100.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:48 a cube:Observation ;
+    schema:identifier "CROP_CHINK"^^xsd:string ;
+    schema:name "Chinakohl"@de ;
+    :K2O 200.0 ;
+    :Mg 10.0 ;
+    :N2 160.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:49 a cube:Observation ;
+    schema:identifier "CROP_CHISLF"^^xsd:string ;
+    schema:name "Chinaschilf"@de ;
+    :K2O 112.0 ;
+    :Mg 6.0 ;
+    :N2 30.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:5 a cube:Observation ;
+    schema:identifier "CROP_APPLT"^^xsd:string ;
+    schema:name "Aprikosenanlage"@de ;
+    :K2O 75.0 ;
+    :Mg 20.0 ;
+    :N2 60.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:50 a cube:Observation ;
+    schema:identifier "CROP_CHIVES"^^xsd:string ;
+    schema:name "Schnittlauch"@de ;
+    :K2O 120.0 ;
+    :Mg 20.0 ;
+    :N2 170.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:51 a cube:Observation ;
+    schema:identifier "CROP_CHIWR"^^xsd:string ;
+    schema:name "Chicorée, Wurzelanbau"@de ;
+    :K2O 150.0 ;
+    :Mg 30.0 ;
+    :N2 70.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:52 a cube:Observation ;
+    schema:identifier "CROP_CHMML"^^xsd:string ;
+    schema:name "Kamille"@de ;
+    :K2O 80.0 ;
+    :Mg 5.0 ;
+    :N2 50.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:53 a cube:Observation ;
+    schema:identifier "CROP_CHRPL"^^xsd:string ;
+    schema:name "Kirschenanlage"@de ;
+    :K2O 50.0 ;
+    :Mg 20.0 ;
+    :N2 60.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:54 a cube:Observation ;
+    schema:identifier "CROP_CHVSP"^^xsd:string ;
+    schema:name "Schnittlauch Kultur (geschützter Anbau)"@de ;
+    :K2O 180.0 ;
+    :Mg 30.0 ;
+    :N2 100.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:55 a cube:Observation ;
+    schema:identifier "CROP_CRSSE"^^xsd:string ;
+    schema:name "Kresse (geschützter Anbau)"@de ;
+    :K2O 30.0 ;
+    :Mg 10.0 ;
+    :N2 20.0 ;
+    :P2O5 10.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:56 a cube:Observation ;
+    schema:identifier "CROP_CSLLC"^^xsd:string ;
+    schema:name "Nüsslisalat, Feldsalat (geschützter Anbau)"@de ;
+    :K2O 60.0 ;
+    :Mg 10.0 ;
+    :N2 50.0 ;
+    :P2O5 10.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:57 a cube:Observation ;
+    schema:identifier "CROP_CTLSP"^^xsd:string ;
+    schema:name "Schnittsalat (geschützter Anbau)"@de ;
+    :K2O 50.0 ;
+    :Mg 10.0 ;
+    :N2 50.0 ;
+    :P2O5 10.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:58 a cube:Observation ;
+    schema:identifier "CROP_CUC30"^^xsd:string ;
+    schema:name "Gurken 30 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
+    :K2O 300.0 ;
+    :Mg 60.0 ;
+    :N2 200.0 ;
+    :P2O5 100.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:59 a cube:Observation ;
+    schema:identifier "CROP_CUC50"^^xsd:string ;
+    schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
+    :K2O 400.0 ;
+    :Mg 80.0 ;
+    :N2 300.0 ;
+    :P2O5 150.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:6 a cube:Observation ;
+    schema:identifier "CROP_ARNCA"^^xsd:string ;
+    schema:name "Arnika"@de ;
+    :K2O 50.0 ;
+    :Mg 5.0 ;
+    :N2 30.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:60 a cube:Observation ;
+    schema:identifier "CROP_CURRNT"^^xsd:string ;
+    schema:name "Cassis, 2.5 kg/m2"@de ;
+    :K2O 157.0 ;
+    :Mg 20.0 ;
+    :N2 90.0 ;
+    :P2O5 46.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:61 a cube:Observation ;
+    schema:identifier "CROP_CUSALA"^^xsd:string ;
+    schema:name "Schnittsalat"@de ;
+    :K2O 60.0 ;
+    :Mg 20.0 ;
+    :N2 60.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:62 a cube:Observation ;
+    schema:identifier "CROP_CUTCN"^^xsd:string ;
+    schema:name "Kabis Einschneide-"@de ;
+    :K2O 250.0 ;
+    :Mg 20.0 ;
+    :N2 260.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:63 a cube:Observation ;
+    schema:identifier "CROP_CUTFLG"^^xsd:string ;
+    schema:name "Schnittblumen, gross"@de ;
+    :K2O 350.0 ;
+    :Mg 60.0 ;
+    :N2 320.0 ;
+    :P2O5 180.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:64 a cube:Observation ;
+    schema:identifier "CROP_CUTFLM"^^xsd:string ;
+    schema:name "Schnittblumen, mittel"@de ;
+    :K2O 250.0 ;
+    :Mg 40.0 ;
+    :N2 230.0 ;
+    :P2O5 140.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:65 a cube:Observation ;
+    schema:identifier "CROP_CUTFLS"^^xsd:string ;
+    schema:name "Schnittblumen, klein"@de ;
+    :K2O 150.0 ;
+    :Mg 30.0 ;
+    :N2 140.0 ;
+    :P2O5 100.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:66 a cube:Observation ;
+    schema:identifier "CROP_DLLLD"^^xsd:string ;
+    schema:name "Dill"@de ;
+    :K2O 190.0 ;
+    :Mg 10.0 ;
+    :N2 80.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:67 a cube:Observation ;
+    schema:identifier "CROP_EDLWS"^^xsd:string ;
+    schema:name "Edelweiss"@de ;
+    :K2O 90.0 ;
+    :Mg 5.0 ;
+    :N2 40.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:68 a cube:Observation ;
+    schema:identifier "CROP_EGGPL"^^xsd:string ;
+    schema:name "Aubergine"@de ;
+    :K2O 130.0 ;
+    :Mg 10.0 ;
+    :N2 170.0 ;
+    :P2O5 20.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:69 a cube:Observation ;
+    schema:identifier "CROP_EMMEK"^^xsd:string ;
+    schema:name "Emmer / Einkorn"@de ;
+    :K2O 0.06 ;
+    :Mg 0.16 ;
+    :N2 30.0 ;
+    :P2O5 0.8 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:511 .
+
+naebi:7 a cube:Observation ;
+    schema:identifier "CROP_ARUCL1"^^xsd:string ;
+    schema:name "Rucola, 1 Schnitt"@de ;
+    :K2O 150.0 ;
+    :Mg 10.0 ;
+    :N2 150.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:70 a cube:Observation ;
+    schema:identifier "CROP_ENDAU"^^xsd:string ;
+    schema:name "Endivie Herbst- (geschützter Anbau)"@de ;
+    :K2O 180.0 ;
+    :Mg 30.0 ;
+    :N2 140.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:71 a cube:Observation ;
+    schema:identifier "CROP_ENDEY"^^xsd:string ;
+    schema:name "Endivie, hoher Ertrag"@de ;
+    :K2O 200.0 ;
+    :Mg 20.0 ;
+    :N2 160.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:72 a cube:Observation ;
+    schema:identifier "CROP_ENDMY"^^xsd:string ;
+    schema:name "Endivie, mittlerer Ertrag"@de ;
+    :K2O 160.0 ;
+    :Mg 20.0 ;
+    :N2 130.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:73 a cube:Observation ;
+    schema:identifier "CROP_EWSPE"^^xsd:string ;
+    schema:name "Soja"@de ;
+    :K2O 2.75 ;
+    :Mg 0.2 ;
+    :N2 0.0 ;
+    :P2O5 1.17 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:74 a cube:Observation ;
+    schema:identifier "CROP_FCRMN"^^xsd:string ;
+    schema:name "CCM"@de ;
+    :K2O 0.4 ;
+    :Mg 0.09 ;
+    :N2 110.0 ;
+    :P2O5 0.76 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:75 a cube:Observation ;
+    schema:identifier "CROP_FENNL"^^xsd:string ;
+    schema:name "Fenchel, Knollen"@de ;
+    :K2O 180.0 ;
+    :Mg 20.0 ;
+    :N2 160.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:76 a cube:Observation ;
+    schema:identifier "CROP_FIBHE"^^xsd:string ;
+    schema:name "Faserlein"@de ;
+    :K2O 2.0 ;
+    :Mg 0.2 ;
+    :N2 60.0 ;
+    :P2O5 0.71 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:77 a cube:Observation ;
+    schema:identifier "CROP_FLAXD"^^xsd:string ;
+    schema:name "Saum auf Ackerfläche"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:78 a cube:Observation ;
+    schema:identifier "CROP_FLLND"^^xsd:string ;
+    schema:name "Rotationsbrache"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:79 a cube:Observation ;
+    schema:identifier "CROP_FNSD1"^^xsd:string ;
+    schema:name "Fenchelsamen 1-jährig"@de ;
+    :K2O 160.0 ;
+    :Mg 20.0 ;
+    :N2 80.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:8 a cube:Observation ;
+    schema:identifier "CROP_ARUCL2"^^xsd:string ;
+    schema:name "Rucola, 2 Schnitte"@de ;
+    :K2O 180.0 ;
+    :Mg 20.0 ;
+    :N2 210.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:80 a cube:Observation ;
+    schema:identifier "CROP_FNSDP"^^xsd:string ;
+    schema:name "Fenchelsamen mehrjährig"@de ;
+    :K2O 160.0 ;
+    :Mg 20.0 ;
+    :N2 80.0 ;
+    :P2O5 50.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:81 a cube:Observation ;
+    schema:identifier "CROP_FOILC"^^xsd:string ;
+    schema:name "Kabis Früh-, Folie"@de ;
+    :K2O 150.0 ;
+    :Mg 10.0 ;
+    :N2 140.0 ;
+    :P2O5 40.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:82 a cube:Observation ;
+    schema:identifier "CROP_FOSTR"^^xsd:string ;
+    schema:name "betriebseigenes verfütt. Stroh, ha"@de ;
+    :K2O 0.92 ;
+    :Mg 0.13 ;
+    :N2 0.0 ;
+    :P2O5 0.22 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:83 a cube:Observation ;
+    schema:identifier "CROP_FRUB"^^xsd:string ;
+    schema:name "Zuckerrüben"@de ;
+    :K2O 0.09 ;
+    :Mg 0.03 ;
+    :N2 100.0 ;
+    :P2O5 0.06 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:84 a cube:Observation ;
+    schema:identifier "CROP_FWHT"^^xsd:string ;
+    schema:name "Futterweizen"@de ;
+    :K2O 0.14 ;
+    :Mg 0.12 ;
+    :N2 140.0 ;
+    :P2O5 0.83 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1004 .
+
+naebi:85 a cube:Observation ;
+    schema:identifier "CROP_FWHTN"^^xsd:string ;
+    schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
+    :K2O 0.14 ;
+    :Mg 0.12 ;
+    :N2 140.0 ;
+    :P2O5 0.83 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:1005 .
+
+naebi:86 a cube:Observation ;
+    schema:identifier "CROP_GANSO"^^xsd:string ;
+    schema:name "Hirse"@de ;
+    :K2O 0.29 ;
+    :Mg 0.11 ;
+    :N2 70.0 ;
+    :P2O5 0.66 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationtype cultivationtype:542 .
+
+naebi:87 a cube:Observation ;
+    schema:identifier "CROP_GBEYH"^^xsd:string ;
+    schema:name "Stachelbeeren, 2.5 kg/m2"@de ;
+    :K2O 127.0 ;
+    :Mg 20.0 ;
+    :N2 95.0 ;
+    :P2O5 57.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:88 a cube:Observation ;
+    schema:identifier "CROP_GCORN"^^xsd:string ;
+    schema:name "Grünmais, ha"@de ;
+    :K2O 2.7 ;
+    :Mg 0.1 ;
+    :N2 70.0 ;
+    :P2O5 0.65 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:89 a cube:Observation ;
+    schema:identifier "CROP_GMLG"^^xsd:string ;
+    schema:name "Gründüngung (Leguminosen), ha"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:9 a cube:Observation ;
+    schema:identifier "CROP_ASISAL"^^xsd:string ;
+    schema:name "Asia-Salate (Brassicaceae)"@de ;
+    :K2O 135.0 ;
+    :Mg 10.0 ;
+    :N2 150.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:90 a cube:Observation ;
+    schema:identifier "CROP_GMNLE"^^xsd:string ;
+    schema:name "Gründüngung (Nichtleguminosen), ha"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:91 a cube:Observation ;
+    schema:identifier "CROP_GOOSEB"^^xsd:string ;
+    schema:name "Stachelbeeren, 1.7 kg/m2"@de ;
+    :K2O 78.0 ;
+    :Mg 15.0 ;
+    :N2 60.0 ;
+    :P2O5 34.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:92 a cube:Observation ;
+    schema:identifier "CROP_GRLIC"^^xsd:string ;
+    schema:name "Knoblauch"@de ;
+    :K2O 120.0 ;
+    :Mg 10.0 ;
+    :N2 120.0 ;
+    :P2O5 30.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:93 a cube:Observation ;
+    schema:identifier "CROP_GSEED"^^xsd:string ;
+    schema:name "Grassamen-Produktion"@de ;
+    :K2O 2.3 ;
+    :Mg 0.25 ;
+    :N2 1.7 ;
+    :P2O5 0.71 ;
+    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:94 a cube:Observation ;
+    schema:identifier "CROP_HAZLN"^^xsd:string ;
+    schema:name "Haselnüsse"@de ;
+    :K2O 50.0 ;
+    :Mg 15.0 ;
+    :N2 90.0 ;
+    :P2O5 25.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:95 a cube:Observation ;
+    schema:identifier "CROP_HBEYH"^^xsd:string ;
+    schema:name "Heidelbeeren, 2.5 kg/m2"@de ;
+    :K2O 84.0 ;
+    :Mg 30.0 ;
+    :N2 65.0 ;
+    :P2O5 46.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:96 a cube:Observation ;
+    schema:identifier "CROP_HEMP"^^xsd:string ;
+    schema:name "Öllein"@de ;
+    :K2O 0.95 ;
+    :Mg 0.05 ;
+    :N2 80.0 ;
+    :P2O5 1.2 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:97 a cube:Observation ;
+    schema:identifier "CROP_HFBUFF"^^xsd:string ;
+    schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationtype cultivationtype:1024 .
+
+naebi:98 a cube:Observation ;
+    schema:identifier "CROP_HFT01"^^xsd:string ;
+    schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de ;
+    :K2O 56.0 ;
+    :Mg 8.0 ;
+    :N2 45.0 ;
+    :P2O5 15.0 ;
+    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
+naebi:99 a cube:Observation ;
+    schema:identifier "CROP_HFTWB"^^xsd:string ;
+    schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
+    :K2O 0.0 ;
+    :Mg 0.0 ;
+    :N2 0.0 ;
+    :P2O5 0.0 ;
+    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationtype cube:Undefined .
+
