@@ -476,6 +476,13 @@ cultivationtype:16 a owl:Class ;
     rdfs:comment "Der Anbau von von Getreide oder Pseudogetreide."@de ;
     rdfs:subClassOf cultivationtype:1 .
 
+cultivationtype:161 a owl:Class ;
+    rdfs:label "Schwarzer Holunder"@de,
+        "Elder berry"@en,
+        "grand sureau"@fr,
+        "Sambuco nero"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:165 a owl:Class ;
     rdfs:label "Puffbohne"@de,
         "fève"@fr,
@@ -667,6 +674,12 @@ cultivationtype:221 a owl:Class ;
         "Piselli senza baccello"@it ;
     rdfs:subClassOf cultivationtype:191 .
 
+cultivationtype:223 a owl:Class ;
+    rdfs:label "Erdbeere"@de,
+        "fraise"@fr,
+        "Fragola"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:224 a owl:Class ;
     rdfs:label "Topinambur"@de,
         "topinambour"@fr,
@@ -798,6 +811,12 @@ cultivationtype:253 a owl:Class ;
         "Dragoncello"@it ;
     rdfs:subClassOf cultivationtype:67 .
 
+cultivationtype:256 a owl:Class ;
+    rdfs:label "Heidelbeere"@de,
+        "myrtille"@fr,
+        "Mirtillo"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:257 a owl:Class ;
     rdfs:label "Olive"@de,
         "Olive"@en,
@@ -902,6 +921,12 @@ cultivationtype:278 a owl:Class ;
         "roquette"@fr,
         "Rucola"@it ;
     rdfs:subClassOf cultivationtype:48 .
+
+cultivationtype:28 a owl:Class ;
+    rdfs:label "Schwarze Apfelbeere"@de,
+        "aronie noire"@fr,
+        "Aronia nera"@it ;
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:282 a owl:Class ;
     rdfs:label "Stielmus"@de,
@@ -1923,6 +1948,13 @@ cultivationtype:67 a owl:Class ;
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:69 a owl:Class ;
+    rdfs:label "Mini-Kiwi"@de,
+        "mini-Kiwi (Kiwaï)"@fr,
+        "Mini-Kiwi"@it ;
+    rdfs:subClassOf cultivationtype:471,
+        cultivationtype:731 .
 
 cultivationtype:693 a owl:Class ;
     rdfs:label "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
