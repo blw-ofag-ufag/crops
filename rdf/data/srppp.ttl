@@ -1783,7 +1783,7 @@ psm:233 a cube:Observation ;
         "mûre"@fr,
         "Mora"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:233 .
 
 psm:234 a cube:Observation ;
     schema:identifier "8774F019-8BB4-409D-ADA9-B565ECA1A6A9"^^xsd:ID ;
@@ -2322,7 +2322,7 @@ psm:288 a cube:Observation ;
         "framboise"@fr,
         "Lampone"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:288 .
 
 psm:289 a cube:Observation ;
     schema:identifier "F6A02973-2AF5-47AF-B99D-FFAD9A24BCB4"^^xsd:ID ;

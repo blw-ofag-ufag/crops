@@ -885,6 +885,12 @@ cultivationtype:232 a owl:Class ;
         "Cipollotti a mazzi"@it ;
     rdfs:subClassOf cultivationtype:277 .
 
+cultivationtype:233 a owl:Class ;
+    schema:name "Brombeere"@de,
+        "mûre"@fr,
+        "Mora"@it ;
+    rdfs:subClassOf cultivationtype:326 .
+
 cultivationtype:235 a owl:Class ;
     schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
         "cucurbitacées"@fr,
@@ -1062,6 +1068,12 @@ cultivationtype:283 a owl:Class ;
         "Ciliegio"@it ;
     rdfs:subClassOf cultivationtype:704 .
 
+cultivationtype:288 a owl:Class ;
+    schema:name "Himbeere"@de,
+        "framboise"@fr,
+        "Lampone"@it ;
+    rdfs:subClassOf cultivationtype:326 .
+
 cultivationtype:289 a owl:Class ;
     schema:name "Rondini"@de,
         "rondini"@fr,
@@ -1186,6 +1198,12 @@ cultivationtype:325 a owl:Class ;
         "pakchoi"@fr,
         "Pak-Choi"@it ;
     rdfs:subClassOf cultivationtype:20 .
+
+cultivationtype:326 a owl:Class ;
+    schema:name "Rubus Arten"@de,
+        "espèces de Rubus"@fr,
+        "Specie di rubus"@it ;
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:327 a owl:Class ;
     schema:name "Doldenblütler (Apiaceae)"@de,
