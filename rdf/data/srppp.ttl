@@ -1145,7 +1145,7 @@ psm:169 a cube:Observation ;
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:467 .
 
 psm:17 a cube:Observation ;
     schema:identifier "7B3C8CEE-526F-4381-A757-669C1864291A"^^xsd:ID ;
@@ -1652,7 +1652,7 @@ psm:22 a cube:Observation ;
         "féverole"@fr,
         "Fava"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:468 .
 
 psm:220 a cube:Observation ;
     schema:identifier "F9426E5C-7D4D-45E5-80DA-64BB12336CA4"^^xsd:ID ;
@@ -2142,7 +2142,7 @@ psm:27 a cube:Observation ;
         "grande culture en général"@fr,
         "Campicoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1 .
 
 psm:270 a cube:Observation ;
     schema:identifier "46D3C073-CBD8-4B3A-A9AA-21785BA911CA"^^xsd:ID ;
@@ -2601,7 +2601,7 @@ psm:316 a cube:Observation ;
     schema:name "allg. Feldbau"@de,
         "domaine app. grande culture"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1 .
 
 psm:317 a cube:Observation ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD"^^xsd:ID ;
