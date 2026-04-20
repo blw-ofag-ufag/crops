@@ -1163,7 +1163,7 @@ psm:170 a cube:Observation ;
         "cassis"@fr,
         "Ribes nero"@it ;
     schema:version 0 ;
-    :cultivationType psm:170 .
+    :cultivationType cultivationtype:170 .
 
 psm:171 a cube:Observation ;
     schema:identifier "102C28F6-4AFB-4079-909B-ACE8E0819A77"^^xsd:ID ;
