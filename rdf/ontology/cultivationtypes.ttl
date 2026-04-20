@@ -2685,3 +2685,16 @@ cultivationtype:1050 a owl:Class ;
 cultivationtype:1051 a owl:Class ;
     schema:name "Lauch, gepflanzt, Überwinterung"@de, "Poireau, planté, hivernage"@fr, "Porro, piantato, svernamento"@it ;
     rdfs:subClassOf cultivationtype:323 .
+
+cultivationtype:1052 a owl:Class ;
+    schema:name "Kleesamenproduktion"@de, "Production de semences de trèfle"@fr, "Produzione di sementi di trifoglio"@it ;
+    rdfs:subClassOf cultivationtype:631 .
+
+cultivationtype:1053 a owl:Class ;
+    schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de, "Engrais vert légumineuses (légumes de plein champ)"@fr, "Sovescio leguminose (ortaggi di pieno campo)"@it ;
+    schema:description "Leguminosen, die als Zwischenkultur zur Gründüngung in einer Freilandgemüse-Fruchtfolge angebaut werden."@de ;
+    rdfs:subClassOf cultivationtype:15, cultivationtype:24 .
+
+cultivationtype:2032 a owl:Class ;
+    schema:name "Zitronenmelisse"@de, "Mélisse citronnelle"@fr, "Melissa"@it ;
+    rdfs:subClassOf cultivationtype:706 .
