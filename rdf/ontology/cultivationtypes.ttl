@@ -3079,3 +3079,57 @@ cultivationtype:1093 a owl:Class ;
         "Courge"@fr,
         "Zucca"@it ;
     rdfs:subClassOf cultivationtype:235 .
+
+cultivationtype:1094 a owl:Class ;
+    schema:name "Portulak (geschützter Anbau)"@de,
+        "Pourpier (culture protégée)"@fr,
+        "Portulaca (coltura protetta)"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:75 
+        cultivationtype:7 
+    ) .
+
+cultivationtype:1094 a owl:Class ;
+    schema:name "Wenig intensiv genutzte Weiden"@de,
+        "Pâturages peu intensifs"@fr,
+        "Pascoli poco intensivi"@it ;
+    rdfs:subClassOf cultivationtype:616 .
+
+cultivationtype:1095 a owl:Class ;
+    schema:name "Süsslupinen"@de,
+        "Lupins doux"@fr,
+        "Lupini dolci"@it ;
+    rdfs:subClassOf cultivationtype:538 .
+
+cultivationtype:1096 a owl:Class ;
+    schema:name "Radicchio und Cicorino für Verarbeitung"@de,
+        "Radicchio et cicorino d'industrie"@fr,
+        "Radicchio e cicorino da industria"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:133 
+        cultivationtype:546 
+    ) .
+
+cultivationtype:1097 a owl:Class ;
+    schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de,
+        "Jeunes plants de framboisiers (Long-Cane)"@fr,
+        "Giovani piante di lampone (Long-Cane)"@it ;
+    rdfs:subClassOf cultivationtype:723 .
+
+cultivationtype:1098 a owl:Class ;
+    schema:name "Blaue Malve"@de,
+        "Grande mauve"@fr,
+        "Malva selvatica"@it ;
+    rdfs:subClassOf cultivationtype:35 .
+
+cultivationtype:1099 a owl:Class ;
+    schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de,
+        "Roquette, 1 coupe (culture protégée)"@fr,
+        "Rucola, 1 taglio (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:278, cultivationtype:7 .
+
+cultivationtype:1100 a owl:Class ;
+    schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de,
+        "Roquette, 2 coupes (culture protégée)"@fr,
+        "Rucola, 2 tagli (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:278, cultivationtype:7 .

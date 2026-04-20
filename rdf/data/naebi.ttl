@@ -1670,7 +1670,7 @@ naebi:197 a cube:Observation ;
     :P2O5 20.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1094 .
 
 naebi:198 a cube:Observation ;
     schema:identifier "CROP_PWINT"^^xsd:string ;
@@ -1681,7 +1681,7 @@ naebi:198 a cube:Observation ;
     :P2O5 0.57 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1094 .
 
 naebi:199 a cube:Observation ;
     schema:identifier "CROP_QUINO"^^xsd:string ;
@@ -1692,7 +1692,7 @@ naebi:199 a cube:Observation ;
     :P2O5 1.15 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:574 .
 
 naebi:2 a cube:Observation ;
     schema:identifier "CROP_ACBOE"^^xsd:string ;
@@ -1703,7 +1703,7 @@ naebi:2 a cube:Observation ;
     :P2O5 1.0 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1095 .
 
 naebi:20 a cube:Observation ;
     schema:identifier "CROP_BLKSAL"^^xsd:string ;
@@ -1714,7 +1714,7 @@ naebi:20 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:92 .
 
 naebi:200 a cube:Observation ;
     schema:identifier "CROP_RAD10B"^^xsd:string ;
@@ -1769,7 +1769,7 @@ naebi:204 a cube:Observation ;
     :P2O5 20.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:133 .
 
 naebi:205 a cube:Observation ;
     schema:identifier "CROP_RADCHP"^^xsd:string ;
@@ -1780,7 +1780,7 @@ naebi:205 a cube:Observation ;
     :P2O5 25.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1096 .
 
 naebi:206 a cube:Observation ;
     schema:identifier "CROP_RASJLC"^^xsd:string ;
@@ -1791,7 +1791,7 @@ naebi:206 a cube:Observation ;
     :P2O5 80.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1097 .
 
 naebi:207 a cube:Observation ;
     schema:identifier "CROP_RASPB"^^xsd:string ;
@@ -1835,7 +1835,7 @@ naebi:21 a cube:Observation ;
     :P2O5 60.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1098 .
 
 naebi:210 a cube:Observation ;
     schema:identifier "CROP_REDCUR"^^xsd:string ;
@@ -1868,7 +1868,7 @@ naebi:212 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:211 .
 
 naebi:213 a cube:Observation ;
     schema:identifier "CROP_RICE"^^xsd:string ;
@@ -1890,7 +1890,7 @@ naebi:214 a cube:Observation ;
     :P2O5 0.0 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:634 .
 
 naebi:215 a cube:Observation ;
     schema:identifier "CROP_RJEYH"^^xsd:string ;
@@ -1912,7 +1912,7 @@ naebi:216 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1099 .
 
 naebi:217 a cube:Observation ;
     schema:identifier "CROP_RKTC2"^^xsd:string ;
@@ -1923,7 +1923,7 @@ naebi:217 a cube:Observation ;
     :P2O5 40.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1100 .
 
 naebi:218 a cube:Observation ;
     schema:identifier "CROP_RMEAD"^^xsd:string ;
@@ -1934,7 +1934,7 @@ naebi:218 a cube:Observation ;
     :P2O5 0.0 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:308 .
 
 naebi:219 a cube:Observation ;
     schema:identifier "CROP_RSMRY"^^xsd:string ;
