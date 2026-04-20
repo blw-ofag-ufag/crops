@@ -2803,6 +2803,7 @@ cultivationtype:1064 a owl:Class ;
 
 cultivationtype:1065 a owl:Class ;
     schema:name "Baumschulen"@de, "Pépinières"@fr, "Vivai"@it ;
+    rdfs:subClassOf :Cultivation ;
     owl:unionOf ( cultivationtype:722 cultivationtype:723 cultivationtype:724 ) .
 
 cultivationtype:1066 a owl:Class ;
