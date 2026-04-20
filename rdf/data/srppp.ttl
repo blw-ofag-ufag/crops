@@ -1269,7 +1269,7 @@ psm:181 a cube:Observation ;
         "semis sous litière"@fr,
         "Semine a lattiera"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:464 .
 
 psm:182 a cube:Observation ;
     schema:identifier "4E1ACD79-F162-4EBB-93CB-C6857A811E9C"^^xsd:ID ;
@@ -1347,7 +1347,7 @@ psm:19 a cube:Observation ;
         "pois protéagineux"@fr,
         "Pisello proteico"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1027 .
 
 psm:190 a cube:Observation ;
     schema:identifier "5755AD92-721E-431E-8473-6FA2F340532F"^^xsd:ID ;
@@ -2288,7 +2288,7 @@ psm:284 a cube:Observation ;
         "semis après travail superficiel"@fr,
         "Semine dopo la fresatura"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:465 .
 
 psm:285 a cube:Observation ;
     schema:identifier "DA71526F-AC1D-40F1-8EF5-109E3F3FFD76"^^xsd:ID ;
