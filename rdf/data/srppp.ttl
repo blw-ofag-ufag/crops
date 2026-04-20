@@ -479,7 +479,7 @@ psm:10 a cube:Observation ;
 
 psm:100 a cube:Observation ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA"^^xsd:ID ;
-    schema:isPartOf psm:27 ;
+    schema:isPartOf psm:27, psm:316 ;
     schema:name "Trockenreis"@de,
         "Riz semis sur terrain sec"@fr,
         "Riso seminato su terreno asciutto"@it ;
@@ -1397,6 +1397,7 @@ psm:194 a cube:Observation ;
 
 psm:195 a cube:Observation ;
     schema:identifier "61D9C648-0736-43D4-BF04-B8643B1D74E0"^^xsd:ID ;
+    schema:isPartOf psm:4 ;
     schema:name "Hyazinthe"@de,
         "jacinthe"@fr,
         "Giacinto"@it ;
