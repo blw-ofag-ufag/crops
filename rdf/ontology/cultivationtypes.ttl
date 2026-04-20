@@ -1141,6 +1141,7 @@ cultivationtype:479 a owl:Class ;
     schema:name "Liebstöckel"@de,
         "livèche"@fr,
         "Levistico"@it ;
+    schema:alternateName "Maggikraut"@de ;
     rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:480 a owl:Class ;
@@ -2702,3 +2703,40 @@ cultivationtype:1055 a owl:Class ;
     schema:name "Indianernessel"@de, "Monarde"@fr, "Monarda"@it ;
     schema:alternateName "Rosenmelisse"@de ;
     rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1056 a owl:Class ;
+    schema:name "Verarbeitungsbohnen"@de, "Haricots d'industrie"@fr, "Fagioli da industria"@it ;
+    owl:intersectionOf ( cultivationtype:476 cultivationtype:546 ) .
+
+cultivationtype:1057 a owl:Class ;
+    schema:name "Blattsalate (geschützter Anbau)"@de, "Laitues (culture protégée)"@fr, "Insalate a foglie (coltura protetta)"@it ;
+    owl:intersectionOf ( cultivationtype:103 cultivationtype:7 ) .
+
+cultivationtype:1058 a owl:Class ;
+    schema:name "Kopfsalat, Eisbergsalat, Lollo (geschützter Anbau)"@de, "Laitue pommée, iceberg, lollo (culture protégée)"@fr, "Lattuga cappuccio, iceberg, lollo (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:1057 .
+
+cultivationtype:1059 a owl:Class ;
+    schema:name "Andorn"@de, "Marrube blanc"@fr, "Marrubio"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1060 a owl:Class ;
+    schema:name "Majoran"@de, "Marjolaine"@fr, "Maggiorana"@it ;
+    rdfs:subClassOf cultivationtype:705 .
+
+cultivationtype:1061 a owl:Class ;
+    schema:name "Eibisch"@de, "Guimauve"@fr, "Altea"@it ;
+    rdfs:subClassOf cultivationtype:705 .
+
+cultivationtype:1062 a owl:Class ;
+    schema:name "Eisenkraut"@de, "Verveine"@fr, "Verbena"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1063 a owl:Class ;
+    schema:name "Kenaf"@de, "Kénaf"@fr, "Kenaf"@it ;
+    rdfs:subClassOf cultivationtype:552 .
+
+cultivationtype:1064 a owl:Class ;
+    schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de, "Engrais vert non-légumineuses (légumes de plein champ)"@fr, "Sovescio non leguminose (ortaggi di pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1053 .
