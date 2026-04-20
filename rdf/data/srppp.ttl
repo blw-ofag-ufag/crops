@@ -705,7 +705,7 @@ psm:123 a cube:Observation ;
         "cynorhodon"@fr,
         "rosa canina"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:123 .
 
 psm:124 a cube:Observation ;
     schema:identifier "F7BB2F1C-EDE5-4C95-931E-0B2C973F5A29"^^xsd:ID ;
@@ -766,7 +766,7 @@ psm:13 a cube:Observation ;
         "culture des baies en général"@fr,
         "Coltivazione di bacche in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:471 .
 
 psm:130 a cube:Observation ;
     schema:identifier "E5B9C6F0-5C57-4A12-8ED9-D65B669B8243"^^xsd:ID ;
@@ -784,7 +784,7 @@ psm:131 a cube:Observation ;
         "espèces de Ribes"@fr,
         "Specie di ribes"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:131 .
 
 psm:132 a cube:Observation ;
     schema:identifier "C264982A-CA81-4311-9E38-67D2D956BC78"^^xsd:ID ;
@@ -1066,7 +1066,7 @@ psm:160 a cube:Observation ;
     schema:name "allg. Beerenbau"@de,
         "domaine app. baies"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:471 .
 
 psm:161 a cube:Observation ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112"^^xsd:ID ;
@@ -1076,7 +1076,7 @@ psm:161 a cube:Observation ;
         "grand sureau"@fr,
         "Sambuco nero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:161 .
 
 psm:162 a cube:Observation ;
     schema:identifier "43FC7C18-BDA5-4364-B4CA-74EA37B7B8DC"^^xsd:ID ;
@@ -1163,7 +1163,7 @@ psm:170 a cube:Observation ;
         "cassis"@fr,
         "Ribes nero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:170 .
 
 psm:171 a cube:Observation ;
     schema:identifier "102C28F6-4AFB-4079-909B-ACE8E0819A77"^^xsd:ID ;
@@ -1687,7 +1687,7 @@ psm:223 a cube:Observation ;
         "fraise"@fr,
         "Fragola"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:223 .
 
 psm:224 a cube:Observation ;
     schema:identifier "BDB73EC5-46E5-413B-85B5-78D3801F4E7E"^^xsd:ID ;
@@ -1783,7 +1783,7 @@ psm:233 a cube:Observation ;
         "mûre"@fr,
         "Mora"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:233 .
 
 psm:234 a cube:Observation ;
     schema:identifier "8774F019-8BB4-409D-ADA9-B565ECA1A6A9"^^xsd:ID ;
@@ -1925,7 +1925,7 @@ psm:248 a cube:Observation ;
         "groseilles à grappes"@fr,
         "Ribes rosso"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:248 .
 
 psm:249 a cube:Observation ;
     schema:identifier "930524FB-BD0A-4CA9-A89D-4FEEE1F9174F"^^xsd:ID ;
@@ -2006,7 +2006,7 @@ psm:256 a cube:Observation ;
         "myrtille"@fr,
         "Mirtillo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:256 .
 
 psm:257 a cube:Observation ;
     schema:identifier "9BCEB85B-1578-4001-839D-68BFB9CE4CD8"^^xsd:ID ;
@@ -2244,7 +2244,7 @@ psm:28 a cube:Observation ;
         "aronie noire"@fr,
         "Aronia nera"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:28 .
 
 psm:280 a cube:Observation ;
     schema:identifier "C763D817-B4AC-43DB-9C6E-A262CC32F400"^^xsd:ID ;
@@ -2322,7 +2322,7 @@ psm:288 a cube:Observation ;
         "framboise"@fr,
         "Lampone"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:288 .
 
 psm:289 a cube:Observation ;
     schema:identifier "F6A02973-2AF5-47AF-B99D-FFAD9A24BCB4"^^xsd:ID ;
@@ -2415,7 +2415,7 @@ psm:298 a cube:Observation ;
         "groseilles à maquereau"@fr,
         "Uva spina"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:298 .
 
 psm:299 a cube:Observation ;
     schema:identifier "37059300-8031-4A64-B75C-7490288E32BA"^^xsd:ID ;
@@ -2699,7 +2699,7 @@ psm:326 a cube:Observation ;
         "espèces de Rubus"@fr,
         "Specie di rubus"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:326 .
 
 psm:327 a cube:Observation ;
     schema:identifier "5276BCA7-CEA5-4B6D-90E3-52F3A0532490"^^xsd:ID ;
@@ -3132,7 +3132,7 @@ psm:69 a cube:Observation ;
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:69 .
 
 psm:7 a cube:Observation ;
     schema:identifier "A0012475-8478-4CA9-A18A-DC1CB96D788B"^^xsd:ID ;

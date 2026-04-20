@@ -215,6 +215,28 @@ cultivationtype:1035 a owl:Class ;
     rdfs:label "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
     rdfs:subClassOf cultivationtype:1014 .
 
+cultivationtype:1036 a owl:Class ;
+    rdfs:label "Aubergine, Erdkultur (geschützter Anbau)"@de ;
+    owl:intersectionOf ( cultivationtype:474 cultivationtype:811 ) .
+
+cultivationtype:1037 a owl:Class ;
+    rdfs:label "Spargel Bleich"@de,
+        "Asperge blanche"@fr,
+        "Asparago bianco"@it ;
+    rdfs:subClassOf cultivationtype:710 .
+
+cultivationtype:1038 a owl:Class ;
+    rdfs:label "Spargel Grün"@de,
+        "Asperge verte"@fr,
+        "Asparago verde"@it ;
+    rdfs:subClassOf cultivationtype:710 .
+
+cultivationtype:1039 a owl:Class ;
+    rdfs:label "Sommerraps"@de,
+        "Colza de printemps"@fr,
+        "Colza primaverile"@it ;
+    rdfs:subClassOf cultivationtype:494 .
+
 cultivationtype:105 a owl:Class ;
     rdfs:label "Lactuca-Salate"@de,
         "salades lactuca"@fr,
@@ -294,6 +316,13 @@ cultivationtype:120 a owl:Class ;
         "Poligonacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:123 a owl:Class ;
+    rdfs:label "Hagebutten"@de,
+        "rose hip"@en,
+        "cynorhodon"@fr,
+        "rosa canina"@it ;
+    rdfs:subClassOf cultivationtype:705 .
+
 cultivationtype:124 a owl:Class ;
     rdfs:label "Bohnen mit Hülsen"@de,
         "haricots non écossés"@fr,
@@ -323,6 +352,12 @@ cultivationtype:130 a owl:Class ;
         "chicorée witloof (chicorée-endive)"@fr,
         "Cicoria belga"@it ;
     rdfs:subClassOf cultivationtype:95 .
+
+cultivationtype:131 a owl:Class ;
+    rdfs:label "Ribes Arten"@de,
+        "espèces de Ribes"@fr,
+        "Specie di ribes"@it ;
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:132 a owl:Class ;
     rdfs:label "Cima di Rapa"@de,
@@ -441,6 +476,13 @@ cultivationtype:16 a owl:Class ;
     rdfs:comment "Der Anbau von von Getreide oder Pseudogetreide."@de ;
     rdfs:subClassOf cultivationtype:1 .
 
+cultivationtype:161 a owl:Class ;
+    rdfs:label "Schwarzer Holunder"@de,
+        "Elder berry"@en,
+        "grand sureau"@fr,
+        "Sambuco nero"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:165 a owl:Class ;
     rdfs:label "Puffbohne"@de,
         "fève"@fr,
@@ -457,6 +499,12 @@ cultivationtype:17 a owl:Class ;
     rdfs:label "Hackfrüchte"@de,
         "Root crops"@en ;
     rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:170 a owl:Class ;
+    rdfs:label "Schwarze Johannisbeere"@de,
+        "cassis"@fr,
+        "Ribes nero"@it ;
+    rdfs:subClassOf cultivationtype:131 .
 
 cultivationtype:171 a owl:Class ;
     rdfs:label "Bohnen ohne Hülsen"@de,
@@ -626,6 +674,12 @@ cultivationtype:221 a owl:Class ;
         "Piselli senza baccello"@it ;
     rdfs:subClassOf cultivationtype:191 .
 
+cultivationtype:223 a owl:Class ;
+    rdfs:label "Erdbeere"@de,
+        "fraise"@fr,
+        "Fragola"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:224 a owl:Class ;
     rdfs:label "Topinambur"@de,
         "topinambour"@fr,
@@ -675,6 +729,12 @@ cultivationtype:232 a owl:Class ;
         "Cipollotti a mazzi"@it ;
     rdfs:subClassOf cultivationtype:277 .
 
+cultivationtype:233 a owl:Class ;
+    rdfs:label "Brombeere"@de,
+        "mûre"@fr,
+        "Mora"@it ;
+    rdfs:subClassOf cultivationtype:326 .
+
 cultivationtype:235 a owl:Class ;
     rdfs:label "Kürbisgewächse (Cucurbitaceae)"@de,
         "cucurbitacées"@fr,
@@ -715,6 +775,12 @@ cultivationtype:247 a owl:Class ;
         "Rapa di Brassica rapa e B. napus"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
+cultivationtype:248 a owl:Class ;
+    rdfs:label "Rote Johannisbeere"@de,
+        "groseilles à grappes"@fr,
+        "Ribes rosso"@it ;
+    rdfs:subClassOf cultivationtype:131 .
+
 cultivationtype:249 a owl:Class ;
     rdfs:label "Buschbohne"@de,
         "haricot nain"@fr,
@@ -744,6 +810,12 @@ cultivationtype:253 a owl:Class ;
         "estragon"@fr,
         "Dragoncello"@it ;
     rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:256 a owl:Class ;
+    rdfs:label "Heidelbeere"@de,
+        "myrtille"@fr,
+        "Mirtillo"@it ;
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:257 a owl:Class ;
     rdfs:label "Olive"@de,
@@ -850,6 +922,12 @@ cultivationtype:278 a owl:Class ;
         "Rucola"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
+cultivationtype:28 a owl:Class ;
+    rdfs:label "Schwarze Apfelbeere"@de,
+        "aronie noire"@fr,
+        "Aronia nera"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:282 a owl:Class ;
     rdfs:label "Stielmus"@de,
         "navet à tondre"@fr,
@@ -861,6 +939,12 @@ cultivationtype:283 a owl:Class ;
         "cerisier"@fr,
         "Ciliegio"@it ;
     rdfs:subClassOf cultivationtype:704 .
+
+cultivationtype:288 a owl:Class ;
+    rdfs:label "Himbeere"@de,
+        "framboise"@fr,
+        "Lampone"@it ;
+    rdfs:subClassOf cultivationtype:326 .
 
 cultivationtype:289 a owl:Class ;
     rdfs:label "Rondini"@de,
@@ -879,6 +963,12 @@ cultivationtype:297 a owl:Class ;
         "melons"@fr,
         "Meloni"@it ;
     rdfs:subClassOf cultivationtype:235 .
+
+cultivationtype:298 a owl:Class ;
+    rdfs:label "Stachelbeere"@de,
+        "groseilles à maquereau"@fr,
+        "Uva spina"@it ;
+    rdfs:subClassOf cultivationtype:131 .
 
 cultivationtype:299 a owl:Class ;
     rdfs:label "Minze"@de,
@@ -1000,6 +1090,12 @@ cultivationtype:325 a owl:Class ;
         "Pak-Choi"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:326 a owl:Class ;
+    rdfs:label "Rubus Arten"@de,
+        "espèces de Rubus"@fr,
+        "Specie di rubus"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:327 a owl:Class ;
     rdfs:label "Doldenblütler (Apiaceae)"@de,
         "ombellifères (Apiaceae)"@fr,
@@ -1067,11 +1163,25 @@ cultivationtype:41 a owl:Class ;
         "Pero / Nashi"@it ;
     rdfs:subClassOf cultivationtype:309 .
 
+cultivationtype:469 a owl:Class ;
+    rdfs:label "Freiland-Beeren"@de ;
+    rdfs:subClassOf cultivationtype:830 ;
+    owl:unionOf ( cultivationtype:551 cultivationtype:705 ) .
+
 cultivationtype:47 a owl:Class ;
     rdfs:label "Hülsenfrüchtler (Fabaceae)"@de,
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:470 a owl:Class ;
+    rdfs:label "Beerenkulturen in geschütztem Anbau"@de ;
+    rdfs:subClassOf cultivationtype:830 .
+
+cultivationtype:471 a owl:Class ;
+    rdfs:label "Beerenbau"@de ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:469 ) .
 
 cultivationtype:472 a owl:Class ;
     rdfs:label "Aprikose"@de,
@@ -1839,6 +1949,13 @@ cultivationtype:67 a owl:Class ;
         "Erbette da cucina"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:69 a owl:Class ;
+    rdfs:label "Mini-Kiwi"@de,
+        "mini-Kiwi (Kiwaï)"@fr,
+        "Mini-Kiwi"@it ;
+    rdfs:subClassOf cultivationtype:471,
+        cultivationtype:731 .
+
 cultivationtype:693 a owl:Class ;
     rdfs:label "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (pâturages)"@fr,
@@ -2098,7 +2215,7 @@ cultivationtype:804 a owl:Class ;
     rdfs:label "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures des baies sous serres avec fondations permanentes"@fr,
         "Colture bacche in serra con fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:806 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
@@ -2147,13 +2264,13 @@ cultivationtype:813 a owl:Class ;
     rdfs:label "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
         "Cultures des baies sous abri sans fondations permanentes; sur sol naturel"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:814 a owl:Class ;
     rdfs:label "Beerenkulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
         "Cultures des baies sous abri sans fondations permanentes; sur des tables de plantation ou  des étagères"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:830 a owl:Class ;
     rdfs:label "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt"@de,
