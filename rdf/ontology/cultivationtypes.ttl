@@ -2692,9 +2692,13 @@ cultivationtype:1052 a owl:Class ;
 
 cultivationtype:1053 a owl:Class ;
     schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de, "Engrais vert légumineuses (légumes de plein champ)"@fr, "Sovescio leguminose (ortaggi di pieno campo)"@it ;
-    schema:description "Leguminosen, die als Zwischenkultur zur Gründüngung in einer Freilandgemüse-Fruchtfolge angebaut werden."@de ;
     rdfs:subClassOf cultivationtype:15, cultivationtype:24 .
 
 cultivationtype:1054 a owl:Class ;
     schema:name "Zitronenmelisse"@de, "Mélisse citronnelle"@fr, "Melissa"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1055 a owl:Class ;
+    schema:name "Indianernessel"@de, "Monarde"@fr, "Monarda"@it ;
+    schema:alternateName "Rosenmelisse"@de ;
     rdfs:subClassOf cultivationtype:706 .

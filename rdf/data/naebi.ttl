@@ -955,7 +955,7 @@ naebi:138 a cube:Observation ;
     :P2O5 50.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1054 .
 
 naebi:139 a cube:Observation ;
     schema:identifier "CROP_LMNRM"^^xsd:string ;
@@ -966,7 +966,7 @@ naebi:139 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1055 .
 
 naebi:14 a cube:Observation ;
     schema:identifier "CROP_BEANP"^^xsd:string ;
