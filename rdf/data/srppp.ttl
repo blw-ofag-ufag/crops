@@ -479,6 +479,7 @@ psm:10 a cube:Observation ;
 
 psm:100 a cube:Observation ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA"^^xsd:ID ;
+    schema:isPartOf psm:27 ;
     schema:name "Trockenreis"@de,
         "Riz semis sur terrain sec"@fr,
         "Riso seminato su terreno asciutto"@it ;
@@ -993,6 +994,7 @@ psm:152 a cube:Observation ;
 
 psm:153 a cube:Observation ;
     schema:identifier "79C28385-E183-4661-AAC0-80E82C67089C"^^xsd:ID ;
+    schema:isPartOf psm:118 ;
     schema:name "Weihnachtsbäume"@de,
         "arbres de Noël"@fr,
         "Alberi di Natale"@it ;
@@ -1709,6 +1711,7 @@ psm:225 a cube:Observation ;
 
 psm:226 a cube:Observation ;
     schema:identifier "B74E61A6-30BD-4A63-8A24-94FC0A54D489"^^xsd:ID ;
+    schema:isPartOf psm:149 ;
     schema:name "Winterroggen"@de,
         "Seigle d'automne"@fr,
         "Segale autunnale"@it ;
@@ -2352,6 +2355,7 @@ psm:290 a cube:Observation ;
 
 psm:291 a cube:Observation ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7"^^xsd:ID ;
+    schema:isPartOf psm:163 ;
     schema:name "Sommerweizen"@de,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
@@ -2800,6 +2804,7 @@ psm:336 a cube:Observation ;
 
 psm:34 a cube:Observation ;
     schema:identifier "2E38C972-4160-4D2B-8ED2-3B48FC781EF0"^^xsd:ID ;
+    schema:isPartOf psm:145 ;
     schema:name "Begonia"@de,
         "bégonia"@fr,
         "Begonia"@it ;
@@ -2974,6 +2979,7 @@ psm:51 a cube:Observation ;
 
 psm:52 a cube:Observation ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926"^^xsd:ID ;
+    schema:isPartOf psm:303 ;
     schema:name "Wintertriticale"@de,
         "Triticale d'automne"@fr,
         "Triticale autunnale"@it ;
@@ -3075,6 +3081,7 @@ psm:62 a cube:Observation ;
 
 psm:63 a cube:Observation ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6"^^xsd:ID ;
+    schema:isPartOf psm:16 ;
     schema:name "Buchsbäume (Buxus)"@de,
         "buis (Buxus)"@fr,
         "Bosso (Buxus)"@it ;
@@ -3390,6 +3397,7 @@ psm:95 a cube:Observation ;
 
 psm:96 a cube:Observation ;
     schema:identifier "B4D50F5E-6028-493D-9B95-85CAE5DADF06"^^xsd:ID ;
+    schema:isPartOf psm:316 ;
     schema:name "Kartoffeln"@de,
         "pommes de terre"@fr,
         "Patate"@it ;
