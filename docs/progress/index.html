@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINDAS Data Cubes: Mapping Progress</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .dashboard-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        p.subtitle {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+        #status-message {
+            text-align: center;
+            padding: 40px;
+            font-style: italic;
+            color: #888;
+        }
+        .error {
+            color: #d32f2f !important;
+            font-style: normal !important;
+        }
+        
+        /* Container required to prevent Chart.js infinite resize loop */
+        .chart-wrapper {
+            position: relative;
+            height: 600px;
+            width: 100%;
+            display: none; 
+        }
+        
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h1>Cube Mapping Progress</h1>
+    <p class="subtitle">Percentage and absolute counts of observations linked to a cultivation type.</p>
+    
+    <div id="status-message">Executing SPARQL query on LINDAS endpoint. Please wait...</div>
+    
+    <div class="chart-wrapper" id="chartWrapper">
+        <canvas id="progressChart"></canvas>
+    </div>
+</div>
+
+<script>
+    // 1. The Optimized SPARQL Query with the specified Named Graph
+    const endpointUrl = 'https://agriculture.ld.admin.ch/query';
+    const sparqlQuery = `
+        PREFIX : <https://agriculture.ld.admin.ch/crops/>
+        PREFIX cube: <https://cube.link/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX schema: <http://schema.org/>
+
+        SELECT ?cube ?cubeName (COUNT(DISTINCT ?observation) AS ?totalObservations) (COUNT(DISTINCT ?mappedObservation) AS ?mappedObservations)
+        FROM <https://lindas.admin.ch/foag/crops>
+        WHERE {
+            ?cube a cube:Cube ;
+                  cube:observationSet ?observationset ;
+                  schema:name ?cubeName .
+            
+            ?observationset cube:observation ?observation .
+            
+            OPTIONAL {
+                ?observation :cultivationType ?cultivationtype .
+                ?cultivationtype rdfs:subClassOf* :Cultivation .
+                BIND(?observation AS ?mappedObservation)
+            }
+            FILTER(LANG(?cubeName)="de")
+        }
+        GROUP BY ?cube ?cubeName
+    `;
+
+    // 2. Data Fetching Logic
+    async function fetchData() {
+        const statusEl = document.getElementById('status-message');
+        try {
+            const response = await fetch(endpointUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Accept': 'application/sparql-results+json'
+                },
+                body: 'query=' + encodeURIComponent(sparqlQuery)
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const rawData = await response.json();
+            processAndVisualize(rawData.results.bindings);
+            
+            statusEl.style.display = 'none';
+            document.getElementById('chartWrapper').style.display = 'block';
+
+        } catch (error) {
+            console.error('Fetch failed:', error);
+            statusEl.innerHTML = `<strong>Error:</strong> Failed to fetch data. Check the console for details. <br> ${error.message}`;
+            statusEl.className = 'error';
+        }
+    }
+
+    // 3. Data Processing and Chart Generation
+    function processAndVisualize(bindings) {
+        // Parse SPARQL JSON results
+        const datasets = bindings.map(row => {
+            const total = parseInt(row.totalObservations.value, 10);
+            const mapped = parseInt(row.mappedObservations.value, 10);
+            const percentage = total > 0 ? ((mapped / total) * 100).toFixed(2) : 0;
+            
+            return {
+                name: row.cubeName.value,
+                total: total,
+                mapped: mapped,
+                unmapped: total - mapped,
+                percentage: parseFloat(percentage)
+            };
+        });
+
+        // Sort by highest mapping percentage
+        datasets.sort((a, b) => b.percentage - a.percentage);
+
+        const labels = datasets.map(d => d.name);
+        const mappedData = datasets.map(d => d.mapped);
+        const unmappedData = datasets.map(d => d.unmapped);
+
+        // Chart.js Setup
+        const ctx = document.getElementById('progressChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Mapped Observations',
+                        data: mappedData,
+                        backgroundColor: '#4CAF50', // Green indicating success/mapped
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Unmapped Observations',
+                        data: unmappedData,
+                        backgroundColor: '#e0e0e0', // Grey indicating missing/unmapped
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y', // Horizontal layout accommodates long cube names
+                scales: {
+                    x: {
+                        stacked: true,
+                        title: {
+                            display: true,
+                            text: 'Absolute Number of Observations'
+                        }
+                    },
+                    y: {
+                        stacked: true
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            // Custom Tooltip: shows absolute values and percentage
+                            label: function(context) {
+                                const datasetLabel = context.dataset.label || '';
+                                const rawValue = context.raw;
+                                const dataIndex = context.dataIndex;
+                                const cubeData = datasets[dataIndex];
+                                
+                                if (context.datasetIndex === 0) {
+                                    return `${datasetLabel}: ${rawValue.toLocaleString()} (${cubeData.percentage}%)`;
+                                } else {
+                                    const unmappedPct = (100 - cubeData.percentage).toFixed(2);
+                                    return `${datasetLabel}: ${rawValue.toLocaleString()} (${unmappedPct}%)`;
+                                }
+                            },
+                            afterBody: function(context) {
+                                const dataIndex = context[0].dataIndex;
+                                const total = datasets[dataIndex].total;
+                                return `\nTotal Observations: ${total.toLocaleString()}`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Initialize application
+    window.onload = fetchData;
+</script>
+
+</body>
+</html>

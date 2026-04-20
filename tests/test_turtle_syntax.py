@@ -14,7 +14,10 @@ def discover_ttl_files():
         return []
     
     # rglob provides recursive globbing, functionally equivalent to "**/*.ttl"
-    return list(TARGET_DIR.rglob("*.ttl"))
+    return [
+        p for p in TARGET_DIR.rglob("*.ttl")
+        if ".git" not in p.parts and "venv" not in p.parts
+    ]
 
 # The ids parameter ensures the test output uses the filename, making debugging clearer.
 @pytest.mark.parametrize("filepath", discover_ttl_files(), ids=lambda p: str(p))
