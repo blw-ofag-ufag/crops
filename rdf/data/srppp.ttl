@@ -784,7 +784,7 @@ psm:131 a cube:Observation ;
         "espèces de Ribes"@fr,
         "Specie di ribes"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:131 .
 
 psm:132 a cube:Observation ;
     schema:identifier "C264982A-CA81-4311-9E38-67D2D956BC78"^^xsd:ID ;
@@ -1066,7 +1066,7 @@ psm:160 a cube:Observation ;
     schema:name "allg. Beerenbau"@de,
         "domaine app. baies"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:471 .
 
 psm:161 a cube:Observation ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112"^^xsd:ID ;
@@ -1163,7 +1163,7 @@ psm:170 a cube:Observation ;
         "cassis"@fr,
         "Ribes nero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType psm:170 .
 
 psm:171 a cube:Observation ;
     schema:identifier "102C28F6-4AFB-4079-909B-ACE8E0819A77"^^xsd:ID ;
@@ -1925,7 +1925,7 @@ psm:248 a cube:Observation ;
         "groseilles à grappes"@fr,
         "Ribes rosso"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:248 .
 
 psm:249 a cube:Observation ;
     schema:identifier "930524FB-BD0A-4CA9-A89D-4FEEE1F9174F"^^xsd:ID ;
@@ -2415,7 +2415,7 @@ psm:298 a cube:Observation ;
         "groseilles à maquereau"@fr,
         "Uva spina"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:298 .
 
 psm:299 a cube:Observation ;
     schema:identifier "37059300-8031-4A64-B75C-7490288E32BA"^^xsd:ID ;

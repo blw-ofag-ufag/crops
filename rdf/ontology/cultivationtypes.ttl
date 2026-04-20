@@ -584,6 +584,12 @@ cultivationtype:130 a owl:Class ;
         "Cicoria belga"@it ;
     rdfs:subClassOf cultivationtype:95 .
 
+cultivationtype:131 a owl:Class ;
+    schema:name "Ribes Arten"@de,
+        "espèces de Ribes"@fr,
+        "Specie di ribes"@it ;
+    rdfs:subClassOf cultivationtype:471 .
+
 cultivationtype:132 a owl:Class ;
     schema:name "Cima di Rapa"@de,
         "cima di rapa"@fr,
@@ -693,6 +699,12 @@ cultivationtype:166 a owl:Class ;
         "courges (écorce non comestible)"@fr,
         "Zucche (buccia non commestibile)"@it ;
     rdfs:subClassOf cultivationtype:235 .
+
+cultivationtype:170 a owl:Class ;
+    schema:name "Schwarze Johannisbeere"@de,
+        "cassis"@fr,
+        "Ribes nero"@it ;
+    rdfs:subClassOf cultivationtype:131 .
 
 cultivationtype:171 a owl:Class ;
     schema:name "Bohnen ohne Hülsen"@de,
@@ -909,6 +921,12 @@ cultivationtype:247 a owl:Class ;
         "Rapa di Brassica rapa e B. napus"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
+cultivationtype:248 a owl:Class ;
+    schema:name "Rote Johannisbeere"@de,
+        "groseilles à grappes"@fr,
+        "Ribes rosso"@it ;
+    rdfs:subClassOf cultivationtype:131 .
+
 cultivationtype:249 a owl:Class ;
     schema:name "Buschbohne"@de,
         "haricot nain"@fr,
@@ -1062,6 +1080,12 @@ cultivationtype:297 a owl:Class ;
         "Meloni"@it ;
     rdfs:subClassOf cultivationtype:235 .
 
+cultivationtype:298 a owl:Class ;
+    schema:name "Stachelbeere"@de,
+        "groseilles à maquereau"@fr,
+        "Uva spina"@it ;
+    rdfs:subClassOf cultivationtype:131 .
+
 cultivationtype:299 a owl:Class ;
     schema:name "Minze"@de,
         "Mint"@en,
@@ -1187,14 +1211,19 @@ cultivationtype:335 a owl:Class ;
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
 
+cultivationtype:469 a owl:Class ;
+    schema:name "Freiland-Beeren"@de ;
+    rdfs:subClassOf cultivationtype:830 ;
+    owl:unionOf ( cultivationtype:551 cultivationtype:705 ).
+
 cultivationtype:470 a owl:Class ;
-    schema:name "Beerenkulturen in geschütztem Anbau" ;
+    schema:name "Beerenkulturen in geschütztem Anbau"@de ;
     rdfs:subClassOf cultivationtype:830 .
 
 cultivationtype:471 a owl:Class ;
     schema:name "Beerenbau"@de ;
     rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:705 ) .
+    owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:469 ) .
 
 cultivationtype:472 a owl:Class ;
     schema:name "Aprikose"@de,
