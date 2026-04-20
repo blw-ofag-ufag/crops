@@ -1335,6 +1335,7 @@ cultivationtype:479 a owl:Class ;
     schema:name "Liebstöckel"@de,
         "livèche"@fr,
         "Levistico"@it ;
+    schema:alternateName "Maggikraut"@de ;
     rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:480 a owl:Class ;
@@ -1980,6 +1981,9 @@ cultivationtype:611 a owl:Class ;
     schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
         "Prairies extensives (sans les pâturages)"@fr,
         "Prati estensivi (senza pascoli)"@it ;
+    schema:description "Extensiv genutzte Wiesen werden nicht gedüngt und spät geschnitten, wie zum Beispiel Halbtrocken- oder Trespenwiesen. Sie stellen das artenreichste Grünland der Schweiz dar."@de,
+    "Les prairies exploitées de manière extensive ne sont pas fertilisées et sont fauchées tardivement, comme par exemple les prairies mi-sèches ou à brome. Elles représentent les herbages les plus riches en espèces de Suisse."@fr,
+    "I prati sfruttati in modo estensivo non vengono concimati e vengono falciati tardi, come ad esempio i prati semi-aridi o a brometo. Rappresentano le praterie più ricche di specie della Svizzera."@it ;
     rdfs:subClassOf cultivationtype:2 ;
     :intensity :21 .
 
@@ -1987,6 +1991,9 @@ cultivationtype:612 a owl:Class ;
     schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
         "Prairies peu intensives (sans les pâturages)"@fr,
         "Prati poco intensivi (senza pascoli)"@it ;
+    schema:description "Wenig intensiv genutzte Wiesen sind leicht gedüngte, spät geschnittene Wiesen wie zum Beispiel Fromental- oder Goldhaferwiesen"@de,
+    "Les prairies peu intensives sont des prairies légèrement fertilisées et fauchées tardivement, comme par exemple les prairies à fromental ou à avoine dorée."@fr,
+    "I prati poco intensivi sono prati leggermente concimati e falciati tardi, come ad esempio i prati a fromental o ad avena bionda."@it ;
     rdfs:subClassOf cultivationtype:2 ;
     :intensity :22 .
 
@@ -2864,3 +2871,72 @@ cultivationtype:1055 a owl:Class ;
     schema:name "Indianernessel"@de, "Monarde"@fr, "Monarda"@it ;
     schema:alternateName "Rosenmelisse"@de ;
     rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1056 a owl:Class ;
+    schema:name "Verarbeitungsbohnen"@de, "Haricots d'industrie"@fr, "Fagioli da industria"@it ;
+    owl:intersectionOf ( cultivationtype:476 cultivationtype:546 ) .
+
+cultivationtype:1057 a owl:Class ;
+    schema:name "Blattsalate (geschützter Anbau)"@de, "Laitues (culture protégée)"@fr, "Insalate a foglie (coltura protetta)"@it ;
+    owl:intersectionOf ( cultivationtype:103 cultivationtype:7 ) .
+
+cultivationtype:1058 a owl:Class ;
+    schema:name "Kopfsalat, Eisbergsalat, Lollo (geschützter Anbau)"@de, "Laitue pommée, iceberg, lollo (culture protégée)"@fr, "Lattuga cappuccio, iceberg, lollo (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:1057 .
+
+cultivationtype:1059 a owl:Class ;
+    schema:name "Andorn"@de, "Marrube blanc"@fr, "Marrubio"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1060 a owl:Class ;
+    schema:name "Majoran"@de, "Marjolaine"@fr, "Maggiorana"@it ;
+    rdfs:subClassOf cultivationtype:705 .
+
+cultivationtype:1061 a owl:Class ;
+    schema:name "Eibisch"@de, "Guimauve"@fr, "Altea"@it ;
+    rdfs:subClassOf cultivationtype:705 .
+
+cultivationtype:1062 a owl:Class ;
+    schema:name "Eisenkraut"@de, "Verveine"@fr, "Verbena"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1063 a owl:Class ;
+    schema:name "Kenaf"@de, "Kénaf"@fr, "Kenaf"@it ;
+    rdfs:subClassOf cultivationtype:552 .
+
+cultivationtype:1064 a owl:Class ;
+    schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de, "Engrais vert non-légumineuses (légumes de plein champ)"@fr, "Sovescio non leguminose (ortaggi di pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1053 .
+
+cultivationtype:1065 a owl:Class ;
+    schema:name "Baumschulen"@de, "Pépinières"@fr, "Vivai"@it ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:722 cultivationtype:723 cultivationtype:724 ) .
+
+cultivationtype:1066 a owl:Class ;
+    schema:name "Baumschulen für den Erwerbsobstbau (hohe Pflanzendichte)"@de, "Pépinières pour l'arboriculture fruitière professionnelle (haute densité)"@fr, "Vivai per la frutticoltura professionale (ad alta densità)"@it ;
+    rdfs:subClassOf cultivationtype:1065 .
+
+cultivationtype:1067 a owl:Class ;
+    schema:name "Baumschulen (ohne Erwerbsobstbau mit hoher Pflanzendichte)"@de, "Pépinières (sans arboriculture fruitière professionnelle à haute densité)"@fr, "Vivai (esclusa frutticoltura professionale ad alta densità)"@it ;
+    rdfs:subClassOf cultivationtype:1065 ;
+    owl:disjointWith cultivationtype:1066 .
+
+cultivationtype:1068 a owl:Class ;
+    schema:name "Orangenminze"@de, "Menthe orange"@fr, "Menta arancio"@it ;
+    schema:alternateName "Bergamottminze"@de ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1069 a owl:Class ;
+    schema:name "Oregano"@de, "Origan"@fr, "Origano"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1070 a owl:Class ;
+    schema:name "Viola"@de, "Pensée"@fr, "Viola del pensiero"@it ;
+    schema:alternateName "Stiefmütterchen"@de ;
+    rdfs:subClassOf cultivationtype:554 .
+
+cultivationtype:1071 a owl:Class ;
+    schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de, "Poivron, culture au sol (culture protégée)"@fr, "Peperone, coltura su suolo (coltura protetta)"@it ;
+    owl:intersectionOf ( cultivationtype:811 cultivationtype:335 ) .
