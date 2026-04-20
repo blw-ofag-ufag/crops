@@ -1874,8 +1874,8 @@ cultivationtype:611 a owl:Class ;
         "Prairies extensives (sans les pâturages)"@fr,
         "Prati estensivi (senza pascoli)"@it ;
     schema:description "Extensiv genutzte Wiesen werden nicht gedüngt und spät geschnitten, wie zum Beispiel Halbtrocken- oder Trespenwiesen. Sie stellen das artenreichste Grünland der Schweiz dar."@de,
-    schema:description "Les prairies exploitées de manière extensive ne sont pas fertilisées et sont fauchées tardivement, comme par exemple les prairies mi-sèches ou à brome. Elles représentent les herbages les plus riches en espèces de Suisse."@fr,
-    schema:description "I prati sfruttati in modo estensivo non vengono concimati e vengono falciati tardi, come ad esempio i prati semi-aridi o a brometo. Rappresentano le praterie più ricche di specie della Svizzera."@it ;
+    "Les prairies exploitées de manière extensive ne sont pas fertilisées et sont fauchées tardivement, comme par exemple les prairies mi-sèches ou à brome. Elles représentent les herbages les plus riches en espèces de Suisse."@fr,
+    "I prati sfruttati in modo estensivo non vengono concimati e vengono falciati tardi, come ad esempio i prati semi-aridi o a brometo. Rappresentano le praterie più ricche di specie della Svizzera."@it ;
     rdfs:subClassOf cultivationtype:2 ;
     :intensity :21 .
 
@@ -1884,8 +1884,8 @@ cultivationtype:612 a owl:Class ;
         "Prairies peu intensives (sans les pâturages)"@fr,
         "Prati poco intensivi (senza pascoli)"@it ;
     schema:description "Wenig intensiv genutzte Wiesen sind leicht gedüngte, spät geschnittene Wiesen wie zum Beispiel Fromental- oder Goldhaferwiesen"@de,
-    schema:description "Les prairies peu intensives sont des prairies légèrement fertilisées et fauchées tardivement, comme par exemple les prairies à fromental ou à avoine dorée."@fr,
-    schema:description "I prati poco intensivi sono prati leggermente concimati e falciati tardi, come ad esempio i prati a fromental o ad avena bionda."@it ;
+    "Les prairies peu intensives sont des prairies légèrement fertilisées et fauchées tardivement, comme par exemple les prairies à fromental ou à avoine dorée."@fr,
+    "I prati poco intensivi sono prati leggermente concimati e falciati tardi, come ad esempio i prati a fromental o ad avena bionda."@it ;
     rdfs:subClassOf cultivationtype:2 ;
     :intensity :22 .
 
@@ -2803,7 +2803,7 @@ cultivationtype:1064 a owl:Class ;
 
 cultivationtype:1065 a owl:Class ;
     schema:name "Baumschulen"@de, "Pépinières"@fr, "Vivai"@it ;
-    owl:unionOf ( cultivationtype:722 cultivationtype:723 cultivationtype:724 )
+    owl:unionOf ( cultivationtype:722 cultivationtype:723 cultivationtype:724 ) .
 
 cultivationtype:1066 a owl:Class ;
     schema:name "Baumschulen für den Erwerbsobstbau (hohe Pflanzendichte)"@de, "Pépinières pour l'arboriculture fruitière professionnelle (haute densité)"@fr, "Vivai per la frutticoltura professionale (ad alta densità)"@it ;
