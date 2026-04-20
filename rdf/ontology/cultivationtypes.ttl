@@ -333,7 +333,7 @@ cultivationtype:40 a owl:Class ;
     schema:name "Kürbisse mit geniessbarer Schale"@de,
         "courges à peau comestible"@fr,
         "Zucche con buccia commestibile"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:41 a owl:Class ;
     schema:name "Birne / Nashi"@de,
@@ -718,7 +718,7 @@ cultivationtype:166 a owl:Class ;
     schema:name "Speisekürbisse (ungeniessbare Schale)"@de,
         "courges (écorce non comestible)"@fr,
         "Zucche (buccia non commestibile)"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:170 a owl:Class ;
     schema:name "Schwarze Johannisbeere"@de,
@@ -883,7 +883,7 @@ cultivationtype:228 a owl:Class ;
     schema:name "Ölkürbisse"@de,
         "courges oléagineuses"@fr,
         "Zucca da olio"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:229 a owl:Class ;
     schema:name "Schnittmangold"@de,
@@ -1638,7 +1638,7 @@ cultivationtype:539 a owl:Class ;
     schema:name "Ölkürbisse"@de,
         "Courges à huile"@fr,
         "Zucche per l’estrazione di olio"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:540 a owl:Class ;
     schema:name "Kichererbsen"@de,
@@ -3058,3 +3058,24 @@ cultivationtype:1090 a owl:Class ;
         "Pommes de terre de consommation et d'industrie"@fr,
         "Patate da consumo e da industria"@it ;
     rdfs:subClassOf cultivationtype:524 .
+
+cultivationtype:1091 a owl:Class ;
+    schema:name "Pfefferminze"@de,
+        "Menthe poivrée"@fr,
+        "Menta piperita"@it ;
+    rdfs:subClassOf cultivationtype:299 .
+
+cultivationtype:1092 a owl:Class ;
+    schema:name "Petersilie (geschützter Anbau)"@de,
+        "Persil (culture protégée)"@fr,
+        "Prezzemolo (coltura protetta)"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:311 
+        cultivationtype:7 
+    ) .
+
+cultivationtype:1093 a owl:Class ;
+    schema:name "Kürbis"@de,
+        "Courge"@fr,
+        "Zucca"@it ;
+    rdfs:subClassOf cultivationtype:235 .
