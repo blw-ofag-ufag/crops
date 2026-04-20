@@ -1262,6 +1262,12 @@ cultivationtype:335 a owl:Class ;
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
 
+cultivationtype:463 a cube:Observation ;
+    schema:name "Futter- und Zuckerrüben"@de,
+        "betteraves à sucre et fourragère"@fr,
+        "Barbabietole da foraggio e da zucchero"@it ;
+    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
+
 cultivationtype:464 a cube:Observation ;
     schema:name "Mulchsaaten"@de,
         "semis sous litière"@fr,
