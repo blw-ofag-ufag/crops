@@ -483,7 +483,7 @@ psm:100 a cube:Observation ;
         "Riz semis sur terrain sec"@fr,
         "Riso seminato su terreno asciutto"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:520 .
 
 psm:101 a cube:Observation ;
     schema:identifier "9A9A2586-34FF-4256-8FA4-BA9F2FA38CAE"^^xsd:ID ;
@@ -687,7 +687,7 @@ psm:121 a cube:Observation ;
         "Tournesol"@fr,
         "Girasole"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:493 .
 
 psm:122 a cube:Observation ;
     schema:identifier "ED17FD35-4C96-4D28-902B-ACEA3F4950D6"^^xsd:ID ;
@@ -740,7 +740,7 @@ psm:127 a cube:Observation ;
         "Amidonnier"@fr,
         "Farro"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:500 .
 
 psm:128 a cube:Observation ;
     schema:identifier "F8A8C1D8-E2C7-4230-8435-4D5AEE69813E"^^xsd:ID ;
@@ -749,7 +749,7 @@ psm:128 a cube:Observation ;
         "Avoine"@fr,
         "Avena"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:504 .
 
 psm:129 a cube:Observation ;
     schema:identifier "EE7EE009-EBD4-471D-AE85-1A98130F6119"^^xsd:ID ;
@@ -928,7 +928,7 @@ psm:146 a cube:Observation ;
         "Blé dur"@fr,
         "Grano duro"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:510 .
 
 psm:147 a cube:Observation ;
     schema:identifier "7D23702C-980B-4B90-A86B-70013806D3EA"^^xsd:ID ;
@@ -944,7 +944,7 @@ psm:148 a cube:Observation ;
         "Orge d'automne"@fr,
         "Orzo autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:502 .
 
 psm:149 a cube:Observation ;
     schema:identifier "7D76F5F6-5810-4556-A7D5-84C91FDE3FF2"^^xsd:ID ;
@@ -953,7 +953,7 @@ psm:149 a cube:Observation ;
         "Seigle"@fr,
         "Segale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:514 .
 
 psm:15 a cube:Observation ;
     schema:identifier "A067CC81-6A5D-4684-BE95-7941A51B9EF2"^^xsd:ID ;
@@ -1093,7 +1093,7 @@ psm:163 a cube:Observation ;
         "Céréales de printemps"@fr,
         "Cereali primaverili"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1000 .
 
 psm:164 a cube:Observation ;
     schema:identifier "43ED81C2-40E7-4A22-9114-3E623BE1B14C"^^xsd:ID ;
@@ -1383,7 +1383,7 @@ psm:193 a cube:Observation ;
         "Blé d'automne"@fr,
         "Frumento autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:490 .
 
 psm:194 a cube:Observation ;
     schema:identifier "811C79DC-9182-4302-8AEC-AB12D5F69188"^^xsd:ID ;
@@ -1417,7 +1417,7 @@ psm:197 a cube:Observation ;
         "Orge"@fr,
         "Orzo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:498 .
 
 psm:198 a cube:Observation ;
     schema:identifier "66B27CD1-032A-456E-99C4-28F6E989CC14"^^xsd:ID ;
@@ -1562,7 +1562,7 @@ psm:210 a cube:Observation ;
         "Céréales d'automne"@fr,
         "Cereali autunnali"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:19 .
 
 psm:211 a cube:Observation ;
     schema:identifier "27ACD8EA-49E8-4C99-84D4-53E2E605390E"^^xsd:ID ;
@@ -1713,7 +1713,7 @@ psm:226 a cube:Observation ;
         "Seigle d'automne"@fr,
         "Segale autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1012 .
 
 psm:227 a cube:Observation ;
     schema:identifier "BAE217C2-8C72-4706-8A0E-911FB18FC723"^^xsd:ID ;
@@ -1836,7 +1836,7 @@ psm:239 a cube:Observation ;
         "Blé"@fr,
         "Frumento"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:492 .
 
 psm:24 a cube:Observation ;
     schema:identifier "465E7118-95AB-46A2-9A85-7A0B9070E63A"^^xsd:ID ;
@@ -1872,7 +1872,7 @@ psm:242 a cube:Observation ;
         "terres ouvertes"@fr,
         "Superficie coltiva aperta"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1 .
 
 psm:243 a cube:Observation ;
     schema:identifier "8FF3D364-2BA6-40AA-A370-4B72E3CAC8DF"^^xsd:ID ;
@@ -2356,7 +2356,7 @@ psm:291 a cube:Observation ;
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1006 .
 
 psm:292 a cube:Observation ;
     schema:identifier "75047A9C-12E2-4BAC-89D8-B14BC4C6B100"^^xsd:ID ;
@@ -2478,7 +2478,7 @@ psm:303 a cube:Observation ;
         "Triticale"@fr,
         "Triticale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:505 .
 
 psm:304 a cube:Observation ;
     schema:identifier "07A12E5B-DB0B-4421-A215-E306768AC0BE"^^xsd:ID ;
@@ -2978,7 +2978,7 @@ psm:52 a cube:Observation ;
         "Triticale d'automne"@fr,
         "Triticale autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1017 .
 
 psm:53 a cube:Observation ;
     schema:identifier "BA2DECCF-5987-4987-B56E-C5EC6E5D19C0"^^xsd:ID ;
@@ -3040,7 +3040,7 @@ psm:59 a cube:Observation ;
         "orge de printemps"@fr,
         "Orzo primaverile"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:501 .
 
 psm:6 a cube:Observation ;
     schema:identifier "A21391C3-A1A3-4472-8AA1-56449FB56B36"^^xsd:ID ;
@@ -3157,7 +3157,7 @@ psm:71 a cube:Observation ;
         "Blé tendre"@fr,
         "Grano tenero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:491 .
 
 psm:72 a cube:Observation ;
     schema:identifier "D40E1405-757C-4E3D-B26F-07D5F2251565"^^xsd:ID ;
@@ -3174,7 +3174,7 @@ psm:73 a cube:Observation ;
         "Céréales"@fr,
         "Cereali"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:14 .
 
 psm:74 a cube:Observation ;
     schema:identifier "C3A65223-4A74-461D-AE47-0E8F7223E0C2"^^xsd:ID ;
@@ -3218,7 +3218,7 @@ psm:78 a cube:Observation ;
         "Avoine de printemps"@fr,
         "Avena primaverile"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1011 .
 
 psm:79 a cube:Observation ;
     schema:identifier "CDF1E5BC-0740-4214-8912-870CC2BB37F4"^^xsd:ID ;
