@@ -333,7 +333,7 @@ cultivationtype:40 a owl:Class ;
     schema:name "Kürbisse mit geniessbarer Schale"@de,
         "courges à peau comestible"@fr,
         "Zucche con buccia commestibile"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:41 a owl:Class ;
     schema:name "Birne / Nashi"@de,
@@ -718,7 +718,7 @@ cultivationtype:166 a owl:Class ;
     schema:name "Speisekürbisse (ungeniessbare Schale)"@de,
         "courges (écorce non comestible)"@fr,
         "Zucche (buccia non commestibile)"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:170 a owl:Class ;
     schema:name "Schwarze Johannisbeere"@de,
@@ -816,6 +816,7 @@ cultivationtype:207 a owl:Class ;
     schema:name "Einlegegurken"@de,
         "cornichons"@fr,
         "cetrioli per conserva"@it ;
+    schema:alternateName "Essiggurken"@de ;
     rdfs:subClassOf cultivationtype:32 .
 
 cultivationtype:208 a owl:Class ;
@@ -882,7 +883,7 @@ cultivationtype:228 a owl:Class ;
     schema:name "Ölkürbisse"@de,
         "courges oléagineuses"@fr,
         "Zucca da olio"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:229 a owl:Class ;
     schema:name "Schnittmangold"@de,
@@ -1168,6 +1169,7 @@ cultivationtype:306 a owl:Class ;
         "Turnip-rooted parsley"@en,
         "persil à grosse racine"@fr,
         "Prezzemolo tuberoso"@it ;
+    schema:alternateName "Petersilienwurzel"@de ;
     rdfs:subClassOf cultivationtype:327 .
 
 cultivationtype:308 a owl:Class ;
@@ -1636,7 +1638,7 @@ cultivationtype:539 a owl:Class ;
     schema:name "Ölkürbisse"@de,
         "Courges à huile"@fr,
         "Zucche per l’estrazione di olio"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:540 a owl:Class ;
     schema:name "Kichererbsen"@de,
@@ -2927,3 +2929,153 @@ cultivationtype:1070 a owl:Class ;
 cultivationtype:1071 a owl:Class ;
     schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de, "Poivron, culture au sol (culture protégée)"@fr, "Peperone, coltura su suolo (coltura protetta)"@it ;
     owl:intersectionOf ( cultivationtype:811 cultivationtype:335 ) .
+
+cultivationtype:1072 a owl:Class ;
+    schema:name "Petersilie, je weiterem Schnitt"@de,
+        "Persil, par coupe supplémentaire"@fr,
+        "Prezzemolo, per ogni taglio supplementare"@it ;
+    rdfs:subClassOf cultivationtype:311 .
+
+cultivationtype:1073 a owl:Class ;
+    schema:name "Petersilie, bis zum ersten Schnitt"@de,
+        "Persil, jusqu'à la première coupe"@fr,
+        "Prezzemolo, fino al primo taglio"@it ;
+    rdfs:subClassOf cultivationtype:311 .
+
+cultivationtype:1074 a owl:Class ;
+    schema:name "Kefen"@de,
+        "Mange-tout"@fr,
+        "Taccole"@it ;
+    schema:alternateName "Zuckerschoten"@de ;
+    rdfs:subClassOf cultivationtype:191 .
+
+cultivationtype:1075 a owl:Class ;
+    schema:name "Erbsen, Kefen"@de,
+        "Pois, mange-tout"@fr,
+        "Piselli, taccole"@it ;
+    rdfs:subClassOf cultivationtype:15 ;
+    owl:unionOf (
+        cultivationtype:191
+        cultivationtype:1074
+    ) .
+
+cultivationtype:1076 a owl:Class ;
+    schema:name "Verarbeitungserbsen"@de,
+        "Pois d'industrie"@fr,
+        "Piselli da industria"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:191 
+        cultivationtype:546 
+    ) .
+
+cultivationtype:1077 a owl:Class ;
+    schema:name "Pfirsichanlage, hoher Ertrag"@de,
+        "Verger de pêchers, rendement élevé"@fr,
+        "Pescheto, resa elevata"@it ;
+    rdfs:subClassOf cultivationtype:31 .
+
+cultivationtype:1078 a owl:Class ;
+    schema:name "Pfirsichanlage (ohne Ertragsspezifizierung)"@de,
+        "Verger de pêchers (sans spécification de rendement)"@fr,
+        "Pescheto (senza specifica di resa)"@it ;
+    rdfs:subClassOf cultivationtype:31 .
+
+cultivationtype:1079 a owl:Class ;
+    schema:name "Gurken, Essiggurken"@de,
+        "Concombres, cornichons"@fr,
+        "Cetrioli, cetriolini"@it ;
+    rdfs:subClassOf cultivationtype:235 ;
+    owl:unionOf (
+        cultivationtype:32
+        cultivationtype:207
+    ) .
+
+cultivationtype:1080 a owl:Class ;
+    schema:name "Intensive Weiden und Mähweiden"@de ;
+    schema:alternateName "Weide (Mäh-) intensiv"@de ;
+    rdfs:subClassOf cultivationtype:616 .
+
+cultivationtype:1081 a owl:Class ;
+    schema:name "Stangenbohne (geschützter Anbau)"@de,
+        "Haricot à rames (culture protégée)"@fr,
+        "Fagiolo rampicante (coltura protetta)"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:201 
+        cultivationtype:7 
+    ) .
+
+cultivationtype:1082 a owl:Class ;
+    schema:name "Zwetschgenanlage, hoher Ertrag"@de,
+        "Verger de pruniers, rendement élevé"@fr,
+        "Prugneto/Susineto, resa elevata"@it ;
+    rdfs:subClassOf cultivationtype:113 .
+
+cultivationtype:1083 a owl:Class ;
+    schema:name "Zwetschgenanlage (ohne Ertragsspezifizierung)"@de,
+        "Verger de pruniers (sans spécification de rendement)"@fr,
+        "Prugneto/Susineto (senza specifica di resa)"@it ;
+    rdfs:subClassOf cultivationtype:113 .
+
+cultivationtype:1084 a owl:Class ;
+    schema:name "Spitzwegerich"@de,
+        "Plantain lancéolé"@fr,
+        "Piantaggine lanciuola"@it ;
+    rdfs:subClassOf cultivationtype:35 .
+
+cultivationtype:1085 a owl:Class ;
+    schema:name "Mittelintensive Weiden und Mähweiden"@de,
+        "Pâturages et pâturages de fauche moyennement intensifs"@fr,
+        "Pascoli e pascoli da sfalcio medio-intensivi"@it ;
+    schema:alternateName "Weide (Mäh-) mittelintensiv"@de ;
+    rdfs:subClassOf cultivationtype:616 .
+
+cultivationtype:1086 a owl:Class ;
+    schema:name "Schlüsselblume (ganze Pflanze)"@de,
+        "Primevère (plante entière)"@fr,
+        "Primula (pianta intera)"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1087 a owl:Class ;
+    schema:name "Kernobstanlage, hoher Ertrag"@de,
+        "Verger de fruits à pépins, rendement élevé"@fr,
+        "Frutteto a granelli, resa elevata"@it ;
+    rdfs:subClassOf cultivationtype:309 .
+
+cultivationtype:1088 a owl:Class ;
+    schema:name "Kernobstanlage (ohne Ertragsspezifizierung)"@de,
+        "Verger de fruits à pépins (sans spécification de rendement)"@fr,
+        "Frutteto a granelli (senza specifica di resa)"@it ;
+    rdfs:subClassOf cultivationtype:309 .
+
+cultivationtype:1089 a owl:Class ;
+    schema:name "Frühkartoffeln"@de,
+        "Pommes de terre hâtives"@fr,
+        "Patate novelle"@it ;
+    rdfs:subClassOf cultivationtype:524 .
+
+cultivationtype:1090 a owl:Class ;
+    schema:name "Speise- und Verarbeitungskartoffeln"@de,
+        "Pommes de terre de consommation et d'industrie"@fr,
+        "Patate da consumo e da industria"@it ;
+    rdfs:subClassOf cultivationtype:524 .
+
+cultivationtype:1091 a owl:Class ;
+    schema:name "Pfefferminze"@de,
+        "Menthe poivrée"@fr,
+        "Menta piperita"@it ;
+    rdfs:subClassOf cultivationtype:299 .
+
+cultivationtype:1092 a owl:Class ;
+    schema:name "Petersilie (geschützter Anbau)"@de,
+        "Persil (culture protégée)"@fr,
+        "Prezzemolo (coltura protetta)"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:311 
+        cultivationtype:7 
+    ) .
+
+cultivationtype:1093 a owl:Class ;
+    schema:name "Kürbis"@de,
+        "Courge"@fr,
+        "Zucca"@it ;
+    rdfs:subClassOf cultivationtype:235 .
