@@ -215,6 +215,28 @@ cultivationtype:1035 a owl:Class ;
     rdfs:label "Winterroggen (Populationssorten) ohne 62a Nitrat-Projekt"@de ;
     rdfs:subClassOf cultivationtype:1014 .
 
+cultivationtype:1036 a owl:Class ;
+    rdfs:label "Aubergine, Erdkultur (geschützter Anbau)"@de ;
+    owl:intersectionOf ( cultivationtype:474 cultivationtype:811 ) .
+
+cultivationtype:1037 a owl:Class ;
+    rdfs:label "Spargel Bleich"@de,
+        "Asperge blanche"@fr,
+        "Asparago bianco"@it ;
+    rdfs:subClassOf cultivationtype:710 .
+
+cultivationtype:1038 a owl:Class ;
+    rdfs:label "Spargel Grün"@de,
+        "Asperge verte"@fr,
+        "Asparago verde"@it ;
+    rdfs:subClassOf cultivationtype:710 .
+
+cultivationtype:1039 a owl:Class ;
+    rdfs:label "Sommerraps"@de,
+        "Colza de printemps"@fr,
+        "Colza primaverile"@it ;
+    rdfs:subClassOf cultivationtype:494 .
+
 cultivationtype:105 a owl:Class ;
     rdfs:label "Lactuca-Salate"@de,
         "salades lactuca"@fr,
@@ -293,6 +315,13 @@ cultivationtype:120 a owl:Class ;
         "polygonacées"@fr,
         "Poligonacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:123 a owl:Class ;
+    rdfs:label "Hagebutten"@de,
+        "rose hip"@en,
+        "cynorhodon"@fr,
+        "rosa canina"@it ;
+    rdfs:subClassOf cultivationtype:705 .
 
 cultivationtype:124 a owl:Class ;
     rdfs:label "Bohnen mit Hülsen"@de,
@@ -1072,6 +1101,15 @@ cultivationtype:47 a owl:Class ;
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:470 a owl:Class ;
+    rdfs:label "Beerenkulturen in geschütztem Anbau" ;
+    rdfs:subClassOf cultivationtype:830 .
+
+cultivationtype:471 a owl:Class ;
+    rdfs:label "Beerenbau"@de ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:705 ) .
 
 cultivationtype:472 a owl:Class ;
     rdfs:label "Aprikose"@de,
@@ -2098,7 +2136,7 @@ cultivationtype:804 a owl:Class ;
     rdfs:label "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures des baies sous serres avec fondations permanentes"@fr,
         "Colture bacche in serra con fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:806 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
@@ -2147,13 +2185,13 @@ cultivationtype:813 a owl:Class ;
     rdfs:label "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
         "Cultures des baies sous abri sans fondations permanentes; sur sol naturel"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:814 a owl:Class ;
     rdfs:label "Beerenkulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
         "Cultures des baies sous abri sans fondations permanentes; sur des tables de plantation ou  des étagères"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:830 a owl:Class ;
     rdfs:label "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt"@de,

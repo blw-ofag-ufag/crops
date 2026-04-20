@@ -553,6 +553,13 @@ cultivationtype:120 a owl:Class ;
         "Poligonacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:123 a owl:Class ;
+    schema:name "Hagebutten"@de,
+        "rose hip"@en,
+        "cynorhodon"@fr,
+        "rosa canina"@it ;
+    rdfs:subClassOf cultivationtype:705 .
+
 cultivationtype:124 a owl:Class ;
     schema:name "Bohnen mit Hülsen"@de,
         "haricots non écossés"@fr,
@@ -1179,6 +1186,15 @@ cultivationtype:335 a owl:Class ;
         "poivron"@fr,
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
+
+cultivationtype:470 a owl:Class ;
+    schema:name "Beerenkulturen in geschütztem Anbau" ;
+    rdfs:subClassOf cultivationtype:830 .
+
+cultivationtype:471 a owl:Class ;
+    schema:name "Beerenbau"@de ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:705 ) .
 
 cultivationtype:472 a owl:Class ;
     schema:name "Aprikose"@de,
@@ -2193,7 +2209,7 @@ cultivationtype:804 a owl:Class ;
     schema:name "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures des baies sous serres avec fondations permanentes"@fr,
         "Colture bacche in serra con fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:806 a owl:Class ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
@@ -2236,13 +2252,13 @@ cultivationtype:813 a owl:Class ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
         "Cultures des baies sous abri sans fondations permanentes; sur sol naturel"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:814 a owl:Class ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
         "Cultures des baies sous abri sans fondations permanentes; sur des tables de plantation ou  des étagères"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:830 a owl:Class ;
     schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt"@de,

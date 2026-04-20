@@ -705,7 +705,7 @@ psm:123 a cube:Observation ;
         "cynorhodon"@fr,
         "rosa canina"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:123 .
 
 psm:124 a cube:Observation ;
     schema:identifier "F7BB2F1C-EDE5-4C95-931E-0B2C973F5A29"^^xsd:ID ;
@@ -766,7 +766,7 @@ psm:13 a cube:Observation ;
         "culture des baies en général"@fr,
         "Coltivazione di bacche in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:471 .
 
 psm:130 a cube:Observation ;
     schema:identifier "E5B9C6F0-5C57-4A12-8ED9-D65B669B8243"^^xsd:ID ;
