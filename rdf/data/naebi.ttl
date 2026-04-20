@@ -691,7 +691,7 @@ naebi:116 a cube:Observation ;
     :P2O5 0.98 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
-    :cultivationType cultivationtype:537 .
+    :cultivationType cultivationtype:1027 .
 
 naebi:117 a cube:Observation ;
     schema:identifier "CROP_KENAF"^^xsd:string ;

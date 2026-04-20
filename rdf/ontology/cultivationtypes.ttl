@@ -2576,11 +2576,10 @@ cultivationtype:1026 a owl:Class ;
     rdfs:subClassOf cultivationtype:521 .
 
 cultivationtype:1027 a owl:Class ;
-    schema:name "Zuckermais"@de,
-        "maïs sucré"@fr,
-        "Mais dolce"@it ;
-    rdfs:subClassOf cultivationtype:497 ;
-    :botanicalPlant taxon:ZEAMS .
+    schema:name "Eiweisserbsen"@de,
+        "pois protéagineux"@fr,
+        "pisello proteico"@it ;
+    rdfs:subClassOf cultivationtype:537 .
 
 cultivationtype:1028 a owl:Class ;
     schema:name "Ganzpflanzen-Sorghum"@de ;
