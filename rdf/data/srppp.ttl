@@ -1165,7 +1165,7 @@ psm:169 a cube:Observation ;
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:467 .
+    :cultivationType cultivationtype:169 .
 
 psm:17 a cube:Observation ;
     schema:identifier "7B3C8CEE-526F-4381-A757-669C1864291A"^^xsd:ID ;
@@ -1289,7 +1289,7 @@ psm:181 a cube:Observation ;
         "semis sous litière"@fr,
         "Semine a lattiera"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:464 .
+    :cultivationType cube:Undefined .
 
 psm:182 a cube:Observation ;
     schema:identifier "4E1ACD79-F162-4EBB-93CB-C6857A811E9C"^^xsd:ID ;
@@ -2320,7 +2320,7 @@ psm:284 a cube:Observation ;
         "semis après travail superficiel"@fr,
         "Semine dopo la fresatura"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:465 .
+    :cultivationType cube:Undefined .
 
 psm:285 a cube:Observation ;
     schema:identifier "DA71526F-AC1D-40F1-8EF5-109E3F3FFD76"^^xsd:ID ;
@@ -2532,7 +2532,7 @@ psm:305 a cube:Observation ;
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:305 .
 
 psm:306 a cube:Observation ;
     schema:identifier "21228D46-5B00-4CDD-9C71-48C0A0B21C78"^^xsd:ID ;

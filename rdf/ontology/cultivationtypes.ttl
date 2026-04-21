@@ -390,12 +390,6 @@ cultivationtype:58 a owl:Class ;
         "Cavolo cinese"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
-cultivationtype:64 a cube:Observation ;
-    schema:name "Anbautechnik"@de,
-        "techniques culturales"@fr,
-        "Tecnica di coltivazione"@it ;
-    rdfs:subClassOf cultivationtype:1 .
-
 cultivationtype:66 a owl:Class ;
     schema:name "Meerrettich"@de,
         "raifort"@fr,
@@ -1191,6 +1185,12 @@ cultivationtype:304 a owl:Class ;
         "Varietà particolari di pomodoro"@it ;
     rdfs:subClassOf cultivationtype:85 .
 
+cultivationtype:305 a cube:Observation ;
+    schema:name "Futter- und Zuckerrüben"@de,
+        "betteraves à sucre et fourragère"@fr,
+        "Barbabietole da foraggio e da zucchero"@it ;
+    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
+
 cultivationtype:306 a owl:Class ;
     schema:name "Wurzelpetersilie"@de,
         "Turnip-rooted parsley"@en,
@@ -1290,26 +1290,6 @@ cultivationtype:335 a owl:Class ;
         "poivron"@fr,
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
-
-cultivationtype:463 a cube:Observation ;
-    schema:name "Futter- und Zuckerrüben"@de,
-        "betteraves à sucre et fourragère"@fr,
-        "Barbabietole da foraggio e da zucchero"@it ;
-    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
-
-cultivationtype:464 a cube:Observation ;
-    schema:name "Mulchsaaten"@de,
-        "semis sous litière"@fr,
-        "Semine a lattiera"@it ;
-    schema:description "Die Mulchsaat ist ein pflugloses, konservierendes Saatverfahren, bei dem Ernterückstände (Stroh) oder Zwischenfrüchte auf der Bodenoberfläche verbleiben."@de ;
-    rdfs:subClassOf cultivationtype:64 .
-
-cultivationtype:465 a cube:Observation ;
-    schema:name "Frässaaten"@de,
-        "semis après travail superficiel"@fr,
-        "Semine dopo la fresatura"@it ;
-    schema:description "Frässaat ist ein pflugloses Ansaatverfahren in der Landwirtschaft, bei dem der Boden nicht flächig bearbeitet, sondern nur in schmalen Streifen für die Saatkörner aufgefräst wird. "@de ;
-    rdfs:subClassOf cultivationtype:64 .
 
 cultivationtype:468 a cube:Observation ;
     schema:name "Ackerbohne"@de,
