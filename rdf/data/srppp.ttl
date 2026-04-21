@@ -1020,7 +1020,7 @@ psm:154 a cube:Observation ;
         "brocoli"@fr,
         "Broccoli"@it ;
     schema:version 0 ;
-    :cultivationType psm:154 .
+    :cultivationType cultivationtype:154 .
 
 psm:155 a cube:Observation ;
     schema:identifier "B75AC4CC-6BB7-4A99-808A-9F7BDFCF8E6A"^^xsd:ID ;
@@ -2799,7 +2799,7 @@ psm:332 a cube:Observation ;
         "pépinière"@fr,
         "Vivaio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1065 .
 
 psm:333 a cube:Observation ;
     schema:identifier "19CC4F57-CB08-4970-BEDB-3DB2B2CB1034"^^xsd:ID ;
@@ -3069,7 +3069,7 @@ psm:57 a cube:Observation ;
         "poacées (Gramineae)"@fr,
         "Poacee (Graminaceae)"@it ;
     schema:version 0 ;
-    :cultivationType psm:57 .
+    :cultivationType cultivationtype:57 .
 
 psm:58 a cube:Observation ;
     schema:identifier "C37A7EE2-D06B-4204-809A-F50A934F79E3"^^xsd:ID ;
