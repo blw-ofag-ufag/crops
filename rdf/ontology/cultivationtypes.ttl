@@ -402,6 +402,15 @@ cultivationtype:67 a owl:Class ;
         "Erbette da cucina"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:68 a cube:Observation ;
+    schema:name "Luzerne"@de,
+        "Luzerne"@fr,
+        "Erba medica"@it ;
+    schema:alternateName "Alfalfa"@de,
+        "Schneckenklee"@de,
+        "Ewiger Klee"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:69 a owl:Class ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
@@ -428,6 +437,12 @@ cultivationtype:76 a owl:Class ;
         "bietola da coste"@it,
         "bietola a coste"@it ;
     rdfs:subClassOf cultivationtype:321 .
+
+cultivationtype:79 a cube:Observation ;
+    schema:name "Grasbestände zur Saatgutproduktion"@de,
+        "Graminées pour la production de semences"@fr,
+        "Graminacee per la produzione di sementi"@it ;
+        rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:81 a owl:Class ;
     schema:name "Kopfkohle"@de,
@@ -549,6 +564,12 @@ cultivationtype:115 a owl:Class ;
         "rave de Brassica napus"@fr,
         "Rapa di Brassica napus"@it ;
     rdfs:subClassOf cultivationtype:247 .
+
+cultivationtype:116 a cube:Observation ;
+    schema:name "Wiesen und Weiden"@de,
+        "Prairies et pâturages"@fr,
+        "Prati e pascoli"@it ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:117 a owl:Class ;
     schema:name "Stachys"@de,
@@ -764,6 +785,12 @@ cultivationtype:179 a owl:Class ;
         "chicorée scarole, chicorée frisée"@fr,
         "Indivia"@it ;
     rdfs:subClassOf cultivationtype:141 .
+
+cultivationtype:182 a cube:Observation ;
+    schema:name "Kleegrasmischung (Kunstwiese)"@de,
+        "mélange trèfles-graminées (prairie arificielle)"@fr,
+        "Miscela trifoglio-graminacee (prati artificiali)"@it ;
+    rdfs:subClassOf cultivationtype:116 .
 
 cultivationtype:183 a owl:Class ;
     schema:name "Linse"@de,
