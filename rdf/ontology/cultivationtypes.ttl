@@ -141,8 +141,10 @@ cultivationtype:3 a owl:Class ;
 cultivationtype:4 a owl:Class ;
     schema:name "Reben"@de,
         "Vignobles"@fr,
-        "Vigna"@it ;
-    rdfs:subClassOf :Cultivation .
+        "Vigna"@it,
+        "Vines"@en ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
 
 cultivationtype:5 a owl:Class ;
     schema:name "Obstanlagen"@de,
@@ -683,6 +685,12 @@ cultivationtype:154 a owl:Class ;
         "Broccoli"@it ;
     rdfs:subClassOf cultivationtype:324 .
 
+cultivationtype:156 a owl:Class ;
+    schema:name "Jungreben"@de,
+        "jeune vigne"@fr,
+        "Ceppi giovani"@it ;
+    rdfs:subClassOf cultivationtype:4 .
+
 cultivationtype:157 a owl:Class ;
     schema:name "Bohnenkraut"@de,
         "sarriette"@fr,
@@ -836,6 +844,12 @@ cultivationtype:211 a owl:Class ;
         "rhubarbe"@fr,
         "Rabarbaro"@it ;
     rdfs:subClassOf cultivationtype:120 .
+
+cultivationtype:213 a owl:Class ;
+    schema:name "Ertragsreben"@de,
+        "vigne en production"@fr,
+        "Vite in produzione"@it ;
+    rdfs:subClassOf cultivationtype:4 .
 
 cultivationtype:215 a owl:Class ;
     schema:name "Erbsen mit Hülsen"@de,
@@ -2090,10 +2104,8 @@ cultivationtype:698 a owl:Class ;
     rdfs:subClassOf cultivationtype:2 .
 
 cultivationtype:701 a owl:Class ;
-    schema:name "Reben"@de,
-        "Vignes"@fr,
-        "Vigna"@it ;
-    rdfs:subClassOf cultivationtype:4 .
+    schema:name "Reben (ohne regionsspezifische Biodiversitätsförderflächen)"@de ;
+    owl:disjointWith cultivationtype:735 .
 
 cultivationtype:702 a owl:Class ;
     schema:name "Obstanlagen (Äpfel)"@de,
@@ -2249,8 +2261,7 @@ cultivationtype:731 a owl:Class ;
 cultivationtype:735 a owl:Class ;
     schema:name "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
         "Vignes (surfaces de promotion de la biodiversité spécifiques à la ré-gion)"@fr,
-        "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:4 .
+        "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it .
 
 cultivationtype:750 a owl:Class ;
     schema:name "Übrige Dauerkulturen, beitragsberechtigt, aggregiert"@de,
