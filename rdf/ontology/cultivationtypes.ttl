@@ -734,6 +734,13 @@ cultivationtype:166 a owl:Class ;
         "Zucche (buccia non commestibile)"@it ;
     rdfs:subClassOf cultivationtype:1093 .
 
+cultivationtype:169 a cube:Observation ;
+    schema:name "Chinaschilf"@de,
+        "Roseau de Chine"@fr,
+        "Miscanto"@it ;
+    schema:version 0 ;
+    rdfs:subClassOf cultivationtype:707 .
+
 cultivationtype:170 a owl:Class ;
     schema:name "Schwarze Johannisbeere"@de,
         "cassis"@fr,
@@ -1303,13 +1310,6 @@ cultivationtype:465 a cube:Observation ;
         "Semine dopo la fresatura"@it ;
     schema:description "Frässaat ist ein pflugloses Ansaatverfahren in der Landwirtschaft, bei dem der Boden nicht flächig bearbeitet, sondern nur in schmalen Streifen für die Saatkörner aufgefräst wird. "@de ;
     rdfs:subClassOf cultivationtype:64 .
-
-cultivationtype:466 a cube:Observation ;
-    schema:name "Chinaschilf"@de,
-        "Roseau de Chine"@fr,
-        "Miscanto"@it ;
-    schema:version 0 ;
-    rdfs:subClassOf cultivationtype:707 .
 
 cultivationtype:468 a cube:Observation ;
     schema:name "Ackerbohne"@de,
