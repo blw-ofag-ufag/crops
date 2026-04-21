@@ -3286,13 +3286,13 @@ cultivationtype:1123 a owl:Class ;
         cultivationtype:7 
     ) .
 
-cultivationtype:1123 a owl:Class ;
+cultivationtype:1124 a owl:Class ;
     schema:name "Frühjahrsschnitt vor Wiesenumbruch"@de,
         "Coupe de printemps avant retournement de la prairie"@fr,
         "Taglio primaverile prima della lavorazione del prato"@it ;
     rdfs:subClassOf cultivationtype:601 .
 
-cultivationtype:1124 a owl:Class ;
+cultivationtype:1125 a owl:Class ;
     schema:name "Kabis Lager"@de,
         "Chou pommé de garde"@fr,
         "Cavolo a testa da conservazione"@it ;

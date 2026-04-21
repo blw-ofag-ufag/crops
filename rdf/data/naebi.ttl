@@ -2264,7 +2264,7 @@ naebi:245 a cube:Observation ;
     :P2O5 0.82 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cultivationtype:1123 .
+    :cultivationType cultivationtype:1124 .
 
 naebi:246 a cube:Observation ;
     schema:identifier "CROP_ST1EY"^^xsd:string ;
@@ -2297,7 +2297,7 @@ naebi:248 a cube:Observation ;
     :P2O5 50.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cultivationtype:1124 .
+    :cultivationType cultivationtype:1125 .
 
 naebi:249 a cube:Observation ;
     schema:identifier "CROP_STRAW"^^xsd:string ;
