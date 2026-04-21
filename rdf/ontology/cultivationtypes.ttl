@@ -489,6 +489,12 @@ cultivationtype:95 a owl:Class ;
         "Composite (Asteracee)"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:99 a owl:Class ;
+    schema:name "Baby-Leaf (Asteraceae)"@de,
+        "Baby-Leaf (Asteraceae)"@fr,
+        "Baby-Leaf (Asteraceae)"@it ;
+    rdfs:subClassOf cultivationtype:400 .
+
 cultivationtype:103 a owl:Class ;
     schema:name "Blattsalate (Asteraceae)"@de,
         "laitues à tondre (Asteraceae)"@fr,
@@ -770,6 +776,12 @@ cultivationtype:186 a owl:Class ;
         "Frutta con guscio"@it ;
     rdfs:subClassOf cultivationtype:5 .
 
+cultivationtype:187 a owl:Class ;
+    schema:name "Baby-Leaf (Brassicaceae)"@de,
+        "Baby-Leaf (Brassicaceae)"@fr,
+        "Baby-Leaf (Brassicaceae)"@it ;
+    rdfs:subClassOf cultivationtype:400 .
+
 cultivationtype:188 a owl:Class ;
     schema:name "Liliengewächse (Liliaceae)"@de,
         "liliacées"@fr,
@@ -1010,6 +1022,12 @@ cultivationtype:257 a owl:Class ;
         "olivier"@fr,
         "Olivo"@it ;
     rdfs:subClassOf cultivationtype:5 .
+
+cultivationtype:258 a owl:Class ;
+    schema:name "Baby-Leaf (Chenopodiaceae)"@de,
+        "Baby-Leaf (Chenopodiaceae)"@fr,
+        "Baby-Leaf (Chenopodiaceae)"@it ;
+    rdfs:subClassOf cultivationtype:400 .
 
 cultivationtype:259 a owl:Class ;
     schema:name "Pflaume"@de,
@@ -1277,6 +1295,12 @@ cultivationtype:335 a owl:Class ;
         "poivron"@fr,
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
+
+cultivationtype:400 a owl:Class ;
+    schema:name "Baby-Leaf"@de,
+        "Baby-Leaf"@fr,
+        "Baby-Leaf"@it ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:469 a owl:Class ;
     schema:name "Freiland-Beeren"@de ;

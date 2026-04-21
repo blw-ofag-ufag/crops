@@ -1340,7 +1340,7 @@ psm:187 a cube:Observation ;
         "Baby-Leaf (Brassicaceae)"@fr,
         "Baby-Leaf (Brassicaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:187 .
 
 psm:188 a cube:Observation ;
     schema:identifier "5AC11C43-B41E-4823-8515-E991D4EA1B3C"^^xsd:ID ;
@@ -1467,7 +1467,7 @@ psm:2 a cube:Observation ;
         "Baby-Leaf"@fr,
         "Baby-Leaf"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:400 .
 
 psm:20 a cube:Observation ;
     schema:identifier "6F26F4E0-401C-4B16-A28B-4CC889907361"^^xsd:ID ;
@@ -2057,7 +2057,7 @@ psm:258 a cube:Observation ;
         "Baby-Leaf (Chenopodiaceae)"@fr,
         "Baby-Leaf (Chenopodiaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:258 .
 
 psm:259 a cube:Observation ;
     schema:identifier "9C38BA77-FDC8-461A-800A-9E2467C52105"^^xsd:ID ;
@@ -3484,4 +3484,4 @@ psm:99 a cube:Observation ;
         "Baby-Leaf (Asteraceae)"@fr,
         "Baby-Leaf (Asteraceae)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:99 .

@@ -885,6 +885,12 @@ cultivationtype:186 a owl:Class ;
         "Frutta con guscio"@it ;
     rdfs:subClassOf cultivationtype:5 .
 
+cultivationtype:187 a owl:Class ;
+    rdfs:label "Baby-Leaf (Brassicaceae)"@de,
+        "Baby-Leaf (Brassicaceae)"@fr,
+        "Baby-Leaf (Brassicaceae)"@it ;
+    rdfs:subClassOf cultivationtype:400 .
+
 cultivationtype:188 a owl:Class ;
     rdfs:label "Liliengewächse (Liliaceae)"@de,
         "liliacées"@fr,
@@ -1169,6 +1175,12 @@ cultivationtype:257 a owl:Class ;
         "olivier"@fr,
         "Olivo"@it ;
     rdfs:subClassOf cultivationtype:5 .
+
+cultivationtype:258 a owl:Class ;
+    rdfs:label "Baby-Leaf (Chenopodiaceae)"@de,
+        "Baby-Leaf (Chenopodiaceae)"@fr,
+        "Baby-Leaf (Chenopodiaceae)"@it ;
+    rdfs:subClassOf cultivationtype:400 .
 
 cultivationtype:259 a owl:Class ;
     rdfs:label "Pflaume"@de,
@@ -1495,6 +1507,7 @@ cultivationtype:39 a owl:Class ;
 
 cultivationtype:4 a owl:Class ;
     rdfs:label "Reben"@de,
+        "Vines"@en,
         "Vignobles"@fr,
         "Vigna"@it ;
     rdfs:subClassOf :Cultivation ;
@@ -1505,6 +1518,12 @@ cultivationtype:40 a owl:Class ;
         "courges à peau comestible"@fr,
         "Zucche con buccia commestibile"@it ;
     rdfs:subClassOf cultivationtype:1093 .
+
+cultivationtype:400 a owl:Class ;
+    rdfs:label "Baby-Leaf"@de,
+        "Baby-Leaf"@fr,
+        "Baby-Leaf"@it ;
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:41 a owl:Class ;
     rdfs:label "Birne / Nashi"@de,
@@ -2924,6 +2943,12 @@ cultivationtype:951 a owl:Class ;
     rdfs:comment "Anbau von Sommer- oder Wintergetreide, bei denen mindestens 40% der Anzahl Reihen über die Breite der Sämaschine ungesät sind. Mindestfläche 20 Aren, Mindestbreite 20 m. Der Reihenabstand in ungesäten Bereichen muss mindestens 30 cm betragen."@de ;
     rdfs:subClassOf cultivationtype:14 ;
     :botanicalPlant taxon:1GRAF .
+
+cultivationtype:99 a owl:Class ;
+    rdfs:label "Baby-Leaf (Asteraceae)"@de,
+        "Baby-Leaf (Asteraceae)"@fr,
+        "Baby-Leaf (Asteraceae)"@it ;
+    rdfs:subClassOf cultivationtype:400 .
 
 cultivationtype:998 a owl:Class ;
     rdfs:label "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche und Sömmerungsfläche"@de,
