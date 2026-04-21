@@ -2423,7 +2423,7 @@ psm:295 a cube:Observation ;
         "marjolaine"@fr,
         "maggiorana"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:295 .
 
 psm:296 a cube:Observation ;
     schema:identifier "3FEAB48F-0D66-4814-B3E3-C4BC0AB749B3"^^xsd:ID ;

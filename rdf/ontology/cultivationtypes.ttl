@@ -1347,6 +1347,13 @@ cultivationtype:290 a owl:Class ;
         "Cavoli"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:295 a owl:Class ;
+    schema:name "Majoran"@de,
+        "Marjoram"@en,
+        "marjolaine"@fr,
+        "maggiorana"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:297 a owl:Class ;
     schema:name "Melonen"@de,
         "melons"@fr,
