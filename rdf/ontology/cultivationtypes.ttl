@@ -753,7 +753,6 @@ cultivationtype:169 a owl:Class ;
     schema:name "Chinaschilf"@de,
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
-    schema:version 0 ;
     rdfs:subClassOf cultivationtype:707 .
 
 cultivationtype:170 a owl:Class ;
