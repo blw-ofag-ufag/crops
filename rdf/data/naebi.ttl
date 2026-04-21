@@ -2396,7 +2396,7 @@ naebi:256 a cube:Observation ;
     :P2O5 34.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1130 .
 
 naebi:257 a cube:Observation ;
     schema:identifier "CROP_SUCORN"^^xsd:string ;
@@ -2418,7 +2418,7 @@ naebi:258 a cube:Observation ;
     :P2O5 20.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1131 .
 
 naebi:259 a cube:Observation ;
     schema:identifier "CROP_SUGRCH"^^xsd:string ;
@@ -2429,7 +2429,7 @@ naebi:259 a cube:Observation ;
     :P2O5 20.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:142 .
 
 naebi:26 a cube:Observation ;
     schema:identifier "CROP_BRGEG"^^xsd:string ;
@@ -2440,28 +2440,28 @@ naebi:26 a cube:Observation ;
     :P2O5 55.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:157 .
 
 naebi:260 a cube:Observation ;
     schema:identifier "CROP_SUMEXT"^^xsd:string ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1132 .
 
 naebi:261 a cube:Observation ;
     schema:identifier "CROP_SUMLNT"^^xsd:string ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1133 .
 
 naebi:262 a cube:Observation ;
     schema:identifier "CROP_SUMOTH"^^xsd:string ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:480 .
 
 naebi:263 a cube:Observation ;
     schema:identifier "CROP_SWCHD"^^xsd:string ;
@@ -2472,7 +2472,7 @@ naebi:263 a cube:Observation ;
     :P2O5 100.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1135 .
 
 naebi:264 a cube:Observation ;
     schema:identifier "CROP_SWEET"^^xsd:string ;
@@ -2483,7 +2483,7 @@ naebi:264 a cube:Observation ;
     :P2O5 0.56 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1136 .
 
 naebi:265 a cube:Observation ;
     schema:identifier "CROP_SWEPO"^^xsd:string ;
@@ -2494,7 +2494,7 @@ naebi:265 a cube:Observation ;
     :P2O5 60.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1137 .
 
 naebi:266 a cube:Observation ;
     schema:identifier "CROP_SWHT"^^xsd:string ;

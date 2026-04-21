@@ -3313,3 +3313,54 @@ cultivationtype:1129 a owl:Class ;
         "Colza d'automne"@fr,
         "Colza autunnale"@it ;
     rdfs:subClassOf cultivationtype:494 .
+
+cultivationtype:1130 a owl:Class ;
+    schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de,
+        "Jeunes plants de fraisiers (plants en mottes/tray)"@fr,
+        "Giovani piante di fragola (piante in alveolo/tray)"@it ;
+    rdfs:subClassOf cultivationtype:223 .
+
+cultivationtype:1131 a owl:Class ;
+    schema:name "Zuckerhut (Convenience)"@de,
+        "Chicorée pain de sucre (convenience)"@fr,
+        "Cicoria pan di zucchero (convenience)"@it ;
+    rdfs:subClassOf cultivationtype:142 .
+
+cultivationtype:1132 a owl:Class ;
+    schema:name "Heuwiesen Sömmerungsg., extensive"@de,
+        "Prairies de fauche de la région d'estivage, extensives"@fr,
+        "Prati da sfalcio nella regione d'estivazione, estensivi"@it ;
+    rdfs:subClassOf cultivationtype:480 .
+
+cultivationtype:1133 a owl:Class ;
+    schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de,
+        "Prairies de fauche de la région d'estivage, peu intensives"@fr,
+        "Prati da sfalcio nella regione d'estivazione, poco intensivi"@it ;
+    rdfs:subClassOf cultivationtype:480 .
+
+cultivationtype:1134 a owl:Class ;
+    schema:name "Heuwiesen im Sömmerungsg., übrige"@de,
+        "Prairies de fauche de la région d'estivage, autres"@fr,
+        "Prati da sfalcio nella regione d'estivazione, altri"@it ;
+    rdfs:subClassOf cultivationtype:480 .
+
+cultivationtype:1135 a owl:Class ;
+    schema:name "Krautstiel (geschützter Anbau)"@de,
+        "Bette à côte (culture protégée)"@fr,
+        "Costa (coltura protetta)"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:76 
+        cultivationtype:7 
+    ) .
+
+cultivationtype:1136 a owl:Class ;
+    schema:name "Tabak Virginie"@de,
+        "Tabac de Virginie"@fr,
+        "Tabacco Virginia"@it ;
+    rdfs:subClassOf cultivationtype:541 .
+
+cultivationtype:1137 a owl:Class ;
+    schema:name "Süsskartoffeln"@de,
+        "Patates douces"@fr,
+        "Patate dolci"@it ;
+    rdfs:subClassOf cultivationtype:24 .
