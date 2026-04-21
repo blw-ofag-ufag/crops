@@ -8,10 +8,10 @@ from rdflib import Graph
 RDF_FILE_PATH = "./rdf/data/srppp.ttl"
 CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/heads/main/data/raw/Code.csv"
 
-def test_culture_hierarchy_exists_in_rdf():
+def test_culture_consistency_in_rdf():
     """
-    Tests that every (ID, PARENT_ID) combination for TEXT_KEY == 'Culture' 
-    in the remote CSV exists in the local RDF graph.
+    Tests that the hierarchy (ID, PARENT_ID) AND the localized names (ID, LANGUAGE, VALUE)
+    in the remote CSV (for TEXT_KEY == 'Culture') EXACTLY MATCH the local RDF graph.
     """
     
     # ==========================================
@@ -23,25 +23,31 @@ def test_culture_hierarchy_exists_in_rdf():
     except requests.exceptions.RequestException as e:
         pytest.fail(f"Failed to download CSV from {CSV_URL}\nError: {e}")
 
-    # Parse the CSV and mirror the R `subset` logic
-    csv_pairs = set()
+    csv_hierarchy = set()
+    csv_names = set()
+    
     reader = csv.DictReader(io.StringIO(response.text))
     
     for row in reader:
         if row.get("TEXT_KEY") == "Culture":
-            # Extract and clean the strings to avoid whitespace mismatch issues
             c_id = str(row.get("ID", "")).strip()
             c_parent_id = str(row.get("PARENT_ID", "")).strip()
+            c_lang = str(row.get("LANGUAGE", "")).strip().lower()
+            c_val = str(row.get("VALUE", "")).strip()
             
-            # Only add if both fields are populated
+            # Populate Hierarchy Set
             if c_id and c_parent_id:
-                csv_pairs.add((c_id, c_parent_id))
+                csv_hierarchy.add((c_id, c_parent_id))
+            
+            # Populate Names Set
+            if c_id and c_lang and c_val:
+                csv_names.add((c_id, c_lang, c_val))
                 
-    if not csv_pairs:
-        pytest.fail("The CSV filter returned 0 results. Check if the CSV structure or TEXT_KEY changed.")
+    if not csv_hierarchy and not csv_names:
+        pytest.fail("The CSV filter returned 0 results. Check if the CSV structure changed.")
 
     # ==========================================
-    # 2. Parse the RDF file and run SPARQL
+    # 2. Parse the RDF file
     # ==========================================
     g = Graph()
     try:
@@ -49,7 +55,14 @@ def test_culture_hierarchy_exists_in_rdf():
     except Exception as e:
         pytest.fail(f"Failed to parse the local RDF file at {RDF_FILE_PATH}\nError: {e}")
 
-    sparql_query = """
+    # ==========================================
+    # 3. Extract RDF Hierarchy and Names
+    # ==========================================
+    rdf_hierarchy = set()
+    rdf_names = set()
+
+    # Query 1: Hierarchy
+    sparql_hierarchy = """
     PREFIX cube: <https://cube.link/>
     PREFIX schema: <http://schema.org/>
     SELECT ?id ?parent_id
@@ -61,47 +74,73 @@ def test_culture_hierarchy_exists_in_rdf():
       ]
     }
     """
-    
-    rdf_pairs = set()
-    for row in g.query(sparql_query):
-        # Convert rdflib Literal/URIRef objects to standard Python strings for direct comparison
+    for row in g.query(sparql_hierarchy):
+        rdf_hierarchy.add((str(row.id).strip(), str(row.parent_id).strip()))
+
+    # Query 2: Localized Names
+    sparql_names = """
+    PREFIX cube: <https://cube.link/>
+    PREFIX schema: <http://schema.org/>
+    SELECT ?id ?name
+    WHERE {
+      ?obs a cube:Observation ;
+           schema:identifier ?id ;
+           schema:name ?name .
+    }
+    """
+    for row in g.query(sparql_names):
         r_id = str(row.id).strip()
-        r_parent_id = str(row.parent_id).strip()
-        rdf_pairs.add((r_id, r_parent_id))
+        r_val = str(row.name).strip()
+        # Extract the language tag (e.g., 'de' from "Gladiole"@de)
+        r_lang = str(row.name.language).lower() if row.name.language else ""
+        rdf_names.add((r_id, r_lang, r_val))
 
     # ==========================================
-    # 3. Validation and Error Reporting
+    # 4. Validation and Error Reporting
     # ==========================================
     
-    # Calculate bidirectional differences
-    missing_in_rdf = csv_pairs - rdf_pairs
-    extra_in_rdf = rdf_pairs - csv_pairs
+    # Calculate bidirectional differences for both datasets
+    missing_hierarchy_in_rdf = csv_hierarchy - rdf_hierarchy
+    extra_hierarchy_in_rdf = rdf_hierarchy - csv_hierarchy
     
-    # If either set is not empty, we have a mismatch
-    if missing_in_rdf or extra_in_rdf:
-        error_msg = "Exact match validation failed between CSV hierarchy and RDF graph.\n\n"
+    missing_names_in_rdf = csv_names - rdf_names
+    extra_names_in_rdf = rdf_names - csv_names
+    
+    # If any set is not empty, we compile a master error message
+    if any([missing_hierarchy_in_rdf, extra_hierarchy_in_rdf, missing_names_in_rdf, extra_names_in_rdf]):
+        error_msg = "Exact match validation failed between CSV and RDF graph.\n\n"
         
-        # 3a. Report what is in CSV but missing from RDF
-        if missing_in_rdf:
-            error_msg += (
-                f"[{len(missing_in_rdf)} MISSING IN RDF] Found in CSV, but not in RDF:\n"
-            )
-            for m_id, m_parent in list(missing_in_rdf)[:20]:
+        # --- HIERARCHY ERRORS ---
+        if missing_hierarchy_in_rdf:
+            error_msg += f"[{len(missing_hierarchy_in_rdf)} MISSING HIERARCHY IN RDF] Found in CSV, but not in RDF:\n"
+            for m_id, m_parent in list(missing_hierarchy_in_rdf)[:10]:
                 error_msg += f"  → ID: {m_id} | PARENT_ID: {m_parent}\n"
-                
-            if len(missing_in_rdf) > 20:
-                error_msg += f"  ... and {len(missing_in_rdf) - 20} more.\n"
+            if len(missing_hierarchy_in_rdf) > 10:
+                error_msg += f"  ... and {len(missing_hierarchy_in_rdf) - 10} more.\n"
             error_msg += "\n"
 
-        # 3b. Report what is in RDF but missing from CSV
-        if extra_in_rdf:
-            error_msg += (
-                f"[{len(extra_in_rdf)} EXTRA IN RDF] Found in RDF, but not in CSV (TEXT_KEY == 'Culture'):\n"
-            )
-            for e_id, e_parent in list(extra_in_rdf)[:20]:
+        if extra_hierarchy_in_rdf:
+            error_msg += f"[{len(extra_hierarchy_in_rdf)} EXTRA HIERARCHY IN RDF] Found in RDF, but not in CSV:\n"
+            for e_id, e_parent in list(extra_hierarchy_in_rdf)[:10]:
                 error_msg += f"  → ID: {e_id} | PARENT_ID: {e_parent}\n"
-                
-            if len(extra_in_rdf) > 20:
-                error_msg += f"  ... and {len(extra_in_rdf) - 20} more.\n"
+            if len(extra_hierarchy_in_rdf) > 10:
+                error_msg += f"  ... and {len(extra_hierarchy_in_rdf) - 10} more.\n"
+            error_msg += "\n"
+
+        # --- NAME ERRORS ---
+        if missing_names_in_rdf:
+            error_msg += f"[{len(missing_names_in_rdf)} MISSING NAMES IN RDF] Found in CSV, but not in RDF:\n"
+            for m_id, m_lang, m_val in list(missing_names_in_rdf)[:10]:
+                error_msg += f"  → ID: {m_id} | LANG: '{m_lang}' | VALUE: '{m_val}'\n"
+            if len(missing_names_in_rdf) > 10:
+                error_msg += f"  ... and {len(missing_names_in_rdf) - 10} more.\n"
+            error_msg += "\n"
+
+        if extra_names_in_rdf:
+            error_msg += f"[{len(extra_names_in_rdf)} EXTRA NAMES IN RDF] Found in RDF, but not in CSV:\n"
+            for e_id, e_lang, e_val in list(extra_names_in_rdf)[:10]:
+                error_msg += f"  → ID: {e_id} | LANG: '{e_lang}' | VALUE: '{e_val}'\n"
+            if len(extra_names_in_rdf) > 10:
+                error_msg += f"  ... and {len(extra_names_in_rdf) - 10} more.\n"
 
         pytest.fail(error_msg.strip())
