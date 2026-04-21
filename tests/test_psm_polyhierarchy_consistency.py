@@ -72,25 +72,36 @@ def test_culture_hierarchy_exists_in_rdf():
     # ==========================================
     # 3. Validation and Error Reporting
     # ==========================================
-    missing_pairs = []
     
-    for csv_id, csv_parent_id in csv_pairs:
-        if (csv_id, csv_parent_id) not in rdf_pairs:
-            missing_pairs.append((csv_id, csv_parent_id))
-            
-    # If the missing_pairs list isn't empty, fail the test with a detailed message
-    if missing_pairs:
-        error_msg = (
-            f"Found {len(missing_pairs)} 'Culture' combinations in the CSV "
-            f"that are MISSING from the RDF graph ({RDF_FILE_PATH}).\n\n"
-            "Sample of missing (ID, PARENT_ID) combinations:\n"
-        )
+    # Calculate bidirectional differences
+    missing_in_rdf = csv_pairs - rdf_pairs
+    extra_in_rdf = rdf_pairs - csv_pairs
+    
+    # If either set is not empty, we have a mismatch
+    if missing_in_rdf or extra_in_rdf:
+        error_msg = "Exact match validation failed between CSV hierarchy and RDF graph.\n\n"
         
-        # Limit to first 20 to avoid flooding the console output on massive failures
-        for m_id, m_parent in missing_pairs[:20]:
-            error_msg += f"  → ID: {m_id} | PARENT_ID: {m_parent}\n"
-            
-        if len(missing_pairs) > 20:
-            error_msg += f"  ... and {len(missing_pairs) - 20} more."
-            
-        pytest.fail(error_msg)
+        # 3a. Report what is in CSV but missing from RDF
+        if missing_in_rdf:
+            error_msg += (
+                f"[{len(missing_in_rdf)} MISSING IN RDF] Found in CSV, but not in RDF:\n"
+            )
+            for m_id, m_parent in list(missing_in_rdf)[:20]:
+                error_msg += f"  → ID: {m_id} | PARENT_ID: {m_parent}\n"
+                
+            if len(missing_in_rdf) > 20:
+                error_msg += f"  ... and {len(missing_in_rdf) - 20} more.\n"
+            error_msg += "\n"
+
+        # 3b. Report what is in RDF but missing from CSV
+        if extra_in_rdf:
+            error_msg += (
+                f"[{len(extra_in_rdf)} EXTRA IN RDF] Found in RDF, but not in CSV (TEXT_KEY == 'Culture'):\n"
+            )
+            for e_id, e_parent in list(extra_in_rdf)[:20]:
+                error_msg += f"  → ID: {e_id} | PARENT_ID: {e_parent}\n"
+                
+            if len(extra_in_rdf) > 20:
+                error_msg += f"  ... and {len(extra_in_rdf) - 20} more.\n"
+
+        pytest.fail(error_msg.strip())
