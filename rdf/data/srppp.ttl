@@ -470,6 +470,8 @@ psm:1 a cube:Observation ;
 
 psm:10 a cube:Observation ;
     schema:identifier "9C6CEE37-8105-4E48-9CA4-11BA3AB556FB"^^xsd:ID ;
+    schema:isPartOf psm:145,
+        psm:310 ;
     schema:name "Gerbera"@de,
         "Gerbera"@en,
         "gerbera"@fr,
@@ -479,6 +481,8 @@ psm:10 a cube:Observation ;
 
 psm:100 a cube:Observation ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA"^^xsd:ID ;
+    schema:isPartOf psm:27,
+        psm:316 ;
     schema:name "Trockenreis"@de,
         "Riz semis sur terrain sec"@fr,
         "Riso seminato su terreno asciutto"@it ;
@@ -487,6 +491,8 @@ psm:100 a cube:Observation ;
 
 psm:101 a cube:Observation ;
     schema:identifier "9A9A2586-34FF-4256-8FA4-BA9F2FA38CAE"^^xsd:ID ;
+    schema:isPartOf psm:108,
+        psm:145 ;
     schema:name "Cyclame"@de,
         "cyclamen"@fr,
         "Ciclamino"@it ;
@@ -691,6 +697,8 @@ psm:121 a cube:Observation ;
 
 psm:122 a cube:Observation ;
     schema:identifier "ED17FD35-4C96-4D28-902B-ACEA3F4950D6"^^xsd:ID ;
+    schema:isPartOf psm:118,
+        psm:72 ;
     schema:name "Zypressengewächse"@de,
         "Cupressaceae"@en,
         "cupressacées"@fr,
@@ -736,6 +744,8 @@ psm:126 a cube:Observation ;
 
 psm:127 a cube:Observation ;
     schema:identifier "F730D531-B0C8-4A20-AC4B-4F86445E2491"^^xsd:ID ;
+    schema:isPartOf psm:210,
+        psm:239 ;
     schema:name "Emmer"@de,
         "Amidonnier"@fr,
         "Farro"@it ;
@@ -940,6 +950,8 @@ psm:147 a cube:Observation ;
 
 psm:148 a cube:Observation ;
     schema:identifier "7D65DFD2-C26E-4CAB-9E2C-66A6C7CBA641"^^xsd:ID ;
+    schema:isPartOf psm:197,
+        psm:210 ;
     schema:name "Wintergerste"@de,
         "Orge d'automne"@fr,
         "Orzo autunnale"@it ;
@@ -993,6 +1005,8 @@ psm:152 a cube:Observation ;
 
 psm:153 a cube:Observation ;
     schema:identifier "79C28385-E183-4661-AAC0-80E82C67089C"^^xsd:ID ;
+    schema:isPartOf psm:118,
+        psm:72 ;
     schema:name "Weihnachtsbäume"@de,
         "arbres de Noël"@fr,
         "Alberi di Natale"@it ;
@@ -1010,6 +1024,8 @@ psm:154 a cube:Observation ;
 
 psm:155 a cube:Observation ;
     schema:identifier "B75AC4CC-6BB7-4A99-808A-9F7BDFCF8E6A"^^xsd:ID ;
+    schema:isPartOf psm:108,
+        psm:145 ;
     schema:name "Pelargonien"@de,
         "géranium"@fr,
         "Geranio"@it ;
@@ -1080,6 +1096,8 @@ psm:161 a cube:Observation ;
 
 psm:162 a cube:Observation ;
     schema:identifier "43FC7C18-BDA5-4364-B4CA-74EA37B7B8DC"^^xsd:ID ;
+    schema:isPartOf psm:296,
+        psm:333 ;
     schema:name "Forstliche Pflanzgärten"@de,
         "pépinières forestières"@fr,
         "Vivai forestali"@it ;
@@ -1122,6 +1140,8 @@ psm:166 a cube:Observation ;
 
 psm:167 a cube:Observation ;
     schema:identifier "5B651459-FC70-4D22-9469-4991F847EA89"^^xsd:ID ;
+    schema:isPartOf psm:118,
+        psm:72 ;
     schema:name "Blautanne"@de,
         "sapin bleu"@fr,
         "Abete del Colorado"@it ;
@@ -1379,6 +1399,8 @@ psm:192 a cube:Observation ;
 
 psm:193 a cube:Observation ;
     schema:identifier "7AB6690B-B2B9-4F12-AFAE-A9B0222C2637"^^xsd:ID ;
+    schema:isPartOf psm:210,
+        psm:71 ;
     schema:name "Winterweizen"@de,
         "Blé d'automne"@fr,
         "Frumento autunnale"@it ;
@@ -1395,6 +1417,8 @@ psm:194 a cube:Observation ;
 
 psm:195 a cube:Observation ;
     schema:identifier "61D9C648-0736-43D4-BF04-B8643B1D74E0"^^xsd:ID ;
+    schema:isPartOf psm:145,
+        psm:4 ;
     schema:name "Hyazinthe"@de,
         "jacinthe"@fr,
         "Giacinto"@it ;
@@ -1656,6 +1680,8 @@ psm:22 a cube:Observation ;
 
 psm:220 a cube:Observation ;
     schema:identifier "F9426E5C-7D4D-45E5-80DA-64BB12336CA4"^^xsd:ID ;
+    schema:isPartOf psm:27,
+        psm:316 ;
     schema:name "Mais"@de,
         "Maïs"@fr,
         "Mais"@it ;
@@ -1709,6 +1735,8 @@ psm:225 a cube:Observation ;
 
 psm:226 a cube:Observation ;
     schema:identifier "B74E61A6-30BD-4A63-8A24-94FC0A54D489"^^xsd:ID ;
+    schema:isPartOf psm:149,
+        psm:210 ;
     schema:name "Winterroggen"@de,
         "Seigle d'automne"@fr,
         "Segale autunnale"@it ;
@@ -1743,6 +1771,8 @@ psm:229 a cube:Observation ;
 
 psm:23 a cube:Observation ;
     schema:identifier "3A53A166-7559-4E75-BDED-F65CA6FDFDE1"^^xsd:ID ;
+    schema:isPartOf psm:16,
+        psm:72 ;
     schema:name "Rhododendron"@de,
         "rhododendron"@fr,
         "Rododendro"@it ;
@@ -1823,6 +1853,8 @@ psm:237 a cube:Observation ;
 
 psm:238 a cube:Observation ;
     schema:identifier "83A9CEC5-FC31-421C-A3B8-CA219AF649CF"^^xsd:ID ;
+    schema:isPartOf psm:145,
+        psm:310 ;
     schema:name "Nelken"@de,
         "oeillet"@fr,
         "Garofani"@it ;
@@ -2352,6 +2384,8 @@ psm:290 a cube:Observation ;
 
 psm:291 a cube:Observation ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7"^^xsd:ID ;
+    schema:isPartOf psm:163,
+        psm:71 ;
     schema:name "Sommerweizen"@de,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
@@ -2438,6 +2472,8 @@ psm:3 a cube:Observation ;
 
 psm:30 a cube:Observation ;
     schema:identifier "2F7BD13A-BAA5-4708-83C6-17D44E57EA4D"^^xsd:ID ;
+    schema:isPartOf psm:16,
+        psm:72 ;
     schema:name "Rosskastanie"@de,
         "marronnier d'Inde"@fr,
         "Ippocastano"@it ;
@@ -2590,6 +2626,8 @@ psm:314 a cube:Observation ;
 
 psm:315 a cube:Observation ;
     schema:identifier "34753E17-C34D-4D0B-88A0-91143DADABB2"^^xsd:ID ;
+    schema:isPartOf psm:145,
+        psm:310 ;
     schema:name "Chrysantheme"@de,
         "chrysanthème"@fr,
         "Crisantemo"@it ;
@@ -2800,6 +2838,8 @@ psm:336 a cube:Observation ;
 
 psm:34 a cube:Observation ;
     schema:identifier "2E38C972-4160-4D2B-8ED2-3B48FC781EF0"^^xsd:ID ;
+    schema:isPartOf psm:108,
+        psm:145 ;
     schema:name "Begonia"@de,
         "bégonia"@fr,
         "Begonia"@it ;
@@ -2889,6 +2929,8 @@ psm:42 a cube:Observation ;
 
 psm:43 a cube:Observation ;
     schema:identifier "FFDDDA7D-B340-473C-94F4-841272B602FA"^^xsd:ID ;
+    schema:isPartOf psm:131,
+        psm:266 ;
     schema:name "Jostabeere"@de,
         "josta"@fr,
         "Josta"@it ;
@@ -2913,6 +2955,8 @@ psm:45 a cube:Observation ;
 
 psm:46 a cube:Observation ;
     schema:identifier "DAF00AE7-5272-4E07-9A66-E9F9BD8FEE43"^^xsd:ID ;
+    schema:isPartOf psm:145,
+        psm:310 ;
     schema:name "Blaudistel"@de,
         "chardon bleu"@fr,
         "Cardo azzurro"@it ;
@@ -2974,6 +3018,8 @@ psm:51 a cube:Observation ;
 
 psm:52 a cube:Observation ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926"^^xsd:ID ;
+    schema:isPartOf psm:210,
+        psm:303 ;
     schema:name "Wintertriticale"@de,
         "Triticale d'automne"@fr,
         "Triticale autunnale"@it ;
@@ -3036,6 +3082,8 @@ psm:58 a cube:Observation ;
 
 psm:59 a cube:Observation ;
     schema:identifier "C026CB2D-39B4-4FDF-AD04-FBA22AD2B4F1"^^xsd:ID ;
+    schema:isPartOf psm:163,
+        psm:197 ;
     schema:name "Sommergerste"@de,
         "orge de printemps"@fr,
         "Orzo primaverile"@it ;
@@ -3044,6 +3092,8 @@ psm:59 a cube:Observation ;
 
 psm:6 a cube:Observation ;
     schema:identifier "A21391C3-A1A3-4472-8AA1-56449FB56B36"^^xsd:ID ;
+    schema:isPartOf psm:16,
+        psm:72 ;
     schema:name "Kirschlorbeer"@de,
         "laurier-cerise"@fr,
         "Lauro ceraso"@it ;
@@ -3075,6 +3125,8 @@ psm:62 a cube:Observation ;
 
 psm:63 a cube:Observation ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6"^^xsd:ID ;
+    schema:isPartOf psm:16,
+        psm:72 ;
     schema:name "Buchsbäume (Buxus)"@de,
         "buis (Buxus)"@fr,
         "Bosso (Buxus)"@it ;
@@ -3092,6 +3144,8 @@ psm:64 a cube:Observation ;
 
 psm:65 a cube:Observation ;
     schema:identifier "E8B23A5E-B65E-4DC8-977D-BD84F143A442"^^xsd:ID ;
+    schema:isPartOf psm:108,
+        psm:145 ;
     schema:name "Primeln"@de,
         "primevères"@fr,
         "Primule"@it ;
@@ -3144,6 +3198,8 @@ psm:7 a cube:Observation ;
 
 psm:70 a cube:Observation ;
     schema:identifier "D3D49C53-8EBC-4DAC-9C4C-B988AA162F7D"^^xsd:ID ;
+    schema:isPartOf psm:210,
+        psm:239 ;
     schema:name "Korn (Dinkel)"@de,
         "Épeautre"@fr,
         "Spelta"@it ;
@@ -3170,6 +3226,8 @@ psm:72 a cube:Observation ;
 
 psm:73 a cube:Observation ;
     schema:identifier "8B5A3E2B-2534-4FC0-84C5-685915165A77"^^xsd:ID ;
+    schema:isPartOf psm:27,
+        psm:316 ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
@@ -3214,6 +3272,8 @@ psm:77 a cube:Observation ;
 
 psm:78 a cube:Observation ;
     schema:identifier "C9DB1105-33C7-44E8-92BA-9BBE5BA2BB3F"^^xsd:ID ;
+    schema:isPartOf psm:128,
+        psm:163 ;
     schema:name "Sommerhafer"@de,
         "Avoine de printemps"@fr,
         "Avena primaverile"@it ;
@@ -3390,6 +3450,8 @@ psm:95 a cube:Observation ;
 
 psm:96 a cube:Observation ;
     schema:identifier "B4D50F5E-6028-493D-9B95-85CAE5DADF06"^^xsd:ID ;
+    schema:isPartOf psm:27,
+        psm:316 ;
     schema:name "Kartoffeln"@de,
         "pommes de terre"@fr,
         "Patate"@it ;
@@ -3407,6 +3469,8 @@ psm:97 a cube:Observation ;
 
 psm:98 a cube:Observation ;
     schema:identifier "E2A335E5-D797-46E7-9CE4-9CB3F301AAA2"^^xsd:ID ;
+    schema:isPartOf psm:145,
+        psm:310 ;
     schema:name "Gladiole"@de,
         "glaïeul"@fr,
         "Gladiolo"@it ;
