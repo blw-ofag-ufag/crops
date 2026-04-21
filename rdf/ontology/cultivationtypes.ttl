@@ -3135,12 +3135,90 @@ cultivationtype:1098 a owl:Class ;
 
 cultivationtype:1099 a owl:Class ;
     schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de,
-        "Roquette, 1 coupe (culture protégée)"@fr,
-        "Rucola, 1 taglio (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:278, cultivationtype:7 .
+        "Roquette (culture protégée)"@fr,
+        "Rucola (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:1113 .
 
 cultivationtype:1100 a owl:Class ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:278, cultivationtype:7 .
+    rdfs:subClassOf cultivationtype:1113 .
+
+cultivationtype:1101 a owl:Class ;
+    schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
+        "Autres grandes cultures, légumineuses"@fr,
+        "Altre colture campicole, leguminose"@it ;
+    rdfs:subClassOf cultivationtype:15 .
+
+cultivationtype:1102 a owl:Class ;
+    schema:name "Edelraute"@de,
+        "Génépi"@fr,
+        "Genepì"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1103 a owl:Class ;
+    schema:name "Salate, diverse, hoher Ertrag"@de,
+        "Salades, diverses, rendement élevé"@fr,
+        "Insalate, diverse, resa elevata"@it ;
+    rdfs:subClassOf cultivationtype:320 .
+
+cultivationtype:1104 a owl:Class ;
+    schema:name "Salate, diverse, mittlerer Ertrag"@de,
+        "Salades, diverses, rendement moyen"@fr,
+        "Insalate, diverse, resa media"@it ;
+    rdfs:subClassOf cultivationtype:320 .
+
+cultivationtype:1105 a owl:Class ;
+    schema:name "Wirz leicht"@de,
+        "Chou de Milan léger"@fr,
+        "Cavolo verza leggero"@it ;
+    rdfs:subClassOf cultivationtype:81 .
+
+cultivationtype:1106 a owl:Class ;
+    schema:name "Wirz schwer"@de,
+        "Chou de Milan lourd"@fr,
+        "Cavolo verza pesante"@it ;
+    rdfs:subClassOf cultivationtype:81 .
+
+cultivationtype:1107 a owl:Class ;
+    schema:name "Streue-, Torfland"@de,
+        "Surface à litière, tourbière"@fr,
+        "Terreno da strame, torbiera"@it ;
+    rdfs:subClassOf cultivationtype:8 .
+
+cultivationtype:1108 a owl:Class ;
+    schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de,
+        "Petites plantations de légumes divers en pleine terre"@fr,
+        "Piccole piantagioni di ortaggi diversi in pieno campo"@it ;
+    rdfs:subClassOf cultivationtype:24 .
+
+cultivationtype:1109 a owl:Class ;
+    schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de,
+        "Petites plantations en serre de légumes divers"@fr,
+        "Piccole piantagioni in serra di ortaggi diversi"@it ;
+    rdfs:subClassOf cultivationtype:23 .
+
+cultivationtype:1110 a owl:Class ;
+    schema:name "Bundzwiebeln, Frühjahr"@de,
+        "Oignons en botte, printemps"@fr,
+        "Cipollotti a mazzi, primavera"@it ;
+    rdfs:subClassOf cultivationtype:232 .
+
+cultivationtype:1111 a owl:Class ;
+    schema:name "Winterraps in 62a Nitrat-Projekt"@de,
+        "Colza d'automne en projet nitrate 62a"@fr,
+        "Colza autunnale in progetto nitrati 62a"@it ;
+    rdfs:subClassOf cultivationtype:494 .
+
+cultivationtype:1112 a owl:Class ;
+    schema:name "Tabak Burley"@de,
+        "Tabac Burley"@fr,
+        "Tabacco Burley"@it ;
+    rdfs:subClassOf cultivationtype:541 .
+
+cultivationtype:1113 a owl:Class ;
+    schema:name "Rucola (geschützter Anbau)"@de,
+        "Roquette (culture protégée)"@fr,
+        "Rucola (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:278 .
