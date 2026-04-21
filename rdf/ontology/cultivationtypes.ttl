@@ -141,7 +141,8 @@ cultivationtype:3 a owl:Class ;
 cultivationtype:4 a owl:Class ;
     schema:name "Reben"@de,
         "Vignobles"@fr,
-        "Vigna"@it ;
+        "Vigna"@it,
+        "Vines"@en ;
     rdfs:subClassOf :Cultivation ;
     owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
 
