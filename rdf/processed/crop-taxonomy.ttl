@@ -1648,6 +1648,13 @@ cultivationtype:331 a owl:Class ;
         "Romanesco"@it ;
     rdfs:subClassOf cultivationtype:324 .
 
+cultivationtype:334 a owl:Class ;
+    rdfs:label "Oregano"@de,
+        "Oregano"@en,
+        "origan"@fr,
+        "origano"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:335 a owl:Class ;
     rdfs:label "Paprika"@de,
         "poivron"@fr,
@@ -1665,7 +1672,8 @@ cultivationtype:35 a owl:Class ;
     rdfs:label "Gewürz- und Medizinalkräuter"@de,
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:22 ;
+    owl:unionOf ( cultivationtype:553 cultivationtype:706 ) .
 
 cultivationtype:36 a owl:Class ;
     rdfs:label "Zierkürbis"@de,

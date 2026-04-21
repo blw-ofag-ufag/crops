@@ -2808,7 +2808,7 @@ psm:333 a cube:Observation ;
         "forêt"@fr,
         "Bosco"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:901 .
 
 psm:334 a cube:Observation ;
     schema:identifier "0E2847EB-CEFD-4640-82EB-F09F3F1A5E13"^^xsd:ID ;
@@ -2817,7 +2817,7 @@ psm:334 a cube:Observation ;
         "origan"@fr,
         "origano"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:334 .
 
 psm:335 a cube:Observation ;
     schema:identifier "096444CD-43E6-41F9-8914-2E7DADA4C801"^^xsd:ID ;
