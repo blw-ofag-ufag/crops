@@ -288,6 +288,13 @@ cultivationtype:28 a owl:Class ;
         "Aronia nera"@it ;
     rdfs:subClassOf cultivationtype:471 .
 
+cultivationtype:30 a owl:Class ;
+    schema:name "Rosskastanie"@de,
+        "marronnier d'Inde"@fr,
+        "Ippocastano"@it ;
+    rdfs:subClassOf cultivationtype:402,
+        cultivationtype:72 .
+
 cultivationtype:31 a owl:Class ;
     schema:name "Pfirsich / Nektarine"@de,
         "pêcher / nectarine"@fr,
@@ -343,6 +350,12 @@ cultivationtype:41 a owl:Class ;
         "Pero / Nashi"@it ;
     rdfs:subClassOf cultivationtype:309 .
 
+cultivationtype:45 a owl:Class ;
+    schema:name "Fichte"@de,
+        "épicéa"@fr,
+        "Abete rosso"@it ;
+    rdfs:subClassOf cultivationtype:118 .
+
 cultivationtype:47 a owl:Class ;
     schema:name "Hülsenfrüchtler (Fabaceae)"@de,
         "fabacées (légumineuses)"@fr,
@@ -389,6 +402,13 @@ cultivationtype:58 a owl:Class ;
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
     rdfs:subClassOf cultivationtype:20 .
+
+cultivationtype:63 a owl:Class ;
+    schema:name "Buchsbäume (Buxus)"@de,
+        "buis (Buxus)"@fr,
+        "Bosso (Buxus)"@it ;
+    rdfs:subClassOf cultivationtype:402,
+        cultivationtype:72 .
 
 cultivationtype:66 a owl:Class ;
     schema:name "Meerrettich"@de,
@@ -562,6 +582,12 @@ cultivationtype:117 a owl:Class ;
         "Tuberina"@it ;
     rdfs:subClassOf cultivationtype:263 .
 
+cultivationtype:118 a owl:Class ;
+    schema:name "Nadelgehölze (Koniferen)"@de,
+        "conifères"@fr,
+        "Conifere"@it ;
+    rdfs:subClassOf cultivationtype:401 .
+
 cultivationtype:119 a owl:Class ;
     schema:name "Wassermelonen"@de,
         "pastèque"@fr,
@@ -573,6 +599,14 @@ cultivationtype:120 a owl:Class ;
         "polygonacées"@fr,
         "Poligonacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:122 a owl:Class ;
+    schema:name "Zypressengewächse"@de,
+        "Cupressaceae"@en,
+        "cupressacées"@fr,
+        "Cupressaceae"@it ;
+    rdfs:subClassOf cultivationtype:118,
+        cultivationtype:72 .
 
 cultivationtype:123 a owl:Class ;
     schema:name "Hagebutten"@de,
@@ -685,6 +719,13 @@ cultivationtype:152 a owl:Class ;
         "Crescione"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
+cultivationtype:153 a owl:Class ;
+    schema:name "Weihnachtsbäume"@de,
+        "arbres de Noël"@fr,
+        "Alberi di Natale"@it ;
+    rdfs:subClassOf cultivationtype:118,
+        cultivationtype:72 .
+
 cultivationtype:154 a owl:Class ;
     schema:name "Broccoli"@de,
         "brocoli"@fr,
@@ -733,6 +774,13 @@ cultivationtype:166 a owl:Class ;
         "courges (écorce non comestible)"@fr,
         "Zucche (buccia non commestibile)"@it ;
     rdfs:subClassOf cultivationtype:1093 .
+
+cultivationtype:167 a owl:Class ;
+    schema:name "Blautanne"@de,
+        "sapin bleu"@fr,
+        "Abete del Colorado"@it ;
+    rdfs:subClassOf cultivationtype:118,
+        cultivationtype:72 .
 
 cultivationtype:170 a owl:Class ;
     schema:name "Schwarze Johannisbeere"@de,
@@ -824,6 +872,12 @@ cultivationtype:202 a owl:Class ;
         "cardon"@fr,
         "Cardo"@it ;
     rdfs:subClassOf cultivationtype:95 .
+
+cultivationtype:204 a owl:Class ;
+    schema:name "Azaleen"@de,
+        "azalée"@fr,
+        "Azalee"@it ;
+    rdfs:subClassOf cultivationtype:403 .
 
 cultivationtype:205 a owl:Class ;
     schema:name "Römische Kamille"@de,
@@ -1284,6 +1338,12 @@ cultivationtype:328 a owl:Class ;
         "Lattuga da taglio"@it ;
     rdfs:subClassOf cultivationtype:103 .
 
+cultivationtype:329 a owl:Class ;
+    schema:name "Zierpflanzen"@de,
+        "culture ornementale"@fr,
+        "Coltivazione piante ornam."@it ;
+    rdfs:subClassOf :Cultivation .
+
 cultivationtype:331 a owl:Class ;
     schema:name "Romanesco"@de,
         "romanesco"@fr,
@@ -1301,6 +1361,32 @@ cultivationtype:400 a owl:Class ;
         "Baby-Leaf"@fr,
         "Baby-Leaf"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:401 a owl:Class ;
+    schema:name "Gehölze (ausserhalb Forst)"@de,
+        "plantes ligneuses (hors forêt)"@fr,
+        "Boschetti (al di fuori del bosco)"@it ;
+    rdfs:subClassOf cultivationtype:329 .
+
+cultivationtype:402 a owl:Class ;
+    schema:name "Laubgehölze"@de,
+        "feuillus"@fr,
+        "Latifoglie"@it ;
+    rdfs:subClassOf cultivationtype:401 .
+
+cultivationtype:403 a owl:Class ;
+    schema:name "Rhododendron"@de,
+        "rhododendron"@fr,
+        "Rododendro"@it ;
+    rdfs:subClassOf cultivationtype:402,
+        cultivationtype:72 .
+
+cultivationtype:404 a owl:Class ;
+    schema:name "Kirschlorbeer"@de,
+        "laurier-cerise"@fr,
+        "Lauro ceraso"@it ;
+    rdfs:subClassOf cultivationtype:402,
+        cultivationtype:72 .
 
 cultivationtype:469 a owl:Class ;
     schema:name "Freiland-Beeren"@de ;

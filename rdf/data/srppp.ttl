@@ -657,7 +657,7 @@ psm:118 a cube:Observation ;
         "conifères"@fr,
         "Conifere"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:118 .
 
 psm:119 a cube:Observation ;
     schema:identifier "09269926-BA07-42DC-BE9D-5B34658BDBF0"^^xsd:ID ;
@@ -704,7 +704,7 @@ psm:122 a cube:Observation ;
         "cupressacées"@fr,
         "Cupressaceae"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:122 .
 
 psm:123 a cube:Observation ;
     schema:identifier "EC349B29-6A2B-4E43-990F-C553D278DC0E"^^xsd:ID ;
@@ -1011,7 +1011,7 @@ psm:153 a cube:Observation ;
         "arbres de Noël"@fr,
         "Alberi di Natale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:153 .
 
 psm:154 a cube:Observation ;
     schema:identifier "B9323B4D-249D-4CF3-A5DF-4FDA2E66532F"^^xsd:ID ;
@@ -1075,7 +1075,7 @@ psm:16 a cube:Observation ;
         "feuillus"@fr,
         "Latifoglie"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:402 .
 
 psm:160 a cube:Observation ;
     schema:identifier "3EAC5420-E234-4AA5-8B46-6F9E8542C7AF"^^xsd:ID ;
@@ -1146,7 +1146,7 @@ psm:167 a cube:Observation ;
         "sapin bleu"@fr,
         "Abete del Colorado"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:167 .
 
 psm:168 a cube:Observation ;
     schema:identifier "49F7DA15-E241-4080-9D42-1523ECA834B5"^^xsd:ID ;
@@ -1174,7 +1174,7 @@ psm:17 a cube:Observation ;
         "plantes ligneuses (hors forêt)"@fr,
         "Boschetti (al di fuori del bosco)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:401 .
 
 psm:170 a cube:Observation ;
     schema:identifier "4E8A4BB8-3B5D-4695-B17C-F4C1202D5138"^^xsd:ID ;
@@ -1522,7 +1522,7 @@ psm:204 a cube:Observation ;
         "azalée"@fr,
         "Azalee"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:204 .
 
 psm:205 a cube:Observation ;
     schema:identifier "25DC9B01-CA06-426A-B743-C0D293447898"^^xsd:ID ;
@@ -1777,7 +1777,7 @@ psm:23 a cube:Observation ;
         "rhododendron"@fr,
         "Rododendro"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:403 .
 
 psm:230 a cube:Observation ;
     schema:identifier "8E6C3D3A-6D7A-4D82-94CC-E4F227CC1EB2"^^xsd:ID ;
@@ -2478,7 +2478,7 @@ psm:30 a cube:Observation ;
         "marronnier d'Inde"@fr,
         "Ippocastano"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:30 .
 
 psm:300 a cube:Observation ;
     schema:identifier "39D599AA-B93E-4AC2-970E-5A99A3113572"^^xsd:ID ;
@@ -2951,7 +2951,7 @@ psm:45 a cube:Observation ;
         "épicéa"@fr,
         "Abete rosso"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:45 .
 
 psm:46 a cube:Observation ;
     schema:identifier "DAF00AE7-5272-4E07-9A66-E9F9BD8FEE43"^^xsd:ID ;
@@ -3098,7 +3098,7 @@ psm:6 a cube:Observation ;
         "laurier-cerise"@fr,
         "Lauro ceraso"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:404 .
 
 psm:60 a cube:Observation ;
     schema:identifier "C69EBD93-43E5-457F-9CBE-EE1C04791274"^^xsd:ID ;
@@ -3131,7 +3131,7 @@ psm:63 a cube:Observation ;
         "buis (Buxus)"@fr,
         "Bosso (Buxus)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:63 .
 
 psm:64 a cube:Observation ;
     schema:identifier "E107FECF-24B6-43D7-B3E6-05C5C239EFBB"^^xsd:ID ;
