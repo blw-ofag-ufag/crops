@@ -3298,3 +3298,15 @@ cultivationtype:1126 a owl:Class ;
         "Pâturages peu intensifs"@fr,
         "Pascoli poco intensivi"@it ;
     rdfs:subClassOf cultivationtype:616 .
+
+cultivationtype:1127 a owl:Class ;
+    schema:name "Bundzwiebeln, Überwinterung"@de,
+        "Oignons en botte, hivernage"@fr,
+        "Cipollotti a mazzi, svernamento"@it ;
+    rdfs:subClassOf cultivationtype:232 .
+
+cultivationtype:1128 a owl:Class ;
+    schema:name "Erdbeeren mehrjährig"@de,
+        "Fraises pluriannuelles"@fr,
+        "Fragole pluriennali"@it ;
+    rdfs:subClassOf cultivationtype:223 .
