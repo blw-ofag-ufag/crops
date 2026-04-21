@@ -3222,3 +3222,78 @@ cultivationtype:1113 a owl:Class ;
         "Roquette (culture protégée)"@fr,
         "Rucola (coltura protetta)"@it ;
     rdfs:subClassOf cultivationtype:278 .
+
+cultivationtype:1114 a owl:Class ;
+    schema:name "Spinat, 1 Schnitt, nach Mitte April gesät"@de,
+        "Épinard, 1 coupe, semé après la mi-avril"@fr,
+        "Spinaci, 1 taglio, seminato dopo la metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1115 a owl:Class ;
+    schema:name "Spinat, 2 Schnitte, nach Mitte April gesät"@de,
+        "Épinard, 2 coupes, semé après la mi-avril"@fr,
+        "Spinaci, 2 tagli, seminato dopo la metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1116 a owl:Class ;
+    schema:name "Spinat, 2 Schnitte, vor Mitte April gesät"@de,
+        "Épinard, 2 coupes, semé avant la mi-avril"@fr,
+        "Spinaci, 2 tagli, seminato prima della metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1117 a owl:Class ;
+    schema:name "Spinat, Industrie, 1 Schnitt, vor Mitte April gesät"@de,
+        "Épinard d'industrie, 1 coupe, semé avant la mi-avril"@fr,
+        "Spinaci da industria, 1 taglio, seminato prima della metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1118 a owl:Class ;
+    schema:name "Bundzwiebeln, Sommer"@de,
+        "Oignons en botte, été"@fr,
+        "Cipollotti a mazzi, estate"@it ;
+    rdfs:subClassOf cultivationtype:232 .
+
+cultivationtype:1119 a owl:Class ;
+    schema:name "Spinat, Industrie, 1 Schnitt, nach Mitte April gesät"@de,
+        "Épinard d'industrie, 1 coupe, semé après la mi-avril"@fr,
+        "Spinaci da industria, 1 taglio, seminato dopo la metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1120 a owl:Class ;
+    schema:name "Spinat, Industrie, 2 Schnitte, vor Mitte April gesät"@de,
+        "Épinard d'industrie, 2 coupes, semé avant la mi-avril"@fr,
+        "Spinaci da industria, 2 tagli, seminato prima della metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1121 a owl:Class ;
+    schema:name "Spinat, Industrie, 2 Schnitte, nach Mitte April gesät"@de,
+        "Épinard d'industrie, 2 coupes, semé après la mi-avril"@fr,
+        "Spinaci da industria, 2 tagli, seminato dopo la metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1122 a owl:Class ;
+    schema:name "Spinat, 1 Schnitt, vor Mitte April gesät"@de,
+        "Épinard, 1 coupe, semé avant la mi-avril"@fr,
+        "Spinaci, 1 taglio, seminato prima della metà di aprile"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1123 a owl:Class ;
+    schema:name "Spinat (geschützter Anbau)"@de,
+        "Épinard (culture protégée)"@fr,
+        "Spinaci (coltura protetta)"@it ;
+    owl:intersectionOf ( 
+        cultivationtype:250 
+        cultivationtype:7 
+    ) .
+
+cultivationtype:1123 a owl:Class ;
+    schema:name "Frühjahrsschnitt vor Wiesenumbruch"@de,
+        "Coupe de printemps avant retournement de la prairie"@fr,
+        "Taglio primaverile prima della lavorazione del prato"@it ;
+    rdfs:subClassOf cultivationtype:601 .
+
+cultivationtype:1124 a owl:Class ;
+    schema:name "Kabis Lager"@de,
+        "Chou pommé de garde"@fr,
+        "Cavolo a testa da conservazione"@it ;
+    rdfs:subClassOf cultivationtype:81 .
