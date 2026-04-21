@@ -466,7 +466,7 @@ psm:1 a cube:Observation ;
         "plantes ornementales annuelles et bisannuelles"@fr,
         "Piante ornamentali annuali e biennali"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:405 .
 
 psm:10 a cube:Observation ;
     schema:identifier "9C6CEE37-8105-4E48-9CA4-11BA3AB556FB"^^xsd:ID ;
@@ -477,7 +477,7 @@ psm:10 a cube:Observation ;
         "gerbera"@fr,
         "Gerbera"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:406 .
 
 psm:100 a cube:Observation ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA"^^xsd:ID ;
@@ -497,7 +497,7 @@ psm:101 a cube:Observation ;
         "cyclamen"@fr,
         "Ciclamino"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:101 .
 
 psm:102 a cube:Observation ;
     schema:identifier "9F6AE17C-0BE1-457A-B780-D408BCD333BF"^^xsd:ID ;
@@ -559,7 +559,7 @@ psm:108 a cube:Observation ;
         "plantes en pot et en container"@fr,
         "Pianta in vaso e in container"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:108 .
 
 psm:109 a cube:Observation ;
     schema:identifier "2C8A4414-AD7F-4708-9C58-BF1969131693"^^xsd:ID ;
@@ -838,7 +838,7 @@ psm:136 a cube:Observation ;
         "dahlia"@fr,
         "Dalie"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:136 .
 
 psm:137 a cube:Observation ;
     schema:identifier "AE97719E-9D0F-425C-BCD7-0F5D84092113"^^xsd:ID ;
@@ -929,7 +929,7 @@ psm:145 a cube:Observation ;
         "cultures florales et plantes vertes"@fr,
         "Colture da fiore e piante verdi"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:145 .
 
 psm:146 a cube:Observation ;
     schema:identifier "7870FD70-C44A-4788-ABEA-FB673A5FD106"^^xsd:ID ;
@@ -1030,7 +1030,7 @@ psm:155 a cube:Observation ;
         "géranium"@fr,
         "Geranio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:155 .
 
 psm:156 a cube:Observation ;
     schema:identifier "516862FD-DCB0-42BF-8E18-ADA820B1DB90"^^xsd:ID ;
@@ -1423,7 +1423,7 @@ psm:195 a cube:Observation ;
         "jacinthe"@fr,
         "Giacinto"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:195 .
 
 psm:196 a cube:Observation ;
     schema:identifier "6D06A7F9-DF91-4BB5-84B8-FB877C211E66"^^xsd:ID ;
@@ -1459,7 +1459,7 @@ psm:199 a cube:Observation ;
         "gazon d'ornement et terrains de sport"@fr,
         "Tappeti erbosi e terreni sportivi"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:199 .
 
 psm:2 a cube:Observation ;
     schema:identifier "0106A8DF-6CDF-4E18-8F46-3D9E1D52D0E5"^^xsd:ID ;
@@ -1622,7 +1622,7 @@ psm:214 a cube:Observation ;
         "tulipe"@fr,
         "Tulipano"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:214 .
 
 psm:215 a cube:Observation ;
     schema:identifier "02BF379A-E526-422A-952B-3B0CD995F8C1"^^xsd:ID ;
@@ -1640,7 +1640,7 @@ psm:216 a cube:Observation ;
         "plantes vivaces"@fr,
         "Arbusti"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:216 .
 
 psm:217 a cube:Observation ;
     schema:identifier "F4479311-1516-49F1-95BA-E232030F9AAC"^^xsd:ID ;
@@ -1649,7 +1649,7 @@ psm:217 a cube:Observation ;
         "arbustes d'ornement (hors forêt)"@fr,
         "Arbusti ornamentali (al di fuori della foresta)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:217 .
 
 psm:218 a cube:Observation ;
     schema:identifier "F718EA3C-F363-4DB2-BDF6-2D6236706822"^^xsd:ID ;
@@ -1704,7 +1704,7 @@ psm:222 a cube:Observation ;
         "euphorbe"@fr,
         "Euforbia"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:222 .
 
 psm:223 a cube:Observation ;
     schema:identifier "CCCD6417-ED96-4A46-82EF-2EC848F719A7"^^xsd:ID ;
@@ -1859,7 +1859,7 @@ psm:238 a cube:Observation ;
         "oeillet"@fr,
         "Garofani"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:238 .
 
 psm:239 a cube:Observation ;
     schema:identifier "82376115-14E2-449A-8DFA-F8119476FE3F"^^xsd:ID ;
@@ -1939,7 +1939,7 @@ psm:246 a cube:Observation ;
         "rosier"@fr,
         "Rose"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:246 .
 
 psm:247 a cube:Observation ;
     schema:identifier "A0C29069-5DBA-4E89-B7F9-4C556C272821"^^xsd:ID ;
@@ -2020,7 +2020,7 @@ psm:254 a cube:Observation ;
         "iris"@fr,
         "Iris"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:246 .
 
 psm:255 a cube:Observation ;
     schema:identifier "AC0240B5-B610-4D7C-8704-AA8E182821AC"^^xsd:ID ;
@@ -2588,7 +2588,7 @@ psm:310 a cube:Observation ;
         "fleurs coupées"@fr,
         "Fiori recisi"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:310 .
 
 psm:311 a cube:Observation ;
     schema:identifier "1A1D511B-4ABD-44F2-8BB5-55192F5310D2"^^xsd:ID ;
@@ -2606,7 +2606,7 @@ psm:312 a cube:Observation ;
         "tubercules de fleurs"@fr,
         "Radici tuberose floreali"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:312 .
 
 psm:313 a cube:Observation ;
     schema:identifier "1575BC21-D089-4248-99A6-676F14E1309F"^^xsd:ID ;
@@ -2844,7 +2844,7 @@ psm:34 a cube:Observation ;
         "bégonia"@fr,
         "Begonia"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:34 .
 
 psm:35 a cube:Observation ;
     schema:identifier "31A0539F-1D4C-4BCF-876F-215CEBC4C864"^^xsd:ID ;
@@ -2862,7 +2862,7 @@ psm:36 a cube:Observation ;
         "courge d'ornement"@fr,
         "Zucca ornamentale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:36 .
 
 psm:37 a cube:Observation ;
     schema:identifier "0A88EFE2-B85E-4BF7-9C38-AEE8CB2BFE42"^^xsd:ID ;
@@ -2898,7 +2898,7 @@ psm:4 a cube:Observation ;
         "bulbes des fleurs"@fr,
         "Bulbi di fiori"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:329 .
 
 psm:40 a cube:Observation ;
     schema:identifier "FE69D926-4BE1-4C67-840E-30C3D299442E"^^xsd:ID ;
@@ -2961,7 +2961,7 @@ psm:46 a cube:Observation ;
         "chardon bleu"@fr,
         "Cardo azzurro"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:46 .
 
 psm:47 a cube:Observation ;
     schema:identifier "DB4E4C8B-016C-4C31-8DC5-587A9F1F8FFD"^^xsd:ID ;
@@ -3107,7 +3107,7 @@ psm:60 a cube:Observation ;
         "fleurs estivales"@fr,
         "Fiori estivi"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:60 .
 
 psm:61 a cube:Observation ;
     schema:identifier "C6EBB3D7-3050-4C36-BBC2-CBD20D6B9E56"^^xsd:ID ;
@@ -3150,7 +3150,7 @@ psm:65 a cube:Observation ;
         "primevères"@fr,
         "Primule"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:65 .
 
 psm:66 a cube:Observation ;
     schema:identifier "EACDD832-D1CD-479C-973F-CD0DB6A9FBC3"^^xsd:ID ;
@@ -3222,7 +3222,7 @@ psm:72 a cube:Observation ;
         "arbres et arbustes (hors fôret)"@fr,
         "Alberi e arbusti (al di fuori della foresta)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:72 .
 
 psm:73 a cube:Observation ;
     schema:identifier "8B5A3E2B-2534-4FC0-84C5-685915165A77"^^xsd:ID ;
@@ -3475,7 +3475,7 @@ psm:98 a cube:Observation ;
         "glaïeul"@fr,
         "Gladiolo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:98 .
 
 psm:99 a cube:Observation ;
     schema:identifier "DB0DCB7D-CA9F-454A-8398-606F066FBF4F"^^xsd:ID ;
