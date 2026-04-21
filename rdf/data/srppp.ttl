@@ -1023,7 +1023,7 @@ psm:156 a cube:Observation ;
         "jeune vigne"@fr,
         "Ceppi giovani"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:156 .
 
 psm:157 a cube:Observation ;
     schema:identifier "4D799EC6-1483-4D65-90EA-8DDB6A4166CA"^^xsd:ID ;
@@ -1225,7 +1225,7 @@ psm:177 a cube:Observation ;
         "vigne"@fr,
         "Vite"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:177 .
+    :cultivationType cultivationtype:4 .
 
 psm:178 a cube:Observation ;
     schema:identifier "6569FC94-60C5-4608-8926-D76D2009B284"^^xsd:ID ;
@@ -1589,7 +1589,7 @@ psm:213 a cube:Observation ;
         "vigne en production"@fr,
         "Vite in produzione"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:213 .
 
 psm:214 a cube:Observation ;
     schema:identifier "FF0DF95C-A3A9-47EE-95FA-00FCB428A4ED"^^xsd:ID ;

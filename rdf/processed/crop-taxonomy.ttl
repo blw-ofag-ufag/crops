@@ -785,6 +785,12 @@ cultivationtype:154 a owl:Class ;
         "Broccoli"@it ;
     rdfs:subClassOf cultivationtype:324 .
 
+cultivationtype:156 a owl:Class ;
+    rdfs:label "Jungreben"@de,
+        "jeune vigne"@fr,
+        "Ceppi giovani"@it ;
+    rdfs:subClassOf cultivationtype:4 .
+
 cultivationtype:157 a owl:Class ;
     rdfs:label "Bohnenkraut"@de,
         "sarriette"@fr,
@@ -977,6 +983,12 @@ cultivationtype:211 a owl:Class ;
         "rhubarbe"@fr,
         "Rabarbaro"@it ;
     rdfs:subClassOf cultivationtype:120 .
+
+cultivationtype:213 a owl:Class ;
+    rdfs:label "Ertragsreben"@de,
+        "vigne en production"@fr,
+        "Vite in produzione"@it ;
+    rdfs:subClassOf cultivationtype:4 .
 
 cultivationtype:215 a owl:Class ;
     rdfs:label "Erbsen mit Hülsen"@de,
