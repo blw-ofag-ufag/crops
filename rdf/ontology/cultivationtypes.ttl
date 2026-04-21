@@ -3100,11 +3100,6 @@ cultivationtype:1094 a owl:Class ;
         cultivationtype:7 
     ) .
 
-cultivationtype:1094 a owl:Class ;
-    schema:name "Wenig intensiv genutzte Weiden"@de,
-        "Pâturages peu intensifs"@fr,
-        "Pascoli poco intensivi"@it ;
-    rdfs:subClassOf cultivationtype:616 .
 
 cultivationtype:1095 a owl:Class ;
     schema:name "Süsslupinen"@de,
@@ -3297,3 +3292,9 @@ cultivationtype:1125 a owl:Class ;
         "Chou pommé de garde"@fr,
         "Cavolo a testa da conservazione"@it ;
     rdfs:subClassOf cultivationtype:81 .
+
+cultivationtype:1126 a owl:Class ;
+    schema:name "Wenig intensiv genutzte Weiden"@de,
+        "Pâturages peu intensifs"@fr,
+        "Pascoli poco intensivi"@it ;
+    rdfs:subClassOf cultivationtype:616 .

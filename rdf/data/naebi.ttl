@@ -1681,7 +1681,7 @@ naebi:198 a cube:Observation ;
     :P2O5 0.57 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cultivationtype:1094 .
+    :cultivationType cultivationtype:1126 .
 
 naebi:199 a cube:Observation ;
     schema:identifier "CROP_QUINO"^^xsd:string ;
