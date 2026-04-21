@@ -506,7 +506,7 @@ psm:102 a cube:Observation ;
         "Soja"@fr,
         "Soia"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:528 .
 
 psm:103 a cube:Observation ;
     schema:identifier "9CA61204-7EA7-4F2F-BAD3-BD02EDD6A829"^^xsd:ID ;
@@ -1376,7 +1376,7 @@ psm:190 a cube:Observation ;
         "Colza d'automne"@fr,
         "Colza autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:190 .
 
 psm:191 a cube:Observation ;
     schema:identifier "5DF3AB4D-7CAC-4112-90D9-67BD80EC5E96"^^xsd:ID ;
@@ -1604,7 +1604,7 @@ psm:212 a cube:Observation ;
         "Sorgho commun"@fr,
         "Sorgo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:549 .
 
 psm:213 a cube:Observation ;
     schema:identifier "293D431D-8501-4D41-A0E5-F1A5AD59C8B6"^^xsd:ID ;
@@ -1840,7 +1840,7 @@ psm:236 a cube:Observation ;
         "Tabac"@fr,
         "Tabacco"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:541 .
 
 psm:237 a cube:Observation ;
     schema:identifier "80395E92-C39B-45D9-91AC-AB7E6DCAC3DB"^^xsd:ID ;
@@ -2337,7 +2337,7 @@ psm:286 a cube:Observation ;
         "Colza"@fr,
         "Colza"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:494 .
 
 psm:287 a cube:Observation ;
     schema:identifier "D51188F1-9F8F-46E6-8F5B-550A7D45A4BE"^^xsd:ID ;

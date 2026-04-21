@@ -402,7 +402,7 @@ cultivationtype:67 a owl:Class ;
         "Erbette da cucina"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
-cultivationtype:68 a cube:Observation ;
+cultivationtype:68 a owl:Class ;
     schema:name "Luzerne"@de,
         "Luzerne"@fr,
         "Erba medica"@it ;
@@ -438,7 +438,7 @@ cultivationtype:76 a owl:Class ;
         "bietola a coste"@it ;
     rdfs:subClassOf cultivationtype:321 .
 
-cultivationtype:79 a cube:Observation ;
+cultivationtype:79 a owl:Class ;
     schema:name "Grasbestände zur Saatgutproduktion"@de,
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
@@ -565,7 +565,7 @@ cultivationtype:115 a owl:Class ;
         "Rapa di Brassica napus"@it ;
     rdfs:subClassOf cultivationtype:247 .
 
-cultivationtype:116 a cube:Observation ;
+cultivationtype:116 a owl:Class ;
     schema:name "Wiesen und Weiden"@de,
         "Prairies et pâturages"@fr,
         "Prati e pascoli"@it ;
@@ -749,7 +749,7 @@ cultivationtype:166 a owl:Class ;
         "Zucche (buccia non commestibile)"@it ;
     rdfs:subClassOf cultivationtype:1093 .
 
-cultivationtype:169 a cube:Observation ;
+cultivationtype:169 a owl:Class ;
     schema:name "Chinaschilf"@de,
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
@@ -786,7 +786,7 @@ cultivationtype:179 a owl:Class ;
         "Indivia"@it ;
     rdfs:subClassOf cultivationtype:141 .
 
-cultivationtype:182 a cube:Observation ;
+cultivationtype:182 a owl:Class ;
     schema:name "Kleegrasmischung (Kunstwiese)"@de,
         "mélange trèfles-graminées (prairie arificielle)"@fr,
         "Miscela trifoglio-graminacee (prati artificiali)"@it ;
@@ -815,6 +815,12 @@ cultivationtype:189 a owl:Class ;
         "maïs sucré"@fr,
         "Mais dolce"@it ;
     rdfs:subClassOf cultivationtype:57 .
+
+cultivationtype:190 a owl:Class ;
+    schema:name "Winterraps"@de,
+        "Colza d'automne"@fr,
+        "Colza autunnale"@it ;
+    rdfs:subClassOf cultivationtype:494 .
 
 cultivationtype:191 a owl:Class ;
     schema:name "Erbsen"@de,
@@ -1212,7 +1218,7 @@ cultivationtype:304 a owl:Class ;
         "Varietà particolari di pomodoro"@it ;
     rdfs:subClassOf cultivationtype:85 .
 
-cultivationtype:305 a cube:Observation ;
+cultivationtype:305 a owl:Class ;
     schema:name "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
@@ -1318,7 +1324,7 @@ cultivationtype:335 a owl:Class ;
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
 
-cultivationtype:468 a cube:Observation ;
+cultivationtype:468 a owl:Class ;
     schema:name "Ackerbohne"@de,
         "féverole"@fr,
         "Fava"@it ;
