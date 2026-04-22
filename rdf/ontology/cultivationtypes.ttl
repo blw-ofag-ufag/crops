@@ -120,7 +120,8 @@ cultivationtype:1 a owl:Class ;
         "Superficie coltiva"@it ;
     schema:alternateName "Allg. Feldbau"@de ,
         "Ackerkulturen"@de,
-        "Domaine app. grande culture"@fr ;
+        "Domaine app. grande culture"@fr,
+        "Grande culture en général"@fr ;
     schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
     rdfs:subClassOf :Cultivation .
 
