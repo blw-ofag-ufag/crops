@@ -1629,6 +1629,14 @@ cultivationtype:407 a owl:Class ;
         "Bulbi di fiori"@it ;
     rdfs:subClassOf cultivationtype:329 .
 
+cultivationtype:408 a owl:Class ;
+    schema:name "Anemone"@de,
+        "anémone"@fr,
+        "Anemone"@it ;
+    rdfs:subClassOf cultivationtype:145,
+        cultivationtype:310,
+        cultivationtype:312 .
+
 cultivationtype:468 a owl:Class ;
     schema:name "Ackerbohne"@de,
         "féverole"@fr,

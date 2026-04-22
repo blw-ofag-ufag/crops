@@ -2371,7 +2371,7 @@ psm:29 a cube:Observation ;
         "anémone"@fr,
         "Anemone"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:408 .
 
 psm:290 a cube:Observation ;
     schema:identifier "EB0C465C-50B7-4DC0-914B-ABE4C284A907"^^xsd:ID ;
