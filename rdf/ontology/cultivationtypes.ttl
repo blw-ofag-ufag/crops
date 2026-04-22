@@ -1576,7 +1576,8 @@ cultivationtype:526 a owl:Class ;
     schema:name "Sommerraps zur Speiseölgewinnung"@de,
         "Colza de printemps destiné à la fabrication d’huile comestible"@fr,
         "Colza primaverile per l’estrazione di olio commestibile"@it ;
-    rdfs:subClassOf cultivationtype:496 .
+    rdfs:subClassOf cultivationtype:496,
+        cultivationtype:1039 .
 
 cultivationtype:527 a owl:Class ;
     schema:name "Winterraps zur Speiseölgewinnung"@de,
@@ -1921,7 +1922,8 @@ cultivationtype:590 a owl:Class ;
     schema:name "Sommerraps als nachwachsender Rohstoff"@de,
         "Colza de printemps comme matière première renouvelable"@fr,
         "Colza primaverile quale materia prima rinnovabile"@it ;
-    rdfs:subClassOf cultivationtype:495 .
+    rdfs:subClassOf cultivationtype:495,
+        cultivationtype:1039 .
 
 cultivationtype:591 a owl:Class ;
     schema:name "Winterraps als nachwachsender Rohstoff"@de,
