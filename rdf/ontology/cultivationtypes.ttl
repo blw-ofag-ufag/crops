@@ -3677,3 +3677,111 @@ cultivationtype:1138 a owl:Class ;
         "Raisins de table, rendement élevé"@fr,
         "Uva da tavola, resa elevata"@it ;
     rdfs:subClassOf cultivationtype:4 .
+
+cultivationtype:1139 a owl:Class ;
+    schema:name "Brennnessel"@de,
+        "Ortie"@fr,
+        "Ortica"@it ;
+    schema:alternateName "Brennessel"@de ;
+    rdfs:subClassOf cultivationtype:35 .
+
+cultivationtype:1140 a owl:Class ;
+    schema:name "Tafeltrauben (ohne Ertragsspezifizierung)"@de,
+        "Raisins de table (sans spécification de rendement)"@fr,
+        "Uva da tavola (senza specifica di resa)"@it ;
+    rdfs:subClassOf cultivationtype:4 .
+
+cultivationtype:1141 a owl:Class ;
+    schema:name "Tomaten, Bodenkultur (geschützter Anbau)"@de,
+        "Tomates, culture au sol (culture protégée)"@fr,
+        "Pomodori, coltura su suolo (coltura protetta)"@it ;
+    owl:intersectionOf ( cultivationtype:811 cultivationtype:85 ) .
+
+cultivationtype:1142 a owl:Class ;
+    schema:name "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de,
+        "Tomates, culture au sol, rendement élevé (culture protégée)"@fr,
+        "Pomodori, coltura su suolo, resa elevata (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:1141 .
+
+cultivationtype:1143 a owl:Class ;
+    schema:name "Tomaten, Bodenkulturen, tiefer Ertrag (geschützter Anbau)"@de,
+        "Tomates, culture au sol, faible rendement (culture protégée)"@fr,
+        "Pomodori, colture su suolo, resa bassa (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:1141 .
+
+cultivationtype:1144 a owl:Class ;
+    schema:name "Tomaten, Bodenkulturen, mittlerer Ertrag (geschützter Anbau)"@de,
+        "Tomates, culture au sol, rendement moyen (culture protégée)"@fr,
+        "Pomodori, colture su suolo, resa media (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:1141 .
+
+cultivationtype:1145 a owl:Class ;
+    schema:name "Tomaten, Bodenkultur, sehr hoher Ertrag (geschützter Anbau)"@de,
+        "Tomates, culture au sol, rendement très élevé (culture protégée)"@fr,
+        "Pomodori, coltura su suolo, resa molto elevata (coltura protetta)"@it ;
+    rdfs:subClassOf cultivationtype:1141 .
+
+cultivationtype:1146 a owl:Class ;
+    schema:name "Äugstlen"@de,
+        "Äugstlen (utilisation automnale)"@fr,
+        "Äugstlen (utilizzazione autunnale)"@it ;
+    schema:description "Äugstlen: Entspricht der Herbstnutzung von Kunstwiesen, welche nach einer Hauptkultur angesät wurden."@de,
+        "Äugstlen : Correspond à l'utilisation automnale des prairies artificielles semées après une culture principale."@fr,
+        "Äugstlen: Corrisponde all'utilizzazione autunnale dei prati artificiali seminati dopo una coltura principale."@it ;
+    rdfs:subClassOf cultivationtype:601 .
+
+cultivationtype:1147 a owl:Class ;
+    schema:name "Herbst- und Mairüben"@de,
+        "Navets d'automne et de mai"@fr,
+        "Rape autunnali e primaverili"@it ;
+    schema:alternateName "Rüben Herbst-, Mai-"@de ;
+    rdfs:subClassOf cultivationtype:56 .
+
+cultivationtype:1148 a owl:Class ;
+    schema:name "Cima di Rapa"@de,
+        "Cima di rapa"@fr,
+        "Cima di rapa"@it ;
+    rdfs:subClassOf cultivationtype:48 .
+
+cultivationtype:1149 a owl:Class ;
+    schema:name "Bibernelle"@de,
+        "Pimprenelle"@fr,
+        "Pimpinella"@it ;
+    schema:alternateName "Pimpinelle"@de ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1150 a owl:Class ;
+    schema:name "Ehrenpreis"@de,
+        "Véronique"@fr,
+        "Veronica"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1151 a owl:Class ;
+    schema:name "Walnüsse < 185 Bäume/ha"@de,
+        "Noyers < 185 arbres/ha"@fr,
+        "Noci < 185 alberi/ha"@it ;
+    rdfs:subClassOf cultivationtype:252 .
+
+cultivationtype:1152 a owl:Class ;
+    schema:name "Walnüsse ≥ 185 Bäume/ha"@de,
+        "Noyers ≥ 185 arbres/ha"@fr,
+        "Noci ≥ 185 alberi/ha"@it ;
+    rdfs:subClassOf cultivationtype:252 .
+
+cultivationtype:1153 a owl:Class ;
+    schema:name "Naturwiese mittelintensiv"@de,
+        "Prairie naturelle moyennement intensive"@fr,
+        "Prato naturale medio-intensivo"@it ;
+    rdfs:subClassOf cultivationtype:2 .
+
+cultivationtype:1154 a owl:Class ;
+    schema:name "Kunstwiese mittelintensiv"@de,
+        "Prairie artificielle moyennement intensive"@fr,
+        "Prato artificiale medio-intensivo"@it ;
+    rdfs:subClassOf cultivationtype:601 .
+
+cultivationtype:1155 a owl:Class ;
+    schema:name "Naturwiese intensiv"@de,
+        "Prairie naturelle intensive"@fr,
+        "Prato naturale intensivo"@it ;
+    rdfs:subClassOf cultivationtype:2 .
