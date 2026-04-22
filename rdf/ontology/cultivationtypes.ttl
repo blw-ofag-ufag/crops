@@ -443,7 +443,7 @@ cultivationtype:79 a owl:Class ;
     schema:name "Grasbestände zur Saatgutproduktion"@de,
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
-        rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:81 a owl:Class ;
     schema:name "Kopfkohle"@de,
