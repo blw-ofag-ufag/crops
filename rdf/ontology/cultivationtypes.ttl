@@ -3785,3 +3785,21 @@ cultivationtype:1155 a owl:Class ;
         "Prairie naturelle intensive"@fr,
         "Prato naturale intensivo"@it ;
     rdfs:subClassOf cultivationtype:2 .
+
+cultivationtype:1156 a owl:Class ;
+    schema:name "Winterspinat, 1 Schnitt"@de,
+        "Épinard d'hiver, 1 coupe"@fr,
+        "Spinaci invernali, 1 taglio"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1157 a owl:Class ;
+    schema:name "Winterspinat, 2 Schnitte"@de,
+        "Épinard d'hiver, 2 coupes"@fr,
+        "Spinaci invernali, 2 tagli"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1158 a owl:Class ;
+    schema:name "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de,
+        "Autres baies arbustives (aronia, sureau, goji,…)"@fr,
+        "Bacche arbustive alternative (aronia, sambuco, goji,…)"@it ;
+    rdfs:subClassOf cultivationtype:471 .
