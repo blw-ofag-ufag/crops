@@ -3804,3 +3804,63 @@ cultivationtype:1158 a owl:Class ;
         "Autres baies arbustives (aronia, sureau, goji,…)"@fr,
         "Bacche arbustive alternative (aronia, sambuco, goji,…)"@it ;
     rdfs:subClassOf cultivationtype:471 .
+
+cultivationtype:1159 a owl:Class ;
+    schema:name "Broccoli, Verarbeitung"@de,
+        "Brocoli d'industrie"@fr,
+        "Broccoli da industria"@it ;
+    rdfs:subClassOf cultivationtype:154 .
+
+cultivationtype:1160 a owl:Class ;
+    schema:name "Winterspinat, Industrie, 1 Schnitt"@de,
+        "Épinard d'hiver d'industrie, 1 coupe"@fr,
+        "Spinaci invernali da industria, 1 taglio"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1161 a owl:Class ;
+    schema:name "Winterspinat, Industrie, 2 Schnitte"@de,
+        "Épinard d'hiver d'industrie, 2 coupes"@fr,
+        "Spinaci invernali da industria, 2 tagli"@it ;
+    rdfs:subClassOf cultivationtype:250 .
+
+cultivationtype:1162 a owl:Class ;
+    schema:name "Schafgarbe"@de,
+        "Achillée millefeuille"@fr,
+        "Achillea"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
+cultivationtype:1163 a owl:Class ;
+    schema:name "Zucchetti, gepflanzt, frühe Kurzkultur"@de,
+        "Courgette, plantée, culture courte précoce"@fr,
+        "Zucchine, piantate, coltura breve precoce"@it ;
+    rdfs:subClassOf cultivationtype:225 .
+
+cultivationtype:1164 a owl:Class ;
+    schema:name "Patisson, Kürbis (geschützter Anbau)"@de,
+        "Pâtisson, courge (culture protégée)"@fr,
+        "Patisson, zucca (coltura protetta)"@it ;
+    owl:intersectionOf ( cultivationtype:1093 cultivationtype:7 ) .
+
+cultivationtype:1165 a owl:Class ;
+    schema:name "Zucchetti, gepflanzt, Sommer und Herbst"@de,
+        "Courgette, plantée, été et automne"@fr,
+        "Zucchine, piantate, estate e autunno"@it ;
+    rdfs:subClassOf cultivationtype:225 .
+
+cultivationtype:1166 a owl:Class ;
+    schema:name "Zucchetti (geschützter Anbau)"@de,
+        "Courgette (culture protégée)"@fr,
+        "Zucchine (coltura protetta)"@it ;
+    owl:intersectionOf ( cultivationtype:225 cultivationtype:7 ) .
+
+cultivationtype:1167 a owl:Class ;
+    schema:name "Patisson, Kürbis"@de,
+        "Pâtisson, courge"@fr,
+        "Patisson, zucca"@it ;
+    rdfs:subClassOf cultivationtype:1093 .
+
+cultivationtype:1168 a owl:Class ;
+    schema:name "Zucchetti, gesät, Sommer und Herbst"@de,
+        "Courgette, semée, été et automne"@fr,
+        "Zucchine, seminate, estate e autunno"@it ;
+    rdfs:subClassOf cultivationtype:225 .
