@@ -1866,7 +1866,9 @@ cultivationtype:566 a owl:Class ;
 cultivationtype:567 a owl:Class ;
     schema:name "Saflor"@de,
         "Carthame"@fr,
-        "Cartamo"@it ;
+        "Cartamo"@it,
+        "Safflower"@en ;
+    schema:alternateName "Färberdistel"@de ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:568 a owl:Class ;
