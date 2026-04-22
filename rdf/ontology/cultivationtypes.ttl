@@ -3164,7 +3164,7 @@ cultivationtype:1051 a owl:Class ;
 
 cultivationtype:1052 a owl:Class ;
     schema:name "Kleesamenproduktion"@de, "Production de semences de trèfle"@fr, "Produzione di sementi di trifoglio"@it ;
-    rdfs:subClassOf cultivationtype:631 .
+    rdfs:subClassOf cultivationtype:15 .
 
 cultivationtype:1053 a owl:Class ;
     schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de, "Engrais vert légumineuses (légumes de plein champ)"@fr, "Sovescio leguminose (ortaggi di pieno campo)"@it ;
