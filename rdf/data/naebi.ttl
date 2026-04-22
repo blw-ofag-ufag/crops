@@ -2538,7 +2538,7 @@ naebi:269 a cube:Observation ;
     :P2O5 34.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1138 .
 
 naebi:27 a cube:Observation ;
     schema:identifier "CROP_BRNTL"^^xsd:string ;

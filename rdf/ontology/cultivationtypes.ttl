@@ -3364,3 +3364,9 @@ cultivationtype:1137 a owl:Class ;
         "Patates douces"@fr,
         "Patate dolci"@it ;
     rdfs:subClassOf cultivationtype:24 .
+
+cultivationtype:1138 a owl:Class ;
+    schema:name "Tafeltrauben, hoher Ertrag"@de,
+        "Raisins de table, rendement élevé"@fr,
+        "Uva da tavola, resa elevata"@it ;
+    rdfs:subClassOf cultivationtype:4 .
