@@ -523,7 +523,7 @@ psm:104 a cube:Observation ;
         "pavot"@fr,
         "Papavero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:104 .
 
 psm:105 a cube:Observation ;
     schema:identifier "33686F38-1E1A-4698-81E4-C40EE4494EF3"^^xsd:ID ;
@@ -820,7 +820,7 @@ psm:134 a cube:Observation ;
         "culture maraîchère en général"@fr,
         "Orticoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:22 .
 
 psm:135 a cube:Observation ;
     schema:identifier "B82B5C60-02CB-4B7A-B3D3-A4CA34A809C3"^^xsd:ID ;
@@ -883,7 +883,7 @@ psm:140 a cube:Observation ;
         "camérisier bleu"@fr,
         "Caprifoglio turchino"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:140 .
 
 psm:141 a cube:Observation ;
     schema:identifier "8DB1A579-6BAC-4DCB-8026-E79B65D3BD3A"^^xsd:ID ;
@@ -1102,7 +1102,7 @@ psm:162 a cube:Observation ;
         "pépinières forestières"@fr,
         "Vivai forestali"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:162 .
 
 psm:163 a cube:Observation ;
     schema:identifier "449A5380-96E3-4C3F-AB31-7CB3D0579561"^^xsd:ID ;
@@ -1118,7 +1118,7 @@ psm:164 a cube:Observation ;
     schema:name "allg. Weinbau"@de,
         "domaine app. vignes"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:4 .
 
 psm:165 a cube:Observation ;
     schema:identifier "56AF3EA3-01F4-4F10-B240-7EF4BE1C1CCE"^^xsd:ID ;
@@ -1201,7 +1201,7 @@ psm:172 a cube:Observation ;
         "Laurier"@fr,
         "Alloro"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:172 .
 
 psm:173 a cube:Observation ;
     schema:identifier "4DD550C5-15BB-4D52-98BD-6770972575F0"^^xsd:ID ;
@@ -1218,7 +1218,7 @@ psm:174 a cube:Observation ;
         "sorbier des oiseleurs"@fr,
         "Sorbo degli ucellatori"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:174 .
 
 psm:175 a cube:Observation ;
     schema:identifier "46901564-D096-4323-AE81-C93831AFEC64"^^xsd:ID ;
@@ -1686,7 +1686,7 @@ psm:220 a cube:Observation ;
         "Maïs"@fr,
         "Mais"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:497 .
 
 psm:221 a cube:Observation ;
     schema:identifier "C5188A42-9C79-4110-B1E8-AEE9D6078BEA"^^xsd:ID ;
@@ -1993,7 +1993,7 @@ psm:251 a cube:Observation ;
         "pommes de terre pour la production de plants"@fr,
         "Patate per la produzione di tuberi-seme"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:411 .
 
 psm:252 a cube:Observation ;
     schema:identifier "6D45EAF5-D29C-48AB-A212-91C67357E898"^^xsd:ID ;
@@ -2093,7 +2093,7 @@ psm:261 a cube:Observation ;
         "Orpin rose"@fr,
         "Rhodiola rosea"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:261 .
 
 psm:262 a cube:Observation ;
     schema:identifier "9650E36A-38F4-4375-9594-25785BACE1DC"^^xsd:ID ;
@@ -2148,7 +2148,7 @@ psm:267 a cube:Observation ;
         "Baies de Goji"@fr,
         "Bacche di Goji"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:267 .
 
 psm:268 a cube:Observation ;
     schema:identifier "730AACDC-B956-493D-8148-7520019CE0BC"^^xsd:ID ;
@@ -2328,7 +2328,7 @@ psm:285 a cube:Observation ;
         "arboriculture en général"@fr,
         "Frutticoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:5 .
 
 psm:286 a cube:Observation ;
     schema:identifier "E58E502E-BECD-44CB-96A2-3A6771D8A7B7"^^xsd:ID ;
@@ -2345,7 +2345,7 @@ psm:287 a cube:Observation ;
         "mélisse"@fr,
         "Melissa"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:287 .
 
 psm:288 a cube:Observation ;
     schema:identifier "D63D73AC-87B1-41F7-82AC-D1DFF12F6704"^^xsd:ID ;
@@ -2414,7 +2414,7 @@ psm:294 a cube:Observation ;
         "Cerfeuil tubéreux"@fr,
         "Cerfoglio bulboso"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:294 .
 
 psm:295 a cube:Observation ;
     schema:identifier "710CC0C8-B138-4B31-9975-4DA04AF67792"^^xsd:ID ;
@@ -2431,7 +2431,7 @@ psm:296 a cube:Observation ;
         "sylviculture en général"@fr,
         "Selvicoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:901 .
 
 psm:297 a cube:Observation ;
     schema:identifier "399AC89E-29BB-44AD-8B1F-0B2F327D5230"^^xsd:ID ;
@@ -2551,7 +2551,7 @@ psm:307 a cube:Observation ;
         "pois chiche"@fr,
         "cece"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:307 .
 
 psm:308 a cube:Observation ;
     schema:identifier "14B19DFD-331F-4C30-8724-8EDDF8E2D0D4"^^xsd:ID ;
@@ -2613,7 +2613,7 @@ psm:313 a cube:Observation ;
     schema:name "allg. Forstwirtschaft"@de,
         "domaine app. sylviculture"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:901 .
 
 psm:314 a cube:Observation ;
     schema:identifier "3447F4C9-2E90-437F-A240-0462AFEDF2B5"^^xsd:ID ;
@@ -2632,7 +2632,7 @@ psm:315 a cube:Observation ;
         "chrysanthème"@fr,
         "Crisantemo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:315 .
 
 psm:316 a cube:Observation ;
     schema:identifier "1DD3F253-4B23-4B69-BFB1-1C24CE7D5508"^^xsd:ID ;
@@ -2656,7 +2656,7 @@ psm:318 a cube:Observation ;
         "ranunculus"@fr,
         "ranuncolo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:318 .
 
 psm:319 a cube:Observation ;
     schema:identifier "01AFF6EB-9C8D-4D0D-B225-0BA07B59A72F"^^xsd:ID ;
@@ -2763,7 +2763,7 @@ psm:329 a cube:Observation ;
         "culture ornementale en général"@fr,
         "Coltivazione piante ornam. in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:329 .
 
 psm:33 a cube:Observation ;
     schema:identifier "309E5D09-3084-40C6-88F2-D4A14345136C"^^xsd:ID ;
@@ -2781,7 +2781,7 @@ psm:330 a cube:Observation ;
         "fenouil aromatique"@fr,
         "Finocchio aromatico"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:330 .
 
 psm:331 a cube:Observation ;
     schema:identifier "8AFA14F8-CCE3-4012-BD12-9D690EBAE1AD"^^xsd:ID ;
@@ -2935,14 +2935,14 @@ psm:43 a cube:Observation ;
         "josta"@fr,
         "Josta"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:43 .
 
 psm:44 a cube:Observation ;
     schema:identifier "FD7AB34C-F432-445D-9440-F44FDAB8422C"^^xsd:ID ;
     schema:name "allg. Wiesen und Weiden"@de,
         "domaine app. prairies et paturages"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:116 .
 
 psm:45 a cube:Observation ;
     schema:identifier "D95CD842-A5BC-4DAA-935D-F009DA7BA748"^^xsd:ID ;
@@ -3194,7 +3194,7 @@ psm:7 a cube:Observation ;
         "bulbes ornementaux"@fr,
         "Bulbi ornamentali"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:409 .
 
 psm:70 a cube:Observation ;
     schema:identifier "D3D49C53-8EBC-4DAC-9C4C-B988AA162F7D"^^xsd:ID ;
@@ -3204,7 +3204,7 @@ psm:70 a cube:Observation ;
         "Épeautre"@fr,
         "Spelta"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:516 .
 
 psm:71 a cube:Observation ;
     schema:identifier "D3D90BE6-0924-4844-98FB-52C4D7F21A38"^^xsd:ID ;
@@ -3232,7 +3232,7 @@ psm:73 a cube:Observation ;
         "Céréales"@fr,
         "Cereali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:14 .
+    :cultivationType cultivationtype:1033 .
 
 psm:74 a cube:Observation ;
     schema:identifier "C3A65223-4A74-461D-AE47-0E8F7223E0C2"^^xsd:ID ;
@@ -3241,7 +3241,7 @@ psm:74 a cube:Observation ;
         "alfalfa"@fr,
         "Alfalfa"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:68 .
 
 psm:75 a cube:Observation ;
     schema:identifier "8A00630A-32FC-4B5A-8171-EC0F41D39F48"^^xsd:ID ;
@@ -3323,7 +3323,7 @@ psm:82 a cube:Observation ;
         "Chanvre"@fr,
         "Canapa"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:535 .
 
 psm:83 a cube:Observation ;
     schema:identifier "E981BFA6-288D-4EA6-B81B-4F610611EB36"^^xsd:ID ;
@@ -3331,7 +3331,7 @@ psm:83 a cube:Observation ;
         "plantes médicinales"@fr,
         "erbe medicinali"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:83 .
 
 psm:84 a cube:Observation ;
     schema:identifier "EB820B26-DE4E-4AF4-8BA3-46844F045306"^^xsd:ID ;
@@ -3411,7 +3411,7 @@ psm:91 a cube:Observation ;
         "amélavier commun"@fr,
         "Pero corvino"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:91 .
 
 psm:92 a cube:Observation ;
     schema:identifier "9A9333CA-AD6C-459D-9AFF-B8E8FB2FF8D4"^^xsd:ID ;
@@ -3456,7 +3456,7 @@ psm:96 a cube:Observation ;
         "pommes de terre"@fr,
         "Patate"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:410 .
 
 psm:97 a cube:Observation ;
     schema:identifier "F171615D-81A1-4654-BF30-BF51620DFFB9"^^xsd:ID ;

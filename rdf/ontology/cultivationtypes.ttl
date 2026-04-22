@@ -144,6 +144,7 @@ cultivationtype:4 a owl:Class ;
         "Vignobles"@fr,
         "Vigna"@it,
         "Vines"@en ;
+    schema:alternateName "Weinbau"@de ;
     rdfs:subClassOf :Cultivation ;
     owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
 
@@ -366,6 +367,12 @@ cultivationtype:41 a owl:Class ;
         "Pero / Nashi"@it ;
     rdfs:subClassOf cultivationtype:309 .
 
+cultivationtype:43 a owl:Class ;
+    schema:name "Jostabeere"@de,
+        "josta"@fr,
+        "Josta"@it ;
+    rdfs:subClassOf cultivationtype:131 .
+
 cultivationtype:45 a owl:Class ;
     schema:name "Fichte"@de,
         "épicéa"@fr,
@@ -512,6 +519,12 @@ cultivationtype:81 a owl:Class ;
         "Cavoli a testa"@it ;
     rdfs:subClassOf cultivationtype:25 .
 
+cultivationtype:83 a owl:Class ;
+    schema:name "Medizinalkräuter"@de,
+        "plantes médicinales"@fr,
+        "erbe medicinali"@it ;
+    rdfs:subClassOf cultivationtype:35 .
+
 cultivationtype:84 a owl:Class ;
     schema:name "Bodenkohlrabi"@de,
         "rutabaga"@fr,
@@ -547,6 +560,12 @@ cultivationtype:90 a owl:Class ;
         "tomate à grappe"@fr,
         "Pomodoro ramato"@it ;
     rdfs:subClassOf cultivationtype:85 .
+
+cultivationtype:91 a owl:Class ;
+    schema:name "Gemeine Felsenbirne"@de,
+        "amélavier commun"@fr,
+        "Pero corvino"@it ;
+    rdfs:subClassOf cultivationtype:402 .
 
 cultivationtype:92 a owl:Class ;
     schema:name "Schwarzwurzel"@de,
@@ -591,6 +610,12 @@ cultivationtype:103 a owl:Class ;
         "laitues à tondre (Asteraceae)"@fr,
         "Insalate a foglie (Asteracee)"@it ;
     rdfs:subClassOf cultivationtype:105 .
+
+cultivationtype:104 a owl:Class ;
+    schema:name "Mohn"@de,
+        "pavot"@fr,
+        "Papavero"@it ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:105 a owl:Class ;
     schema:name "Lactuca-Salate"@de,
@@ -771,6 +796,14 @@ cultivationtype:139 a owl:Class ;
         "Insalate asiatiche (Brassicacee)"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
+cultivationtype:140 a owl:Class ;
+    schema:name "Blaue Heckenkirsche"@de,
+        "camérisier bleu"@fr,
+        "Caprifoglio turchino"@it ;
+    schema:alternateName "Maibeere"@de,
+        "Haskap-Beere"@de ;
+    :cultivationType cultivationtype:1158 .
+
 cultivationtype:141 a owl:Class ;
     schema:name "Endivien und Blattzichorien"@de,
         "chicorée pommée et chicorée à feuilles"@fr,
@@ -871,6 +904,12 @@ cultivationtype:161 a owl:Class ;
         "Sambuco nero"@it ;
     rdfs:subClassOf cultivationtype:471 .
 
+cultivationtype:162 a owl:Class ;
+    schema:name "Forstliche Pflanzgärten"@de,
+        "pépinières forestières"@fr,
+        "Vivai forestali"@it ;
+    rdfs:subClassOf cultivationtype:901 .
+
 cultivationtype:165 a owl:Class ;
     schema:name "Puffbohne"@de,
         "fève"@fr,
@@ -908,11 +947,25 @@ cultivationtype:171 a owl:Class ;
         "Fagioli senza baccello"@it ;
     rdfs:subClassOf cultivationtype:3 .
 
+cultivationtype:172 a owl:Class ;
+    schema:name "Lorbeer"@de,
+        "Bay leaf"@en,
+        "Laurier"@fr,
+        "Alloro"@it ;
+    rdfs:subClassOf cultivationtype:67 .
+
 cultivationtype:173 a owl:Class ;
     schema:name "Kopfsalate"@de,
         "laitues pommées"@fr,
         "Insalate cappuccio"@it ;
     rdfs:subClassOf cultivationtype:105 .
+
+cultivationtype:174 a owl:Class ;
+    schema:name "Eberesche"@de,
+        "sorbier des oiseleurs"@fr,
+        "Sorbo degli ucellatori"@it ;
+    schema:alternateName "Vogelbeere"@de ;
+    rdfs:subClassOf cultivationtype:402 .
 
 cultivationtype:175 a owl:Class ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
@@ -1277,6 +1330,13 @@ cultivationtype:260 a owl:Class ;
     schema:alternateName "Feldsalat"@de ;
     rdfs:subClassOf cultivationtype:209 .
 
+cultivationtype:261 a owl:Class ;
+    schema:name "Rosenwurz"@de,
+        "Roseroot"@en,
+        "Orpin rose"@fr,
+        "Rodiola"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
 cultivationtype:263 a owl:Class ;
     schema:name "Lippenblütler"@de,
         "lamiacées"@fr,
@@ -1295,6 +1355,13 @@ cultivationtype:265 a owl:Class ;
         "laitue pommée"@fr,
         "Lattuga cappuccio"@it ;
     rdfs:subClassOf cultivationtype:173 .
+
+cultivationtype:267 a owl:Class ;
+    schema:name "Gojibeere"@de,
+        "Goji berry, wolfberry"@en,
+        "Baies de Goji"@fr,
+        "Bacche di Goji"@it ;
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:268 a owl:Class ;
     schema:name "Thymian"@de,
@@ -1370,6 +1437,12 @@ cultivationtype:283 a owl:Class ;
         "Ciliegio"@it ;
     rdfs:subClassOf cultivationtype:704 .
 
+cultivationtype:287 a owl:Class ;
+    schema:name "Melisse"@de,
+        "mélisse"@fr,
+        "Melissa"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
 cultivationtype:288 a owl:Class ;
     schema:name "Himbeere"@de,
         "framboise"@fr,
@@ -1387,6 +1460,13 @@ cultivationtype:290 a owl:Class ;
         "choux"@fr,
         "Cavoli"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:294 a owl:Class ;
+    schema:name "Kerbelrübe"@de,
+        "Cerfeuil tubéreux"@fr,
+        "Cerfoglio bulboso"@it ;
+    schema:alternateName "Knollenkerbel"@de ;
+    rdfs:subClassOf cultivationtype:327 .
 
 cultivationtype:295 a owl:Class ;
     schema:name "Majoran"@de,
@@ -1453,6 +1533,13 @@ cultivationtype:306 a owl:Class ;
     schema:alternateName "Petersilienwurzel"@de ;
     rdfs:subClassOf cultivationtype:327 .
 
+cultivationtype:307 a owl:Class ;
+    schema:name "Kichererbse"@de,
+        "chickpea"@en,
+        "pois chiche"@fr,
+        "cece"@it ;
+    rdfs:subClassOf cultivationtype:15 .
+
 cultivationtype:308 a owl:Class ;
     schema:name "Rosmarin"@de,
         "Rosemary"@en,
@@ -1482,7 +1569,7 @@ cultivationtype:312 a owl:Class ;
     schema:name "Blumenknollen"@de,
         "tubercules de fleurs"@fr,
         "Radici tuberose floreali"@it ;
-    rdfs:subClassOf cultivationtype:329 .
+    rdfs:subClassOf cultivationtype:409 .
 
 cultivationtype:314 a owl:Class ;
     schema:name "Patisson"@de,
@@ -1502,6 +1589,12 @@ cultivationtype:317 a owl:Class ;
         "portulacacées (Portulacaceae)"@fr,
         "Portulacee (Portulacaceae)"@it ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:318 a owl:Class ;
+    schema:name "Ranunkel"@de,
+        "ranunculus"@fr,
+        "ranuncolo"@it ;
+    rdfs:subClassOf cultivationtype:145 .
 
 cultivationtype:320 a owl:Class ;
     schema:name "Salate (Asteraceae)"@de,
@@ -1557,6 +1650,12 @@ cultivationtype:329 a owl:Class ;
         "culture ornementale"@fr,
         "Coltivazione piante ornam."@it ;
     rdfs:subClassOf :Cultivation .
+
+cultivationtype:330 a owl:Class ;
+    schema:name "Gewürzfenchel"@de,
+        "fenouil aromatique"@fr,
+        "Finocchio aromatico"@it ;
+    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:331 a owl:Class ;
     schema:name "Romanesco"@de,
@@ -1627,7 +1726,7 @@ cultivationtype:407 a owl:Class ;
     schema:name "Blumenzwiebeln"@de,
         "bulbes des fleurs"@fr,
         "Bulbi di fiori"@it ;
-    rdfs:subClassOf cultivationtype:329 .
+    rdfs:subClassOf cultivationtype:409 .
 
 cultivationtype:408 a owl:Class ;
     schema:name "Anemone"@de,
@@ -1636,6 +1735,25 @@ cultivationtype:408 a owl:Class ;
     rdfs:subClassOf cultivationtype:145,
         cultivationtype:310,
         cultivationtype:312 .
+
+cultivationtype:409 a owl:Class ;
+    schema:name "Blumenzwiebeln und Blumenknollen"@de,
+        "bulbes ornementaux"@fr,
+        "Bulbi ornamentali"@it ;
+    rdfs:subClassOf cultivationtype:329 .
+
+cultivationtype:410 a owl:Class ;
+    schema:name "Kartoffeln"@de,
+        "Pommes de terre"@fr,
+        "Patate"@it ;
+    rdfs:subClassOf cultivationtype:17 ;
+    owl:unionOf ( cultivationtype:524 cultivationtype:525 ) .
+
+cultivationtype:411 a owl:Class ;
+    schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
+        "pommes de terre pour la production de plants"@fr,
+        "Patate per la produzione di tuberi-seme"@it ;
+    rdfs:subClassOf cultivationtype:410 .
 
 cultivationtype:468 a owl:Class ;
     schema:name "Ackerbohne"@de,
@@ -1926,16 +2044,13 @@ cultivationtype:523 a owl:Class ;
     rdfs:subClassOf cultivationtype:17 .
 
 cultivationtype:524 a owl:Class ;
-    schema:name "Kartoffeln"@de,
-        "Pommes de terre"@fr,
-        "Patate"@it ;
-    rdfs:subClassOf cultivationtype:17 .
+    schema:name "Kartoffeln (ohne Vertragsanbau)"@de ;
+    owl:disjointWith cultivationtype:525 .
 
 cultivationtype:525 a owl:Class ;
     schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
         "Plants de pommes de terre (contrat de culture)"@fr,
-        "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
-    rdfs:subClassOf cultivationtype:524 .
+        "Tuberi-seme di patate (coltivazione contrattuale)"@it .
 
 cultivationtype:526 a owl:Class ;
     schema:name "Sommerraps zur Speiseölgewinnung"@de,
@@ -2808,6 +2923,7 @@ cultivationtype:901 a owl:Class ;
     schema:name "Wald"@de,
         "Forêt"@fr,
         "Bosco"@it ;
+    schema:alternateName "Allg. Forstwirtschaft"@de ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:902 a owl:Class ;
