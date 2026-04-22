@@ -513,6 +513,13 @@ cultivationtype:79 a owl:Class ;
         "Graminacee per la produzione di sementi"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
+cultivationtype:80 a owl:Class ;
+    schema:name "Schwarze Maulbeere"@de,
+        "Black mulberry"@en,
+        "mûrier noir"@fr,
+        "Moro nero"@it ;
+    rdfs:subClassOf cultivationtype:719 .
+
 cultivationtype:81 a owl:Class ;
     schema:name "Kopfkohle"@de,
         "choux pommés"@fr,
@@ -549,6 +556,13 @@ cultivationtype:87 a owl:Class ;
         "Cavolo piuma"@it ;
     rdfs:subClassOf cultivationtype:20 .
 
+cultivationtype:88 a owl:Class ;
+    schema:name "Speise- und Futterkartoffeln"@de,
+        "Table and fodder potatoes"@en,
+        "pommes de terre de consommation et fourragère"@fr,
+        "Patate da tavola e da foraggio"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
 cultivationtype:89 a owl:Class ;
     schema:name "Speisezwiebel"@de,
         "oignon (condiment)"@fr,
@@ -572,6 +586,13 @@ cultivationtype:92 a owl:Class ;
         "scorsonère"@fr,
         "Scorzonera"@it ;
     rdfs:subClassOf cultivationtype:95 .
+
+cultivationtype:93 a owl:Class ;
+    schema:name "Sanddorn"@de,
+        "Sea buckthorn"@en,
+        "Argousier"@fr,
+        "Olivello spinoso"@it ;
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:94 a owl:Class ;
     schema:name "Sellerie"@de,
@@ -1078,6 +1099,13 @@ cultivationtype:205 a owl:Class ;
         "Camomilla romana"@it ;
     rdfs:subClassOf cultivationtype:67 .
 
+cultivationtype:206 a owl:Class ;
+    schema:name "Spitzwegerich"@de,
+        "Ribwort plantain"@en,
+        "plantain lancéolé"@fr,
+        "piantaggine lanciuola"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
 cultivationtype:207 a owl:Class ;
     schema:name "Einlegegurken"@de,
         "cornichons"@fr,
@@ -1337,6 +1365,13 @@ cultivationtype:261 a owl:Class ;
         "Rodiola"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
+cultivationtype:262 a owl:Class ;
+    schema:name "Traubensilberkerze"@de,
+        "Black cohosh"@en,
+        "Actée à grappes"@fr,
+        "Cimicifuga"@it ;
+    rdfs:subClassOf cultivationtype:706 .
+
 cultivationtype:263 a owl:Class ;
     schema:name "Lippenblütler"@de,
         "lamiacées"@fr,
@@ -1424,6 +1459,13 @@ cultivationtype:278 a owl:Class ;
         "roquette"@fr,
         "Rucola"@it ;
     rdfs:subClassOf cultivationtype:48 .
+
+cultivationtype:279 a owl:Class ;
+    schema:name "Wolliger Fingerhut"@de,
+        "Grecian foxglove"@en,
+        "digitale lanifère"@fr,
+        "Digitale lanata"@it ;
+    rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:282 a owl:Class ;
     schema:name "Stielmus"@de,
@@ -1754,6 +1796,13 @@ cultivationtype:411 a owl:Class ;
         "pommes de terre pour la production de plants"@fr,
         "Patate per la produzione di tuberi-seme"@it ;
     rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:412 a owl:Class ;
+    schema:name "Süssdolde"@de,
+        "Sweet cicely"@en,
+        "Cerfeuil musqué"@fr,
+        "Finocchiella"@it ;
+    rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:468 a owl:Class ;
     schema:name "Ackerbohne"@de,
