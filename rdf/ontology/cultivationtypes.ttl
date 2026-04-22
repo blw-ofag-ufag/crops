@@ -2478,7 +2478,8 @@ cultivationtype:712 a owl:Class ;
     schema:name "Christbäume"@de,
         "Sapins de Noël"@fr,
         "Alberelli di Natale"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    rdfs:subClassOf cultivationtype:750 ;
+    owl:equivalentClass cultivationtype:153 .
 
 cultivationtype:713 a owl:Class ;
     schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
