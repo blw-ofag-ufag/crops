@@ -823,7 +823,7 @@ cultivationtype:140 a owl:Class ;
         "Caprifoglio turchino"@it ;
     schema:alternateName "Maibeere"@de,
         "Haskap-Beere"@de ;
-    :cultivationType cultivationtype:1158 .
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:141 a owl:Class ;
     schema:name "Endivien und Blattzichorien"@de,
