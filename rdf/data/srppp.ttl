@@ -2020,7 +2020,7 @@ psm:254 a cube:Observation ;
         "iris"@fr,
         "Iris"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:246 .
+    :cultivationType cultivationtype:254 .
 
 psm:255 a cube:Observation ;
     schema:identifier "AC0240B5-B610-4D7C-8704-AA8E182821AC"^^xsd:ID ;
