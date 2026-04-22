@@ -120,7 +120,8 @@ cultivationtype:1 a owl:Class ;
         "Superficie coltiva"@it ;
     schema:alternateName "Allg. Feldbau"@de ,
         "Ackerkulturen"@de,
-        "Domaine app. grande culture"@fr ;
+        "Domaine app. grande culture"@fr,
+        "Grande culture en général"@fr ;
     schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
     rdfs:subClassOf :Cultivation .
 
@@ -457,6 +458,15 @@ cultivationtype:67 a owl:Class ;
         "Erbette da cucina"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:68 a owl:Class ;
+    schema:name "Luzerne"@de,
+        "Luzerne"@fr,
+        "Erba medica"@it ;
+    schema:alternateName "Alfalfa"@de,
+        "Schneckenklee"@de,
+        "Ewiger Klee"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:69 a owl:Class ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
@@ -489,6 +499,12 @@ cultivationtype:76 a owl:Class ;
         "bietola da coste"@it,
         "bietola a coste"@it ;
     rdfs:subClassOf cultivationtype:321 .
+
+cultivationtype:79 a owl:Class ;
+    schema:name "Grasbestände zur Saatgutproduktion"@de,
+        "Graminées pour la production de semences"@fr,
+        "Graminacee per la produzione di sementi"@it ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:81 a owl:Class ;
     schema:name "Kopfkohle"@de,
@@ -636,6 +652,12 @@ cultivationtype:115 a owl:Class ;
         "rave de Brassica napus"@fr,
         "Rapa di Brassica napus"@it ;
     rdfs:subClassOf cultivationtype:247 .
+
+cultivationtype:116 a owl:Class ;
+    schema:name "Wiesen und Weiden"@de,
+        "Prairies et pâturages"@fr,
+        "Prati e pascoli"@it ;
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:117 a owl:Class ;
     schema:name "Stachys"@de,
@@ -868,6 +890,12 @@ cultivationtype:167 a owl:Class ;
     rdfs:subClassOf cultivationtype:118,
         cultivationtype:72 .
 
+cultivationtype:169 a owl:Class ;
+    schema:name "Chinaschilf"@de,
+        "Roseau de Chine"@fr,
+        "Miscanto"@it ;
+    rdfs:subClassOf cultivationtype:707 .
+
 cultivationtype:170 a owl:Class ;
     schema:name "Schwarze Johannisbeere"@de,
         "cassis"@fr,
@@ -898,6 +926,12 @@ cultivationtype:179 a owl:Class ;
         "Indivia"@it ;
     rdfs:subClassOf cultivationtype:141 .
 
+cultivationtype:182 a owl:Class ;
+    schema:name "Kleegrasmischung (Kunstwiese)"@de,
+        "mélange trèfles-graminées (prairie arificielle)"@fr,
+        "Miscela trifoglio-graminacee (prati artificiali)"@it ;
+    rdfs:subClassOf cultivationtype:116 .
+
 cultivationtype:183 a owl:Class ;
     schema:name "Linse"@de,
         "lentille"@fr,
@@ -927,6 +961,12 @@ cultivationtype:189 a owl:Class ;
         "maïs sucré"@fr,
         "Mais dolce"@it ;
     rdfs:subClassOf cultivationtype:57 .
+
+cultivationtype:190 a owl:Class ;
+    schema:name "Winterraps"@de,
+        "Colza d'automne"@fr,
+        "Colza autunnale"@it ;
+    rdfs:subClassOf cultivationtype:494 .
 
 cultivationtype:191 a owl:Class ;
     schema:name "Erbsen"@de,
@@ -1399,6 +1439,12 @@ cultivationtype:304 a owl:Class ;
         "Varietà particolari di pomodoro"@it ;
     rdfs:subClassOf cultivationtype:85 .
 
+cultivationtype:305 a owl:Class ;
+    schema:name "Futter- und Zuckerrüben"@de,
+        "betteraves à sucre et fourragère"@fr,
+        "Barbabietole da foraggio e da zucchero"@it ;
+    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
+
 cultivationtype:306 a owl:Class ;
     schema:name "Wurzelpetersilie"@de,
         "Turnip-rooted parsley"@en,
@@ -1582,6 +1628,12 @@ cultivationtype:407 a owl:Class ;
         "bulbes des fleurs"@fr,
         "Bulbi di fiori"@it ;
     rdfs:subClassOf cultivationtype:329 .
+
+cultivationtype:468 a owl:Class ;
+    schema:name "Ackerbohne"@de,
+        "féverole"@fr,
+        "Fava"@it ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:469 a owl:Class ;
     schema:name "Freiland-Beeren"@de ;
@@ -2121,7 +2173,9 @@ cultivationtype:566 a owl:Class ;
 cultivationtype:567 a owl:Class ;
     schema:name "Saflor"@de,
         "Carthame"@fr,
-        "Cartamo"@it ;
+        "Cartamo"@it,
+        "Safflower"@en ;
+    schema:alternateName "Färberdistel"@de ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:568 a owl:Class ;

@@ -506,7 +506,7 @@ psm:102 a cube:Observation ;
         "Soja"@fr,
         "Soia"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:528 .
 
 psm:103 a cube:Observation ;
     schema:identifier "9CA61204-7EA7-4F2F-BAD3-BD02EDD6A829"^^xsd:ID ;
@@ -577,7 +577,7 @@ psm:11 a cube:Observation ;
         "Lin"@fr,
         "Lino"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:534.
 
 psm:110 a cube:Observation ;
     schema:identifier "1BFC9694-C7DC-4D74-84B2-1418AB94A8BA"^^xsd:ID ;
@@ -639,7 +639,7 @@ psm:116 a cube:Observation ;
         "Prairies et pâturages"@fr,
         "Prati e pascoli"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:116 .
 
 psm:117 a cube:Observation ;
     schema:identifier "1F0B6451-EC2C-4647-A53A-23B0EAE626B1"^^xsd:ID ;
@@ -1156,7 +1156,7 @@ psm:168 a cube:Observation ;
         "Carthame"@fr,
         "Cartamo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:567 .
 
 psm:169 a cube:Observation ;
     schema:identifier "4A386AE2-A36F-4A55-8668-7B896A1E8092"^^xsd:ID ;
@@ -1165,7 +1165,7 @@ psm:169 a cube:Observation ;
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:169 .
 
 psm:17 a cube:Observation ;
     schema:identifier "7B3C8CEE-526F-4381-A757-669C1864291A"^^xsd:ID ;
@@ -1280,7 +1280,7 @@ psm:180 a cube:Observation ;
         "Trèfles pour la production de semences"@fr,
         "Trifoglio per la produzione di sementi"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1052 .
 
 psm:181 a cube:Observation ;
     schema:identifier "52019F0F-3BAF-4161-A223-62EECBA47871"^^xsd:ID ;
@@ -1298,7 +1298,7 @@ psm:182 a cube:Observation ;
         "mélange trèfles-graminées (prairie arificielle)"@fr,
         "Miscela trifoglio-graminacee (prati artificiali)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:182 .
 
 psm:183 a cube:Observation ;
     schema:identifier "54C75B64-57C4-46E2-BCEA-741EBC10FDDF"^^xsd:ID ;
@@ -1367,7 +1367,7 @@ psm:19 a cube:Observation ;
         "pois protéagineux"@fr,
         "Pisello proteico"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1027 .
 
 psm:190 a cube:Observation ;
     schema:identifier "5755AD92-721E-431E-8473-6FA2F340532F"^^xsd:ID ;
@@ -1376,7 +1376,7 @@ psm:190 a cube:Observation ;
         "Colza d'automne"@fr,
         "Colza autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:190 .
 
 psm:191 a cube:Observation ;
     schema:identifier "5DF3AB4D-7CAC-4112-90D9-67BD80EC5E96"^^xsd:ID ;
@@ -1432,7 +1432,7 @@ psm:196 a cube:Observation ;
         "Kenaf"@fr,
         "Kenaf"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1063 .
 
 psm:197 a cube:Observation ;
     schema:identifier "625EA905-7C3D-4BCC-8551-BC1CB14FF647"^^xsd:ID ;
@@ -1604,7 +1604,7 @@ psm:212 a cube:Observation ;
         "Sorgho commun"@fr,
         "Sorgo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:549 .
 
 psm:213 a cube:Observation ;
     schema:identifier "293D431D-8501-4D41-A0E5-F1A5AD59C8B6"^^xsd:ID ;
@@ -1676,7 +1676,7 @@ psm:22 a cube:Observation ;
         "féverole"@fr,
         "Fava"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:468 .
 
 psm:220 a cube:Observation ;
     schema:identifier "F9426E5C-7D4D-45E5-80DA-64BB12336CA4"^^xsd:ID ;
@@ -1840,7 +1840,7 @@ psm:236 a cube:Observation ;
         "Tabac"@fr,
         "Tabacco"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:541 .
 
 psm:237 a cube:Observation ;
     schema:identifier "80395E92-C39B-45D9-91AC-AB7E6DCAC3DB"^^xsd:ID ;
@@ -2174,7 +2174,7 @@ psm:27 a cube:Observation ;
         "grande culture en général"@fr,
         "Campicoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1 .
 
 psm:270 a cube:Observation ;
     schema:identifier "46D3C073-CBD8-4B3A-A9AA-21785BA911CA"^^xsd:ID ;
@@ -2219,7 +2219,7 @@ psm:274 a cube:Observation ;
         "Lupin"@fr,
         "Lupini"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:538 .
 
 psm:275 a cube:Observation ;
     schema:identifier "F512809F-5CC7-44A2-A378-8FDAFA67CFEA"^^xsd:ID ;
@@ -2285,7 +2285,7 @@ psm:280 a cube:Observation ;
         "Betterave fourragère"@fr,
         "Barbabietola da foraggio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:523 .
 
 psm:281 a cube:Observation ;
     schema:identifier "C83340F9-9BA9-4C7A-B414-A691C4853D31"^^xsd:ID ;
@@ -2337,7 +2337,7 @@ psm:286 a cube:Observation ;
         "Colza"@fr,
         "Colza"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:494 .
 
 psm:287 a cube:Observation ;
     schema:identifier "D51188F1-9F8F-46E6-8F5B-550A7D45A4BE"^^xsd:ID ;
@@ -2532,7 +2532,7 @@ psm:305 a cube:Observation ;
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:305 .
 
 psm:306 a cube:Observation ;
     schema:identifier "21228D46-5B00-4CDD-9C71-48C0A0B21C78"^^xsd:ID ;
@@ -2639,7 +2639,7 @@ psm:316 a cube:Observation ;
     schema:name "allg. Feldbau"@de,
         "domaine app. grande culture"@fr ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1 .
 
 psm:317 a cube:Observation ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD"^^xsd:ID ;
@@ -2665,7 +2665,7 @@ psm:319 a cube:Observation ;
         "Houblon"@fr,
         "Luppolo"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:708 .
 
 psm:32 a cube:Observation ;
     schema:identifier "30F9F737-0A18-43EC-AF88-F28940E567F1"^^xsd:ID ;
@@ -2996,7 +2996,7 @@ psm:5 a cube:Observation ;
         "Betterave à sucre"@fr,
         "Barbabietola da zucchero"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:522 .
 
 psm:50 a cube:Observation ;
     schema:identifier "CA722B7E-8F16-4502-8139-C33F749545D4"^^xsd:ID ;
@@ -3177,7 +3177,7 @@ psm:68 a cube:Observation ;
         "Luzerne"@fr,
         "Erba medica"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:68 .
 
 psm:69 a cube:Observation ;
     schema:identifier "CA9B7EDC-8626-4E01-B979-4856CFA9893E"^^xsd:ID ;
@@ -3287,7 +3287,7 @@ psm:79 a cube:Observation ;
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:79 .
 
 psm:8 a cube:Observation ;
     schema:identifier "A2D2B4EC-D7D6-4A30-BEE9-0A8F907A874A"^^xsd:ID ;
