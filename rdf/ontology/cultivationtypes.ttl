@@ -570,7 +570,7 @@ cultivationtype:116 a owl:Class ;
     schema:name "Wiesen und Weiden"@de,
         "Prairies et pâturages"@fr,
         "Prati e pascoli"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:117 a owl:Class ;
     schema:name "Stachys"@de,
