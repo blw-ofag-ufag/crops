@@ -1406,7 +1406,7 @@ naebi:175 a cube:Observation ;
     :P2O5 80.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
-    :cultivationType cube:cultivationtype:1081 .
+    :cultivationType cultivationtype:1081 .
 
 naebi:176 a cube:Observation ;
     schema:identifier "CROP_PLMEY"^^xsd:string ;
