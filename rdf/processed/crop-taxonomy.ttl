@@ -244,12 +244,6 @@ cultivationtype:1039 a owl:Class ;
         "Colza primaverile"@it ;
     rdfs:subClassOf cultivationtype:494 .
 
-cultivationtype:104 a owl:Class ;
-    rdfs:label "Mohn"@de,
-        "pavot"@fr,
-        "Papavero"@it ;
-    rdfs:subClassOf cultivationtype:1 .
-
 cultivationtype:1040 a owl:Class ;
     rdfs:label "Kiwi"@de,
         "Kiwi"@fr,

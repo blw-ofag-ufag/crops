@@ -523,7 +523,7 @@ psm:104 a cube:Observation ;
         "pavot"@fr,
         "Papavero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:104 .
+    :cultivationType cultivationtype:566 .
 
 psm:105 a cube:Observation ;
     schema:identifier "33686F38-1E1A-4698-81E4-C40EE4494EF3"^^xsd:ID ;

@@ -638,12 +638,6 @@ cultivationtype:103 a owl:Class ;
         "Insalate a foglie (Asteracee)"@it ;
     rdfs:subClassOf cultivationtype:105 .
 
-cultivationtype:104 a owl:Class ;
-    schema:name "Mohn"@de,
-        "pavot"@fr,
-        "Papavero"@it ;
-    rdfs:subClassOf cultivationtype:1 .
-
 cultivationtype:105 a owl:Class ;
     schema:name "Lactuca-Salate"@de,
         "salades lactuca"@fr,
