@@ -1840,6 +1840,7 @@ cultivationtype:472 a owl:Class ;
     schema:name "Aprikose"@de,
         "abricotier"@fr,
         "Albicocco"@it ;
+    schema:alternateName "Aprikosenanlage"@de ;
     rdfs:subClassOf cultivationtype:704 .
 
 cultivationtype:473 a owl:Class ;
@@ -4112,3 +4113,23 @@ cultivationtype:1169 a owl:Class ;
         "Prairies de fauche dans la région d'estivage, autres"@fr,
         "Prati da sfalcio nella regione d'estivazione, altri"@it ;
     rdfs:subClassOf cultivationtype:480 .
+
+cultivationtype:1180 a owl:Class ;
+    schema:name "Aprikosenanlage, hoher Ertrag"@de ;
+    rdfs:subClassOf cultivationtype:472 .
+
+cultivationtype:1181 a owl:Class ;
+    schema:name "Blumenkohl, Standard"@de ;
+    rdfs:subClassOf cultivationtype:111 .
+
+cultivationtype:1182 a owl:Class ;
+    schema:name "Blumenkohl, früh"@de ;
+    rdfs:subClassOf cultivationtype:111 .
+
+cultivationtype:1183 a owl:Class ;
+    schema:name "Blumenkohl, Verarbeitung"@de ;
+    rdfs:subClassOf cultivationtype:111 .
+
+cultivationtype:1184 a owl:Class ;
+    schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
+    owl:intersectionOf ( cultivationtype:7 cultivationtype:474 ) .

@@ -3154,7 +3154,7 @@ naebi:37 a cube:Observation ;
     :P2O5 40.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cultivationtype:111 .
+    :cultivationType cultivationtype:1181 .
 
 naebi:38 a cube:Observation ;
     schema:identifier "CROP_CAULIE"^^xsd:string ;
@@ -3165,7 +3165,7 @@ naebi:38 a cube:Observation ;
     :P2O5 0.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1182 .
 
 naebi:39 a cube:Observation ;
     schema:identifier "CROP_CAULIP"^^xsd:string ;
@@ -3176,7 +3176,7 @@ naebi:39 a cube:Observation ;
     :P2O5 0.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1183 .
 
 naebi:4 a cube:Observation ;
     schema:identifier "CROP_APEYH"^^xsd:string ;
@@ -3187,7 +3187,7 @@ naebi:4 a cube:Observation ;
     :P2O5 30.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1180 .
 
 naebi:40 a cube:Observation ;
     schema:identifier "CROP_CBEFE"^^xsd:string ;
@@ -3308,7 +3308,7 @@ naebi:5 a cube:Observation ;
     :P2O5 25.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:472 .
 
 naebi:50 a cube:Observation ;
     schema:identifier "CROP_CHIVES"^^xsd:string ;
@@ -3528,7 +3528,7 @@ naebi:68 a cube:Observation ;
     :P2O5 20.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:474 .
 
 naebi:69 a cube:Observation ;
     schema:identifier "CROP_EMMEK"^^xsd:string ;
