@@ -987,131 +987,11 @@ cultivationtype:115 a owl:Class ;
         "Rapa di Brassica napus"@it ;
     rdfs:subClassOf cultivationtype:247 .
 
-cultivationtype:1150 a owl:Class ;
-    rdfs:label "Ehrenpreis"@de,
-        "Véronique"@fr,
-        "Veronica"@it ;
-    rdfs:subClassOf cultivationtype:706 .
-
-cultivationtype:1151 a owl:Class ;
-    rdfs:label "Walnüsse < 185 Bäume/ha"@de,
-        "Noyers < 185 arbres/ha"@fr,
-        "Noci < 185 alberi/ha"@it ;
-    rdfs:subClassOf cultivationtype:252 .
-
-cultivationtype:1152 a owl:Class ;
-    rdfs:label "Walnüsse ≥ 185 Bäume/ha"@de,
-        "Noyers ≥ 185 arbres/ha"@fr,
-        "Noci ≥ 185 alberi/ha"@it ;
-    rdfs:subClassOf cultivationtype:252 .
-
-cultivationtype:1153 a owl:Class ;
-    rdfs:label "Naturwiese mittelintensiv"@de,
-        "Prairie naturelle moyennement intensive"@fr,
-        "Prato naturale medio-intensivo"@it ;
-    rdfs:subClassOf cultivationtype:2 .
-
-cultivationtype:1154 a owl:Class ;
-    rdfs:label "Kunstwiese mittelintensiv"@de,
-        "Prairie artificielle moyennement intensive"@fr,
-        "Prato artificiale medio-intensivo"@it ;
-    rdfs:subClassOf cultivationtype:601 .
-
-cultivationtype:1155 a owl:Class ;
-    rdfs:label "Naturwiese intensiv"@de,
-        "Prairie naturelle intensive"@fr,
-        "Prato naturale intensivo"@it ;
-    rdfs:subClassOf cultivationtype:2 .
-
-cultivationtype:1156 a owl:Class ;
-    rdfs:label "Winterspinat, 1 Schnitt"@de,
-        "Épinard d'hiver, 1 coupe"@fr,
-        "Spinaci invernali, 1 taglio"@it ;
-    rdfs:subClassOf cultivationtype:250 .
-
-cultivationtype:1157 a owl:Class ;
-    rdfs:label "Winterspinat, 2 Schnitte"@de,
-        "Épinard d'hiver, 2 coupes"@fr,
-        "Spinaci invernali, 2 tagli"@it ;
-    rdfs:subClassOf cultivationtype:250 .
-
-cultivationtype:1158 a owl:Class ;
-    rdfs:label "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de,
-        "Autres baies arbustives (aronia, sureau, goji,…)"@fr,
-        "Bacche arbustive alternative (aronia, sambuco, goji,…)"@it ;
-    rdfs:subClassOf cultivationtype:471 .
-
-cultivationtype:1159 a owl:Class ;
-    rdfs:label "Broccoli, Verarbeitung"@de,
-        "Brocoli d'industrie"@fr,
-        "Broccoli da industria"@it ;
-    rdfs:subClassOf cultivationtype:154 .
-
 cultivationtype:116 a owl:Class ;
     rdfs:label "Wiesen und Weiden"@de,
         "Prairies et pâturages"@fr,
         "Prati e pascoli"@it ;
     rdfs:subClassOf :Cultivation .
-
-cultivationtype:1160 a owl:Class ;
-    rdfs:label "Winterspinat, Industrie, 1 Schnitt"@de,
-        "Épinard d'hiver d'industrie, 1 coupe"@fr,
-        "Spinaci invernali da industria, 1 taglio"@it ;
-    rdfs:subClassOf cultivationtype:250 .
-
-cultivationtype:1161 a owl:Class ;
-    rdfs:label "Winterspinat, Industrie, 2 Schnitte"@de,
-        "Épinard d'hiver d'industrie, 2 coupes"@fr,
-        "Spinaci invernali da industria, 2 tagli"@it ;
-    rdfs:subClassOf cultivationtype:250 .
-
-cultivationtype:1162 a owl:Class ;
-    rdfs:label "Schafgarbe"@de,
-        "Achillée millefeuille"@fr,
-        "Achillea"@it ;
-    rdfs:subClassOf cultivationtype:706 .
-
-cultivationtype:1163 a owl:Class ;
-    rdfs:label "Zucchetti, gepflanzt, frühe Kurzkultur"@de,
-        "Courgette, plantée, culture courte précoce"@fr,
-        "Zucchine, piantate, coltura breve precoce"@it ;
-    rdfs:subClassOf cultivationtype:225 .
-
-cultivationtype:1164 a owl:Class ;
-    rdfs:label "Patisson, Kürbis (geschützter Anbau)"@de,
-        "Pâtisson, courge (culture protégée)"@fr,
-        "Patisson, zucca (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:1093 cultivationtype:7 ) .
-
-cultivationtype:1165 a owl:Class ;
-    rdfs:label "Zucchetti, gepflanzt, Sommer und Herbst"@de,
-        "Courgette, plantée, été et automne"@fr,
-        "Zucchine, piantate, estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:225 .
-
-cultivationtype:1166 a owl:Class ;
-    rdfs:label "Zucchetti (geschützter Anbau)"@de,
-        "Courgette (culture protégée)"@fr,
-        "Zucchine (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:225 cultivationtype:7 ) .
-
-cultivationtype:1167 a owl:Class ;
-    rdfs:label "Patisson, Kürbis"@de,
-        "Pâtisson, courge"@fr,
-        "Patisson, zucca"@it ;
-    rdfs:subClassOf cultivationtype:1093 .
-
-cultivationtype:1168 a owl:Class ;
-    rdfs:label "Zucchetti, gesät, Sommer und Herbst"@de,
-        "Courgette, semée, été et automne"@fr,
-        "Zucchine, seminate, estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:225 .
-
-cultivationtype:1169 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsg., übrige"@de,
-        "Prairies de fauche dans la région d'estivage, autres"@fr,
-        "Prati da sfalcio nella regione d'estivazione, altri"@it ;
-    rdfs:subClassOf cultivationtype:480 .
 
 cultivationtype:117 a owl:Class ;
     rdfs:label "Stachys"@de,
@@ -3479,12 +3359,6 @@ cultivationtype:760 a owl:Class ;
         "Surfaces de cultures pérennes, sans contributions, agrégée"@fr,
         "Colture perenni, senza contributi, aggregata"@it ;
     rdfs:subClassOf cultivationtype:6 .
-
-cultivationtype:77 a owl:Class ;
-    rdfs:label "Brache"@de,
-        "jachère"@fr,
-        "Maggese"@it ;
-    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:79 a owl:Class ;
     rdfs:label "Grasbestände zur Saatgutproduktion"@de,
