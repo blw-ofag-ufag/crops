@@ -202,7 +202,7 @@ cultivationtype:14 a owl:Class ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
-    schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
+    schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggenfer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
     rdfs:subClassOf cultivationtype:1032 .
 
 cultivationtype:15 a owl:Class ;
@@ -351,7 +351,8 @@ cultivationtype:37 a owl:Class ;
 
 cultivationtype:39 a owl:Class ;
     schema:name "Knoblauch"@de,
-        "ail"@fr,
+        "Garlic"@en,
+        "Ail"@fr,
         "Aglio"@it ;
     rdfs:subClassOf cultivationtype:188 .
 
@@ -2304,7 +2305,8 @@ cultivationtype:556 a owl:Class ;
 cultivationtype:557 a owl:Class ;
     schema:name "Rotationsbrache"@de,
         "Jachère tournante"@fr,
-        "Maggese da rotazione"@it ;
+        "Maggese da rotazione"@it,
+        "Rotational fallow"@en ;
     rdfs:subClassOf cultivationtype:77 .
 
 cultivationtype:558 a owl:DeprecatedClass ;
@@ -3303,7 +3305,7 @@ cultivationtype:1028 a owl:Class ;
     rdfs:subClassOf cultivationtype:581 .
 
 cultivationtype:1029 a owl:Class ;
-    schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
+    schema:name "Ganzpflanzen-Sorghum (Zweitkultur)"@de ;
     rdfs:subClassOf cultivationtype:581 .
 
 cultivationtype:1030 a owl:Class ;
@@ -4133,3 +4135,594 @@ cultivationtype:1183 a owl:Class ;
 cultivationtype:1184 a owl:Class ;
     schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
     owl:intersectionOf ( cultivationtype:7 cultivationtype:474 ) .
+
+cultivationtype:1185 a owl:Class ;
+    schema:name "Brombeeren, 2.0 kg/m2"@de ;
+    rdfs:subClassOf cultivationtype:233 .
+
+cultivationtype:1186 a owl:Class ;
+    schema:name "Brombeeren, 3.0 kg/m2"@de ;
+    rdfs:subClassOf cultivationtype:233 .
+
+cultivationtype:1187 a owl:Class ;
+    schema:name "Brombeeren, 4.0 kg/m2"@de ;
+    rdfs:subClassOf cultivationtype:233 .
+
+cultivationtype:1188 a owl:Class ;
+    schema:name "Kräuter,1-jährig, gross"@de,
+        "Herbs, annual, large"@en,
+        "Herbes, annuelles, grandes"@fr,
+        "Erbe aromatiche, annuali, grandi"@it ;
+    rdfs:subClassOf cultivationtype:1286 .
+
+cultivationtype:1189 a owl:Class ;
+    schema:name "Kräuter,1-jährig, mittel"@de,
+        "Herbs, annual, medium"@en,
+        "Herbes, annuelles, moyennes"@fr,
+        "Erbe aromatiche, annuali, medie"@it ;
+    rdfs:subClassOf cultivationtype:1286 .
+
+cultivationtype:1190 a owl:Class ;
+    schema:name "Kräuter,1-jährig, mittel-gross"@de,
+        "Herbs, annual, medium-large"@en,
+        "Herbes, annuelles, moyennes-grandes"@fr,
+        "Erbe aromatiche, annuali, medio-grandi"@it ;
+    rdfs:subClassOf cultivationtype:1286 .
+
+cultivationtype:1191 a owl:Class ;
+    schema:name "Kräuter,1-jährig, klein"@de,
+        "Herbs, annual, small"@en,
+        "Herbes, annuelles, petites"@fr,
+        "Erbe aromatiche, annuali, piccole"@it ;
+    rdfs:subClassOf cultivationtype:1286 .
+
+cultivationtype:1192 a owl:Class ;
+    schema:name "Kräuter,mehrjährig, mittel-gross"@de,
+        "Herbs, perennial, medium-large"@en,
+        "Herbes, vivaces, moyennes-grandes"@fr,
+        "Erbe aromatiche, perenni, medio-grandi"@it ;
+    rdfs:subClassOf cultivationtype:1287 .
+
+cultivationtype:1193 a owl:Class ;
+    schema:name "Kräuter,mehrjährig, gross"@de,
+        "Herbs, perennial, large"@en,
+        "Herbes, vivaces, grandes"@fr,
+        "Erbe aromatiche, perenni, grandi"@it ;
+    rdfs:subClassOf cultivationtype:1287 .
+
+cultivationtype:1194 a owl:Class ;
+    schema:name "Kräuter,mehrjährig, mittel"@de,
+        "Herbs, perennial, medium"@en,
+        "Herbes, vivaces, moyennes"@fr,
+        "Erbe aromatiche, perenni, medie"@it ;
+    rdfs:subClassOf cultivationtype:1287 .
+
+cultivationtype:1195 a owl:Class ;
+    schema:name "Kräuter,mehrjährig, klein"@de,
+        "Herbs, perennial, small"@en,
+        "Herbes, vivaces, petites"@fr,
+        "Erbe aromatiche, perenni, piccole"@it ;
+    rdfs:subClassOf cultivationtype:1287 .
+
+cultivationtype:1196 a owl:Class ;
+    schema:name "Zwischenfutter (herbstgesäte KW)"@de,
+        "Catch crop (autumn-sown artificial meadow)"@en,
+        "Culture dérobée (prairie artificielle semée en automne)"@fr,
+        "Coltura intercalare (prato artificiale seminato in autunno)"@it .
+
+cultivationtype:1197 a owl:Class ;
+    schema:name "Zwischenfutter (ohne KW)"@de,
+        "Catch crop (without artificial meadow)"@en,
+        "Culture dérobée (sans prairie artificielle)"@fr,
+        "Coltura intercalare (senza prato artificiale)"@it .
+
+cultivationtype:1198 a owl:Class ;
+    schema:name "Vom Betrieb weggeführtes Rübenblatt"@de,
+        "Beet leaves exported from farm"@en,
+        "Feuilles de betteraves exportées de l'exploitation"@fr,
+        "Foglie di barbabietola esportate dall'azienda"@it .
+
+cultivationtype:1199 a owl:Class ;
+    schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de,
+        "Small installations (<20 a) with various permanent crops"@en,
+        "Petites installations (<20 a) avec diverses cultures permanentes"@fr,
+        "Piccoli impianti (<20 a) con diverse colture permanenti"@it .
+
+cultivationtype:1200 a owl:Class ;
+    schema:name "Kohlrabi Verarbeitungs-"@de,
+        "Kohlrabi, processing"@en,
+        "Chou-rave de transformation"@fr,
+        "Cavolo rapa da trasformazione"@it .
+
+cultivationtype:1201 a owl:Class ;
+    schema:name "Lauch, früh gepflanzt"@de,
+        "Leek, early planted"@en,
+        "Poireau, planté tôt"@fr,
+        "Porro, piantagione precoce"@it .
+
+cultivationtype:1202 a owl:Class ;
+    schema:name "Kleesamenproduktion"@de,
+        "Clover seed production"@en,
+        "Production de semences de trèfle"@fr,
+        "Produzione di sementi di trifoglio"@it .
+
+cultivationtype:1203 a owl:Class ;
+    schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de,
+        "Green manure legumes (open field vegetables)"@en,
+        "Engrais vert légumineuses (légumes de plein champ)"@fr,
+        "Sovescio leguminose (ortaggi in pieno campo)"@it .
+
+cultivationtype:1204 a owl:Class ;
+    schema:name "Nussbäume, 0.01 ha/Baum"@de,
+        "Walnut trees, 0.01 ha/tree"@en,
+        "Noyers, 0.01 ha/arbre"@fr,
+        "Noci, 0.01 ha/albero"@it .
+
+cultivationtype:1205 a owl:Class ;
+    schema:name "betriebseigenes verfütt. Rübenblatt"@de,
+        "Home-grown fed beet leaves"@en,
+        "Feuilles de betteraves fourragères de l'exploitation"@fr,
+        "Foglie di barbabietola foraggera dell'azienda"@it .
+
+cultivationtype:1206 a owl:Class ;
+    schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de,
+        "Bell peppers, soil cultures (protected cultivation)"@en,
+        "Poivrons, cultures au sol (culture protégée)"@fr,
+        "Peperoni, coltura in suolo (coltura protetta)"@it .
+
+cultivationtype:1207 a owl:Class ;
+    schema:name "Weide (Mäh-) mittelintensiv"@de,
+        "Pasture (mowing) medium intensive"@en,
+        "Pâturage (de fauche) moyennement intensif"@fr,
+        "Pascolo (da sfalcio) mediamente intensivo"@it .
+
+cultivationtype:1208 a owl:Class ;
+    schema:name "Radies 10 Bund/m2"@de,
+        "Radishes 10 bunches/m2"@en,
+        "Radis 10 bottes/m2"@fr,
+        "Ravanelli 10 mazzi/m2"@it .
+
+cultivationtype:1209 a owl:Class ;
+    schema:name "Rettich 18 Stk/m2 (geschützter Anbau)"@de,
+        "Radish 18 pcs/m2 (protected cultivation)"@en,
+        "Radis blanc 18 pces/m2 (culture protégée)"@fr,
+        "Ramolaccio 18 pz/m2 (coltura protetta)"@it .
+
+cultivationtype:1210 a owl:Class ;
+    schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de,
+        "Radishes 20 bunches/m2 (protected cultivation)"@en,
+        "Radis 20 bottes/m2 (culture protégée)"@fr,
+        "Ravanelli 20 mazzi/m2 (coltura protetta)"@it .
+
+cultivationtype:1211 a owl:Class ;
+    schema:name "Rettich 8-9 Stk/m2"@de,
+        "Radish 8-9 pcs/m2"@en,
+        "Radis blanc 8-9 pces/m2"@fr,
+        "Ramolaccio 8-9 pz/m2"@it .
+
+cultivationtype:1212 a owl:Class ;
+    schema:name "Himbeeren,  1.5 kg/m2"@de,
+        "Raspberries, 1.5 kg/m2"@en,
+        "Framboises, 1.5 kg/m2"@fr,
+        "Lamponi, 1.5 kg/m2"@it .
+
+cultivationtype:1213 a owl:Class ;
+    schema:name "Himbeeren, 3.5 kg/m2"@de,
+        "Raspberries, 3.5 kg/m2"@en,
+        "Framboises, 3.5 kg/m2"@fr,
+        "Lamponi, 3.5 kg/m2"@it .
+
+cultivationtype:1214 a owl:Class ;
+    schema:name "Himbeeren, 2.5 kg/m2"@de,
+        "Raspberries, 2.5 kg/m2"@en,
+        "Framboises, 2.5 kg/m2"@fr,
+        "Lamponi, 2.5 kg/m2"@it .
+
+cultivationtype:1215 a owl:Class ;
+    schema:name "Rote Johannisbeeren, 2.0 kg/m2"@de,
+        "Redcurrants, 2.0 kg/m2"@en,
+        "Groseilles rouges, 2.0 kg/m2"@fr,
+        "Ribes rossi, 2.0 kg/m2"@it .
+
+cultivationtype:1216 a owl:Class ;
+    schema:name "Rote Johannisbeeren, 3.5 kg/m2"@de,
+        "Redcurrants, 3.5 kg/m2"@en,
+        "Groseilles rouges, 3.5 kg/m2"@fr,
+        "Ribes rossi, 3.5 kg/m2"@it .
+
+cultivationtype:1217 a owl:Class ;
+    schema:name "Rote Johannisbeeren, 2.5 kg/m2"@de,
+        "Redcurrants, 2.5 kg/m2"@en,
+        "Groseilles rouges, 2.5 kg/m2"@fr,
+        "Ribes rossi, 2.5 kg/m2"@it .
+
+cultivationtype:1218 a owl:Class ;
+    schema:name "Heidelbeeren, 1.5 kg/m2"@de,
+        "Blueberries, 1.5 kg/m2"@en,
+        "Myrtilles, 1.5 kg/m2"@fr,
+        "Mirtilli, 1.5 kg/m2"@it .
+
+cultivationtype:1219 a owl:Class ;
+    schema:name "Erdbeeren 1-jährig, 3.0 kg/m2"@de,
+        "Strawberries 1-year, 3.0 kg/m2"@en,
+        "Fraises annuelles, 3.0 kg/m2"@fr,
+        "Fragole annuali, 3.0 kg/m2"@it .
+
+cultivationtype:1220 a owl:Class ;
+    schema:name "Vom Betrieb weggeführtes Stroh"@de,
+        "Straw exported from farm"@en,
+        "Paille exportée de l'exploitation"@fr,
+        "Paglia esportata dall'azienda"@it .
+
+cultivationtype:1221 a owl:Class ;
+    schema:name "Erdbeeren 1-jährig, 2.0 kg/m2"@de,
+        "Strawberries 1-year, 2.0 kg/m2"@en,
+        "Fraises annuelles, 2.0 kg/m2"@fr,
+        "Fragole annuali, 2.0 kg/m2"@it .
+
+cultivationtype:1222 a owl:Class ;
+    schema:name "Erdbeeren 1-jährig, 4.0 kg/m2"@de,
+        "Strawberries 1-year, 4.0 kg/m2"@en,
+        "Fraises annuelles, 4.0 kg/m2"@fr,
+        "Fragole annuali, 4.0 kg/m2"@it .
+
+cultivationtype:1223 a owl:Class ;
+    schema:name "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de,
+        "Unlisted arable crops, non-legumes, mixtures legumes+non-legumes"@en,
+        "Cultures des champs non listées, non-lég., mélanges lég.+non-lég."@fr,
+        "Colture campestri non elencate, non leguminose, miscele leguminose+non leguminose"@it .
+
+cultivationtype:1224 a owl:Class ;
+    schema:name "Winterspinat, 1 Schnitt"@de,
+        "Winter spinach, 1 cut"@en,
+        "Épinards d'hiver, 1 coupe"@fr,
+        "Spinaci invernali, 1 taglio"@it .
+
+cultivationtype:1225 a owl:Class ;
+    schema:name "Bohnen, Busch- Handpflück-"@de,
+        "Beans, bushnd-picked"@en,
+        "Haricots nains, cueillis à la main"@fr,
+        "Fagioli nani, raccolti a mano"@it .
+
+cultivationtype:1226 a owl:Class ;
+    schema:name "Karotten Verarbeitung-, Lager-, hoher Ertrag"@de,
+        "Carrots processing, storage, high yield"@en,
+        "Carottes de transformation, de garde, à haut rendement"@fr,
+        "Carote da trasformazione, da conservazione, ad alta resa"@it .
+
+cultivationtype:1227 a owl:Class ;
+    schema:name "Karotten Verarbeitung-, Lager-, mittlerer Ertrag"@de,
+        "Carrots processing, storage, medium yield"@en,
+        "Carottes de transformation, de garde, à rendement moyen"@fr,
+        "Carote da trasformazione, da conservazione, a resa media"@it .
+
+cultivationtype:1228 a owl:Class ;
+    schema:name "Karotten Pariser"@de,
+        "Carrots, Parisian"@en,
+        "Carottes parisiennes"@fr,
+        "Carote parigine"@it .
+
+cultivationtype:1229 a owl:Class ;
+    schema:name "Karotten Bund-, Früh-"@de,
+        "Carrots bunched, early"@en,
+        "Carottes en bottes, précoces"@fr,
+        "Carote a mazzi, precoci"@it .
+
+cultivationtype:1230 a owl:Class ;
+    schema:name "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de,
+        "Soup celery 40 pcs/m2 (protected cultivation)"@en,
+        "Céleri à soupe 40 pces/m2 (culture protégée)"@fr,
+        "Sedano da zuppa 40 pz/m2 (coltura protetta)"@it .
+
+cultivationtype:1231 a owl:Class ;
+    schema:name "Sellerie Knollen-"@de,
+        "Celeriac"@en,
+        "Céleri-rave"@fr,
+        "Sedano rapa"@it .
+
+cultivationtype:1232 a owl:Class ;
+    schema:name "Sellerie Stangen-"@de,
+        "Celery"@en,
+        "Céleri-branche"@fr,
+        "Sedano da costa"@it .
+
+cultivationtype:1233 a owl:Class ;
+    schema:name "Cassis, 3.5 kg/m2"@de,
+        "Blackcurrants, 3.5 kg/m2"@en,
+        "Cassis, 3.5 kg/m2"@fr,
+        "Ribes neri, 3.5 kg/m2"@it .
+
+cultivationtype:1234 a owl:Class ;
+    schema:name "Krautstiel"@de,
+        "Swiss chard"@en,
+        "Bette à carde"@fr,
+        "Coste"@it .
+
+cultivationtype:1235 a owl:Class ;
+    schema:name "Kirschenanlage, hoher Ertrag"@de,
+        "Cherry orchard, high yield"@en,
+        "Verger de cerisiers, à haut rendement"@fr,
+        "Ceraseto, ad alta resa"@it .
+
+cultivationtype:1236 a owl:Class ;
+    schema:name "Chinakohl"@de,
+        "Chinese cabbage"@en,
+        "Chou chinois"@fr,
+        "Cavolo cinese"@it .
+
+cultivationtype:1237 a owl:Class ;
+    schema:name "Chinaschilf"@de,
+        "Miscanthus (Chinese silver grass)"@en,
+        "Miscanthus (Roseau de Chine)"@fr,
+        "Miscanto"@it .
+
+cultivationtype:1238 a owl:Class ;
+    schema:name "Schnittlauch"@de,
+        "Chives"@en,
+        "Ciboulette"@fr,
+        "Erba cipollina"@it .
+
+cultivationtype:1239 a owl:Class ;
+    schema:name "Chicorée, Wurzelanbau"@de,
+        "Chicory, root cultivation"@en,
+        "Endive (chicorée witloof), culture de racines"@fr,
+        "Cicoria (witloof), coltivazione delle radici"@it .
+
+cultivationtype:1240 a owl:Class ;
+    schema:name "Kamille"@de,
+        "Chamomile"@en,
+        "Camomille"@fr,
+        "Camomilla"@it .
+
+cultivationtype:1241 a owl:Class ;
+    schema:name "Kirschenanlage"@de,
+        "Cherry orchard"@en,
+        "Verger de cerisiers"@fr,
+        "Ceraseto"@it .
+
+cultivationtype:1242 a owl:Class ;
+    schema:name "Schnittlauch Kultur (geschützter Anbau)"@de,
+        "Chives cultivation (protected cultivation)"@en,
+        "Culture de ciboulette (culture protégée)"@fr,
+        "Coltura di erba cipollina (coltura protetta)"@it .
+
+cultivationtype:1243 a owl:Class ;
+    schema:name "Kresse (geschützter Anbau)"@de,
+        "Cress (protected cultivation)"@en,
+        "Cresson (culture protégée)"@fr,
+        "Crescione (coltura protetta)"@it .
+
+cultivationtype:1244 a owl:Class ;
+    schema:name "Nüsslisalat, Feldsalat (geschützter Anbau)"@de,
+        "Lamb's lettuce, corn salad (protected cultivation)"@en,
+        "Mâche, doucette (culture protégée)"@fr,
+        "Formentino, valerianella (coltura protetta)"@it .
+
+cultivationtype:1245 a owl:Class ;
+    schema:name "Schnittsalat (geschützter Anbau)"@de,
+        "Cutting lettuce (protected cultivation)"@en,
+        "Laitue à couper (culture protégée)"@fr,
+        "Lattuga da taglio (coltura protetta)"@it .
+
+cultivationtype:1246 a owl:Class ;
+    schema:name "Gurken 30 Stk/m2, Erdkultur (geschützter Anbau)"@de,
+        "Cucumbers 30 pcs/m2, soil culture (protected cultivation)"@en,
+        "Concombres 30 pces/m2, culture en terre (culture protégée)"@fr,
+        "Cetrioli 30 pz/m2, coltura in terra (coltura protetta)"@it .
+
+cultivationtype:1247 a owl:Class ;
+    schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de,
+        "Cucumbers 50 pcs/m2, soil culture (protected cultivation)"@en,
+        "Concombres 50 pces/m2, culture en terre (culture protégée)"@fr,
+        "Cetrioli 50 pz/m2, coltura in terra (coltura protetta)"@it .
+
+cultivationtype:1248 a owl:Class ;
+    schema:name "Arnika"@de,
+        "Arnica"@en,
+        "Arnica"@fr,
+        "Arnica"@it .
+
+cultivationtype:1249 a owl:Class ;
+    schema:name "Cassis, 2.5 kg/m2"@de,
+        "Blackcurrants, 2.5 kg/m2"@en,
+        "Cassis, 2.5 kg/m2"@fr,
+        "Ribes neri, 2.5 kg/m2"@it .
+
+cultivationtype:1250 a owl:Class ;
+    schema:name "Schnittsalat"@de,
+        "Cutting lettuce"@en,
+        "Laitue à couper"@fr,
+        "Lattuga da taglio"@it .
+
+cultivationtype:1251 a owl:Class ;
+    schema:name "Kabis Einschneide-"@de,
+        "Cabbage for processing (sauerkraut)"@en,
+        "Chou à choucroute"@fr,
+        "Cavolo per crauti"@it .
+
+cultivationtype:1252 a owl:Class ;
+    schema:name "Schnittblumen, gross"@de,
+        "Cut flowers, large"@en,
+        "Fleurs à couper, grandes"@fr,
+        "Fiori da recidere, grandi"@it .
+
+cultivationtype:1253 a owl:Class ;
+    schema:name "Schnittblumen, mittel"@de,
+        "Cut flowers, medium"@en,
+        "Fleurs à couper, moyennes"@fr,
+        "Fiori da recidere, medi"@it .
+
+cultivationtype:1254 a owl:Class ;
+    schema:name "Schnittblumen, klein"@de,
+        "Cut flowers, small"@en,
+        "Fleurs à couper, petites"@fr,
+        "Fiori da recidere, piccoli"@it .
+
+cultivationtype:1255 a owl:Class ;
+    schema:name "Dill"@de,
+        "Dill"@en,
+        "Aneth"@fr,
+        "Aneto"@it .
+
+cultivationtype:1256 a owl:Class ;
+    schema:name "Edelweiss"@de,
+        "Edelweiss"@en,
+        "Edelweiss"@fr,
+        "Stella alpina"@it .
+
+cultivationtype:1257 a owl:Class ;
+    schema:name "Rucola, 1 Schnitt"@de,
+        "Arugula, 1 cut"@en,
+        "Roquette, 1 coupe"@fr,
+        "Rucola, 1 taglio"@it ;
+    rdfs:subClassOf cultivationtype:278 .
+
+cultivationtype:1258 a owl:Class ;
+    schema:name "Endivie Herbst- (geschützter Anbau)"@de,
+        "Endive autumn (protected cultivation)"@en,
+        "Endive d'automne (culture protégée)"@fr,
+        "Indivia autunnale (coltura protetta)"@it .
+
+cultivationtype:1259 a owl:Class ;
+    schema:name "Endivie, hoher Ertrag"@de,
+        "Endive, high yield"@en,
+        "Endive, à haut rendement"@fr,
+        "Indivia, ad alta resa"@it .
+
+cultivationtype:1260 a owl:Class ;
+    schema:name "Endivie, mittlerer Ertrag"@de,
+        "Endive, medium yield"@en,
+        "Endive, à rendement moyen"@fr,
+        "Indivia, a resa media"@it .
+
+cultivationtype:1261 a owl:Class ;
+    schema:name "Soja"@de,
+        "Soybeans"@en,
+        "Soja"@fr,
+        "Soia"@it .
+
+cultivationtype:1262 a owl:Class ;
+    schema:name "Corn-Cob-Mix (CCM)"@de,
+        "Corn Cob Mix (CCM)"@en,
+        "Maïs épis complets (CCM)"@fr,
+        "Pastone di spiga (CCM)"@it ;
+    schema:description "Mais, der mit dem Ziel angebaut wird, als Corn-Cob-Mix geerntet zu werden. Corn-Cob-Mix (CCM) ist ein energiereiches Futtermittel für die Schweine- und Rindviehhaltung. Es besteht aus den zerkleinerten Körnern und Teilen der Spindel des Maiskolbens und wird in der Regel siliert. CCM zeichnet sich durch einen grossen Energiegehalt und eine gute Verdaulichkeit aus."@de ;
+    rdfs:subClassOf cultivationtype:497 .
+
+cultivationtype:1264 a owl:Class ;
+    schema:name "Faserlein"@de,
+        "Flax for fiber"@en,
+        "Lin à fibre"@fr,
+        "Lino da fibra"@it ;
+    rdfs:subClassOf cultivationtype:534 .
+
+cultivationtype:1265 a owl:Class ;
+    schema:name "Saum auf Ackerfläche"@de,
+        "Margin on arable land"@en,
+        "Bande sur surface assolée"@fr,
+        "Striscia su superficie coltiva"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:1266 a owl:Class ;
+    schema:name "Fenchel"@de,
+        "Fennel"@en,
+        "Fenouil"@fr,
+        "Finocchio"@it ;
+    rdfs:subClassOf cultivationtype:327 .
+
+cultivationtype:1267 a owl:Class ;
+    schema:name "Fenchelsamen 1-jährig"@de,
+        "Fennel seeds 1-year"@en,
+        "Graines de fenouil annuelles"@fr,
+        "Semi di finocchio annuali"@it ;
+    rdfs:subClassOf cultivationtype:1266 .
+
+cultivationtype:1268 a owl:Class ;
+    schema:name "Rucola, 2 Schnitte"@de,
+        "Arugula, 2 cuts"@en,
+        "Roquette, 2 coupes"@fr,
+        "Rucola, 2 tagli"@it ;
+    rdfs:subClassOf cultivationtype:278 .
+
+cultivationtype:1269 a owl:Class ;
+    schema:name "Fenchelsamen mehrjährig"@de,
+        "Fennel seeds perennial"@en,
+        "Graines de fenouil vivaces"@fr,
+        "Semi di finocchio perenni"@it ;
+    rdfs:subClassOf cultivationtype:1266 .
+
+cultivationtype:1270 a owl:Class ;
+    schema:name "Kabis Früh-, Folie"@de,
+        "Early cabbage, under foil"@en,
+        "Chou précoce, sous film"@fr,
+        "Cavolo precoce, sotto pellicola"@it .
+
+cultivationtype:1273 a owl:Class ;
+    schema:name "Stachelbeeren, 2.5 kg/m2"@de,
+        "Gooseberries, 2.5 kg/m2"@en,
+        "Groseilles à maquereau, 2.5 kg/m2"@fr,
+        "Uva spina, 2.5 kg/m2"@it ;
+    rdfs:subClassOf cultivationtype:298 .
+
+cultivationtype:1275 a owl:Class ;
+    schema:name "Gründüngung (Leguminosen)"@de,
+        "Green manure (legumes)"@en,
+        "Engrais vert (légumineuses)"@fr,
+        "Sovescio (leguminose)"@it .
+
+cultivationtype:1277 a owl:Class ;
+    schema:name "Gründüngung (Nichtleguminosen)"@de,
+        "Green manure (non-legumes)"@en,
+        "Engrais vert (non-légumineuses)"@fr,
+        "Sovescio (non leguminose)"@it .
+
+cultivationtype:1278 a owl:Class ;
+    schema:name "Stachelbeeren, 1.7 kg/m2"@de,
+        "Gooseberries, 1.7 kg/m2"@en,
+        "Groseilles à maquereau, 1.7 kg/m2"@fr,
+        "Uva spina, 1.7 kg/m2"@it ;
+    rdfs:subClassOf cultivationtype:298 .
+
+cultivationtype:1280 a owl:Class ;
+    schema:name "Grassamen-Produktion"@de,
+        "Grass seed production"@en,
+        "Production de semences de graminées"@fr,
+        "Produzione di sementi di graminacee"@it .
+
+cultivationtype:1281 a owl:Class ;
+    schema:name "Haselnüsse"@de,
+        "Hazelnuts"@en,
+        "Noisettes"@fr,
+        "Nocciole"@it .
+
+cultivationtype:1282 a owl:Class ;
+    schema:name "Heidelbeeren, 2.5 kg/m2"@de,
+        "Blueberries, 2.5 kg/m2"@en,
+        "Myrtilles, 2.5 kg/m2"@fr,
+        "Mirtilli, 2.5 kg/m2"@it .
+
+cultivationtype:1283 a owl:Class ;
+    schema:name "Öllein"@de,
+        "Linseed"@en,
+        "Lin oléagineux"@fr,
+        "Lino da olio"@it .
+
+cultivationtype:1284 a owl:Class ;
+    schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de,
+        "Standard fruit trees, 0.01ha/tree"@en,
+        "Arbres fruitiers à haute tige, 0.01ha/arbre"@fr,
+        "Alberi da frutto ad alto fusto, 0.01ha/albero"@it .
+
+cultivationtype:1285 a owl:Class ;
+    schema:name "Hecken und Feldgehölz mit Krautsaum"@de,
+        "Hedges and field copses with herbaceous margin"@en,
+        "Haies et bosquets champêtres avec ourlet herbacé"@fr,
+        "Siepi e boschetti campestri con margine erbaceo"@it .
+
+cultivationtype:1286 a owl:Class ;
+    schema:name "Einjährige Kräuter"@de ;
+    rdfs:subClassOf cultivationtype:55 .
+
+cultivationtype:1287 a owl:Class ;
+    schema:name "Mehrjährige Kräuter"@de ;
+    rdfs:subClassOf cultivationtype:55 .
