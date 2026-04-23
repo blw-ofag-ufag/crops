@@ -1340,7 +1340,7 @@ naebi:17 a cube:Observation ;
     :P2O5 80.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cultivationtype:233 .
+    :cultivationType cultivationtype:1187 .
 
 naebi:170 a cube:Observation ;
     schema:identifier "CROP_PEXT"^^xsd:string ;

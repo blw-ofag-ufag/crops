@@ -202,7 +202,7 @@ cultivationtype:14 a owl:Class ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
-    schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggenfer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
+    schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
     rdfs:subClassOf cultivationtype:1032 .
 
 cultivationtype:15 a owl:Class ;
