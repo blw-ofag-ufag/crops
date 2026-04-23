@@ -507,6 +507,12 @@ cultivationtype:76 a owl:Class ;
         "bietola a coste"@it ;
     rdfs:subClassOf cultivationtype:321 .
 
+cultivationtype:77 a owl:Class ;
+    schema:name "Brache"@de,
+        "jachère"@fr,
+        "Maggese"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:79 a owl:Class ;
     schema:name "Grasbestände zur Saatgutproduktion"@de,
         "Graminées pour la production de semences"@fr,
@@ -1649,6 +1655,12 @@ cultivationtype:321 a owl:Class ;
         "bette"@fr,
         "Bietola"@it ;
     rdfs:subClassOf cultivationtype:300 .
+
+cultivationtype:322 a owl:Class ;
+    schema:name "Brachland"@de,
+        "friche"@fr,
+        "Terreno incolto"@it ;
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:323 a owl:Class ;
     schema:name "Lauch"@de,

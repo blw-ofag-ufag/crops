@@ -2180,6 +2180,12 @@ cultivationtype:321 a owl:Class ;
         "Bietola"@it ;
     rdfs:subClassOf cultivationtype:300 .
 
+cultivationtype:322 a owl:Class ;
+    rdfs:label "Brachland"@de,
+        "friche"@fr,
+        "Terreno incolto"@it ;
+    rdfs:subClassOf :Cultivation .
+
 cultivationtype:323 a owl:Class ;
     rdfs:label "Lauch"@de,
         "poireau"@fr,
@@ -3471,6 +3477,12 @@ cultivationtype:760 a owl:Class ;
         "Surfaces de cultures pérennes, sans contributions, agrégée"@fr,
         "Colture perenni, senza contributi, aggregata"@it ;
     rdfs:subClassOf cultivationtype:6 .
+
+cultivationtype:77 a owl:Class ;
+    rdfs:label "Brache"@de,
+        "jachère"@fr,
+        "Maggese"@it ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:79 a owl:Class ;
     rdfs:label "Grasbestände zur Saatgutproduktion"@de,

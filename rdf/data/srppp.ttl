@@ -2700,7 +2700,7 @@ psm:322 a cube:Observation ;
         "friche"@fr,
         "Terreno incolto"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:322 .
 
 psm:323 a cube:Observation ;
     schema:identifier "8DFDE2D1-C004-4C25-BF54-21CF7C815232"^^xsd:ID ;
@@ -3268,7 +3268,7 @@ psm:77 a cube:Observation ;
         "jachère"@fr,
         "Maggese"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:77 .
 
 psm:78 a cube:Observation ;
     schema:identifier "C9DB1105-33C7-44E8-92BA-9BBE5BA2BB3F"^^xsd:ID ;
