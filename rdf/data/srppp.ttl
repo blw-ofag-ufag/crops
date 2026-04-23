@@ -621,7 +621,7 @@ psm:114 a cube:Observation ;
         "surfaces herbagères"@fr,
         "Superficie inerbita"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:114 .
 
 psm:115 a cube:Observation ;
     schema:identifier "1F004DAA-89AD-4A9D-A172-95D24B8A45FA"^^xsd:ID ;

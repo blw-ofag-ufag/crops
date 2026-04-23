@@ -241,7 +241,7 @@ cultivationtype:21 a owl:Class ;
     schema:name "Dauergrünfläche"@de ;
     schema:alternateName "Dauergrünland"@de ;
     schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:114 .
 
 cultivationtype:22 a owl:Class ;
     schema:name "Gemüsebau"@de,
@@ -698,6 +698,12 @@ cultivationtype:113 a owl:Class ;
         "Prugno/Susino"@it ;
     owl:unionOf ( cultivationtype:259 cultivationtype:198 ) ;
     rdfs:subClassOf cultivationtype:704 .
+
+cultivationtype:114 a owl:Class ;
+    schema:name "Grünfläche"@de,
+        "surfaces herbagères"@fr,
+        "Superficie inerbita"@it ;
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:115 a owl:Class ;
     schema:name "Brassica napus-Rüben"@de,
@@ -2514,7 +2520,7 @@ cultivationtype:601 a owl:Class ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
         "Prairies artificielles (sans les pâturages)"@fr,
         "Prati artificiali (senza pascoli)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1, cultivationtype:114 .
 
 cultivationtype:602 a owl:Class ;
     schema:name "Übrige Kunstwiese, beitragsberechtigt"@de,
@@ -2523,7 +2529,7 @@ cultivationtype:602 a owl:Class ;
     schema:description "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1, cultivationtype:114 .
 
 cultivationtype:611 a owl:Class ;
     schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
