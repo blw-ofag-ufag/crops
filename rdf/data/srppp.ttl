@@ -1253,7 +1253,7 @@ psm:178 a cube:Observation ;
         "toutes les cultures"@fr,
         "In generale"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType :Cultivation .
 
 psm:179 a cube:Observation ;
     schema:identifier "62BF86AE-FD69-4F95-A72C-1D57AF1DCD99"^^xsd:ID ;
@@ -3114,7 +3114,7 @@ psm:61 a cube:Observation ;
     schema:name "allg. Obstbau"@de,
         "domaine app. arboriculture"@fr ;
     schema:version 0 ;
-    :cultivationType cultivationtype:730 .
+    :cultivationType cultivationtype:5 .
 
 psm:62 a cube:Observation ;
     schema:identifier "E59545AD-3331-4E3D-B58D-9F67833C060B"^^xsd:ID ;
