@@ -2922,13 +2922,13 @@ cultivationtype:556 a owl:Class ;
     rdfs:label "Buntbrache"@de,
         "Jachère florale"@fr,
         "Maggese fioriti"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:77 .
 
 cultivationtype:557 a owl:Class ;
     rdfs:label "Rotationsbrache"@de,
         "Jachère tournante"@fr,
         "Maggese da rotazione"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:77 .
 
 cultivationtype:559 a owl:Class ;
     rdfs:label "Saum auf Ackerflächen"@de,
@@ -3967,10 +3967,10 @@ cultivationtype:533 a owl:DeprecatedClass ;
     rdfs:subClassOf cultivationtype:535 .
 
 cultivationtype:558 a owl:DeprecatedClass ;
-    rdfs:label "Grünbrache (nur 1999)"@de,
-        "Jachères vertes (uniquement en 1999)"@fr,
-        "Maggesi verdi (1999)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:label "Grünbrache"@de,
+        "Jachères vertes"@fr,
+        "Maggesi verdi"@it ;
+    rdfs:subClassOf cultivationtype:77 .
 
 cultivationtype:561 a owl:DeprecatedClass ;
     rdfs:label "Rübsen für die Samenproduktion (Vertragsanbau)"@de,
