@@ -16,6 +16,7 @@ jobs:
         test-file: 
           - tests/test_turtle_syntax.py
           - tests/test_psm_polyhierarchy_consistency.py
+          - tests/test_owl_consistency.py
     
     steps:
       - name: Checkout Repository
