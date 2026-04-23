@@ -59,25 +59,29 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     pip install -r src/python/requirements.txt
     ```
 
-3. Run the ETL pipeline `sh scripts/graph-processing.sh`
-4. Choose whether or not to generate and upload geodata.ttl, which enables queries and depiction of crop areas.
-5. Make sure you pass all tests with `pytest tests`
-6. Check out the results on LINDAS.
+3. Run the ETL pipeline `sh src/pipeline.bash`
+4. Make sure you pass all tests with `pytest tests`
+5. Check out the results on LINDAS.
 
 # Explore the graph on LINDAS
 
 You can query the crop master data system using SPARQL.
 
-Here's an [example SPARQL query](https://s.zazuko.com/2SyHoth) that gets you all cultivation type URIs and labels in German:
+Here's an [example SPARQL query](https://lindas.admin.ch/sparql/#query=PREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%20%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2Fcrops%2F%3E%0A%0ASELECT%20%3Fname%20%3FURI%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fcrops%3E%0AWHERE%20%7B%0A%20%20%3FURI%20a%20owl%3AClass%20%3B%0A%20%20%20%20schema%3Aname%20%3Fname%20%3B%0A%20%20%20%20rdfs%3AsubClassOf%2B%20%3ACultivation%20.%0A%20%20FILTER(LANG(%3Fname)%20%3D%20%22de%22)%0A%7D%0AORDER%20BY%20%3Fname&endpoint=https%3A%2F%2Flindas.admin.ch%2Fquery&requestMethod=POST&tabTitle=Crops&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table&outputSettings=%7B%22compact%22%3Atrue%7D) that gets you all cultivation type URIs and labels in German:
 
 ```sparql
 PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <https://agriculture.ld.admin.ch/crops/>
-SELECT *
+
+SELECT ?name ?URI
+FROM <https://lindas.admin.ch/foag/crops>
 WHERE {
-  ?crop a :CultivationType .
-  ?crop schema:name ?name .
-  FILTER(LANG(?name)="de")
+  ?URI a owl:Class ;
+    schema:name ?name ;
+    rdfs:subClassOf+ :Cultivation .
+  FILTER(LANG(?name) = "de")
 }
 ORDER BY ?name
 ```
