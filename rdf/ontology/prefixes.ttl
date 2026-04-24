@@ -3,6 +3,7 @@
 @prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/1> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 
 @prefix cube: <https://cube.link/> .
 @prefix meta: <https://cube.link/meta/> .
