@@ -3401,7 +3401,8 @@ cultivationtype:1041 a owl:Class ;
 
 cultivationtype:1042 a owl:Class ;
     schema:name "Kunstwiese intensiv"@de, "Prairie artificielle intensive"@fr, "Prato artificiale intensivo"@it ;
-    rdfs:subClassOf cultivationtype:601 .
+    rdfs:subClassOf cultivationtype:601 ;
+    :intensity :24 .
 
 cultivationtype:1043 a owl:Class ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
@@ -3600,7 +3601,8 @@ cultivationtype:1079 a owl:Class ;
 cultivationtype:1080 a owl:Class ;
     schema:name "Intensive Weiden und Mähweiden"@de ;
     schema:alternateName "Weide (Mäh-) intensiv"@de ;
-    rdfs:subClassOf cultivationtype:616 .
+    rdfs:subClassOf cultivationtype:616 ;
+    :intensity :24 .
 
 cultivationtype:1081 a owl:Class ;
     schema:name "Stangenbohne (geschützter Anbau)"@de,
@@ -3634,7 +3636,8 @@ cultivationtype:1085 a owl:Class ;
         "Pâturages et pâturages de fauche moyennement intensifs"@fr,
         "Pascoli e pascoli da sfalcio medio-intensivi"@it ;
     schema:alternateName "Weide (Mäh-) mittelintensiv"@de ;
-    rdfs:subClassOf cultivationtype:616 .
+    rdfs:subClassOf cultivationtype:616 ;
+    :intensity :23 .
 
 cultivationtype:1086 a owl:Class ;
     schema:name "Schlüsselblume (ganze Pflanze)"@de,
@@ -3890,7 +3893,8 @@ cultivationtype:1126 a owl:Class ;
     schema:name "Wenig intensiv genutzte Weiden"@de,
         "Pâturages peu intensifs"@fr,
         "Pascoli poco intensivi"@it ;
-    rdfs:subClassOf cultivationtype:616 .
+    rdfs:subClassOf cultivationtype:616 ;
+    :intensity :22 .
 
 cultivationtype:1127 a owl:Class ;
     schema:name "Bundzwiebeln, Überwinterung"@de,
@@ -3933,7 +3937,8 @@ cultivationtype:1133 a owl:Class ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de,
         "Prairies de fauche de la région d'estivage, peu intensives"@fr,
         "Prati da sfalcio nella regione d'estivazione, poco intensivi"@it ;
-    rdfs:subClassOf cultivationtype:480 .
+    rdfs:subClassOf cultivationtype:480 ;
+    :intensity :22 .
 
 cultivationtype:1134 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de,
@@ -4062,19 +4067,22 @@ cultivationtype:1153 a owl:Class ;
     schema:name "Naturwiese mittelintensiv"@de,
         "Prairie naturelle moyennement intensive"@fr,
         "Prato naturale medio-intensivo"@it ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:2 ;
+    :intensity :23 .
 
 cultivationtype:1154 a owl:Class ;
     schema:name "Kunstwiese mittelintensiv"@de,
         "Prairie artificielle moyennement intensive"@fr,
         "Prato artificiale medio-intensivo"@it ;
-    rdfs:subClassOf cultivationtype:601 .
+    rdfs:subClassOf cultivationtype:601 ;
+    :intensity :23 .
 
 cultivationtype:1155 a owl:Class ;
     schema:name "Naturwiese intensiv"@de,
         "Prairie naturelle intensive"@fr,
         "Prato naturale intensivo"@it ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:2 ;
+    :intensity :24 .
 
 cultivationtype:1156 a owl:Class ;
     schema:name "Winterspinat, 1 Schnitt"@de,
