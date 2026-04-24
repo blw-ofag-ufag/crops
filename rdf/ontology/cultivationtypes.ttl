@@ -2324,7 +2324,8 @@ cultivationtype:555 a owl:Class ;
     schema:name "Ackerschonstreifen"@de,
         "Bande culturale extensive"@fr,
         "Fasce di colture estensive in campicoltura"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:556 a owl:Class ;
     schema:name "Buntbrache"@de,
@@ -2373,13 +2374,15 @@ cultivationtype:564 a owl:DeprecatedClass ;
     schema:name "Ackerschonstreifen Ölsaaten (Raps, Sonnenblumen, Lein)"@de,
         "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
         "Fasce di colture estensive in campicoltura - semi oleosi (colza, girasole, lino)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:565 a owl:DeprecatedClass ;
     schema:name "Ackerschonstreifen Getreide"@de,
         "Bande culturale extensive céréales"@fr,
         "Fasce di colture estensive in campicoltura - cereali"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:566 a owl:Class ;
     schema:name "Mohn"@de,
@@ -2426,7 +2429,8 @@ cultivationtype:571 a owl:DeprecatedClass ;
     schema:description "Ackerschonstreifen Körnerleguminosen (Ackerbohnen, Eiweisserbsen, Lupinen und Mischungen mit Code 569)"@de,
         "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
         "Fasce di colture estensive in campicoltura - leguminose a granelli (favette, piselli proteici, lupini e miscele con codice 569)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:572 a owl:Class ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
@@ -2514,31 +2518,31 @@ cultivationtype:592 a owl:Class ;
     rdfs:subClassOf cultivationtype:493 .
 
 cultivationtype:594 a owl:Class ;
-    schema:name "Offene Ackerfläche, beitragsberechtigt"@de,
+    schema:name "Beitragsberechtigte offene Ackerfläche"@de,
         "Terres ouvertes donnant droit aux contributions"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi"@it ;
-    schema:description "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+    schema:description "Beitragsberechtigte offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:595 a owl:Class ;
-    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
+    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
-    schema:description "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+    schema:description "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:597 a owl:Class ;
-    schema:name "Übrige offene Ackerfläche, beitragsberechtigt"@de,
+    schema:name "Beitragsberechtigte übrige offene Ackerfläche"@de,
         "Autres terres ouvertes avec contributions"@fr,
         "Altra superficie coltiva aperta, con contributi"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:598 a owl:Class ;
-    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
+    schema:name "Nicht beitragsberechtigte Übrige offene Ackerfläche"@de,
         "Autres terres ouvertes sans contributions"@fr,
         "Altra superficie coltiva aperta, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:1 .
@@ -2550,7 +2554,7 @@ cultivationtype:601 a owl:Class ;
     rdfs:subClassOf cultivationtype:1, cultivationtype:114 .
 
 cultivationtype:602 a owl:Class ;
-    schema:name "Übrige Kunstwiese, beitragsberechtigt"@de,
+    schema:name "Beitragsberechtigte übrige Kunstwiese"@de,
         "Autres prairies artificielles donnant droit aux contributions"@fr,
         "Altri prati artificiali avente diritto ai contributi"@it ;
     schema:description "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
@@ -2640,13 +2644,13 @@ cultivationtype:635 a owl:Class ;
     rdfs:subClassOf cultivationtype:2 .
 
 cultivationtype:650 a owl:Class ;
-    schema:name "Übrige Dauerwiesen, beitragsberechtigt aggregiert"@de,
+    schema:name "Beitragsberechtigte übrige Dauerwiesen"@de,
         "Autres prairies permanentes, avec contributions, agrégée"@fr,
         "Altra superficie inerbita, con contributi, aggregata"@it ;
     rdfs:subClassOf cultivationtype:2 .
 
 cultivationtype:660 a owl:Class ;
-    schema:name "Übrige Dauerweiden, beitragsberechtigt aggregiert"@de,
+    schema:name "Beitragsberechtigte übrige Dauerweiden"@de,
         "Autres pâturages permanentes, avec contributions, agrégée"@fr,
         "Altri pascoli perenni, con contributi, aggregata"@it ;
     rdfs:subClassOf cultivationtype:3 .
@@ -2670,13 +2674,13 @@ cultivationtype:695 a owl:DeprecatedClass ;
     rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:697 a owl:Class ;
-    schema:name "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt"@de,
+    schema:name "Beitragsberechtigte übrige Dauergrünfläche"@de,
         "Autres surfaces herbagères (surface herbagère permanente) avec contributions"@fr,
         "Altre superfici (permanentemente) inerbite, con contributi"@it ;
     rdfs:subClassOf cultivationtype:2 .
 
 cultivationtype:698 a owl:Class ;
-    schema:name "Übrige Grünfläche (Dauergrünflächen), nicht beitragsberechtigt"@de,
+    schema:name "Nicht beitragsberechtigte übrige Dauergrünflächen"@de,
         "Autres surfaces herbagères (surface herbagère permanente) sans contributions"@fr,
         "Altre superfici (permanentemente) inerbite, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:2 .
@@ -2848,19 +2852,19 @@ cultivationtype:750 a owl:Class ;
     rdfs:subClassOf cultivationtype:6 .
 
 cultivationtype:760 a owl:Class ;
-    schema:name "Dauerkulturen, nicht beitragsberechtigt, aggregiert"@de,
+    schema:name "Nicht beitragsberechtigte Dauerkulturen"@de,
         "Surfaces de cultures pérennes, sans contributions, agrégée"@fr,
         "Colture perenni, senza contributi, aggregata"@it ;
     rdfs:subClassOf cultivationtype:6 .
 
 cultivationtype:797 a owl:Class ;
-    schema:name "Übrige Flächen mit Dauerkulturen, beitragsberechtigt"@de,
+    schema:name "Dauergrünfläche übrige Flächen mit Dauerkulturen"@de,
         "Autres surfaces de cultures pérennes, avec contributions"@fr,
         "Altre superfici con colture perenni, con contributi"@it ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:798 a owl:Class ;
-    schema:name "Übrige Flächen mit Dauerkulturen, nicht beitragsberechtigt"@de,
+    schema:name "Nicht beitragsberechtigte übrige Flächen mit Dauerkulturen"@de,
         "Autres surfaces de cultures pérennes, sans contributions"@fr,
         "Altre superfici con colture perenni, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:6 .
@@ -2939,19 +2943,19 @@ cultivationtype:814 a owl:Class ;
     rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:830 a owl:Class ;
-    schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt"@de,
+    schema:name "Beitragsberechtigte Kulturen in ganzjährig geschütztem Anbau"@de,
         "Cultures sous abri sans fondations permanentes, avec contributions"@fr,
         "Superfici con colture protette tutto l’anno, con contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:840 a owl:Class ;
-    schema:name "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt"@de,
+    schema:name "Nicht beitragsberechtigte Kulturen in ganzjährig geschütztem Anbau"@de,
         "Cultures sous abri sans fondations permanentes, sans contributions"@fr,
         "Superfici con colture protette tutto l’anno, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:847 a owl:Class ;
-    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, beitragsberechtigt"@de,
+    schema:name "Dauergrünfläche übrige Kulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Autres cultures sous abri sans fondations permanentes, avec contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, con contributi"@it ;
     rdfs:subClassOf cultivationtype:830 .
@@ -2963,7 +2967,7 @@ cultivationtype:848 a owl:Class ;
     rdfs:subClassOf cultivationtype:830 .
 
 cultivationtype:849 a owl:Class ;
-    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, nicht beitragsberechtigt"@de,
+    schema:name "Nicht beitragsberechtigte übrige Kulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Autres cultures sous abri sans fondations permanentes, sans contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
@@ -2996,19 +3000,19 @@ cultivationtype:858 a owl:Class ;
     rdfs:subClassOf cultivationtype:9 .
 
 cultivationtype:895 a owl:Class ;
-    schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
+    schema:name "Dauergrünfläche übrige Flächen innerhalb der LN"@de,
         "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
         "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
     rdfs:subClassOf cultivationtype:10 .
 
 cultivationtype:897 a owl:Class ;
-    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
+    schema:name "Übrige beitragsberechtigte Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autres surfaces dans la surface agricole utile, avec contributions"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata, con contributi"@it ;
     rdfs:subClassOf cultivationtype:10 .
 
 cultivationtype:898 a owl:Class ;
-    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, nicht beitragsberechtigt"@de,
+    schema:name "Nicht beitragsberechtigte übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autres surfaces dans la surface agricole utile, sans contributions"@fr,
         "Altre superfici all’interno della superficie agricola utilizzata, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:10 .
@@ -3169,7 +3173,8 @@ cultivationtype:950 a owl:Class ;
     schema:name "Ackerschonstreifen"@de,
         "Bande culturale extensive"@fr,
         "Fasce di colture estensive in campicoltura"@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf :Cultivation ;
+    :intensity :21 .
 
 cultivationtype:951 a owl:Class ;
     schema:name "Getreide in weiter Reihe"@de,
@@ -3396,7 +3401,8 @@ cultivationtype:1041 a owl:Class ;
 
 cultivationtype:1042 a owl:Class ;
     schema:name "Kunstwiese intensiv"@de, "Prairie artificielle intensive"@fr, "Prato artificiale intensivo"@it ;
-    rdfs:subClassOf cultivationtype:601 .
+    rdfs:subClassOf cultivationtype:601 ;
+    :intensity :24 .
 
 cultivationtype:1043 a owl:Class ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
@@ -3595,7 +3601,8 @@ cultivationtype:1079 a owl:Class ;
 cultivationtype:1080 a owl:Class ;
     schema:name "Intensive Weiden und Mähweiden"@de ;
     schema:alternateName "Weide (Mäh-) intensiv"@de ;
-    rdfs:subClassOf cultivationtype:616 .
+    rdfs:subClassOf cultivationtype:616 ;
+    :intensity :24 .
 
 cultivationtype:1081 a owl:Class ;
     schema:name "Stangenbohne (geschützter Anbau)"@de,
@@ -3629,7 +3636,8 @@ cultivationtype:1085 a owl:Class ;
         "Pâturages et pâturages de fauche moyennement intensifs"@fr,
         "Pascoli e pascoli da sfalcio medio-intensivi"@it ;
     schema:alternateName "Weide (Mäh-) mittelintensiv"@de ;
-    rdfs:subClassOf cultivationtype:616 .
+    rdfs:subClassOf cultivationtype:616 ;
+    :intensity :23 .
 
 cultivationtype:1086 a owl:Class ;
     schema:name "Schlüsselblume (ganze Pflanze)"@de,
@@ -3885,7 +3893,8 @@ cultivationtype:1126 a owl:Class ;
     schema:name "Wenig intensiv genutzte Weiden"@de,
         "Pâturages peu intensifs"@fr,
         "Pascoli poco intensivi"@it ;
-    rdfs:subClassOf cultivationtype:616 .
+    rdfs:subClassOf cultivationtype:616 ;
+    :intensity :22 .
 
 cultivationtype:1127 a owl:Class ;
     schema:name "Bundzwiebeln, Überwinterung"@de,
@@ -3921,13 +3930,15 @@ cultivationtype:1132 a owl:Class ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de,
         "Prairies de fauche de la région d'estivage, extensives"@fr,
         "Prati da sfalcio nella regione d'estivazione, estensivi"@it ;
-    rdfs:subClassOf cultivationtype:480 .
+    rdfs:subClassOf cultivationtype:480 ;
+    :intensity :21 .
 
 cultivationtype:1133 a owl:Class ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de,
         "Prairies de fauche de la région d'estivage, peu intensives"@fr,
         "Prati da sfalcio nella regione d'estivazione, poco intensivi"@it ;
-    rdfs:subClassOf cultivationtype:480 .
+    rdfs:subClassOf cultivationtype:480 ;
+    :intensity :22 .
 
 cultivationtype:1134 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de,
@@ -4056,19 +4067,22 @@ cultivationtype:1153 a owl:Class ;
     schema:name "Naturwiese mittelintensiv"@de,
         "Prairie naturelle moyennement intensive"@fr,
         "Prato naturale medio-intensivo"@it ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:2 ;
+    :intensity :23 .
 
 cultivationtype:1154 a owl:Class ;
     schema:name "Kunstwiese mittelintensiv"@de,
         "Prairie artificielle moyennement intensive"@fr,
         "Prato artificiale medio-intensivo"@it ;
-    rdfs:subClassOf cultivationtype:601 .
+    rdfs:subClassOf cultivationtype:601 ;
+    :intensity :23 .
 
 cultivationtype:1155 a owl:Class ;
     schema:name "Naturwiese intensiv"@de,
         "Prairie naturelle intensive"@fr,
         "Prato naturale intensivo"@it ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:2 ;
+    :intensity :24 .
 
 cultivationtype:1156 a owl:Class ;
     schema:name "Winterspinat, 1 Schnitt"@de,
