@@ -2324,7 +2324,8 @@ cultivationtype:555 a owl:Class ;
     schema:name "Ackerschonstreifen"@de,
         "Bande culturale extensive"@fr,
         "Fasce di colture estensive in campicoltura"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:556 a owl:Class ;
     schema:name "Buntbrache"@de,
@@ -2373,13 +2374,15 @@ cultivationtype:564 a owl:DeprecatedClass ;
     schema:name "Ackerschonstreifen Ölsaaten (Raps, Sonnenblumen, Lein)"@de,
         "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
         "Fasce di colture estensive in campicoltura - semi oleosi (colza, girasole, lino)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:565 a owl:DeprecatedClass ;
     schema:name "Ackerschonstreifen Getreide"@de,
         "Bande culturale extensive céréales"@fr,
         "Fasce di colture estensive in campicoltura - cereali"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:566 a owl:Class ;
     schema:name "Mohn"@de,
@@ -2426,7 +2429,8 @@ cultivationtype:571 a owl:DeprecatedClass ;
     schema:description "Ackerschonstreifen Körnerleguminosen (Ackerbohnen, Eiweisserbsen, Lupinen und Mischungen mit Code 569)"@de,
         "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
         "Fasce di colture estensive in campicoltura - leguminose a granelli (favette, piselli proteici, lupini e miscele con codice 569)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:572 a owl:Class ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
@@ -3169,7 +3173,8 @@ cultivationtype:950 a owl:Class ;
     schema:name "Ackerschonstreifen"@de,
         "Bande culturale extensive"@fr,
         "Fasce di colture estensive in campicoltura"@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf :Cultivation ;
+    :intensity :21 .
 
 cultivationtype:951 a owl:Class ;
     schema:name "Getreide in weiter Reihe"@de,
@@ -3921,7 +3926,8 @@ cultivationtype:1132 a owl:Class ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de,
         "Prairies de fauche de la région d'estivage, extensives"@fr,
         "Prati da sfalcio nella regione d'estivazione, estensivi"@it ;
-    rdfs:subClassOf cultivationtype:480 .
+    rdfs:subClassOf cultivationtype:480 ;
+    :intensity :21 .
 
 cultivationtype:1133 a owl:Class ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de,
