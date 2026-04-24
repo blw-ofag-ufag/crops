@@ -1919,7 +1919,8 @@ cultivationtype:479 a owl:Class ;
 
 cultivationtype:480 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:2 ;
+    owl:unionOf ( cultivationtype:621 cultivationtype:622 cultivationtype:623 ) .
 
 cultivationtype:490 a owl:Class ;
     schema:name "Winterweichweizen"@de,
@@ -2607,6 +2608,27 @@ cultivationtype:619 a owl:DeprecatedClass ;
     schema:name "Weiden für Schweine, nicht anrechenbar für die Berechnung der RGVE"@de,
         "Pâturages pour porcs, non imputables pour le calcul des UGBFG"@fr,
         "Pascoli riservati ai suini e a pollame non computabili per il calcolo delle UBGFG"@it ;
+    rdfs:subClassOf cultivationtype:21 .
+
+cultivationtype:621 a owl:Class ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen (keine BFF)"@de,
+        "Prairies de fauche en région d'estivage, autres (pas de SPB)"@fr,
+        "Prati da sfalcio nella regione d'estivazione, altri prati (nessuna SPB)"@it .
+
+cultivationtype:622 a owl:Class ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d'estivage, type prairie extensive"@fr,
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo estensivo"@it .
+
+cultivationtype:623 a owl:Class ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d'estivage, type prairie peu intensive"@fr,
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo poco intensivo"@it .
+
+cultivationtype:625 a owl:Class ;
+    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
     rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:631 a owl:Class ;

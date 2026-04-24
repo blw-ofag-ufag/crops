@@ -1222,18 +1222,6 @@ cultivationtype:1195 a owl:Class ;
         "Erbe aromatiche, perenni, piccole"@it ;
     rdfs:subClassOf cultivationtype:1287 .
 
-cultivationtype:1198 a owl:Class ;
-    rdfs:label "Vom Betrieb weggeführtes Rübenblatt"@de,
-        "Beet leaves exported from farm"@en,
-        "Feuilles de betteraves exportées de l'exploitation"@fr,
-        "Foglie di barbabietola esportate dall'azienda"@it .
-
-cultivationtype:1199 a owl:Class ;
-    rdfs:label "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de,
-        "Small installations (<20 a) with various permanent crops"@en,
-        "Petites installations (<20 a) avec diverses cultures permanentes"@fr,
-        "Piccoli impianti (<20 a) con diverse colture permanenti"@it .
-
 cultivationtype:12 a owl:Class ;
     rdfs:label "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces en dehors de la surface agricole utile"@fr,
@@ -1253,30 +1241,12 @@ cultivationtype:1200 a owl:Class ;
         "Cavolo rapa da trasformazione"@it ;
     rdfs:subClassOf cultivationtype:86 .
 
-cultivationtype:1202 a owl:Class ;
-    rdfs:label "Kleesamenproduktion"@de,
-        "Clover seed production"@en,
-        "Production de semences de trèfle"@fr,
-        "Produzione di sementi di trifoglio"@it .
-
-cultivationtype:1203 a owl:Class ;
-    rdfs:label "Gründüngung Leguminosen (Freilandgemüse)"@de,
-        "Green manure legumes (open field vegetables)"@en,
-        "Engrais vert légumineuses (légumes de plein champ)"@fr,
-        "Sovescio leguminose (ortaggi in pieno campo)"@it .
-
 cultivationtype:1204 a owl:Class ;
     rdfs:label "Nussbäume, 0.01 ha/Baum"@de,
         "Walnut trees, 0.01 ha/tree"@en,
         "Noyers, 0.01 ha/arbre"@fr,
         "Noci, 0.01 ha/albero"@it ;
     rdfs:subClassOf cultivationtype:922 .
-
-cultivationtype:1205 a owl:Class ;
-    rdfs:label "betriebseigenes verfütt. Rübenblatt"@de,
-        "Home-grown fed beet leaves"@en,
-        "Feuilles de betteraves fourragères de l'exploitation"@fr,
-        "Foglie di barbabietola foraggera dell'azienda"@it .
 
 cultivationtype:1206 a owl:Class ;
     rdfs:label "Einjährige Erdbeeren"@de ;
@@ -1379,12 +1349,6 @@ cultivationtype:122 a owl:Class ;
     rdfs:subClassOf cultivationtype:118,
         cultivationtype:72 .
 
-cultivationtype:1220 a owl:Class ;
-    rdfs:label "Vom Betrieb weggeführtes Stroh"@de,
-        "Straw exported from farm"@en,
-        "Paille exportée de l'exploitation"@fr,
-        "Paglia esportata dall'azienda"@it .
-
 cultivationtype:1221 a owl:Class ;
     rdfs:label "Erdbeeren 1-jährig, 2.0 kg/m2"@de,
         "Strawberries 1-year, 2.0 kg/m2"@en,
@@ -1398,12 +1362,6 @@ cultivationtype:1222 a owl:Class ;
         "Fraises annuelles, 4.0 kg/m2"@fr,
         "Fragole annuali, 4.0 kg/m2"@it ;
     rdfs:subClassOf cultivationtype:1206 .
-
-cultivationtype:1223 a owl:Class ;
-    rdfs:label "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de,
-        "Unlisted arable crops, non-legumes, mixtures legumes+non-legumes"@en,
-        "Cultures des champs non listées, non-lég., mélanges lég.+non-lég."@fr,
-        "Colture campestri non elencate, non leguminose, miscele leguminose+non leguminose"@it .
 
 cultivationtype:1224 a owl:Class ;
     rdfs:label "Winterspinat, 1 Schnitt"@de,
@@ -1685,18 +1643,6 @@ cultivationtype:1273 a owl:Class ;
         "Uva spina, 2.5 kg/m2"@it ;
     rdfs:subClassOf cultivationtype:298 .
 
-cultivationtype:1275 a owl:Class ;
-    rdfs:label "Gründüngung (Leguminosen)"@de,
-        "Green manure (legumes)"@en,
-        "Engrais vert (légumineuses)"@fr,
-        "Sovescio (leguminose)"@it .
-
-cultivationtype:1277 a owl:Class ;
-    rdfs:label "Gründüngung (Nichtleguminosen)"@de,
-        "Green manure (non-legumes)"@en,
-        "Engrais vert (non-légumineuses)"@fr,
-        "Sovescio (non leguminose)"@it .
-
 cultivationtype:1278 a owl:Class ;
     rdfs:label "Stachelbeeren, 1.7 kg/m2"@de,
         "Gooseberries, 1.7 kg/m2"@en,
@@ -1731,12 +1677,6 @@ cultivationtype:1284 a owl:Class ;
         "Arbres fruitiers à haute tige, 0.01ha/arbre"@fr,
         "Alberi da frutto ad alto fusto, 0.01ha/albero"@it ;
     rdfs:subClassOf cultivationtype:921 .
-
-cultivationtype:1285 a owl:Class ;
-    rdfs:label "Hecken und Feldgehölz mit Krautsaum"@de,
-        "Hedges and field copses with herbaceous margin"@en,
-        "Haies et bosquets champêtres avec ourlet herbacé"@fr,
-        "Siepi e boschetti campestri con margine erbaceo"@it .
 
 cultivationtype:1286 a owl:Class ;
     rdfs:label "Einjährige Kräuter"@de ;
@@ -1817,7 +1757,7 @@ cultivationtype:14 a owl:Class ;
     rdfs:label "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
-    rdfs:comment "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggenfer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
+    rdfs:comment "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
     rdfs:subClassOf cultivationtype:1032 .
 
 cultivationtype:140 a owl:Class ;
@@ -3110,7 +3050,8 @@ cultivationtype:48 a owl:Class ;
 
 cultivationtype:480 a owl:Class ;
     rdfs:label "Heuwiesen im Sömmerungsgebiet"@de ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:2 ;
+    owl:unionOf ( cultivationtype:621 cultivationtype:622 cultivationtype:623 ) .
 
 cultivationtype:490 a owl:Class ;
     rdfs:label "Winterweichweizen"@de,
@@ -3787,6 +3728,27 @@ cultivationtype:618 a owl:Class ;
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
     rdfs:subClassOf cultivationtype:3 .
+
+cultivationtype:621 a owl:Class ;
+    rdfs:label "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen (keine BFF)"@de,
+        "Prairies de fauche en région d'estivage, autres (pas de SPB)"@fr,
+        "Prati da sfalcio nella regione d'estivazione, altri prati (nessuna SPB)"@it .
+
+cultivationtype:622 a owl:Class ;
+    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d'estivage, type prairie extensive"@fr,
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo estensivo"@it .
+
+cultivationtype:623 a owl:Class ;
+    rdfs:label "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d'estivage, type prairie peu intensive"@fr,
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo poco intensivo"@it .
+
+cultivationtype:625 a owl:Class ;
+    rdfs:label "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
+    rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:63 a owl:Class ;
     rdfs:label "Buchsbäume (Buxus)"@de,
