@@ -2548,7 +2548,7 @@ cultivationtype:597 a owl:Class ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:598 a owl:Class ;
-    schema:name "Nicht beitragsberechtigte Übrige offene Ackerfläche"@de,
+    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
         "Autres terres ouvertes sans contributions"@fr,
         "Altra superficie coltiva aperta, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:1 .
