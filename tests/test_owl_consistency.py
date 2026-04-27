@@ -3,9 +3,10 @@ import tempfile
 import pytest
 from rdflib import Graph
 from owlready2 import get_ontology, sync_reasoner, OwlReadyInconsistentOntologyError, Nothing
+from pathlib import Path
 
-# Define the path to your ontology
-TTL_FILE_PATH = "rdf/ontology/cultivationtypes.ttl"
+BASE_DIR = Path(__file__).resolve().parent.parent
+TTL_FILE_PATH = BASE_DIR / "rdf" / "ontology" / "cultivationtypes.ttl"
 
 @pytest.fixture
 def translated_ontology_path():
