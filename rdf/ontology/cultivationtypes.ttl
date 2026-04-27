@@ -433,7 +433,7 @@ cultivationtype:58 a owl:Class ;
     schema:name "Chinakohl"@de,
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:60 a owl:Class ;
     schema:name "Sommerflor"@de,
@@ -562,7 +562,7 @@ cultivationtype:87 a owl:Class ;
     schema:name "Federkohl"@de,
         "chou frisé non pommé"@fr,
         "Cavolo piuma"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:88 a owl:Class ;
     schema:name "Speise- und Futterkartoffeln"@de,
@@ -986,7 +986,7 @@ cultivationtype:171 a owl:Class ;
     schema:name "Bohnen ohne Hülsen"@de,
         "Haricots écossés"@fr,
         "Fagioli senza baccello"@it ;
-    rdfs:subClassOf cultivationtype:3 .
+    rdfs:subClassOf cultivationtype:476 .
 
 cultivationtype:172 a owl:Class ;
     schema:name "Lorbeer"@de,
@@ -1272,7 +1272,7 @@ cultivationtype:237 a owl:Class ;
     schema:name "Markstammkohl"@de,
         "chou moellier"@fr,
         "Cavolo fustoso"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:238 a owl:Class ;
     schema:name "Nelken"@de,
@@ -1693,7 +1693,7 @@ cultivationtype:325 a owl:Class ;
     schema:name "Pak-Choi"@de,
         "pakchoi"@fr,
         "Pak-Choi"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:326 a owl:Class ;
     schema:name "Rubus Arten"@de,
