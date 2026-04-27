@@ -4186,10 +4186,6 @@ cultivationtype:1183 a owl:Class ;
     schema:name "Blumenkohl, Verarbeitung"@de ;
     rdfs:subClassOf cultivationtype:111 .
 
-cultivationtype:1184 a owl:Class ;
-    schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
-    owl:intersectionOf ( cultivationtype:7 cultivationtype:474 ) .
-
 cultivationtype:1185 a owl:Class ;
     schema:name "Brombeeren, 2.0 kg/m2"@de ;
     rdfs:subClassOf cultivationtype:233 .
