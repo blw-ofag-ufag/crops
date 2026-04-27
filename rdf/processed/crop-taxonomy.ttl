@@ -3645,7 +3645,8 @@ cultivationtype:594 a owl:Class ;
     rdfs:comment "Beitragsberechtigte offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:595 a owl:Class ;
     rdfs:label "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
@@ -3654,7 +3655,8 @@ cultivationtype:595 a owl:Class ;
     rdfs:comment "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:597 a owl:Class ;
     rdfs:label "Beitragsberechtigte übrige offene Ackerfläche"@de,
@@ -3824,13 +3826,15 @@ cultivationtype:693 a owl:Class ;
     rdfs:label "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (pâturages)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (pascoli)"@it ;
-    rdfs:subClassOf cultivationtype:3 .
+    rdfs:subClassOf cultivationtype:3 ;
+    :intensity :21 .
 
 cultivationtype:694 a owl:Class ;
     rdfs:label "Regionsspezifische Biodiversitätsförderfläche (Grünflächen ohne Weiden)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère, sauf les pâturages)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite, senza pascoli)"@it ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:2 ;
+    :intensity :21 .
 
 cultivationtype:697 a owl:Class ;
     rdfs:label "Beitragsberechtigte übrige Dauergrünfläche"@de,
@@ -4009,7 +4013,8 @@ cultivationtype:731 a owl:Class ;
 cultivationtype:735 a owl:Class ;
     rdfs:label "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
         "Vignes (surfaces de promotion de la biodiversité spécifiques à la ré-gion)"@fr,
-        "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it .
+        "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    :intensity :21 .
 
 cultivationtype:75 a owl:Class ;
     rdfs:label "Portulak"@de,
@@ -4233,7 +4238,8 @@ cultivationtype:858 a owl:Class ;
     rdfs:comment "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:9 .
+    rdfs:subClassOf cultivationtype:9 ;
+    :intensity :21 .
 
 cultivationtype:86 a owl:Class ;
     rdfs:label "Kohlrabi"@de,
@@ -4343,7 +4349,8 @@ cultivationtype:908 a owl:Class ;
     rdfs:label "Regionsspezifische Biodiversitätsförderflächen"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
-    rdfs:subClassOf cultivationtype:12 .
+    rdfs:subClassOf cultivationtype:12 ;
+    :intensity :21 .
 
 cultivationtype:909 a owl:Class ;
     rdfs:label "Hausgärten"@de,
@@ -4410,13 +4417,15 @@ cultivationtype:927 a owl:Class ;
     rdfs:label "Andere Bäume (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:20 ;
+    :intensity :21 .
 
 cultivationtype:928 a owl:Class ;
     rdfs:label "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:20 ;
+    :intensity :21 .
 
 cultivationtype:929 a owl:Class ;
     rdfs:label "Andere Elemente (Landschaftsqualität)"@de,
@@ -4597,7 +4606,8 @@ cultivationtype:695 a owl:DeprecatedClass ;
     rdfs:label "Regionsspezifische Biodiversitätsförderfläche (Grünfläche)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite)"@it ;
-    rdfs:subClassOf cultivationtype:21 .
+    rdfs:subClassOf cultivationtype:21 ;
+    :intensity :21 .
 
 cultivationtype:716 a owl:DeprecatedClass ;
     rdfs:label "Gepflegte Selven (Kastanien-/Nussbäume)"@de,
