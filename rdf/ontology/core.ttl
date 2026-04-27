@@ -94,19 +94,19 @@ wikidata:Q16521 a owl:Class ;
     schema:name "Tierische Ernährung"@de,
         "Animal nutrition"@en .
 
-:21 a owl:NamedIndividual ;
+intensity:Extensive a owl:NamedIndividual ;
     schema:name "extensiv"@de,
         "Extensive"@en .
 
-:22 a owl:NamedIndividual ;
+intensity:Low a owl:NamedIndividual ;
     schema:name "wenig intensiv"@de,
         "Low intensity"@en .
 
-:23 a owl:NamedIndividual ;
+intensity:Medium a owl:NamedIndividual ;
     schema:name "mittelintensiv"@de,
         "Medium intensity"@en .
 
-:24 a owl:NamedIndividual ;
+intensity:Intensive a owl:NamedIndividual ;
     schema:name "intensiv"@de,
         "Intensive"@en .
 
