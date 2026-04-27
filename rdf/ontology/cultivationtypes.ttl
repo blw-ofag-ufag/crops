@@ -1699,7 +1699,7 @@ cultivationtype:325 a owl:Class ;
 cultivationtype:326 a owl:Class ;
     schema:name "Rubus Arten"@de,
         "espèces de Rubus"@fr,
-        "Specie di rubus"@it ;
+        "Specie di rubus blabla ;
     rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:327 a owl:Class ;
