@@ -66,10 +66,8 @@ def test_cultivation_types_consistency(translated_ontology_path):
     #    silently becomes a subclass of owl:Nothing during reasoning.
     unsatisfiable_classes = list(onto.classes())
     broken_classes = [cls for cls in unsatisfiable_classes if Nothing in cls.ancestors()]
-
-    if broken_classes:
-        class_names = [cls.name for cls in broken_classes]
-        pytest.fail(
-            f"Ontology logic is invalid: Found UNSATISFIABLE classes (empty sets due to contradictory axioms). "
-            f"Broken classes: {class_names}"
-        )
+    assert not broken_classes, (
+        f"Ontology logic is invalid: Found UNSATISFIABLE classes "
+        f"(empty sets due to contradictory axioms). "
+        f"Broken classes: {[cls.name for cls in broken_classes]}"
+    )
