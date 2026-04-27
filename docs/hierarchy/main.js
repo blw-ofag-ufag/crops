@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             OPTIONAL {
-                VALUES ?attributeType { :intensity :purpose :cultivationMethod }
+                VALUES ?attributeType { :managementIntensity :purpose :cultivationMethod }
                 ?node ?attributeType ?attributeValue .
                 BIND(BNODE() AS ?attribute)
                 ?attributeType schema:name ?attributeTypeName .
