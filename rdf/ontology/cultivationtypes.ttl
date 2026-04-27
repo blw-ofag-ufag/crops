@@ -81,7 +81,7 @@ cultivationtype:shape a sh:NodeShape ;
         sh:maxCount 1 ;
     ],
     [
-        sh:path :intensity ;
+        sh:path :managementIntensity ;
         sh:nodeKind sh:IRI ;
         sh:maxCount 1 ;
     ],
@@ -2326,14 +2326,14 @@ cultivationtype:555 a owl:Class ;
         "Bande culturale extensive"@fr,
         "Fasce di colture estensive in campicoltura"@it ;
     rdfs:subClassOf cultivationtype:1 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:556 a owl:Class ;
     schema:name "Buntbrache"@de,
         "Jachère florale"@fr,
         "Maggese fioriti"@it ;
     rdfs:subClassOf cultivationtype:77 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:557 a owl:Class ;
     schema:name "Rotationsbrache"@de,
@@ -2341,7 +2341,7 @@ cultivationtype:557 a owl:Class ;
         "Maggese da rotazione"@it,
         "Rotational fallow"@en ;
     rdfs:subClassOf cultivationtype:77 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:558 a owl:DeprecatedClass ;
     schema:name "Grünbrache"@de,
@@ -2378,14 +2378,14 @@ cultivationtype:564 a owl:DeprecatedClass ;
         "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
         "Fasce di colture estensive in campicoltura - semi oleosi (colza, girasole, lino)"@it ;
     rdfs:subClassOf cultivationtype:1 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:565 a owl:DeprecatedClass ;
     schema:name "Ackerschonstreifen Getreide"@de,
         "Bande culturale extensive céréales"@fr,
         "Fasce di colture estensive in campicoltura - cereali"@it ;
     rdfs:subClassOf cultivationtype:1 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:566 a owl:Class ;
     schema:name "Mohn"@de,
@@ -2433,14 +2433,14 @@ cultivationtype:571 a owl:DeprecatedClass ;
         "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
         "Fasce di colture estensive in campicoltura - leguminose a granelli (favette, piselli proteici, lupini e miscele con codice 569)"@it ;
     rdfs:subClassOf cultivationtype:1 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:572 a owl:Class ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
         "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
     rdfs:subClassOf cultivationtype:1 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:573 a owl:Class ;
     schema:name "Senf"@de,
@@ -2529,7 +2529,7 @@ cultivationtype:594 a owl:Class ;
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:1 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:595 a owl:Class ;
     schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
@@ -2539,7 +2539,7 @@ cultivationtype:595 a owl:Class ;
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:1 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:597 a owl:Class ;
     schema:name "Beitragsberechtigte übrige offene Ackerfläche"@de,
@@ -2576,7 +2576,7 @@ cultivationtype:611 a owl:Class ;
     "Les prairies exploitées de manière extensive ne sont pas fertilisées et sont fauchées tardivement, comme par exemple les prairies mi-sèches ou à brome. Elles représentent les herbages les plus riches en espèces de Suisse."@fr,
     "I prati sfruttati in modo estensivo non vengono concimati e vengono falciati tardi, come ad esempio i prati semi-aridi o a brometo. Rappresentano le praterie più ricche di specie della Svizzera."@it ;
     rdfs:subClassOf cultivationtype:2 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:612 a owl:Class ;
     schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
@@ -2586,7 +2586,7 @@ cultivationtype:612 a owl:Class ;
     "Les prairies peu intensives sont des prairies légèrement fertilisées et fauchées tardivement, comme par exemple les prairies à fromental ou à avoine dorée."@fr,
     "I prati poco intensivi sono prati leggermente concimati e falciati tardi, come ad esempio i prati a fromental o ad avena bionda."@it ;
     rdfs:subClassOf cultivationtype:2 ;
-    :intensity intensity:Low .
+    :managementIntensity intensity:Low .
 
 cultivationtype:613 a owl:Class ;
     schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
@@ -2605,7 +2605,7 @@ cultivationtype:617 a owl:Class ;
         "Pâturages extensifs"@fr,
         "Pascoli estensivi"@it ;
     rdfs:subClassOf cultivationtype:3 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:618 a owl:Class ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
@@ -2666,21 +2666,21 @@ cultivationtype:693 a owl:Class ;
         "Surfaces de promotion de la biodiversité spécifiques à la région (pâturages)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (pascoli)"@it ;
     rdfs:subClassOf cultivationtype:3 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:694 a owl:Class ;
     schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünflächen ohne Weiden)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère, sauf les pâturages)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite, senza pascoli)"@it ;
     rdfs:subClassOf cultivationtype:2 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:695 a owl:DeprecatedClass ;
     schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünfläche)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite)"@it ;
     rdfs:subClassOf cultivationtype:21 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:697 a owl:Class ;
     schema:name "Beitragsberechtigte übrige Dauergrünfläche"@de,
@@ -2853,7 +2853,7 @@ cultivationtype:735 a owl:Class ;
     schema:name "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
         "Vignes (surfaces de promotion de la biodiversité spécifiques à la ré-gion)"@fr,
         "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:750 a owl:Class ;
     schema:name "Übrige beitragsberechtigte Dauerkulturen"@de,
@@ -3008,7 +3008,7 @@ cultivationtype:858 a owl:Class ;
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:9 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:895 a owl:Class ;
     schema:name "Dauergrünfläche übrige Flächen innerhalb der LN"@de,
@@ -3082,7 +3082,7 @@ cultivationtype:908 a owl:Class ;
         "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
     rdfs:subClassOf cultivationtype:12 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:909 a owl:Class ;
     schema:name "Hausgärten"@de,
@@ -3138,14 +3138,14 @@ cultivationtype:927 a owl:Class ;
         "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     rdfs:subClassOf cultivationtype:20 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:928 a owl:Class ;
     schema:name "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
     rdfs:subClassOf cultivationtype:20 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:929 a owl:Class ;
     schema:name "Andere Elemente (Landschaftsqualität)"@de,
@@ -3188,7 +3188,7 @@ cultivationtype:950 a owl:Class ;
         "Bande culturale extensive"@fr,
         "Fasce di colture estensive in campicoltura"@it ;
     rdfs:subClassOf :Cultivation ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:951 a owl:Class ;
     schema:name "Getreide in weiter Reihe"@de,
@@ -3330,7 +3330,7 @@ cultivationtype:1021 a owl:Class ;
 cultivationtype:1023 a owl:Class ;
     schema:name "Nützlingsstreifen (DK)"@de ;
     rdfs:subClassOf cultivationtype:6 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:1024 a owl:Class ;
     schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
@@ -3417,7 +3417,7 @@ cultivationtype:1041 a owl:Class ;
 cultivationtype:1042 a owl:Class ;
     schema:name "Kunstwiese intensiv"@de, "Prairie artificielle intensive"@fr, "Prato artificiale intensivo"@it ;
     rdfs:subClassOf cultivationtype:601 ;
-    :intensity intensity:Intensive .
+    :managementIntensity intensity:Intensive .
 
 cultivationtype:1043 a owl:Class ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
@@ -3617,7 +3617,7 @@ cultivationtype:1080 a owl:Class ;
     schema:name "Intensive Weiden und Mähweiden"@de ;
     schema:alternateName "Weide (Mäh-) intensiv"@de ;
     rdfs:subClassOf cultivationtype:616 ;
-    :intensity intensity:Intensive .
+    :managementIntensity intensity:Intensive .
 
 cultivationtype:1081 a owl:Class ;
     schema:name "Stangenbohne (geschützter Anbau)"@de,
@@ -3652,7 +3652,7 @@ cultivationtype:1085 a owl:Class ;
         "Pascoli e pascoli da sfalcio medio-intensivi"@it ;
     schema:alternateName "Weide (Mäh-) mittelintensiv"@de ;
     rdfs:subClassOf cultivationtype:616 ;
-    :intensity intensity:Medium .
+    :managementIntensity intensity:Medium .
 
 cultivationtype:1086 a owl:Class ;
     schema:name "Schlüsselblume (ganze Pflanze)"@de,
@@ -3909,7 +3909,7 @@ cultivationtype:1126 a owl:Class ;
         "Pâturages peu intensifs"@fr,
         "Pascoli poco intensivi"@it ;
     rdfs:subClassOf cultivationtype:616 ;
-    :intensity intensity:Low .
+    :managementIntensity intensity:Low .
 
 cultivationtype:1127 a owl:Class ;
     schema:name "Bundzwiebeln, Überwinterung"@de,
@@ -3946,14 +3946,14 @@ cultivationtype:1132 a owl:Class ;
         "Prairies de fauche de la région d'estivage, extensives"@fr,
         "Prati da sfalcio nella regione d'estivazione, estensivi"@it ;
     rdfs:subClassOf cultivationtype:480 ;
-    :intensity intensity:Extensive .
+    :managementIntensity intensity:Extensive .
 
 cultivationtype:1133 a owl:Class ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de,
         "Prairies de fauche de la région d'estivage, peu intensives"@fr,
         "Prati da sfalcio nella regione d'estivazione, poco intensivi"@it ;
     rdfs:subClassOf cultivationtype:480 ;
-    :intensity intensity:Low .
+    :managementIntensity intensity:Low .
 
 cultivationtype:1134 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de,
@@ -4083,21 +4083,21 @@ cultivationtype:1153 a owl:Class ;
         "Prairie naturelle moyennement intensive"@fr,
         "Prato naturale medio-intensivo"@it ;
     rdfs:subClassOf cultivationtype:2 ;
-    :intensity intensity:Medium .
+    :managementIntensity intensity:Medium .
 
 cultivationtype:1154 a owl:Class ;
     schema:name "Kunstwiese mittelintensiv"@de,
         "Prairie artificielle moyennement intensive"@fr,
         "Prato artificiale medio-intensivo"@it ;
     rdfs:subClassOf cultivationtype:601 ;
-    :intensity intensity:Medium .
+    :managementIntensity intensity:Medium .
 
 cultivationtype:1155 a owl:Class ;
     schema:name "Naturwiese intensiv"@de,
         "Prairie naturelle intensive"@fr,
         "Prato naturale intensivo"@it ;
     rdfs:subClassOf cultivationtype:2 ;
-    :intensity intensity:Intensive .
+    :managementIntensity intensity:Intensive .
 
 cultivationtype:1156 a owl:Class ;
     schema:name "Winterspinat, 1 Schnitt"@de,
