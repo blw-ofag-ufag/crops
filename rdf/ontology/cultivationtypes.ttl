@@ -3953,7 +3953,7 @@ cultivationtype:1133 a owl:Class ;
 
 cultivationtype:1134 a owl:Class ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de,
-        "Prairies de fauche de la région d'estivage, autres"@fr,
+        "Prairies de fauche dans la région d'estivage, autres"@fr,
         "Prati da sfalcio nella regione d'estivazione, altri"@it ;
     rdfs:subClassOf cultivationtype:480 .
 
@@ -4169,12 +4169,6 @@ cultivationtype:1168 a owl:Class ;
         "Courgette, semée, été et automne"@fr,
         "Zucchine, seminate, estate e autunno"@it ;
     rdfs:subClassOf cultivationtype:225 .
-
-cultivationtype:1169 a owl:Class ;
-    schema:name "Heuwiesen im Sömmerungsg., übrige"@de,
-        "Prairies de fauche dans la région d'estivage, autres"@fr,
-        "Prati da sfalcio nella regione d'estivazione, altri"@it ;
-    rdfs:subClassOf cultivationtype:480 .
 
 cultivationtype:1180 a owl:Class ;
     schema:name "Aprikosenanlage, hoher Ertrag"@de ;
