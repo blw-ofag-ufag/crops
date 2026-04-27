@@ -26,7 +26,7 @@ def translated_ontology_path():
         pytest.fail(f"rdflib failed to parse the TTL file. Syntax error: {e}")
 
     # 3. Create a temporary file for the RDF/XML translation
-    # mkstemp returns a file descriptor and an absolute path
+    #    mkstemp returns a file descriptor and an absolute path
     fd, temp_path = tempfile.mkstemp(suffix=".xml")
     os.close(fd) 
 
@@ -48,7 +48,9 @@ def test_cultivation_types_consistency(translated_ontology_path):
     """
     # 1. Load into Owlready2
     try:
-        onto = get_ontology(f"file://{translated_ontology_path}").load()
+        # Generate a valid RFC 8089 file URI to prevent Owlready string type errors
+        onto_uri = Path(translated_ontology_path).resolve().as_uri()
+        onto = get_ontology(onto_uri).load()
     except Exception as e:
         pytest.fail(f"Owlready2 failed to load the translated ontology: {e}")
 
@@ -60,8 +62,8 @@ def test_cultivation_types_consistency(translated_ontology_path):
         pytest.fail(f"Ontology data is INCONSISTENT. Reasoner output: {e}")
 
     # 3. Check for Unsatisfiable Classes (Catches TBox schema errors)
-    # Any class with contradictory definitions (like being a subclass of a disjoint class) 
-    # silently becomes a subclass of owl:Nothing during reasoning.
+    #    Any class with contradictory definitions (like being a subclass of a disjoint class) 
+    #    silently becomes a subclass of owl:Nothing during reasoning.
     unsatisfiable_classes = list(onto.classes())
     broken_classes = [cls for cls in unsatisfiable_classes if Nothing in cls.ancestors()]
 
