@@ -2461,7 +2461,7 @@ naebi:262 a cube:Observation ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cultivationtype:1169 .
+    :cultivationType cultivationtype:1134 .
 
 naebi:263 a cube:Observation ;
     schema:identifier "CROP_SWCHD"^^xsd:string ;
