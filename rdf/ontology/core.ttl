@@ -1,4 +1,5 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix intensity: <https://agriculture.ld.admin.ch/crops/intensity/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -200,7 +201,7 @@ schema:isPartOf a owl:ObjectProperty ;
         "Cultivation intensity"@en ;
     schema:description "Anbauintensität, mit welcher Flächen der Bezugsklasse bewirtschaftet werden."@de ;
     rdfs:domain :CultivationType ;
-    rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
+    rdfs:range [ owl:oneOf ( intensity:Extensive intensity:Low intensity:Medium intensity:Intensive ) ] .
 
 :memberOfClass a owl:ObjectProperty ;
     schema:name "Klasse"@de,
