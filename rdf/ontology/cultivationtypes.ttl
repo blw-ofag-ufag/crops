@@ -434,7 +434,7 @@ cultivationtype:58 a owl:Class ;
     schema:name "Chinakohl"@de,
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:60 a owl:Class ;
     schema:name "Sommerflor"@de,
@@ -481,8 +481,7 @@ cultivationtype:69 a owl:Class ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
-    rdfs:subClassOf cultivationtype:471,
-        cultivationtype:731 .
+    rdfs:subClassOf cultivationtype:731 .
 
 cultivationtype:72 a owl:Class ;
     schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
@@ -564,7 +563,7 @@ cultivationtype:87 a owl:Class ;
     schema:name "Federkohl"@de,
         "chou frisé non pommé"@fr,
         "Cavolo piuma"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:88 a owl:Class ;
     schema:name "Speise- und Futterkartoffeln"@de,
@@ -758,7 +757,7 @@ cultivationtype:124 a owl:Class ;
     schema:name "Bohnen mit Hülsen"@de,
         "haricots non écossés"@fr,
         "Fagioli con baccello"@it ;
-    rdfs:subClassOf cultivationtype:3 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:125 a owl:Class ;
     schema:name "Quitte"@de,
@@ -988,7 +987,7 @@ cultivationtype:171 a owl:Class ;
     schema:name "Bohnen ohne Hülsen"@de,
         "Haricots écossés"@fr,
         "Fagioli senza baccello"@it ;
-    rdfs:subClassOf cultivationtype:3 .
+    rdfs:subClassOf cultivationtype:476 .
 
 cultivationtype:172 a owl:Class ;
     schema:name "Lorbeer"@de,
@@ -1274,7 +1273,7 @@ cultivationtype:237 a owl:Class ;
     schema:name "Markstammkohl"@de,
         "chou moellier"@fr,
         "Cavolo fustoso"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:238 a owl:Class ;
     schema:name "Nelken"@de,
@@ -1695,7 +1694,7 @@ cultivationtype:325 a owl:Class ;
     schema:name "Pak-Choi"@de,
         "pakchoi"@fr,
         "Pak-Choi"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:326 a owl:Class ;
     schema:name "Rubus Arten"@de,
@@ -1856,7 +1855,6 @@ cultivationtype:468 a owl:Class ;
 
 cultivationtype:469 a owl:Class ;
     schema:name "Freiland-Beeren"@de ;
-    rdfs:subClassOf cultivationtype:830 ;
     owl:unionOf ( cultivationtype:551 cultivationtype:705 ).
 
 cultivationtype:470 a owl:Class ;

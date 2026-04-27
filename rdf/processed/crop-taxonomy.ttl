@@ -1455,7 +1455,7 @@ cultivationtype:124 a owl:Class ;
     rdfs:label "Bohnen mit Hülsen"@de,
         "haricots non écossés"@fr,
         "Fagioli con baccello"@it ;
-    rdfs:subClassOf cultivationtype:3 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:1240 a owl:Class ;
     rdfs:label "Kamille"@de,
@@ -2985,7 +2985,6 @@ cultivationtype:468 a owl:Class ;
 
 cultivationtype:469 a owl:Class ;
     rdfs:label "Freiland-Beeren"@de ;
-    rdfs:subClassOf cultivationtype:830 ;
     owl:unionOf ( cultivationtype:551 cultivationtype:705 ) .
 
 cultivationtype:47 a owl:Class ;
@@ -3842,8 +3841,7 @@ cultivationtype:69 a owl:Class ;
     rdfs:label "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
-    rdfs:subClassOf cultivationtype:471,
-        cultivationtype:731 .
+    rdfs:subClassOf cultivationtype:731 .
 
 cultivationtype:693 a owl:Class ;
     rdfs:label "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
