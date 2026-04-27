@@ -198,6 +198,7 @@ schema:isPartOf a owl:ObjectProperty ;
 :intensity a owl:ObjectProperty ;
     schema:name "Anbauintensität"@de,
         "Cultivation intensity"@en ;
+    schema:description "Anbauintensität, mit welcher Flächen der Bezugsklasse bewirtschaftet werden."@de ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( :21 :22 :23 :24 ) ] .
 
