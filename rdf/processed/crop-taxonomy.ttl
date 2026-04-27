@@ -156,7 +156,8 @@ cultivationtype:1021 a owl:Class ;
 
 cultivationtype:1023 a owl:Class ;
     rdfs:label "Nützlingsstreifen (DK)"@de ;
-    rdfs:subClassOf cultivationtype:6 .
+    rdfs:subClassOf cultivationtype:6 ;
+    :intensity :21 .
 
 cultivationtype:1024 a owl:Class ;
     rdfs:label "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
@@ -3479,14 +3480,16 @@ cultivationtype:556 a owl:Class ;
     rdfs:label "Buntbrache"@de,
         "Jachère florale"@fr,
         "Maggese fioriti"@it ;
-    rdfs:subClassOf cultivationtype:77 .
+    rdfs:subClassOf cultivationtype:77 ;
+    :intensity :21 .
 
 cultivationtype:557 a owl:Class ;
     rdfs:label "Rotationsbrache"@de,
         "Rotational fallow"@en,
         "Jachère tournante"@fr,
         "Maggese da rotazione"@it ;
-    rdfs:subClassOf cultivationtype:77 .
+    rdfs:subClassOf cultivationtype:77 ;
+    :intensity :21 .
 
 cultivationtype:559 a owl:Class ;
     rdfs:label "Saum auf Ackerflächen"@de,
@@ -3547,7 +3550,8 @@ cultivationtype:572 a owl:Class ;
     rdfs:label "Nützlingsstreifen auf offener Ackerfläche"@de,
         "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1 ;
+    :intensity :21 .
 
 cultivationtype:573 a owl:Class ;
     rdfs:label "Senf"@de,
