@@ -1847,6 +1847,11 @@ cultivationtype:413 a owl:Class ;
         "Cappuccio bianco"@it ;
     rdfs:subClassOf cultivationtype:81 .
 
+cultivationtype:467 a owl:Class ;
+    schema:name "Dauerkulturen"@de ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:797 cultivationtype:798 ) .
+
 cultivationtype:468 a owl:Class ;
     schema:name "Ackerbohne"@de,
         "féverole"@fr,
@@ -4663,6 +4668,14 @@ cultivationtype:1273 a owl:Class ;
         "Uva spina, 2.5 kg/m2"@it ;
     rdfs:subClassOf cultivationtype:298 .
 
+cultivationtype:1275 a owl:Class ;
+    schema:name "Gründüngung (Leguminosen)"@de ;
+    rdfs:subClassOf cultivationtype:15 .
+
+cultivationtype:1277 a owl:Class ;
+    schema:name "Gründüngung (Nichtleguminosen)"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:1278 a owl:Class ;
     schema:name "Stachelbeeren, 1.7 kg/m2"@de,
         "Gooseberries, 1.7 kg/m2"@en,
@@ -4705,3 +4718,20 @@ cultivationtype:1286 a owl:Class ;
 cultivationtype:1287 a owl:Class ;
     schema:name "Mehrjährige Kräuter"@de ;
     rdfs:subClassOf cultivationtype:55 .
+
+cultivationtype:1288 a owl:Class ;
+    schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de ;
+    rdfs:subClassOf cultivationtype:467 .
+
+cultivationtype:1289 a owl:Class ;
+    schema:name "Zwischenfutter (herbstgesäte KW)"@de ;
+    owl:intersectionOf ( cultivationtype:1146 cultivationtype:1291 ) .
+
+cultivationtype:1290 a owl:Class ;
+    schema:name "Zwischenfutter (ohne KW)"@de ;
+    rdfs:subClassOf cultivationtype:1291 ;
+    owl:disjointWith cultivationtype:601 .
+
+cultivationtype:1291 a owl:Class ;
+    schema:name "Zwischenfutter"@de ;
+    rdfs:subClassOf :Cultivation .

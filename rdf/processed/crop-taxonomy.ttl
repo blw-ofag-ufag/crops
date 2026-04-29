@@ -886,7 +886,7 @@ cultivationtype:1133 a owl:Class ;
 
 cultivationtype:1134 a owl:Class ;
     rdfs:label "Heuwiesen im Sömmerungsg., übrige"@de,
-        "Prairies de fauche de la région d'estivage, autres"@fr,
+        "Prairies de fauche dans la région d'estivage, autres"@fr,
         "Prati da sfalcio nella regione d'estivazione, altri"@it ;
     rdfs:subClassOf cultivationtype:480 .
 
@@ -1121,12 +1121,6 @@ cultivationtype:1168 a owl:Class ;
         "Zucchine, seminate, estate e autunno"@it ;
     rdfs:subClassOf cultivationtype:225 .
 
-cultivationtype:1169 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsg., übrige"@de,
-        "Prairies de fauche dans la région d'estivage, autres"@fr,
-        "Prati da sfalcio nella regione d'estivazione, altri"@it ;
-    rdfs:subClassOf cultivationtype:480 .
-
 cultivationtype:117 a owl:Class ;
     rdfs:label "Stachys"@de,
         "crosnes du japon"@fr,
@@ -1154,10 +1148,6 @@ cultivationtype:1182 a owl:Class ;
 cultivationtype:1183 a owl:Class ;
     rdfs:label "Blumenkohl, Verarbeitung"@de ;
     rdfs:subClassOf cultivationtype:111 .
-
-cultivationtype:1184 a owl:Class ;
-    rdfs:label "Aubergine, Erdkultur (geschützter Anbau)"@de ;
-    owl:intersectionOf ( cultivationtype:7 cultivationtype:474 ) .
 
 cultivationtype:1185 a owl:Class ;
     rdfs:label "Brombeeren, 2.0 kg/m2"@de ;
@@ -1654,6 +1644,14 @@ cultivationtype:1273 a owl:Class ;
         "Uva spina, 2.5 kg/m2"@it ;
     rdfs:subClassOf cultivationtype:298 .
 
+cultivationtype:1275 a owl:Class ;
+    rdfs:label "Gründüngung (Leguminosen)"@de ;
+    rdfs:subClassOf cultivationtype:15 .
+
+cultivationtype:1277 a owl:Class ;
+    rdfs:label "Gründüngung (Nichtleguminosen)"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:1278 a owl:Class ;
     rdfs:label "Stachelbeeren, 1.7 kg/m2"@de,
         "Gooseberries, 1.7 kg/m2"@en,
@@ -1697,11 +1695,28 @@ cultivationtype:1287 a owl:Class ;
     rdfs:label "Mehrjährige Kräuter"@de ;
     rdfs:subClassOf cultivationtype:55 .
 
+cultivationtype:1288 a owl:Class ;
+    rdfs:label "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de ;
+    rdfs:subClassOf cultivationtype:467 .
+
+cultivationtype:1289 a owl:Class ;
+    rdfs:label "Zwischenfutter (herbstgesäte KW)"@de ;
+    owl:intersectionOf ( cultivationtype:1146 cultivationtype:1291 ) .
+
 cultivationtype:129 a owl:Class ;
     rdfs:label "Pastinake"@de,
         "Panais"@fr,
         "Pastinaca"@it ;
     rdfs:subClassOf cultivationtype:327 .
+
+cultivationtype:1290 a owl:Class ;
+    rdfs:label "Zwischenfutter (ohne KW)"@de ;
+    rdfs:subClassOf cultivationtype:1291 ;
+    owl:disjointWith cultivationtype:601 .
+
+cultivationtype:1291 a owl:Class ;
+    rdfs:label "Zwischenfutter"@de ;
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:13 a owl:Class ;
     rdfs:label "Sömmerungsfläche"@de,
@@ -1949,7 +1964,7 @@ cultivationtype:171 a owl:Class ;
     rdfs:label "Bohnen ohne Hülsen"@de,
         "Haricots écossés"@fr,
         "Fagioli senza baccello"@it ;
-    rdfs:subClassOf cultivationtype:3 .
+    rdfs:subClassOf cultivationtype:476 .
 
 cultivationtype:172 a owl:Class ;
     rdfs:label "Lorbeer"@de,
@@ -2273,7 +2288,7 @@ cultivationtype:237 a owl:Class ;
     rdfs:label "Markstammkohl"@de,
         "chou moellier"@fr,
         "Cavolo fustoso"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:238 a owl:Class ;
     rdfs:label "Nelken"@de,
@@ -2742,7 +2757,7 @@ cultivationtype:325 a owl:Class ;
     rdfs:label "Pak-Choi"@de,
         "pakchoi"@fr,
         "Pak-Choi"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:326 a owl:Class ;
     rdfs:label "Rubus Arten"@de,
@@ -2976,6 +2991,11 @@ cultivationtype:46 a owl:Class ;
         "Cardo azzurro"@it ;
     rdfs:subClassOf cultivationtype:145,
         cultivationtype:310 .
+
+cultivationtype:467 a owl:Class ;
+    rdfs:label "Dauerkulturen"@de ;
+    rdfs:subClassOf :Cultivation ;
+    owl:unionOf ( cultivationtype:797 cultivationtype:798 ) .
 
 cultivationtype:468 a owl:Class ;
     rdfs:label "Ackerbohne"@de,
@@ -3606,7 +3626,7 @@ cultivationtype:58 a owl:Class ;
     rdfs:label "Chinakohl"@de,
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:580 a owl:Class ;
     rdfs:label "Sorghum zur Körnergewinnung"@de,
@@ -4272,7 +4292,7 @@ cultivationtype:87 a owl:Class ;
     rdfs:label "Federkohl"@de,
         "chou frisé non pommé"@fr,
         "Cavolo piuma"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:88 a owl:Class ;
     rdfs:label "Speise- und Futterkartoffeln"@de,
