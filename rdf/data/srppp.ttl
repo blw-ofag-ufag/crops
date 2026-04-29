@@ -1413,7 +1413,7 @@ psm:194 a cube:Observation ;
         "domaine surfaces de compensation écologique (selon OPD)"@fr,
         "Superfici di compensazione ecologica in generale (conformemente OPD)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:414 .
 
 psm:195 a cube:Observation ;
     schema:identifier "61D9C648-0736-43D4-BF04-B8643B1D74E0"^^xsd:ID ;

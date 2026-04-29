@@ -1865,6 +1865,11 @@ cultivationtype:413 a owl:Class ;
         "Cappuccio bianco"@it ;
     rdfs:subClassOf cultivationtype:81 .
 
+cultivationtype:414 a owl:Class ;
+    schema:name "Biodiversitätsförderfläche"@de ;
+    schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
+    schema:subClassOf :Cultivation .
+
 cultivationtype:468 a owl:Class ;
     schema:name "Ackerbohne"@de,
         "féverole"@fr,
