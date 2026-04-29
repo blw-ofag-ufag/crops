@@ -1718,6 +1718,10 @@ cultivationtype:1291 a owl:Class ;
     rdfs:label "Zwischenfutter"@de ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:1292 a owl:Class ;
+    rdfs:label "Hecken und Feldgehölz mit Krautsaum"@de ;
+    rdfs:subClassOf cultivationtype:852 .
+
 cultivationtype:13 a owl:Class ;
     rdfs:label "Sömmerungsfläche"@de,
         "Surface d’estivage"@fr,

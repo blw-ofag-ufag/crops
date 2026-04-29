@@ -3902,4 +3902,4 @@ naebi:99 a cube:Observation ;
     :P2O5 0.0 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1292 .

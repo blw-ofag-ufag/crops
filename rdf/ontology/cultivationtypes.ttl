@@ -4735,3 +4735,7 @@ cultivationtype:1290 a owl:Class ;
 cultivationtype:1291 a owl:Class ;
     schema:name "Zwischenfutter"@de ;
     rdfs:subClassOf :Cultivation .
+
+cultivationtype:1292 a owl:Class ;
+    schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
+    rdfs:subClassOf cultivationtype:852 .
