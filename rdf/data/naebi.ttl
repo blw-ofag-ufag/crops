@@ -625,7 +625,7 @@ naebi:110 a cube:Observation ;
     :P2O5 0.82 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1289 .
 
 naebi:111 a cube:Observation ;
     schema:identifier "CROP_IFWOC"^^xsd:string ;
@@ -636,7 +636,7 @@ naebi:111 a cube:Observation ;
     :P2O5 0.96 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1290 .
 
 naebi:112 a cube:Observation ;
     schema:identifier "CROP_KALE"^^xsd:string ;
@@ -713,7 +713,7 @@ naebi:118 a cube:Observation ;
     :P2O5 20.0 ;
     :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1288 .
 
 naebi:119 a cube:Observation ;
     schema:identifier "CROP_KIWEY"^^xsd:string ;
@@ -3902,4 +3902,4 @@ naebi:99 a cube:Observation ;
     :P2O5 0.0 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:1292 .
