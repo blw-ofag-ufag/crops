@@ -1289,7 +1289,7 @@ psm:181 a cube:Observation ;
         "semis sous litière"@fr,
         "Semine a lattiera"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:181 .
 
 psm:182 a cube:Observation ;
     schema:identifier "4E1ACD79-F162-4EBB-93CB-C6857A811E9C"^^xsd:ID ;
@@ -1413,7 +1413,7 @@ psm:194 a cube:Observation ;
         "domaine surfaces de compensation écologique (selon OPD)"@fr,
         "Superfici di compensazione ecologica in generale (conformemente OPD)"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:414 .
 
 psm:195 a cube:Observation ;
     schema:identifier "61D9C648-0736-43D4-BF04-B8643B1D74E0"^^xsd:ID ;
@@ -2320,7 +2320,7 @@ psm:284 a cube:Observation ;
         "semis après travail superficiel"@fr,
         "Semine dopo la fresatura"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:284 .
 
 psm:285 a cube:Observation ;
     schema:identifier "DA71526F-AC1D-40F1-8EF5-109E3F3FFD76"^^xsd:ID ;
@@ -3140,7 +3140,7 @@ psm:64 a cube:Observation ;
         "techniques culturales"@fr,
         "Tecnica di coltivazione"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:64 .
 
 psm:65 a cube:Observation ;
     schema:identifier "E8B23A5E-B65E-4DC8-977D-BD84F143A442"^^xsd:ID ;

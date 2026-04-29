@@ -886,7 +886,7 @@ cultivationtype:1133 a owl:Class ;
 
 cultivationtype:1134 a owl:Class ;
     rdfs:label "Heuwiesen im Sömmerungsg., übrige"@de,
-        "Prairies de fauche de la région d'estivage, autres"@fr,
+        "Prairies de fauche dans la région d'estivage, autres"@fr,
         "Prati da sfalcio nella regione d'estivazione, altri"@it ;
     rdfs:subClassOf cultivationtype:480 .
 
@@ -1121,12 +1121,6 @@ cultivationtype:1168 a owl:Class ;
         "Zucchine, seminate, estate e autunno"@it ;
     rdfs:subClassOf cultivationtype:225 .
 
-cultivationtype:1169 a owl:Class ;
-    rdfs:label "Heuwiesen im Sömmerungsg., übrige"@de,
-        "Prairies de fauche dans la région d'estivage, autres"@fr,
-        "Prati da sfalcio nella regione d'estivazione, altri"@it ;
-    rdfs:subClassOf cultivationtype:480 .
-
 cultivationtype:117 a owl:Class ;
     rdfs:label "Stachys"@de,
         "crosnes du japon"@fr,
@@ -1154,10 +1148,6 @@ cultivationtype:1182 a owl:Class ;
 cultivationtype:1183 a owl:Class ;
     rdfs:label "Blumenkohl, Verarbeitung"@de ;
     rdfs:subClassOf cultivationtype:111 .
-
-cultivationtype:1184 a owl:Class ;
-    rdfs:label "Aubergine, Erdkultur (geschützter Anbau)"@de ;
-    owl:intersectionOf ( cultivationtype:7 cultivationtype:474 ) .
 
 cultivationtype:1185 a owl:Class ;
     rdfs:label "Brombeeren, 2.0 kg/m2"@de ;
@@ -1949,7 +1939,7 @@ cultivationtype:171 a owl:Class ;
     rdfs:label "Bohnen ohne Hülsen"@de,
         "Haricots écossés"@fr,
         "Fagioli senza baccello"@it ;
-    rdfs:subClassOf cultivationtype:3 .
+    rdfs:subClassOf cultivationtype:476 .
 
 cultivationtype:172 a owl:Class ;
     rdfs:label "Lorbeer"@de,
@@ -1986,6 +1976,13 @@ cultivationtype:179 a owl:Class ;
 cultivationtype:18 a owl:Class ;
     rdfs:label "Mischkultur"@de ;
     rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:181 a owl:Class ;
+    rdfs:label "Mulchsaaten"@de,
+        "semis sous litière"@fr,
+        "Semine a lattiera"@it ;
+    rdfs:comment "Eine Mulchsaat ist ein landwirtschaftliches Aussaatverfahren der sogenannten konservierenden Bodenbearbeitung. Bei dieser Methode wird das Saatgut in einen Boden eingebracht, der noch von den Pflanzenresten (Mulch) der Vorfrucht oder einer Zwischenfrucht bedeckt ist."@de ;
+    rdfs:subClassOf cultivationtype:64 .
 
 cultivationtype:182 a owl:Class ;
     rdfs:label "Kleegrasmischung (Kunstwiese)"@de,
@@ -2273,7 +2270,7 @@ cultivationtype:237 a owl:Class ;
     rdfs:label "Markstammkohl"@de,
         "chou moellier"@fr,
         "Cavolo fustoso"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:238 a owl:Class ;
     rdfs:label "Nelken"@de,
@@ -2522,6 +2519,13 @@ cultivationtype:283 a owl:Class ;
         "Ciliegio"@it ;
     rdfs:subClassOf cultivationtype:704 .
 
+cultivationtype:284 a owl:Class ;
+    rdfs:label "Frässaaten"@de,
+        "semis après travail superficiel"@fr,
+        "Semine dopo la fresatura"@it ;
+    rdfs:comment "Eine Frässaat ist ein bodenschonendes, landwirtschaftliches Aussaatverfahren. Es kommt hauptsächlich bei der Grünlanderneuerung, der Nachsaat von lückenhaften Wiesen und Weiden oder beim Anbau von Zwischenfrüchten zum Einsatz."@de ;
+    rdfs:subClassOf cultivationtype:64 .
+
 cultivationtype:287 a owl:Class ;
     rdfs:label "Melisse"@de,
         "mélisse"@fr,
@@ -2742,7 +2746,7 @@ cultivationtype:325 a owl:Class ;
     rdfs:label "Pak-Choi"@de,
         "pakchoi"@fr,
         "Pak-Choi"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:326 a owl:Class ;
     rdfs:label "Rubus Arten"@de,
@@ -2957,6 +2961,11 @@ cultivationtype:413 a owl:Class ;
         "Cappuccio bianco"@it,
         "Cavolo bianco"@it ;
     rdfs:subClassOf cultivationtype:81 .
+
+cultivationtype:414 a owl:Class ;
+    rdfs:label "Biodiversitätsförderfläche"@de ;
+    schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:43 a owl:Class ;
     rdfs:label "Jostabeere"@de,
@@ -3606,7 +3615,7 @@ cultivationtype:58 a owl:Class ;
     rdfs:label "Chinakohl"@de,
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:580 a owl:Class ;
     rdfs:label "Sorghum zur Körnergewinnung"@de,
@@ -3796,6 +3805,10 @@ cultivationtype:635 a owl:Class ;
         "Prairies riveraines (sauf les pâturages)"@fr,
         "Prati rivieraschi (senza pascoli)"@it ;
     rdfs:subClassOf cultivationtype:2 .
+
+cultivationtype:64 a owl:Class ;
+    rdfs:label "Durch Anbautechnik bestimmte Kulturen"@de ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:65 a owl:Class ;
     rdfs:label "Primeln"@de,
@@ -4272,7 +4285,7 @@ cultivationtype:87 a owl:Class ;
     rdfs:label "Federkohl"@de,
         "chou frisé non pommé"@fr,
         "Cavolo piuma"@it ;
-    rdfs:subClassOf cultivationtype:20 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:88 a owl:Class ;
     rdfs:label "Speise- und Futterkartoffeln"@de,
