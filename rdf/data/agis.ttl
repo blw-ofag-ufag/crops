@@ -1,5 +1,5 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1.9/> .
+@prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 
 @prefix cube: <https://cube.link/> .
