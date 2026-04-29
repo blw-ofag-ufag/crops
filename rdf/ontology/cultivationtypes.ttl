@@ -1868,7 +1868,7 @@ cultivationtype:413 a owl:Class ;
 cultivationtype:414 a owl:Class ;
     schema:name "Biodiversitätsförderfläche"@de ;
     schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
-    schema:subClassOf :Cultivation .
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:468 a owl:Class ;
     schema:name "Ackerbohne"@de,

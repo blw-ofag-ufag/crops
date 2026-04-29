@@ -2965,7 +2965,7 @@ cultivationtype:413 a owl:Class ;
 cultivationtype:414 a owl:Class ;
     rdfs:label "Biodiversitätsförderfläche"@de ;
     schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
-    schema:subClassOf :Cultivation .
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:43 a owl:Class ;
     rdfs:label "Jostabeere"@de,
