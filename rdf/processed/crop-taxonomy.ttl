@@ -1981,6 +1981,7 @@ cultivationtype:181 a owl:Class ;
     rdfs:label "Mulchsaaten"@de,
         "semis sous litière"@fr,
         "Semine a lattiera"@it ;
+    rdfs:comment "Eine Mulchsaat ist ein landwirtschaftliches Aussaatverfahren der sogenannten konservierenden Bodenbearbeitung. Bei dieser Methode wird das Saatgut in einen Boden eingebracht, der noch von den Pflanzenresten (Mulch) der Vorfrucht oder einer Zwischenfrucht bedeckt ist."@de ;
     rdfs:subClassOf cultivationtype:64 .
 
 cultivationtype:182 a owl:Class ;
@@ -2522,6 +2523,7 @@ cultivationtype:284 a owl:Class ;
     rdfs:label "Frässaaten"@de,
         "semis après travail superficiel"@fr,
         "Semine dopo la fresatura"@it ;
+    rdfs:comment "Eine Frässaat ist ein bodenschonendes, landwirtschaftliches Aussaatverfahren. Es kommt hauptsächlich bei der Grünlanderneuerung, der Nachsaat von lückenhaften Wiesen und Weiden oder beim Anbau von Zwischenfrüchten zum Einsatz."@de ;
     rdfs:subClassOf cultivationtype:64 .
 
 cultivationtype:287 a owl:Class ;
