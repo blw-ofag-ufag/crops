@@ -449,6 +449,10 @@ cultivationtype:63 a owl:Class ;
     rdfs:subClassOf cultivationtype:402,
         cultivationtype:72 .
 
+cultivationtype:64 a owl:Class ;
+    schema:name "Durch Anbautechnik bestimmte Kulturen"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:65 a owl:Class ;
     schema:name "Primeln"@de,
         "primevères"@fr,
@@ -1021,6 +1025,12 @@ cultivationtype:179 a owl:Class ;
         "Indivia"@it ;
     rdfs:subClassOf cultivationtype:141 .
 
+cultivationtype:181 a owl:Class ;
+    schema:name "Mulchsaaten"@de,
+        "semis sous litière"@fr,
+        "Semine a lattiera"@it ;
+    rdfs:subClassOf cultivationtype:64 .
+
 cultivationtype:182 a owl:Class ;
     schema:name "Kleegrasmischung (Kunstwiese)"@de,
         "mélange trèfles-graminées (prairie arificielle)"@fr,
@@ -1499,6 +1509,12 @@ cultivationtype:283 a owl:Class ;
         "cerisier"@fr,
         "Ciliegio"@it ;
     rdfs:subClassOf cultivationtype:704 .
+
+cultivationtype:284 a owl:Class ;
+    schema:name "Frässaaten"@de,
+        "semis après travail superficiel"@fr,
+        "Semine dopo la fresatura"@it ;
+    rdfs:subClassOf cultivationtype:64 .
 
 cultivationtype:287 a owl:Class ;
     schema:name "Melisse"@de,
