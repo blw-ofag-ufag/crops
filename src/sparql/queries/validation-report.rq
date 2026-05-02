@@ -1,7 +1,8 @@
 PREFIX : <https://agriculture.ld.admin.ch/crops/>
-PREFIX system: <https://agriculture.ld.admin.ch/crops/agis/1/>
 PREFIX cube: <https://cube.link/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
+PREFIX system: <https://agriculture.ld.admin.ch/crops/agis/1/>
 SELECT *
 FROM <https://lindas.admin.ch/foag/crops>
 WHERE {
@@ -10,7 +11,8 @@ WHERE {
     FILTER(LANG(?Crop) = "de")
     OPTIONAL {
         ?Observation :cultivationType ?CultivationType .
-        ?CultivationType rdfs:subClassOf* ?Parent .
+        ?CultivationType rdfs:subClassOf* :Cultivation .
+        ?CultivationType rdfs:subClassOf ?Parent .
     }
 }
 LIMIT 10
