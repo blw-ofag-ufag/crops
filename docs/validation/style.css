@@ -125,13 +125,20 @@ p.subtitle {
     margin-bottom: 24px;
 }
 
+/* Neuer Container für mehrere Beobachtungen */
+.attributes-container {
+    margin-top: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .attributes {
     background-color: var(--bg-color);
     border: 1px solid var(--node-border);
     border-radius: 8px;
     padding: 12px 16px;
     font-size: 0.85em;
-    margin-top: auto; 
 }
 
 .attr-header {

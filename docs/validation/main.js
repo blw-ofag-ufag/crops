@@ -144,34 +144,28 @@ function getGithubSourceUrl(slug, rawText) {
 }
 
 async function renderInterface(bindings, container, rawOntologyText) {
-    const observations = {};
+    const cultivationTypes = {};
     const nodeNames = {};
 
+    // Parse Data - Groupping by CultivationType baseUri instead of Identifier
     bindings.forEach(row => {
-        const ident = row.Identifier.value;
-        
-        if (!observations[ident]) {
-            let validFromVal = row.ValidFrom ? row.ValidFrom.value : null;
-            if (validFromVal === "https://cube.link/Undefined") validFromVal = null;
+        const baseUri = row.CultivationType ? row.CultivationType.value : null;
+        if (!baseUri) return;
 
-            let validToVal = row.ValidTo ? row.ValidTo.value : null;
-            if (validToVal === "https://cube.link/Undefined") validToVal = null;
-
-            observations[ident] = {
-                crop: row.Crop.value,
-                baseUri: row.CultivationType ? row.CultivationType.value : null,
+        if (!cultivationTypes[baseUri]) {
+            cultivationTypes[baseUri] = {
+                baseUri: baseUri,
                 baseName: row.BaseName ? row.BaseName.value : null,
                 description: row.BaseDesc ? row.BaseDesc.value : null,
-                validFrom: validFromVal,
-                validTo: validToVal,
                 altNames: new Set(),
-                edges: new Set() 
+                edges: new Set(),
+                observations: []
             };
         }
 
-        const obs = observations[ident];
+        const ct = cultivationTypes[baseUri];
 
-        if (row.BaseAltName) obs.altNames.add(row.BaseAltName.value);
+        if (row.BaseAltName) ct.altNames.add(row.BaseAltName.value);
         
         if (row.Step && row.NextStep) {
             const stepUri = row.Step.value;
@@ -180,20 +174,37 @@ async function renderInterface(bindings, container, rawOntologyText) {
             nodeNames[stepUri] = row.StepName ? row.StepName.value : stepUri;
             nodeNames[nextUri] = row.NextStepName ? row.NextStepName.value : nextUri;
             
-            obs.edges.add(`${stepUri}|${nextUri}`);
+            ct.edges.add(`${stepUri}|${nextUri}`);
+        }
+
+        // Add Observation-specific data
+        const ident = row.Identifier ? row.Identifier.value : null;
+        if (ident && !ct.observations.find(o => o.ident === ident)) {
+            let validFromVal = row.ValidFrom ? row.ValidFrom.value : null;
+            if (validFromVal === "https://cube.link/Undefined") validFromVal = null;
+
+            let validToVal = row.ValidTo ? row.ValidTo.value : null;
+            if (validToVal === "https://cube.link/Undefined") validToVal = null;
+
+            ct.observations.push({
+                ident: ident,
+                crop: row.Crop ? row.Crop.value : null,
+                validFrom: validFromVal,
+                validTo: validToVal
+            });
         }
     });
 
     container.innerHTML = '';
 
-    if (Object.keys(observations).length === 0) {
+    if (Object.keys(cultivationTypes).length === 0) {
         container.innerHTML = `<div style="text-align: center; color: var(--text-muted);">Keine Resultate für System <strong>${currentSystem}</strong> gefunden.</div>`;
         return;
     }
 
-    const sortedEntries = Object.entries(observations).sort((a, b) => {
-        const aSlugStr = (a[1].baseUri || "").split('/').pop();
-        const bSlugStr = (b[1].baseUri || "").split('/').pop();
+    const sortedEntries = Object.entries(cultivationTypes).sort((a, b) => {
+        const aSlugStr = a[1].baseUri.split('/').pop();
+        const bSlugStr = b[1].baseUri.split('/').pop();
         
         const aInt = parseInt(aSlugStr, 10);
         const bInt = parseInt(bSlugStr, 10);
@@ -204,22 +215,23 @@ async function renderInterface(bindings, container, rawOntologyText) {
         return aSlugStr.localeCompare(bSlugStr);
     });
 
-    for (const [ident, obs] of sortedEntries) {
+    for (const [uri, ct] of sortedEntries) {
         const card = document.createElement('div');
         card.className = 'card';
 
-        const slug = obs.baseUri ? obs.baseUri.split('/').pop() : 'unknown';
-        const mainName = obs.baseName || obs.crop; 
+        const slug = ct.baseUri.split('/').pop();
+        // Fallback to first observation crop name if baseName missing
+        const mainName = ct.baseName || (ct.observations.length > 0 ? ct.observations[0].crop : 'Unbekannte Kultur'); 
         
         const githubIssueUrl = getGithubIssueUrl(mainName, slug);
         const githubSourceUrl = getGithubSourceUrl(slug, rawOntologyText);
 
         const buttonsContainer = `
             <div class="action-buttons">
-                <a href="${githubSourceUrl}" target="_blank" class="action-btn">
+                <a href="${githubSourceUrl}" target="_blank" class="action-btn" title="Quellcode ansehen">
                     <i class="bi bi-github"></i>
                 </a>
-                <a href="${githubIssueUrl}" target="_blank" class="action-btn">
+                <a href="${githubIssueUrl}" target="_blank" class="action-btn" title="Fehler auf GitHub melden">
                     <i class="bi bi-bug-fill"></i>
                 </a>
             </div>`;
@@ -228,89 +240,86 @@ async function renderInterface(bindings, container, rawOntologyText) {
         const textPanel = document.createElement('div');
         textPanel.className = 'text-panel';
 
-        const hasDifferentNames = obs.baseName && obs.baseName !== obs.crop;
-        let displayIri = obs.baseUri;
-        if (obs.baseUri) {
-            const segments = obs.baseUri.split('/').filter(Boolean);
-            if (segments.length >= 2) {
-                displayIri = `${segments[segments.length - 2]}:${segments[segments.length - 1]}`;
-            }
+        let displayIri = ct.baseUri;
+        const segments = ct.baseUri.split('/').filter(Boolean);
+        if (segments.length >= 2) {
+            displayIri = `${segments[segments.length - 2]}:${segments[segments.length - 1]}`;
         }
 
         let textHTML = `<div class="main-title-row">`;
-        if (obs.baseUri) {
-            textHTML += `<a href="${obs.baseUri}" target="_blank" class="crop-iri">${displayIri}</a>`;
-        }
+        textHTML += `<a href="${ct.baseUri}" target="_blank" class="crop-iri">${displayIri}</a>`;
         textHTML += `<h2 class="crop-name">${mainName}</h2>`;
         textHTML += `</div>`;
 
-        if (obs.altNames.size > 0) {
-            const altString = Array.from(obs.altNames).join(', ');
+        if (ct.altNames.size > 0) {
+            const altString = Array.from(ct.altNames).join(', ');
             textHTML += `<div class="alt-names">${altString}</div>`;
         }
 
-        if (obs.description) {
-            textHTML += `<div class="description">${obs.description}</div>`;
+        if (ct.description) {
+            textHTML += `<div class="description">${ct.description}</div>`;
         }
 
-        let attrsHTML = `<div class="attributes">`;
-        attrsHTML += `<div class="attr-header">Attribute der Kultur im Quellsystem</div>`;
+        // Create attributes container to hold multiple observations cleanly
+        let attrsContainerHTML = `<div class="attributes-container">`;
         
-        let hasAttributes = false;
+        ct.observations.forEach(obs => {
+            const hasDifferentNames = ct.baseName && ct.baseName !== obs.crop;
+            let attrsHTML = `<div class="attributes">`;
+            attrsHTML += `<div class="attr-header">Attribute der Kultur im Quellsystem</div>`;
+            
+            let hasAttributes = false;
+            
+            if (obs.ident) {
+                hasAttributes = true;
+                attrsHTML += `
+                    <div class="attr-row">
+                        <div class="attr-key">Identifikator</div>
+                        <div class="attr-val">${obs.ident}</div>
+                    </div>`;
+            }
+            if (hasDifferentNames) {
+                hasAttributes = true;
+                attrsHTML += `
+                    <div class="attr-row">
+                        <div class="attr-key">Originalname</div>
+                        <div class="attr-val">${obs.crop}</div>
+                    </div>`;
+            }
+            if (obs.validFrom) {
+                hasAttributes = true;
+                attrsHTML += `
+                    <div class="attr-row">
+                        <div class="attr-key">Gültig von</div>
+                        <div class="attr-val">${obs.validFrom}</div>
+                    </div>`;
+            }
+            if (obs.validTo) {
+                hasAttributes = true;
+                attrsHTML += `
+                    <div class="attr-row">
+                        <div class="attr-key">Gültig bis</div>
+                        <div class="attr-val">${obs.validTo}</div>
+                    </div>`;
+            }
+            
+            attrsHTML += `</div>`;
+            if (hasAttributes) attrsContainerHTML += attrsHTML;
+        });
         
-        if (ident) {
-            hasAttributes = true;
-            attrsHTML += `
-                <div class="attr-row">
-                    <div class="attr-key">Identifikator</div>
-                    <div class="attr-val">${ident}</div>
-                </div>`;
-        }
-        if (hasDifferentNames) {
-            hasAttributes = true;
-            attrsHTML += `
-                <div class="attr-row">
-                    <div class="attr-key">Originalname</div>
-                    <div class="attr-val">${obs.crop}</div>
-                </div>`;
-        }
-        if (obs.validFrom) {
-            hasAttributes = true;
-            attrsHTML += `
-                <div class="attr-row">
-                    <div class="attr-key">Gültig von</div>
-                    <div class="attr-val">${obs.validFrom}</div>
-                </div>`;
-        }
-        if (obs.validTo) {
-            hasAttributes = true;
-            attrsHTML += `
-                <div class="attr-row">
-                    <div class="attr-key">Gültig bis</div>
-                    <div class="attr-val">${obs.validTo}</div>
-                </div>`;
-        }
-        
-        attrsHTML += `</div>`;
-        
-        if (hasAttributes) {
-            textHTML += attrsHTML;
-        }
+        attrsContainerHTML += `</div>`;
+        textHTML += attrsContainerHTML;
         
         textPanel.innerHTML = textHTML;
         card.appendChild(textPanel);
 
-        const graphPanel = document.createElement('div');
-        graphPanel.className = 'graph-panel';
-        
-        if (obs.edges.size > 0) {
-            let mermaidSyntax = "stateDiagram-v2\n    direction TB\n";
-            
+        // Render Graph Logic
+        if (ct.edges.size > 0) {
             const involvedUris = new Set();
             const edgeSources = new Set();
             const edgeTargets = new Set();
 
-            obs.edges.forEach(edge => {
+            ct.edges.forEach(edge => {
                 const [source, target] = edge.split('|');
                 involvedUris.add(source);
                 involvedUris.add(target);
@@ -321,32 +330,40 @@ async function renderInterface(bindings, container, rawOntologyText) {
             const startNodes = new Set([...involvedUris].filter(uri => !edgeTargets.has(uri)));
             const endNodes = new Set([...involvedUris].filter(uri => !edgeSources.has(uri)));
 
-            involvedUris.forEach(uri => {
-                if (!startNodes.has(uri) && !endNodes.has(uri)) {
+            // Identify if there are any intermediate nodes
+            const intermediateNodes = [...involvedUris].filter(uri => !startNodes.has(uri) && !endNodes.has(uri));
+
+            // Only render graph if intermediate nodes exist (path is not empty)
+            if (intermediateNodes.length > 0) {
+                const graphPanel = document.createElement('div');
+                graphPanel.className = 'graph-panel';
+
+                let mermaidSyntax = "stateDiagram-v2\n    direction TB\n";
+
+                intermediateNodes.forEach(uri => {
                     const id = getSafeId(uri);
                     const label = formatNodeLabel(nodeNames[uri]);
                     mermaidSyntax += `    state "${label}" as ${id}\n`;
-                }
-            });
+                });
 
-            obs.edges.forEach(edge => {
-                const [source, target] = edge.split('|');
-                
-                const sourceStr = startNodes.has(source) ? '[*]' : getSafeId(source);
-                const targetStr = endNodes.has(target) ? '[*]' : getSafeId(target);
-                
-                mermaidSyntax += `    ${sourceStr} --> ${targetStr}\n`;
-            });
+                ct.edges.forEach(edge => {
+                    const [source, target] = edge.split('|');
+                    
+                    const sourceStr = startNodes.has(source) ? '[*]' : getSafeId(source);
+                    const targetStr = endNodes.has(target) ? '[*]' : getSafeId(target);
+                    
+                    mermaidSyntax += `    ${sourceStr} --> ${targetStr}\n`;
+                });
 
-            const mermaidDiv = document.createElement('div');
-            mermaidDiv.className = 'mermaid';
-            mermaidDiv.textContent = mermaidSyntax;
-            graphPanel.appendChild(mermaidDiv);
-        } else {
-            graphPanel.innerHTML = '<span style="color: var(--text-muted); font-style: italic;">Kein Pfad im Graph gefunden.</span>';
+                const mermaidDiv = document.createElement('div');
+                mermaidDiv.className = 'mermaid';
+                mermaidDiv.textContent = mermaidSyntax;
+                graphPanel.appendChild(mermaidDiv);
+                
+                card.appendChild(graphPanel);
+            }
         }
 
-        card.appendChild(graphPanel);
         container.appendChild(card);
     }
 
