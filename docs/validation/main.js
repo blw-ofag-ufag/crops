@@ -4,17 +4,30 @@ mermaid.initialize({
     state: { useMaxWidth: false }
 });
 
+// 1. URL Parameter auslesen (Default: agis)
+const urlParams = new URLSearchParams(window.location.search);
+const currentSystem = urlParams.get('system') || 'agis';
+
+// 2. Mapping für GitHub Labels
+const systemLabels = {
+    'agis': 'direct-payments',
+    'naebi': 'nutrient-balance',
+    'psm': 'plant-protection'
+};
+const githubSystemLabel = systemLabels[currentSystem] || 'data';
+
 async function fetchAndRenderData() {
     const endpointUrl = 'https://lindas.admin.ch/query';
     const appDiv = document.getElementById('app');
 
     try {
-        // Fetch the SPARQL query from the local file
         const queryRes = await fetch('query.rq');
-        if (!queryRes.ok) throw new Error('Fehler beim Laden von query.rq. Läuft ein lokaler Webserver?');
-        const sparqlQuery = await queryRes.text();
+        if (!queryRes.ok) throw new Error('Fehler beim Laden von query.rq.');
+        let sparqlQuery = await queryRes.text();
 
-        // Execute query against LINDAS
+        // Query Platzhalter mit dem gewählten System ersetzen
+        sparqlQuery = sparqlQuery.replace('{{SYSTEM_PREFIX}}', currentSystem);
+
         const response = await fetch(endpointUrl, {
             method: 'POST',
             headers: {
@@ -68,7 +81,32 @@ function formatNodeLabel(text) {
         lines.push(currentLine.trim());
     }
     
-    return lines.join('\n');
+    return lines.join('\\n');
+}
+
+// Hilfsfunktion zur Generierung des GitHub URLs
+function getGithubIssueUrl(cropName, slug) {
+    const title = `Fehlermeldung zu ${cropName} (cultivationtype:${slug})`;
+    
+    const body = `Bitte beschreiben Sie den gefundenen Fehler kurz und prägnant.
+
+**Fehlerbeschreibung:**
+[Was stimmt an der Taxonomie oder den Attributen nicht?]
+
+**Erwartetes Verhalten:**
+[Wie sollte es richtig sein?]
+
+---
+*Kontext: Automatisch generiert aus dem LINDAS Graph Explorer (System: ${currentSystem})*`;
+
+    const labels = `bug,data,${githubSystemLabel}`;
+    
+    const url = new URL('https://github.com/blw-ofag-ufag/crops/issues/new');
+    url.searchParams.append('title', title);
+    url.searchParams.append('body', body);
+    url.searchParams.append('labels', labels);
+    
+    return url.toString();
 }
 
 async function renderInterface(bindings, container) {
@@ -115,25 +153,20 @@ async function renderInterface(bindings, container) {
     container.innerHTML = '';
 
     if (Object.keys(observations).length === 0) {
-        container.innerHTML = '<div style="text-align: center; color: var(--text-muted);">Keine Resultate zurückgegeben.</div>';
+        container.innerHTML = `<div style="text-align: center; color: var(--text-muted);">Keine Resultate für System <strong>${currentSystem}</strong> gefunden.</div>`;
         return;
     }
 
     const sortedEntries = Object.entries(observations).sort((a, b) => {
-        const aUri = a[1].baseUri || "";
-        const bUri = b[1].baseUri || "";
-        const aSlugStr = aUri.split('/').pop();
-        const bSlugStr = bUri.split('/').pop();
+        const aSlugStr = (a[1].baseUri || "").split('/').pop();
+        const bSlugStr = (b[1].baseUri || "").split('/').pop();
         
         const aInt = parseInt(aSlugStr, 10);
         const bInt = parseInt(bSlugStr, 10);
 
-        const aIsNum = !isNaN(aInt);
-        const bIsNum = !isNaN(bInt);
-
-        if (aIsNum && bIsNum) return aInt - bInt;
-        if (aIsNum) return -1;
-        if (bIsNum) return 1;
+        if (!isNaN(aInt) && !isNaN(bInt)) return aInt - bInt;
+        if (!isNaN(aInt)) return -1;
+        if (!isNaN(bInt)) return 1;
         return aSlugStr.localeCompare(bSlugStr);
     });
 
@@ -141,12 +174,23 @@ async function renderInterface(bindings, container) {
         const card = document.createElement('div');
         card.className = 'card';
 
+        // Slug extrahieren (z.B. "501")
+        const slug = obs.baseUri ? obs.baseUri.split('/').pop() : 'unknown';
+        const mainName = obs.baseName || obs.crop; 
+        
+        // GitHub Button rendern (Mit einfachem SVG Icon)
+        const githubUrl = getGithubIssueUrl(mainName, slug);
+        const githubBtn = `
+            <a href="${githubUrl}" target="_blank" class="bug-report-btn" title="Fehler auf GitHub melden">
+                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                Bug Report
+            </a>`;
+        card.innerHTML += githubBtn;
+
         const textPanel = document.createElement('div');
         textPanel.className = 'text-panel';
 
-        const mainName = obs.baseName || obs.crop; 
         const hasDifferentNames = obs.baseName && obs.baseName !== obs.crop;
-        
         let displayIri = obs.baseUri;
         if (obs.baseUri) {
             const segments = obs.baseUri.split('/').filter(Boolean);

@@ -45,6 +45,7 @@ p.subtitle {
     flex-direction: row;
     gap: 32px;
     align-items: stretch;
+    position: relative;
 }
 
 @media (max-width: 900px) {
@@ -177,4 +178,33 @@ p.subtitle {
     padding: 16px;
     border-radius: 8px;
     border: 1px solid #fca5a5;
+}
+
+.bug-report-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: var(--text-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85em;
+    padding: 6px 12px;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    border: 1px solid var(--node-border);
+    transition: all 0.2s ease;
+}
+
+.bug-report-btn:hover {
+    color: #111827;
+    background-color: #e5e7eb;
+    border-color: #d1d5db;
+}
+
+.bug-report-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }
