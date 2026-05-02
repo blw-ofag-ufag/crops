@@ -55,7 +55,6 @@
             align-items: stretch;
         }
 
-        /* Responsive Breakpoint */
         @media (max-width: 900px) {
             .card {
                 flex-direction: column;
@@ -85,16 +84,21 @@
         }
 
         .crop-iri {
-            font-size: 0.75em;
+            font-size: 0.85em;
             font-family: monospace;
             color: var(--link-color);
             text-decoration: none;
             word-break: break-all;
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 4px;
         }
 
         .crop-iri:hover {
             text-decoration: underline;
             color: var(--link-hover);
+            background-color: #e5e7eb;
         }
 
         .alt-names {
@@ -104,30 +108,53 @@
             margin-bottom: 12px;
         }
 
-        .source-name {
-            font-size: 0.85em;
-            margin-top: 8px;
-            padding: 8px 12px;
-            background-color: #f3f4f6;
-            border-radius: 6px;
-            display: inline-block;
-            border-left: 3px solid var(--link-color);
-        }
-
         .description {
-            margin-top: 16px;
+            margin-top: 12px;
             font-size: 0.95em;
             color: #4b5563;
             line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        /* --- ATTRIBUTES PANEL --- */
+        .attributes {
+            background-color: var(--bg-color);
+            border: 1px solid var(--node-border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.85em;
+            /* margin-top: auto; removed to top-align the box under the text */
+            margin-bottom: auto; /* Pushes any remaining empty space below the box */
+        }
+
+        .attr-row {
+            display: flex;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed var(--node-border);
+        }
+        
+        .attr-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .attr-key {
+            font-weight: 600;
+            color: var(--text-muted);
+            width: 140px;
+            flex-shrink: 0;
+        }
+
+        .attr-val {
+            color: var(--text-main);
         }
 
         /* --- RIGHT PANEL: GRAPH --- */
         .graph-panel {
             flex: 1.5;
             min-width: 400px;
-            background-color: #fcfcfc;
-            border: 1px dashed #d1d5db;
-            border-radius: 8px;
             padding: 16px;
             display: flex;
             justify-content: center;
@@ -164,14 +191,13 @@
 
     <div class="container">
         <h1>Kultivierungs-Graphen</h1>
-        <p class="subtitle">Interaktive State-Diagramme mit impliziten Start/End-Punkten...</p>
+        <p class="subtitle">Interaktive Diagramme mit Metadaten-Attributen...</p>
         <div id="app">
             <div class="loading">SPARQL Query wird ausgeführt...</div>
         </div>
     </div>
 
     <script>
-        // Initialize Mermaid
         mermaid.initialize({ 
             startOnLoad: false, 
             theme: 'default',
@@ -185,15 +211,18 @@
             PREFIX schema: <http://schema.org/>
             PREFIX system: <https://agriculture.ld.admin.ch/crops/agis/1/>
 
-            SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?Step ?StepName ?NextStep ?NextStepName
+            SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName
             FROM <https://lindas.admin.ch/foag/crops>
             WHERE {
                 {
-                    SELECT ?Observation ?Identifier ?Crop ?CultivationType ?BaseName
+                    SELECT ?Observation ?Identifier ?Crop ?CultivationType ?BaseName ?ValidFrom ?ValidTo
                     WHERE {
                         system: cube:observationSet / cube:observation ?Observation .
                         ?Observation schema:name ?Crop ; schema:identifier ?Identifier .
                         FILTER(LANG(?Crop) = "de")
+                        
+                        OPTIONAL { ?Observation schema:validFrom ?ValidFrom . }
+                        OPTIONAL { ?Observation schema:validTo ?ValidTo . }
                         
                         OPTIONAL { 
                             ?Observation :cultivationType ?CultivationType . 
@@ -254,15 +283,25 @@
             const observations = {};
             const nodeNames = {};
 
+            // Parse Data
             bindings.forEach(row => {
                 const ident = row.Identifier.value;
                 
                 if (!observations[ident]) {
+                    // Extract and filter validFrom / validTo
+                    let validFromVal = row.ValidFrom ? row.ValidFrom.value : null;
+                    if (validFromVal === "https://cube.link/Undefined") validFromVal = null;
+
+                    let validToVal = row.ValidTo ? row.ValidTo.value : null;
+                    if (validToVal === "https://cube.link/Undefined") validToVal = null;
+
                     observations[ident] = {
                         crop: row.Crop.value,
                         baseUri: row.CultivationType ? row.CultivationType.value : null,
                         baseName: row.BaseName ? row.BaseName.value : null,
                         description: row.BaseDesc ? row.BaseDesc.value : null,
+                        validFrom: validFromVal,
+                        validTo: validToVal,
                         altNames: new Set(),
                         edges: new Set() 
                     };
@@ -290,7 +329,27 @@
                 return;
             }
 
-            for (const [ident, obs] of Object.entries(observations)) {
+            // --- SORTING LOGIC ---
+            const sortedEntries = Object.entries(observations).sort((a, b) => {
+                const aUri = a[1].baseUri || "";
+                const bUri = b[1].baseUri || "";
+                const aSlugStr = aUri.split('/').pop();
+                const bSlugStr = bUri.split('/').pop();
+                
+                const aInt = parseInt(aSlugStr, 10);
+                const bInt = parseInt(bSlugStr, 10);
+
+                const aIsNum = !isNaN(aInt);
+                const bIsNum = !isNaN(bInt);
+
+                if (aIsNum && bIsNum) return aInt - bInt;
+                if (aIsNum) return -1;
+                if (bIsNum) return 1;
+                return aSlugStr.localeCompare(bSlugStr);
+            });
+
+            // Build UI for Sorted Data
+            for (const [ident, obs] of sortedEntries) {
                 
                 const card = document.createElement('div');
                 card.className = 'card';
@@ -302,9 +361,17 @@
                 const mainName = obs.baseName || obs.crop; 
                 const hasDifferentNames = obs.baseName && obs.baseName !== obs.crop;
                 
+                let displayIri = obs.baseUri;
+                if (obs.baseUri) {
+                    const segments = obs.baseUri.split('/').filter(Boolean);
+                    if (segments.length >= 2) {
+                        displayIri = `${segments[segments.length - 2]}:${segments[segments.length - 1]}`;
+                    }
+                }
+
                 let textHTML = `<div class="main-title-row">`;
                 if (obs.baseUri) {
-                    textHTML += `<a href="${obs.baseUri}" target="_blank" class="crop-iri" title="${obs.baseUri}">${obs.baseUri}</a>`;
+                    textHTML += `<a href="${obs.baseUri}" target="_blank" class="crop-iri" title="${obs.baseUri}">${displayIri}</a>`;
                 }
                 textHTML += `<h2 class="crop-name">${mainName}</h2>`;
                 textHTML += `</div>`;
@@ -314,12 +381,39 @@
                     textHTML += `<div class="alt-names">${altString}</div>`;
                 }
 
-                if (hasDifferentNames) {
-                    textHTML += `<div class="source-name"><strong>Original name in source system:</strong> ${obs.crop}</div>`;
-                }
-
                 if (obs.description) {
                     textHTML += `<div class="description">${obs.description}</div>`;
+                }
+
+                // Append Attributes Block
+                let attrsHTML = `<div class="attributes">`;
+                
+                if (hasDifferentNames) {
+                    attrsHTML += `
+                        <div class="attr-row">
+                            <div class="attr-key">Originalname in Quelle</div>
+                            <div class="attr-val">${obs.crop}</div>
+                        </div>`;
+                }
+                if (obs.validFrom) {
+                    attrsHTML += `
+                        <div class="attr-row">
+                            <div class="attr-key">Gültig von</div>
+                            <div class="attr-val">${obs.validFrom}</div>
+                        </div>`;
+                }
+                if (obs.validTo) {
+                    attrsHTML += `
+                        <div class="attr-row">
+                            <div class="attr-key">Gültig bis</div>
+                            <div class="attr-val">${obs.validTo}</div>
+                        </div>`;
+                }
+                
+                attrsHTML += `</div>`;
+                
+                if (hasDifferentNames || obs.validFrom || obs.validTo) {
+                    textHTML += attrsHTML;
                 }
                 
                 textPanel.innerHTML = textHTML;
@@ -336,7 +430,6 @@
                     const edgeSources = new Set();
                     const edgeTargets = new Set();
 
-                    // Map all relationships
                     obs.edges.forEach(edge => {
                         const [source, target] = edge.split('|');
                         involvedUris.add(source);
@@ -345,11 +438,9 @@
                         edgeTargets.add(target);
                     });
 
-                    // Isolate the dynamic start and end nodes
                     const startNodes = new Set([...involvedUris].filter(uri => !edgeTargets.has(uri)));
                     const endNodes = new Set([...involvedUris].filter(uri => !edgeSources.has(uri)));
 
-                    // 1. Declare ONLY the intermediate states (skipping the start/end crops)
                     involvedUris.forEach(uri => {
                         if (!startNodes.has(uri) && !endNodes.has(uri)) {
                             const id = getSafeId(uri);
@@ -358,11 +449,9 @@
                         }
                     });
 
-                    // 2. Draw edges, dynamically injecting [*] for the stripped start and end nodes
                     obs.edges.forEach(edge => {
                         const [source, target] = edge.split('|');
                         
-                        // Replace the ID with [*] if it is an endpoint
                         const sourceStr = startNodes.has(source) ? '[*]' : getSafeId(source);
                         const targetStr = endNodes.has(target) ? '[*]' : getSafeId(target);
                         
