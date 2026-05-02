@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivation Graphs Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --node-border: #e5e7eb;
+            --node-shadow: rgba(0, 0, 0, 0.05);
+            --link-color: #3b82f6;
+            --link-hover: #2563eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px var(--node-shadow), 0 1px 2px var(--node-shadow);
+            border: 1px solid var(--node-border);
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            align-items: stretch;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 900px) {
+            .card {
+                flex-direction: column;
+            }
+        }
+
+        /* --- LEFT PANEL: TEXT --- */
+        .text-panel {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-title-row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .crop-name {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+            color: var(--text-main);
+        }
+
+        .crop-iri {
+            font-size: 0.75em;
+            font-family: monospace;
+            color: var(--link-color);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .crop-iri:hover {
+            text-decoration: underline;
+            color: var(--link-hover);
+        }
+
+        .alt-names {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .source-name {
+            font-size: 0.85em;
+            margin-top: 8px;
+            padding: 8px 12px;
+            background-color: #f3f4f6;
+            border-radius: 6px;
+            display: inline-block;
+            border-left: 3px solid var(--link-color);
+        }
+
+        .description {
+            margin-top: 16px;
+            font-size: 0.95em;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        /* --- RIGHT PANEL: GRAPH --- */
+        .graph-panel {
+            flex: 1.5;
+            min-width: 400px;
+            background-color: #fcfcfc;
+            border: 1px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+        }
+
+        .mermaid {
+            max-width: 100%;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        
+        .error {
+            color: #ef4444;
+            background: #fee2e2;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #fca5a5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kultivierungs-Graphen</h1>
+        <p class="subtitle">Interaktive State-Diagramme mit impliziten Start/End-Punkten...</p>
+        <div id="app">
+            <div class="loading">SPARQL Query wird ausgeführt...</div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({ 
+            startOnLoad: false, 
+            theme: 'default',
+            state: { useMaxWidth: false }
+        });
+
+        const sparqlQuery = `
+            PREFIX : <https://agriculture.ld.admin.ch/crops/>
+            PREFIX cube: <https://cube.link/>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX schema: <http://schema.org/>
+            PREFIX system: <https://agriculture.ld.admin.ch/crops/agis/1/>
+
+            SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?Step ?StepName ?NextStep ?NextStepName
+            FROM <https://lindas.admin.ch/foag/crops>
+            WHERE {
+                {
+                    SELECT ?Observation ?Identifier ?Crop ?CultivationType ?BaseName
+                    WHERE {
+                        system: cube:observationSet / cube:observation ?Observation .
+                        ?Observation schema:name ?Crop ; schema:identifier ?Identifier .
+                        FILTER(LANG(?Crop) = "de")
+                        
+                        OPTIONAL { 
+                            ?Observation :cultivationType ?CultivationType . 
+                            ?CultivationType schema:name|rdfs:label ?BaseName .
+                            FILTER(LANG(?BaseName) = "de")
+                        }
+                    }
+                    LIMIT 10
+                }
+                
+                OPTIONAL { ?CultivationType schema:alternateName ?BaseAltName . FILTER(LANG(?BaseAltName) = "de") }
+                OPTIONAL { ?CultivationType schema:description ?BaseDesc . FILTER(LANG(?BaseDesc) = "de") }
+                
+                OPTIONAL {
+                    ?CultivationType rdfs:subClassOf* ?Step .
+                    ?Step rdfs:subClassOf ?NextStep .
+                    ?NextStep rdfs:subClassOf* :Cultivation .
+                    
+                    ?Step schema:name|rdfs:label ?StepName .
+                    FILTER(LANG(?StepName) = "de")
+                    
+                    ?NextStep schema:name|rdfs:label ?NextStepName .
+                    FILTER(LANG(?NextStepName) = "de")
+                }
+            }
+        `;
+
+        async function fetchAndRenderData() {
+            const endpointUrl = 'https://lindas.admin.ch/query';
+            const appDiv = document.getElementById('app');
+
+            try {
+                const response = await fetch(endpointUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Accept': 'application/sparql-results+json'
+                    },
+                    body: 'query=' + encodeURIComponent(sparqlQuery)
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const data = await response.json();
+                await renderInterface(data.results.bindings, appDiv);
+
+            } catch (error) {
+                appDiv.innerHTML = `<div class="error"><strong>Fehler beim Abrufen der Daten:</strong> ${error.message}</div>`;
+            }
+        }
+
+        function getSafeId(uri) {
+            if (!uri) return 'unknown';
+            return 'node_' + uri.split('/').pop().replace(/[^a-zA-Z0-9]/g, '');
+        }
+
+        async function renderInterface(bindings, container) {
+            const observations = {};
+            const nodeNames = {};
+
+            bindings.forEach(row => {
+                const ident = row.Identifier.value;
+                
+                if (!observations[ident]) {
+                    observations[ident] = {
+                        crop: row.Crop.value,
+                        baseUri: row.CultivationType ? row.CultivationType.value : null,
+                        baseName: row.BaseName ? row.BaseName.value : null,
+                        description: row.BaseDesc ? row.BaseDesc.value : null,
+                        altNames: new Set(),
+                        edges: new Set() 
+                    };
+                }
+
+                const obs = observations[ident];
+
+                if (row.BaseAltName) obs.altNames.add(row.BaseAltName.value);
+                
+                if (row.Step && row.NextStep) {
+                    const stepUri = row.Step.value;
+                    const nextUri = row.NextStep.value;
+                    
+                    nodeNames[stepUri] = row.StepName ? row.StepName.value : stepUri;
+                    nodeNames[nextUri] = row.NextStepName ? row.NextStepName.value : nextUri;
+                    
+                    obs.edges.add(`${stepUri}|${nextUri}`);
+                }
+            });
+
+            container.innerHTML = '';
+
+            if (Object.keys(observations).length === 0) {
+                container.innerHTML = '<div style="text-align: center; color: var(--text-muted);">Keine Resultate zurückgegeben.</div>';
+                return;
+            }
+
+            for (const [ident, obs] of Object.entries(observations)) {
+                
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                // --- LEFT PANEL: TEXT CONTENT ---
+                const textPanel = document.createElement('div');
+                textPanel.className = 'text-panel';
+
+                const mainName = obs.baseName || obs.crop; 
+                const hasDifferentNames = obs.baseName && obs.baseName !== obs.crop;
+                
+                let textHTML = `<div class="main-title-row">`;
+                if (obs.baseUri) {
+                    textHTML += `<a href="${obs.baseUri}" target="_blank" class="crop-iri" title="${obs.baseUri}">${obs.baseUri}</a>`;
+                }
+                textHTML += `<h2 class="crop-name">${mainName}</h2>`;
+                textHTML += `</div>`;
+
+                if (obs.altNames.size > 0) {
+                    const altString = Array.from(obs.altNames).join(', ');
+                    textHTML += `<div class="alt-names">${altString}</div>`;
+                }
+
+                if (hasDifferentNames) {
+                    textHTML += `<div class="source-name"><strong>Original name in source system:</strong> ${obs.crop}</div>`;
+                }
+
+                if (obs.description) {
+                    textHTML += `<div class="description">${obs.description}</div>`;
+                }
+                
+                textPanel.innerHTML = textHTML;
+                card.appendChild(textPanel);
+
+                // --- RIGHT PANEL: MERMAID GRAPH ---
+                const graphPanel = document.createElement('div');
+                graphPanel.className = 'graph-panel';
+                
+                if (obs.edges.size > 0) {
+                    let mermaidSyntax = "stateDiagram-v2\n    direction TB\n";
+                    
+                    const involvedUris = new Set();
+                    const edgeSources = new Set();
+                    const edgeTargets = new Set();
+
+                    // Map all relationships
+                    obs.edges.forEach(edge => {
+                        const [source, target] = edge.split('|');
+                        involvedUris.add(source);
+                        involvedUris.add(target);
+                        edgeSources.add(source);
+                        edgeTargets.add(target);
+                    });
+
+                    // Isolate the dynamic start and end nodes
+                    const startNodes = new Set([...involvedUris].filter(uri => !edgeTargets.has(uri)));
+                    const endNodes = new Set([...involvedUris].filter(uri => !edgeSources.has(uri)));
+
+                    // 1. Declare ONLY the intermediate states (skipping the start/end crops)
+                    involvedUris.forEach(uri => {
+                        if (!startNodes.has(uri) && !endNodes.has(uri)) {
+                            const id = getSafeId(uri);
+                            const label = (nodeNames[uri] || 'Unknown').replace(/"/g, '');
+                            mermaidSyntax += `    state "${label}" as ${id}\n`;
+                        }
+                    });
+
+                    // 2. Draw edges, dynamically injecting [*] for the stripped start and end nodes
+                    obs.edges.forEach(edge => {
+                        const [source, target] = edge.split('|');
+                        
+                        // Replace the ID with [*] if it is an endpoint
+                        const sourceStr = startNodes.has(source) ? '[*]' : getSafeId(source);
+                        const targetStr = endNodes.has(target) ? '[*]' : getSafeId(target);
+                        
+                        mermaidSyntax += `    ${sourceStr} --> ${targetStr}\n`;
+                    });
+
+                    const mermaidDiv = document.createElement('div');
+                    mermaidDiv.className = 'mermaid';
+                    mermaidDiv.textContent = mermaidSyntax;
+                    graphPanel.appendChild(mermaidDiv);
+                } else {
+                    graphPanel.innerHTML = '<span style="color: var(--text-muted); font-style: italic;">Kein Pfad im Graph gefunden.</span>';
+                }
+
+                card.appendChild(graphPanel);
+                container.appendChild(card);
+            }
+
+            try {
+                await mermaid.run({ querySelector: '.mermaid' });
+            } catch (err) {
+                console.error("Mermaid rendering failed:", err);
+            }
+        }
+
+        fetchAndRenderData();
+    </script>
+</body>
+</html>
