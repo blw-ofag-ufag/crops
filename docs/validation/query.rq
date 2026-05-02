@@ -1,0 +1,44 @@
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX cube: <https://cube.link/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX system: <https://agriculture.ld.admin.ch/crops/agis/1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName
+FROM <https://lindas.admin.ch/foag/crops>
+WHERE {
+    {
+        SELECT ?Observation ?Identifier ?Crop ?CultivationType ?BaseName ?ValidFrom ?ValidTo
+        WHERE {
+            system: cube:observationSet / cube:observation ?Observation .
+            ?Observation schema:name ?Crop ; schema:identifier ?RawIdentifier .
+            
+            BIND(xsd:string(?RawIdentifier) AS ?Identifier)
+            
+            FILTER(LANG(?Crop) = "de")
+            
+            OPTIONAL { ?Observation schema:validFrom ?ValidFrom . }
+            OPTIONAL { ?Observation schema:validTo ?ValidTo . }
+            
+            ?Observation :cultivationType ?CultivationType . 
+            ?CultivationType schema:name|rdfs:label ?BaseName .
+            FILTER(LANG(?BaseName) = "de")
+        }
+    }
+    
+    OPTIONAL { ?CultivationType schema:alternateName ?BaseAltName . FILTER(LANG(?BaseAltName) = "de") }
+    OPTIONAL { ?CultivationType schema:description ?BaseDesc . FILTER(LANG(?BaseDesc) = "de") }
+    
+    OPTIONAL {
+        ?CultivationType rdfs:subClassOf* ?Step .
+        ?Step rdfs:subClassOf ?NextStep .
+        ?NextStep rdfs:subClassOf* :Cultivation .
+        
+        ?Step schema:name|rdfs:label ?StepName .
+        FILTER(LANG(?StepName) = "de")
+        
+        ?NextStep schema:name|rdfs:label ?NextStepName .
+        FILTER(LANG(?NextStepName) = "de")
+    }
+}
