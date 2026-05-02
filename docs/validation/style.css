@@ -208,3 +208,37 @@ p.subtitle {
     height: 16px;
     fill: currentColor;
 }
+
+.action-buttons {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    color: var(--text-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85em;
+    padding: 6px 12px;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    border: 1px solid var(--node-border);
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    color: #111827;
+    background-color: #e5e7eb;
+    border-color: #d1d5db;
+}
+
+.action-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
