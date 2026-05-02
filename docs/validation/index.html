@@ -113,7 +113,7 @@
             font-size: 0.95em;
             color: #4b5563;
             line-height: 1.6;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
         }
 
         /* --- ATTRIBUTES PANEL --- */
@@ -123,8 +123,16 @@
             border-radius: 8px;
             padding: 12px 16px;
             font-size: 0.85em;
-            /* margin-top: auto; removed to top-align the box under the text */
-            margin-bottom: auto; /* Pushes any remaining empty space below the box */
+            margin-top: auto; /* Restored to explicitly push the box to the bottom */
+        }
+
+        .attr-header {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1.05em;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--node-border);
         }
 
         .attr-row {
@@ -209,7 +217,7 @@
             PREFIX cube: <https://cube.link/>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX schema: <http://schema.org/>
-            PREFIX system: <https://agriculture.ld.admin.ch/crops/agis/1/>
+            PREFIX system: <https://agriculture.ld.admin.ch/crops/naebi/1/>
 
             SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName
             FROM <https://lindas.admin.ch/foag/crops>
@@ -387,15 +395,20 @@
 
                 // Append Attributes Block
                 let attrsHTML = `<div class="attributes">`;
+                attrsHTML += `<div class="attr-header">Attribute der Kultur im Quellsystem</div>`;
+                
+                let hasAttributes = false;
                 
                 if (hasDifferentNames) {
+                    hasAttributes = true;
                     attrsHTML += `
                         <div class="attr-row">
-                            <div class="attr-key">Originalname in Quelle</div>
+                            <div class="attr-key">Originalname</div>
                             <div class="attr-val">${obs.crop}</div>
                         </div>`;
                 }
                 if (obs.validFrom) {
+                    hasAttributes = true;
                     attrsHTML += `
                         <div class="attr-row">
                             <div class="attr-key">Gültig von</div>
@@ -403,6 +416,7 @@
                         </div>`;
                 }
                 if (obs.validTo) {
+                    hasAttributes = true;
                     attrsHTML += `
                         <div class="attr-row">
                             <div class="attr-key">Gültig bis</div>
@@ -412,7 +426,7 @@
                 
                 attrsHTML += `</div>`;
                 
-                if (hasDifferentNames || obs.validFrom || obs.validTo) {
+                if (hasAttributes) {
                     textHTML += attrsHTML;
                 }
                 
