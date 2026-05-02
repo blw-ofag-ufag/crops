@@ -14,7 +14,6 @@ const systemLabels = {
 };
 const githubSystemLabel = systemLabels[currentSystem] || 'data';
 
-// Neue Funktion: Lädt das rohe TTL File von GitHub in den Speicher
 async function fetchOntologySource() {
     const rawUrl = 'https://raw.githubusercontent.com/blw-ofag-ufag/crops/main/rdf/ontology/cultivationtypes.ttl';
     try {
@@ -27,21 +26,19 @@ async function fetchOntologySource() {
     }
 }
 
-// Sucht die Start- und Endzeile im geladenen TTL Text
 function getLineNumbers(rawText, slug) {
     if (!rawText || !slug) return null;
     
     const lines = rawText.split('\n');
     let startLine = -1;
     let endLine = -1;
-    const searchPrefix = `cultivationtype:${slug} `; // Sucht den exakten Block-Anfang
+    const searchPrefix = `cultivationtype:${slug} `;
 
     for (let i = 0; i < lines.length; i++) {
         if (startLine === -1 && lines[i].startsWith(searchPrefix)) {
-            startLine = i + 1; // GitHub URLs nutzen 1-basierten Index
+            startLine = i + 1;
         }
         
-        // Wenn wir im Block sind, suchen wir das Ende (ein Punkt am Zeilenende)
         if (startLine !== -1 && i >= startLine - 1) {
             if (lines[i].trim().endsWith('.')) {
                 endLine = i + 1;
@@ -61,7 +58,6 @@ async function fetchAndRenderData() {
     const appDiv = document.getElementById('app');
 
     try {
-        // Lade SPARQL Query und Raw Source Code parallel
         const [queryRes, rawOntologyText] = await Promise.all([
             fetch('query.rq'),
             fetchOntologySource()
@@ -136,15 +132,15 @@ function getGithubIssueUrl(cropName, slug) {
     url.searchParams.append('title', title);
     url.searchParams.append('body', body);
     url.searchParams.append('labels', labels);
+    url.searchParams.append('template', 'bug.yml');
     
     return url.toString();
 }
 
-// Berechnet die GitHub Code URL
 function getGithubSourceUrl(slug, rawText) {
     const baseUrl = 'https://github.com/blw-ofag-ufag/crops/blob/main/rdf/ontology/cultivationtypes.ttl';
     const lines = getLineNumbers(rawText, slug);
-    return lines ? `${baseUrl}#${lines}` : baseUrl; // Fallback zur reinen Datei
+    return lines ? `${baseUrl}#${lines}` : baseUrl; 
 }
 
 async function renderInterface(bindings, container, rawOntologyText) {
@@ -215,20 +211,16 @@ async function renderInterface(bindings, container, rawOntologyText) {
         const slug = obs.baseUri ? obs.baseUri.split('/').pop() : 'unknown';
         const mainName = obs.baseName || obs.crop; 
         
-        // Generate URLs
         const githubIssueUrl = getGithubIssueUrl(mainName, slug);
         const githubSourceUrl = getGithubSourceUrl(slug, rawOntologyText);
 
-        // Render Action Buttons
         const buttonsContainer = `
             <div class="action-buttons">
-                <a href="${githubSourceUrl}" target="_blank" class="action-btn" title="Quellcode ansehen">
-                    <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"></path></svg>
-                    Source Code
+                <a href="${githubSourceUrl}" target="_blank" class="action-btn">
+                    <i class="bi bi-github"></i>
                 </a>
-                <a href="${githubIssueUrl}" target="_blank" class="action-btn" title="Fehler auf GitHub melden">
-                    <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-                    Bug Report
+                <a href="${githubIssueUrl}" target="_blank" class="action-btn">
+                    <i class="bi bi-bug-fill"></i>
                 </a>
             </div>`;
         card.innerHTML += buttonsContainer;
@@ -247,7 +239,7 @@ async function renderInterface(bindings, container, rawOntologyText) {
 
         let textHTML = `<div class="main-title-row">`;
         if (obs.baseUri) {
-            textHTML += `<a href="${obs.baseUri}" target="_blank" class="crop-iri" title="${obs.baseUri}">${displayIri}</a>`;
+            textHTML += `<a href="${obs.baseUri}" target="_blank" class="crop-iri">${displayIri}</a>`;
         }
         textHTML += `<h2 class="crop-name">${mainName}</h2>`;
         textHTML += `</div>`;
