@@ -147,7 +147,6 @@ async function renderInterface(bindings, container, rawOntologyText) {
     const cultivationTypes = {};
     const nodeNames = {};
 
-    // Parse Data - Groupping by CultivationType baseUri instead of Identifier
     bindings.forEach(row => {
         const baseUri = row.CultivationType ? row.CultivationType.value : null;
         if (!baseUri) return;
@@ -159,13 +158,20 @@ async function renderInterface(bindings, container, rawOntologyText) {
                 description: row.BaseDesc ? row.BaseDesc.value : null,
                 altNames: new Set(),
                 edges: new Set(),
-                observations: []
+                observations: [],
+                // Initialize OWL Sets
+                disjointNames: new Set(),
+                unionNames: new Set(),
+                intersectionNames: new Set()
             };
         }
 
         const ct = cultivationTypes[baseUri];
 
         if (row.BaseAltName) ct.altNames.add(row.BaseAltName.value);
+        if (row.DisjointName) ct.disjointNames.add(row.DisjointName.value);
+        if (row.UnionName) ct.unionNames.add(row.UnionName.value);
+        if (row.IntersectionName) ct.intersectionNames.add(row.IntersectionName.value);
         
         if (row.Step && row.NextStep) {
             const stepUri = row.Step.value;
@@ -177,7 +183,6 @@ async function renderInterface(bindings, container, rawOntologyText) {
             ct.edges.add(`${stepUri}|${nextUri}`);
         }
 
-        // Add Observation-specific data
         const ident = row.Identifier ? row.Identifier.value : null;
         if (ident && !ct.observations.find(o => o.ident === ident)) {
             let validFromVal = row.ValidFrom ? row.ValidFrom.value : null;
@@ -220,7 +225,6 @@ async function renderInterface(bindings, container, rawOntologyText) {
         card.className = 'card';
 
         const slug = ct.baseUri.split('/').pop();
-        // Fallback to first observation crop name if baseName missing
         const mainName = ct.baseName || (ct.observations.length > 0 ? ct.observations[0].crop : 'Unbekannte Kultur'); 
         
         const githubIssueUrl = getGithubIssueUrl(mainName, slug);
@@ -260,7 +264,30 @@ async function renderInterface(bindings, container, rawOntologyText) {
             textHTML += `<div class="description">${ct.description}</div>`;
         }
 
-        // Create attributes container to hold multiple observations cleanly
+        if (ct.unionNames.size > 0) {
+            textHTML += `
+                <div class="owl-info union">
+                    <strong>Vereinigung von:</strong> 
+                    ${Array.from(ct.unionNames).join(', ')}
+                </div>`;
+        }
+        
+        if (ct.intersectionNames.size > 0) {
+            textHTML += `
+                <div class="owl-info intersection">
+                    <strong>Schnittmenge von:</strong> 
+                    ${Array.from(ct.intersectionNames).join(', ')}
+                </div>`;
+        }
+        
+        if (ct.disjointNames.size > 0) {
+            textHTML += `
+                <div class="owl-info disjoint">
+                    <strong>Disjunkt mit:</strong> 
+                    ${Array.from(ct.disjointNames).join(', ')}
+                </div>`;
+        }
+
         let attrsContainerHTML = `<div class="attributes-container">`;
         
         ct.observations.forEach(obs => {
@@ -313,7 +340,6 @@ async function renderInterface(bindings, container, rawOntologyText) {
         textPanel.innerHTML = textHTML;
         card.appendChild(textPanel);
 
-        // Render Graph Logic
         if (ct.edges.size > 0) {
             const involvedUris = new Set();
             const edgeSources = new Set();
@@ -330,10 +356,8 @@ async function renderInterface(bindings, container, rawOntologyText) {
             const startNodes = new Set([...involvedUris].filter(uri => !edgeTargets.has(uri)));
             const endNodes = new Set([...involvedUris].filter(uri => !edgeSources.has(uri)));
 
-            // Identify if there are any intermediate nodes
             const intermediateNodes = [...involvedUris].filter(uri => !startNodes.has(uri) && !endNodes.has(uri));
 
-            // Only render graph if intermediate nodes exist (path is not empty)
             if (intermediateNodes.length > 0) {
                 const graphPanel = document.createElement('div');
                 graphPanel.className = 'graph-panel';

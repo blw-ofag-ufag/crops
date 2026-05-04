@@ -4,8 +4,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
 PREFIX system: <https://agriculture.ld.admin.ch/crops/{{SYSTEM_PREFIX}}/1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName
+SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName ?DisjointName ?UnionName ?IntersectionName
 FROM <https://lindas.admin.ch/foag/crops>
 WHERE {
     {
@@ -40,5 +42,23 @@ WHERE {
         
         ?NextStep schema:name|rdfs:label ?NextStepName .
         FILTER(LANG(?NextStepName) = "de")
+    }
+
+    OPTIONAL {
+        ?CultivationType owl:disjointWith ?DisjointClass .
+        ?DisjointClass schema:name|rdfs:label ?DisjointName .
+        FILTER(LANG(?DisjointName) = "de")
+    }
+    OPTIONAL {
+        ?CultivationType owl:unionOf ?UnionList .
+        ?UnionList rdf:rest*/rdf:first ?UnionClass .
+        ?UnionClass schema:name|rdfs:label ?UnionName .
+        FILTER(LANG(?UnionName) = "de")
+    }
+    OPTIONAL {
+        ?CultivationType owl:intersectionOf ?IntersectionList .
+        ?IntersectionList rdf:rest*/rdf:first ?IntersectionClass .
+        ?IntersectionClass schema:name|rdfs:label ?IntersectionName .
+        FILTER(LANG(?IntersectionName) = "de")
     }
 }
