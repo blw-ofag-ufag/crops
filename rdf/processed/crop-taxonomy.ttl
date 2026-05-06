@@ -170,7 +170,8 @@ cultivationtype:1025 a owl:Class ;
 
 cultivationtype:1026 a owl:Class ;
     rdfs:label "Silomais"@de ;
-    rdfs:subClassOf cultivationtype:521 .
+    rdfs:subClassOf cultivationtype:464,
+        cultivationtype:521 .
 
 cultivationtype:1027 a owl:Class ;
     rdfs:label "Eiweisserbsen"@de,
@@ -3012,7 +3013,8 @@ cultivationtype:46 a owl:Class ;
         cultivationtype:310 .
 
 cultivationtype:464 a owl:Class ;
-    rdfs:label "Landwirtschaftliche Nutzfläche"@de ;
+    rdfs:label "Grundfutterproduktion"@de,
+        "Landwirtschaftliche Nutzfläche"@de ;
     rdfs:comment "Als landwirtschaftliche Nutzfläche (LN) gilt die einem Betrieb zugeordnete, für den Pflanzenbau genutzte Fläche ohne die Sömmerungsfläche, die dem Bewirtschafter oder der Bewirtschafterin ganzjährig zur Verfügung steht und die ausschliesslich vom Betrieb aus bewirtschaftet wird."@de ;
     rdfs:subClassOf :Cultivation .
 

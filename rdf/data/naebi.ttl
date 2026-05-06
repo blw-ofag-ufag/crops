@@ -623,7 +623,7 @@ naebi:110 a cube:Observation ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1289 .
 
@@ -634,7 +634,7 @@ naebi:111 a cube:Observation ;
     :Mg 0.29 ;
     :N2 1.2 ;
     :P2O5 0.96 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1290 .
 
@@ -733,7 +733,7 @@ naebi:12 a cube:Observation ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1042 .
 
@@ -755,7 +755,7 @@ naebi:121 a cube:Observation ;
     :Mg 0.13 ;
     :N2 100.0 ;
     :P2O5 0.5 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:523 .
 
@@ -920,7 +920,7 @@ naebi:135 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1052 .
 
@@ -1019,7 +1019,7 @@ naebi:143 a cube:Observation ;
     :Mg 0.0943 ;
     :N2 80.0 ;
     :P2O5 0.566 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1031 .
 
@@ -1162,7 +1162,7 @@ naebi:155 a cube:Observation ;
     :Mg 0.15 ;
     :N2 0.5 ;
     :P2O5 0.57 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:612 .
 
@@ -1184,7 +1184,7 @@ naebi:157 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:611 .
 
@@ -1217,7 +1217,7 @@ naebi:16 a cube:Observation ;
     :Mg 0.6 ;
     :N2 0.0 ;
     :P2O5 0.52 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cube:Undefined .
 
@@ -1349,7 +1349,7 @@ naebi:170 a cube:Observation ;
     :Mg 0.2 ;
     :N2 0.5 ;
     :P2O5 0.5 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:617 .
 
@@ -1393,7 +1393,7 @@ naebi:174 a cube:Observation ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1080 .
 
@@ -1448,7 +1448,7 @@ naebi:179 a cube:Observation ;
     :Mg 0.2 ;
     :N2 0.95 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1085 .
 
@@ -1679,7 +1679,7 @@ naebi:198 a cube:Observation ;
     :Mg 0.15 ;
     :N2 0.5 ;
     :P2O5 0.57 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1126 .
 
@@ -1888,7 +1888,7 @@ naebi:214 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:634 .
 
@@ -1932,7 +1932,7 @@ naebi:218 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:308 .
 
@@ -2130,7 +2130,7 @@ naebi:234 a cube:Observation ;
     :Mg 0.1 ;
     :N2 70.0 ;
     :P2O5 0.65 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1029 .
 
@@ -2262,7 +2262,7 @@ naebi:245 a cube:Observation ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1124 .
 
@@ -2350,7 +2350,7 @@ naebi:252 a cube:Observation ;
     :Mg 0.1038 ;
     :N2 110.0 ;
     :P2O5 0.5943 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1030 .
 
@@ -2445,21 +2445,21 @@ naebi:26 a cube:Observation ;
 naebi:260 a cube:Observation ;
     schema:identifier "CROP_SUMEXT"^^xsd:string ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1132 .
 
 naebi:261 a cube:Observation ;
     schema:identifier "CROP_SUMLNT"^^xsd:string ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1133 .
 
 naebi:262 a cube:Observation ;
     schema:identifier "CROP_SUMOTH"^^xsd:string ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1134 .
 
@@ -2635,7 +2635,7 @@ naebi:277 a cube:Observation ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1146 .
 
@@ -2734,7 +2734,7 @@ naebi:285 a cube:Observation ;
     :Mg 0.2 ;
     :N2 0.95 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:2 .
 
@@ -2745,7 +2745,7 @@ naebi:286 a cube:Observation ;
     :Mg 0.2 ;
     :N2 0.95 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1154 .
 
@@ -2756,7 +2756,7 @@ naebi:287 a cube:Observation ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1155 .
 
@@ -2800,7 +2800,7 @@ naebi:290 a cube:Observation ;
     :Mg 0.13 ;
     :N2 110.0 ;
     :P2O5 0.58 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1028 .
 
@@ -3207,7 +3207,7 @@ naebi:41 a cube:Observation ;
     :Mg 0.13 ;
     :N2 110.0 ;
     :P2O5 0.58 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1026 .
 
@@ -3702,7 +3702,7 @@ naebi:82 a cube:Observation ;
     :Mg 0.13 ;
     :N2 0.0 ;
     :P2O5 0.22 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cube:Undefined .
 
@@ -3768,7 +3768,7 @@ naebi:88 a cube:Observation ;
     :Mg 0.1 ;
     :N2 70.0 ;
     :P2O5 0.65 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:1025 .
 
@@ -3834,7 +3834,7 @@ naebi:93 a cube:Observation ;
     :Mg 0.25 ;
     :N2 1.7 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
     :cultivationType cultivationtype:79 .
 
