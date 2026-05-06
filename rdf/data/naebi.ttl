@@ -480,7 +480,7 @@ naebi:1 a cube:Observation ;
     :Mg 50.0 ;
     :N2 200.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1036 .
 
@@ -491,7 +491,7 @@ naebi:10 a cube:Observation ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1037 .
 
@@ -502,7 +502,7 @@ naebi:100 a cube:Observation ;
     :Mg 50.0 ;
     :N2 180.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:708 .
 
@@ -513,7 +513,7 @@ naebi:101 a cube:Observation ;
     :Mg 25.0 ;
     :N2 160.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1188 .
 
@@ -524,7 +524,7 @@ naebi:102 a cube:Observation ;
     :Mg 15.0 ;
     :N2 70.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1189 .
 
@@ -535,7 +535,7 @@ naebi:103 a cube:Observation ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1190 .
 
@@ -546,7 +546,7 @@ naebi:104 a cube:Observation ;
     :Mg 10.0 ;
     :N2 40.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1191 .
 
@@ -557,7 +557,7 @@ naebi:105 a cube:Observation ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1192 .
 
@@ -568,7 +568,7 @@ naebi:106 a cube:Observation ;
     :Mg 25.0 ;
     :N2 160.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1193 .
 
@@ -579,7 +579,7 @@ naebi:107 a cube:Observation ;
     :Mg 15.0 ;
     :N2 70.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1194 .
 
@@ -590,7 +590,7 @@ naebi:108 a cube:Observation ;
     :Mg 10.0 ;
     :N2 40.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1195 .
 
@@ -601,7 +601,7 @@ naebi:109 a cube:Observation ;
     :Mg 15.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:67 .
 
@@ -612,7 +612,7 @@ naebi:11 a cube:Observation ;
     :Mg 20.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1038 .
 
@@ -645,7 +645,7 @@ naebi:112 a cube:Observation ;
     :Mg 10.0 ;
     :N2 250.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:87 .
 
@@ -656,7 +656,7 @@ naebi:113 a cube:Observation ;
     :Mg 0.3 ;
     :N2 60.0 ;
     :P2O5 1.1 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:493 .
 
@@ -667,7 +667,7 @@ naebi:114 a cube:Observation ;
     :Mg 0.28 ;
     :N2 120.0 ;
     :P2O5 1.48 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1039 .
 
@@ -678,7 +678,7 @@ naebi:115 a cube:Observation ;
     :Mg 0.09 ;
     :N2 0.0 ;
     :P2O5 0.08 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cube:Undefined .
 
@@ -689,7 +689,7 @@ naebi:116 a cube:Observation ;
     :Mg 0.13 ;
     :N2 0.0 ;
     :P2O5 0.98 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1027 .
 
@@ -700,7 +700,7 @@ naebi:117 a cube:Observation ;
     :Mg 0.05 ;
     :N2 100.0 ;
     :P2O5 0.3 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:576 .
 
@@ -711,7 +711,7 @@ naebi:118 a cube:Observation ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1288 .
 
@@ -722,7 +722,7 @@ naebi:119 a cube:Observation ;
     :Mg 20.0 ;
     :N2 65.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1041 .
 
@@ -744,7 +744,7 @@ naebi:120 a cube:Observation ;
     :Mg 15.0 ;
     :N2 50.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1040 .
 
@@ -766,7 +766,7 @@ naebi:122 a cube:Observation ;
     :Mg 30.0 ;
     :N2 140.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1043 .
 
@@ -777,7 +777,7 @@ naebi:123 a cube:Observation ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:86 .
 
@@ -788,7 +788,7 @@ naebi:124 a cube:Observation ;
     :Mg 30.0 ;
     :N2 170.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1200 .
 
@@ -799,7 +799,7 @@ naebi:125 a cube:Observation ;
     :Mg 20.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:84 .
 
@@ -810,7 +810,7 @@ naebi:126 a cube:Observation ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:260 .
 
@@ -821,7 +821,7 @@ naebi:127 a cube:Observation ;
     :Mg 0.54 ;
     :N2 60.0 ;
     :P2O5 2.54 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1045 .
 
@@ -832,7 +832,7 @@ naebi:128 a cube:Observation ;
     :Mg 15.0 ;
     :N2 70.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1046 .
 
@@ -843,7 +843,7 @@ naebi:129 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1047 .
 
@@ -854,7 +854,7 @@ naebi:13 a cube:Observation ;
     :Mg 20.0 ;
     :N2 85.0 ;
     :P2O5 57.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1186 .
 
@@ -865,7 +865,7 @@ naebi:130 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1048 .
 
@@ -876,7 +876,7 @@ naebi:131 a cube:Observation ;
     :Mg 30.0 ;
     :N2 160.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1049 .
 
@@ -887,7 +887,7 @@ naebi:132 a cube:Observation ;
     :Mg 20.0 ;
     :N2 200.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:323 .
 
@@ -898,7 +898,7 @@ naebi:133 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1050 .
 
@@ -909,7 +909,7 @@ naebi:134 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1051 .
 
@@ -931,7 +931,7 @@ naebi:136 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1053 .
 
@@ -942,7 +942,7 @@ naebi:137 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:556 .
 
@@ -953,7 +953,7 @@ naebi:138 a cube:Observation ;
     :Mg 30.0 ;
     :N2 110.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1054 .
 
@@ -964,7 +964,7 @@ naebi:139 a cube:Observation ;
     :Mg 15.0 ;
     :N2 65.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1055 .
 
@@ -975,7 +975,7 @@ naebi:14 a cube:Observation ;
     :Mg 5.0 ;
     :N2 0.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1056 .
 
@@ -986,7 +986,7 @@ naebi:140 a cube:Observation ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1058 .
 
@@ -997,7 +997,7 @@ naebi:141 a cube:Observation ;
     :Mg 25.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:479 .
 
@@ -1008,7 +1008,7 @@ naebi:142 a cube:Observation ;
     :Mg 40.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:297 .
 
@@ -1030,7 +1030,7 @@ naebi:144 a cube:Observation ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1059 .
 
@@ -1041,7 +1041,7 @@ naebi:145 a cube:Observation ;
     :Mg 10.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1060 .
 
@@ -1052,7 +1052,7 @@ naebi:146 a cube:Observation ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1061 .
 
@@ -1063,7 +1063,7 @@ naebi:147 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:716 .
 
@@ -1074,7 +1074,7 @@ naebi:148 a cube:Observation ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1062 .
 
@@ -1085,7 +1085,7 @@ naebi:149 a cube:Observation ;
     :Mg 0.0 ;
     :N2 85.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:719 .
 
@@ -1096,7 +1096,7 @@ naebi:15 a cube:Observation ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:151 .
 
@@ -1107,7 +1107,7 @@ naebi:150 a cube:Observation ;
     :Mg 0.2 ;
     :N2 70.0 ;
     :P2O5 1.2 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1063 .
 
@@ -1118,7 +1118,7 @@ naebi:151 a cube:Observation ;
     :Mg 0.0 ;
     :N2 30.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1064 .
 
@@ -1129,7 +1129,7 @@ naebi:152 a cube:Observation ;
     :Mg 8.0 ;
     :N2 45.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
     :cultivationType cultivationtype:1204 .
 
@@ -1140,7 +1140,7 @@ naebi:153 a cube:Observation ;
     :Mg 13.0 ;
     :N2 115.0 ;
     :P2O5 45.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1066 .
 
@@ -1151,7 +1151,7 @@ naebi:154 a cube:Observation ;
     :Mg 5.0 ;
     :N2 50.0 ;
     :P2O5 17.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1067 .
 
@@ -1173,7 +1173,7 @@ naebi:156 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1023 .
 
@@ -1195,7 +1195,7 @@ naebi:158 a cube:Observation ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:277 .
 
@@ -1206,7 +1206,7 @@ naebi:159 a cube:Observation ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1068 .
 
@@ -1228,7 +1228,7 @@ naebi:160 a cube:Observation ;
     :Mg 15.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1069 .
 
@@ -1239,7 +1239,7 @@ naebi:161 a cube:Observation ;
     :Mg 5.0 ;
     :N2 50.0 ;
     :P2O5 17.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:714 .
 
@@ -1250,7 +1250,7 @@ naebi:162 a cube:Observation ;
     :Mg 15.0 ;
     :N2 180.0 ;
     :P2O5 45.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:325 .
 
@@ -1261,7 +1261,7 @@ naebi:163 a cube:Observation ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1070 .
 
@@ -1272,7 +1272,7 @@ naebi:164 a cube:Observation ;
     :Mg 30.0 ;
     :N2 160.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1071 .
 
@@ -1283,7 +1283,7 @@ naebi:165 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1072 .
 
@@ -1294,7 +1294,7 @@ naebi:166 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:306 .
 
@@ -1305,7 +1305,7 @@ naebi:167 a cube:Observation ;
     :Mg 15.0 ;
     :N2 130.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1073 .
 
@@ -1316,7 +1316,7 @@ naebi:168 a cube:Observation ;
     :Mg 10.0 ;
     :N2 0.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1075 .
 
@@ -1327,7 +1327,7 @@ naebi:169 a cube:Observation ;
     :Mg 5.0 ;
     :N2 0.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1076 .
 
@@ -1338,7 +1338,7 @@ naebi:17 a cube:Observation ;
     :Mg 25.0 ;
     :N2 115.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1187 .
 
@@ -1360,7 +1360,7 @@ naebi:171 a cube:Observation ;
     :Mg 30.0 ;
     :N2 75.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1077 .
 
@@ -1371,7 +1371,7 @@ naebi:172 a cube:Observation ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1078 .
 
@@ -1382,7 +1382,7 @@ naebi:173 a cube:Observation ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1079 .
 
@@ -1404,7 +1404,7 @@ naebi:175 a cube:Observation ;
     :Mg 30.0 ;
     :N2 40.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1081 .
 
@@ -1415,7 +1415,7 @@ naebi:176 a cube:Observation ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1082 .
 
@@ -1426,7 +1426,7 @@ naebi:177 a cube:Observation ;
     :Mg 15.0 ;
     :N2 60.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1083 .
 
@@ -1437,7 +1437,7 @@ naebi:178 a cube:Observation ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1084 .
 
@@ -1459,7 +1459,7 @@ naebi:18 a cube:Observation ;
     :Mg 15.0 ;
     :N2 55.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1185 .
 
@@ -1470,7 +1470,7 @@ naebi:180 a cube:Observation ;
     :Mg 10.0 ;
     :N2 30.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1086 .
 
@@ -1481,7 +1481,7 @@ naebi:181 a cube:Observation ;
     :Mg 40.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1087 .
 
@@ -1492,7 +1492,7 @@ naebi:182 a cube:Observation ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1088 .
 
@@ -1503,7 +1503,7 @@ naebi:183 a cube:Observation ;
     :Mg 0.03 ;
     :N2 110.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1089 .
 
@@ -1514,7 +1514,7 @@ naebi:184 a cube:Observation ;
     :Mg 0.03 ;
     :N2 40.0 ;
     :P2O5 0.16 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1090 .
 
@@ -1525,7 +1525,7 @@ naebi:185 a cube:Observation ;
     :Mg 0.03 ;
     :N2 100.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:525 .
 
@@ -1536,7 +1536,7 @@ naebi:186 a cube:Observation ;
     :Mg 0.03 ;
     :N2 200.0 ;
     :P2O5 0.16 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1090 .
 
@@ -1547,7 +1547,7 @@ naebi:187 a cube:Observation ;
     :Mg 0.03 ;
     :N2 140.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:525 .
 
@@ -1558,7 +1558,7 @@ naebi:188 a cube:Observation ;
     :Mg 0.03 ;
     :N2 60.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:525 .
 
@@ -1569,7 +1569,7 @@ naebi:189 a cube:Observation ;
     :Mg 0.03 ;
     :N2 70.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1089 .
 
@@ -1580,7 +1580,7 @@ naebi:19 a cube:Observation ;
     :Mg 10.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:161 .
 
@@ -1591,7 +1591,7 @@ naebi:190 a cube:Observation ;
     :Mg 0.03 ;
     :N2 150.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1089 .
 
@@ -1602,7 +1602,7 @@ naebi:191 a cube:Observation ;
     :Mg 0.03 ;
     :N2 120.0 ;
     :P2O5 0.16 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1090 .
 
@@ -1613,7 +1613,7 @@ naebi:192 a cube:Observation ;
     :Mg 15.0 ;
     :N2 110.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1091 .
 
@@ -1624,7 +1624,7 @@ naebi:193 a cube:Observation ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1092 .
 
@@ -1635,7 +1635,7 @@ naebi:194 a cube:Observation ;
     :Mg 0.25 ;
     :N2 0.0 ;
     :P2O5 1.4 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:468 .
 
@@ -1646,7 +1646,7 @@ naebi:195 a cube:Observation ;
     :Mg 25.0 ;
     :N2 180.0 ;
     :P2O5 90.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:129 .
 
@@ -1657,7 +1657,7 @@ naebi:196 a cube:Observation ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1093 .
 
@@ -1668,7 +1668,7 @@ naebi:197 a cube:Observation ;
     :Mg 20.0 ;
     :N2 70.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1094 .
 
@@ -1690,7 +1690,7 @@ naebi:199 a cube:Observation ;
     :Mg 0.47 ;
     :N2 120.0 ;
     :P2O5 1.15 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:574 .
 
@@ -1701,7 +1701,7 @@ naebi:2 a cube:Observation ;
     :Mg 0.2 ;
     :N2 0.0 ;
     :P2O5 1.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1095 .
 
@@ -1712,7 +1712,7 @@ naebi:20 a cube:Observation ;
     :Mg 10.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:92 .
 
@@ -1723,7 +1723,7 @@ naebi:200 a cube:Observation ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1208 .
 
@@ -1734,7 +1734,7 @@ naebi:201 a cube:Observation ;
     :Mg 30.0 ;
     :N2 90.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1209 .
 
@@ -1745,7 +1745,7 @@ naebi:202 a cube:Observation ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1210 .
 
@@ -1756,7 +1756,7 @@ naebi:203 a cube:Observation ;
     :Mg 10.0 ;
     :N2 110.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1211 .
 
@@ -1767,7 +1767,7 @@ naebi:204 a cube:Observation ;
     :Mg 10.0 ;
     :N2 110.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:133 .
 
@@ -1778,7 +1778,7 @@ naebi:205 a cube:Observation ;
     :Mg 15.0 ;
     :N2 130.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1096 .
 
@@ -1789,7 +1789,7 @@ naebi:206 a cube:Observation ;
     :Mg 15.0 ;
     :N2 130.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1097 .
 
@@ -1800,7 +1800,7 @@ naebi:207 a cube:Observation ;
     :Mg 15.0 ;
     :N2 45.0 ;
     :P2O5 23.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1212 .
 
@@ -1811,7 +1811,7 @@ naebi:208 a cube:Observation ;
     :Mg 30.0 ;
     :N2 105.0 ;
     :P2O5 69.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1213 .
 
@@ -1822,7 +1822,7 @@ naebi:209 a cube:Observation ;
     :Mg 20.0 ;
     :N2 75.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1214 .
 
@@ -1833,7 +1833,7 @@ naebi:21 a cube:Observation ;
     :Mg 25.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1098 .
 
@@ -1844,7 +1844,7 @@ naebi:210 a cube:Observation ;
     :Mg 15.0 ;
     :N2 85.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1215 .
 
@@ -1855,7 +1855,7 @@ naebi:211 a cube:Observation ;
     :Mg 25.0 ;
     :N2 160.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1216 .
 
@@ -1866,7 +1866,7 @@ naebi:212 a cube:Observation ;
     :Mg 10.0 ;
     :N2 130.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:211 .
 
@@ -1877,7 +1877,7 @@ naebi:213 a cube:Observation ;
     :Mg 10.0 ;
     :N2 0.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1101 .
 
@@ -1899,7 +1899,7 @@ naebi:215 a cube:Observation ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 57.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1217 .
 
@@ -1910,7 +1910,7 @@ naebi:216 a cube:Observation ;
     :Mg 10.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1099 .
 
@@ -1921,7 +1921,7 @@ naebi:217 a cube:Observation ;
     :Mg 20.0 ;
     :N2 210.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1100 .
 
@@ -1943,7 +1943,7 @@ naebi:219 a cube:Observation ;
     :Mg 15.0 ;
     :N2 60.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:308 .
 
@@ -1954,7 +1954,7 @@ naebi:22 a cube:Observation ;
     :Mg 20.0 ;
     :N2 55.0 ;
     :P2O5 23.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1218 .
 
@@ -1965,7 +1965,7 @@ naebi:220 a cube:Observation ;
     :Mg 5.0 ;
     :N2 30.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1102 .
 
@@ -1976,7 +1976,7 @@ naebi:221 a cube:Observation ;
     :Mg 10.0 ;
     :N2 110.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1103 .
 
@@ -1987,7 +1987,7 @@ naebi:222 a cube:Observation ;
     :Mg 10.0 ;
     :N2 90.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1104 .
 
@@ -1998,7 +1998,7 @@ naebi:223 a cube:Observation ;
     :Mg 10.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1105 .
 
@@ -2009,7 +2009,7 @@ naebi:224 a cube:Observation ;
     :Mg 10.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1106 .
 
@@ -2020,7 +2020,7 @@ naebi:225 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
     :cultivationType cultivationtype:1107 .
 
@@ -2031,7 +2031,7 @@ naebi:226 a cube:Observation ;
     :Mg 8.0 ;
     :N2 45.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
     :cultivationType cultivationtype:923 .
 
@@ -2042,7 +2042,7 @@ naebi:227 a cube:Observation ;
     :Mg 15.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1108 .
 
@@ -2053,7 +2053,7 @@ naebi:228 a cube:Observation ;
     :Mg 15.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:478 .
 
@@ -2064,7 +2064,7 @@ naebi:229 a cube:Observation ;
     :Mg 35.0 ;
     :N2 130.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1109 .
 
@@ -2075,7 +2075,7 @@ naebi:23 a cube:Observation ;
     :Mg 10.0 ;
     :N2 155.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1110 .
 
@@ -2086,7 +2086,7 @@ naebi:230 a cube:Observation ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.84 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:501 .
 
@@ -2097,7 +2097,7 @@ naebi:231 a cube:Observation ;
     :Mg 0.09 ;
     :N2 110.0 ;
     :P2O5 0.76 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:508 .
 
@@ -2108,7 +2108,7 @@ naebi:232 a cube:Observation ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1011 .
 
@@ -2119,7 +2119,7 @@ naebi:233 a cube:Observation ;
     :Mg 0.23 ;
     :N2 150.0 ;
     :P2O5 1.43 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1111 .
 
@@ -2141,7 +2141,7 @@ naebi:235 a cube:Observation ;
     :Mg 0.28 ;
     :N2 170.0 ;
     :P2O5 0.72 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1112 .
 
@@ -2152,7 +2152,7 @@ naebi:236 a cube:Observation ;
     :Mg 20.0 ;
     :N2 160.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1114 .
 
@@ -2163,7 +2163,7 @@ naebi:237 a cube:Observation ;
     :Mg 25.0 ;
     :N2 170.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1115 .
 
@@ -2174,7 +2174,7 @@ naebi:238 a cube:Observation ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1116 .
 
@@ -2185,7 +2185,7 @@ naebi:239 a cube:Observation ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1117 .
 
@@ -2196,7 +2196,7 @@ naebi:24 a cube:Observation ;
     :Mg 10.0 ;
     :N2 145.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1118 .
 
@@ -2207,7 +2207,7 @@ naebi:240 a cube:Observation ;
     :Mg 25.0 ;
     :N2 180.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1119 .
 
@@ -2218,7 +2218,7 @@ naebi:241 a cube:Observation ;
     :Mg 25.0 ;
     :N2 200.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1120 .
 
@@ -2229,7 +2229,7 @@ naebi:242 a cube:Observation ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1121 .
 
@@ -2240,7 +2240,7 @@ naebi:243 a cube:Observation ;
     :Mg 20.0 ;
     :N2 180.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1122 .
 
@@ -2251,7 +2251,7 @@ naebi:244 a cube:Observation ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1123 .
 
@@ -2273,7 +2273,7 @@ naebi:246 a cube:Observation ;
     :Mg 25.0 ;
     :N2 120.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1219 .
 
@@ -2284,7 +2284,7 @@ naebi:247 a cube:Observation ;
     :Mg 10.0 ;
     :N2 90.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:137 .
 
@@ -2295,7 +2295,7 @@ naebi:248 a cube:Observation ;
     :Mg 20.0 ;
     :N2 190.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1125 .
 
@@ -2306,7 +2306,7 @@ naebi:249 a cube:Observation ;
     :Mg 0.11 ;
     :N2 0.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cube:Undefined .
 
@@ -2317,7 +2317,7 @@ naebi:25 a cube:Observation ;
     :Mg 5.0 ;
     :N2 145.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1127 .
 
@@ -2328,7 +2328,7 @@ naebi:250 a cube:Observation ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1221 .
 
@@ -2339,7 +2339,7 @@ naebi:251 a cube:Observation ;
     :Mg 40.0 ;
     :N2 180.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1222 .
 
@@ -2361,7 +2361,7 @@ naebi:253 a cube:Observation ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1128 .
 
@@ -2372,7 +2372,7 @@ naebi:254 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:572 .
 
@@ -2383,7 +2383,7 @@ naebi:255 a cube:Observation ;
     :Mg 0.09 ;
     :N2 100.0 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1018 .
 
@@ -2394,7 +2394,7 @@ naebi:256 a cube:Observation ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1130 .
 
@@ -2405,7 +2405,7 @@ naebi:257 a cube:Observation ;
     :Mg 20.0 ;
     :N2 150.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1027 .
 
@@ -2416,7 +2416,7 @@ naebi:258 a cube:Observation ;
     :Mg 10.0 ;
     :N2 160.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1131 .
 
@@ -2427,7 +2427,7 @@ naebi:259 a cube:Observation ;
     :Mg 10.0 ;
     :N2 130.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:142 .
 
@@ -2438,7 +2438,7 @@ naebi:26 a cube:Observation ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 55.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:157 .
 
@@ -2470,7 +2470,7 @@ naebi:263 a cube:Observation ;
     :Mg 50.0 ;
     :N2 200.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1135 .
 
@@ -2481,7 +2481,7 @@ naebi:264 a cube:Observation ;
     :Mg 0.2 ;
     :N2 30.0 ;
     :P2O5 0.56 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1136 .
 
@@ -2492,7 +2492,7 @@ naebi:265 a cube:Observation ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1137 .
 
@@ -2503,7 +2503,7 @@ naebi:266 a cube:Observation ;
     :Mg 0.12 ;
     :N2 120.0 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:999 .
 
@@ -2514,7 +2514,7 @@ naebi:267 a cube:Observation ;
     :Mg 0.08 ;
     :N2 110.0 ;
     :P2O5 0.7 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:509 .
 
@@ -2525,7 +2525,7 @@ naebi:268 a cube:Observation ;
     :Mg 10.0 ;
     :N2 80.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cube:Undefined .
 
@@ -2536,7 +2536,7 @@ naebi:269 a cube:Observation ;
     :Mg 25.0 ;
     :N2 60.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1138 .
 
@@ -2547,7 +2547,7 @@ naebi:27 a cube:Observation ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1139 .
 
@@ -2558,7 +2558,7 @@ naebi:270 a cube:Observation ;
     :Mg 25.0 ;
     :N2 50.0 ;
     :P2O5 27.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1140 .
 
@@ -2569,7 +2569,7 @@ naebi:271 a cube:Observation ;
     :Mg 10.0 ;
     :N2 60.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:268 .
 
@@ -2580,7 +2580,7 @@ naebi:272 a cube:Observation ;
     :Mg 30.0 ;
     :N2 130.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:85 .
 
@@ -2591,7 +2591,7 @@ naebi:273 a cube:Observation ;
     :Mg 120.0 ;
     :N2 330.0 ;
     :P2O5 160.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1142 .
 
@@ -2602,7 +2602,7 @@ naebi:274 a cube:Observation ;
     :Mg 60.0 ;
     :N2 170.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1143 .
 
@@ -2613,7 +2613,7 @@ naebi:275 a cube:Observation ;
     :Mg 80.0 ;
     :N2 250.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1144 .
 
@@ -2624,7 +2624,7 @@ naebi:276 a cube:Observation ;
     :Mg 150.0 ;
     :N2 400.0 ;
     :P2O5 200.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1145 .
 
@@ -2646,7 +2646,7 @@ naebi:278 a cube:Observation ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1147 .
 
@@ -2657,7 +2657,7 @@ naebi:279 a cube:Observation ;
     :Mg 10.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1148 .
 
@@ -2668,7 +2668,7 @@ naebi:28 a cube:Observation ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1149 .
 
@@ -2679,7 +2679,7 @@ naebi:280 a cube:Observation ;
     :Mg 25.0 ;
     :N2 50.0 ;
     :P2O5 27.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:717 .
 
@@ -2690,7 +2690,7 @@ naebi:281 a cube:Observation ;
     :Mg 25.0 ;
     :N2 50.0 ;
     :P2O5 27.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:4 .
 
@@ -2701,7 +2701,7 @@ naebi:282 a cube:Observation ;
     :Mg 10.0 ;
     :N2 40.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1150 .
 
@@ -2712,7 +2712,7 @@ naebi:283 a cube:Observation ;
     :Mg 30.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1151 .
 
@@ -2723,7 +2723,7 @@ naebi:284 a cube:Observation ;
     :Mg 50.0 ;
     :N2 120.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1152 .
 
@@ -2767,7 +2767,7 @@ naebi:288 a cube:Observation ;
     :Mg 0.12 ;
     :N2 110.0 ;
     :P2O5 0.85 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1008 .
 
@@ -2778,7 +2778,7 @@ naebi:289 a cube:Observation ;
     :Mg 0.12 ;
     :N2 110.0 ;
     :P2O5 0.85 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1009 .
 
@@ -2789,7 +2789,7 @@ naebi:29 a cube:Observation ;
     :Mg 10.0 ;
     :N2 220.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:154 .
 
@@ -2811,7 +2811,7 @@ naebi:291 a cube:Observation ;
     :Mg 0.23 ;
     :N2 150.0 ;
     :P2O5 1.43 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1129 .
 
@@ -2822,7 +2822,7 @@ naebi:292 a cube:Observation ;
     :Mg 0.11 ;
     :N2 100.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1021 .
 
@@ -2833,7 +2833,7 @@ naebi:293 a cube:Observation ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1010 .
 
@@ -2844,7 +2844,7 @@ naebi:294 a cube:Observation ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1034 .
 
@@ -2855,7 +2855,7 @@ naebi:295 a cube:Observation ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1015 .
 
@@ -2866,7 +2866,7 @@ naebi:296 a cube:Observation ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1035 .
 
@@ -2877,7 +2877,7 @@ naebi:297 a cube:Observation ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1016 .
 
@@ -2888,7 +2888,7 @@ naebi:298 a cube:Observation ;
     :Mg 15.0 ;
     :N2 185.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1224 .
 
@@ -2899,7 +2899,7 @@ naebi:299 a cube:Observation ;
     :Mg 20.0 ;
     :N2 200.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1157 .
 
@@ -2910,7 +2910,7 @@ naebi:3 a cube:Observation ;
     :Mg 15.0 ;
     :N2 85.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1158 .
 
@@ -2921,7 +2921,7 @@ naebi:30 a cube:Observation ;
     :Mg 10.0 ;
     :N2 300.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1159 .
 
@@ -2932,7 +2932,7 @@ naebi:300 a cube:Observation ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1160 .
 
@@ -2943,7 +2943,7 @@ naebi:301 a cube:Observation ;
     :Mg 25.0 ;
     :N2 200.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1161 .
 
@@ -2954,7 +2954,7 @@ naebi:302 a cube:Observation ;
     :Mg 0.08 ;
     :N2 110.0 ;
     :P2O5 0.72 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1019 .
 
@@ -2965,7 +2965,7 @@ naebi:303 a cube:Observation ;
     :Mg 0.08 ;
     :N2 110.0 ;
     :P2O5 0.72 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1020 .
 
@@ -2976,7 +2976,7 @@ naebi:304 a cube:Observation ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1001 .
 
@@ -2987,7 +2987,7 @@ naebi:305 a cube:Observation ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1002 .
 
@@ -2998,7 +2998,7 @@ naebi:306 a cube:Observation ;
     :Mg 20.0 ;
     :N2 50.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:712 .
 
@@ -3009,7 +3009,7 @@ naebi:307 a cube:Observation ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1162 .
 
@@ -3020,7 +3020,7 @@ naebi:308 a cube:Observation ;
     :Mg 20.0 ;
     :N2 180.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1163 .
 
@@ -3031,7 +3031,7 @@ naebi:309 a cube:Observation ;
     :Mg 30.0 ;
     :N2 160.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1164 .
 
@@ -3042,7 +3042,7 @@ naebi:31 a cube:Observation ;
     :Mg 5.0 ;
     :N2 260.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:473 .
 
@@ -3053,7 +3053,7 @@ naebi:310 a cube:Observation ;
     :Mg 20.0 ;
     :N2 190.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1165 .
 
@@ -3064,7 +3064,7 @@ naebi:311 a cube:Observation ;
     :Mg 15.0 ;
     :N2 190.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1166 .
 
@@ -3075,7 +3075,7 @@ naebi:312 a cube:Observation ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1167 .
 
@@ -3086,7 +3086,7 @@ naebi:313 a cube:Observation ;
     :Mg 15.0 ;
     :N2 170.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1168 .
 
@@ -3097,7 +3097,7 @@ naebi:32 a cube:Observation ;
     :Mg 15.0 ;
     :N2 100.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:106 .
 
@@ -3108,7 +3108,7 @@ naebi:33 a cube:Observation ;
     :Mg 5.0 ;
     :N2 0.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1225 .
 
@@ -3119,7 +3119,7 @@ naebi:34 a cube:Observation ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1226 .
 
@@ -3130,7 +3130,7 @@ naebi:35 a cube:Observation ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1227 .
 
@@ -3141,7 +3141,7 @@ naebi:36 a cube:Observation ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1228 .
 
@@ -3152,7 +3152,7 @@ naebi:37 a cube:Observation ;
     :Mg 15.0 ;
     :N2 290.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1181 .
 
@@ -3163,7 +3163,7 @@ naebi:38 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1182 .
 
@@ -3174,7 +3174,7 @@ naebi:39 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1183 .
 
@@ -3185,7 +3185,7 @@ naebi:4 a cube:Observation ;
     :Mg 30.0 ;
     :N2 75.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1180 .
 
@@ -3196,7 +3196,7 @@ naebi:40 a cube:Observation ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1229 .
 
@@ -3218,7 +3218,7 @@ naebi:42 a cube:Observation ;
     :Mg 30.0 ;
     :N2 120.0 ;
     :P2O5 70.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1230 .
 
@@ -3229,7 +3229,7 @@ naebi:43 a cube:Observation ;
     :Mg 20.0 ;
     :N2 190.0 ;
     :P2O5 70.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:158 .
 
@@ -3240,7 +3240,7 @@ naebi:44 a cube:Observation ;
     :Mg 20.0 ;
     :N2 180.0 ;
     :P2O5 70.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:271 .
 
@@ -3251,7 +3251,7 @@ naebi:45 a cube:Observation ;
     :Mg 25.0 ;
     :N2 130.0 ;
     :P2O5 69.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1249 .
 
@@ -3262,7 +3262,7 @@ naebi:46 a cube:Observation ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:76 .
 
@@ -3273,7 +3273,7 @@ naebi:47 a cube:Observation ;
     :Mg 40.0 ;
     :N2 100.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1235 .
 
@@ -3284,7 +3284,7 @@ naebi:48 a cube:Observation ;
     :Mg 10.0 ;
     :N2 160.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:58 .
 
@@ -3295,7 +3295,7 @@ naebi:49 a cube:Observation ;
     :Mg 6.0 ;
     :N2 30.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:169 .
 
@@ -3306,7 +3306,7 @@ naebi:5 a cube:Observation ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:472 .
 
@@ -3317,7 +3317,7 @@ naebi:50 a cube:Observation ;
     :Mg 20.0 ;
     :N2 170.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:219 .
 
@@ -3328,7 +3328,7 @@ naebi:51 a cube:Observation ;
     :Mg 30.0 ;
     :N2 70.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1239 .
 
@@ -3339,7 +3339,7 @@ naebi:52 a cube:Observation ;
     :Mg 5.0 ;
     :N2 50.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1240 .
 
@@ -3350,7 +3350,7 @@ naebi:53 a cube:Observation ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:283 .
 
@@ -3361,7 +3361,7 @@ naebi:54 a cube:Observation ;
     :Mg 30.0 ;
     :N2 100.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1242 .
 
@@ -3372,7 +3372,7 @@ naebi:55 a cube:Observation ;
     :Mg 10.0 ;
     :N2 20.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1243 .
 
@@ -3383,7 +3383,7 @@ naebi:56 a cube:Observation ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1244 .
 
@@ -3394,7 +3394,7 @@ naebi:57 a cube:Observation ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1245 .
 
@@ -3405,7 +3405,7 @@ naebi:58 a cube:Observation ;
     :Mg 60.0 ;
     :N2 200.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1246 .
 
@@ -3416,7 +3416,7 @@ naebi:59 a cube:Observation ;
     :Mg 80.0 ;
     :N2 300.0 ;
     :P2O5 150.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1247 .
 
@@ -3427,7 +3427,7 @@ naebi:6 a cube:Observation ;
     :Mg 5.0 ;
     :N2 30.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1248 .
 
@@ -3438,7 +3438,7 @@ naebi:60 a cube:Observation ;
     :Mg 20.0 ;
     :N2 90.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1249 .
 
@@ -3449,7 +3449,7 @@ naebi:61 a cube:Observation ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:328 .
 
@@ -3460,7 +3460,7 @@ naebi:62 a cube:Observation ;
     :Mg 20.0 ;
     :N2 260.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1251 .
 
@@ -3471,7 +3471,7 @@ naebi:63 a cube:Observation ;
     :Mg 60.0 ;
     :N2 320.0 ;
     :P2O5 180.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1252 .
 
@@ -3482,7 +3482,7 @@ naebi:64 a cube:Observation ;
     :Mg 40.0 ;
     :N2 230.0 ;
     :P2O5 140.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1253 .
 
@@ -3493,7 +3493,7 @@ naebi:65 a cube:Observation ;
     :Mg 30.0 ;
     :N2 140.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1254 .
 
@@ -3504,7 +3504,7 @@ naebi:66 a cube:Observation ;
     :Mg 10.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:231 .
 
@@ -3515,7 +3515,7 @@ naebi:67 a cube:Observation ;
     :Mg 5.0 ;
     :N2 40.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1256 .
 
@@ -3526,7 +3526,7 @@ naebi:68 a cube:Observation ;
     :Mg 10.0 ;
     :N2 170.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:474 .
 
@@ -3537,7 +3537,7 @@ naebi:69 a cube:Observation ;
     :Mg 0.16 ;
     :N2 30.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:511 .
 
@@ -3548,7 +3548,7 @@ naebi:7 a cube:Observation ;
     :Mg 10.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1257 .
 
@@ -3559,7 +3559,7 @@ naebi:70 a cube:Observation ;
     :Mg 30.0 ;
     :N2 140.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
     :cultivationType cultivationtype:1258 .
 
@@ -3570,7 +3570,7 @@ naebi:71 a cube:Observation ;
     :Mg 20.0 ;
     :N2 160.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1259 .
 
@@ -3581,7 +3581,7 @@ naebi:72 a cube:Observation ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1260 .
 
@@ -3592,7 +3592,7 @@ naebi:73 a cube:Observation ;
     :Mg 0.2 ;
     :N2 0.0 ;
     :P2O5 1.17 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:528 .
 
@@ -3603,7 +3603,7 @@ naebi:74 a cube:Observation ;
     :Mg 0.09 ;
     :N2 110.0 ;
     :P2O5 0.76 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:1262 .
 
@@ -3614,7 +3614,7 @@ naebi:75 a cube:Observation ;
     :Mg 20.0 ;
     :N2 160.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:273 .
 
@@ -3625,7 +3625,7 @@ naebi:76 a cube:Observation ;
     :Mg 0.2 ;
     :N2 60.0 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1264 .
 
@@ -3636,7 +3636,7 @@ naebi:77 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1265 .
 
@@ -3647,7 +3647,7 @@ naebi:78 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:557 .
 
@@ -3658,7 +3658,7 @@ naebi:79 a cube:Observation ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1267 .
 
@@ -3669,7 +3669,7 @@ naebi:8 a cube:Observation ;
     :Mg 20.0 ;
     :N2 210.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1268 .
 
@@ -3680,7 +3680,7 @@ naebi:80 a cube:Observation ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1269 .
 
@@ -3691,7 +3691,7 @@ naebi:81 a cube:Observation ;
     :Mg 10.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:1270 .
 
@@ -3713,7 +3713,7 @@ naebi:83 a cube:Observation ;
     :Mg 0.03 ;
     :N2 100.0 ;
     :P2O5 0.06 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
     :cultivationType cultivationtype:522 .
 
@@ -3724,7 +3724,7 @@ naebi:84 a cube:Observation ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1004 .
 
@@ -3735,7 +3735,7 @@ naebi:85 a cube:Observation ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1005 .
 
@@ -3746,7 +3746,7 @@ naebi:86 a cube:Observation ;
     :Mg 0.11 ;
     :N2 70.0 ;
     :P2O5 0.66 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:542 .
 
@@ -3757,7 +3757,7 @@ naebi:87 a cube:Observation ;
     :Mg 20.0 ;
     :N2 95.0 ;
     :P2O5 57.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1273 .
 
@@ -3779,7 +3779,7 @@ naebi:89 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1275 .
 
@@ -3790,7 +3790,7 @@ naebi:9 a cube:Observation ;
     :Mg 10.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:139 .
 
@@ -3801,7 +3801,7 @@ naebi:90 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1277 .
 
@@ -3812,7 +3812,7 @@ naebi:91 a cube:Observation ;
     :Mg 15.0 ;
     :N2 60.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1278 .
 
@@ -3823,7 +3823,7 @@ naebi:92 a cube:Observation ;
     :Mg 10.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
     :cultivationType cultivationtype:39 .
 
@@ -3845,7 +3845,7 @@ naebi:94 a cube:Observation ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1281 .
 
@@ -3856,7 +3856,7 @@ naebi:95 a cube:Observation ;
     :Mg 30.0 ;
     :N2 65.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
     :cultivationType cultivationtype:1282 .
 
@@ -3867,7 +3867,7 @@ naebi:96 a cube:Observation ;
     :Mg 0.05 ;
     :N2 80.0 ;
     :P2O5 1.2 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
     :cultivationType cultivationtype:1283 .
 
@@ -3878,7 +3878,7 @@ naebi:97 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
     :cultivationType cultivationtype:1024 .
 
@@ -3889,7 +3889,7 @@ naebi:98 a cube:Observation ;
     :Mg 8.0 ;
     :N2 45.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
     :cultivationType cultivationtype:1284 .
 
@@ -3900,6 +3900,6 @@ naebi:99 a cube:Observation ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
     :cultivationType cultivationtype:1292 .
