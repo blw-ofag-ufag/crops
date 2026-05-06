@@ -1020,7 +1020,7 @@ naebi:143 a cube:Observation ;
     :N2 80.0 ;
     :P2O5 0.566 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1031 .
 
 naebi:144 a cube:Observation ;
@@ -1691,7 +1691,7 @@ naebi:199 a cube:Observation ;
     :N2 120.0 ;
     :P2O5 1.15 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:574 .
 
 naebi:2 a cube:Observation ;
@@ -2087,7 +2087,7 @@ naebi:230 a cube:Observation ;
     :N2 90.0 ;
     :P2O5 0.84 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:501 .
 
 naebi:231 a cube:Observation ;
@@ -2109,7 +2109,7 @@ naebi:232 a cube:Observation ;
     :N2 90.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1011 .
 
 naebi:233 a cube:Observation ;
@@ -2307,7 +2307,7 @@ naebi:249 a cube:Observation ;
     :N2 0.0 ;
     :P2O5 0.19 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cube:Undefined .
 
 naebi:25 a cube:Observation ;
@@ -2351,7 +2351,7 @@ naebi:252 a cube:Observation ;
     :N2 110.0 ;
     :P2O5 0.5943 ;
     :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1030 .
 
 naebi:253 a cube:Observation ;
@@ -2384,7 +2384,7 @@ naebi:255 a cube:Observation ;
     :N2 100.0 ;
     :P2O5 0.71 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1018 .
 
 naebi:256 a cube:Observation ;
@@ -2504,7 +2504,7 @@ naebi:266 a cube:Observation ;
     :N2 120.0 ;
     :P2O5 0.82 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:999 .
 
 naebi:267 a cube:Observation ;
@@ -2768,7 +2768,7 @@ naebi:288 a cube:Observation ;
     :N2 110.0 ;
     :P2O5 0.85 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1008 .
 
 naebi:289 a cube:Observation ;
@@ -2779,7 +2779,7 @@ naebi:289 a cube:Observation ;
     :N2 110.0 ;
     :P2O5 0.85 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1009 .
 
 naebi:29 a cube:Observation ;
@@ -2823,7 +2823,7 @@ naebi:292 a cube:Observation ;
     :N2 100.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1021 .
 
 naebi:293 a cube:Observation ;
@@ -2834,7 +2834,7 @@ naebi:293 a cube:Observation ;
     :N2 90.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1010 .
 
 naebi:294 a cube:Observation ;
@@ -2845,7 +2845,7 @@ naebi:294 a cube:Observation ;
     :N2 90.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1034 .
 
 naebi:295 a cube:Observation ;
@@ -2856,7 +2856,7 @@ naebi:295 a cube:Observation ;
     :N2 90.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1015 .
 
 naebi:296 a cube:Observation ;
@@ -2867,7 +2867,7 @@ naebi:296 a cube:Observation ;
     :N2 90.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1035 .
 
 naebi:297 a cube:Observation ;
@@ -2878,7 +2878,7 @@ naebi:297 a cube:Observation ;
     :N2 90.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1016 .
 
 naebi:298 a cube:Observation ;
@@ -2955,7 +2955,7 @@ naebi:302 a cube:Observation ;
     :N2 110.0 ;
     :P2O5 0.72 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1019 .
 
 naebi:303 a cube:Observation ;
@@ -2966,7 +2966,7 @@ naebi:303 a cube:Observation ;
     :N2 110.0 ;
     :P2O5 0.72 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1020 .
 
 naebi:304 a cube:Observation ;
@@ -2977,7 +2977,7 @@ naebi:304 a cube:Observation ;
     :N2 140.0 ;
     :P2O5 0.83 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1001 .
 
 naebi:305 a cube:Observation ;
@@ -2988,7 +2988,7 @@ naebi:305 a cube:Observation ;
     :N2 140.0 ;
     :P2O5 0.83 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1002 .
 
 naebi:306 a cube:Observation ;
@@ -3538,7 +3538,7 @@ naebi:69 a cube:Observation ;
     :N2 30.0 ;
     :P2O5 0.8 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:511 .
 
 naebi:7 a cube:Observation ;
@@ -3725,7 +3725,7 @@ naebi:84 a cube:Observation ;
     :N2 140.0 ;
     :P2O5 0.83 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1004 .
 
 naebi:85 a cube:Observation ;
@@ -3736,7 +3736,7 @@ naebi:85 a cube:Observation ;
     :N2 140.0 ;
     :P2O5 0.83 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1005 .
 
 naebi:86 a cube:Observation ;
@@ -3747,7 +3747,7 @@ naebi:86 a cube:Observation ;
     :N2 70.0 ;
     :P2O5 0.66 ;
     :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:542 .
 
 naebi:87 a cube:Observation ;

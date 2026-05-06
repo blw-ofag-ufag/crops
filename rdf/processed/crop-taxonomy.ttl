@@ -2978,7 +2978,8 @@ cultivationtype:413 a owl:Class ;
         "Weisskabis"@de-CH,
         "Chou cabus"@fr,
         "Cappuccio bianco"@it,
-        "Cavolo bianco"@it ;
+        "Cavolo bianco"@it,
+        "Wittekool"@nl ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Weisskohlfeld.jpg/1280px-Weisskohlfeld.jpg> ;
     rdfs:comment "Anbau von Weisskohl, in der Regel für den menschlichen Verzehr."@de ;
     rdfs:subClassOf cultivationtype:81 ;
@@ -3007,6 +3008,11 @@ cultivationtype:46 a owl:Class ;
         "Cardo azzurro"@it ;
     rdfs:subClassOf cultivationtype:145,
         cultivationtype:310 .
+
+cultivationtype:466 a owl:Class ;
+    rdfs:label "Getreide und Pseudogetreide"@de ;
+    rdfs:subClassOf cultivationtype:1 ;
+    owl:unionOf ( cultivationtype:14 cultivationtype:16 ) .
 
 cultivationtype:467 a owl:Class ;
     rdfs:label "Dauerkulturen"@de ;
@@ -4701,7 +4707,6 @@ cultivationtype:shape a sh:NodeShape ;
             sh:path schema:name ;
             sh:uniqueLang true ],
         [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:nodeKind sh:Literal ;
             sh:path schema:alternateName ],
         [ sh:datatype rdf:langString ;

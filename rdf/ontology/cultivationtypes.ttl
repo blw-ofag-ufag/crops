@@ -1872,6 +1872,11 @@ cultivationtype:414 a owl:Class ;
     schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:466 a owl:Class ;
+    schema:name "Getreide und Pseudogetreide"@de ;
+    rdfs:subClassOf cultivationtype:1 ;
+    owl:unionOf ( cultivationtype:14 cultivationtype:16 ) .
+
 cultivationtype:467 a owl:Class ;
     schema:name "Dauerkulturen"@de ;
     rdfs:subClassOf :Cultivation ;
