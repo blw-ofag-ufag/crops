@@ -1932,7 +1932,7 @@ naebi:218  a :NutrientBalanceCrop ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
-    :cultivationType cultivationtype:308 .
+    :cultivationType cultivationtype:611 .
 
 naebi:219  a :NutrientBalanceCrop ;
     schema:identifier "CROP_RSMRY" ;
