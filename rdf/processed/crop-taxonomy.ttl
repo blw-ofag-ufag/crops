@@ -3012,8 +3012,13 @@ cultivationtype:46 a owl:Class ;
     rdfs:subClassOf cultivationtype:145,
         cultivationtype:310 .
 
+cultivationtype:462 a owl:Class ;
+    rdfs:label "Diverse Kulturen"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:463 a owl:Class ;
     rdfs:label "Grundfutterproduktion"@de ;
+    rdfs:comment "Als Grundfutter gelten: (a) Futter von Grünflächen und Streueflächen: frisch, siliert oder getrocknet sowie Stroh; (b) als Futtermittel angebaute Ackerkulturen, bei denen die ganze Pflanze geerntet wird: frisch, siliert oder getrocknet, ohne Maiskolbenschrot; (c) Chicorée-Wurzeln; (d) Rübenblätter und frische Rübennass- und Rübenpressschnitzel; (e) frisches Obst; (f) unverarbeitete Kartoffeln, einschliesslich Sortierabgang; und (g) Abgänge und nicht getrocknete oder konzentrierte Nebenprodukte aus der Kartoffel-, Obst- und Gemüseverarbeitung."@de ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:464 a owl:Class ;
@@ -3945,6 +3950,7 @@ cultivationtype:7 a owl:Class ;
     rdfs:label "Geschützter Anbau"@de,
         "Cultures protégées"@fr,
         "Colture protette tutto l’anno"@it ;
+    schema:alternateName "Geschützte Kulturen"@de ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:701 a owl:Class ;
