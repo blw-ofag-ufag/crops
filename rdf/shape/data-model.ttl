@@ -87,6 +87,84 @@ shape:CultivationType a sh:NodeShape ;
     ] .
 
 # --------------------------------
+# Cultivationtype
+# --------------------------------
+cultivationtype:shape a sh:NodeShape ;
+    sh:closed true ;
+    sh:targetClass owl:Class, owl:DeprecatedClass ;
+    sh:ignoredProperties ( rdf:type ) ;
+
+    # Require AT LEAST ONE of the following relationships:
+    # - a parent class (rdfs:subClassOf),
+    # - an intersection definition (owl:intersectionOf),
+    # - or being part of a parent's unionOf list (^owl:unionOf).
+    sh:or (
+        [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
+        [ sh:property [ sh:path owl:intersectionOf ; sh:minCount 1 ] ]
+        [ sh:property [ 
+            sh:path (
+                [ sh:inversePath rdf:first ]
+                [ sh:zeroOrMorePath [ sh:inversePath rdf:rest ] ]
+                [ sh:inversePath owl:unionOf ]
+            ) ; 
+            sh:minCount 1 
+        ] ]
+    ) ;
+
+    # global property definitions
+    sh:property
+    [
+        sh:path schema:image ;
+        sh:nodeKind sh:IRI ;
+    ] ,
+
+    [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:path schema:alternateName ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+    ],
+    [
+        sh:path schema:description ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:path rdfs:subClassOf ;
+        sh:nodeKind sh:IRI ;
+    ],
+    [
+        sh:path owl:intersectionOf ;
+    ],
+    [
+        sh:path :botanicalPlant ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ],
+    [
+        sh:path :managementIntensity ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ],
+    [
+        sh:path owl:disjointWith ;
+        sh:nodeKind sh:IRI ;
+        sh:node cultivationtype:shape ;
+    ],
+    [
+        sh:path owl:unionOf ;
+    ] .
+
+# --------------------------------
 # AGIS
 # --------------------------------
 
@@ -96,6 +174,20 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:targetClass :DirectPaymentCrop ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "schema:validFrom must be less than or equal to schema:validTo" ;
+        sh:select """
+            PREFIX schema: <http://schema.org/>
+            PREFIX cube: <https://cube.link/>
+            SELECT $this ?validFrom ?validTo
+            WHERE {
+                $this schema:validFrom ?validFrom .
+                $this schema:validTo ?validTo .
+                FILTER (?validTo != cube:Undefined && ?validFrom > ?validTo)
+            }
+        """ ;
+    ] ;
     sh:property
         [
             sh:order 1 ;
@@ -190,18 +282,18 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             schema:name "Kulturkategorie"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:string ;
+            sh:nodeKind sh:IRI ;
             sh:path :cultivationCategory ;
+            sh:node shape:CultivationCategory ;
         ],
         [
             sh:order 4 ;
             schema:name "Kultur-Unterkategorie"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:string ;
+            sh:nodeKind sh:IRI ;
             sh:path :cultivationSubCategory ;
+            sh:node shape:CultivationSubCategory ;
         ],
         [
             sh:order 5 ;
@@ -212,7 +304,10 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationType ;
-            sh:node shape:CultivationType ;
+            sh:or (
+                [ sh:node shape:CultivationType ]
+                [ sh:hasValue cube:Undefined ]
+            ) ;
         ],
         [
             a cube:MeasureDimension ;
@@ -323,5 +418,5 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:minCount 0 ;
             sh:maxCount 2 ;
             sh:nodeKind sh:IRI ;
-            sh:node shape:PlantProtectionCrop ;
+            sh:class :PlantProtectionCrop ;
         ] .
