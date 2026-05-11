@@ -11,7 +11,8 @@ from rdflib.namespace import XSD
 # Define paths
 INPUT_FILE = "data/data.gpkg"
 INPUT_LAYER = "nutzungsflaechen"
-OUTPUT_FILE = "rdf/geodata.ttl"
+OUTPUT_FILE = "rdf/processed/geodata.ttl"
+GRAPH_FILE = "rdf/processed/graph.ttl" # Define the path to your existing graph file
 LINDAS_ENDPOINT = "https://lindas.admin.ch/query"
 
 # Create the output directory, if necessary
@@ -19,12 +20,11 @@ os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
 # Define namespaces
 BASE = Namespace("https://agriculture.ld.admin.ch/crops/")
+CULTIVATION = Namespace("https://agriculture.ld.admin.ch/crops/cultivation/")
+CTYPE = Namespace("https://agriculture.ld.admin.ch/crops/cultivationtype/")
+FARMS = Namespace("https://agriculture.ld.admin.ch/crops/farm/")
+PROGRAMS = Namespace("https://agriculture.ld.admin.ch/crops/program/")
 GEO = Namespace("http://www.opengis.net/ont/geosparql#")
-SCHEMA = Namespace("http://schema.org/")
-CULTIVATION = Namespace(BASE + "cultivation/")
-CTYPE = Namespace(BASE + "cultivationtype/")
-FARMS = Namespace(BASE + "farm/")
-PROGRAMS = Namespace(BASE + "program/")
 
 # Function to fetch canton definitions via SPARQL query from LINDAS
 def fetch_cantons():
@@ -59,12 +59,14 @@ def main():
     g = Graph()
     
     # Bind prefixes
-    g.bind("base", BASE)
-    g.bind("geo", GEO)
+    g.bind("", BASE)
     g.bind("cultivation", CULTIVATION)
-    g.bind("ctype", CTYPE)
+    g.bind("cultivationtype", CTYPE)
     g.bind("farm", FARMS)
     g.bind("program", PROGRAMS)
+    g.bind("geo", GEO)
+    g.bind("rdf", RDF)
+    g.bind("xsd", XSD)
 
     print("Generating Triples...")
         
@@ -72,14 +74,14 @@ def main():
     int_props = {
         'area': 'flaeche_m2',
         'trees': 'anzahl_baeume',
-        'managementDegree': 'bewirtschaftungsgrad' # Renamed from German
+        'managementDegree': 'bewirtschaftungsgrad'
     }
 
     # gYear properties: { 'RDF_Property_Name': 'DataFrame_Column' }
     year_props = {
         'year': 'bezugsjahr',
-        'commitmentStartYear': 'verpflichtung_von', # Renamed
-        'commitmentEndYear': 'verpflichtung_bis'    # Renamed
+        'commitmentStartYear': 'verpflichtung_von',
+        'commitmentEndYear': 'verpflichtung_bis'
     }
 
     # Boolean properties: { 'RDF_Property_Name': 'DataFrame_Column' }
@@ -143,6 +145,14 @@ def main():
         if pd.notna(row.kanton) and row.kanton in canton_map:
             g.add((subject, BASE.canton, URIRef(canton_map[row.kanton])))
 
+    # Merge geodata with ontology graph
+    if os.path.exists(GRAPH_FILE):
+        print(f"Merging generated triples with {GRAPH_FILE}...")
+        g.parse(GRAPH_FILE, format="turtle")
+    else:
+        print(f"Warning: {GRAPH_FILE} not found. Skipping merge and serializing only generated triples.")
+
+    print(f"Serializing to {OUTPUT_FILE}...")
     g.serialize(destination=OUTPUT_FILE, format="turtle")
     print(f"Done! Output written to disk as {OUTPUT_FILE}")
 
