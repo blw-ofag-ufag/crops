@@ -7,16 +7,17 @@ from io import StringIO
 from tqdm import tqdm
 from rdflib import Graph, Literal, RDF, URIRef, Namespace
 from rdflib.namespace import XSD
+from urllib.parse import quote # Added to encode invalid URI characters
 
 # Define paths
-INPUT_FILE = "data/data.gpkg"
-INPUT_LAYER = "nutzungsflaechen"
+INPUT_FILE = "data/LWB_Nutzungsflaechen_Derivat_BGDI_2025.gdb/" 
+INPUT_LAYER = "Landwirtschaftliche_Nutzungsflaechen_Schweiz_2025" 
 OUTPUT_FILE = "rdf/processed/geodata.ttl"
-GRAPH_FILE = "rdf/processed/graph.ttl" # Define the path to your existing graph file
+GRAPH_FILE = "rdf/processed/graph.ttl"
 LINDAS_ENDPOINT = "https://lindas.admin.ch/query"
 
-# Create the output directory, if necessary
-os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+# Configuration for testing
+MAX_FEATURES = None  # Set to None to process the entire dataset
 
 # Define namespaces
 BASE = Namespace("https://agriculture.ld.admin.ch/crops/")
@@ -42,17 +43,21 @@ def fetch_cantons():
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 
-# Function to transform the geopackage data to RDF
 def main():
-
     # Fetch canton definitions from LINDAS
     canton_map = fetch_cantons()
 
-    # Read geopackage data
-    print("Reading GPKG...")
+    # Read geopackage/geodatabase data
+    print("Reading GDB...")
     gdf = gpd.read_file(INPUT_FILE, layer=INPUT_LAYER)
     
+    # Limit observations if MAX_FEATURES is set
+    if MAX_FEATURES is not None:
+        print(f"Limiting execution to the first {MAX_FEATURES} records for testing...")
+        gdf = gdf.head(MAX_FEATURES)
+    
     # Transform Coordinate Reference System from Swiss LV95 to WGS84
+    print("Transforming CRS to EPSG:4326...")
     gdf = gdf.to_crs(epsg=4326)
 
     # Initialize graph
@@ -97,10 +102,13 @@ def main():
     for row in tqdm(gdf.itertuples(), total=len(gdf)):
         
         # Subject definition
-        subject = CULTIVATION[str(row.t_id)]
+        # Using quote() here as well, just in case t_id ever changes format
+        subject_id = quote(str(row.t_id))
+        subject = CULTIVATION[subject_id]
         
         # Class assignment
-        g.add((subject, RDF.type, CTYPE[str(row.lnf_code)]))
+        if pd.notna(getattr(row, 'lnf_code', None)):
+            g.add((subject, RDF.type, CTYPE[str(row.lnf_code)]))
         
         # Geometry
         g.add((subject, GEO.asWKT, Literal(row.geometry.wkt, datatype=GEO.wktLiteral)))
@@ -111,11 +119,15 @@ def main():
             if pd.notna(val):
                 g.add((subject, BASE[prop_name], Literal(int(val), datatype=XSD.integer)))
 
-        # Process Year properties loop (converts to int then str for XSD.gYear)
+        # Process Year properties loop
         for prop_name, col_name in year_props.items():
             val = getattr(row, col_name, None)
             if pd.notna(val):
-                g.add((subject, BASE[prop_name], Literal(str(int(val)), datatype=XSD.gYear)))
+                if hasattr(val, 'year'):
+                    year_val = val.year
+                else:
+                    year_val = int(val)
+                g.add((subject, BASE[prop_name], Literal(str(year_val), datatype=XSD.gYear)))
 
         # Process Boolean properties loop
         for prop_name, col_name in bool_props.items():
@@ -124,26 +136,34 @@ def main():
                 g.add((subject, BASE[prop_name], Literal(bool(val), datatype=XSD.boolean)))
 
         # Mowing date
-        if pd.notna(row.schnittzeitpunkt):
-            g.add((subject, BASE.mowingDate, Literal(row.schnittzeitpunkt, datatype=XSD.date)))
+        schnitt = getattr(row, 'schnittzeitpunkt', None)
+        if pd.notna(schnitt):
+            g.add((subject, BASE.mowingDate, Literal(schnitt, datatype=XSD.date)))
         
         # Programs (1:n relationship)
-        if pd.notna(row.code_programm):
-            programs = str(row.code_programm).split(';')
+        code_prog = getattr(row, 'code_programm', None)
+        if pd.notna(code_prog):
+            programs = str(code_prog).split(';')
             for prog_code in programs:
                 prog_code = prog_code.strip()
                 if prog_code and prog_code != "Non":
-                    g.add((subject, BASE.program, PROGRAMS[prog_code]))
+                    # URL-encode the program code to prevent URI errors
+                    safe_prog_code = quote(prog_code)
+                    g.add((subject, BASE.program, PROGRAMS[safe_prog_code]))
 
-        # Management unit (Farm ID)
-        if pd.notna(row.identifikator_be):
-            farm_uri = FARMS[str(row.identifikator_be)]
+        # Management unit
+        farm_id = getattr(row, 'betriebsnummer', None)
+        if pd.notna(farm_id):
+            # URL-encode the farm ID to handle spaces and slashes (e.g., "AG4001/ 1/112" -> "AG4001/%201/112")
+            safe_farm_id = quote(str(farm_id))
+            farm_uri = FARMS[safe_farm_id]
             g.add((subject, BASE.managementUnit, farm_uri))
             g.add((farm_uri, RDF.type, BASE.ManagementUnit)) 
 
         # Canton
-        if pd.notna(row.kanton) and row.kanton in canton_map:
-            g.add((subject, BASE.canton, URIRef(canton_map[row.kanton])))
+        kanton = getattr(row, 'kanton', None)
+        if pd.notna(kanton) and kanton in canton_map:
+            g.add((subject, BASE.canton, URIRef(canton_map[kanton])))
 
     # Merge geodata with ontology graph
     if os.path.exists(GRAPH_FILE):
