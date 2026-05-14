@@ -1,0 +1,25 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ch: <https://schema.ld.admin.ch/>
+PREFIX lindas: <https://lindas.admin.ch/>
+CONSTRUCT {
+  ?place a ?type ;
+    schema:name ?name ;
+    schema:containsPlace ?childPlace ;
+    schema:containedInPlace ?parentPlace ;
+    geo:defaultGeometry ?geometry .
+}
+WHERE {
+  ?placeInTime a geo:Feature ; geo:defaultGeometry ?geometry ;
+    dcterms:issued "2026-01-01"^^xsd:date ;
+    dcterms:isVersionOf / schema:about ?place .
+  SERVICE lindas:query {
+    ?place a ?type ; schema:name ?name .
+    VALUES ?type { ch:Canton ch:District ch:Municipality }
+    OPTIONAL { ?place schema:containsPlace ?childPlace . }
+    OPTIONAL { ?place schema:containedInPlace ?parentPlace . }
+  }
+}

@@ -18,10 +18,15 @@
 
 # LINDAS-specific namespaces/qnames
 @prefix blw:             <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
+@prefix ch:              <https://schema.ld.admin.ch/> .
 @prefix cube:            <https://cube.link/> .
 @prefix meta:            <https://cube.link/meta/> .
 @prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
 @prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
+@prefix country:         <https://ld.admin.ch/country/> .
+@prefix canton:          <https://ld.admin.ch/canton/> .
+@prefix district:        <https://ld.admin.ch/district/> .
+@prefix municipality:    <https://ld.admin.ch/municipality/> .
 
 # Globally used namespaces/qnames
 @prefix adms:            <https://www.w3.org/ns/adms#> .

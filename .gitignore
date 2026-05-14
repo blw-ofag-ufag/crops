@@ -64,6 +64,9 @@ rdf/data/geodata.ttl
 rdf/processed/*.ttl
 !rdf/processed/crop-taxonomy.ttl
 
+# Fetched RDF data
+rdf/fetched/*
+
 # Exclude geopackage files
 *.gpkg
 
