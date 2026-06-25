@@ -23,8 +23,7 @@ python src/python/rdf-processing.py \
 
 
 echo "Check graph shape using SHACL"
-pyshacl rdf/ontology/cultivationtypes.ttl --shapes rdf/shape/metadata-quality.ttl --format human
-
+pyshacl rdf/processed/graph.ttl --shapes rdf/shape/data-model.ttl --format human
 
 echo "Delete existing data from LINDAS"
 curl \
