@@ -3303,13 +3303,6 @@ cultivationtype:936 a :CultivationType ;
         "Terreni da strame nella regione d’estivazione"@it ;
     rdfs:subClassOf cultivationtype:13 .
 
-cultivationtype:950 a :CultivationType ;
-    schema:name "Ackerschonstreifen"@de,
-        "Bande culturale extensive"@fr,
-        "Fasce di colture estensive in campicoltura"@it ;
-    rdfs:subClassOf :Cultivation ;
-    :managementIntensity intensity:Extensive .
-
 cultivationtype:951 a :CultivationType ;
     schema:name "Getreide in weiter Reihe"@de,
         "Céréales en lignes de semis espacées"@fr,
