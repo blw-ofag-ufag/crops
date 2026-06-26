@@ -3153,7 +3153,7 @@ cultivationtype:901 a :CultivationType ;
         "Forêt"@fr,
         "Bosco"@it ;
     schema:alternateName "Allg. Forstwirtschaft"@de ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:12 .
 
 cultivationtype:902 a :CultivationType ;
     schema:name "Übrige unproduktive Flächen"@de,
