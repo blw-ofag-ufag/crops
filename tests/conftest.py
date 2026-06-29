@@ -85,6 +85,9 @@ WARNING_REPORT_DATA = []
 
 def pytest_configure(config):
     config.warning_report_data = WARNING_REPORT_DATA
+    config.addinivalue_line(
+        "markers", "drift: mark test to run only in the external data drift monitoring pipeline"
+    )
 
 def pytest_warning_recorded(warning_message, when, nodeid, location):
     raw_message = str(warning_message.message)
