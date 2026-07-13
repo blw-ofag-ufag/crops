@@ -121,7 +121,7 @@ cultivationtype:8 a :CultivationType ;
     schema:description "Als Streueflächen gelten extensiv genutzte Flächen an Nass- und Feuchtstandorten, die alle ein bis drei Jahre geschnitten werden und deren Ertrag nur ausnahmsweise als Futter auf dem Betrieb verwendet wird."@de,
         "Par surfaces à litière, on entend les surfaces cultivées d’une manière extensive et situées dans des lieux humides et marécageux, qui sont fauchées une fois par an au plus et tous les trois ans au moins, et dont la récolte n’est utilisée qu’exceptionnellement comme fourrage dans l’exploitation."@fr,
         "Per terreni da strame s’intendono le superfici sfruttate in modo estensivo in luoghi paludosi e umidi che vengono falciate al massimo una volta all’anno e almeno ogni due o tre anni e il cui raccolto viene utilizzato solo eccezionalmente come foraggio all’interno dell’azienda."@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:464 .
 
 cultivationtype:9 a :CultivationType ;
     schema:name "Hecken-, Feld- und Ufergehölze"@de,
@@ -1903,7 +1903,7 @@ cultivationtype:466 a :CultivationType ;
 
 cultivationtype:467 a :CultivationType ;
     schema:name "Dauerkulturen"@de ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:464 .
 
 cultivationtype:468 a :CultivationType ;
     schema:name "Ackerbohne"@de,
