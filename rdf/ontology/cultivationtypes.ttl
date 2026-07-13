@@ -3839,13 +3839,19 @@ cultivationtype:1099 a :CultivationType ;
     schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de,
         "Roquette (culture protégée)"@fr,
         "Rucola (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:278 .
+    owl:intersectionOf (
+        cultivationtype:278 
+        cultivationtype:7
+    ) .
 
 cultivationtype:1100 a :CultivationType ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:278 .
+    owl:intersectionOf ( 
+        cultivationtype:278 
+        cultivationtype:7 
+    ) .
 
 cultivationtype:1101 a :CultivationType ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
@@ -4352,8 +4358,8 @@ cultivationtype:1209 a :CultivationType ;
         "Radish 18 pcs/m2 (protected cultivation)"@en,
         "Radis blanc 18 pces/m2 (culture protégée)"@fr,
         "Ramolaccio 18 pz/m2 (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:7,
-        cultivationtype:264 .
+    owl:intersectionOf ( cultivationtype:7
+        cultivationtype:264 ) .
 
 cultivationtype:1210 a :CultivationType ;
     schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de,
@@ -4486,7 +4492,7 @@ cultivationtype:1230 a :CultivationType ;
         "Soup celery 40 pcs/m2 (protected cultivation)"@en,
         "Céleri à soupe 40 pces/m2 (culture protégée)"@fr,
         "Sedano da zuppa 40 pz/m2 (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:94 .
+    owl:intersectionOf ( cultivationtype:94 cultivationtype:7 ) .
 
 cultivationtype:1233 a :CultivationType ;
     schema:name "Cassis, 3.5 kg/m2"@de,
