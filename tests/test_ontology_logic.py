@@ -20,8 +20,8 @@ def translated_ontology_path(cultivation_graph, core_graph):
     
     # Write both graphs directly to the same file descriptor to avoid memory overhead
     with os.fdopen(fd, 'wb') as f:
-        core_graph.serialize(destination=f, format="nt")
-        cultivation_graph.serialize(destination=f, format="nt")
+        core_graph.serialize(destination=f, format="nt", encoding="utf-8")
+        cultivation_graph.serialize(destination=f, format="nt", encoding="utf-8")
 
     try:
         yield temp_path
