@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kultur-Baum Validierung</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <input type="text" id="root-input" placeholder="Root ID(s) (z.B. 22)" title="Kommagetrennte Liste von cultivationtype IDs" />
+            <button id="load-btn" class="nav-btn">Baum laden</button>
+            <button id="export-svg-btn" class="nav-btn" style="display: none; margin-left: auto;">SVG Export</button>
+        </div>
+
+        <h1 class="title">Dynamischer Ontologie-Baum</h1>
+        <p class="subtitle">Gib eine oder mehrere <code>cultivationtype</code> IDs ein (z.B. <code>22</code> für Gemüsebau oder <code>114,116,8,13</code> für Wiesen & Weiden), um den entsprechenden Teilbaum aus LINDAS zu generieren. Die Tags in eckigen Klammern [DZ, SB, PSM] zeigen an, in welchen Systemen die Kultur referenziert wird. Du kannst mit dem Mausrad zoomen und den Graphen verschieben.</p>
+
+        <div id="app">
+            <div id="graph-container" class="zoom-container"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
