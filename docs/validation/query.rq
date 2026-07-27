@@ -8,7 +8,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT DISTINCT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName ?DisjointName ?UnionName ?IntersectionName
-FROM <https://lindas.admin.ch/foag/crops>
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {
     {
         SELECT ?Observation ?Identifier ?Crop ?CultivationType ?BaseName ?ValidFrom ?ValidTo
