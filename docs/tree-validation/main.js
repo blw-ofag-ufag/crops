@@ -63,7 +63,7 @@ async function renderTree(rootIdsStr) {
         PREFIX ct: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
 
         SELECT DISTINCT ?child ?childName ?parent ?parentName
-        FROM <https://lindas.admin.ch/foag/crops>
+        FROM <https://lindas.admin.ch/foag/ech/0265/2>
         WHERE {
           VALUES ?root { ${valuesStr} }
           ?child rdfs:subClassOf* ?root .
@@ -87,7 +87,7 @@ async function renderTree(rootIdsStr) {
         PREFIX : <https://agriculture.ld.admin.ch/crops/>
         PREFIX cube: <https://cube.link/>
         SELECT DISTINCT ?CultivationType ?System
-        FROM <https://lindas.admin.ch/foag/crops>
+        FROM <https://lindas.admin.ch/foag/ech/0265/2>
         WHERE {
           ?System cube:observationSet / cube:observation / (:cultivationType|:cultivationGroup|:cultivationCategory|:cultivationSubCategory) ?CultivationType .
         }
