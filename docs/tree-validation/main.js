@@ -43,7 +43,6 @@ function getSafeId(uri) {
 }
 
 // Fetch tree data and system overlaps
-// Fetch tree data and system overlaps
 async function renderTree(rootIdsStr) {
     const appDiv = document.getElementById('graph-container');
     appDiv.innerHTML = '<div style="padding: 20px; color: #6b7280;">Lade Daten von LINDAS...</div>';
@@ -83,13 +82,14 @@ async function renderTree(rootIdsStr) {
         }
     `;
 
+    // SKOS Relation Query für das neue Datenmodell
     const systemsQuery = `
-        PREFIX : <https://agriculture.ld.admin.ch/crops/>
-        PREFIX cube: <https://cube.link/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT DISTINCT ?CultivationType ?System
         FROM <https://lindas.admin.ch/foag/ech/0265/2>
         WHERE {
-          ?System cube:observationSet / cube:observation / (:cultivationType|:cultivationGroup|:cultivationCategory|:cultivationSubCategory) ?CultivationType .
+          ?System skos:exactMatch|skos:narrowMatch|skos:broadMatch ?CultivationType .
+          FILTER(STRSTARTS(STR(?CultivationType), "https://agriculture.ld.admin.ch/crops/cultivationtype/"))
         }
     `;
 
