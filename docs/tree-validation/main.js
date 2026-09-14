@@ -84,11 +84,11 @@ async function renderTree(rootIdsStr) {
 
     // SKOS Relation Query für das neue Datenmodell
     const systemsQuery = `
-        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
         SELECT DISTINCT ?CultivationType ?System
         FROM <https://lindas.admin.ch/foag/ech/0265/2>
         WHERE {
-          ?System skos:exactMatch|skos:narrowMatch|skos:broadMatch ?CultivationType .
+          ?System eCH-0265:exactMatch ?CultivationType .
           FILTER(STRSTARTS(STR(?CultivationType), "https://agriculture.ld.admin.ch/crops/cultivationtype/"))
         }
     `;
